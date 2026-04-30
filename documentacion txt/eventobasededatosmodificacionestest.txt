@@ -1,0 +1,67 @@
+
+{
+  "eventos": [
+    {
+      "fecha": "2026-04-22",
+      "tipo": "tournament",
+      "icono": "🏆",
+      "titulo": "",
+      "descripcion": "",
+      "estado": "open",
+      "categoria": "aventura"
+    },
+    {
+      "fecha": "2026-04-25",
+      "tipo": "game",
+      "icono": "🎮",
+      "titulo": "",
+      "descripcion": "",
+      "estado": "closed",
+      "categoria": "accion"
+    },
+    {
+      "fecha": "2026-05-01",
+      "tipo": "special",
+      "icono": "🎁",
+      "titulo": "",
+      "descripcion": "",
+      "estado": "open",
+      "categoria": "general"
+    }
+  ]
+}
+
+
+
+
+{
+  "eventos": [
+    {
+      "fecha": "2026-04-21",
+      "tipo": "game",
+      "icono": "🎲",
+      "titulo": "",
+      "descripcion": "",
+      "estado": "open",
+      "categoria": "social"
+    },
+    {
+      "fecha": "2026-04-23",
+      "tipo": "tournament",
+      "icono": "⚔️",
+      "titulo": "",
+      "descripcion": "",
+      "estado": "closed",
+      "categoria": "accion"
+    },
+    {
+      "fecha": "2026-04-28",
+      "tipo": "special",
+      "icono": "🎂",
+      "titulo": "",
+      "descripcion": "",
+      "estado": "open",
+      "categoria": "especial"
+    }
+  ]
+}

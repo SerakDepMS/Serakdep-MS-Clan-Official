@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contacto - Serakdep MS - Clan de Roblox</title>
+    <meta
+      name="description"
+      content="Contacta al clan Serakdep MS de Roblox - WhatsApp, email, reportar problemas, sugerencias y más"
+    />
+    <meta
+      name="keywords"
+      content="Roblox, clan, contacto, WhatsApp, email, reportar, sugerencias, Serakdep MS"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="favicon/android-chrome-512x512.png"
+    />
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/chatbot.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html">Serakdep <span>MS</span></a>
+        </div>
+
+        <button
+          class="mobile-menu-btn"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reglamento.html">Reglamento</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+            <li><a href="creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title"><i class="fas fa-envelope"></i> Contacto</h1>
+
+        <div class="card fade-in">
+          <h2 class="card-title">Información de Contacto</h2>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <h3>WhatsApp</h3>
+              <p>Grupo de contacto principal del clan</p>
+              <a
+                href="https://chat.whatsapp.com/FjFvWUam2ZzEZhHd8xxGDH?mode=gi_t"
+                class="btn btn-small btn-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-whatsapp"></i> Enviar mensaje
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <h3>Email</h3>
+              <p>Para consultas formales</p>
+              <a
+                href="mailto:serakdepmsofficial7@gmail.com"
+                class="btn btn-small"
+              >
+                <i class="fas fa-envelope"></i> Enviar correo
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <h3>Discord</h3>
+              <p>Comunidad en Discord</p>
+              <a
+                href="https://discord.gg/vts4PTHR9K"
+                class="btn btn-small discord-btn"
+              >
+                <i class="fab fa-discord"></i> Unirse al servidor
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" id="reportar">
+          <h2 class="card-title">
+            <i class="fas fa-user-shield"></i> Reportar un Problema
+          </h2>
+          <p>
+            Si tienes algún problema con un miembro del clan o necesitas
+            reportar una situación, utiliza este formulario:
+          </p>
+
+          <form id="report-form" class="contact-form">
+            <div class="form-group">
+              <label for="report-type" class="form-label required"
+                >Tipo de problema</label
+              >
+              <select id="report-type" class="form-control" required>
+                <option value="">Selecciona el tipo</option>
+                <option value="member">Problema con un miembro</option>
+                <option value="staff">Problema con staff/administrador</option>
+                <option value="technical">Problema técnico</option>
+                <option value="other">Otro tipo de problema</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="report-details" class="form-label required"
+                >Describe el problema</label
+              >
+              <textarea
+                id="report-details"
+                class="form-control"
+                rows="5"
+                required
+                placeholder="Describe con detalle lo ocurrido, incluye nombres de usuario, fecha y hora si es posible..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="report-evidence" class="form-label"
+                >Evidencia (opcional)</label
+              >
+              <input
+                type="text"
+                id="report-evidence"
+                class="form-control"
+                placeholder="Enlace a capturas de pantalla, videos, etc."
+              />
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="report-confidential" required />
+              <label for="report-confidential">
+                Entiendo que este reporte será tratado de manera confidencial y
+                se investigará adecuadamente.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-large form-submit-btn">
+              <i class="fas fa-paper-plane"></i> Enviar Reporte
+            </button>
+          </form>
+        </div>
+
+        <div class="card fade-in" id="sugerencias">
+          <h2 class="card-title">
+            <i class="fas fa-lightbulb"></i> Sugerencias y Mejoras
+          </h2>
+          <p>
+            Tu opinión es importante para nosotros. ¿Tienes ideas para mejorar
+            el clan?
+          </p>
+
+          <form id="suggestion-form" class="contact-form">
+            <div class="form-group">
+              <label for="suggestion-type" class="form-label required"
+                >Área de mejora</label
+              >
+              <select id="suggestion-type" class="form-control" required>
+                <option value="">Selecciona el área</option>
+                <option value="events">Eventos y actividades</option>
+                <option value="communication">Comunicación y grupos</option>
+                <option value="rules">Reglas y normas</option>
+                <option value="organization">Organización del clan</option>
+                <option value="other">Otra área</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="suggestion-details" class="form-label required"
+                >Tu sugerencia</label
+              >
+              <textarea
+                id="suggestion-details"
+                class="form-control"
+                rows="5"
+                required
+                placeholder="Describe tu sugerencia con detalle, explica cómo crees que mejoraría el clan..."
+              ></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="suggestion-anonymous" />
+              <label for="suggestion-anonymous">
+                Enviar de forma anónima (opcional)
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-large form-submit-btn">
+              <i class="fas fa-lightbulb"></i> Enviar Sugerencia
+            </button>
+          </form>
+        </div>
+
+        <div class="card fade-in" id="requisitos-admin">
+          <h2 class="card-title">
+            <i class="fas fa-clipboard-check"></i> Requisitos para Ser
+            Administrador
+          </h2>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>Importante:</strong> Leer detenidamente todos los requisitos
+            antes de aplicar. No cumplirlos resultará en rechazo automático.
+          </div>
+
+          <div class="requirements-container">
+            <div class="requirement-section">
+              <h3 class="requirement-title">
+                <i class="fas fa-user-check"></i> Requisitos Básicos
+                Obligatorios
+              </h3>
+              <ul class="requirement-list">
+                <li>
+                  <i class="fas fa-check-circle requirement-check"></i> Edad
+                  mínima: <strong>15 años</strong>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle requirement-check"></i> Miembro
+                  activo del clan por mínimo <strong>2 meses</strong>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle requirement-check"></i> Sin
+                  sanciones graves en los últimos 3 meses
+                </li>
+                <li>
+                  <i class="fas fa-check-circle requirement-check"></i>
+                  Disponibilidad mínima de <strong>10 horas semanales</strong>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle requirement-check"></i>
+                  Conocimiento avanzado del
+                  <a href="reglamento.html">reglamento del clan</a>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle requirement-check"></i> Equipo
+                  adecuado para comunicación (micrófono, auriculares)
+                </li>
+              </ul>
+            </div>
+
+            <div class="requirement-section">
+              <h3 class="requirement-title">
+                <i class="fas fa-heart"></i> Valores y Principios Esperados
+              </h3>
+              <div class="values-grid">
+                <div class="value-card">
+                  <div class="value-icon integrity">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <h4>Integridad</h4>
+                  <p>
+                    Actuar con honestidad, transparencia y coherencia en todas
+                    las situaciones.
+                  </p>
+                </div>
+
+                <div class="value-card">
+                  <div class="value-icon respect">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <h4>Respeto</h4>
+                  <p>
+                    Tratar a todos los miembros con dignidad, sin importar rango
+                    o experiencia.
+                  </p>
+                </div>
+
+                <div class="value-card">
+                  <div class="value-icon responsibility">
+                    <i class="fas fa-tasks"></i>
+                  </div>
+                  <h4>Responsabilidad</h4>
+                  <p>
+                    Asumir consecuencias de tus acciones y cumplir con
+                    compromisos adquiridos.
+                  </p>
+                </div>
+
+                <div class="value-card">
+                  <div class="value-icon impartiality">
+                    <i class="fas fa-balance-scale"></i>
+                  </div>
+                  <h4>Imparcialidad</h4>
+                  <p>
+                    Tomar decisiones basadas en hechos, no en preferencias
+                    personales.
+                  </p>
+                </div>
+
+                <div class="value-card">
+                  <div class="value-icon patience">
+                    <i class="fas fa-hourglass-half"></i>
+                  </div>
+                  <h4>Paciencia</h4>
+                  <p>Manejar situaciones difíciles con calma y comprensión.</p>
+                </div>
+
+                <div class="value-card">
+                  <div class="value-icon leadership">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h4>Liderazgo</h4>
+                  <p>
+                    Guiar con el ejemplo, motivar e inspirar a otros miembros.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="requirement-section">
+              <h3 class="requirement-title">
+                <i class="fas fa-puzzle-piece"></i> Escenarios y Solución de
+                Problemas
+              </h3>
+              <p class="scenario-intro">
+                Como administrador, enfrentarás estas situaciones. Evalúa cómo
+                las manejarías:
+              </p>
+
+              <div class="scenarios-container">
+                <div class="scenario-card">
+                  <div class="scenario-header">
+                    <span class="scenario-badge conflict">Conflicto</span>
+                    <h4>Dos miembros se insultan durante una partida</h4>
+                  </div>
+                  <div class="scenario-content">
+                    <p><strong>Solución esperada:</strong></p>
+                    <ol>
+                      <li>Separar a los involucrados inmediatamente</li>
+                      <li>Escuchar ambas versiones por separado</li>
+                      <li>Revisar evidencia (capturas, videos)</li>
+                      <li>Aplicar sanciones según reglamento</li>
+                      <li>Mediar para resolver el conflicto de raíz</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="scenario-card">
+                  <div class="scenario-header">
+                    <span class="scenario-badge rule">Regla</span>
+                    <h4>Un miembro nuevo no conoce las reglas</h4>
+                  </div>
+                  <div class="scenario-content">
+                    <p><strong>Solución esperada:</strong></p>
+                    <ol>
+                      <li>Explicar las reglas de manera clara y paciente</li>
+                      <li>Proporcionar enlaces a documentación oficial</li>
+                      <li>Asignar un mentor temporal si es necesario</li>
+                      <li>Seguimiento para asegurar comprensión</li>
+                      <li>Documentar la orientación proporcionada</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="scenario-card">
+                  <div class="scenario-header">
+                    <span class="scenario-badge technical">Técnico</span>
+                    <h4>Problemas técnicos durante un evento oficial</h4>
+                  </div>
+                  <div class="scenario-content">
+                    <p><strong>Solución esperada:</strong></p>
+                    <ol>
+                      <li>Mantener la calma y comunicar el problema</li>
+                      <li>Activar plan de contingencia (evento alternativo)</li>
+                      <li>Asistir a miembros con problemas técnicos</li>
+                      <li>Documentar incidente para mejorar futuros eventos</li>
+                      <li>
+                        Compensar a participantes afectados si corresponde
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="scenario-card">
+                  <div class="scenario-header">
+                    <span class="scenario-badge decision">Decisión</span>
+                    <h4>
+                      Debes tomar una decisión difícil que afectará a un amigo
+                    </h4>
+                  </div>
+                  <div class="scenario-content">
+                    <p><strong>Solución esperada:</strong></p>
+                    <ol>
+                      <li>Aplicar reglamento de manera imparcial</li>
+                      <li>Documentar evidencia y proceso de decisión</li>
+                      <li>Comunicar decisión de manera profesional</li>
+                      <li>Mantener confidencialidad del proceso</li>
+                      <li>
+                        Buscar supervisión de administrador superior si hay
+                        conflicto de interés
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="requirement-section">
+              <h3 class="requirement-title">
+                <i class="fas fa-file-contract"></i> Compromisos como
+                Administrador
+              </h3>
+              <div class="commitments">
+                <div class="commitment-item">
+                  <i class="fas fa-lock commitment-icon"></i>
+                  <div>
+                    <h4>Confidencialidad</h4>
+                    <p>
+                      Mantener información interna del clan en secreto absoluto.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="commitment-item">
+                  <i class="fas fa-clock commitment-icon"></i>
+                  <div>
+                    <h4>Disponibilidad</h4>
+                    <p>
+                      Cumplir con horarios establecidos y responder en tiempos
+                      razonables.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="commitment-item">
+                  <i class="fas fa-graduation-cap commitment-icon"></i>
+                  <div>
+                    <h4>Capacitación Continua</h4>
+                    <p>
+                      Participar en entrenamientos y actualizaciones sobre
+                      políticas del clan.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="commitment-item">
+                  <i class="fas fa-chart-line commitment-icon"></i>
+                  <div>
+                    <h4>Mejora Continua</h4>
+                    <p>
+                      Buscar constantemente formas de mejorar el clan y tus
+                      habilidades como admin.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="commitment-item">
+                  <i class="fas fa-hand-holding-heart commitment-icon"></i>
+                  <div>
+                    <h4>Servicio a la Comunidad</h4>
+                    <p>
+                      Priorizar el bienestar del clan sobre intereses
+                      personales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="requirements-footer">
+              <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <strong
+                  >¿Cumples con los requisitos y estás listo para
+                  aplicar?</strong
+                >
+                Desplázate hacia abajo para completar el formulario de
+                solicitud.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" id="aspirantes-admin">
+          <h2 class="card-title">
+            <i class="fas fa-user-tie"></i> Aspirantes a Administrador
+          </h2>
+          <p>
+            ¿Quieres formar parte del equipo administrativo del clan? Completa
+            este formulario:
+          </p>
+
+          <form id="admin-application-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="admin-roblox-name" class="form-label required"
+                  >Nombre en Roblox</label
+                >
+                <input
+                  type="text"
+                  id="admin-roblox-name"
+                  class="form-control"
+                  required
+                  placeholder="Ej: SerakdepPro"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="admin-age" class="form-label required">Edad</label>
+                <input
+                  type="number"
+                  id="admin-age"
+                  class="form-control"
+                  min="15"
+                  max="99"
+                  required
+                  placeholder="Ej: 15"
+                />
+                <small class="form-help">Edad mínima: 15 años</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="admin-country" class="form-label required"
+                  >País</label
+                >
+                <select id="admin-country" class="form-control" required>
+                  <option value="">Selecciona tu país</option>
+                  <option value="MX">🇲🇽 México</option>
+                  <option value="ES">🇪🇸 España</option>
+                  <option value="AR">🇦🇷 Argentina</option>
+                  <option value="CO">🇨🇴 Colombia</option>
+                  <option value="CL">🇨🇱 Chile</option>
+                  <option value="PE">🇵🇪 Perú</option>
+                  <option value="US">🇺🇸 Estados Unidos</option>
+                  <option value="OT">🌍 Otro país</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="admin-timezone" class="form-label required"
+                  >Zona horaria</label
+                >
+                <select id="admin-timezone" class="form-control" required>
+                  <option value="">Selecciona tu zona</option>
+                  <option value="GMT-8">GMT-8 (Pacífico)</option>
+                  <option value="GMT-6">GMT-6 (Centro América)</option>
+                  <option value="GMT-5">GMT-5 (Este EE.UU.)</option>
+                  <option value="GMT-3">GMT-3 (Argentina)</option>
+                  <option value="GMT+0">GMT+0 (Europa Oeste)</option>
+                  <option value="GMT+1">GMT+1 (Europa Central)</option>
+                  <option value="GMT+2">GMT+2 (Europa Este)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-whatsapp" class="form-label required"
+                >Número de WhatsApp</label
+              >
+              <input
+                type="tel"
+                id="admin-whatsapp"
+                class="form-control"
+                required
+                placeholder="+52 123 456 7890"
+              />
+              <small class="form-help"
+                >Para coordinación del proceso de selección</small
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="admin-experience" class="form-label"
+                >Experiencia previa como administrador/moderador</label
+              >
+              <textarea
+                id="admin-experience"
+                class="form-control"
+                rows="3"
+                placeholder="Describe cualquier experiencia previa en roles de liderazgo, administración de comunidades, moderación, etc."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-why" class="form-label required"
+                >¿Por qué quieres ser administrador?</label
+              >
+              <textarea
+                id="admin-why"
+                class="form-control"
+                rows="4"
+                required
+                placeholder="Explica tus motivaciones, qué te hace un buen candidato, cómo puedes contribuir al clan..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-availability" class="form-label required"
+                >Disponibilidad semanal</label
+              >
+              <select id="admin-availability" class="form-control" required>
+                <option value="">Selecciona tu disponibilidad</option>
+                <option value="5-10">5-10 horas semanales</option>
+                <option value="10-15">10-15 horas semanales</option>
+                <option value="15-20">15-20 horas semanales</option>
+                <option value="20+">Más de 20 horas semanales</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-improvements" class="form-label required"
+                >¿Qué mejoras propondrías para el clan?</label
+              >
+              <textarea
+                id="admin-improvements"
+                class="form-control"
+                rows="3"
+                required
+                placeholder="Describe al menos una idea para mejorar el clan..."
+              ></textarea>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="admin-terms" required />
+              <label for="admin-terms">
+                He leído el
+                <a
+                  href="reglamento.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >reglamento del clan</a
+                >
+                y comprendo las responsabilidades del rol de administrador. *
+              </label>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="admin-commitment" required />
+              <label for="admin-commitment">
+                Me comprometo a mantener la confidencialidad de la información
+                interna del clan si soy seleccionado. *
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-large form-submit-btn">
+              <i class="fas fa-user-tie"></i> Enviar Solicitud para
+              Administrador
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Serakdep MS</h3>
+            <p>
+              Clan de Roblox para todas las edades. Únete a nuestra comunidad y
+              vive la mejor experiencia de gaming.
+            </p>
+            <div class="social-links">
+              <a href="https://discord.gg/vts4PTHR9K" title="Discord"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://x.com/serakdep?s=21" title="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a
+                href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr"
+                title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h"
+                title="TikTok"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Enlaces Rápidos</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Inicio</a
+                >
+              </li>
+              <li>
+                <a href="reglamento.html"
+                  ><i class="fas fa-chevron-right"></i> Reglamento</a
+                >
+              </li>
+              <li>
+                <a href="formulario.html"
+                  ><i class="fas fa-chevron-right"></i> Formulario</a
+                >
+              </li>
+              <li>
+                <a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
+              </li>
+              <li>
+                <a href="eventos.html"
+                  ><i class="fas fa-chevron-right"></i> Eventos</a
+                >
+              </li>
+              <li>
+                <a href="noticias.html"
+                  ><i class="fas fa-chevron-right"></i> Noticias</a
+                >
+              </li>
+              <li>
+                <a href="alianzas.html"
+                  ><i class="fas fa-chevron-right"></i> Alianzas</a
+                >
+              </li>
+              <li>
+                <a href="creditos.html"
+                  ><i class="fas fa-chevron-right"></i> Créditos</a
+                >
+              </li>
+              <li>
+                <a href="videotutoriales.html"
+                  ><i class="fas fa-chevron-right"></i> Tutoriales</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:serakdepmsofficial7@gmail.com">
+                  <i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/573116546484"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp"></i> WhatsApp del Clan
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#reportar">
+                  <i class="fas fa-user-shield"></i> Reportar problema
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#sugerencias">
+                  <i class="fas fa-lightbulb"></i> Sugerencias
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#requisitos-admin">
+                  <i class="fas fa-user-tie"></i> Aspirar a Admin
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Información Legal</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="privacidad.html">
+                  <i class="fas fa-user-shield"></i> Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a href="terminos.html">
+                  <i class="fas fa-file-contract"></i> Términos de Servicio
+                </a>
+              </li>
+              <li>
+                <a href="cookies.html">
+                  <i class="fas fa-cookie-bite"></i> Política de Cookies
+                </a>
+              </li>
+              <li>
+                <a href="dmca.html">
+                  <i class="fas fa-balance-scale"></i> Aviso DMCA
+                </a>
+              </li>
+              <li>
+                <a href="creditos.html">
+                  <i class="fas fa-heart"></i> Créditos
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#legal">
+                  <i class="fas fa-gavel"></i> Asuntos Legales
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            © <span id="current-year">2025</span> Serakdep MS - Clan de Roblox.
+            Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/redirect.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

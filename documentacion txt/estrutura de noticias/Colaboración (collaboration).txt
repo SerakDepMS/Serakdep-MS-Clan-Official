@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "title": "",
+  "category": "collaboration",
+  "content": "",
+  "excerpt": "",
+  "date": "2025-01-01",
+  "image": "https://i.imgur.com/IwAQI2z.png",
+  "important": false,
+  "pinned": false,
+  "views": 0,
+  "author": ""
+}

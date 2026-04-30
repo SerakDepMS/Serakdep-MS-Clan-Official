@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serakdep MS - Clan de Roblox</title>
+    <meta
+      name="description"
+      content="Clan oficial de Roblox Serakdep MS - Comunidad de jugadores, eventos y diversión"
+    />
+    <meta
+      name="keywords"
+      content="Roblox, clan, gaming, comunidad, Serakdep, MS, panda"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="favicon/android-chrome-512x512.png"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/video-player.css" />
+    <link rel="stylesheet" href="css/logo.css" />
+    <link rel="stylesheet" href="css/creditos.css" />
+    <link rel="stylesheet" href="css/loading.css" />
+    <link rel="stylesheet" href="css/chatbot.css" />
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />  
+  </head>
+  <body>
+
+    <div id="splash">
+
+
+  <canvas id="cv"></canvas>
+
+
+  <div class="ambient amb-gold"></div>
+  <div class="ambient amb-green"></div>
+
+
+  <div class="hud">
+    <div class="hc tl"></div><div class="hc tr"></div>
+    <div class="hc bl"></div><div class="hc br"></div>
+    <div class="hext ht tl-h"></div><div class="hext hv tl-v"></div>
+    <div class="hext ht tr-h"></div><div class="hext hv tr-v"></div>
+    <div class="hext ht bl-h"></div><div class="hext hv bl-v"></div>
+    <div class="hext ht br-h"></div><div class="hext hv br-v"></div>
+    <div class="hud-label tl">SERAKDEP-MS · SYSTEM v3.0.4</div>
+    <div class="hud-label br">CLAN PORTAL · ONLINE</div>
+  </div>
+
+
+  <div class="content">
+
+
+    <div class="panda-stage">
+      <div class="ring-gold" id="rg"></div>
+      <div class="ring-green" id="rv"></div>
+      <div class="ring-dot" id="rd"></div>
+      <div class="ticks-ring" id="tkR"></div>
+      <div class="p-glow"></div>
+
+
+      <svg class="panda-svg" id="pandaSvg" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="bG" cx="50%" cy="42%" r="52%">
+            <stop offset="0%" stop-color="#d4eede"/>
+            <stop offset="100%" stop-color="#a8d5be"/>
+          </radialGradient>
+          <radialGradient id="eG" cx="35%" cy="35%" r="55%">
+            <stop offset="0%" stop-color="#1a2e1f"/>
+            <stop offset="100%" stop-color="#080f0b"/>
+          </radialGradient>
+          <radialGradient id="oG" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#d4af37"/>
+            <stop offset="60%" stop-color="#a07c1a"/>
+            <stop offset="100%" stop-color="#6b5010"/>
+          </radialGradient>
+          <filter id="gf" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="1.8" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="sf" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur stdDeviation=".8"/>
+          </filter>
+        </defs>
+
+
+        <ellipse cx="32" cy="30" rx="16" ry="16" fill="#0d1a10"/>
+        <ellipse cx="98" cy="30" rx="16" ry="16" fill="#0d1a10"/>
+
+        <ellipse cx="32" cy="30" rx="16" ry="16" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".5"/>
+        <ellipse cx="98" cy="30" rx="16" ry="16" fill="none" stroke="#d4af37" stroke-width="1.2" opacity=".5"/>
+
+        <ellipse cx="32" cy="30" rx="8" ry="8" fill="#2d6a4f" opacity=".7"/>
+        <ellipse cx="98" cy="30" rx="8" ry="8" fill="#2d6a4f" opacity=".7"/>
+
+        <circle cx="32" cy="30" r="3.5" fill="#d4af37" opacity=".8" filter="url(#gf)"/>
+        <circle cx="98" cy="30" r="3.5" fill="#d4af37" opacity=".8" filter="url(#gf)"/>
+
+
+        <ellipse cx="65" cy="75" rx="44" ry="41" fill="url(#bG)"/>
+
+        <ellipse cx="65" cy="75" rx="44" ry="41" fill="none" stroke="rgba(45,106,79,.25)" stroke-width=".8"/>
+
+
+        <ellipse cx="46" cy="68" rx="15" ry="13" fill="#0d1a10"/>
+        <ellipse cx="84" cy="68" rx="15" ry="13" fill="#0d1a10"/>
+
+        <ellipse cx="46" cy="68" rx="15" ry="13" fill="none" stroke="#d4af37" stroke-width="1" opacity=".55"/>
+        <ellipse cx="84" cy="68" rx="15" ry="13" fill="none" stroke="#d4af37" stroke-width="1" opacity=".55"/>
+
+
+        <ellipse cx="46" cy="68" rx="8" ry="8" fill="url(#oG)"/>
+        <ellipse cx="84" cy="68" rx="8" ry="8" fill="url(#oG)"/>
+
+        <ellipse cx="46" cy="68" rx="4" ry="4" fill="#080f0b"/>
+        <ellipse cx="84" cy="68" rx="4" ry="4" fill="#080f0b"/>
+
+        <ellipse cx="46" cy="68" rx="2" ry="2" fill="#52b788" filter="url(#gf)" opacity=".9"/>
+        <ellipse cx="84" cy="68" rx="2" ry="2" fill="#52b788" filter="url(#gf)" opacity=".9"/>
+
+        <ellipse cx="48" cy="66" rx="2" ry="1.5" fill="rgba(255,255,255,.65)"/>
+        <ellipse cx="86" cy="66" rx="2" ry="1.5" fill="rgba(255,255,255,.65)"/>
+
+
+        <path d="M58 82 Q65 87 72 82" fill="#1a2e1f" stroke="rgba(45,106,79,.4)" stroke-width=".8"/>
+        <ellipse cx="65" cy="81" rx="5.5" ry="3.5" fill="#1a2e1f"/>
+        <ellipse cx="65" cy="81" rx="5.5" ry="3.5" fill="none" stroke="#2d6a4f" stroke-width=".8" opacity=".6"/>
+
+
+        <path d="M53 90 Q65 100 77 90" fill="none" stroke="#1a2e1f" stroke-width="2.2" stroke-linecap="round"/>
+
+
+        <line x1="54" y1="51" x2="76" y2="51" stroke="#d4af37" stroke-width=".9" opacity=".45"/>
+
+        <circle cx="54" cy="51" r="2" fill="#d4af37" opacity=".7" filter="url(#gf)"/>
+        <circle cx="76" cy="51" r="2" fill="#d4af37" opacity=".7" filter="url(#gf)"/>
+        <circle cx="65" cy="51" r="1.5" fill="#52b788" opacity=".6"/>
+
+        <line x1="65" y1="51" x2="65" y2="45" stroke="#d4af37" stroke-width=".9" opacity=".35"/>
+        <circle cx="65" cy="44" r="2" fill="#d4af37" opacity=".5" filter="url(#gf)"/>
+
+
+        <line x1="18" y1="71" x2="30" y2="71" stroke="#d4af37" stroke-width=".8" opacity=".35"/>
+        <line x1="20" y1="76" x2="29" y2="76" stroke="#2d6a4f" stroke-width=".7" opacity=".4"/>
+        <circle cx="18" cy="71" r="1.5" fill="#d4af37" opacity=".45"/>
+
+
+        <line x1="100" y1="71" x2="112" y2="71" stroke="#d4af37" stroke-width=".8" opacity=".35"/>
+        <line x1="101" y1="76" x2="110" y2="76" stroke="#2d6a4f" stroke-width=".7" opacity=".4"/>
+        <circle cx="112" cy="71" r="1.5" fill="#d4af37" opacity=".45"/>
+
+
+        <circle cx="23" cy="83" r="2" fill="#52b788" opacity=".35"/>
+        <circle cx="28" cy="88" r="1.5" fill="#2d6a4f" opacity=".3"/>
+        <circle cx="107" cy="83" r="2" fill="#52b788" opacity=".35"/>
+        <circle cx="102" cy="88" r="1.5" fill="#2d6a4f" opacity=".3"/>
+
+
+        <path d="M30 106 Q65 116 100 106" fill="none" stroke="#d4af37" stroke-width=".8" opacity=".18" stroke-dasharray="3,5"/>
+      </svg>
+
+      <div class="p-shadow"></div>
+    </div>
+
+
+    <div class="clan-name" id="cName">SERAKDEP <span class="ms">MS</span></div>
+    <div class="clan-sub" id="cSub">Un clan, una leyenda</div>
+
+
+    <div class="div-row" id="divRow">
+      <div class="div-line"></div>
+      <div class="div-gem"></div>
+      <div class="div-line r"></div>
+    </div>
+
+
+    <div class="bar-wrap" id="barWrap">
+      <div class="bar-track">
+        <div class="bar-fill" id="bFill"></div>
+        <div class="bar-segs" id="bSegs"></div>
+      </div>
+      <div class="bar-foot">
+        <span class="bar-msg" id="bMsg">Invocando a los pandas ancestrales...</span>
+        <span class="bar-pct" id="bPct">0%</span>
+      </div>
+    </div>
+
+
+    <div class="chips" id="chips">
+      <span class="chip done"  id="cSrv">Servidor</span>
+      <span class="chip active" id="cLoad">Cargando</span>
+      <span class="chip wait"  id="cReady">Listo</span>
+    </div>
+
+  </div>
+</div>
+
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html">Serakdep <span>MS</span></a>
+        </div>
+        <button
+          class="mobile-menu-btn"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          title="Menú de navegación"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="reglamento.html">Reglamento</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <main>
+      <div class="container">
+
+        <h1 class="page-title">
+          <i class="fas fa-home"></i> Bienvenido a Serakdep MS
+        </h1>
+
+
+        <div class="clan-logo-section">
+          <div class="clan-logo-container">
+            <img
+              src="images/clan-logo.png"
+              alt="Logo del Clan Serakdep MS"
+              class="clan-logo"
+              id="clan-logo"
+            />
+            <div class="logo-glow"></div>
+          </div>
+          <div class="logo-text">
+            <p class="clan-slogan">Unidos-por-la-pasión-del-gaming</p>
+            <div class="logo-badges">
+              <span class="badge"
+                ><i class="fas fa-shield-alt"></i> Clan Verificado</span
+              >
+              <span class="badge"
+                ><i class="fas fa-users"></i> +39 Miembros</span
+              >
+              <span class="badge"
+                ><i class="fas fa-globe-americas"></i> Comunidad Global</span
+              >
+            </div>
+          </div>
+        </div>
+
+
+        <div class="video-player">
+          <div class="video-display-area">
+            <div class="video-container">
+              <video
+                id="main-video"
+                class="main-video-player"
+                autoplay
+                muted
+                loop
+                preload="metadata"
+                playsinline="playsinline"
+                webkit-playsinline="webkit-playsinline"
+              >
+                <p>Tu navegador no soporta videos HTML5.</p>
+              </video>
+
+              <div class="video-loading-overlay" id="video-loading">
+                <div class="loading-animation">
+                  <i class="fas fa-spinner fa-spin"></i>
+                  <span>Cargando video...</span>
+                </div>
+              </div>
+
+              <button
+                class="video-center-play-btn"
+                id="center-play-btn"
+                title="Reproducir video"
+                aria-label="Reproducir video"
+              >
+                <i class="fas fa-play"></i>
+              </button>
+
+              <div class="video-floating-indicators">
+                <div
+                  class="floating-indicator sound-indicator"
+                  id="floating-sound"
+                >
+                  <i class="fas fa-volume-up"></i> <span>Sonido Activado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-controls-panel">
+            <div class="video-meta-info">
+              <h3 class="video-current-title" id="video-title">
+                Presentación del Clan
+              </h3>
+              <p class="video-current-description" id="video-description">
+                ¡Bienvenido a Serakdep MS! Un clan de Roblox donde la diversión
+                y el respeto son lo primero.
+              </p>
+            </div>
+
+            <div class="video-progress-section">
+              <div class="progress-track" id="progress-track">
+                <div class="progress-slider" id="progress-slider">
+                  <div class="slider-thumb"></div>
+                </div>
+              </div>
+              <div class="time-indicators">
+                <span class="current-time" id="current-time">0:00</span>
+                <span class="time-separator">/</span>
+                <span class="total-time" id="total-time">0:00</span>
+              </div>
+            </div>
+
+            <div class="main-controls-section">
+              <div class="controls-group nav-group">
+                <button
+                  class="control-button nav-button prev-button"
+                  id="prev-button"
+                  title="Video anterior"
+                  aria-label="Video anterior"
+                >
+                  <i class="fas fa-step-backward"></i>
+                </button>
+                <button
+                  class="control-button main-play-button"
+                  id="main-play-button"
+                  title="Reproducir/Pausar"
+                  aria-label="Reproducir o pausar video"
+                >
+                  <i class="fas fa-play"></i>
+                </button>
+                <button
+                  class="control-button nav-button next-button"
+                  id="next-button"
+                  title="Siguiente video"
+                  aria-label="Siguiente video"
+                >
+                  <i class="fas fa-step-forward"></i>
+                </button>
+              </div>
+
+              <div class="controls-group center-group">
+                <div class="video-counter-display">
+                  <span class="counter-current" id="counter-current">1</span>
+                  <span class="counter-separator">de</span>
+                  <span class="counter-total" id="counter-total">5</span>
+                </div>
+
+                <button
+                  class="control-button function-button volume-toggle"
+                  id="volume-toggle"
+                  title="Activar/desactivar volumen"
+                  aria-label="Control de volumen"
+                >
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+
+              <div class="controls-group action-group">
+                <button
+                  class="control-button action-button fullscreen-toggle"
+                  id="fullscreen-toggle"
+                  title="Pantalla completa"
+                  aria-label="Pantalla completa"
+                >
+                  <i class="fas fa-expand"></i>
+                </button>
+                <button
+                  class="control-button action-button settings-toggle"
+                  id="settings-toggle"
+                  title="Configuración del video"
+                  aria-label="Ajustes de video"
+                >
+                  <i class="fas fa-cog"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-touch-controls">
+              <div class="touch-controls-row">
+                <button
+                  class="touch-control-button large-touch-button"
+                  id="mobile-prev-btn"
+                  title="Video anterior"
+                  aria-label="Video anterior"
+                >
+                  <i class="fas fa-backward"></i>
+                  <span class="touch-label">Anterior</span>
+                </button>
+                <button
+                  class="touch-control-button large-touch-button play-button"
+                  id="mobile-play-btn"
+                  title="Reproducir/Pausar"
+                  aria-label="Reproducir o pausar video"
+                >
+                  <i class="fas fa-play"></i>
+                  <span class="touch-label">Reproducir</span>
+                </button>
+                <button
+                  class="touch-control-button large-touch-button"
+                  id="mobile-next-btn"
+                  title="Siguiente video"
+                  aria-label="Siguiente video"
+                >
+                  <i class="fas fa-forward"></i>
+                  <span class="touch-label">Siguiente</span>
+                </button>
+              </div>
+              <div class="touch-controls-row">
+                <button
+                  class="touch-control-button"
+                  id="mobile-volume-btn"
+                  title="Control de volumen"
+                  aria-label="Ajustar volumen"
+                >
+                  <i class="fas fa-volume-up"></i>
+                  <span class="touch-label">Volumen</span>
+                </button>
+
+                <button
+                  class="touch-control-button"
+                  id="mobile-fullscreen-btn"
+                  title="Pantalla completa"
+                  aria-label="Pantalla completa"
+                >
+                  <i class="fas fa-expand"></i>
+                  <span class="touch-label">Pantalla</span>
+                </button>
+                <button
+                  class="touch-control-button"
+                  id="mobile-settings-btn"
+                  title="Configuración del video"
+                  aria-label="Ajustes de video"
+                >
+                  <i class="fas fa-cog"></i>
+                  <span class="touch-label">Ajustes</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="volume-slider-container" id="volume-slider-container">
+              <div class="volume-slider-wrapper">
+                <i
+                  class="fas fa-volume-down volume-icon-low"
+                  aria-hidden="true"
+                ></i>
+                <label for="volume-slider" class="sr-only"
+                  >Control de volumen</label
+                >
+                <input
+                  type="range"
+                  class="volume-slider"
+                  id="volume-slider"
+                  name="volume-slider"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0"
+                  aria-label="Control deslizante de volumen"
+                  title="Ajustar volumen"
+                />
+                <i
+                  class="fas fa-volume-up volume-icon-high"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div
+                class="volume-percentage"
+                id="volume-percentage"
+                aria-live="polite"
+              >
+                0%
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-menu-overlay" id="settings-overlay">
+            <div class="settings-menu-container">
+              <div class="settings-menu-header">
+                <h3><i class="fas fa-cog"></i> Configuración del Video</h3>
+                <button
+                  class="settings-close-btn"
+                  id="settings-close-btn"
+                  title="Cerrar configuración"
+                  aria-label="Cerrar panel de configuración"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+
+              <div class="settings-menu-content">
+                <div class="settings-group">
+                  <h4>
+                    <i class="fas fa-tachometer-alt"></i> Velocidad de
+                    Reproducción
+                  </h4>
+                  <div class="speed-buttons">
+                    <button
+                      class="speed-option"
+                      data-speed="0.5"
+                      title="Velocidad 0.5x"
+                      aria-label="Velocidad 0.5 veces"
+                    >
+                      0.5x
+                    </button>
+                    <button
+                      class="speed-option active"
+                      data-speed="1.0"
+                      title="Velocidad normal"
+                      aria-label="Velocidad normal"
+                    >
+                      Normal
+                    </button>
+                    <button
+                      class="speed-option"
+                      data-speed="1.5"
+                      title="Velocidad 1.5x"
+                      aria-label="Velocidad 1.5 veces"
+                    >
+                      1.5x
+                    </button>
+                    <button
+                      class="speed-option"
+                      data-speed="2.0"
+                      title="Velocidad 2.0x"
+                      aria-label="Velocidad 2.0 veces"
+                    >
+                      2.0x
+                    </button>
+                  </div>
+                </div>
+
+                <div class="settings-group">
+                  <h4><i class="fas fa-hd"></i> Calidad del Video</h4>
+                  <div class="quality-buttons">
+                    <button
+                      class="quality-option active"
+                      data-quality="auto"
+                      title="Calidad automática"
+                      aria-label="Calidad automática"
+                    >
+                      Automática
+                    </button>
+                    <button
+                      class="quality-option"
+                      data-quality="720"
+                      title="Calidad 720p"
+                      aria-label="Calidad 720p"
+                    >
+                      720p
+                    </button>
+                    <button
+                      class="quality-option"
+                      data-quality="480"
+                      title="Calidad 480p"
+                      aria-label="Calidad 480p"
+                    >
+                      480p
+                    </button>
+                  </div>
+                </div>
+
+                <div class="settings-group">
+                  <h4><i class="fas fa-sliders-h"></i> Opciones</h4>
+                  <div class="settings-options">
+                    <label class="setting-option">
+                      <input
+                        type="checkbox"
+                        id="autoplay-toggle"
+                        checked
+                        aria-label="Reproducción automática"
+                      />
+                      <span class="option-label">Reproducción automática</span>
+                    </label>
+                    <label class="setting-option">
+                      <input
+                        type="checkbox"
+                        id="loop-toggle"
+                        checked
+                        aria-label="Repetir video"
+                      />
+                      <span class="option-label">Repetir video</span>
+                    </label>
+                    <label class="setting-option">
+                      <input
+                        type="checkbox"
+                        id="subtitles-toggle"
+                        aria-label="Mostrar subtítulos"
+                      />
+                      <span class="option-label">Mostrar subtítulos</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="settings-group">
+                  <h4><i class="fas fa-tools"></i> Acciones</h4>
+                  <div class="action-buttons">
+                    <button
+                      class="action-btn restart-btn"
+                      id="restart-video"
+                      title="Reiniciar video"
+                      aria-label="Reiniciar video"
+                    >
+                      <i class="fas fa-redo"></i> Reiniciar Video
+                    </button>
+                    <button
+                      class="action-btn download-btn"
+                      id="download-video"
+                      title="Descargar video"
+                      aria-label="Descargar video"
+                    >
+                      <i class="fas fa-download"></i> Descargar Video
+                    </button>
+                    <button
+                      class="action-btn share-btn"
+                      id="share-video"
+                      title="Compartir video"
+                      aria-label="Compartir video"
+                    >
+                      <i class="fas fa-share-alt"></i> Compartir
+                    </button>
+                  </div>
+                </div>
+
+                <div class="settings-group">
+                  <h4><i class="fas fa-info-circle"></i> Información</h4>
+                  <div class="video-info-display">
+                    <div class="info-item">
+                      <span class="info-label">Formato:</span>
+                      <span class="info-value" id="info-format">MP4</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Duración:</span>
+                      <span class="info-value" id="info-duration">0:30</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Tamaño:</span>
+                      <span class="info-value" id="info-size">15 MB</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card fade-in">
+          <h2 class="card-title">¿Qué es Serakdep MS?</h2>
+          <p>
+            Serakdep MS es un clan de Roblox creado para jugadores de 14 años en adelante
+            que buscan una comunidad organizada, respetuosa y divertida.
+            Nuestro objetivo es crear un espacio donde los miembros puedan
+            disfrutar del juego, hacer amigos y participar en eventos
+            emocionantes.
+          </p>
+        </div>
+
+
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-users"></i> Nuestra Comunidad
+          </h2>
+          <p>
+            Somos un clan diverso con miembros de diferentes edades y países.
+            Valoramos la amistad, el respeto mutuo y el trabajo en equipo.
+            Contamos con:
+          </p>
+          <ul>
+            <li>Grupos organizados por edades e intereses</li>
+            <li>Eventos semanales y torneos</li>
+            <li>Sistema de rangos y logros</li>
+            <li>Administradores activos y dedicados</li>
+            <li>Ambiente libre de toxicidad</li>
+          </ul>
+        </div>
+
+
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-star"></i> ¿Por qué unirte?
+          </h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <i class="fas fa-shield-alt feature-icon"></i>
+              <h3>Seguridad</h3>
+              <p>Ambiente seguro y libre de acoso</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-calendar-alt feature-icon"></i>
+              <h3>Eventos</h3>
+              <p>Actividades organizadas regularmente</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-trophy feature-icon"></i>
+              <h3>Recompensas</h3>
+              <p>Sistema de logros y reconocimientos</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-comment-dots"></i> Lo que dicen nuestros miembros
+          </h2>
+          <div class="testimonials-container">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Serakdep MS es más que un clan, es una familia. He hecho
+                  amigos de todo el mundo y siempre hay alguien con quien
+                  jugar."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="images/gallery-number-one/proximamente.jpg"
+                  alt="ShadowBlade"
+                />
+                <div>
+                  <h4>ShadowBlade</h4>
+                  <span>Miembro desde 2025</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Los eventos son increíbles y los premios son generosos. Nunca
+                  me aburro porque siempre hay algo nuevo."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="images/gallery-number-one/proximamente.jpg"
+                  alt="Diegosanval2012"
+                />
+                <div>
+                  <h4>Diegosanval2012</h4>
+                  <span>Miembro desde 2025</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Como administrador, me encanta cómo la comunidad crece y se
+                  ayuda mutuamente. Es un ambiente muy sano y divertido."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="images/gallery-number-one/proximamente.jpg" alt="IceQueen" />
+                <div>
+                  <h4>IceQueen</h4>
+                  <span>Administradora</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card fade-in">
+  <h2 class="card-title">
+    <i class="fas fa-images"></i> Galería de Recuerdos
+  </h2>
+  <p class="section-subtitle" style="text-align: center; margin-bottom: 25px">
+    Los mejores momentos del clan Serakdep MS. ¡Revive las aventuras!
+  </p>
+
+
+  <div class="team-gallery-improved gallery-container-mobile">
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Torneo de Blox Fruits 2025",
+      "role": "15 jugadores",
+      "description": "Gran torneo realizado en Blox Fruits con 15 participantes. ShadowBlade se llevó la victoria después de una emocionante final.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "15 Febrero 2025",
+      "tags": "blox-fruits, competitivo, torneo",
+      "badge": "Torneo",
+      "badgeIcon": "trophy"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Torneo Blox Fruits" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-trophy"></i> Torneo
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Torneo de Blox Fruits 2025</h3>
+        <div class="gallery-role">
+          <i class="fas fa-gamepad"></i> 15 jugadores
+        </div>
+        <p class="gallery-description">
+          Gran torneo en Blox Fruits. ShadowBlade ganó tras emocionante final.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 15 Feb 2025</span>
+          <span><i class="fas fa-tag"></i> Torneos</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Reunión Mensual del Clan",
+      "role": "12 miembros",
+      "description": "Reunión para planificar las actividades del próximo mes. Se discutieron nuevos eventos y estrategias para crecer.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "3 Marzo 2025",
+      "tags": "organización, planificación, comunidad",
+      "badge": "Reunión",
+      "badgeIcon": "users"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Reunión Mensual" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-users"></i> Reunión
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Reunión Mensual del Clan</h3>
+        <div class="gallery-role">
+          <i class="fas fa-user-friends"></i> 12 miembros
+        </div>
+        <p class="gallery-description">
+          Planificación de actividades y mejoras para el clan.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 3 Mar 2025</span>
+          <span><i class="fas fa-tag"></i> Reuniones</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "1er Aniversario del Clan",
+      "role": "18 miembros",
+      "description": "Celebración del primer año de Serakdep MS. Torta virtual, juegos, premios especiales y muchas sorpresas.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "20 Enero 2025",
+      "tags": "aniversario, celebración, fiesta",
+      "badge": "Aniversario",
+      "badgeIcon": "birthday-cake"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="1er Aniversario" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-birthday-cake"></i> Aniversario
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">1er Aniversario del Clan</h3>
+        <div class="gallery-role">
+          <i class="fas fa-gift"></i> 18 miembros
+        </div>
+        <p class="gallery-description">
+          Celebración del primer año con torta virtual y premios.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 20 Ene 2025</span>
+          <span><i class="fas fa-tag"></i> Aniversarios</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Evento de Halloween Especial",
+      "role": "22 jugadores",
+      "description": "Concurso de disfraces en Brookhaven con temática de Halloween. Los mejores disfraces recibieron premios especiales.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "31 Octubre 2025",
+      "tags": "halloween, disfraces, concurso",
+      "badge": "Especial",
+      "badgeIcon": "calendar-star"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Halloween Especial" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-calendar-star"></i> Especial
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Evento de Halloween Especial</h3>
+        <div class="gallery-role">
+          <i class="fas fa-ghost"></i> 22 jugadores
+        </div>
+        <p class="gallery-description">
+          Concurso de disfraces en Brookhaven con premios.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 31 Oct 2025</span>
+          <span><i class="fas fa-tag"></i> Eventos Especiales</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Fiesta en Brookhaven",
+      "role": "8 amigos",
+      "description": "Momento divertido en Brookhaven donde todos bailaron juntos al ritmo de la música. Risas garantizadas.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "10 Diciembre 2025",
+      "tags": "diversión, baile, social",
+      "badge": "Divertido",
+      "badgeIcon": "laugh"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Fiesta Brookhaven" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-laugh"></i> Divertido
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Fiesta en Brookhaven</h3>
+        <div class="gallery-role">
+          <i class="fas fa-music"></i> 8 amigos
+        </div>
+        <p class="gallery-description">
+          Todos bailaron juntos al ritmo de la música.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 10 Dic 2025</span>
+          <span><i class="fas fa-tag"></i> Momentos Divertidos</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Torneo de Arsenal",
+      "role": "10 participantes",
+      "description": "Intenso torneo en Arsenal con partidas rápidas y emocionantes. Diegosanval2012 se llevó el primer lugar.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "18 Noviembre 2025",
+      "tags": "arsenal, shooter, competitivo",
+      "badge": "Torneo",
+      "badgeIcon": "trophy"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Torneo Arsenal" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-trophy"></i> Torneo
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Torneo de Arsenal</h3>
+        <div class="gallery-role">
+          <i class="fas fa-crosshairs"></i> 10 participantes
+        </div>
+        <p class="gallery-description">
+          Intenso torneo en Arsenal, ganado por Diegosanval2012.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 18 Nov 2025</span>
+          <span><i class="fas fa-tag"></i> Torneos</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Bienvenida a Nuevos Miembros",
+      "role": "17 miembros",
+      "description": "Sesión de bienvenida para 5 nuevos miembros. Tour por los grupos del clan y explicación de reglas.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "5 Abril 2025",
+      "tags": "nuevos, bienvenida, comunidad",
+      "badge": "Reunión",
+      "badgeIcon": "users"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Bienvenida Nuevos" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-users"></i> Reunión
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Bienvenida a Nuevos Miembros</h3>
+        <div class="gallery-role">
+          <i class="fas fa-handshake"></i> 17 miembros
+        </div>
+        <p class="gallery-description">
+          Sesión de bienvenida para 5 nuevos miembros.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 5 Abr 2025</span>
+          <span><i class="fas fa-tag"></i> Reuniones</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="gallery-card" data-gallery-item='{
+      "title": "Epic Fail Colectivo",
+      "role": "6 jugadores",
+      "description": "Momento gracioso donde todos caímos al mismo tiempo en un juego de parkour. Risas por más de 5 minutos.",
+      "image": "images/gallery-number-one/proximamente.jpg",
+      "date": "22 Mayo 2025",
+      "tags": "gracioso, fail, parkour",
+      "badge": "Divertido",
+      "badgeIcon": "laugh"
+    }'>
+      <div class="gallery-image">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Epic Fail" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-badge">
+            <i class="fas fa-laugh"></i> Divertido
+          </div>
+          <button class="gallery-zoom" title="Ver más grande">
+            <i class="fas fa-search-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h3 class="gallery-title">Epic Fail Colectivo</h3>
+        <div class="gallery-role">
+          <i class="fas fa-running"></i> 6 jugadores
+        </div>
+        <p class="gallery-description">
+          Todos caímos al mismo tiempo en un parkour. Risas aseguradas.
+        </p>
+        <div class="gallery-meta">
+          <span><i class="far fa-calendar"></i> 22 May 2025</span>
+          <span><i class="fas fa-tag"></i> Momentos Divertidos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="card fade-in text-center">
+              <h2 class="card-title">¿Listo para unirte? - Etapa 1 de 2</h2>
+                <p>
+                Antes de continuar, revisa nuestro reglamento. Esta es la primera etapa del proceso de inscripción.
+                Una vez que aceptes las normas, podrás completar el formulario final.
+                </p>
+              <a href="reglamento.html" class="btn btn-large">
+              <i class="fas fa-file-alt"></i> Etapa 1: Leer reglamento
+          </a>
+        </div>
+      </div>
+    </main>
+
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Serakdep MS</h3>
+            <p>
+              Clan de Roblox para todas las edades. Únete a nuestra comunidad y
+              vive la mejor experiencia de gaming.
+            </p>
+            <div class="social-links">
+              <a href="https://discord.gg/vts4PTHR9K" title="Discord"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://x.com/serakdep?s=21" title="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a
+                href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr"
+                title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h"
+                title="TikTok"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Enlaces Rápidos</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Inicio</a
+                >
+              </li>
+              <li>
+                <a href="reglamento.html"
+                  ><i class="fas fa-chevron-right"></i> Reglamento</a
+                >
+              </li>
+              <li>
+                <a href="formulario.html"
+                  ><i class="fas fa-chevron-right"></i> Formulario</a
+                >
+              </li>
+              <li>
+                <a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
+              </li>
+              <li>
+                <a href="eventos.html"
+                  ><i class="fas fa-chevron-right"></i> Eventos</a
+                >
+              </li>
+              <li>
+                <a href="noticias.html"
+                  ><i class="fas fa-chevron-right"></i> Noticias</a
+                >
+              </li>
+              <li>
+                <a href="contacto.html"
+                  ><i class="fas fa-chevron-right"></i> Contacto</a
+                >
+              </li>
+              <li>
+                <a href="alianzas.html"
+                  ><i class="fas fa-chevron-right"></i> Alianzas</a
+                >
+              </li>
+              <li>
+                <a href="creditos.html"
+                  ><i class="fas fa-chevron-right"></i> Créditos</a
+                >
+              </li>
+              <li>
+                <a href="videotutoriales.html"
+                  ><i class="fas fa-chevron-right"></i> Tutoriales</a
+                >
+            </ul>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:serakdepmsofficial7@gmail.com">
+                  <i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/573116546484"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp"></i> WhatsApp del Clan
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#reportar">
+                  <i class="fas fa-user-shield"></i> Reportar problema
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#sugerencias">
+                  <i class="fas fa-lightbulb"></i> Sugerencias
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#requisitos-admin">
+                  <i class="fas fa-user-tie"></i> Aspirar a Admin
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Información Legal</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="privacidad.html">
+                  <i class="fas fa-user-shield"></i> Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a href="terminos.html">
+                  <i class="fas fa-file-contract"></i> Términos de Servicio
+                </a>
+              </li>
+              <li>
+                <a href="cookies.html">
+                  <i class="fas fa-cookie-bite"></i> Política de Cookies
+                </a>
+              </li>
+              <li>
+                <a href="dmca.html">
+                  <i class="fas fa-balance-scale"></i> Aviso DMCA
+                </a>
+              </li>
+              <li>
+                <a href="creditos.html">
+                  <i class="fas fa-heart"></i> Créditos
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#legal">
+                  <i class="fas fa-gavel"></i> Asuntos Legales
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            © <span id="current-year">2025</span> Serakdep MS - Clan de Roblox.
+            Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/video-player.js"></script>
+    <script src="js/logo-animations.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/chatbot.js"></script> 
+  </body>
+</html> 

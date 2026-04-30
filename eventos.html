@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Eventos y Torneos - Serakdep MS - Clan de Roblox</title>
+    <meta
+      name="description"
+      content="Eventos y torneos del clan Serakdep MS de Roblox - Calendario de actividades, competencias y premios"
+    />
+    <meta
+      name="keywords"
+      content="Roblox, clan, eventos, torneos, competencias, calendario, Serakdep MS, premios"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="favicon/android-chrome-512x512.png"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/eventos.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/chatbot.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  </head>
+  <body>
+
+</script>
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html">Serakdep <span>MS</span></a>
+        </div>
+        <button
+          class="mobile-menu-btn"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reglamento.html">Reglamento</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="eventos.html" class="active">Eventos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">
+          <i class="fas fa-calendar-alt"></i> Eventos y Torneos
+        </h1>
+
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <strong>¡Nota importante:</strong> los enlaces de los eventos tienen soporte para celulares,
+            en pc o laptop aun no esta optimizado el medio de unirse!.
+        </div>
+
+        <div class="card fade-in">
+  <h2 class="card-title">
+    <i class="fas fa-calendar-day"></i> Evento de Hoy
+  </h2>
+
+  <div class="today-event-container">
+    <div class="today-event-card" id="today-event"></div>
+  </div>
+</div>
+
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-calendar"></i> Calendario de Eventos
+          </h2>
+
+          <div class="event-calendar" id="event-calendar">
+            <div class="calendar-header calendar-navigation">
+              <button
+                id="prev-month"
+                class="calendar-nav-btn"
+                aria-label="Mes anterior"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <h3 id="current-month-year">Diciembre 2026</h3>
+
+              <button
+                id="today-btn"
+                class="today-button"
+                aria-label="Ir al mes actual"
+              >
+                <i class="fas fa-calendar-day"></i> Hoy
+              </button>
+              <button
+                id="next-month"
+                class="calendar-nav-btn"
+                aria-label="Mes siguiente"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="calendar-grid" id="calendar-grid"></div>
+
+            <div class="calendar-legend">
+              <p><span class="legend-event">🎮</span> Game Night</p>
+              <p><span class="legend-tournament">🏆</span> Torneo</p>
+              <p><span class="legend-special">🎁</span> Evento Especial</p>
+              <p><span class="legend-today">Hoy</span></p>
+            </div>
+          </div>
+
+          <div class="calendar-events-list" id="calendar-events-list"></div>
+        </div>
+
+        <div class="card fade-in" id="tabla-posiciones">
+          <h2 class="card-title">
+            <i class="fas fa-medal"></i> Resultados Recientes de Eventos
+          </h2>
+          <div class="table-container">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Torneo</th>
+                  <th>Ganador</th>
+                  <th>Premio</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td><!--Torneo Navideño Blox Fruits--></td>
+                  <td><!--🏆 @PandaMaster--></td>
+                  <td><!--500 Robux + Insignia Especial--></td>
+                  <td><!--22 Dic 2025--></td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-chess-queen"></i> Sistema de Rangos
+          </h2>
+
+          <div class="ranks-container-simple">
+            <div class="rank-item">
+              <div class="rank-icon elite">👑</div>
+              <h3>ÉLITE</h3>
+              <p>Líderes y miembros destacados</p>
+            </div>
+
+            <div class="rank-item">
+              <div class="rank-icon veteran">🛡️</div>
+              <h3>VETERANO</h3>
+              <p>Miembros con +3 meses</p>
+            </div>
+
+            <div class="rank-item">
+              <div class="rank-icon member">⚔️</div>
+              <h3>MIEMBRO</h3>
+              <p>Participantes activos</p>
+            </div>
+
+            <div class="rank-item">
+              <div class="rank-icon novice">🌱</div>
+              <h3>NOVATO</h3>
+              <p>Nuevos en el clan</p>
+            </div>
+          </div>
+
+          <div class="rank-benefits">
+            <h3><i class="fas fa-gift"></i> Beneficios por Rango</h3>
+            <ul>
+              <li>
+                <strong>Élite:</strong> +40% premios, votación en decisiones,
+                eventos exclusivos
+              </li>
+              <li>
+                <strong>Veterano:</strong> +35% premios, acceso a torneos
+                especiales
+              </li>
+              <li>
+                <strong>Miembro:</strong> Premios completos, todos los eventos
+                básicos
+              </li>
+              <li>
+                <strong>Novato:</strong> Acceso limitado, sistema de mentoría
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-gift"></i> Sistema de Premios
+          </h2>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <i class="fas fa-money-bill-wave feature-icon"></i>
+              <h3>Robux</h3>
+              <p>Premios en Robux para los ganadores</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-star feature-icon"></i>
+              <h3>Rangos Especiales</h3>
+              <p>Rangos exclusivos en el clan</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-award feature-icon"></i>
+              <h3>Insignias</h3>
+              <p>Insignias de reconocimiento</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-crown feature-icon"></i>
+              <h3>Títulos Honoríficos</h3>
+              <p>Títulos exclusivos en el clan</p>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="card fade-in">
+          <h2 class="card-title">
+            <i class="fas fa-users"></i> Inscripción de Equipos
+          </h2>
+
+          <div class="team-registration">
+            <div class="registration-info">
+              <h3><i class="fas fa-clipboard-check"></i> ¿Cómo inscribirse?</h3>
+              <ol class="registration-steps">
+                <li>Únete al grupo de WhatsApp de inscripciones</li>
+                <li>Indica en qué equipo quieres participar</li>
+                <li>Espera confirmación del líder del equipo</li>
+                <li>¡Listo! Ya estás inscrito</li>
+              </ol>
+
+              <div class="available-teams">
+                <h4>
+                  <i class="fas fa-flag"></i> Equipos Disponibles (72 equipos)
+                </h4>
+                <div class="teams-grid">
+                  <div class="team-card">
+                    <div class="team-icon">🐼</div>
+                    <h5>Pandas Supreme</h5>
+                    <p>Equipo élite del clan - Líder: @PandaMaster</p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚔️</div>
+                    <h5>Dragon Warriors</h5>
+                    <p>
+                      Equipo agresivo especializado en PvP - Líder:
+                      @DragonSlayer
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌙</div>
+                    <h5>Shadow Hunters</h5>
+                    <p>Estrategas tácticos y sigilosos - Líder: </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto<span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔥</div>
+                    <h5>Thunder Squad</h5>
+                    <p>
+                      Equipo rápido de respuesta inmediata - Líder: @ThunderBolt
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌟</div>
+                    <h5>Star Champions</h5>
+                    <p>
+                      Competidores profesionales en torneos - Líder: @StarLeader
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌊</div>
+                    <h5>Ocean Raiders</h5>
+                    <p>Especialistas en mapas acuáticos - Líder: @OceanKing</p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚡</div>
+                    <h5>Lightning Force</h5>
+                    <p>
+                      Equipo de velocidad y reflejos rápidos - Líder:
+                      @LightningSpeed
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🛡️</div>
+                    <h5>Guardian Knights</h5>
+                    <p>
+                      Defensores expertos y protectores - Líder: @GuardianShield
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌋</div>
+                    <h5>Volcano Titans</h5>
+                    <p>
+                      Equipo de poder bruto y daño máximo - Líder: 
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">❄️</div>
+                    <h5>Ice Phantoms</h5>
+                    <p>
+                      Equipo sigiloso y de control de campo - Líder: @IceGhost
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌀</div>
+                    <h5>Storm Chasers</h5>
+                    <p>
+                      Equipo caótico que domina el desorden - Líder: @StormRider
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌌</div>
+                    <h5>Galaxy Warriors</h5>
+                    <p>
+                      Equipo cósmico con estrategias avanzadas - Líder:
+                      @SMS_Fankukild
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 1/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌿</div>
+                    <h5>Forest Rangers</h5>
+                    <p>
+                      Especialistas en mapas naturales/forestales - Líder:
+                      @ForestGuardian
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌅</div>
+                    <h5>Sunset Legends</h5>
+                    <p>
+                      Equipo legendario con experiencia veterana - Líder:
+                      @SunsetHero
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌃</div>
+                    <h5>Night Wolves</h5>
+                    <p>
+                      Equipo nocturno especialista en combate nocturno - Líder:
+                      @NightHunter
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">☀️</div>
+                    <h5>Solar Flames</h5>
+                    <p>
+                      Equipo ardiente con ataques de fuego - Líder: @SolarBlaze
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🐉</div>
+                    <h5>Dragon Fruits</h5>
+                    <p>
+                      Especialistas en combate PvP de Blox Fruits - Líder:
+                      @FruitMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔥</div>
+                    <h5>Phoenix Warriors</h5>
+                    <p>
+                      Estrategas de frutas míticas en Blox Fruits - Líder:
+                      @PhoenixRise
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">👻</div>
+                    <h5>Shadow Slayers</h5>
+                    <p>
+                      Expertos en raids y mazmorras de Blox Fruits - Líder:
+                      @ShadowNinja
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🤖</div>
+                    <h5>Cyborg Guardians</h5>
+                    <p>
+                      Equipo técnico y estratégico de Blox Fruits - Líder:
+                      @TechMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🪷</div>
+                    <h5>Buda Protectors</h5>
+                    <p>
+                      Defensores y tanques principales de Blox Fruits - Líder:
+                      @BuddhaGuard
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎭</div>
+                    <h5>Roleplay Masters</h5>
+                    <p>
+                      Narradores y creadores de historias en Brookhaven RP -
+                      Líder: @RoleplayKing
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🏠</div>
+                    <h5>Mansion Owners</h5>
+                    <p>
+                      Especialistas en propiedades y economía de Brookhaven -
+                      Líder: @MansionLord
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">👮</div>
+                    <h5>Police Department</h5>
+                    <p>
+                      Jugadores de roles policiales en Brookhaven RP - Líder:
+                      @PoliceChief
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎯</div>
+                    <h5>Headshot Snipers</h5>
+                    <p>
+                      Francotiradores precisos en Arsenal - Líder: @SniperPro
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚡</div>
+                    <h5>Rush Attackers</h5>
+                    <p>
+                      Asalto rápido y agresivo en Arsenal - Líder: @RushLeader
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🏴‍☠️</div>
+                    <h5>Sea Emperors</h5>
+                    <p>
+                      Navegantes y piratas en King Legacy - Líder: @SeaCaptain
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🍎</div>
+                    <h5>Devil Fruit Hunters</h5>
+                    <p>
+                      Cazadores de frutas del diablo en King Legacy - Líder:
+                      @FruitHunter
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🐶</div>
+                    <h5>Pet Trainers</h5>
+                    <p>
+                      Criadores y entrenadores en Adopt Me - Líder: @PetMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">✨</div>
+                    <h5>Neon Makers</h5>
+                    <p>
+                      Creadores de mascotas neón en Adopt Me - Líder:
+                      @NeonArtist
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔄</div>
+                    <h5>Versatile Legends</h5>
+                    <p>
+                      Jugadores multijuegos versátiles - Líder: @VersatilePro
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌑</div>
+                    <h5>Dark Matter</h5>
+                    <p>
+                      Maestros del control del espacio y gravedad - Líder:
+                      @VoidWalker
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚗️</div>
+                    <h5>Alchemy Masters</h5>
+                    <p>
+                      Especialistas en combinaciones y efectos únicos - Líder:
+                      @PotionMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎲</div>
+                    <h5>Dice Royals</h5>
+                    <p>
+                      Estrategas que dominan probabilidades y riesgos - Líder:
+                      @LuckMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🕵️</div>
+                    <h5>Mystery Solvers</h5>
+                    <p>
+                      Investigadores expertos en resolver enigmas - Líder:
+                      @DetectivePro
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🏹</div>
+                    <h5>Arcane Archers</h5>
+                    <p>
+                      Arqueros con habilidades mágicas y precisión - Líder:
+                      @ArrowMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎵</div>
+                    <h5>Rhythm Legends</h5>
+                    <p>
+                      Especialistas en juegos de ritmo y timing - Líder:
+                      @BeatMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧩</div>
+                    <h5>Puzzle Genius</h5>
+                    <p>
+                      Resolvedores rápidos de acertijos y puzzles - Líder:
+                      @PuzzleSolver
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧠</div>
+                    <h5>Mind Warriors</h5>
+                    <p>
+                      Estrategas de táctica pura y psicología - Líder:
+                      @TacticalMind
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚙️</div>
+                    <h5>Gear Masters</h5>
+                    <p>
+                      Expertos en mecánicas y builds optimizadas - Líder:
+                      @BuildMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🕰️</div>
+                    <h5>Time Wardens</h5>
+                    <p>
+                      Controladores del tempo y secuencias - Líder: @TimeKeeper
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">📡</div>
+                    <h5>Signal Hunters</h5>
+                    <p>
+                      Cazadores de información y datos ocultos - Líder:
+                      @DataHunter
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎭</div>
+                    <h5>Dual Identity</h5>
+                    <p>
+                      Especialistas en cambiar roles y estrategias - Líder:
+                      @DoubleAgent
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌪️</div>
+                    <h5>Tornado Riders</h5>
+                    <p>
+                      Maestros del caos controlado y movilidad - Líder:
+                      @WindMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔮</div>
+                    <h5>Crystal Seers</h5>
+                    <p>
+                      Videntes que anticipan movimientos enemigos - Líder:
+                      @FutureSeer
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🥷</div>
+                    <h5>Silent Blades</h5>
+                    <p>
+                      Asesinos sigilosos de eliminación rápida - Líder:
+                      @SilentKiller
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🏗️</div>
+                    <h5>Architect Lords</h5>
+                    <p>
+                      Constructores expertos en defensas y trampas - Líder:
+                      @BuilderPro
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🦅</div>
+                    <h5>Sky Dominators</h5>
+                    <p>
+                      Especialistas en combate aéreo y altura - Líder: @SkyKing
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">💎</div>
+                    <h5>Diamond Cutters</h5>
+                    <p>
+                      Equipo de precisión y ataques críticos - Líder:
+                      @CritMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧪</div>
+                    <h5>Mutation Lords</h5>
+                    <p>
+                      Expertos en habilidades mutantes y evoluciones - Líder:
+                      @MutantX
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎯</div>
+                    <h5>Bullseye Experts</h5>
+                    <p>
+                      Precisión absoluta en cada disparo - Líder: @TargetMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🗺️</div>
+                    <h5>Explorer Guild</h5>
+                    <p>
+                      Descubridores de secretos y mapas ocultos - Líder:
+                      @MapExplorer
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚔️</div>
+                    <h5>Sword Saints</h5>
+                    <p>
+                      Maestros del combate cuerpo a cuerpo - Líder: @BladeSaint
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔋</div>
+                    <h5>Energy Drains</h5>
+                    <p>
+                      Especialistas en agotar recursos enemigos - Líder:
+                      @EnergyThief
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🌠</div>
+                    <h5>Comet Chasers</h5>
+                    <p>
+                      Equipo de movilidad extrema y velocidad - Líder:
+                      @SpeedComet
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧲</div>
+                    <h5>Magnetic Force</h5>
+                    <p>
+                      Controladores de posicionamiento y atracción - Líder:
+                      @MagnetMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎨</div>
+                    <h5>Creative Souls</h5>
+                    <p>
+                      Innovadores en estrategias no convencionales - Líder:
+                      @CreativeMind
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">⚖️</div>
+                    <h5>Balance Keepers</h5>
+                    <p>
+                      Especialistas en equilibrio y counter picks - Líder:
+                      @BalanceMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧿</div>
+                    <h5>Curse Breakers</h5>
+                    <p>
+                      Removedores de efectos negativos y debuffs - Líder:
+                      @CurseRemover
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔄</div>
+                    <h5>Cycle Masters</h5>
+                    <p>
+                      Expertos en rotación de habilidades y cooldowns - Líder:
+                      @CyclePro
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎪</div>
+                    <h5>Circus Performers</h5>
+                    <p>
+                      Equipo impredecible y de alto espectáculo - Líder:
+                      @ShowMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🛸</div>
+                    <h5>UFO Raiders</h5>
+                    <p>
+                      Tecnología alienígena y tácticas extrañas - Líder:
+                      @AlienTech
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧚</div>
+                    <h5>Fairy Tacticians</h5>
+                    <p>
+                      Estrategia de apoyo y buffs de equipo - Líder:
+                      @FairySupport
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🏔️</div>
+                    <h5>Mountain Kings</h5>
+                    <p>
+                      Defensores inamovibles de posiciones clave - Líder:
+                      @MountainLord
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎖️</div>
+                    <h5>Medal Collectors</h5>
+                    <p>
+                      Cazadores de logros y recompensas raras - Líder:
+                      @AchievementHunter
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🧭</div>
+                    <h5>Pathfinders</h5>
+                    <p>
+                      Guias expertos en navegación y rutas óptimas - Líder:
+                      @PathMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎭</div>
+                    <h5>Illusionists</h5>
+                    <p>
+                      Maestros del engaño y fintas psicológicas - Líder:
+                      @IllusionMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">☣️</div>
+                    <h5>Toxic Avengers</h5>
+                    <p>
+                      Especialistas en efectos de veneno y daño over time -
+                      Líder: @Toxicity
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">📚</div>
+                    <h5>Library Guardians</h5>
+                    <p>
+                      Conocedores de lore y mecánicas ocultas - Líder:
+                      @LoreMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🎪</div>
+                    <h5>Gladiator Elite</h5>
+                    <p>
+                      Combatientes de arena y duelos 1v1 - Líder: @ArenaChampion
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🔔</div>
+                    <h5>Bell Ringers</h5>
+                    <p>
+                      Equipo que domina eventos limitados por tiempo - Líder:
+                      @TimerMaster
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <div class="team-icon">🕯️</div>
+                    <h5>Candle Keepers</h5>
+                    <p>
+                      Guardianes de objetivos y misiones de escolta - Líder:
+                      @EscortPro
+                    </p>
+                    <div class="team-stats">
+                      <span><i class="fas fa-users"></i> 0/5</span>
+                      <span class="team-status open">Abierto</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="registration-action">
+              <div class="whatsapp-invite">
+                <i class="fab fa-whatsapp whatsapp-icon"></i>
+                <h4>¡Únete al Grupo de Inscripciones!</h4>
+                <p>En este grupo podrás:</p>
+                <ul>
+                  <li>Inscribirte en un equipo</li>
+                  <li>Consultar disponibilidad</li>
+                  <li>Hablar con los líderes</li>
+                  <li>Coordinarte con tu equipo</li>
+                </ul>
+
+                <a
+                  href="https://chat.whatsapp.com/GKNPAt6eWRhJz1xA8nfGyP"
+                  class="btn btn-large btn-whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp"></i> Grupo de Inscripciones
+                </a>
+
+                <div class="registration-note">
+                  <i class="fas fa-info-circle"></i>
+                  <strong
+                    >IMPORTANTE:
+                    <p>🐼 PROCEDIMIENTO DE INSCRIPCIÓN</p>
+                  </strong>
+                  <p>
+                    Se te enviará un formulario dentro del grupo para que lo
+                    diligencias completamente.
+                  </p>
+                  <p>
+                    ✅ Completa el formulario correctamente y recibe tu
+                    asignación de equipo en minutos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card fade-in text-center">
+  <h2 class="card-title">¡No te pierdas nada!</h2>
+  <p>
+    Únete a nuestro <strong>canal de eventos y noticias</strong> y mantente al día con toda la información importante.
+  </p>
+  <a
+    href="https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31"   
+    class="btn btn-large btn-news"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fas fa-newspaper"></i> Canal de Eventos y Noticias
+  </a>
+  <div class="reminder-note">
+    <i class="fas fa-bell"></i> Recibe novedades, fechas clave y contenido exclusivo directamente en tu dispositivo.
+  </div>
+</div>
+
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <strong>¡Consulta nuestras últimas noticias!</strong>
+          <a href="noticias.html" class="news-link">
+            Haz clic aquí para ver actualizaciones, colaboraciones y anuncios
+            importantes.
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Serakdep MS</h3>
+            <p>
+              Clan de Roblox para todas las edades. Únete a nuestra comunidad y
+              vive la mejor experiencia de gaming.
+            </p>
+            <div class="social-links">
+              <a href="https://discord.gg/vts4PTHR9K" title="Discord"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://x.com/serakdep?s=21" title="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a
+                href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr"
+                title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h"
+                title="TikTok"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Enlaces Rápidos</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Inicio</a
+                >
+              </li>
+              <li>
+                <a href="reglamento.html"
+                  ><i class="fas fa-chevron-right"></i> Reglamento</a
+                >
+              </li>
+              <li>
+                <a href="formulario.html"
+                  ><i class="fas fa-chevron-right"></i> Formulario</a
+                >
+              </li>
+              <li>
+                <a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
+              </li>
+              <li>
+                <a href="noticias.html"
+                  ><i class="fas fa-chevron-right"></i> Noticias</a
+                >
+              </li>
+              <li>
+                <a href="contacto.html"
+                  ><i class="fas fa-chevron-right"></i> Contacto</a
+                >
+              </li>
+              <li>
+                <a href="alianzas.html"
+                  ><i class="fas fa-chevron-right"></i> Alianzas</a
+                >
+              </li>
+              <li>
+                <a href="creditos.html"
+                  ><i class="fas fa-chevron-right"></i> Créditos</a
+                >
+              </li>
+              <li>
+                <a href="videotutoriales.html"
+                  ><i class="fas fa-chevron-right"></i> Tutoriales</a
+                >
+            </ul>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:serakdepmsofficial7@gmail.com">
+                  <i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/573116546484"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp"></i> WhatsApp del Clan
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#reportar">
+                  <i class="fas fa-user-shield"></i> Reportar problema
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#sugerencias">
+                  <i class="fas fa-lightbulb"></i> Sugerencias
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#requisitos-admin">
+                  <i class="fas fa-user-tie"></i> Aspirar a Admin
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Información Legal</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="privacidad.html">
+                  <i class="fas fa-user-shield"></i> Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a href="terminos.html">
+                  <i class="fas fa-file-contract"></i> Términos de Servicio
+                </a>
+              </li>
+              <li>
+                <a href="cookies.html">
+                  <i class="fas fa-cookie-bite"></i> Política de Cookies
+                </a>
+              </li>
+              <li>
+                <a href="dmca.html">
+                  <i class="fas fa-balance-scale"></i> Aviso DMCA
+                </a>
+              </li>
+              <li>
+                <a href="creditos.html">
+                  <i class="fas fa-heart"></i> Créditos
+                </a>
+              </li>
+              <li>
+                <a href="contacto.html#legal">
+                  <i class="fas fa-gavel"></i> Asuntos Legales
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            © <span id="current-year">2026</span> Serakdep MS - Clan de Roblox.
+            Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/eventos.js"></script>
+    <script src="js/redirect.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>
