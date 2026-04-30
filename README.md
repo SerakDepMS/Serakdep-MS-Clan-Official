@@ -17,7 +17,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 
 **PROYECTO PRIVADO CON LICENCIA RESTRICTIVA**
 - 🔐 **Propiedad intelectual:** D3B1A2C4F5E67890
-- 🌐 **URL oficial:** https://serakdepms.github.io/Serakdep-MS-Clan/
+- 🌐 **URL oficial:** https://serakdepms.github.io/Serakdep-MS-Clan-Official/
 - 📜 **Licencia:** Propietaria - Todos los derechos reservados
 - 📅 **Última actualización:** 26 de enero de 2026
 
@@ -61,7 +61,7 @@ Este sitio web está diseñado para facilitar tu integración y participación e
 
 ## 🔗 Enlaces importantes
 
-- [Formulario de inscripción](https://serakdepms.github.io/Serakdep-MS-Clan/formulario.html)
+- [Formulario de inscripción](https://serakdepms.github.io/Serakdep-MS-Clan-Official/)
 - [WhatsApp del clan](https://wa.me/573116546484)
 - [Discord oficial](https://discord.gg/vts4PTHR9K)
 - Correo oficial: `serakdepmsofficial7@gmail.com`
@@ -73,11 +73,6 @@ Este sitio web está diseñado para facilitar tu integración y participación e
 - Npoint.io para carga dinámica de noticias
 - Diseño responsivo y accesible
 
-## 👥 Equipo administrativo
-
-- **Fundadores:** Db_artworkLIDERSMS
-- **Administradores:** JoelMS_14 y AlexisPro456
-- **Moderadores:** Lista actualizada en [Contacto](https://serakdepms.github.io/Serakdep-MS-Clan/contacto.html)
 
 ## ⚖️ INFORMACIÓN LEGAL COMPLETA
 
