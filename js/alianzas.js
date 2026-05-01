@@ -94,7 +94,16 @@ const clanesAliados = [
     activo: true,
     nuevaAlianza: false,
     fechaAlianza: "2026-10-27"
+  },
+  {
+    nombre: "Celestial Diamond",
+    logo: "images/alianzas/CelestialDiamond.jpg",
+    descripcion: "Nuestro clan es una comunidad diversa, en busca de congregaciones divertidas.",
+    activo: true,
+    nuevaAlianza: false,
+    fechaAlianza: "2025-12-22"
   }
+  
   
 ];
 
