@@ -68,10 +68,17 @@ Este sitio web está diseñado para facilitar tu integración y participación e
 
 ## 🛠️ Tecnologías utilizadas
 
-- HTML5, CSS3, JavaScript
-- GitHub Pages para hosting
-- Npoint.io para carga dinámica de noticias
-- Diseño responsivo y accesible
+- **HTML5** – Estructura semántica de todas las páginas.
+- **CSS3** – Estilos, animaciones, glassmorphism y diseño responsivo.
+- **JavaScript (Vanilla)** – Interactividad, lógica de formularios, reproductores de video, chatbot, calendario, etc.
+- **GitHub Pages** – Hosting gratuito del sitio estático.
+- **Npoint.io** – Almacenamiento y carga dinámica de noticias y eventos (API JSON).
+- **EmailJS** – Envío de correos electrónicos desde los formularios de contacto, inscripción, reportes, sugerencias y aspirantes a admin.
+- **Chart.js** – Gráficos interactivos en el panel de administración.
+- **Font Awesome** – Iconos vectoriales en toda la interfaz.
+- **Google Fonts** – Tipografía "Poppins" para una mejor legibilidad.
+- **Diseño responsivo** – Adaptable a móviles, tablets y escritorio.
+- **Chatbot IA** – Asistente virtual integrado mediante JavaScript y base de conocimiento estática.
 
 
 ## ⚖️ INFORMACIÓN LEGAL COMPLETA
