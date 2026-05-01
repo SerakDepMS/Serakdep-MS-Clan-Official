@@ -114,7 +114,7 @@ const clanesAliados = [
   {
     nombre: "Sovereign Zenith Authority",
     logo: "images/alianzas/SovereignZenithAuthority.jpg",
-    descripcion: "The Black Bulls simboliza el poder absoluto, la fuerza imponente y el misterio indomable.",
+    descripcion: "En busca de la perfeccion y la buena comunicacion entre alianzas, somos la fuerza que impulsa el cambio.",
     activo: true,
     nuevaAlianza: false,
     fechaAlianza: "2026-02-04"
@@ -122,10 +122,10 @@ const clanesAliados = [
   {
     nombre: "The Black Bulls",
     logo: "images/alianzas/TheBlackBulls.jpg",
-    descripcion: ".",
+    descripcion: "The Black Bulls simboliza el poder absoluto, la fuerza imponente y el misterio indomable.",
     activo: true,
     nuevaAlianza: false,
-    fechaAlianza: "2025-12-22"
+    fechaAlianza: "2025-12-20"
   }
   
   
