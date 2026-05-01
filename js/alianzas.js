@@ -102,6 +102,30 @@ const clanesAliados = [
     activo: true,
     nuevaAlianza: false,
     fechaAlianza: "2025-12-22"
+  },
+  {
+    nombre: "Oblivion Pact",
+    logo: "images/alianzas/OblivionPact.jpg",
+    descripcion: "Es un clan miesterioso y poderoso, centrado en el secreto, la lealtad y la memoria olvidada. sus miembros hacen pactos silenciosos, actuando desde las sombras con estrategia y unidad, dejando huella sin revelar su verdadera fuerza.",
+    activo: true,
+    nuevaAlianza: false,
+    fechaAlianza: "2026-04-14"
+  },
+  {
+    nombre: "Sovereign Zenith Authority",
+    logo: "images/alianzas/SovereignZenithAuthority.jpg",
+    descripcion: "The Black Bulls simboliza el poder absoluto, la fuerza imponente y el misterio indomable.",
+    activo: true,
+    nuevaAlianza: false,
+    fechaAlianza: "2026-02-04"
+  },
+  {
+    nombre: "The Black Bulls",
+    logo: "images/alianzas/TheBlackBulls.jpg",
+    descripcion: ".",
+    activo: true,
+    nuevaAlianza: false,
+    fechaAlianza: "2025-12-22"
   }
   
   
