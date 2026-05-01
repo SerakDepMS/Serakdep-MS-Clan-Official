@@ -16,19 +16,19 @@ class VideoPlayerFinal {
       },
       {
         src: "video/video-number-one/video3.mp4",
-        title: "Eventos de la Semana",
+        title: "Avion de guerra",
         duration: "13",
         size: "50 MB",
       },
       {
         src: "video/video-number-one/video4.mp4",
-        title: "Nuestra Comunidad",
+        title: "Formula 1",
         duration: "39",
         size: "42 MB",
       },
       {
         src: "video/video-number-one/video5.mp4",
-        title: "Tutoriales y Consejos",
+        title: "War Thunder",
         duration: "14",
         size: "65 MB",
       },
