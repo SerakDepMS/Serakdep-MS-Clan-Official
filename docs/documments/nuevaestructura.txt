@@ -1,11 +1,9 @@
 serakdep-ms-official/
-│
 ├── README.md
 ├── LICENSE
 ├── SECURITY.md
 ├── .gitignore
-│
-├── index.html                              # (se queda en raíz, requisito de GitHub Pages)
+├── index.html
 │
 ├── pages/
 │   ├── reglamento.html
@@ -24,89 +22,26 @@ serakdep-ms-official/
 │
 ├── public/
 │   ├── favicon/
-│   │   ├── favicon.ico
-│   │   ├── favicon-32x32.png
-│   │   ├── favicon-16x16.png
-│   │   ├── apple-touch-icon.png
-│   │   ├── android-chrome-192x192.png
-│   │   ├── android-chrome-512x512.png
-│   │   └── site.webmanifest
-│   │
-│   └── media/
-│       ├── images/
-│       │   ├── branding/
-│       │   │   └── clan-logo.png               (antes /images/clan-logo.png)
-│       │   ├── team/
-│       │   │   ├── founder.jpg                 (antes /images/members/Db_artworkFOUNDERSMS.jpg)
-│       │   │   ├── supervisor.jpg              (antes /images/members/Yanfeix6.jpg)
-│       │   │   ├── designer.jpg                (antes /images/members/Diegosanval2012.jpg)
-│       │   │   ├── editor.jpg                  (antes /images/members/putifino111.jpg)
-│       │   │   ├── qa.jpg                      (antes /images/members/Teo_174bj.jpg)
-│       │   │   ├── recruiter.jpg               (antes /images/members/joseprorico.jpg)
-│       │   │   ├── coordinator.jpg             (antes /images/members/Year171.jpg)
-│       │   │   ├── support.jpg                 (antes /images/members/kakaroto11141.jpg)
-│       │   │   ├── alliance-mgr.jpg            (antes /images/members/little_aldoxd.jpg)
-│       │   │   └── moderator.jpg               (antes /images/members/7huhuj08.jpg)
-│       │   ├── gallery/
-│       │   │   ├── coding-website.jpg          (antes /images/gallery-number-two/Programandolapáginaweboficial.jpg)
-│       │   │   ├── graphic-design.jpg          (antes /images/gallery-number-two/Creandodiseñosgráficos.jpg)
-│       │   │   ├── video-editing.jpg           (antes /images/gallery-number-two/Editandocontenidomultimedia.jpg)
-│       │   │   ├── team-meeting.jpg            (antes /images/gallery-number-two/Planificaciónestratégica.jpg)
-│       │   │   ├── roblox-dev.jpg              (antes /images/gallery-number-two/Creandoexperienciasparaelclan.jpg)
-│       │   │   └── special-event.jpg           (antes /images/gallery-number-two/EventoEspecialdelClan.jpg)
-│       │   ├── memories/
-│       │   │   └── coming-soon.jpg             (antes /images/gallery-number-one/proximamente.jpg)
-│       │   └── alliances/
-│       │       ├── wicked-white-void.jpg        (antes /images/alianzas/WhickedWhiteVoid.jpg)
-│       │       ├── kian-vove-xoars.jpg         (antes /images/alianzas/KianVoveXoars.jpg)
-│       │       ├── golden-vultures.jpg         (antes /images/alianzas/GoldenVultures.jpg)
-│       │       ├── nythera.jpg                 (antes /images/alianzas/NYTHERA.jpg)
-│       │       ├── the-future-legends.jpg      (antes /images/alianzas/TheFutureLegends.jpg)
-│       │       ├── bloody-legacy.jpg           (antes /images/alianzas/BloodyLegacy.jpg)
-│       │       ├── wonderland.jpg              (antes /images/alianzas/Wonderland.jpg)
-│       │       ├── legion-nova.jpg             (antes /images/alianzas/LegionNova.jpg)
-│       │       ├── luwance.jpg                 (antes /images/alianzas/LUWANCE.jpg)
-│       │       ├── bobox-community.jpg         (antes /images/alianzas/Boboxcommunity.jpg)
-│       │       ├── kiras-order.jpg             (antes /images/alianzas/KirasOrder.jpg)
-│       │       ├── azeroth-seraphim.jpg        (antes /images/alianzas/AzerothSeraphimGriever.jpg)
-│       │       ├── celestial-diamond.jpg       (antes /images/alianzas/CelestialDiamond.jpg)
-│       │       ├── oblivion-pact.jpg           (antes /images/alianzas/OblivionPact.jpg)
-│       │       ├── sovereign-zenith.jpg        (antes /images/alianzas/SovereignZenithAuthority.jpg)
-│       │       └── the-black-bulls.jpg         (antes /images/alianzas/TheBlackBulls.jpg)
-│       │
-│       └── videos/
-│           ├── player/
-│           │   ├── video-01.mp4                (antes /video/video-number-one/video1.mp4)
-│           │   ├── video-02.mp4                (antes /video/video-number-one/video2.mp4)
-│           │   │   ... (hasta video-15.mp4)
-│           │   └── video-15.mp4                (antes /video/video-number-one/video15.mp4)
-│           └── tutorials/
-│               ├── how-to-join.mp4             (antes /video/video-number-two/comounirsealclan.mp4)
-│               ├── become-admin.mp4            (antes /video/video-number-two/aspiraraadmin.mp4)
-│               ├── report-issue.mp4            (antes /video/video-number-two/reportarproblema.mp4)
-│               ├── send-suggestion.mp4         (antes /video/video-number-two/sugerenciasymejoras.mp4)
-│               └── how-to-use-site.mp4         (antes /video/video-number-two/comousarlapaginaweb.mp4)
+│   │   └── (todos los archivos de favicon)
+│   ├── media/
+│   │   ├── images/
+│   │   │   ├── branding/          (logo principal)
+│   │   │   ├── team/              (fotos del equipo)
+│   │   │   ├── gallery/           (galería del equipo)
+│   │   │   ├── memories/          (galería de recuerdos)
+│   │   │   └── alliances/         (logos de aliados)
+│   │   └── videos/
+│   │       ├── player/            (videos del reproductor principal)
+│   │       └── tutorials/         (videotutoriales)
+│   └── fonts/                     (si algún día usas fuentes locales)
 │
 ├── src/
 │   ├── styles/
-│   │   ├── core/
-│   │   │   ├── main.css                       (antes /css/style.css)
-│   │   │   └── responsive.css                 (antes /css/responsive.css)
-│   │   ├── components/
-│   │   │   ├── loading-screen.css             (antes /css/loading.css)
-│   │   │   ├── logo.css                       (antes /css/logo.css)
-│   │   │   ├── video-player.css               (antes /css/video-player.css)
-│   │   │   └── chatbot.css                    (antes /css/chatbot.css)
-│   │   └── pages/
-│   │       ├── credits.css                    (antes /css/creditos.css)
-│   │       ├── alliances.css                  (antes /css/alianzas.css)
-│   │       ├── events.css                     (antes /css/eventos.css)
-│   │       ├── faq.css                        (antes /css/faq-enhanced.css)
-│   │       ├── forms.css                      (antes /css/forms.css)
-│   │       ├── news.css                       (antes /css/noticias.css)
-│   │       └── tutorials.css                  (antes /css/videotutoriales.css)
-│   │
+│   │   ├── core/                  (variables, reset, main, responsive)
+│   │   ├── components/            (header, footer, buttons, cards, etc.)
+│   │   └── pages/                 (estilos específicos de cada página)
 │   ├── scripts/
+<<<<<<< HEAD
 │   │   ├── core/
 │   │   │   ├── main.js                        (antes /js/main.js)
 │   │   │   ├── redirect.js                    (antes /js/redirect.js)
@@ -126,9 +61,14 @@ serakdep-ms-official/
 │          ├── noticias.js                        (antes /js/noticias.js)
 │          └── tutorials.js                   (antes /js/videotutoriales.js)
 │   
+=======
+│   │   ├── core/                  (main.js, redirect.js, scroll-reveal.js)
+│   │   ├── components/            (video-player.js, chatbot.js, loading.js, etc.)
+│   │   └── pages/                 (form.js, faq-enhanced.js, eventos.js, etc.)
+│   └── data/
+│       └── (archivos JSON de configuración, si los tuvieras)
+>>>>>>> parent of d15b194 (ok)
 │
 ├── .github/
-│   └── workflows/                             (vacío por ahora, opcional para CI/CD)
-│
-└── docs/
-    └── (vacío por ahora, para futura documentación)
+│   └── workflows/                 (opcional)
+└── docs/                          (documentación)
