@@ -120,10 +120,10 @@ serakdep-ms-official/
 │   │   └── pages/
 │          ├── credits.js                     (antes /js/creditos.js)
 │          ├── alliances.js                   (antes /js/alianzas.js)
-│          ├── events.js                      (antes /js/eventos.js)
-│          ├── faq.js                         (antes /js/faq-enhanced.js)
+│          ├── eventos.js                      (antes /js/eventos.js)
+│          ├── faq-enhanced.js                         (antes /js/faq-enhanced.js)
 │          ├── forms.js                       (antes /js/form.js)
-│          ├── news.js                        (antes /js/noticias.js)
+│          ├── noticias.js                        (antes /js/noticias.js)
 │          └── tutorials.js                   (antes /js/videotutoriales.js)
 │   
 │
