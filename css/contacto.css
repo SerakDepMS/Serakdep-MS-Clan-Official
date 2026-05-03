@@ -1,0 +1,391 @@
+/* ==================== CENTRO DE AYUDA - CONTACTO ==================== */
+.page-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+/* ==================== TARJETAS DE ACCESO RÁPIDO ==================== */
+.ayuda-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.ayuda-card {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.ayuda-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #2d6a4f, #d4af37);
+  border-radius: 3px 0 0 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ayuda-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.ayuda-card:hover::before {
+  opacity: 1;
+}
+
+.ayuda-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.ayuda-card:hover .ayuda-card-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.ayuda-card-icon.reportar {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+.ayuda-card-icon.sugerencias {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+.ayuda-card-icon.admin {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+.ayuda-card-icon.faq {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+.ayuda-card-icon.tutoriales {
+  background: linear-gradient(135deg, #8e44ad, #6c3483);
+}
+.ayuda-card-icon.chatbot {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.ayuda-card-content {
+  flex: 1;
+}
+
+.ayuda-card-content h3 {
+  color: #1b4332;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.ayuda-card-content p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0 0 14px 0;
+  line-height: 1.5;
+}
+
+.ayuda-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #2d6a4f;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: gap 0.3s;
+}
+
+.ayuda-card:hover .ayuda-card-btn {
+  gap: 12px;
+}
+
+.ayuda-card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #555;
+}
+
+.ayuda-card-badge.destacado {
+  background: linear-gradient(135deg, #3498db20, #2980b930);
+  color: #2471a3;
+}
+.ayuda-card-badge.nuevo {
+  background: linear-gradient(135deg, #8e44ad20, #6c348330);
+  color: #6c3483;
+}
+.ayuda-card-badge.popular {
+  background: linear-gradient(135deg, #e74c3c20, #c0392b30);
+  color: #c0392b;
+}
+.ayuda-card-badge.disponible {
+  background: linear-gradient(135deg, #2ecc7120, #27ae6030);
+  color: #1e8449;
+}
+.ayuda-card-badge.opcional {
+  background: rgba(0, 0, 0, 0.04);
+  color: #777;
+}
+
+/* ==================== CONTACTO DIRECTO ==================== */
+.contacto-directo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.contacto-directo-card {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 18px;
+  padding: 25px 20px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contacto-directo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cd-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  margin: 0 auto 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.cd-icon.whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+.cd-icon.email {
+  background: linear-gradient(135deg, #2d6a4f, #1b4332);
+}
+.cd-icon.discord {
+  background: linear-gradient(135deg, #5865f2, #4752c4);
+}
+
+.contacto-directo-card h3 {
+  color: #1b4332;
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.cd-info {
+  color: #2d6a4f;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
+  word-break: break-all;
+}
+
+.cd-desc {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0 0 18px 0;
+  line-height: 1.4;
+}
+
+.contacto-directo-card .btn {
+  margin: 0 auto;
+}
+
+.btn-whatsapp {
+  background: #25d366 !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+.btn-whatsapp:hover {
+  background: #128c7e !important;
+}
+
+/* ==================== FAQ RÁPIDAS ==================== */
+.faq-rapidas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.faq-rapida-item {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(45, 106, 79, 0.1);
+  transition: border-color 0.3s;
+}
+
+.faq-rapida-item:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.faq-rapida-pregunta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #1b4332;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.faq-rapida-pregunta i {
+  color: #d4af37;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.faq-rapida-respuesta p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.faq-rapida-respuesta a {
+  color: #2d6a4f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.faq-rapida-respuesta a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== TIEMPOS DE RESPUESTA ==================== */
+.tiempos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tiempo-item {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  border: 1px solid rgba(45, 106, 79, 0.08);
+  transition: transform 0.3s;
+}
+
+.tiempo-item:hover {
+  transform: translateY(-4px);
+}
+
+.tiempo-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 12px;
+  color: white;
+}
+
+.tiempo-icon.urgente {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+.tiempo-icon.normal {
+  background: linear-gradient(135deg, #2d6a4f, #1b4332);
+}
+.tiempo-icon.baja {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+.tiempo-icon.info {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.tiempo-info h4 {
+  color: #1b4332;
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.tiempo-valor {
+  color: #2d6a4f;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+}
+
+.tiempo-desc {
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .ayuda-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-directo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-rapidas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tiempos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tiempos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ayuda-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ayuda-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
