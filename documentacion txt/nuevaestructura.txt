@@ -1,0 +1,52 @@
+serakdep-ms-official/
+├── README.md
+├── LICENSE
+├── SECURITY.md
+├── .gitignore
+├── index.html
+│
+├── pages/
+│   ├── reglamento.html
+│   ├── formulario.html
+│   ├── faq.html
+│   ├── eventos.html
+│   ├── noticias.html
+│   ├── contacto.html
+│   ├── creditos.html
+│   ├── alianzas.html
+│   ├── videotutoriales.html
+│   ├── privacidad.html
+│   ├── terminos.html
+│   ├── cookies.html
+│   └── dmca.html
+│
+├── public/
+│   ├── favicon/
+│   │   └── (todos los archivos de favicon)
+│   ├── media/
+│   │   ├── images/
+│   │   │   ├── branding/          (logo principal)
+│   │   │   ├── team/              (fotos del equipo)
+│   │   │   ├── gallery/           (galería del equipo)
+│   │   │   ├── memories/          (galería de recuerdos)
+│   │   │   └── alliances/         (logos de aliados)
+│   │   └── videos/
+│   │       ├── player/            (videos del reproductor principal)
+│   │       └── tutorials/         (videotutoriales)
+│   └── fonts/                     (si algún día usas fuentes locales)
+│
+├── src/
+│   ├── styles/
+│   │   ├── core/                  (variables, reset, main, responsive)
+│   │   ├── components/            (header, footer, buttons, cards, etc.)
+│   │   └── pages/                 (estilos específicos de cada página)
+│   ├── scripts/
+│   │   ├── core/                  (main.js, redirect.js, scroll-reveal.js)
+│   │   ├── components/            (video-player.js, chatbot.js, loading.js, etc.)
+│   │   └── pages/                 (form.js, faq-enhanced.js, eventos.js, etc.)
+│   └── data/
+│       └── (archivos JSON de configuración, si los tuvieras)
+│
+├── .github/
+│   └── workflows/                 (opcional)
+└── docs/                          (documentación)
