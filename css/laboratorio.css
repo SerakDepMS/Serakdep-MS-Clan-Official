@@ -1,0 +1,424 @@
+/* ==================== CODE LAB - VSCODE STYLE ==================== */
+:root {
+  --editor-bg: #1e1e2e;
+  --editor-sidebar: #252536;
+  --editor-text: #cdd6f4;
+  --editor-accent: #d4af37;
+  --editor-line: #313145;
+  --editor-tab-active: #1e1e2e;
+  --editor-tab-inactive: #2a2a3c;
+}
+
+/* ─── MENU BAR ─── */
+.lab-menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1b4332;
+  border-radius: 10px 10px 0 0;
+  padding: 8px 15px;
+  color: white;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.menu-left, .menu-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ─── WORKSPACE ─── */
+.lab-workspace {
+  display: flex;
+  gap: 0;
+  min-height: 70vh;
+  background: var(--editor-bg);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-top: none;
+}
+
+/* ─── SIDEBAR ─── */
+.lab-sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--editor-sidebar);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--editor-line);
+}
+
+.sidebar-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--editor-line);
+}
+
+.sidebar-tab {
+  flex: 1;
+  padding: 10px 8px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.sidebar-tab.active {
+  color: var(--editor-accent);
+  border-bottom: 2px solid var(--editor-accent);
+}
+
+.sidebar-tab:hover {
+  color: #ccc;
+}
+
+.sidebar-panel {
+  display: none;
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.sidebar-panel.active {
+  display: block;
+}
+
+/* ─── FILE EXPLORER ─── */
+.file-explorer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.file-item:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.file-item.active {
+  background: rgba(212,175,55,0.15);
+  color: var(--editor-accent);
+}
+
+.file-icon-html { color: #e44d26; }
+.file-icon-css { color: #264de4; }
+.file-icon-js { color: #f7df1e; }
+
+/* ─── LEARN LIST ─── */
+.learn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.learn-item {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.learn-item:hover {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+/* ─── MAIN ─── */
+.lab-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ─── FILE TABS ─── */
+.lab-file-tabs {
+  display: flex;
+  background: #1a1a2a;
+  border-bottom: 1px solid var(--editor-line);
+  overflow-x: auto;
+}
+
+.file-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--editor-tab-inactive);
+  border-right: 1px solid var(--editor-line);
+  color: #888;
+  cursor: pointer;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.file-tab.active {
+  background: var(--editor-tab-active);
+  color: #fff;
+}
+
+.file-tab-close {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.file-tab-close:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ─── EDITOR ─── */
+.lab-editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.line-numbers {
+  width: 40px;
+  background: #1a1a2a;
+  color: #5a5a7a;
+  padding: 15px 0;
+  text-align: right;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-y: hidden;
+  user-select: none;
+  white-space: pre;
+  border-right: 1px solid var(--editor-line);
+}
+
+.code-editor {
+  flex: 1;
+  padding: 15px;
+  background: var(--editor-bg);
+  color: var(--editor-text);
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  tab-size: 2;
+  -moz-tab-size: 2;
+}
+
+.code-editor::placeholder {
+  color: #5a5a7a;
+}
+
+/* ─── BOTTOM PANEL ─── */
+.lab-bottom-panel {
+  height: 280px;
+  border-top: 2px solid var(--editor-line);
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-tabs {
+  display: flex;
+  background: #1a1a2a;
+}
+
+.bottom-tab {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.bottom-tab.active {
+  color: var(--editor-accent);
+  border-bottom: 2px solid var(--editor-accent);
+}
+
+.bottom-tab:hover {
+  color: #ccc;
+}
+
+.bottom-panel {
+  display: none;
+  flex: 1;
+  overflow: hidden;
+}
+
+.bottom-panel.active {
+  display: block;
+}
+
+#previewFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* ─── CONSOLE ─── */
+.console-output {
+  height: calc(100% - 35px);
+  overflow-y: auto;
+  padding: 10px 15px;
+  background: #111;
+  color: #0f0;
+  font-family: 'Consolas', monospace;
+  font-size: 0.85rem;
+}
+
+.console-output .log-line {
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.console-output .log-line.error { color: #f44; }
+.console-output .log-line.warn { color: #fa0; }
+
+.console-input-line {
+  display: flex;
+  align-items: center;
+  background: #1a1a2a;
+  padding: 4px 10px;
+}
+
+.console-prompt {
+  color: var(--editor-accent);
+  font-weight: 700;
+  margin-right: 8px;
+  font-family: monospace;
+}
+
+#consoleInput {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #0f0;
+  font-family: 'Consolas', monospace;
+  font-size: 0.85rem;
+  outline: none;
+  padding: 6px 0;
+}
+
+/* ─── MODAL ─── */
+.lab-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.lab-modal.active { display: flex; }
+
+.lab-modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  border: 2px solid var(--editor-accent);
+}
+
+.lab-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #1b4332;
+  color: white;
+  border-radius: 14px 14px 0 0;
+}
+
+.lab-modal-header h2 { margin: 0; font-size: 1.3rem; }
+.lab-modal-close {
+  background: none; border: none;
+  color: white; font-size: 1.8rem;
+  cursor: pointer; padding: 0 8px;
+}
+
+.lab-modal-body {
+  padding: 25px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.lab-modal-body h3 { color: #1b4332; margin: 20px 0 10px; }
+.lab-modal-body h4 { color: #2d6a4f; margin: 15px 0 8px; }
+.lab-modal-body code {
+  background: #f0f0f0; padding: 2px 6px; border-radius: 4px;
+  font-family: monospace; color: #c0392b;
+}
+.lab-modal-body pre {
+  background: #1e1e2e; color: #cdd6f4; padding: 15px;
+  border-radius: 8px; overflow-x: auto; font-size: 0.85rem;
+}
+
+.lab-modal-footer {
+  display: flex; align-items: center; gap: 10px;
+  padding: 15px 20px; border-top: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+#tutorialStepCounter { margin-left: auto; color: #888; font-size: 0.9rem; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .lab-workspace { flex-direction: column; }
+  .lab-sidebar { width: 100%; max-height: 200px; }
+  .lab-editor-container { min-height: 250px; }
+  .lab-bottom-panel { height: 200px; }
+  .lab-menubar { flex-direction: column; align-items: flex-start; }
+  .menu-left, .menu-right { flex-wrap: wrap; }
+}
