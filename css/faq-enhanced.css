@@ -1,4 +1,4 @@
-/* ================== BUSCADOR ================== */
+
 .faq-search-container {
   margin: 20px 0 30px;
 }
@@ -48,7 +48,7 @@
   display: none;
 }
 
-/* ================== CATEGORÍAS ================== */
+
 .faq-categories {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +88,7 @@
   font-size: 1rem;
 }
 
-/* ================== TÍTULOS DE SECCIÓN ================== */
+
 .faq-category-title {
   color: #2c3e50;
   margin: 40px 0 20px;
@@ -103,7 +103,7 @@
   color: #3498db;
 }
 
-/* ================== ACORDEÓN ================== */
+
 .faq-item {
   margin-bottom: 15px;
   border: 1px solid #e0e0e0;
@@ -196,7 +196,7 @@
   color: #2c3e50;
 }
 
-/* ================== LISTA DE JUEGOS (opcional) ================== */
+
 .games-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -230,7 +230,7 @@
   color: #2c3e50;
 }
 
-/* ================== SECCIÓN DE SOPORTE ================== */
+
 .faq-support {
   background: linear-gradient(135deg, #3498db, #2c3e50);
   color: white;
@@ -280,7 +280,7 @@
   border-color: #128c7e;
 }
 
-/* ================== RESPONSIVE ================== */
+
 @media (max-width: 768px) {
   .faq-categories {
     justify-content: flex-start;

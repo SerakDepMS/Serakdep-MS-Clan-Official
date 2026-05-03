@@ -1,9 +1,9 @@
 (function() {
   'use strict';
 
-  // ==================== BASE DE CONOCIMIENTO COMPLETA ====================
+
   const knowledgeBase = [
-    // ---- INSCRIPCIÓN Y ADMISIÓN ----
+
     {
       keywords: ['inscripcion', 'inscribirme', 'unirme', 'registro', 'formulario', 'admisión', 'entrar', 'ingresar', 'unirse', 'proceso', 'como me uno', 'quiero ser miembro', 'solicitud', 'aplicar', 'join', 'ingreso', 'etapas', 'requisitos', 'formulario de inscripcion', 'quiero unirme al clan', 'como entro al clan', 'hacerme miembro'],
       response: `📝 <strong>Proceso de inscripción al clan Serakdep MS</strong><br><br>
@@ -39,7 +39,7 @@
       Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 14, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
 
-    // ---- REGLAMENTO Y NORMAS ----
+
     {
       keywords: ['reglamento', 'normas', 'reglas', 'sanciones', 'castigos', 'prohibido', 'penalizaciones', 'amonestaciones', 'derechos', 'staff', 'leer reglamento', 'etapa 1', 'normas generales', 'respeto', 'actividad minima', 'que no se puede hacer', 'que esta prohibido', 'codigo de conducta', 'convivencia'],
       response: `📜 <strong>Reglamento general del clan</strong><br><br>
@@ -110,7 +110,7 @@
       • <strong>Premios:</strong> Los premios se entregarán según lo estipulado en las bases del evento. Cualquier disputa será resuelta por el staff.`
     },
 
-    // ---- DISCORD ----
+
     {
       keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord'],
       response: `💬 <strong>Servidor de Discord de Serakdep MS</strong><br><br>
@@ -150,7 +150,7 @@
       Si quieres proponer una alianza, usa #solicitudes-externas y un admin te responderá.`
     },
 
-    // ---- WHATSAPP ----
+
     {
       keywords: ['whatsapp', 'grupo whatsapp', 'unirse whatsapp', 'link whatsapp', 'whatsapp reglas', 'grupos whatsapp', 'sms principal', 'sms actividades', 'entrar a whatsapp'],
       response: `📱 <strong>Grupos oficiales de WhatsApp</strong><br><br>
@@ -180,7 +180,7 @@
       Respeta estos horarios para no molestar a los demás miembros.`
     },
 
-    // ---- EVENTOS Y TORNEOS ----
+
     {
       keywords: ['eventos', 'torneos', 'actividades', 'calendario', 'próximos eventos', 'eventos pasados', 'torneo blox fruits', 'evento halloween', 'aniversario clan', 'torneo arsenal', 'epic fail', 'bienvenida nuevos', 'proximos torneos'],
       response: `🎉 <strong>Eventos y torneos del clan</strong><br><br>
@@ -220,7 +220,7 @@
       El método específico se anunciará con anticipación en cada evento.`
     },
 
-    // ---- JUEGOS POPULARES ----
+
     {
       keywords: ['juegos', 'roblox juegos', 'blox fruits', 'brookhaven', 'adopt me', 'arsenal', 'king legacy', 'driving empire', 'royale high', 'jailbreak', 'murder mystery', 'salón de fiestas', 'juego de boxeo', 'categorias juegos', 'lista juegos', 'a que juegan'],
       response: `🎮 <strong>Juegos populares en Serakdep MS</strong><br><br>
@@ -234,7 +234,7 @@
       En la página de Inicio hay un filtro de juegos con <strong>351 títulos</strong> en 15 categorías. En Discord hay canales dedicados a cada juego para formar equipos.`
     },
 
-    // ---- CONTACTO Y SOPORTE ----
+
     {
       keywords: ['contacto', 'email', 'correo', 'hablar admin', 'soporte', 'ayuda', 'asistencia', 'serakdepmsofficial7', 'formulario contacto', 'reportar problema', 'sugerencias', 'aspirar admin', 'legal contacto', 'como contacto'],
       response: `📧 <strong>Contacto oficial</strong><br><br>
@@ -249,7 +249,7 @@
       El equipo de administración revisa todas las solicitudes y responde en un plazo de 48-72 horas.`
     },
 
-    // ---- SISTEMA DE REPORTES ----
+
     {
       keywords: ['reportar', 'reporte', 'denunciar', 'problema', 'queja', 'reportar miembro', 'incidencia', 'reportar problema', 'como reportar', 'denunciar a alguien'],
       response: `🛡️ <strong>Sistema de reportes</strong><br><br>
@@ -266,7 +266,7 @@
       Todos los reportes se tratan con confidencialidad.`
     },
 
-    // ---- FAQ ----
+
     {
       keywords: ['faq', 'preguntas frecuentes', 'dudas', 'preguntas', 'consulta', 'faq discord', 'faq whatsapp', 'faq admision', 'faq reglas', 'faq eventos', 'faq web'],
       response: `❓ <strong>Preguntas Frecuentes (FAQ)</strong><br><br>
@@ -285,7 +285,6 @@
       Visita la página FAQ para respuestas detalladas a cada pregunta.`
     },
 
-    // ---- LEGAL ----
     {
       keywords: ['legal', 'privacidad', 'terminos', 'cookies', 'dmca', 'derechos de autor', 'politica', 'términos de servicio', 'aviso dmca', 'datos personales', 'copyright', 'politica de privacidad'],
       response: `⚖️ <strong>Información legal del sitio</strong><br><br>
@@ -338,7 +337,7 @@
       No usamos cookies para rastrearte fuera de nuestro sitio ni para publicidad. Puedes desactivarlas en la configuración de tu navegador, aunque algunas funciones podrían no estar disponibles.`
     },
 
-    // ---- CRÉDITOS ----
+
     {
       keywords: ['creditos', 'creadores', 'desarrolladores', 'colaboradores', 'agradecimientos', 'autores', 'equipo', 'diseñadores', 'quien hizo la pagina'],
       response: `❤️ <strong>Créditos y agradecimientos</strong><br><br>
@@ -352,7 +351,7 @@
       ¿Quieres contribuir? Usa el formulario de sugerencias en Contacto.`
     },
 
-    // ---- ESTRUCTURA DEL CLAN ----
+
     {
       keywords: ['estructura', 'organigrama', 'jerarquia', 'rangos', 'roles', 'staff', 'liderazgo', 'organizacion', 'miembros', 'campos de juego', 'departamentos', 'cuantos miembros', 'quien manda'],
       response: `🏛️ <strong>Estructura organizativa del clan</strong><br><br>
@@ -365,7 +364,7 @@
       6️⃣ Miembros Nuevos – En periodo de prueba (primeras 2 semanas).<br><br>
       <strong>Campos de juego:</strong> Blox Fruits, Brookhaven, Adopt Me, Arsenal, King Legacy, Driving Empire, Otros.<br>
       <strong>Departamentos:</strong> Eventos, Admisiones, Moderación, Relaciones, Técnico, Contenido.<br>
-      <strong>Miembros actuales:</strong> +39 verificados de diferentes países.<br><br>
+      <strong>Miembros actuales:</strong> +256 verificados de diferentes países.<br><br>
       Los ascensos son por mérito (actividad, comportamiento, contribuciones) y se evalúan mensualmente. Nunca se venden rangos.`
     },
     {
@@ -407,13 +406,13 @@
       Serakdep MS fue fundado con estos principios:<br>
       • <strong>Fundación:</strong> Creado por jugadores experimentados de Roblox que buscaban una comunidad organizada.<br>
       • <strong>Misión:</strong> Crear un espacio inclusivo y respetuoso para jugadores de todas las edades.<br>
-      • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +39 miembros verificados.<br>
+      • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +256 miembros verificados.<br>
       • <strong>Evolución:</strong> Hemos desarrollado estructura, normas, página web y herramientas propias.<br>
       • <strong>Futuro:</strong> Seguir creciendo como comunidad de referencia en Roblox.<br><br>
       Nuestra historia se construye día a día con cada miembro.`
     },
 
-    // ---- SER ADMIN / STAFF ----
+
     {
       keywords: ['requisitos admin', 'ser admin', 'moderador', 'postular staff', 'aspirante', 'administrador', 'quiero ser staff', 'como ser moderador'],
       response: `👑 <strong>¿Cómo ser administrador o staff?</strong><br><br>
@@ -426,7 +425,7 @@
       Los seleccionados pasan por un periodo de capacitación y prueba. <strong>Nunca</strong> se venden rangos ni se aceptan pagos por ascensos.`
     },
 
-    // ---- NAVEGACIÓN DEL SITIO ----
+
     {
       keywords: ['navegacion', 'menu', 'secciones', 'paginas', 'donde encuentro', 'ubicacion', 'sitio web', 'como funciona la pagina'],
       response: `🧭 <strong>Navegación del sitio web</strong><br><br>
@@ -444,7 +443,7 @@
       En el footer (parte inferior) encontrarás enlaces rápidos, redes sociales e información legal.`
     },
 
-    // ---- VIDEO Y GALERÍA ----
+
     {
       keywords: ['video', 'reproductor', 'clan video', 'presentacion', 'multimedia', 'trailer', 'video del clan'],
       response: `🎬 <strong>Video de presentación del clan</strong><br><br>
@@ -467,7 +466,7 @@
       Cada tarjeta tiene una descripción y fecha. Haz clic en el botón de lupa para ampliar la imagen.`
     },
 
-    // ---- FILTRO DE JUEGOS ----
+
     {
       keywords: ['filtro juegos', 'buscar juegos', 'categorias juegos', 'lista juegos', 'explorar juegos', 'buscar juego'],
       response: `🔍 <strong>Filtro de juegos en la página de Inicio</strong><br><br>
@@ -479,7 +478,7 @@
       Esta herramienta te ayuda a descubrir qué juegos son populares en el clan y unirte a las partidas.`
     },
 
-    // ---- NOTICIAS ----
+
     {
       keywords: ['noticias', 'news', 'actualizaciones', 'anuncios', 'novedades', 'canal noticias', 'npoint', 'carga noticias', 'filtros noticias', 'estadisticas noticias', 'ctrl shift r', 'ultimas noticias'],
       response: `📰 <strong>Sistema de Noticias del Clan</strong><br><br>
@@ -504,7 +503,7 @@
       Para unirte, ve a la página de Noticias y haz clic en "Unirse al Canal" o escanea el código QR en "Ver QR". También puedes acceder directamente al canal: https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31`
     },
 
-    // ---- ALIANZAS ----
+
     {
       keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'whicked white void', 'kian vove', 'golden vultures', 'nythera', 'the future legends', 'bloody legacy', 'wonderland', 'legion nova', 'luwance', 'bobox community', 'kira order', 'azeroth seraphim', 'celestial diamond', 'oblivion pact', 'sovereign zenith', 'the black bulls'],
       response: `🤝 <strong>Alianzas de Serakdep MS</strong><br><br>
@@ -528,7 +527,7 @@
       Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el canal #solicitudes-externas en Discord.`
     },
 
-    // ---- TUTORIALES ----
+
     {
       keywords: ['tutoriales', 'videotutoriales', 'videos tutoriales', 'como usar la pagina', 'guia'],
       response: `🎥 <strong>Videotutoriales</strong><br><br>
@@ -541,14 +540,14 @@
       Cada video tiene su propio reproductor con controles de reproducción, volumen y pantalla completa. ¡Échales un vistazo!`
     },
 
-    // ---- ADMINISTRACIÓN ----
+
     {
       keywords: ['admin', 'administracion', 'panel admin', 'login admin', 'acceso administrador'],
       response: `🔐 <strong>Panel de Administración</strong><br><br>
       El clan cuenta con un panel de administración protegido con credenciales. En él se pueden gestionar noticias, ver estadísticas y administrar contenido. El acceso es exclusivo para el staff autorizado. Si crees que deberías tener acceso, contacta con la Alta Dirección.`
     },
 
-    // ---- TESTIMONIOS ----
+
     {
       keywords: ['testimonios', 'opiniones', 'miembros dicen', 'experiencias', 'comentarios', 'shadowblade', 'diegosanval2012', 'icequeen', 'que dicen', 'reseñas'],
       response: `💬 <strong>Testimonios de miembros</strong><br><br>
@@ -559,7 +558,7 @@
       ¿Quieres compartir tu experiencia? Envíala a través del formulario de sugerencias en Contacto.`
     },
 
-    // ---- REDES SOCIALES ----
+
     {
       keywords: ['redes sociales', 'twitter', 'instagram', 'tiktok', 'youtube', 'social media', 'x', 'discord link', 'seguir', 'rrss'],
       response: `🌐 <strong>Redes sociales oficiales</strong><br><br>
@@ -572,7 +571,7 @@
       Los enlaces directos están disponibles en el footer de cada página. ¡Síguenos para estar al día!`
     },
 
-    // ---- RECOMENDACIONES TÉCNICAS ----
+
     {
       keywords: ['pc', 'laptop', 'recomendacion', 'experiencia', 'navegador', 'problemas tecnicos', 'error pagina', 'no carga', 'mobile', 'dispositivos moviles', 'problema tecnico', 'bug'],
       response: `💻 <strong>Recomendaciones técnicas</strong><br><br>
@@ -596,7 +595,7 @@
       Incluye en tu reporte: navegador usado, sistema operativo, descripción del error y captura de pantalla.`
     },
 
-    // ---- CONTRIBUCIONES ----
+
     {
       keywords: ['contribuir', 'ayudar clan', 'voluntario', 'colaborar', 'aportar', 'quiero ayudar', 'como puedo ayudar'],
       response: `🤲 <strong>¿Cómo contribuir al clan?</strong><br><br>
@@ -610,7 +609,7 @@
       ¡Toda contribución, grande o pequeña, es valorada!`
     },
 
-    // ---- LOGO E IDENTIDAD ----
+
     {
       keywords: ['logo', 'panda', 'serakdep ms significado', 'lema', 'slogan', 'splash screen', 'carga inicial', 'panda logo'],
       response: `🐼 <strong>Identidad del clan</strong><br><br>
@@ -621,7 +620,7 @@
       El diseño del logo fue creado por artistas de la comunidad y es un símbolo de nuestra identidad.`
     },
 
-    // ---- SALUDOS Y AYUDA GENERAL ----
+
     {
       keywords: ['hola', 'buenas', 'ayuda', 'gracias', 'saludos', 'buenos dias', 'buenas tardes', 'buenas noches', 'info', 'que sabes', 'ayudame', 'que puedes hacer'],
       response: `🐼 ¡Hola! Soy el asistente virtual de <strong>Serakdep MS</strong>, entrenado con toda la información del sitio web. Puedo ayudarte con:<br>
