@@ -66,7 +66,7 @@
 
   <main>
     <div class="container">
-      <!-- LOBBY / PANTALLA DE BIENVENIDA -->
+      <!-- LOBBY MEJORADO -->
       <section id="labLobby" class="lab-lobby">
         <div class="lobby-content">
           <div class="lobby-icon">
@@ -91,9 +91,9 @@
         </div>
       </section>
 
-      <!-- ENTORNO DE TRABAJO (OCULTO INICIALMENTE) -->
+      <!-- ENTORNO DE TRABAJO (oculto) -->
       <section id="labEnvironment" class="lab-environment" style="display: none;">
-        <!-- Barra de actividad superior (botones) -->
+        <!-- Barra de actividad -->
         <div class="lab-activity-bar">
           <div class="activity-group">
             <button class="activity-btn" id="btnExplorer" title="Explorador de archivos (Ctrl+E)"><i class="fas fa-folder-tree"></i></button>
@@ -118,9 +118,9 @@
           </div>
         </div>
 
-        <!-- Área principal (paneles flexibles) -->
+        <!-- Área principal -->
         <div class="lab-workspace" id="labWorkspace">
-          <!-- Explorador de archivos (sidebar izquierdo) -->
+          <!-- Explorador de archivos -->
           <aside class="lab-explorer" id="labExplorer">
             <div class="explorer-header">
               <h4>EXPLORADOR</h4>
@@ -132,13 +132,13 @@
             <div class="file-tree" id="fileTree"></div>
           </aside>
 
-          <!-- Panel central: editor + pestañas -->
+          <!-- Editor -->
           <div class="lab-editor-area" id="labEditorArea">
             <div class="editor-tabs" id="editorTabs"></div>
             <div class="editor-container" id="editorContainer"></div>
           </div>
 
-          <!-- Vista previa (panel derecho) -->
+          <!-- Vista previa -->
           <div class="lab-preview-area" id="labPreviewArea">
             <div class="preview-toolbar">
               <h4>VISTA PREVIA</h4>
@@ -151,7 +151,7 @@
             <iframe id="previewFrame" sandbox="allow-scripts allow-modals allow-same-origin" title="Vista previa"></iframe>
           </div>
 
-          <!-- Consola (panel inferior) -->
+          <!-- Consola -->
           <div class="lab-console" id="labConsole">
             <div class="console-header">
               <div class="console-tabs">
@@ -171,7 +171,7 @@
             </div>
           </div>
 
-          <!-- Wiki (panel lateral derecho o flotante) -->
+          <!-- Wiki -->
           <div class="lab-wiki" id="labWiki">
             <div class="wiki-header">
               <h3><i class="fas fa-book"></i> Enciclopedia</h3>
@@ -189,7 +189,7 @@
           </div>
         </div>
 
-        <!-- Barra de estado inferior -->
+        <!-- Barra de estado -->
         <div class="lab-statusbar">
           <span class="status-group">
             <span id="statusLines">Líneas: 0</span>
