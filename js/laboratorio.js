@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mode === 'htmlmixed') {
         toggleLineComment(line, '<!--', '-->');
       } else if (mode === 'css') {
-        toggleLineComment(line, '/*', '*/');
+        toggleLineComment(line, '', '*/');
       } else {
         toggleLineComment(line, '//');
       }
