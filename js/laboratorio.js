@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
     { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Code Lab de Serakdep MS!");\nalert("¡Empieza a programar!");' }
+    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Code Lab de Serakdep MS!");' }
   ];
   let activeFileId = '1';
   let editors = {};
@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function switchToFile(fileId) {
-    if (activeFileId === fileId) return;
     const file = files.find(f => f.id === fileId);
     if (!file) return;
     activeFileId = fileId;
@@ -171,7 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const active = getActiveFile();
     if (!active) return;
     const dupId = Date.now().toString();
-    const dupName = active.name.replace(/\.(\w+)$/, '_copia.$1');
+    const baseName = active.name.replace(/\.(\w+)$/, '') || active.name;
+    const extMatch = active.name.match(/\.(\w+)$/);
+    const ext = extMatch ? extMatch[0] : '';
+    const dupName = `${baseName}_copia${ext}`;
     const dupFile = {
       id: dupId,
       name: dupName,
@@ -210,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     saveToLocal();
   }
 
+  // ----- NUEVA FUNCIÓN updatePreview MEJORADA -----
   function updatePreview() {
     const htmlFile = files.find(f => f.language === 'html');
     const cssFile = files.find(f => f.language === 'css');
@@ -217,11 +220,60 @@ document.addEventListener('DOMContentLoaded', () => {
     const html = htmlFile ? htmlFile.content : '';
     const css = cssFile ? cssFile.content : '';
     const js = jsFile ? jsFile.content : '';
-    const fullCode = `<!DOCTYPE html><html><head><style>${css}</style></head><body>${html}<script>${js}<\/script></body></html>`;
+
+    // Construye un HTML completo con interceptación de consola y captura de errores
+    const fullCode = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>${css}</style>
+</head>
+<body>${html}
+<script>
+  // Redirigir console.log/error/warn a la consola del laboratorio
+  (function() {
+    const originalLog = console.log;
+    const originalError = console.error;
+    const originalWarn = console.warn;
+    console.log = function(...args) {
+      parent.addConsoleEntry('log', args.join(' '));
+      originalLog.apply(console, args);
+    };
+    console.error = function(...args) {
+      parent.addConsoleEntry('error', args.join(' '));
+      originalError.apply(console, args);
+    };
+    console.warn = function(...args) {
+      parent.addConsoleEntry('warn', args.join(' '));
+      originalWarn.apply(console, args);
+    };
+  })();
+
+  // Capturar errores globales no capturados
+  window.onerror = function(message, source, lineno, colno, error) {
+    parent.addConsoleEntry('error', message + ' (línea ' + lineno + ')');
+    return true;
+  };
+
+  window.addEventListener('unhandledrejection', function(event) {
+    parent.addConsoleEntry('error', 'Promesa rechazada: ' + event.reason);
+  });
+
+  // Ejecutar el código del usuario de forma segura, capturando errores de sintaxis y excepción
+  try {
+    new Function(\`${js.replace(/`/g, '\\`').replace(/\\/g, '\\\\')}\`)();
+  } catch (error) {
+    parent.addConsoleEntry('error', error.name + ': ' + error.message);
+  }
+<\/script>
+</body>
+</html>`;
+
     const blob = new Blob([fullCode], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     previewFrame.src = url;
 
+    // También sobrescribimos los métodos tradicionales del iframe (por si acaso)
     previewFrame.onload = () => {
       try {
         const iframeWin = previewFrame.contentWindow;
@@ -231,6 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (e) {}
     };
   }
+
+  // Exponemos la función globalmente para que el iframe la llame
+  window.addConsoleEntry = addConsoleEntry;
 
   let debounceTimer;
   function debouncePreview() {
@@ -275,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
     files = [
       { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
       { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Code Lab de Serakdep MS!");\nalert("¡Empieza a programar!");' }
+      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Code Lab de Serakdep MS!");' }
     ];
     Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
     editors = {};
@@ -286,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFileTree();
     updatePreview();
     saveToLocal();
+    clearConsole();
   }
 
   function setViewMode(mode) {
@@ -314,14 +370,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function formatCode() {
-    const editor = getEditor(activeFileId);
-    if (!editor) return;
-    const totalLines = editor.lineCount();
-    for (let i = 0; i < totalLines; i++) {
-      editor.indentLine(i, 'smart');
-    }
-    editor.refresh();
-  }
+  const editor = getEditor(activeFileId);
+  if (!editor) return;
+  CodeMirror.commands.indentAuto(editor);
+  editor.refresh();
+}
 
   function toggleComment() {
     const editor = getEditor(activeFileId);
@@ -459,7 +512,10 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.className = 'copy-example-btn';
       btn.textContent = 'Copiar';
       btn.addEventListener('click', () => {
-        navigator.clipboard.writeText(pre.textContent).then(() => {
+        const clone = pre.cloneNode(true);
+        const copyBtn = clone.querySelector('.copy-example-btn');
+        if (copyBtn) copyBtn.remove();
+        navigator.clipboard.writeText(clone.textContent.trim()).then(() => {
           btn.textContent = '¡Copiado!';
           setTimeout(() => { btn.textContent = 'Copiar'; }, 1500);
         }).catch(() => alert('No se pudo copiar'));
@@ -469,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  const wikiData = {
+const wikiData = {
   html: `
 <h3>📘 HTML (HyperText Markup Language)</h3>
 <p><strong>HTML</strong> es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido mediante <em>etiquetas</em>.</p>
@@ -816,7 +872,110 @@ mask-image: linear-gradient(black, transparent);</pre>
 <pre>@media print {
   nav, footer { display: none; }
   body { font-size: 12pt; }
-}</pre>`,
+}</pre>
+
+<h4>🔹 Scroll suave y comportamiento</h4>
+<pre>html { scroll-behavior: smooth; }
+
+/* Scroll personalizado */
+.contenedor {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+.seccion {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+/* Ocultar scrollbar pero mantener scroll */
+.ocultar-barra::-webkit-scrollbar { display: none; }
+.ocultar-barra { -ms-overflow-style: none; scrollbar-width: none; }</pre>
+
+<h4>🔹 Tricks de centrado</h4>
+<pre>/* Centrar con Flexbox */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centrar con Grid */
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+/* Centrar absolutamente */
+.abs-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Centrar verticalmente sin flex */
+.verti {
+  display: table-cell;
+  vertical-align: middle;
+}</pre>
+
+<h4>🔹 Personalizar inputs y select</h4>
+<pre>input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #2d6a4f;
+  outline: none;
+  padding: 8px 0;
+  background: transparent;
+  font-size: 1rem;
+}
+input[type="text"]:focus { border-color: #d4af37; }
+
+/* Checkbox personalizado */
+input[type="checkbox"] { accent-color: #2d6a4f; }
+
+/* Quitar estilos nativos de select */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("data:image/svg+xml,...") no-repeat right;
+}</pre>
+
+<h4>🔹 Efectos de texto avanzados</h4>
+<pre>/* Degradado en texto */
+.texto-grad {
+  background: linear-gradient(135deg, #2d6a4f, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Texto recortado en 1 línea */
+.truncar {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Texto recortado en N líneas */
+.multi-truncar {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}</pre>
+
+<h4>🔹 Clases de utilidad comunes</h4>
+<pre>.hidden   { display: none !important; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.no-select { user-select: none; }
+.pointer   { cursor: pointer; }
+.full-w    { width: 100%; }
+.rounded   { border-radius: 8px; }
+.shadow    { box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+.sr-only   { /* accesibilidad: visible sólo para lectores */ }</pre>`,
   js: `
 <h3>⚡ JavaScript</h3>
 <p><strong>JavaScript</strong> es un lenguaje de programación interpretado que permite crear interactividad en páginas web. Es dinámico, basado en prototipos y multiparadigma.</p>
@@ -1091,7 +1250,136 @@ if (Notification.permission === "granted") {
   <li>Evita modificar directamente el DOM en bucles; usa fragmentos o <code>insertAdjacentHTML</code>.</li>
   <li>Utiliza <code>===</code> en lugar de <code>==</code>.</li>
   <li>Emplea nombres descriptivos.</li>
-</ul>`
+</ul>
+
+<h4>🔹 Eventos del DOM (referencia rápida)</h4>
+<pre>// Ratón
+elem.addEventListener('click', fn);
+elem.addEventListener('dblclick', fn);
+elem.addEventListener('mouseover', fn);
+elem.addEventListener('mouseout', fn);
+elem.addEventListener('mousedown', fn);
+elem.addEventListener('mouseup', fn);
+elem.addEventListener('mousemove', fn);
+elem.addEventListener('contextmenu', fn); // clic derecho
+
+// Teclado
+document.addEventListener('keydown', e => {
+  console.log(e.key, e.code, e.ctrlKey, e.shiftKey, e.altKey);
+});
+document.addEventListener('keyup', fn);
+
+// Formulario
+form.addEventListener('submit', e => { e.preventDefault(); });
+input.addEventListener('input', e => console.log(e.target.value));
+input.addEventListener('change', fn); // al perder foco con cambio
+input.addEventListener('focus', fn);
+input.addEventListener('blur', fn);
+
+// Ventana / documento
+window.addEventListener('load', fn);
+window.addEventListener('resize', fn);
+window.addEventListener('scroll', fn);
+document.addEventListener('DOMContentLoaded', fn);
+
+// Touch (móvil)
+elem.addEventListener('touchstart', fn);
+elem.addEventListener('touchend', fn);
+elem.addEventListener('touchmove', fn);</pre>
+
+<h4>🔹 Depuración (Debug)</h4>
+<pre>// Consola
+console.log('valor:', variable);
+console.error('Error:', err);
+console.warn('Advertencia');
+console.table([{ nombre: 'Ana', edad: 25 }]);
+console.group('Mi Grupo');
+  console.log('dentro del grupo');
+console.groupEnd();
+console.time('operacion');
+// ...código...
+console.timeEnd('operacion');
+console.assert(condicion, 'Falla si es falso');
+
+// Puntos de interrupción
+debugger; // pausa la ejecución en DevTools
+
+// Inspeccionar tipos
+typeof variable;      // 'string', 'number', 'object', etc.
+Array.isArray(valor); // true/false
+variable instanceof Date;</pre>
+
+<h4>🔹 LocalStorage y SessionStorage</h4>
+<pre>// LocalStorage: persiste aunque se cierre el navegador
+localStorage.setItem('usuario', JSON.stringify({ nombre: 'Ana' }));
+const usuario = JSON.parse(localStorage.getItem('usuario'));
+localStorage.removeItem('usuario');
+localStorage.clear(); // borra todo
+
+// SessionStorage: solo dura la sesión del navegador
+sessionStorage.setItem('temp', 'valor');
+
+// Guardar arrays u objetos SIEMPRE con JSON
+const lista = ['a', 'b', 'c'];
+localStorage.setItem('lista', JSON.stringify(lista));
+const recuperada = JSON.parse(localStorage.getItem('lista') || '[]');</pre>
+
+<h4>🔹 Manipulación avanzada del DOM</h4>
+<pre>// DocumentFragment (inserciones eficientes)
+const fragment = document.createDocumentFragment();
+for (let i = 0; i < 100; i++) {
+  const li = document.createElement('li');
+  li.textContent = 'Item ' + i;
+  fragment.appendChild(li);
+}
+lista.appendChild(fragment); // un solo reflow
+
+// Clonar nodos
+const clon = elem.cloneNode(true); // true = copia hijos
+
+// Posición e inserción
+padre.insertBefore(nuevo, referencia);
+padre.replaceChild(nuevo, viejo);
+elem.insertAdjacentElement('afterend', nuevo);
+// beforebegin | afterbegin | beforeend | afterend
+
+// Atributos de datos
+elem.dataset.userId = '42';
+console.log(elem.dataset.userId);
+
+// Dimensiones y posición
+elem.getBoundingClientRect(); // { top, left, width, height }
+window.scrollY; // scroll vertical actual
+elem.scrollIntoView({ behavior: 'smooth' });</pre>
+
+<h4>🔹 Patrones útiles</h4>
+<pre>// Debounce: retrasar ejecución hasta que el usuario pare
+function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), ms);
+  };
+}
+window.addEventListener('resize', debounce(() => console.log('resize'), 300));
+
+// Throttle: ejecutar máx una vez cada N ms
+function throttle(fn, ms) {
+  let last = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - last >= ms) { last = now; fn(...args); }
+  };
+}
+
+// Copiar al portapapeles
+navigator.clipboard.writeText('texto').then(() => console.log('Copiado'));
+
+// Generar ID único
+const uid = () => Math.random().toString(36).slice(2, 9);
+
+// Espera N milisegundos
+const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
 };
 
 
@@ -1111,7 +1399,6 @@ if (Notification.permission === "granted") {
     showWiki('html');
     setViewMode('split');
     changeFontSize(0); 
-
 
     const examples = [
       { name: '🏠 Hola Mundo', files: [{ name: 'index.html', lang: 'html', content: '<h1>¡Hola Mundo!</h1>' }] },
@@ -1150,6 +1437,7 @@ if (Notification.permission === "granted") {
         updatePreview();
         saveToLocal();
         examplesMenu.classList.remove('open');
+        clearConsole();
       });
     });
   }
@@ -1219,7 +1507,13 @@ if (Notification.permission === "granted") {
     const html = htmlFile ? htmlFile.content : '';
     const css = cssFile ? cssFile.content : '';
     const js = jsFile ? jsFile.content : '';
-    const fullCode = `<!DOCTYPE html><html><head><style>${css}</style></head><body>${html}<script>${js}<\/script></body></html>`;
+    const fullCode = `<!DOCTYPE html>
+<html><head><style>${css}</style></head><body>${html}
+<script>
+  window.onerror = function(m,s,l) { alert('Error: '+m+' (línea '+l+')'); return true; };
+  try { new Function(\`${js.replace(/`/g,'\\`')}\`)(); } catch(e) { alert(e.name+': '+e.message); }
+<\/script>
+</body></html>`;
     const newWin = window.open('', '_blank');
     newWin.document.write(fullCode);
     newWin.document.close();
