@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const lobby = document.getElementById('labLobby');
@@ -53,6 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const examplesMenu = document.getElementById('examplesMenu');
 
 
+  const btnChallenges = document.getElementById('btnChallenges');
+  const challengesPanel = document.getElementById('labChallenges');
+  const challengesContent = document.getElementById('challengesContent');
+  const btnCloseChallenges = document.getElementById('btnCloseChallenges');
+  const btnProjects = document.getElementById('btnProjects');
+  const projectsModal = document.getElementById('projectsModal');
+  const btnCloseProjectsModal = document.getElementById('btnCloseProjectsModal');
+  const btnSaveProject = document.getElementById('btnSaveProject');
+  const newProjectName = document.getElementById('newProjectName');
+  const projectList = document.getElementById('projectList');
+
+
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
     { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
@@ -70,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function getActiveFile() { return files.find(f => f.id === activeFileId) || files[0]; }
-
   function getEditor(id) { return editors[id]; }
 
   function createEditor(file) {
@@ -212,7 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
     saveToLocal();
   }
 
-  // ----- NUEVA FUNCIÓN updatePreview MEJORADA -----
   function updatePreview() {
     const htmlFile = files.find(f => f.language === 'html');
     const cssFile = files.find(f => f.language === 'css');
@@ -221,7 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const css = cssFile ? cssFile.content : '';
     const js = jsFile ? jsFile.content : '';
 
-    // Construye un HTML completo con interceptación de consola y captura de errores
     const fullCode = `<!DOCTYPE html>
 <html>
 <head>
@@ -230,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </head>
 <body>${html}
 <script>
-  // Redirigir console.log/error/warn a la consola del laboratorio
   (function() {
     const originalLog = console.log;
     const originalError = console.error;
@@ -249,7 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   })();
 
-  // Capturar errores globales no capturados
   window.onerror = function(message, source, lineno, colno, error) {
     parent.addConsoleEntry('error', message + ' (línea ' + lineno + ')');
     return true;
@@ -259,7 +267,6 @@ document.addEventListener('DOMContentLoaded', () => {
     parent.addConsoleEntry('error', 'Promesa rechazada: ' + event.reason);
   });
 
-  // Ejecutar el código del usuario de forma segura, capturando errores de sintaxis y excepción
   try {
     new Function(\`${js.replace(/`/g, '\\`').replace(/\\/g, '\\\\')}\`)();
   } catch (error) {
@@ -273,7 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = URL.createObjectURL(blob);
     previewFrame.src = url;
 
-    // También sobrescribimos los métodos tradicionales del iframe (por si acaso)
     previewFrame.onload = () => {
       try {
         const iframeWin = previewFrame.contentWindow;
@@ -284,7 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  // Exponemos la función globalmente para que el iframe la llame
   window.addConsoleEntry = addConsoleEntry;
 
   let debounceTimer;
@@ -346,7 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setViewMode(mode) {
     currentViewMode = mode;
-
     btnEditor.classList.remove('active');
     btnSplit.classList.remove('active');
     btnPreview.classList.remove('active');
@@ -370,11 +374,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function formatCode() {
-  const editor = getEditor(activeFileId);
-  if (!editor) return;
-  CodeMirror.commands.indentAuto(editor);
-  editor.refresh();
-}
+    const editor = getEditor(activeFileId);
+    if (!editor) return;
+    CodeMirror.commands.indentAuto(editor);
+    editor.refresh();
+  }
 
   function toggleComment() {
     const editor = getEditor(activeFileId);
@@ -386,7 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = editor.getLine(line);
       const trimmed = text.trim();
       if (commentEnd) {
-
         if (trimmed.startsWith(commentStart) && trimmed.endsWith(commentEnd)) {
           const newText = text.replace(commentStart, '').replace(commentEnd, '');
           editor.setLine(line, newText.trim());
@@ -394,7 +397,6 @@ document.addEventListener('DOMContentLoaded', () => {
           editor.setLine(line, commentStart + ' ' + text + ' ' + commentEnd);
         }
       } else {
-
         if (trimmed.startsWith(commentStart)) {
           const newText = text.replace(commentStart, '');
           editor.setLine(line, newText.trim());
@@ -410,12 +412,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mode === 'htmlmixed') {
         toggleLineComment(line, '<!--', '-->');
       } else if (mode === 'css') {
-        toggleLineComment(line, '', '*/');
+        toggleLineComment(line, '/*', '*/');
       } else {
         toggleLineComment(line, '//');
       }
     } else {
-
       editor.operation(() => {
         selections.forEach(sel => {
           const text = editor.getRange(sel.anchor, sel.head);
@@ -498,7 +499,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const term = wikiSearch.value.toLowerCase();
     if (!term) { showWiki(wikiSection); return; }
     const sectionData = wikiData[wikiSection];
-
     const lines = sectionData.split('\n');
     const filtered = lines.filter(line => line.toLowerCase().includes(term));
     wikiContent.innerHTML = filtered.length > 0 ? filtered.join('<br>') : `<p>Sin resultados para "${term}"</p>`;
@@ -525,9 +525,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-const wikiData = {
+  const wikiData = {
   html: `
-<h3>📘 HTML (HyperText Markup Language)</h3>
+<h3>HTML (HyperText Markup Language)</h3>
 <p><strong>HTML</strong> es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido mediante <em>etiquetas</em>.</p>
 
 <h4>🔹 Estructura básica</h4>
@@ -691,7 +691,7 @@ const wikiData = {
 &amp;reg; → ®</pre>`,
 
   css: `
-<h3>🎨 CSS (Cascading Style Sheets)</h3>
+<h3>CSS (Cascading Style Sheets)</h3>
 <p>Lenguaje que define la presentación visual de un documento HTML.</p>
 
 <h4>🔹 Formas de aplicar CSS</h4>
@@ -977,7 +977,7 @@ select {
 .shadow    { box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
 .sr-only   { /* accesibilidad: visible sólo para lectores */ }</pre>`,
   js: `
-<h3>⚡ JavaScript</h3>
+<h3>JavaScript</h3>
 <p><strong>JavaScript</strong> es un lenguaje de programación interpretado que permite crear interactividad en páginas web. Es dinámico, basado en prototipos y multiparadigma.</p>
 
 <h4>🔹 Variables y ámbito</h4>
@@ -1383,6 +1383,167 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
 };
 
 
+  const challenges = [
+    {
+      id: 'ch1',
+      title: 'Página de bienvenida',
+      level: 'Básico',
+      description: 'Crea una página web sencilla que muestre un título de bienvenida y un párrafo descriptivo. Aprenderás la estructura básica de HTML.',
+      instructions: [
+        'Abre el archivo <strong>index.html</strong>.',
+        'Dentro del <code>&lt;body&gt;</code>, agrega un encabezado <code>&lt;h1&gt;</code> con el texto "Bienvenido a mi sitio".',
+        'Añade un párrafo <code>&lt;p&gt;</code> que describa de qué trata la página.',
+        'Guarda los cambios y mira la vista previa.'
+      ],
+      template: [
+        { name: 'index.html', lang: 'html', content: '<h1>Bienvenido a mi sitio</h1>\n<p>Escribe aquí una descripción...</p>' }
+      ]
+    },
+    {
+      id: 'ch2',
+      title: 'Estilizando un botón',
+      level: 'Intermedio',
+      description: 'Practica CSS creando un botón con forma redondeada, color de fondo y un efecto hover. Vincularás un archivo CSS a HTML.',
+      instructions: [
+        'En <strong>index.html</strong>, coloca un <code>&lt;button&gt;</code> con la clase "btn".',
+        'En <strong>styles.css</strong>, define la clase <code>.btn</code> con fondo verde, texto blanco, bordes redondeados y padding.',
+        'Agrega una pseudo-clase <code>.btn:hover</code> que cambie el color de fondo a dorado y escale ligeramente.',
+        'Observa el resultado en la vista previa.'
+      ],
+      template: [
+        { name: 'index.html', lang: 'html', content: '<button class="btn">Haz clic</button>' },
+        { name: 'styles.css', lang: 'css', content: '.btn {\n  background: #2d6a4f;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n}\n.btn:hover {\n  background: #d4af37;\n  transform: scale(1.05);\n}' }
+      ]
+    },
+    {
+      id: 'ch3',
+      title: 'Lista de tareas interactiva',
+      level: 'Avanzado',
+      description: 'Usa JavaScript para crear una lista de tareas (to‑do list) donde puedas agregar elementos escribiendo en un campo de texto.',
+      instructions: [
+        'En <strong>index.html</strong>, añade un <code>&lt;input&gt;</code> con id "task" y un <code>&lt;button&gt;</code> con id "add". Debajo, un <code>&lt;ul&gt;</code> con id "lista".',
+        'En <strong>script.js</strong>, obtén los elementos por su id y agrega un <code>addEventListener</code> al botón.',
+        'Dentro del evento, crea un <code>&lt;li&gt;</code> con el valor del input y agrégalo al <code>&lt;ul&gt;</code>. Luego limpia el input.',
+        'Prueba la funcionalidad en la vista previa.'
+      ],
+      template: [
+        { name: 'index.html', lang: 'html', content: '<input type="text" id="task" placeholder="Nueva tarea">\n<button id="add">Agregar</button>\n<ul id="lista"></ul>' },
+        { name: 'script.js', lang: 'js', content: 'document.getElementById("add").addEventListener("click", function() {\n  var tarea = document.getElementById("task").value;\n  if (tarea.trim() !== "") {\n    var li = document.createElement("li");\n    li.textContent = tarea;\n    document.getElementById("lista").appendChild(li);\n    document.getElementById("task").value = "";\n  }\n});' }
+      ]
+    }
+  ];
+
+  function renderChallenges() {
+    challengesContent.innerHTML = challenges.map(ch => `
+      <div class="challenge-card" style="border:1px solid var(--lab-border); border-radius:10px; padding:16px; margin-bottom:16px;">
+        <h4 style="color:var(--lab-gold); margin:0 0 6px;">${ch.title} <span style="font-size:0.7rem; background:rgba(212,175,55,0.2); padding:2px 8px; border-radius:12px;">${ch.level}</span></h4>
+        <p>${ch.description}</p>
+        <details>
+          <summary style="cursor:pointer; color:var(--lab-gold-light); font-weight:600;">Instrucciones paso a paso</summary>
+          <ol style="font-size:0.9rem; margin-top:8px; padding-left:20px;">
+            ${ch.instructions.map(step => `<li>${step}</li>`).join('')}
+          </ol>
+        </details>
+        <button class="challenge-start-btn" data-challenge-id="${ch.id}" style="margin-top:10px; width:100%;">
+          <i class="fas fa-play"></i> Empezar reto
+        </button>
+      </div>
+    `).join('');
+
+    challengesContent.querySelectorAll('.challenge-start-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const challengeId = btn.dataset.challengeId;
+        const challenge = challenges.find(c => c.id === challengeId);
+        if (challenge) {
+          if (confirm(`¿Cargar la plantilla del reto "${challenge.title}"? Esto reemplazará los archivos actuales.`)) {
+            files = challenge.template.map((f, i) => ({
+              id: (Date.now() + i).toString(),
+              name: f.name,
+              language: f.lang,
+              content: f.content
+            }));
+            Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
+            editors = {};
+            files.forEach(f => createEditor(f));
+            activeFileId = files[0].id;
+            switchToFile(activeFileId);
+            updateTabs();
+            updateFileTree();
+            updatePreview();
+            saveToLocal();
+            clearConsole();
+          }
+        }
+      });
+    });
+  }
+
+
+  function saveProject(name) {
+    const allProjects = JSON.parse(localStorage.getItem('sms_code_lab_projects') || '{}');
+    const projectData = {
+      name: name,
+      files: files.map(f => ({
+        id: f.id,
+        name: f.name,
+        language: f.language,
+        content: editors[f.id] ? editors[f.id].getValue() : f.content
+      })),
+      activeFileId: activeFileId
+    };
+    allProjects[name] = projectData;
+    localStorage.setItem('sms_code_lab_projects', JSON.stringify(allProjects));
+    loadProjectList();
+  }
+
+  function loadProjectList() {
+    const allProjects = JSON.parse(localStorage.getItem('sms_code_lab_projects') || '{}');
+    const names = Object.keys(allProjects);
+    projectList.innerHTML = names.map(name => `
+      <div class="project-item">
+        <span class="project-name">${name}</span>
+        <div class="project-actions">
+          <button title="Cargar" data-load="${name}"><i class="fas fa-folder-open"></i></button>
+          <button title="Eliminar" data-delete="${name}"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+    `).join('');
+    projectList.querySelectorAll('[data-load]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.load;
+        if (confirm(`¿Cargar el proyecto "${name}"? Se reemplazarán los archivos actuales.`)) {
+          const allProjects = JSON.parse(localStorage.getItem('sms_code_lab_projects') || '{}');
+          const project = allProjects[name];
+          if (project) {
+            files = project.files;
+            Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
+            editors = {};
+            files.forEach(f => createEditor(f));
+            activeFileId = project.activeFileId || files[0].id;
+            switchToFile(activeFileId);
+            updateTabs();
+            updateFileTree();
+            updatePreview();
+            saveToLocal();
+            projectsModal.style.display = 'none';
+          }
+        }
+      });
+    });
+    projectList.querySelectorAll('[data-delete]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.delete;
+        if (confirm(`¿Eliminar el proyecto "${name}"?`)) {
+          const allProjects = JSON.parse(localStorage.getItem('sms_code_lab_projects') || '{}');
+          delete allProjects[name];
+          localStorage.setItem('sms_code_lab_projects', JSON.stringify(allProjects));
+          loadProjectList();
+        }
+      });
+    });
+  }
+
+
   function initEnvironment() {
     if (!loadFromLocal()) {
       files.forEach(f => createEditor(f));
@@ -1398,26 +1559,26 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     updateStatusbar();
     showWiki('html');
     setViewMode('split');
-    changeFontSize(0); 
+    changeFontSize(0);
 
     const examples = [
-      { name: '🏠 Hola Mundo', files: [{ name: 'index.html', lang: 'html', content: '<h1>¡Hola Mundo!</h1>' }] },
-      { name: '🎨 Botón Animado', files: [
+      { name: 'Hola Mundo', files: [{ name: 'index.html', lang: 'html', content: '<h1>¡Hola Mundo!</h1>' }] },
+      { name: 'Botón Animado', files: [
         { name: 'index.html', lang: 'html', content: '<button class="btn">Click</button>' },
         { name: 'styles.css', lang: 'css', content: '.btn { padding: 15px 30px; background: #2d6a4f; color: white; border: none; border-radius: 8px; cursor: pointer; transition: transform 0.3s; } .btn:hover { transform: scale(1.1); background: #d4af37; }' },
         { name: 'script.js', lang: 'js', content: 'document.querySelector(".btn").addEventListener("click", () => alert("¡Hola!"));' }
       ]},
-      { name: '📝 To-Do List', files: [
+      { name: 'To-Do List', files: [
         { name: 'index.html', lang: 'html', content: '<input type="text" id="task"><button id="add">Agregar</button><ul id="list"></ul>' },
         { name: 'styles.css', lang: 'css', content: 'body { font-family: sans-serif; } li { margin: 5px 0; }' },
         { name: 'script.js', lang: 'js', content: 'document.getElementById("add").onclick = () => { let t = document.getElementById("task").value; if(t) { let li = document.createElement("li"); li.textContent = t; document.getElementById("list").appendChild(li); document.getElementById("task").value = ""; }};' }
       ]},
-      { name: '🖼️ Galería Lightbox', files: [
+      { name: 'Galería Lightbox', files: [
         { name: 'index.html', lang: 'html', content: '<img src="https://via.placeholder.com/300" alt="img" onclick="this.style.transform=\'scale(2)\'">' },
         { name: 'styles.css', lang: 'css', content: 'img { transition: transform 0.3s; cursor: pointer; }' },
         { name: 'script.js', lang: 'js', content: '' }
       ]},
-      { name: '🧮 Calculadora', files: [
+      { name: 'Calculadora', files: [
         { name: 'index.html', lang: 'html', content: '<input id="a">+<input id="b"><button id="calc">=</button><span id="res"></span>' },
         { name: 'script.js', lang: 'js', content: 'document.getElementById("calc").onclick = () => document.getElementById("res").textContent = +document.getElementById("a").value + +document.getElementById("b").value;' }
       ]}
@@ -1458,6 +1619,14 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
   btnExplorer.addEventListener('click', () => explorer.classList.toggle('show'));
   btnConsole.addEventListener('click', () => consolePanel.classList.toggle('show'));
   btnWiki.addEventListener('click', () => wikiPanel.classList.toggle('show'));
+  btnChallenges.addEventListener('click', () => {
+    challengesPanel.classList.toggle('show');
+    renderChallenges();
+  });
+  btnProjects.addEventListener('click', () => {
+    projectsModal.style.display = 'flex';
+    loadProjectList();
+  });
 
   btnEditor.addEventListener('click', () => setViewMode('editor'));
   btnSplit.addEventListener('click', () => setViewMode('split'));
@@ -1472,6 +1641,7 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     explorer.classList.remove('show');
     consolePanel.classList.remove('show');
     wikiPanel.classList.remove('show');
+    challengesPanel.classList.remove('show');
   });
 
   btnDownload.addEventListener('click', downloadZip);
@@ -1491,14 +1661,24 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
   btnClearConsole.addEventListener('click', clearConsole);
   btnCloseConsole.addEventListener('click', () => consolePanel.classList.remove('show'));
   btnCloseWiki.addEventListener('click', () => wikiPanel.classList.remove('show'));
+  btnCloseChallenges.addEventListener('click', () => challengesPanel.classList.remove('show'));
+  btnCloseProjectsModal.addEventListener('click', () => projectsModal.style.display = 'none');
+  btnSaveProject.addEventListener('click', () => {
+    const name = newProjectName.value.trim();
+    if (!name) return alert('Escribe un nombre para el proyecto.');
+    saveProject(name);
+    newProjectName.value = '';
+  });
 
+  projectsModal.addEventListener('click', (e) => {
+    if (e.target === projectsModal) projectsModal.style.display = 'none';
+  });
 
   btnExamples.addEventListener('click', (e) => {
     e.stopPropagation();
     examplesMenu.classList.toggle('open');
   });
   document.addEventListener('click', () => examplesMenu.classList.remove('open'));
-
 
   btnOpenPreview.addEventListener('click', () => {
     const htmlFile = files.find(f => f.language === 'html');
@@ -1507,18 +1687,11 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     const html = htmlFile ? htmlFile.content : '';
     const css = cssFile ? cssFile.content : '';
     const js = jsFile ? jsFile.content : '';
-    const fullCode = `<!DOCTYPE html>
-<html><head><style>${css}</style></head><body>${html}
-<script>
-  window.onerror = function(m,s,l) { alert('Error: '+m+' (línea '+l+')'); return true; };
-  try { new Function(\`${js.replace(/`/g,'\\`')}\`)(); } catch(e) { alert(e.name+': '+e.message); }
-<\/script>
-</body></html>`;
+    const fullCode = `<!DOCTYPE html><html><head><style>${css}</style></head><body>${html}<script>${js}<\/script></body></html>`;
     const newWin = window.open('', '_blank');
     newWin.document.write(fullCode);
     newWin.document.close();
   });
-
 
   consoleInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -1566,7 +1739,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     tab.addEventListener('click', () => showWiki(tab.dataset.wiki));
   });
 
-
   btnUndo.addEventListener('click', () => {
     const editor = getEditor(activeFileId);
     if (editor) editor.undo();
@@ -1586,7 +1758,7 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     setLineWrap(!current);
   });
 
-
+  // Atajos de teclado
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key === 's') { e.preventDefault(); saveToLocal(); }
     if (e.ctrlKey && e.key === 'e') { e.preventDefault(); explorer.classList.toggle('show'); }
@@ -1597,14 +1769,14 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
       e.preventDefault();
       toggleComment();
     }
+    if (e.ctrlKey && e.key === 'r') { e.preventDefault(); btnChallenges.click(); }
   });
 
-
+  // Guardado automático
   setInterval(() => {
     saveToLocal();
     updateStatusbar();
   }, 10000);
-
 
   statusFontSize.textContent = currentFontSize + 'px';
   updateStatusbar();
