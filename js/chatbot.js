@@ -641,7 +641,7 @@
     }
   ];
 
-  // ==================== FUNCIÓN DE BÚSQUEDA MEJORADA (ESTILO IA) ====================
+
   function findBestResponse(query) {
     const lowerQuery = query.toLowerCase().trim();
     
@@ -704,7 +704,7 @@
     También puedes visitar la sección de <strong>FAQ</strong> en el menú superior para ver todas las preguntas frecuentes organizadas por categorías.`;
   }
 
-  // ==================== CREACIÓN DEL CHATBOT (SIN SUGERENCIAS) ====================
+
   function createChatbot() {
     const container = document.createElement('div');
     container.className = 'serakdep-chatbot';
@@ -734,7 +734,7 @@
     document.body.appendChild(container);
   }
 
-  // ==================== LÓGICA DE INTERACCIÓN ====================
+
   function initChatbot() {
     const toggleBtn = document.getElementById('chatbotToggle');
     const modal = document.getElementById('chatbotModal');

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Lab - Aprende a Programar - Serakdep MS</title>
-  <meta name="description" content="Laboratorio interactivo de programación. Aprende HTML, CSS y JavaScript con tutoriales, editor en vivo y proyectos descargables." />
-  <meta name="keywords" content="programación, aprender, HTML, CSS, JavaScript, editor, código, Serakdep MS" />
+  <title>Code Lab - Serakdep MS</title>
+  <meta name="description" content="Entorno de desarrollo interactivo para aprender HTML, CSS y JavaScript. Incluye editor, vista previa, consola y enciclopedia interna." />
+  <meta name="keywords" content="programación, aprender, HTML, CSS, JavaScript, editor, Serakdep MS" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
@@ -22,6 +22,26 @@
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="css/laboratorio.css" />
   <link rel="stylesheet" href="css/chatbot.css" />
+
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/javascript-hint.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css" />
+
+  <!-- JSZip -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -46,178 +66,161 @@
 
   <main>
     <div class="container">
-      <h1 class="page-title"><i class="fas fa-code"></i> Code Lab</h1>
-      <p class="page-subtitle" style="text-align:center; margin-bottom:5px;">
-        Aprende a programar HTML, CSS y JavaScript. Escribe código, ve el resultado al instante y descarga tus proyectos.
-      </p>
-
-      <!-- Barra de menú superior del editor -->
-      <div class="lab-menubar">
-        <div class="menu-left">
-          <span class="menu-item"><i class="fas fa-folder"></i> Archivo</span>
-          <span class="menu-item" id="menuDownload"><i class="fas fa-download"></i> Descargar Proyecto</span>
-          <span class="menu-item" id="menuClear"><i class="fas fa-eraser"></i> Nuevo Proyecto</span>
-        </div>
-        <div class="menu-right">
-          <span class="menu-item" id="menuTutorials"><i class="fas fa-graduation-cap"></i> Tutoriales</span>
-          <span class="menu-item" id="menuConsole"><i class="fas fa-terminal"></i> Consola</span>
-        </div>
-      </div>
-
-      <!-- Contenedor principal del editor -->
-      <div class="lab-workspace">
-        <!-- Sidebar izquierda: explorador de archivos + tutoriales -->
-        <aside class="lab-sidebar" id="labSidebar">
-          <!-- Tabs de la sidebar -->
-          <div class="sidebar-tabs">
-            <button class="sidebar-tab active" data-sidebar="files"><i class="fas fa-file-code"></i> Archivos</button>
-            <button class="sidebar-tab" data-sidebar="learn"><i class="fas fa-book"></i> Aprender</button>
+      <!-- LOBBY / PANTALLA DE BIENVENIDA -->
+      <section id="labLobby" class="lab-lobby">
+        <div class="lobby-content">
+          <div class="lobby-icon">
+            <i class="fas fa-laptop-code"></i>
           </div>
+          <h1 class="page-title" style="border-bottom: none;">Code Lab</h1>
+          <p class="lobby-subtitle">
+            Un entorno de desarrollo interactivo para aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>. 
+            Escribe código, ve el resultado en tiempo real, consulta nuestra enciclopedia interna y descarga tus proyectos.
+          </p>
+          <div class="lobby-features">
+            <div class="lobby-feature"><i class="fas fa-code"></i> Editor profesional</div>
+            <div class="lobby-feature"><i class="fas fa-eye"></i> Vista previa en vivo</div>
+            <div class="lobby-feature"><i class="fas fa-terminal"></i> Consola interactiva</div>
+            <div class="lobby-feature"><i class="fas fa-book"></i> Enciclopedia HTML/CSS/JS</div>
+            <div class="lobby-feature"><i class="fas fa-download"></i> Descarga de proyectos</div>
+            <div class="lobby-feature"><i class="fas fa-save"></i> Guardado automático</div>
+          </div>
+          <button class="btn btn-large pulse-btn" id="enterLabBtn">
+            <i class="fas fa-rocket"></i> Ingresar al Laboratorio
+          </button>
+        </div>
+      </section>
 
-          <!-- Panel de archivos -->
-          <div class="sidebar-panel active" id="panelFiles">
-            <div class="file-explorer">
-              <div class="file-item active" data-file="index.html">
-                <i class="fab fa-html5 file-icon-html"></i> index.html
-              </div>
-              <div class="file-item" data-file="style.css">
-                <i class="fab fa-css3-alt file-icon-css"></i> style.css
-              </div>
-              <div class="file-item" data-file="script.js">
-                <i class="fab fa-js file-icon-js"></i> script.js
+      <!-- ENTORNO DE TRABAJO (OCULTO INICIALMENTE) -->
+      <section id="labEnvironment" class="lab-environment" style="display: none;">
+        <!-- Barra de actividad superior (botones) -->
+        <div class="lab-activity-bar">
+          <div class="activity-group">
+            <button class="activity-btn" id="btnExplorer" title="Explorador de archivos (Ctrl+E)"><i class="fas fa-folder-tree"></i></button>
+            <button class="activity-btn" id="btnEditor" title="Solo editor"><i class="fas fa-code"></i></button>
+            <button class="activity-btn" id="btnSplit" title="Vista dividida"><i class="fas fa-columns"></i></button>
+            <button class="activity-btn" id="btnPreview" title="Solo vista previa"><i class="fas fa-eye"></i></button>
+            <button class="activity-btn" id="btnConsole" title="Consola (Ctrl+`)"><i class="fas fa-terminal"></i></button>
+            <button class="activity-btn" id="btnWiki" title="Enciclopedia (Ctrl+I)"><i class="fas fa-book"></i></button>
+            <button class="activity-btn" id="btnFormat" title="Formatear código (Ctrl+Shift+F)"><i class="fas fa-indent"></i></button>
+            <button class="activity-btn" id="btnWrap" title="Ajuste de línea"><i class="fas fa-text-width"></i></button>
+          </div>
+          <div class="activity-group">
+            <div class="examples-dropdown">
+              <button class="activity-btn" id="btnExamples" title="Ejemplos"><i class="fas fa-lightbulb"></i></button>
+              <div class="examples-menu" id="examplesMenu"></div>
+            </div>
+            <button class="activity-btn" id="btnReset" title="Restaurar proyecto por defecto"><i class="fas fa-trash-restore"></i></button>
+            <button class="activity-btn" id="btnDownload" title="Descargar proyecto (.zip)"><i class="fas fa-download"></i></button>
+            <button class="activity-btn" id="btnFocus" title="Pantalla completa (F11)"><i class="fas fa-expand"></i></button>
+            <button class="activity-btn" id="btnTheme" title="Cambiar tema"><i class="fas fa-moon"></i></button>
+            <button class="activity-btn exit-btn" id="btnExitLab" title="Salir del laboratorio"><i class="fas fa-door-open"></i></button>
+          </div>
+        </div>
+
+        <!-- Área principal (paneles flexibles) -->
+        <div class="lab-workspace" id="labWorkspace">
+          <!-- Explorador de archivos (sidebar izquierdo) -->
+          <aside class="lab-explorer" id="labExplorer">
+            <div class="explorer-header">
+              <h4>EXPLORADOR</h4>
+              <div class="explorer-actions">
+                <button class="icon-btn" id="btnNewFile" title="Nuevo archivo"><i class="fas fa-plus"></i></button>
+                <button class="icon-btn" id="btnDuplicateFile" title="Duplicar archivo"><i class="fas fa-copy"></i></button>
               </div>
             </div>
-            <button class="btn btn-small" id="addFileBtn" style="width:100%; margin-top:10px;">
-              <i class="fas fa-plus"></i> Nuevo archivo
-            </button>
+            <div class="file-tree" id="fileTree"></div>
+          </aside>
+
+          <!-- Panel central: editor + pestañas -->
+          <div class="lab-editor-area" id="labEditorArea">
+            <div class="editor-tabs" id="editorTabs"></div>
+            <div class="editor-container" id="editorContainer"></div>
           </div>
 
-          <!-- Panel de aprendizaje -->
-          <div class="sidebar-panel" id="panelLearn">
-            <h4><i class="fas fa-graduation-cap"></i> Conceptos</h4>
-            <div class="learn-list" id="learnList">
-              <div class="learn-item" data-topic="html-basics">📝 HTML: Conceptos básicos</div>
-              <div class="learn-item" data-topic="html-tags">🏷️ HTML: Etiquetas comunes</div>
-              <div class="learn-item" data-topic="html-forms">📋 HTML: Formularios</div>
-              <div class="learn-item" data-topic="css-basics">🎨 CSS: Fundamentos</div>
-              <div class="learn-item" data-topic="css-layout">📐 CSS: Layout y Flexbox</div>
-              <div class="learn-item" data-topic="css-animations">✨ CSS: Animaciones</div>
-              <div class="learn-item" data-topic="js-basics">⚡ JavaScript: Primeros pasos</div>
-              <div class="learn-item" data-topic="js-dom">🖥️ JS: Manipulación del DOM</div>
-              <div class="learn-item" data-topic="js-events">🖱️ JS: Eventos</div>
+          <!-- Vista previa (panel derecho) -->
+          <div class="lab-preview-area" id="labPreviewArea">
+            <div class="preview-toolbar">
+              <h4>VISTA PREVIA</h4>
+              <div class="preview-actions">
+                <label class="auto-refresh-label"><input type="checkbox" id="autoRefreshCheck" checked /> Auto</label>
+                <button class="icon-btn" id="btnRefreshPreview" title="Actualizar"><i class="fas fa-sync-alt"></i></button>
+                <button class="icon-btn" id="btnOpenPreview" title="Abrir en nueva pestaña"><i class="fas fa-external-link-alt"></i></button>
+              </div>
+            </div>
+            <iframe id="previewFrame" sandbox="allow-scripts allow-modals allow-same-origin" title="Vista previa"></iframe>
+          </div>
+
+          <!-- Consola (panel inferior) -->
+          <div class="lab-console" id="labConsole">
+            <div class="console-header">
+              <div class="console-tabs">
+                <button class="console-tab active" data-tab="all">Todos</button>
+                <button class="console-tab" data-tab="log">Info</button>
+                <button class="console-tab" data-tab="error">Errores</button>
+              </div>
+              <div class="console-actions">
+                <button class="icon-btn" id="btnClearConsole" title="Limpiar consola"><i class="fas fa-eraser"></i></button>
+                <button class="icon-btn" id="btnCloseConsole" title="Cerrar"><i class="fas fa-times"></i></button>
+              </div>
+            </div>
+            <div class="console-output" id="consoleOutput"></div>
+            <div class="console-input-area">
+              <span class="console-prompt">&gt;</span>
+              <input type="text" id="consoleInput" placeholder="Escribe un comando JavaScript..." />
             </div>
           </div>
-        </aside>
 
-        <!-- Área central: editor + vista previa -->
-        <div class="lab-main">
-          <!-- Pestañas de archivos abiertos -->
-          <div class="lab-file-tabs" id="fileTabs">
-            <span class="file-tab active" data-file="index.html">
-              <i class="fab fa-html5 file-icon-html"></i> index.html
-              <button class="file-tab-close">&times;</button>
+          <!-- Wiki (panel lateral derecho o flotante) -->
+          <div class="lab-wiki" id="labWiki">
+            <div class="wiki-header">
+              <h3><i class="fas fa-book"></i> Enciclopedia</h3>
+              <div class="wiki-actions">
+                <input type="text" id="wikiSearch" placeholder="Buscar en la wiki..." />
+                <button class="icon-btn" id="btnCloseWiki" title="Cerrar"><i class="fas fa-times"></i></button>
+              </div>
+            </div>
+            <div class="wiki-tabs">
+              <button class="wiki-tab active" data-wiki="html">HTML</button>
+              <button class="wiki-tab" data-wiki="css">CSS</button>
+              <button class="wiki-tab" data-wiki="js">JavaScript</button>
+            </div>
+            <div class="wiki-content" id="wikiContent"></div>
+          </div>
+        </div>
+
+        <!-- Barra de estado inferior -->
+        <div class="lab-statusbar">
+          <span class="status-group">
+            <span id="statusLines">Líneas: 0</span>
+            <span id="statusLang">HTML</span>
+          </span>
+          <span class="status-group">
+            <button class="status-btn" id="btnUndo" title="Deshacer (Ctrl+Z)"><i class="fas fa-undo"></i></button>
+            <button class="status-btn" id="btnRedo" title="Rehacer (Ctrl+Y)"><i class="fas fa-redo"></i></button>
+            <button class="status-btn" id="btnSave" title="Guardar (Ctrl+S)"><i class="fas fa-save"></i></button>
+            <span class="font-size-controls">
+              <button class="status-btn" id="btnFontDown" title="Reducir fuente"><i class="fas fa-search-minus"></i></button>
+              <span id="statusFontSize">14px</span>
+              <button class="status-btn" id="btnFontUp" title="Aumentar fuente"><i class="fas fa-search-plus"></i></button>
             </span>
-          </div>
-
-          <!-- Editor con números de línea -->
-          <div class="lab-editor-container">
-            <div class="line-numbers" id="lineNumbers">1</div>
-            <textarea id="codeEditor" class="code-editor" placeholder="Escribe tu código aquí..." spellcheck="false"></textarea>
-          </div>
-
-          <!-- Panel inferior: vista previa / consola -->
-          <div class="lab-bottom-panel">
-            <div class="bottom-tabs">
-              <button class="bottom-tab active" data-bottom="preview"><i class="fas fa-eye"></i> Vista previa</button>
-              <button class="bottom-tab" data-bottom="console"><i class="fas fa-terminal"></i> Consola JS</button>
-            </div>
-            <div class="bottom-panel active" id="panelPreview">
-              <iframe id="previewFrame" sandbox="allow-scripts allow-modals allow-same-origin" title="Vista previa"></iframe>
-            </div>
-            <div class="bottom-panel" id="panelConsole">
-              <div class="console-output" id="consoleOutput"></div>
-              <div class="console-input-line">
-                <span class="console-prompt">&gt;</span>
-                <input type="text" id="consoleInput" placeholder="Escribe JavaScript aquí..." />
-              </div>
-            </div>
-          </div>
+          </span>
+          <span id="statusSave">Guardado</span>
+          <span id="statusTime"></span>
         </div>
-      </div>
-
-      <!-- Sección de tutoriales (modal) -->
-      <div class="lab-modal" id="tutorialModal">
-        <div class="lab-modal-content">
-          <div class="lab-modal-header">
-            <h2 id="tutorialModalTitle"></h2>
-            <button class="lab-modal-close" id="closeTutorialModal">&times;</button>
-          </div>
-          <div class="lab-modal-body" id="tutorialModalBody"></div>
-          <div class="lab-modal-footer">
-            <button class="btn btn-small" id="loadTutorialCode"><i class="fas fa-code"></i> Cargar código de ejemplo</button>
-            <button class="btn btn-small" id="prevTutorialStep"><i class="fas fa-arrow-left"></i> Anterior</button>
-            <button class="btn btn-small" id="nextTutorialStep">Siguiente <i class="fas fa-arrow-right"></i></button>
-            <span id="tutorialStepCounter"></span>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   </main>
 
   <footer>
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section">
-          <h3 class="footer-title">Serakdep MS</h3>
-          <p>Clan de Roblox para todas las edades. Únete a nuestra comunidad y vive la mejor experiencia de gaming.</p>
-          <div class="social-links">
-            <a href="https://discord.gg/vts4PTHR9K" title="Discord"><i class="fab fa-discord"></i></a>
-            <a href="https://x.com/serakdep?s=21" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3 class="footer-title">Enlaces Rápidos</h3>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
-            <li><a href="reglamento.html"><i class="fas fa-chevron-right"></i> Reglamento</a></li>
-            <li><a href="formulario.html"><i class="fas fa-chevron-right"></i> Formulario</a></li>
-            <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-            <li><a href="eventos.html"><i class="fas fa-chevron-right"></i> Eventos</a></li>
-            <li><a href="noticias.html"><i class="fas fa-chevron-right"></i> Noticias</a></li>
-            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
-            <li><a href="alianzas.html"><i class="fas fa-chevron-right"></i> Alianzas</a></li>
-            <li><a href="creditos.html"><i class="fas fa-chevron-right"></i> Créditos</a></li>
-            <li><a href="videotutoriales.html"><i class="fas fa-chevron-right"></i> Tutoriales</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3 class="footer-title">Contacto</h3>
-          <ul class="footer-links">
-            <li><a href="mailto:serakdepmsofficial7@gmail.com"><i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com</a></li>
-            <li><a href="https://wa.me/573116546484" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp del Clan</a></li>
-            <li><a href="reportar.html"><i class="fas fa-user-shield"></i> Reportar problema</a></li>
-            <li><a href="sugerencias.html"><i class="fas fa-lightbulb"></i> Sugerencias</a></li>
-            <li><a href="aspirantes-admin.html"><i class="fas fa-user-tie"></i> Aspirar a Admin</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3 class="footer-title">Información Legal</h3>
-          <ul class="footer-links">
-            <li><a href="privacidad.html"><i class="fas fa-user-shield"></i> Política de Privacidad</a></li>
-            <li><a href="terminos.html"><i class="fas fa-file-contract"></i> Términos de Servicio</a></li>
-            <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Política de Cookies</a></li>
-            <li><a href="dmca.html"><i class="fas fa-balance-scale"></i> Aviso DMCA</a></li>
-            <li><a href="creditos.html"><i class="fas fa-heart"></i> Créditos</a></li>
-            <li><a href="contacto.html#legal"><i class="fas fa-gavel"></i> Asuntos Legales</a></li>
-          </ul>
-        </div>
+        <div class="footer-section"><h3 class="footer-title">Serakdep MS</h3><p>Clan de Roblox para todas las edades. Únete a nuestra comunidad y vive la mejor experiencia de gaming.</p><div class="social-links"><a href="https://discord.gg/vts4PTHR9K" title="Discord"><i class="fab fa-discord"></i></a><a href="https://x.com/serakdep?s=21" title="Twitter"><i class="fab fa-twitter"></i></a><a href="#" title="YouTube"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h" title="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+        <div class="footer-section"><h3 class="footer-title">Enlaces Rápidos</h3><ul class="footer-links"><li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li><li><a href="reglamento.html"><i class="fas fa-chevron-right"></i> Reglamento</a></li><li><a href="formulario.html"><i class="fas fa-chevron-right"></i> Formulario</a></li><li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li><li><a href="eventos.html"><i class="fas fa-chevron-right"></i> Eventos</a></li><li><a href="noticias.html"><i class="fas fa-chevron-right"></i> Noticias</a></li><li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li><li><a href="alianzas.html"><i class="fas fa-chevron-right"></i> Alianzas</a></li><li><a href="creditos.html"><i class="fas fa-chevron-right"></i> Créditos</a></li><li><a href="videotutoriales.html"><i class="fas fa-chevron-right"></i> Tutoriales</a></li></ul></div>
+        <div class="footer-section"><h3 class="footer-title">Contacto</h3><ul class="footer-links"><li><a href="mailto:serakdepmsofficial7@gmail.com"><i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com</a></li><li><a href="https://wa.me/573116546484" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp del Clan</a></li><li><a href="contacto.html#reportar"><i class="fas fa-user-shield"></i> Reportar problema</a></li><li><a href="contacto.html#sugerencias"><i class="fas fa-lightbulb"></i> Sugerencias</a></li><li><a href="contacto.html#requisitos-admin"><i class="fas fa-user-tie"></i> Aspirar a Admin</a></li></ul></div>
+        <div class="footer-section"><h3 class="footer-title">Información Legal</h3><ul class="footer-links"><li><a href="privacidad.html"><i class="fas fa-user-shield"></i> Política de Privacidad</a></li><li><a href="terminos.html"><i class="fas fa-file-contract"></i> Términos de Servicio</a></li><li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Política de Cookies</a></li><li><a href="dmca.html"><i class="fas fa-balance-scale"></i> Aviso DMCA</a></li><li><a href="creditos.html"><i class="fas fa-heart"></i> Créditos</a></li><li><a href="contacto.html#legal"><i class="fas fa-gavel"></i> Asuntos Legales</a></li></ul></div>
       </div>
-      <div class="copyright">
-        <p>© <span id="current-year">2026</span> Serakdep MS - Clan de Roblox. Todos los derechos reservados.</p>
-      </div>
+      <div class="copyright"><p>© <span id="current-year">2026</span> Serakdep MS - Clan de Roblox. Todos los derechos reservados.</p><p>Esta página no está afiliada a Roblox Corporation.</p></div>
     </div>
   </footer>
 
@@ -225,5 +228,7 @@
   <script src="js/laboratorio.js"></script>
   <script src="js/chatbot.js"></script>
   <script src="js/scroll-reveal.js"></script>
+  <script src="js/redirect.js"></script>
+  <script src="js/loading.js"></script>
 </body>
 </html>
