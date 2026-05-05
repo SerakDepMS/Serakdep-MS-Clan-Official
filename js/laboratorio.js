@@ -1781,12 +1781,12 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     initPreviewSizes();
   }
 
-  // ==================== EVENTOS ====================
   enterBtn.addEventListener('click', () => {
-    lobby.style.display = 'none';
-    environment.style.display = 'flex';
-    initEnvironment();
-  });
+  lobby.style.display = 'none';
+  environment.style.display = 'flex';
+  environment.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  initEnvironment();
+});
 
   exitBtn.addEventListener('click', () => {
     environment.style.display = 'none';

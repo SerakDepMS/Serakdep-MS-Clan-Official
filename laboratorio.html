@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="css/laboratorio.css" />
   <link rel="stylesheet" href="css/chatbot.css" />
 
-  <!-- CodeMirror y temas adicionales -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css" />
@@ -42,13 +42,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/javascript-hint.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css" />
-  <!-- Addon para linting (validación) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/html-lint.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/css-lint.min.js"></script>
 
-  <!-- JSZip -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -75,7 +74,7 @@
 
   <main>
     <div class="container">
-      <!-- LOBBY -->
+
       <section id="labLobby" class="lab-lobby">
         <div class="lobby-content">
           <div class="lobby-icon">
@@ -102,7 +101,6 @@
 
 
       <section id="labEnvironment" class="lab-environment" style="display: none;">
-        <!-- Barra de actividad -->
         <div class="lab-activity-bar">
           <div class="activity-group">
             <button class="activity-btn" id="btnExplorer" title="Explorador de archivos (Ctrl+E)"><i class="fas fa-folder-tree"></i></button>
@@ -115,7 +113,6 @@
             <button class="activity-btn" id="btnAssistant" title="Ayudante IA"><i class="fas fa-robot"></i></button>
             <button class="activity-btn" id="btnFormat" title="Formatear código (Ctrl+Shift+F)"><i class="fas fa-indent"></i></button>
             <button class="activity-btn" id="btnWrap" title="Ajuste de línea"><i class="fas fa-text-width"></i></button>
-            <!-- NUEVO BOTÓN: Maximizar editor -->
             <button class="activity-btn" id="btnMaximizeEditor" title="Maximizar editor (Ctrl+Shift+M)"><i class="fas fa-expand-arrows-alt"></i></button>
           </div>
           <div class="activity-group">
@@ -128,9 +125,9 @@
           </div>
         </div>
 
-        <!-- Workspace con splitters -->
+
         <div class="lab-workspace" id="labWorkspace">
-          <!-- Explorador -->
+
           <aside class="lab-explorer" id="labExplorer">
             <div class="explorer-header">
               <h4>EXPLORADOR</h4>
@@ -143,19 +140,19 @@
             <div class="file-tree" id="fileTree"></div>
           </aside>
 
-          <!-- Resizer para el explorador -->
+
           <div class="splitter" id="explorerSplitter"></div>
 
-          <!-- Editor -->
+
           <div class="lab-editor-area" id="labEditorArea">
             <div class="editor-tabs" id="editorTabs"></div>
             <div class="editor-container" id="editorContainer"></div>
           </div>
 
-          <!-- Resizer para la vista previa -->
+
           <div class="splitter" id="previewSplitter"></div>
 
-          <!-- Vista previa -->
+
           <div class="lab-preview-area" id="labPreviewArea">
             <div class="preview-toolbar">
               <h4>VISTA PREVIA</h4>
@@ -175,7 +172,7 @@
             </div>
           </div>
 
-          <!-- Consola -->
+
           <div class="lab-console" id="labConsole">
             <div class="console-header">
               <div class="console-tabs">
@@ -195,7 +192,7 @@
             </div>
           </div>
 
-          <!-- Wiki -->
+
           <div class="lab-wiki" id="labWiki">
             <div class="wiki-header">
               <h3><i class="fas fa-book"></i> Enciclopedia</h3>
@@ -212,7 +209,7 @@
             <div class="wiki-content" id="wikiContent"></div>
           </div>
 
-          <!-- Retos (Challenges) -->
+
           <div class="lab-wiki lab-challenges" id="labChallenges">
             <div class="wiki-header">
               <h3><i class="fas fa-puzzle-piece"></i> Retos</h3>
@@ -223,7 +220,7 @@
             <div class="wiki-content" id="challengesContent"></div>
           </div>
 
-          <!-- Ayudante IA simulado -->
+
           <div class="lab-wiki lab-assistant" id="labAssistant">
             <div class="wiki-header">
               <h3><i class="fas fa-robot"></i> Ayudante IA</h3>
@@ -241,7 +238,7 @@
           </div>
         </div>
 
-        <!-- Barra de estado -->
+
         <div class="lab-statusbar">
           <span class="status-group">
             <span id="statusLines">Líneas: 0</span>
@@ -263,10 +260,10 @@
       </section>
     </div>
 
-    <!-- Input oculto para cargar archivos -->
+
     <input type="file" id="fileInput" accept=".html,.css,.js,.txt,.json,.md,.xml,.svg" multiple style="display:none;">
 
-    <!-- Modal de gestión de proyectos -->
+
     <div id="projectsModal" class="modal-overlay" style="display: none;">
       <div class="modal-content">
         <div class="modal-header">
@@ -291,7 +288,7 @@
   </main>
 
   <footer>
-    <!-- ... footer sin cambios ... -->
+
     <div class="container">
       <div class="footer-content">
         <div class="footer-section"><h3 class="footer-title">Serakdep MS</h3><p>Clan de Roblox para todas las edades. Únete a nuestra comunidad y vive la mejor experiencia de gaming.</p><div class="social-links"><a href="https://discord.gg/vts4PTHR9K" title="Discord"><i class="fab fa-discord"></i></a><a href="https://x.com/serakdep?s=21" title="Twitter"><i class="fab fa-twitter"></i></a><a href="#" title="YouTube"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h" title="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
