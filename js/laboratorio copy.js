@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let consoleHistory = [];
   let historyIndex = -1;
 
-  // Estado para restaurar al salir de pantalla completa
+  // Estado para restaurar al salir de pantalla completa (por si acaso)
   let preFullscreenState = {};
 
   function getActiveFile() { return files.find(f => f.id === activeFileId) || files[0]; }
@@ -446,70 +446,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
+  // ==================== PANTALLA COMPLETA DEL LABORATORIO ====================
   function toggleEditorMaximize() {
     if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-
+      // Guardar estado actual (por si se necesita al salir)
       preFullscreenState = {
-        explorer: explorer.classList.contains('show'),
-        console: consolePanel.classList.contains('show'),
-        wiki: wikiPanel.classList.contains('show'),
-        challenges: challengesPanel.classList.contains('show'),
-        assistant: assistantPanel.classList.contains('show'),
-        viewMode: currentViewMode,
-        activityBar: document.querySelector('.lab-activity-bar').style.display,
-        statusBar: document.querySelector('.lab-statusbar').style.display
+        viewMode: currentViewMode
       };
 
-
+      // Activar pantalla completa en el contenedor del laboratorio
       const el = environment;
       if (el.requestFullscreen) {
         el.requestFullscreen();
-      } else if (el.webkitRequestFullscreen) {
+      } else if (el.webkitRequestFullscreen) { /* Safari */
         el.webkitRequestFullscreen();
-      } else if (el.msRequestFullscreen) {
+      } else if (el.msRequestFullscreen) { /* IE/Edge */
         el.msRequestFullscreen();
       }
 
       btnMaximizeEditor.classList.add('active');
     } else {
-
+      // Salir de pantalla completa
       if (document.exitFullscreen) {
         document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
+      } else if (document.webkitExitFullscreen) { /* Safari */
         document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
+      } else if (document.msExitFullscreen) { /* IE/Edge */
         document.msExitFullscreen();
       }
+      // La restauración del botón se hace en el evento 'fullscreenchange'
     }
   }
 
-
+  // Escuchar cambios de pantalla completa para restaurar el botón
   document.addEventListener('fullscreenchange', onFullscreenChange);
   document.addEventListener('webkitfullscreenchange', onFullscreenChange);
   document.addEventListener('msfullscreenchange', onFullscreenChange);
 
   function onFullscreenChange() {
     if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-      if (preFullscreenState.explorer) explorer.classList.add('show');
-      else explorer.classList.remove('show');
-      if (preFullscreenState.console) consolePanel.classList.add('show');
-      else consolePanel.classList.remove('show');
-      if (preFullscreenState.wiki) wikiPanel.classList.add('show');
-      else wikiPanel.classList.remove('show');
-      if (preFullscreenState.challenges) challengesPanel.classList.add('show');
-      else challengesPanel.classList.remove('show');
-      if (preFullscreenState.assistant) assistantPanel.classList.add('show');
-      else assistantPanel.classList.remove('show');
-
-
-      document.querySelector('.lab-activity-bar').style.display = preFullscreenState.activityBar || '';
-      document.querySelector('.lab-statusbar').style.display = preFullscreenState.statusBar || '';
-
-r
-      setViewMode(preFullscreenState.viewMode || 'split');
-
+      // Restaurar el botón y la vista si es necesario
       btnMaximizeEditor.classList.remove('active');
+      // No cambiamos el modo de vista, se queda como estaba
     }
   }
 
@@ -683,7 +661,7 @@ r
     });
   }
 
-  const wikiData = {
+    const wikiData = {
   html: `
 <h3>HTML (HyperText Markup Language)</h3>
 <p><strong>HTML</strong> es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido mediante <em>etiquetas</em>.</p>
@@ -1540,7 +1518,7 @@ const uid = () => Math.random().toString(36).slice(2, 9);
 const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
 };
 
-
+  // ==================== RETOS ====================
   const challenges = [
     {
       id: 'ch1',
@@ -1803,13 +1781,12 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     initPreviewSizes();
   }
 
-
   enterBtn.addEventListener('click', () => {
-    lobby.style.display = 'none';
-    environment.style.display = 'flex';
-    environment.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    initEnvironment();
-  });
+  lobby.style.display = 'none';
+  environment.style.display = 'flex';
+  environment.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  initEnvironment();
+});
 
   exitBtn.addEventListener('click', () => {
     environment.style.display = 'none';
@@ -1870,43 +1847,22 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
   btnReset.addEventListener('click', resetToDefault);
 
   btnThemes.addEventListener('click', (e) => {
-  e.stopPropagation();
-  const oldMenu = document.querySelector('.theme-menu');
-  if (oldMenu) { oldMenu.remove(); return; }
-
-  const menu = document.createElement('div');
-  menu.className = 'theme-menu';
-
-
-  const btnRect = btnThemes.getBoundingClientRect();
-  menu.style.position = 'fixed';
-  menu.style.top = `${btnRect.bottom + 5}px`;
-  menu.style.left = `${btnRect.left}px`;
-
-  menu.innerHTML = themeList.map(t => 
-    `<button data-theme="${t.value}"><i class="fas ${t.icon}"></i> ${t.name}</button>`
-  ).join('');
-
-
-  document.body.appendChild(menu);
-
-
-  menu.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      changeTheme(btn.dataset.theme);
-      menu.remove();
+    e.stopPropagation();
+    const menu = document.createElement('div');
+    menu.className = 'theme-menu';
+    menu.style.position = 'fixed';
+    menu.style.top = `${btnThemes.getBoundingClientRect().bottom + 5}px`;
+    menu.style.left = `${btnThemes.getBoundingClientRect().left}px`;
+    menu.innerHTML = themeList.map(t => `<button data-theme="${t.value}"><i class="fas ${t.icon}"></i> ${t.name}</button>`).join('');
+    document.body.appendChild(menu);
+    menu.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        changeTheme(btn.dataset.theme);
+        menu.remove();
+      });
     });
+    document.addEventListener('click', () => menu.remove(), { once: true });
   });
-
-
-  function closeMenu(event) {
-    if (!menu.contains(event.target) && event.target !== btnThemes) {
-      menu.remove();
-      document.removeEventListener('click', closeMenu);
-    }
-  }
-  setTimeout(() => document.addEventListener('click', closeMenu), 10);
-});
 
   btnNewFile.addEventListener('click', () => {
     const lang = prompt('Lenguaje (html/css/js):', 'html');

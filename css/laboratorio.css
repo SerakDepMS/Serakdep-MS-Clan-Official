@@ -1,4 +1,3 @@
-
 :root {
   --lab-bg: #1e1e2e;
   --lab-surface: #252536;
@@ -144,6 +143,7 @@
   display: flex;
   gap: 6px;
   align-items: center;
+  position: relative;
 }
 .activity-btn {
   background: transparent;
@@ -823,35 +823,39 @@
 }
 
 
-@media (max-width: 900px) {
-  .lab-workspace {
-    flex-direction: column;
-  }
-  .lab-explorer {
-    width: 100%;
-    max-height: 200px;
-  }
-  .lab-preview-area {
-    width: 100%;
-    height: 300px;
-    border-left: none;
-    border-top: 1px solid var(--lab-border);
-  }
-  .lab-wiki,
-  .lab-challenges,
-  .lab-assistant {
-    width: 100%;
-    height: 40vh;
-  }
-  .lobby-content {
-    padding: 30px 20px;
-    margin: 0 10px;
-  }
+.theme-menu {
+  position: fixed;
+  z-index: 1000; 
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  min-width: 200px;
+  box-shadow: var(--lab-shadow);
+  padding: 4px;
+}
+.theme-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: var(--lab-text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.theme-menu button:hover {
+  background: var(--lab-activity-hover);
+  color: var(--lab-gold-light);
 }
 
 
-@media (max-width: 900px) {
 
+@media (max-width: 900px) {
   .lab-activity-bar {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -957,35 +961,4 @@
     padding: 30px 20px;
     margin: 0 10px;
   }
-}
-
-
-.theme-menu {
-  position: fixed;
-  background: var(--lab-surface);
-  border: 1px solid var(--lab-border);
-  border-radius: 10px;
-  min-width: 200px;
-  z-index: 150;
-  box-shadow: var(--lab-shadow);
-  padding: 4px;
-}
-.theme-menu button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding: 10px 14px;
-  background: transparent;
-  border: none;
-  color: var(--lab-text);
-  text-align: left;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  transition: background 0.15s;
-}
-.theme-menu button:hover {
-  background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
 }
