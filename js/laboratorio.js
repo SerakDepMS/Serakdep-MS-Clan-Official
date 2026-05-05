@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const explorerSplitter = document.getElementById('explorerSplitter');
   const previewSplitter = document.getElementById('previewSplitter');
 
+  const btnMaximizeEditor = document.getElementById('btnMaximizeEditor');
+
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
     { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
@@ -87,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentFontSize = 14;
   let consoleHistory = [];
   let historyIndex = -1;
+
+  // Estado para restaurar al salir de pantalla completa (por si acaso)
+  let preFullscreenState = {};
 
   function getActiveFile() { return files.find(f => f.id === activeFileId) || files[0]; }
   function getEditor(id) { return editors[id]; }
@@ -441,6 +446,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // ==================== PANTALLA COMPLETA DEL LABORATORIO ====================
+  function toggleEditorMaximize() {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+      // Guardar estado actual (por si se necesita al salir)
+      preFullscreenState = {
+        viewMode: currentViewMode
+      };
+
+      // Activar pantalla completa en el contenedor del laboratorio
+      const el = environment;
+      if (el.requestFullscreen) {
+        el.requestFullscreen();
+      } else if (el.webkitRequestFullscreen) { /* Safari */
+        el.webkitRequestFullscreen();
+      } else if (el.msRequestFullscreen) { /* IE/Edge */
+        el.msRequestFullscreen();
+      }
+
+      btnMaximizeEditor.classList.add('active');
+    } else {
+      // Salir de pantalla completa
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE/Edge */
+        document.msExitFullscreen();
+      }
+      // La restauración del botón se hace en el evento 'fullscreenchange'
+    }
+  }
+
+  // Escuchar cambios de pantalla completa para restaurar el botón
+  document.addEventListener('fullscreenchange', onFullscreenChange);
+  document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+  document.addEventListener('msfullscreenchange', onFullscreenChange);
+
+  function onFullscreenChange() {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+      // Restaurar el botón y la vista si es necesario
+      btnMaximizeEditor.classList.remove('active');
+      // No cambiamos el modo de vista, se queda como estaba
+    }
+  }
+
   function formatCode() {
     const editor = getEditor(activeFileId);
     if (!editor) return;
@@ -451,9 +501,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     editor.refresh();
-}
+  }
 
   function toggleComment() {
+    const editor = getEditor(activeFileId);
+    if (!editor) return;
+    const mode = editor.getMode().name;
+    const selections = editor.listSelections();
+
+    function toggleLineComment(line, commentStart, commentEnd = '') {
+      const text = editor.getLine(line);
+      const trimmed = text.trim();
+      if (commentEnd) {
+        if (trimmed.startsWith(commentStart) && trimmed.endsWith(commentEnd)) {
+          const newText = text.replace(commentStart, '').replace(commentEnd, '');
+          editor.setLine(line, newText.trim());
+        } else {
+          editor.setLine(line, commentStart + ' ' + text + ' ' + commentEnd);
+        }
+      } else {
+        if (trimmed.startsWith(commentStart)) {
+          const newText = text.replace(commentStart, '');
+          editor.setLine(line, newText.trim());
+        } else {
+          editor.setLine(line, commentStart + ' ' + text);
+        }
+      }
+    }
+
+    if (selections.length === 1 && selections[0].empty()) {
+      const cursor = editor.getCursor();
+      const line = cursor.line;
+      if (mode === 'htmlmixed') {
+        toggleLineComment(line, '<!--', '-->');
+      } else if (mode === 'css') {
+        toggleLineComment(line, '/*', '*/');
+      } else {
+        toggleLineComment(line, '//');
+      }
+    } else {
+      editor.operation(() => {
+        selections.forEach(sel => {
+          const text = editor.getRange(sel.anchor, sel.head);
+          if (mode === 'htmlmixed') {
+            editor.replaceRange('<!-- ' + text + ' -->', sel.anchor, sel.head);
+          } else if (mode === 'css') {
+            editor.replaceRange('/* ' + text + ' */', sel.anchor, sel.head);
+          } else {
+            editor.replaceRange('// ' + text, sel.anchor, sel.head);
+          }
+        });
+      });
+    }
   }
 
   function setLineWrap(wrap) {
@@ -562,8 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Aquí mantén tu extenso contenido de wikiData sin cambios
-  const wikiData = {
+    const wikiData = {
   html: `
 <h3>HTML (HyperText Markup Language)</h3>
 <p><strong>HTML</strong> es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido mediante <em>etiquetas</em>.</p>
@@ -1420,6 +1518,7 @@ const uid = () => Math.random().toString(36).slice(2, 9);
 const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
 };
 
+  // ==================== RETOS ====================
   const challenges = [
     {
       id: 'ch1',
@@ -1662,7 +1761,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     assistantChat.scrollTop = assistantChat.scrollHeight;
   }
 
-  // INICIALIZACIÓN SIN EJEMPLOS
   function initEnvironment() {
     if (!loadFromLocal()) {
       files.forEach(f => createEditor(f));
@@ -1681,10 +1779,9 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     changeFontSize(0);
     initSplitters();
     initPreviewSizes();
-    // NO cargamos ejemplos
   }
 
-  // EVENTOS (sin referencias a btnExamples ni examplesMenu)
+  // ==================== EVENTOS ====================
   enterBtn.addEventListener('click', () => {
     lobby.style.display = 'none';
     environment.style.display = 'flex';
@@ -1731,6 +1828,8 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
   btnSplit.addEventListener('click', () => setViewMode('split'));
   btnPreview.addEventListener('click', () => setViewMode('preview'));
 
+  btnMaximizeEditor.addEventListener('click', toggleEditorMaximize);
+
   btnFocus.addEventListener('click', () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch(() => {});
@@ -1750,7 +1849,7 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
   btnThemes.addEventListener('click', (e) => {
     e.stopPropagation();
     const menu = document.createElement('div');
-    menu.className = 'examples-menu open';
+    menu.className = 'theme-menu';
     menu.style.position = 'fixed';
     menu.style.top = `${btnThemes.getBoundingClientRect().bottom + 5}px`;
     menu.style.left = `${btnThemes.getBoundingClientRect().left}px`;
@@ -1842,8 +1941,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     });
   });
 
-  // btnExamples y su lógica han sido eliminados por completo
-
   btnOpenPreview.addEventListener('click', () => {
     const htmlFile = files.find(f => f.language === 'html');
     const cssFile = files.find(f => f.language === 'css');
@@ -1933,6 +2030,10 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
       toggleComment();
     }
     if (e.ctrlKey && e.key === 'r') { e.preventDefault(); btnChallenges.click(); }
+    if (e.ctrlKey && e.shiftKey && e.key === 'M') {
+      e.preventDefault();
+      toggleEditorMaximize();
+    }
   });
 
   setInterval(() => {

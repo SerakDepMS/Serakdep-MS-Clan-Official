@@ -958,3 +958,34 @@
     margin: 0 10px;
   }
 }
+
+
+.theme-menu {
+  position: fixed;
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  min-width: 200px;
+  z-index: 150;
+  box-shadow: var(--lab-shadow);
+  padding: 4px;
+}
+.theme-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: var(--lab-text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.theme-menu button:hover {
+  background: var(--lab-activity-hover);
+  color: var(--lab-gold-light);
+}
