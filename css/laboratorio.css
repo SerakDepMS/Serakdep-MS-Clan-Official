@@ -1,3 +1,4 @@
+
 :root {
   --lab-bg: #1e1e2e;
   --lab-surface: #252536;
@@ -178,44 +179,6 @@
   background: rgba(231, 76, 60, 0.18);
   color: #ff6b6b;
   border-color: #e74c3c;
-}
-
-
-.examples-dropdown {
-  position: relative;
-}
-.examples-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--lab-surface);
-  border: 1px solid var(--lab-border);
-  border-radius: 10px;
-  min-width: 220px;
-  z-index: 100;
-  box-shadow: var(--lab-shadow);
-  padding: 4px;
-}
-.examples-menu.open {
-  display: block;
-}
-.examples-menu button {
-  display: block;
-  width: 100%;
-  padding: 10px 16px;
-  background: transparent;
-  border: none;
-  color: var(--lab-text);
-  text-align: left;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  transition: background 0.15s;
-}
-.examples-menu button:hover {
-  background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
 }
 
 
@@ -744,6 +707,122 @@
 }
 
 
+.splitter {
+  width: 5px;
+  background: var(--lab-border);
+  cursor: col-resize;
+  transition: background 0.2s;
+}
+.splitter:hover {
+  background: var(--lab-gold);
+}
+
+.preview-sizes {
+  display: flex;
+  gap: 4px;
+}
+.size-btn {
+  background: rgba(0,0,0,0.05);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #555;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.size-btn.active, .size-btn:hover {
+  background: var(--lab-gold-light);
+  border-color: var(--lab-gold);
+  color: #000;
+}
+.preview-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fff;
+  overflow: auto;
+}
+.preview-wrapper iframe {
+  border: none;
+  background: white;
+}
+
+
+.lab-assistant {
+  width: 360px;
+  background: var(--lab-surface);
+  border-left: 1px solid var(--lab-border);
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+.lab-assistant.show {
+  display: flex;
+}
+.assistant-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.assistant-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+.assistant-message.bot {
+  align-self: flex-start;
+  background: var(--lab-bg);
+  border: 1px solid var(--lab-border);
+  color: var(--lab-text);
+}
+.assistant-message.user {
+  align-self: flex-end;
+  background: var(--lab-accent);
+  color: white;
+}
+.assistant-input-area {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--lab-border);
+  background: var(--lab-activity-bg);
+}
+#assistantInput {
+  flex: 1;
+  padding: 8px 12px;
+  background: var(--lab-bg);
+  border: 1px solid var(--lab-border);
+  border-radius: 8px;
+  color: var(--lab-text);
+  outline: none;
+  font-size: 0.9rem;
+}
+#assistantInput::placeholder {
+  color: var(--lab-text-secondary);
+}
+#btnSendAssistant {
+  background: var(--lab-accent);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#btnSendAssistant:hover {
+  background: #1b4332;
+}
+
+
 @media (max-width: 900px) {
   .lab-workspace {
     flex-direction: column;
@@ -759,7 +838,8 @@
     border-top: 1px solid var(--lab-border);
   }
   .lab-wiki,
-  .lab-challenges {
+  .lab-challenges,
+  .lab-assistant {
     width: 100%;
     height: 40vh;
   }

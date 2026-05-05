@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const lobby = document.getElementById('labLobby');
@@ -21,9 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnFocus = document.getElementById('btnFocus');
   const btnDownload = document.getElementById('btnDownload');
   const btnReset = document.getElementById('btnReset');
-  const btnTheme = document.getElementById('btnTheme');
+  const btnThemes = document.getElementById('btnThemes');
   const btnNewFile = document.getElementById('btnNewFile');
   const btnDuplicateFile = document.getElementById('btnDuplicateFile');
+  const btnLoadFile = document.getElementById('btnLoadFile');
+  const fileInput = document.getElementById('fileInput');
   const btnRefreshPreview = document.getElementById('btnRefreshPreview');
   const btnOpenPreview = document.getElementById('btnOpenPreview');
   const btnClearConsole = document.getElementById('btnClearConsole');
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const consoleInput = document.getElementById('consoleInput');
   const consoleOutput = document.getElementById('consoleOutput');
   const previewFrame = document.getElementById('previewFrame');
+  const previewWrapper = document.getElementById('previewWrapper');
   const autoRefreshCheck = document.getElementById('autoRefreshCheck');
   const wikiContent = document.getElementById('wikiContent');
   const wikiSearch = document.getElementById('wikiSearch');
@@ -50,9 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusFontSize = document.getElementById('statusFontSize');
   const btnFormat = document.getElementById('btnFormat');
   const btnWrap = document.getElementById('btnWrap');
-  const btnExamples = document.getElementById('btnExamples');
-  const examplesMenu = document.getElementById('examplesMenu');
-
 
   const btnChallenges = document.getElementById('btnChallenges');
   const challengesPanel = document.getElementById('labChallenges');
@@ -65,22 +64,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const newProjectName = document.getElementById('newProjectName');
   const projectList = document.getElementById('projectList');
 
+  const btnAssistant = document.getElementById('btnAssistant');
+  const assistantPanel = document.getElementById('labAssistant');
+  const assistantChat = document.getElementById('assistantChat');
+  const assistantInput = document.getElementById('assistantInput');
+  const btnSendAssistant = document.getElementById('btnSendAssistant');
+  const btnCloseAssistant = document.getElementById('btnCloseAssistant');
+  const explorerSplitter = document.getElementById('explorerSplitter');
+  const previewSplitter = document.getElementById('previewSplitter');
 
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
     { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Code Lab de Serakdep MS!");' }
+    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al SMS Studios de Serakdep MS!");' }
   ];
   let activeFileId = '1';
   let editors = {};
-  let darkTheme = true;
+  let currentTheme = 'monokai';
   let consoleFilter = 'all';
   let wikiSection = 'html';
   let currentViewMode = 'split';
   let currentFontSize = 14;
   let consoleHistory = [];
   let historyIndex = -1;
-
 
   function getActiveFile() { return files.find(f => f.id === activeFileId) || files[0]; }
   function getEditor(id) { return editors[id]; }
@@ -90,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const editor = CodeMirror(editorContainer, {
       value: file.content,
       mode: modeMap[file.language] || 'htmlmixed',
-      theme: darkTheme ? 'monokai' : 'default',
+      theme: currentTheme,
       lineNumbers: true,
       autoCloseBrackets: true,
       matchBrackets: true,
@@ -98,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tabSize: 2,
       indentWithTabs: false,
       lineWrapping: false,
+      lint: (file.language === 'html' || file.language === 'css') ? true : false,
     });
     editor.setSize('100%', '100%');
     editor.on('change', () => {
@@ -105,9 +112,70 @@ document.addEventListener('DOMContentLoaded', () => {
       updateStatusbar();
       if (autoRefreshCheck.checked) debouncePreview();
     });
+
+    editor.on('inputRead', (cm, change) => {
+      if (change.text[0] && /[a-zA-Z<.#]/.test(change.text[0])) {
+        cm.showHint({
+          hint: function(editor) {
+            const inner = CodeMirror.hint.html(editor) || CodeMirror.hint.css(editor) || CodeMirror.hint.javascript(editor);
+            if (inner && inner.list) {
+              inner.list = inner.list.map(item => ({
+                text: typeof item === 'string' ? item : item.text,
+                displayText: typeof item === 'string' ? item : item.text,
+                render: (el, self, data) => {
+                  el.innerHTML = `<strong>${data.text}</strong><br><small>${getCompletionDescription(data.text)}</small>`;
+                }
+              }));
+            }
+            return inner;
+          }
+        });
+      }
+    });
+
     editor.getWrapperElement().style.fontSize = currentFontSize + 'px';
     editors[file.id] = editor;
     return editor;
+  }
+
+  function getCompletionDescription(word) {
+    const desc = {
+      'html': 'Elemento raíz de un documento HTML',
+      'head': 'Contenedor de metadatos, estilos y scripts',
+      'body': 'Contenido visible de la página',
+      'div': 'Contenedor genérico en bloque',
+      'span': 'Contenedor genérico en línea',
+      'p': 'Párrafo de texto',
+      'a': 'Enlace o hipervínculo',
+      'img': 'Imagen',
+      'ul': 'Lista no ordenada',
+      'ol': 'Lista ordenada',
+      'li': 'Elemento de lista',
+      'table': 'Tabla',
+      'form': 'Formulario',
+      'input': 'Campo de entrada',
+      'button': 'Botón',
+      'color': 'Color del texto',
+      'background': 'Fondo (color, imagen, etc.)',
+      'font-size': 'Tamaño de fuente',
+      'margin': 'Margen exterior',
+      'padding': 'Relleno interior',
+      'border': 'Borde del elemento',
+      'display': 'Tipo de visualización (block, flex, grid...)',
+      'flex': 'Abreviatura flex-grow, flex-shrink, flex-basis',
+      'grid': 'Activa el sistema de cuadrícula',
+      'position': 'Posicionamiento (relative, absolute, fixed, sticky)',
+      'width': 'Ancho del elemento',
+      'height': 'Alto del elemento',
+      'function': 'Declara una función',
+      'var': 'Variable con ámbito de función (evitar)',
+      'let': 'Variable con ámbito de bloque',
+      'const': 'Constante',
+      'console.log': 'Muestra un mensaje en la consola',
+      'document.querySelector': 'Selecciona el primer elemento que coincide con el selector CSS',
+      'addEventListener': 'Asocia un evento a un elemento',
+    };
+    return desc[word] || '';
   }
 
   function switchToFile(fileId) {
@@ -321,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function downloadZip() {
     const zip = new JSZip();
     files.forEach(f => zip.file(f.name, f.content));
-    zip.file('README.md', `# Proyecto Serakdep MS Code Lab\n\n## Archivos\n${files.map(f => '- ' + f.name).join('\n')}\n\nCreado con el Code Lab de Serakdep MS.`);
+    zip.file('README.md', `# Proyecto Serakdep MS SMS Studios\n\n## Archivos\n${files.map(f => '- ' + f.name).join('\n')}\n\nCreado con el SMS Studios de Serakdep MS.`);
     zip.generateAsync({ type: 'blob' }).then(content => {
       const a = document.createElement('a');
       a.href = URL.createObjectURL(content);
@@ -335,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
     files = [
       { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
       { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Code Lab de Serakdep MS!");' }
+      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al SMS Studios de Serakdep MS!");' }
     ];
     Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
     editors = {};
@@ -376,60 +444,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function formatCode() {
     const editor = getEditor(activeFileId);
     if (!editor) return;
-    CodeMirror.commands.indentAuto(editor);
+    editor.operation(function() {
+        const totalLines = editor.lineCount();
+        for (let i = 0; i < totalLines; i++) {
+            editor.indentLine(i, 'smart');
+        }
+    });
     editor.refresh();
-  }
+}
 
   function toggleComment() {
-    const editor = getEditor(activeFileId);
-    if (!editor) return;
-    const mode = editor.getMode().name;
-    const selections = editor.listSelections();
-
-    function toggleLineComment(line, commentStart, commentEnd = '') {
-      const text = editor.getLine(line);
-      const trimmed = text.trim();
-      if (commentEnd) {
-        if (trimmed.startsWith(commentStart) && trimmed.endsWith(commentEnd)) {
-          const newText = text.replace(commentStart, '').replace(commentEnd, '');
-          editor.setLine(line, newText.trim());
-        } else {
-          editor.setLine(line, commentStart + ' ' + text + ' ' + commentEnd);
-        }
-      } else {
-        if (trimmed.startsWith(commentStart)) {
-          const newText = text.replace(commentStart, '');
-          editor.setLine(line, newText.trim());
-        } else {
-          editor.setLine(line, commentStart + ' ' + text);
-        }
-      }
-    }
-
-    if (selections.length === 1 && selections[0].empty()) {
-      const cursor = editor.getCursor();
-      const line = cursor.line;
-      if (mode === 'htmlmixed') {
-        toggleLineComment(line, '<!--', '-->');
-      } else if (mode === 'css') {
-        toggleLineComment(line, '/*', '*/');
-      } else {
-        toggleLineComment(line, '//');
-      }
-    } else {
-      editor.operation(() => {
-        selections.forEach(sel => {
-          const text = editor.getRange(sel.anchor, sel.head);
-          if (mode === 'htmlmixed') {
-            editor.replaceRange('<!-- ' + text + ' -->', sel.anchor, sel.head);
-          } else if (mode === 'css') {
-            editor.replaceRange('/* ' + text + ' */', sel.anchor, sel.head);
-          } else {
-            editor.replaceRange('// ' + text, sel.anchor, sel.head);
-          }
-        });
-      });
-    }
   }
 
   function setLineWrap(wrap) {
@@ -449,6 +473,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     statusFontSize.textContent = currentFontSize + 'px';
   }
+
+  function changeTheme(theme) {
+    currentTheme = theme;
+    Object.values(editors).forEach(ed => ed.setOption('theme', theme));
+  }
+
+  const themeList = [
+    { name: 'Monokai', value: 'monokai', icon: 'fa-moon' },
+    { name: 'Dracula', value: 'dracula', icon: 'fa-skull' },
+    { name: 'Solarized', value: 'solarized', icon: 'fa-sun' },
+    { name: 'Nord', value: 'nord', icon: 'fa-snowflake' },
+    { name: 'Material', value: 'material', icon: 'fa-palette' },
+    { name: 'Default', value: 'default', icon: 'fa-circle' }
+  ];
 
   function updateStatusbar() {
     const f = getActiveFile();
@@ -524,7 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
+  // Aquí mantén tu extenso contenido de wikiData sin cambios
   const wikiData = {
   html: `
 <h3>HTML (HyperText Markup Language)</h3>
@@ -1382,7 +1420,6 @@ const uid = () => Math.random().toString(36).slice(2, 9);
 const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
 };
 
-
   const challenges = [
     {
       id: 'ch1',
@@ -1449,7 +1486,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
         </button>
       </div>
     `).join('');
-
     challengesContent.querySelectorAll('.challenge-start-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const challengeId = btn.dataset.challengeId;
@@ -1477,7 +1513,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
       });
     });
   }
-
 
   function saveProject(name) {
     const allProjects = JSON.parse(localStorage.getItem('sms_code_lab_projects') || '{}');
@@ -1543,7 +1578,91 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     });
   }
 
+  function initSplitters() {
+    let isDragging = false;
+    let startX, startWidth;
 
+    explorerSplitter.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      startWidth = explorer.offsetWidth;
+      document.body.style.cursor = 'col-resize';
+      e.preventDefault();
+    });
+
+    previewSplitter.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      startWidth = previewArea.offsetWidth;
+      document.body.style.cursor = 'col-resize';
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const delta = e.clientX - startX;
+      if (explorerSplitter.contains(e.target) || e.target === explorerSplitter || startWidth === explorer.offsetWidth) {
+        const newWidth = Math.max(100, Math.min(400, startWidth + delta));
+        explorer.style.width = newWidth + 'px';
+      } else if (previewSplitter.contains(e.target) || e.target === previewSplitter || startWidth === previewArea.offsetWidth) {
+        const newWidth = Math.max(200, Math.min(800, startWidth - delta));
+        previewArea.style.width = newWidth + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.body.style.cursor = '';
+    });
+  }
+
+  function initPreviewSizes() {
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const w = btn.dataset.width;
+        const h = btn.dataset.height;
+        if (w === '100%') {
+          previewFrame.style.width = w;
+          previewFrame.style.height = h;
+        } else {
+          previewFrame.style.width = w + 'px';
+          previewFrame.style.height = h + 'px';
+        }
+      });
+    });
+  }
+
+  const assistantResponses = [
+    { pattern: /html/i, response: 'HTML (HyperText Markup Language) es el esqueleto de cualquier página web. Usas etiquetas como &lt;h1&gt; para títulos y &lt;p&gt; para párrafos.' },
+    { pattern: /css/i, response: 'CSS (Cascading Style Sheets) define la apariencia visual: colores, fuentes, márgenes y animaciones. Se aplica con selectores como .clase o #id.' },
+    { pattern: /javascript/i, response: 'JavaScript es el lenguaje que da interactividad a las páginas. Puedes manipular el DOM, responder a eventos y comunicarte con servidores.' },
+    { pattern: /flexbox/i, response: 'Flexbox es un modelo de diseño en CSS para distribuir espacio entre elementos. Usa display: flex; y propiedades como justify-content y align-items.' },
+    { pattern: /grid/i, response: 'CSS Grid es otro sistema de diseño bidimensional. Se define con display: grid; y grid-template-columns. Ideal para layouts complejos.' },
+    { pattern: /localstorage/i, response: 'localStorage guarda datos en el navegador de forma persistente. Usa setItem("clave", valor) y getItem("clave"). Los datos se mantienen al cerrar el navegador.' },
+    { pattern: /evento/i, response: 'Los eventos permiten reaccionar a acciones del usuario: click, submit, keydown, etc. Se asignan con addEventListener.' },
+    { pattern: /promesa/i, response: 'Una promesa es un objeto que representa la eventual resolución de una operación asíncrona. Puede estar pendiente, resuelta o rechazada.' },
+    { pattern: /error/i, response: 'Para capturar errores en JavaScript usa try...catch. En el laboratorio los errores de sintaxis aparecerán en la consola automáticamente.' },
+    { pattern: /.*/, response: 'No tengo una respuesta específica, pero puedo ayudarte con HTML, CSS o JavaScript. ¿Puedes reformular tu pregunta?' }
+  ];
+
+  function getAssistantReply(question) {
+    for (let entry of assistantResponses) {
+      if (entry.pattern.test(question)) return entry.response;
+    }
+    return 'Lo siento, no he entendido. Prueba a preguntar sobre HTML, CSS o JavaScript.';
+  }
+
+  function addAssistantMessage(text, sender = 'user') {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `assistant-message ${sender}`;
+    msgDiv.innerHTML = text;
+    assistantChat.appendChild(msgDiv);
+    assistantChat.scrollTop = assistantChat.scrollHeight;
+  }
+
+  // INICIALIZACIÓN SIN EJEMPLOS
   function initEnvironment() {
     if (!loadFromLocal()) {
       files.forEach(f => createEditor(f));
@@ -1560,50 +1679,12 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     showWiki('html');
     setViewMode('split');
     changeFontSize(0);
-
-    const examples = [
-      { name: 'Hola Mundo', files: [{ name: 'index.html', lang: 'html', content: '<h1>¡Hola Mundo!</h1>' }] },
-      { name: 'Botón Animado', files: [
-        { name: 'index.html', lang: 'html', content: '<button class="btn">Click</button>' },
-        { name: 'styles.css', lang: 'css', content: '.btn { padding: 15px 30px; background: #2d6a4f; color: white; border: none; border-radius: 8px; cursor: pointer; transition: transform 0.3s; } .btn:hover { transform: scale(1.1); background: #d4af37; }' },
-        { name: 'script.js', lang: 'js', content: 'document.querySelector(".btn").addEventListener("click", () => alert("¡Hola!"));' }
-      ]},
-      { name: 'To-Do List', files: [
-        { name: 'index.html', lang: 'html', content: '<input type="text" id="task"><button id="add">Agregar</button><ul id="list"></ul>' },
-        { name: 'styles.css', lang: 'css', content: 'body { font-family: sans-serif; } li { margin: 5px 0; }' },
-        { name: 'script.js', lang: 'js', content: 'document.getElementById("add").onclick = () => { let t = document.getElementById("task").value; if(t) { let li = document.createElement("li"); li.textContent = t; document.getElementById("list").appendChild(li); document.getElementById("task").value = ""; }};' }
-      ]},
-      { name: 'Galería Lightbox', files: [
-        { name: 'index.html', lang: 'html', content: '<img src="https://via.placeholder.com/300" alt="img" onclick="this.style.transform=\'scale(2)\'">' },
-        { name: 'styles.css', lang: 'css', content: 'img { transition: transform 0.3s; cursor: pointer; }' },
-        { name: 'script.js', lang: 'js', content: '' }
-      ]},
-      { name: 'Calculadora', files: [
-        { name: 'index.html', lang: 'html', content: '<input id="a">+<input id="b"><button id="calc">=</button><span id="res"></span>' },
-        { name: 'script.js', lang: 'js', content: 'document.getElementById("calc").onclick = () => document.getElementById("res").textContent = +document.getElementById("a").value + +document.getElementById("b").value;' }
-      ]}
-    ];
-    examplesMenu.innerHTML = examples.map(ex => `<button>${ex.name}</button>`).join('');
-    examplesMenu.querySelectorAll('button').forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        const ex = examples[idx];
-        files = ex.files.map((f, i) => ({ id: (Date.now() + i).toString(), name: f.name, language: f.lang, content: f.content }));
-        Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
-        editors = {};
-        files.forEach(f => createEditor(f));
-        activeFileId = files[0].id;
-        switchToFile(activeFileId);
-        updateTabs();
-        updateFileTree();
-        updatePreview();
-        saveToLocal();
-        examplesMenu.classList.remove('open');
-        clearConsole();
-      });
-    });
+    initSplitters();
+    initPreviewSizes();
+    // NO cargamos ejemplos
   }
 
-
+  // EVENTOS (sin referencias a btnExamples ni examplesMenu)
   enterBtn.addEventListener('click', () => {
     lobby.style.display = 'none';
     environment.style.display = 'flex';
@@ -1628,6 +1709,24 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     loadProjectList();
   });
 
+  btnAssistant.addEventListener('click', () => {
+    assistantPanel.classList.toggle('show');
+  });
+  btnCloseAssistant.addEventListener('click', () => {
+    assistantPanel.classList.remove('show');
+  });
+  btnSendAssistant.addEventListener('click', () => {
+    const question = assistantInput.value.trim();
+    if (!question) return;
+    addAssistantMessage(question, 'user');
+    assistantInput.value = '';
+    const reply = getAssistantReply(question);
+    setTimeout(() => addAssistantMessage(reply, 'bot'), 300);
+  });
+  assistantInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') btnSendAssistant.click();
+  });
+
   btnEditor.addEventListener('click', () => setViewMode('editor'));
   btnSplit.addEventListener('click', () => setViewMode('split'));
   btnPreview.addEventListener('click', () => setViewMode('preview'));
@@ -1642,16 +1741,30 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     consolePanel.classList.remove('show');
     wikiPanel.classList.remove('show');
     challengesPanel.classList.remove('show');
+    assistantPanel.classList.remove('show');
   });
 
   btnDownload.addEventListener('click', downloadZip);
   btnReset.addEventListener('click', resetToDefault);
-  btnTheme.addEventListener('click', () => {
-    darkTheme = !darkTheme;
-    Object.values(editors).forEach(ed => ed.setOption('theme', darkTheme ? 'monokai' : 'default'));
-    document.querySelector('.lab-environment').style.background = darkTheme ? 'var(--lab-bg)' : '#f0f0f0';
-    btnTheme.querySelector('i').className = darkTheme ? 'fas fa-sun' : 'fas fa-moon';
+
+  btnThemes.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const menu = document.createElement('div');
+    menu.className = 'examples-menu open';
+    menu.style.position = 'fixed';
+    menu.style.top = `${btnThemes.getBoundingClientRect().bottom + 5}px`;
+    menu.style.left = `${btnThemes.getBoundingClientRect().left}px`;
+    menu.innerHTML = themeList.map(t => `<button data-theme="${t.value}"><i class="fas ${t.icon}"></i> ${t.name}</button>`).join('');
+    document.body.appendChild(menu);
+    menu.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        changeTheme(btn.dataset.theme);
+        menu.remove();
+      });
+    });
+    document.addEventListener('click', () => menu.remove(), { once: true });
   });
+
   btnNewFile.addEventListener('click', () => {
     const lang = prompt('Lenguaje (html/css/js):', 'html');
     if (['html', 'css', 'js'].includes(lang)) addNewFile(lang);
@@ -1674,11 +1787,62 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     if (e.target === projectsModal) projectsModal.style.display = 'none';
   });
 
-  btnExamples.addEventListener('click', (e) => {
-    e.stopPropagation();
-    examplesMenu.classList.toggle('open');
+  btnLoadFile.addEventListener('click', () => fileInput.click());
+
+  fileInput.addEventListener('change', (e) => {
+    const selectedFiles = Array.from(e.target.files);
+    if (selectedFiles.length === 0) return;
+
+    let firstNewFileId = null;
+    let loadedCount = 0;
+
+    selectedFiles.forEach((file, index) => {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const content = ev.target.result;
+        const extension = file.name.split('.').pop().toLowerCase();
+        const languageMap = {
+          html: 'html',
+          htm: 'html',
+          css: 'css',
+          js: 'js',
+          mjs: 'js',
+          json: 'js',
+          xml: 'html',
+          svg: 'html',
+          md: 'html',
+          txt: 'js'
+        };
+        const language = languageMap[extension] || 'js';
+
+        const newFile = {
+          id: (Date.now() + index).toString(),
+          name: file.name,
+          language: language,
+          content: content
+        };
+
+        files.push(newFile);
+        if (loadedCount === 0) firstNewFileId = newFile.id;
+        loadedCount++;
+
+        if (loadedCount === selectedFiles.length) {
+          updateFileTree();
+          updateTabs();
+          if (firstNewFileId) switchToFile(firstNewFileId);
+          saveToLocal();
+          if (autoRefreshCheck.checked) updatePreview();
+          fileInput.value = '';
+        }
+      };
+      reader.onerror = () => {
+        alert(`Error al leer el archivo ${file.name}`);
+      };
+      reader.readAsText(file, 'UTF-8');
+    });
   });
-  document.addEventListener('click', () => examplesMenu.classList.remove('open'));
+
+  // btnExamples y su lógica han sido eliminados por completo
 
   btnOpenPreview.addEventListener('click', () => {
     const htmlFile = files.find(f => f.language === 'html');
@@ -1758,7 +1922,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     setLineWrap(!current);
   });
 
-  // Atajos de teclado
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key === 's') { e.preventDefault(); saveToLocal(); }
     if (e.ctrlKey && e.key === 'e') { e.preventDefault(); explorer.classList.toggle('show'); }
@@ -1772,7 +1935,6 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     if (e.ctrlKey && e.key === 'r') { e.preventDefault(); btnChallenges.click(); }
   });
 
-  // Guardado automático
   setInterval(() => {
     saveToLocal();
     updateStatusbar();
