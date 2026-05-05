@@ -1,13 +1,5 @@
 const clanesAliados = [
   {
-    nombre: "Whicked White Void",
-    logo: "images/alianzas/WhickedWhiteVoid.jpg",
-    descripcion: "Uniendo el vacio con el poder de los dragones blancos, tejemos la realidad con hilos invisibles.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-04-03"
-  },
-  {
     nombre: "Kian Vove Xoar's",
     logo: "images/alianzas/KianVoveXoars.jpg",
     descripcion: "Nuestro objetivo es tener un espacio de convivencia sana, ser como una familia, un espacio seguro para todos y todas.",
@@ -102,14 +94,6 @@ const clanesAliados = [
     activo: true,
     nuevaAlianza: false,
     fechaAlianza: "2025-12-22"
-  },
-  {
-    nombre: "Oblivion Pact",
-    logo: "images/alianzas/OblivionPact.jpg",
-    descripcion: "Es un clan miesterioso y poderoso, centrado en el secreto, la lealtad y la memoria olvidada. sus miembros hacen pactos silenciosos, actuando desde las sombras con estrategia y unidad, dejando huella sin revelar su verdadera fuerza.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-04-14"
   },
   {
     nombre: "Sovereign Zenith Authority",
