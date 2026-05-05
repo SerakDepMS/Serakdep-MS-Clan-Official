@@ -505,10 +505,9 @@
 
 
     {
-      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'whicked white void', 'kian vove', 'golden vultures', 'nythera', 'the future legends', 'bloody legacy', 'wonderland', 'legion nova', 'luwance', 'bobox community', 'kira order', 'azeroth seraphim', 'celestial diamond', 'oblivion pact', 'sovereign zenith', 'the black bulls'],
+      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'kian vove', 'golden vultures', 'nythera', 'the future legends', 'bloody legacy', 'wonderland', 'legion nova', 'luwance', 'bobox community', 'kira order', 'azeroth seraphim', 'celestial diamond', 'sovereign zenith', 'the black bulls'],
       response: `🤝 <strong>Alianzas de Serakdep MS</strong><br><br>
-      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 16 clanes aliados, entre ellos:<br>
-      • Whicked White Void<br>
+      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 14 clanes aliados, entre ellos:<br>
       • Kian Vove Xoar's<br>
       • Golden Vultures<br>
       • NYTHERA<br>
@@ -521,7 +520,6 @@
       • Kira's Order<br>
       • Azeroth Seraphim Griever<br>
       • Celestial Diamond<br>
-      • Oblivion Pact<br>
       • Sovereign Zenith Authority<br>
       • The Black Bulls<br><br>
       Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el canal #solicitudes-externas en Discord.`
