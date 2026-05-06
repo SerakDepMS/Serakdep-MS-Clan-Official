@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   const lobby = document.getElementById('labLobby');
   const environment = document.getElementById('labEnvironment');
   const enterBtn = document.getElementById('enterLabBtn');
   const exitBtn = document.getElementById('btnExitLab');
-
   const explorer = document.getElementById('labExplorer');
   const consolePanel = document.getElementById('labConsole');
   const wikiPanel = document.getElementById('labWiki');
   const previewArea = document.getElementById('labPreviewArea');
   const editorArea = document.getElementById('labEditorArea');
-
   const btnExplorer = document.getElementById('btnExplorer');
   const btnEditor = document.getElementById('btnEditor');
   const btnSplit = document.getElementById('btnSplit');
@@ -63,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSaveProject = document.getElementById('btnSaveProject');
   const newProjectName = document.getElementById('newProjectName');
   const projectList = document.getElementById('projectList');
-
   const btnAssistant = document.getElementById('btnAssistant');
   const assistantPanel = document.getElementById('labAssistant');
   const assistantChat = document.getElementById('assistantChat');
@@ -90,8 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
   let consoleHistory = [];
   let historyIndex = -1;
 
-  // Estado para restaurar al salir de pantalla completa
+
   let preFullscreenState = {};
+
+
+  let wikiData = { html: '', css: '', js: '' };
+
+  async function loadWikiData() {
+    const WIKI_URL = 'https://api.npoint.io/47b284f068e1c936d147';
+    try {
+      const response = await fetch(WIKI_URL);
+      if (!response.ok) throw new Error('Error al cargar la enciclopedia');
+      wikiData = await response.json();
+      showWiki(wikiSection);
+    } catch (error) {
+      console.error(error);
+      wikiContent.innerHTML = '<p>Error al cargar la enciclopedia. Intenta recargar la página.</p>';
+    }
+  }
 
   function getActiveFile() { return files.find(f => f.id === activeFileId) || files[0]; }
   function getEditor(id) { return editors[id]; }
@@ -109,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tabSize: 2,
       indentWithTabs: false,
       lineWrapping: false,
-      lint: (file.language === 'html' || file.language === 'css') ? true : false,
+      lint: (file.language === 'html' || file.language === 'css' || file.language === 'js') ? true : false,
     });
     editor.setSize('100%', '100%');
     editor.on('change', () => {
@@ -506,7 +518,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.lab-activity-bar').style.display = preFullscreenState.activityBar || '';
       document.querySelector('.lab-statusbar').style.display = preFullscreenState.statusBar || '';
 
-r
       setViewMode(preFullscreenState.viewMode || 'split');
 
       btnMaximizeEditor.classList.remove('active');
@@ -683,913 +694,159 @@ r
     });
   }
 
-  const wikiData = {
-  html: `
-<h3>HTML (HyperText Markup Language)</h3>
-<p><strong>HTML</strong> es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido mediante <em>etiquetas</em>.</p>
-
-<h4>🔹 Estructura básica</h4>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Título&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hola mundo&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<h4>🔹 Etiquetas de texto</h4>
-<ul>
-  <li><code>&lt;h1&gt;...&lt;h6&gt;</code>: Encabezados.</li>
-  <li><code>&lt;p&gt;</code>: Párrafo.</li>
-  <li><code>&lt;strong&gt;</code>: Negrita semántica.</li>
-  <li><code>&lt;em&gt;</code>: Cursiva semántica.</li>
-  <li><code>&lt;br&gt;</code>: Salto de línea.</li>
-  <li><code>&lt;hr&gt;</code>: Línea horizontal.</li>
-  <li><code>&lt;span&gt;</code>: Contenedor en línea.</li>
-  <li><code>&lt;div&gt;</code>: Contenedor en bloque.</li>
-  <li><code>&lt;blockquote&gt;</code>: Cita.</li>
-  <li><code>&lt;pre&gt;</code>: Texto preformateado.</li>
-  <li><code>&lt;code&gt;</code>: Código en línea.</li>
-</ul>
-
-<h4>🔹 Enlaces e imágenes</h4>
-<pre>&lt;a href="url" target="_blank" rel="noopener"&gt;Texto&lt;/a&gt;
-&lt;a href="#ancla"&gt;Ir a sección&lt;/a&gt;
-&lt;img src="imagen.jpg" alt="Descripción" width="300" height="200" loading="lazy"&gt;
-&lt;figure&gt;
-  &lt;img src="foto.jpg" alt="Foto"&gt;
-  &lt;figcaption&gt;Pie de foto&lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
-
-<h4>🔹 Listas</h4>
-<pre>&lt;ul&gt; &lt;li&gt;Elemento&lt;/li&gt; &lt;/ul&gt;  <!-- no ordenada -->
-&lt;ol&gt; &lt;li&gt;Paso&lt;/li&gt; &lt;/ol&gt;      <!-- ordenada -->
-&lt;dl&gt;                         <!-- de definición -->
-  &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;Lenguaje de marcado&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-
-<h4>🔹 Tablas</h4>
-<pre>&lt;table&gt;
-  &lt;caption&gt;Lista de usuarios&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Edad&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;&lt;td colspan="2"&gt;Total: 1&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;</pre>
-
-<h4>🔹 Formularios avanzados</h4>
-<pre>&lt;form action="/enviar" method="post" novalidate&gt;
-  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
-  &lt;input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required&gt;
-  &lt;label for="email"&gt;Email:&lt;/label&gt;
-  &lt;input type="email" id="email" name="email" required&gt;
-  &lt;input type="password" placeholder="Contraseña"&gt;
-  &lt;input type="checkbox" id="acepto"&gt;
-  &lt;label for="acepto"&gt;Acepto términos&lt;/label&gt;
-  &lt;input type="radio" name="opcion" value="1"&gt; Opción 1
-  &lt;select name="pais"&gt;&lt;option value=""&gt;Elige&lt;/option&gt;&lt;option value="co"&gt;Colombia&lt;/option&gt;&lt;/select&gt;
-  &lt;textarea rows="4" cols="50"&gt;&lt;/textarea&gt;
-  &lt;input type="range" min="0" max="100"&gt;
-  &lt;input type="date"&gt;
-  &lt;input type="color"&gt;
-  &lt;datalist id="sugerencias"&gt;
-    &lt;option value="Opción 1"&gt;
-    &lt;option value="Opción 2"&gt;
-  &lt;/datalist&gt;
-  &lt;input list="sugerencias"&gt;
-  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
-  &lt;button type="reset"&gt;Limpiar&lt;/button&gt;
-&lt;/form&gt;</pre>
-
-<h4>🔹 Multimedia y gráficos</h4>
-<pre>&lt;audio controls&gt;
-  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
-  Tu navegador no soporta audio.
-&lt;/audio&gt;
-&lt;video width="320" height="240" controls poster="preview.jpg"&gt;
-  &lt;source src="video.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-&lt;iframe src="https://www.youtube.com/embed/video_id" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;canvas id="miCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
-&lt;svg width="100" height="100"&gt;
-  &lt;circle cx="50" cy="50" r="40" fill="green" /&gt;
-&lt;/svg&gt;</pre>
-
-<h4>🔹 Elementos semánticos HTML5</h4>
-<pre>&lt;header&gt;...&lt;/header&gt;
-&lt;nav&gt;...&lt;/nav&gt;
-&lt;main&gt;...&lt;/main&gt;
-&lt;section&gt;...&lt;/section&gt;
-&lt;article&gt;...&lt;/article&gt;
-&lt;aside&gt;...&lt;/aside&gt;
-&lt;footer&gt;...&lt;/footer&gt;
-&lt;details&gt;
-  &lt;summary&gt;Más información&lt;/summary&gt;
-  &lt;p&gt;Contenido oculto&lt;/p&gt;
-&lt;/details&gt;
-&lt;dialog id="modal"&gt;Contenido modal&lt;/dialog&gt;
-&lt;mark&gt;Texto resaltado&lt;/mark&gt;
-&lt;time datetime="2025-07-20"&gt;20 de julio&lt;/time&gt;
-&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
-&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</pre>
-
-<h4>🔹 Atributos globales importantes</h4>
-<ul>
-  <li><code>class</code>, <code>id</code></li>
-  <li><code>style</code></li>
-  <li><code>title</code> (tooltip)</li>
-  <li><code>data-*</code> (datos personalizados)</li>
-  <li><code>hidden</code></li>
-  <li><code>tabindex</code></li>
-  <li><code>contenteditable</code></li>
-  <li><code>draggable</code></li>
-  <li><code>spellcheck</code></li>
-  <li><code>autofocus</code></li>
-</ul>
-
-<h4>🔹 Accesibilidad (ARIA)</h4>
-<pre>&lt;button aria-label="Cerrar"&gt;X&lt;/button&gt;
-&lt;nav aria-label="Menú principal"&gt;...&lt;/nav&gt;
-&lt;div role="alert" aria-live="assertive"&gt;...&lt;/div&gt;
-&lt;input type="text" aria-describedby="ayuda"&gt;
-&lt;span id="ayuda"&gt;Máximo 10 caracteres&lt;/span&gt;</pre>
-
-<h4>🔹 Meta etiquetas y SEO</h4>
-<pre>&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;meta name="description" content="Descripción de la página"&gt;
-&lt;meta property="og:title" content="Título Open Graph"&gt;
-&lt;meta property="og:image" content="imagen.jpg"&gt;
-&lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
-&lt;link rel="canonical" href="url-canonica"&gt;</pre>
-
-<h4>🔹 Scripts y estilos</h4>
-<pre>&lt;script src="archivo.js" defer&gt;&lt;/script&gt;
-&lt;script&gt;console.log("inline");&lt;/script&gt;
-&lt;noscript&gt;JavaScript deshabilitado&lt;/noscript&gt;
-&lt;style&gt;body { background: #fff; }&lt;/style&gt;
-&lt;link rel="stylesheet" href="estilos.css"&gt;</pre>
-
-<h4>🔹 Caracteres especiales (entidades)</h4>
-<pre>&amp;lt; → &lt;
-&amp;gt; → &gt;
-&amp;amp; → &amp;
-&amp;nbsp; → espacio no separable
-&amp;copy; → ©
-&amp;reg; → ®</pre>`,
-
-  css: `
-<h3>CSS (Cascading Style Sheets)</h3>
-<p>Lenguaje que define la presentación visual de un documento HTML.</p>
-
-<h4>🔹 Formas de aplicar CSS</h4>
-<pre>&lt;div style="color:red;"&gt;         /* en línea */
-&lt;style&gt; p { font-size:14px; }&lt;/style&gt; /* interno */
-&lt;link rel="stylesheet" href="estilos.css"&gt; /* externo */</pre>
-
-<h4>🔹 Selectores</h4>
-<pre>h1 { }                     /* elemento */
-.clase { }                 /* clase */
-#id { }                    /* id */
-* { }                      /* universal */
-div p { }                  /* descendiente */
-div &gt; p { }                /* hijo directo */
-h1 + p { }                 /* hermano adyacente */
-h1 ~ p { }                 /* hermanos generales */
-input[type="text"] { }     /* atributo exacto */
-a[href^="https"] { }       /* atributo empieza con */
-img[src$=".png"] { }       /* atributo termina con */
-a[href*="ejemplo"] { }     /* atributo contiene */
-a:hover { }                /* pseudo‑clase */
-p::first-line { }          /* pseudo‑elemento */
-p:nth-child(2n) { }        /* pseudo‑clase estructural */
-:not(.excluir) { }         /* negación */</pre>
-
-<h4>🔹 Box Model</h4>
-<pre>div {
-  width: 200px;
-  padding: 20px;
-  border: 2px solid black;
-  margin: 10px auto;
-  box-sizing: border-box; /* ancho incluye padding y borde */
-}</pre>
-
-<h4>🔹 Posicionamiento</h4>
-<pre>.relativo { position: relative; top: 10px; left: 20px; }
-.absoluto { position: absolute; top: 0; right: 0; }
-.fijo     { position: fixed; bottom: 0; width: 100%; }
-.pegajoso { position: sticky; top: 0; }</pre>
-
-<h4>🔹 Display</h4>
-<pre>display: block | inline | inline-block | none;
-display: flex;
-display: grid;
-display: contents; /* el contenedor desaparece visualmente */</pre>
-
-<h4>🔹 Colores y fondos</h4>
-<pre>color: #2d6a4f;
-background-color: #f0f0f0;
-background-image: url('fondo.jpg');
-background-size: cover;
-background-position: center;
-background: linear-gradient(to right, red, blue);
-opacity: 0.8;
-mix-blend-mode: multiply;</pre>
-
-<h4>🔹 Tipografía</h4>
-<pre>font-family: 'Segoe UI', Tahoma, sans-serif;
-font-size: 1.1rem;
-font-weight: 600;
-font-style: italic;
-text-align: center;
-line-height: 1.6;
-text-decoration: underline wavy red;
-text-transform: uppercase;
-letter-spacing: 1px;
-word-spacing: 2px;
-white-space: nowrap; /* pre, pre-wrap, pre-line */
-text-overflow: ellipsis;
-overflow: hidden;</pre>
-
-<h4>🔹 Unidades</h4>
-<pre>px, em, rem, %, vw (viewport width), vh (viewport height), vmin, vmax, ch, ex
-Ejemplo: width: calc(50% - 20px);
-font-size: clamp(1rem, 2.5vw, 2rem);</pre>
-
-<h4>🔹 Flexbox</h4>
-<pre>.contenedor {
-  display: flex;
-  flex-direction: row; /* column */
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.item {
-  flex: 1 1 200px; /* grow shrink basis */
-  order: 2;
-  align-self: stretch;
-}</pre>
-
-<h4>🔹 CSS Grid</h4>
-<pre>.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
-  gap: 20px;
-  justify-items: center;
-  align-items: start;
-}
-.celda {
-  grid-column: span 2;
-  grid-row: 1 / 3;
-  place-self: center;
-}</pre>
-
-<h4>🔹 Transiciones y Animaciones</h4>
-<pre>.boton {
-  transition: background 0.3s ease, transform 0.2s;
-  cursor: pointer;
-}
-.boton:hover {
-  background: gold;
-  transform: scale(1.1);
-}
-
-@keyframes deslizar {
-  from { transform: translateX(-100%); opacity: 0; }
-  to   { transform: translateX(0); opacity: 1; }
-}
-.elemento { animation: deslizar 0.5s forwards; }
-
-/* Animación múltiple */
-.circulo {
-  animation: mover 2s infinite alternate, cambiarColor 1s infinite;
-}
-@keyframes mover { 0% { left: 0 } 100% { left: 200px } }
-@keyframes cambiarColor { 0% { background: red } 50% { background: blue } 100% { background: red } }</pre>
-
-<h4>🔹 Responsive (Media Queries)</h4>
-<pre>/* Mobile first */
-.elemento { font-size: 16px; }
-@media (min-width: 768px) {
-  .elemento { font-size: 18px; }
-}
-@media (max-width: 480px) {
-  .ocultar-movil { display: none; }
-}
-/* Preferencias del sistema */
-@media (prefers-color-scheme: dark) {
-  body { background: #111; color: #eee; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .animado { animation: none; }
-}</pre>
-
-<h4>🔹 Variables CSS</h4>
-<pre>:root {
-  --primario: #2d6a4f;
-  --espaciado: 1rem;
-}
-.tema-oscuro {
-  --primario: #a5d6a5;
-}
-.header {
-  background: var(--primario);
-  padding: var(--espaciado);
-}
-/* Fallback */
-color: var(--secundario, #333);</pre>
-
-<h4>🔹 Sombras y bordes</h4>
-<pre>box-shadow: 5px 5px 15px rgba(0,0,0,0.2), inset 0 0 5px rgba(255,255,0,0.3);
-text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-border: 2px dashed #aaa;
-border-radius: 8px;
-outline: 2px solid blue;
-outline-offset: 2px;</pre>
-
-<h4>🔹 Filtros y efectos visuales</h4>
-<pre>filter: blur(5px) brightness(1.2) contrast(1.5);
-backdrop-filter: blur(10px);
-transform: rotate(5deg) skew(2deg);
-clip-path: circle(50%);
-mask-image: linear-gradient(black, transparent);</pre>
-
-<h4>🔹 Imprimir estilos</h4>
-<pre>@media print {
-  nav, footer { display: none; }
-  body { font-size: 12pt; }
-}</pre>
-
-<h4>🔹 Scroll suave y comportamiento</h4>
-<pre>html { scroll-behavior: smooth; }
-
-/* Scroll personalizado */
-.contenedor {
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-}
-.seccion {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
-/* Ocultar scrollbar pero mantener scroll */
-.ocultar-barra::-webkit-scrollbar { display: none; }
-.ocultar-barra { -ms-overflow-style: none; scrollbar-width: none; }</pre>
-
-<h4>🔹 Tricks de centrado</h4>
-<pre>/* Centrar con Flexbox */
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Centrar con Grid */
-.grid-center {
-  display: grid;
-  place-items: center;
-}
-
-/* Centrar absolutamente */
-.abs-center {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Centrar verticalmente sin flex */
-.verti {
-  display: table-cell;
-  vertical-align: middle;
-}</pre>
-
-<h4>🔹 Personalizar inputs y select</h4>
-<pre>input[type="text"] {
-  border: none;
-  border-bottom: 2px solid #2d6a4f;
-  outline: none;
-  padding: 8px 0;
-  background: transparent;
-  font-size: 1rem;
-}
-input[type="text"]:focus { border-color: #d4af37; }
-
-/* Checkbox personalizado */
-input[type="checkbox"] { accent-color: #2d6a4f; }
-
-/* Quitar estilos nativos de select */
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  background: url("data:image/svg+xml,...") no-repeat right;
-}</pre>
-
-<h4>🔹 Efectos de texto avanzados</h4>
-<pre>/* Degradado en texto */
-.texto-grad {
-  background: linear-gradient(135deg, #2d6a4f, #d4af37);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Texto recortado en 1 línea */
-.truncar {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Texto recortado en N líneas */
-.multi-truncar {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}</pre>
-
-<h4>🔹 Clases de utilidad comunes</h4>
-<pre>.hidden   { display: none !important; }
-.visually-hidden {
-  position: absolute; width: 1px; height: 1px;
-  padding: 0; margin: -1px; overflow: hidden;
-  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-}
-.no-select { user-select: none; }
-.pointer   { cursor: pointer; }
-.full-w    { width: 100%; }
-.rounded   { border-radius: 8px; }
-.shadow    { box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
-.sr-only   { /* accesibilidad: visible sólo para lectores */ }</pre>`,
-  js: `
-<h3>JavaScript</h3>
-<p><strong>JavaScript</strong> es un lenguaje de programación interpretado que permite crear interactividad en páginas web. Es dinámico, basado en prototipos y multiparadigma.</p>
-
-<h4>🔹 Variables y ámbito</h4>
-<pre>let nombre = "Serakdep";   // ámbito de bloque
-const PI = 3.1416;        // constante
-var global = true;        // ámbito de función (evitar)
-
-// Modo estricto
-"use strict";
-x = 5; // ❌ error</pre>
-
-<h4>🔹 Tipos de datos</h4>
-<pre>let texto = "hola";           // string
-let numero = 42;              // number
-let activo = true;            // boolean
-let vacio = null;             // nulo
-let indefinido;               // undefined
-let persona = { nombre: "Ana" };
-let lista = [1, 2, 3];
-let simbolo = Symbol('id');
-let bigInt = 123n;</pre>
-
-<h4>🔹 Operadores</h4>
-<pre>+, -, *, /, % (módulo), ** (exponente)
-== (igualdad débil), === (estricta), !=, !==
->, <, >=, <=
-&& (AND), || (OR), ! (NOT), ?? (nullish coalescing)
-?. (optional chaining)
-let usuario = obj?.perfil?.nombre ?? 'Invitado';</pre>
-
-<h4>🔹 Condicionales</h4>
-<pre>if (edad >= 18) {
-  console.log("Mayor");
-} else if (edad > 12) {
-  console.log("Adolescente");
-} else {
-  console.log("Niño");
-}
-// Ternario
-let mensaje = age >= 18 ? "Adulto" : "Menor";
-// Switch
-switch (color) {
-  case 'rojo': console.log('peligro'); break;
-  default: console.log('neutro');
-}</pre>
-
-<h4>🔹 Bucles</h4>
-<pre>for (let i = 0; i < 5; i++) { ... }
-while (cond) { ... }
-do { ... } while (cond);
-for (let elemento of array) { ... }   // valores
-for (let indice in array) { ... }     // índices
-for (let clave in objeto) { ... }     // propiedades
-array.forEach((item, index) => { ... });</pre>
-
-<h4>🔹 Funciones</h4>
-<pre>// Declaración
-function sumar(a, b = 5) { return a + b; }
-// Expresión
-const restar = function(a, b) { return a - b; };
-// Flecha (arrow)
-const multiplicar = (a, b) => a * b;
-const saludar = nombre => \`Hola \${nombre}\`;
-
-// IIFE (expresión de función ejecutada inmediatamente)
-(function() { console.log("auto"); })();
-(() => console.log("arrow IIFE"))();</pre>
-
-<h4>🔹 Arrays</h4>
-<pre>let frutas = ["manzana", "pera"];
-frutas.push("uva");            // añade al final
-frutas.pop();                  // elimina último
-frutas.unshift("fresa");       // añade al inicio
-frutas.shift();                // elimina primero
-frutas.splice(1, 1, "kiwi");   // reemplaza
-let idx = frutas.indexOf("pera");
-frutas.includes("pera");
-let copia = [...frutas];
-frutas.forEach(f => console.log(f));
-let mayus = frutas.map(f => f.toUpperCase());
-let filtro = frutas.filter(f => f.length > 3);
-let total = [10,20,30].reduce((acc, n) => acc + n, 0);
-let encontrado = frutas.find(f => f.startsWith("p"));
-frutas.sort();
-frutas.reverse();
-</pre>
-
-<h4>🔹 Objetos</h4>
-<pre>let coche = {
-  marca: "Toyota",
-  modelo: "Corolla",
-  anio: 2023,
-  arrancar() { console.log("run run"); }
-};
-coche.color = "rojo";          // añadir propiedad
-delete coche.anio;             // eliminar
-console.log(coche.marca);
-console.log(coche["modelo"]);
-Object.keys(coche);            // ["marca","modelo","color","arrancar"]
-Object.values(coche);
-Object.entries(coche);
-// Copia superficial
-let copia = { ...coche, puertas: 4 };
-let asignado = Object.assign({}, coche);</pre>
-
-<h4>🔹 Desestructuración</h4>
-<pre>let [a, b] = [1, 2];
-let { marca, modelo } = coche;
-let { marca: m, ...resto } = coche;  // renombrar y rest</pre>
-
-<h4>🔹 Template literals</h4>
-<pre>let nombre = "Juan";
-console.log(\`Hola \${nombre}, bienvenido\`);
-let multilinea = \`Línea 1
-Línea 2\`;</pre>
-
-<h4>🔹 Spread y Rest</h4>
-<pre>let arr = [1, 2];
-let nuevoArr = [...arr, 3, 4]; // spread
-function suma(...nums) { return nums.reduce((a,b) => a+b,0); } // rest</pre>
-
-<h4>🔹 DOM (Document Object Model)</h4>
-<pre>// Seleccionar
-let elem = document.getElementById("id");
-let elems = document.querySelectorAll(".clase");
-let first = document.querySelector("div p");
-
-// Modificar contenido
-elem.textContent = "Nuevo texto";
-elem.innerHTML = "&lt;strong&gt;Hola&lt;/strong&gt;";
-elem.style.color = "red";
-elem.classList.add("activo");
-elem.classList.toggle("oscuro");
-elem.setAttribute("data-id", "123");
-elem.dataset.id = "123"; // acceso directo
-
-// Crear / insertar
-let nuevo = document.createElement("p");
-nuevo.textContent = "Parrafo";
-document.body.appendChild(nuevo);
-document.body.prepend(nuevo);
-elem.insertAdjacentHTML("beforeend", "&lt;span&gt;Extra&lt;/span&gt;");
-nuevo.remove();
-
-// Eventos
-boton.addEventListener("click", function(event) {
-  event.preventDefault();
-  console.log(event.target);
-});
-// Delegación de eventos
-document.getElementById("lista").addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") { console.log(e.target.textContent); }
-});
-
-// Eventos comunes: click, submit, keydown, mouseover, change, input, load, DOMContentLoaded</pre>
-
-<h4>🔹 Temporizadores</h4>
-<pre>let id = setTimeout(() => alert("Tiempo!"), 2000);
-clearTimeout(id);
-let intervalo = setInterval(() => console.log("Cada 1s"), 1000);
-clearInterval(intervalo);</pre>
-
-<h4>🔹 Asincronía (Promesas, async/await)</h4>
-<pre>fetch("https://api.ejemplo.com/datos")
-  .then(response => {
-    if (!response.ok) throw new Error("Error de red");
-    return response.json();
-  })
-  .then(data => console.log(data))
-  .catch(error => console.error(error))
-  .finally(() => console.log("Petición finalizada"));
-
-async function obtenerDatos() {
-  try {
-    const res = await fetch("https://api.ejemplo.com");
-    const datos = await res.json();
-    return datos;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Promise.all / race
-Promise.all([fetch1, fetch2]).then(([r1, r2]) => { ... });
-Promise.race([fetch1, fetch2]).then(r => ...);</pre>
-
-<h4>🔹 JSON y almacenamiento local</h4>
-<pre>let json = JSON.stringify(objeto);
-let objeto = JSON.parse(json);
-localStorage.setItem("clave", "valor");
-let valor = localStorage.getItem("clave");
-localStorage.removeItem("clave");
-sessionStorage.setItem("temp", "sesion");</pre>
-
-<h4>🔹 Clases (sintaxis ES6)</h4>
-<pre>class Animal {
-  constructor(nombre) { this.nombre = nombre; }
-  hablar() { console.log(\`\${this.nombre} hace sonido\`); }
-  static info() { return "Seres vivos"; }
-}
-class Perro extends Animal {
-  constructor(nombre, raza) {
-    super(nombre);
-    this.raza = raza;
-  }
-  hablar() { console.log(\`\${this.nombre} ladra\`); }
-}
-let fido = new Perro("Fido", "Labrador");
-console.log(Animal.info());</pre>
-
-<h4>🔹 Módulos ES6</h4>
-<pre>// archivo matematica.js
-export const PI = 3.14;
-export function sumar(a, b) { return a + b; }
-export default class Calculadora { ... }
-
-// archivo principal.js
-import Calculadora, { PI, sumar } from './matematica.js';
-import * as Math from './matematica.js';</pre>
-
-<h4>🔹 Manejo de errores</h4>
-<pre>try {
-  // código que puede fallar
-} catch (error) {
-  console.error(error.message);
-} finally {
-  // se ejecuta siempre
-}
-
-throw new Error("Algo salió mal");</pre>
-
-<h4>🔹 Expresiones regulares</h4>
-<pre>let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-emailRegex.test("test@correo.com"); // true
-let resultado = "hola123".match(/\d+/);
-let partes = "rojo,verde,azul".split(/,\s*/);
-let limpio = " hola ".trim();</pre>
-
-<h4>🔹 APIs web comunes</h4>
-<pre>// Intersection Observer
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { console.log("Visible"); }
-  });
-});
-observer.observe(document.querySelector(".objetivo"));
-
-// requestAnimationFrame
-function animar() {
-  // actualizar animación
-  requestAnimationFrame(animar);
-}
-requestAnimationFrame(animar);
-
-// Geolocalización
-navigator.geolocation.getCurrentPosition(pos => {
-  console.log(pos.coords.latitude, pos.coords.longitude);
-});
-
-// Notificaciones (necesita permiso)
-if (Notification.permission === "granted") {
-  new Notification("Título", { body: "Mensaje" });
-}</pre>
-
-<h4>🔹 Buenas prácticas</h4>
-<ul>
-  <li>Usa <code>'use strict'</code> al inicio de scripts.</li>
-  <li>Prefiere <code>const</code> y <code>let</code> sobre <code>var</code>.</li>
-  <li>Declara funciones antes de usarlas (hoisting).</li>
-  <li>Evita modificar directamente el DOM en bucles; usa fragmentos o <code>insertAdjacentHTML</code>.</li>
-  <li>Utiliza <code>===</code> en lugar de <code>==</code>.</li>
-  <li>Emplea nombres descriptivos.</li>
-</ul>
-
-<h4>🔹 Eventos del DOM (referencia rápida)</h4>
-<pre>// Ratón
-elem.addEventListener('click', fn);
-elem.addEventListener('dblclick', fn);
-elem.addEventListener('mouseover', fn);
-elem.addEventListener('mouseout', fn);
-elem.addEventListener('mousedown', fn);
-elem.addEventListener('mouseup', fn);
-elem.addEventListener('mousemove', fn);
-elem.addEventListener('contextmenu', fn); // clic derecho
-
-// Teclado
-document.addEventListener('keydown', e => {
-  console.log(e.key, e.code, e.ctrlKey, e.shiftKey, e.altKey);
-});
-document.addEventListener('keyup', fn);
-
-// Formulario
-form.addEventListener('submit', e => { e.preventDefault(); });
-input.addEventListener('input', e => console.log(e.target.value));
-input.addEventListener('change', fn); // al perder foco con cambio
-input.addEventListener('focus', fn);
-input.addEventListener('blur', fn);
-
-// Ventana / documento
-window.addEventListener('load', fn);
-window.addEventListener('resize', fn);
-window.addEventListener('scroll', fn);
-document.addEventListener('DOMContentLoaded', fn);
-
-// Touch (móvil)
-elem.addEventListener('touchstart', fn);
-elem.addEventListener('touchend', fn);
-elem.addEventListener('touchmove', fn);</pre>
-
-<h4>🔹 Depuración (Debug)</h4>
-<pre>// Consola
-console.log('valor:', variable);
-console.error('Error:', err);
-console.warn('Advertencia');
-console.table([{ nombre: 'Ana', edad: 25 }]);
-console.group('Mi Grupo');
-  console.log('dentro del grupo');
-console.groupEnd();
-console.time('operacion');
-// ...código...
-console.timeEnd('operacion');
-console.assert(condicion, 'Falla si es falso');
-
-// Puntos de interrupción
-debugger; // pausa la ejecución en DevTools
-
-// Inspeccionar tipos
-typeof variable;      // 'string', 'number', 'object', etc.
-Array.isArray(valor); // true/false
-variable instanceof Date;</pre>
-
-<h4>🔹 LocalStorage y SessionStorage</h4>
-<pre>// LocalStorage: persiste aunque se cierre el navegador
-localStorage.setItem('usuario', JSON.stringify({ nombre: 'Ana' }));
-const usuario = JSON.parse(localStorage.getItem('usuario'));
-localStorage.removeItem('usuario');
-localStorage.clear(); // borra todo
-
-// SessionStorage: solo dura la sesión del navegador
-sessionStorage.setItem('temp', 'valor');
-
-// Guardar arrays u objetos SIEMPRE con JSON
-const lista = ['a', 'b', 'c'];
-localStorage.setItem('lista', JSON.stringify(lista));
-const recuperada = JSON.parse(localStorage.getItem('lista') || '[]');</pre>
-
-<h4>🔹 Manipulación avanzada del DOM</h4>
-<pre>// DocumentFragment (inserciones eficientes)
-const fragment = document.createDocumentFragment();
-for (let i = 0; i < 100; i++) {
-  const li = document.createElement('li');
-  li.textContent = 'Item ' + i;
-  fragment.appendChild(li);
-}
-lista.appendChild(fragment); // un solo reflow
-
-// Clonar nodos
-const clon = elem.cloneNode(true); // true = copia hijos
-
-// Posición e inserción
-padre.insertBefore(nuevo, referencia);
-padre.replaceChild(nuevo, viejo);
-elem.insertAdjacentElement('afterend', nuevo);
-// beforebegin | afterbegin | beforeend | afterend
-
-// Atributos de datos
-elem.dataset.userId = '42';
-console.log(elem.dataset.userId);
-
-// Dimensiones y posición
-elem.getBoundingClientRect(); // { top, left, width, height }
-window.scrollY; // scroll vertical actual
-elem.scrollIntoView({ behavior: 'smooth' });</pre>
-
-<h4>🔹 Patrones útiles</h4>
-<pre>// Debounce: retrasar ejecución hasta que el usuario pare
-function debounce(fn, ms) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn(...args), ms);
-  };
-}
-window.addEventListener('resize', debounce(() => console.log('resize'), 300));
-
-// Throttle: ejecutar máx una vez cada N ms
-function throttle(fn, ms) {
-  let last = 0;
-  return (...args) => {
-    const now = Date.now();
-    if (now - last >= ms) { last = now; fn(...args); }
-  };
-}
-
-// Copiar al portapapeles
-navigator.clipboard.writeText('texto').then(() => console.log('Copiado'));
-
-// Generar ID único
-const uid = () => Math.random().toString(36).slice(2, 9);
-
-// Espera N milisegundos
-const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
-};
-
 
   const challenges = [
-    {
-      id: 'ch1',
-      title: 'Página de bienvenida',
-      level: 'Básico',
-      description: 'Crea una página web sencilla que muestre un título de bienvenida y un párrafo descriptivo. Aprenderás la estructura básica de HTML.',
-      instructions: [
-        'Abre el archivo <strong>index.html</strong>.',
-        'Dentro del <code>&lt;body&gt;</code>, agrega un encabezado <code>&lt;h1&gt;</code> con el texto "Bienvenido a mi sitio".',
-        'Añade un párrafo <code>&lt;p&gt;</code> que describa de qué trata la página.',
-        'Guarda los cambios y mira la vista previa.'
-      ],
-      template: [
-        { name: 'index.html', lang: 'html', content: '<h1>Bienvenido a mi sitio</h1>\n<p>Escribe aquí una descripción...</p>' }
-      ]
-    },
-    {
-      id: 'ch2',
-      title: 'Estilizando un botón',
-      level: 'Intermedio',
-      description: 'Practica CSS creando un botón con forma redondeada, color de fondo y un efecto hover. Vincularás un archivo CSS a HTML.',
-      instructions: [
-        'En <strong>index.html</strong>, coloca un <code>&lt;button&gt;</code> con la clase "btn".',
-        'En <strong>styles.css</strong>, define la clase <code>.btn</code> con fondo verde, texto blanco, bordes redondeados y padding.',
-        'Agrega una pseudo-clase <code>.btn:hover</code> que cambie el color de fondo a dorado y escale ligeramente.',
-        'Observa el resultado en la vista previa.'
-      ],
-      template: [
-        { name: 'index.html', lang: 'html', content: '<button class="btn">Haz clic</button>' },
-        { name: 'styles.css', lang: 'css', content: '.btn {\n  background: #2d6a4f;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n}\n.btn:hover {\n  background: #d4af37;\n  transform: scale(1.05);\n}' }
-      ]
-    },
-    {
-      id: 'ch3',
-      title: 'Lista de tareas interactiva',
-      level: 'Avanzado',
-      description: 'Usa JavaScript para crear una lista de tareas (to‑do list) donde puedas agregar elementos escribiendo en un campo de texto.',
-      instructions: [
-        'En <strong>index.html</strong>, añade un <code>&lt;input&gt;</code> con id "task" y un <code>&lt;button&gt;</code> con id "add". Debajo, un <code>&lt;ul&gt;</code> con id "lista".',
-        'En <strong>script.js</strong>, obtén los elementos por su id y agrega un <code>addEventListener</code> al botón.',
-        'Dentro del evento, crea un <code>&lt;li&gt;</code> con el valor del input y agrégalo al <code>&lt;ul&gt;</code>. Luego limpia el input.',
-        'Prueba la funcionalidad en la vista previa.'
-      ],
-      template: [
-        { name: 'index.html', lang: 'html', content: '<input type="text" id="task" placeholder="Nueva tarea">\n<button id="add">Agregar</button>\n<ul id="lista"></ul>' },
-        { name: 'script.js', lang: 'js', content: 'document.getElementById("add").addEventListener("click", function() {\n  var tarea = document.getElementById("task").value;\n  if (tarea.trim() !== "") {\n    var li = document.createElement("li");\n    li.textContent = tarea;\n    document.getElementById("lista").appendChild(li);\n    document.getElementById("task").value = "";\n  }\n});' }
-      ]
-    }
-  ];
+
+  {
+    id: 'ch1',
+    title: 'Página de bienvenida',
+    level: 'Básico',
+    description: 'Crea una página web sencilla que muestre un título de bienvenida y un párrafo descriptivo. Aprenderás la estructura básica de HTML.',
+    instructions: [
+      'Abre el archivo <strong>index.html</strong>.',
+      'Dentro del <code>&lt;body&gt;</code>, agrega un encabezado <code>&lt;h1&gt;</code> con el texto "Bienvenido a mi sitio".',
+      'Añade un párrafo <code>&lt;p&gt;</code> que describa de qué trata la página.',
+      'Guarda los cambios y mira la vista previa.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<h1>Bienvenido a mi sitio</h1>\n<p>Escribe aquí una descripción...</p>' }
+    ]
+  },
+  {
+    id: 'ch2',
+    title: 'Estilizando un botón',
+    level: 'Intermedio',
+    description: 'Practica CSS creando un botón con forma redondeada, color de fondo y un efecto hover. Vincularás un archivo CSS a HTML.',
+    instructions: [
+      'En <strong>index.html</strong>, coloca un <code>&lt;button&gt;</code> con la clase "btn".',
+      'En <strong>styles.css</strong>, define la clase <code>.btn</code> con fondo verde, texto blanco, bordes redondeados y padding.',
+      'Agrega una pseudo-clase <code>.btn:hover</code> que cambie el color de fondo a dorado y escale ligeramente.',
+      'Observa el resultado en la vista previa.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<button class="btn">Haz clic</button>' },
+      { name: 'styles.css', lang: 'css', content: '.btn {\n  background: #2d6a4f;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n}\n.btn:hover {\n  background: #d4af37;\n  transform: scale(1.05);\n}' }
+    ]
+  },
+  {
+    id: 'ch3',
+    title: 'Lista de tareas interactiva',
+    level: 'Avanzado',
+    description: 'Usa JavaScript para crear una lista de tareas (to‑do list) donde puedas agregar elementos escribiendo en un campo de texto.',
+    instructions: [
+      'En <strong>index.html</strong>, añade un <code>&lt;input&gt;</code> con id "task" y un <code>&lt;button&gt;</code> con id "add". Debajo, un <code>&lt;ul&gt;</code> con id "lista".',
+      'En <strong>script.js</strong>, obtén los elementos por su id y agrega un <code>addEventListener</code> al botón.',
+      'Dentro del evento, crea un <code>&lt;li&gt;</code> con el valor del input y agrégalo al <code>&lt;ul&gt;</code>. Luego limpia el input.',
+      'Prueba la funcionalidad en la vista previa.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<input type="text" id="task" placeholder="Nueva tarea">\n<button id="add">Agregar</button>\n<ul id="lista"></ul>' },
+      { name: 'script.js', lang: 'js', content: 'document.getElementById("add").addEventListener("click", function() {\n  var tarea = document.getElementById("task").value;\n  if (tarea.trim() !== "") {\n    var li = document.createElement("li");\n    li.textContent = tarea;\n    document.getElementById("lista").appendChild(li);\n    document.getElementById("task").value = "";\n  }\n});' }
+    ]
+  },
+
+
+  {
+    id: 'ch4',
+    title: 'Contador de clics',
+    level: 'Básico',
+    description: 'Crea un contador que aumente cada vez que se presiona un botón. Aprenderás a manipular el DOM y manejar eventos en JavaScript.',
+    instructions: [
+      'En <strong>index.html</strong>, coloca un <code>&lt;span&gt;</code> con id "contador" que muestre "0".',
+      'Añade un <code>&lt;button&gt;</code> con el texto "Incrementar".',
+      'En <strong>script.js</strong>, declara una variable <code>let cuenta = 0</code>.',
+      'Agrega un event listener al botón que incremente la variable y actualice el texto del span.',
+      'Prueba haciendo varios clics.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<span id="contador">0</span>\n<button id="btnContar">Incrementar</button>' },
+      { name: 'script.js', lang: 'js', content: 'let cuenta = 0;\ndocument.getElementById("btnContar").addEventListener("click", () => {\n  cuenta++;\n  document.getElementById("contador").textContent = cuenta;\n});' }
+    ]
+  },
+  {
+    id: 'ch5',
+    title: 'Cambiar color de fondo aleatorio',
+    level: 'Básico',
+    description: 'Crea un botón que cambie el color de fondo de la página por un color aleatorio cada vez que se pulse.',
+    instructions: [
+      'En <strong>index.html</strong>, añade un <code>&lt;button&gt;</code> con el texto "Cambiar color".',
+      'En <strong>script.js</strong>, crea una función que genere un color hexadecimal aleatorio.',
+      'Asigna ese color a <code>document.body.style.backgroundColor</code> cuando se haga clic.',
+      'Comprueba que cada clic muestra un color diferente.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<button id="btnColor">Cambiar color</button>' },
+      { name: 'script.js', lang: 'js', content: 'function colorAleatorio() {\n  const letras = "0123456789ABCDEF";\n  let color = "#";\n  for (let i = 0; i < 6; i++) {\n    color += letras[Math.floor(Math.random() * 16)];\n  }\n  return color;\n}\n\ndocument.getElementById("btnColor").addEventListener("click", () => {\n  document.body.style.backgroundColor = colorAleatorio();\n});' }
+    ]
+  },
+  {
+    id: 'ch6',
+    title: 'Formulario de contacto',
+    level: 'Intermedio',
+    description: 'Crea un formulario con campos de nombre, correo y mensaje, y muestra los datos ingresados al enviar.',
+    instructions: [
+      'En <strong>index.html</strong>, crea un <code>&lt;form&gt;</code> con inputs para nombre, email (type="email") y un <code>&lt;textarea&gt;</code>.',
+      'Añade un <code>&lt;button&gt;</code> de tipo submit y un <code>&lt;div&gt;</code> vacío con id "resultado" para mostrar la respuesta.',
+      'En <strong>script.js</strong>, captura el evento <code>submit</code> del formulario y usa <code>event.preventDefault()</code>.',
+      'Extrae los valores y muéstralos dentro del div "resultado".',
+      'Estiliza el formulario en <strong>styles.css</strong> para que tenga una apariencia agradable.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<form id="formContacto">\n  <input type="text" id="nombre" placeholder="Nombre" required>\n  <input type="email" id="email" placeholder="Email" required>\n  <textarea id="mensaje" placeholder="Mensaje" required></textarea>\n  <button type="submit">Enviar</button>\n</form>\n<div id="resultado"></div>' },
+      { name: 'styles.css', lang: 'css', content: 'form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }\ninput, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }\nbutton { background: #2d6a4f; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }' },
+      { name: 'script.js', lang: 'js', content: 'document.getElementById("formContacto").addEventListener("submit", function(e) {\n  e.preventDefault();\n  const nombre = document.getElementById("nombre").value;\n  const email = document.getElementById("email").value;\n  const mensaje = document.getElementById("mensaje").value;\n  document.getElementById("resultado").innerHTML = `<p>Gracias, ${nombre}. Te contactaremos al correo ${email}.</p>`;\n  this.reset();\n});' }
+    ]
+  },
+  {
+    id: 'ch7',
+    title: 'Galería de imágenes con CSS Grid',
+    level: 'Intermedio',
+    description: 'Construye una galería de imágenes responsiva utilizando CSS Grid.',
+    instructions: [
+      'En <strong>index.html</strong>, crea un contenedor con varias imágenes (pueden ser de placeholder).',
+      'En <strong>styles.css</strong>, aplica <code>display: grid</code> al contenedor.',
+      'Usa <code>grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))</code> para que se adapte al ancho.',
+      'Añade <code>gap</code>, bordes redondeados y un efecto hover a las imágenes.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<div class="galeria">\n  <img src="https://via.placeholder.com/300" alt="Imagen 1">\n  <img src="https://via.placeholder.com/300" alt="Imagen 2">\n  <img src="https://via.placeholder.com/300" alt="Imagen 3">\n  <img src="https://via.placeholder.com/300" alt="Imagen 4">\n</div>' },
+      { name: 'styles.css', lang: 'css', content: '.galeria {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n  gap: 15px;\n  padding: 20px;\n}\n.galeria img {\n  width: 100%;\n  border-radius: 8px;\n  transition: transform 0.3s;\n  cursor: pointer;\n}\n.galeria img:hover {\n  transform: scale(1.05);\n}' }
+    ]
+  },
+  {
+    id: 'ch8',
+    title: 'Barra de navegación responsive',
+    level: 'Intermedio',
+    description: 'Diseña una barra de navegación que se adapte a dispositivos móviles usando Flexbox y media queries.',
+    instructions: [
+      'En <strong>index.html</strong>, crea un <code>&lt;nav&gt;</code> con una lista de enlaces.',
+      'En <strong>styles.css</strong>, aplica <code>display: flex</code> y estiliza los elementos.',
+      'Usa un <code>@media (max-width: 600px)</code> para cambiar la dirección a columna en pantallas pequeñas.',
+      'Añade colores, espaciado y efectos hover.'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<nav>\n  <ul class="menu">\n    <li><a href="#">Inicio</a></li>\n    <li><a href="#">Servicios</a></li>\n    <li><a href="#">Portfolio</a></li>\n    <li><a href="#">Contacto</a></li>\n  </ul>\n</nav>' },
+      { name: 'styles.css', lang: 'css', content: '.menu {\n  display: flex;\n  list-style: none;\n  background: #2d6a4f;\n  padding: 10px;\n  justify-content: center;\n  gap: 20px;\n}\n.menu a {\n  color: white;\n  text-decoration: none;\n  padding: 5px 10px;\n}\n.menu a:hover {\n  background: #d4af37;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .menu {\n    flex-direction: column;\n    align-items: center;\n  }\n}' }
+    ]
+  },
+  {
+    id: 'ch9',
+    title: 'Reloj digital en tiempo real',
+    level: 'Avanzado',
+    description: 'Crea un reloj digital que muestre la hora actual y se actualice cada segundo usando JavaScript.',
+    instructions: [
+      'En <strong>index.html</strong>, añade un <code>&lt;div&gt;</code> con id "reloj" para mostrar la hora.',
+      'En <strong>script.js</strong>, crea una función que obtenga la hora con <code>new Date()</code> y la muestre formateada.',
+      'Usa <code>setInterval</code> para actualizar el reloj cada 1000 ms.',
+      'Añade estilos en <strong>styles.css</strong> para darle apariencia de reloj digital (fuente grande, fondo oscuro, etc.).'
+    ],
+    template: [
+      { name: 'index.html', lang: 'html', content: '<div id="reloj">00:00:00</div>' },
+      { name: 'styles.css', lang: 'css', content: '#reloj {\n  font-family: "Courier New", monospace;\n  font-size: 3rem;\n  background: #111;\n  color: #0f0;\n  padding: 20px 40px;\n  border-radius: 10px;\n  text-align: center;\n  display: inline-block;\n}' },
+      { name: 'script.js', lang: 'js', content: 'function actualizarReloj() {\n  const ahora = new Date();\n  const horas = String(ahora.getHours()).padStart(2, "0");\n  const minutos = String(ahora.getMinutes()).padStart(2, "0");\n  const segundos = String(ahora.getSeconds()).padStart(2, "0");\n  document.getElementById("reloj").textContent = `${horas}:${minutos}:${segundos}`;\n}\nsetInterval(actualizarReloj, 1000);\nactualizarReloj();' }
+    ]
+  }
+];
 
   function renderChallenges() {
     challengesContent.innerHTML = challenges.map(ch => `
@@ -1755,24 +1012,17 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     });
   }
 
-  const assistantResponses = [
-    { pattern: /html/i, response: 'HTML (HyperText Markup Language) es el esqueleto de cualquier página web. Usas etiquetas como &lt;h1&gt; para títulos y &lt;p&gt; para párrafos.' },
-    { pattern: /css/i, response: 'CSS (Cascading Style Sheets) define la apariencia visual: colores, fuentes, márgenes y animaciones. Se aplica con selectores como .clase o #id.' },
-    { pattern: /javascript/i, response: 'JavaScript es el lenguaje que da interactividad a las páginas. Puedes manipular el DOM, responder a eventos y comunicarte con servidores.' },
-    { pattern: /flexbox/i, response: 'Flexbox es un modelo de diseño en CSS para distribuir espacio entre elementos. Usa display: flex; y propiedades como justify-content y align-items.' },
-    { pattern: /grid/i, response: 'CSS Grid es otro sistema de diseño bidimensional. Se define con display: grid; y grid-template-columns. Ideal para layouts complejos.' },
-    { pattern: /localstorage/i, response: 'localStorage guarda datos en el navegador de forma persistente. Usa setItem("clave", valor) y getItem("clave"). Los datos se mantienen al cerrar el navegador.' },
-    { pattern: /evento/i, response: 'Los eventos permiten reaccionar a acciones del usuario: click, submit, keydown, etc. Se asignan con addEventListener.' },
-    { pattern: /promesa/i, response: 'Una promesa es un objeto que representa la eventual resolución de una operación asíncrona. Puede estar pendiente, resuelta o rechazada.' },
-    { pattern: /error/i, response: 'Para capturar errores en JavaScript usa try...catch. En el laboratorio los errores de sintaxis aparecerán en la consola automáticamente.' },
-    { pattern: /.*/, response: 'No tengo una respuesta específica, pero puedo ayudarte con HTML, CSS o JavaScript. ¿Puedes reformular tu pregunta?' }
-  ];
 
-  function getAssistantReply(question) {
-    for (let entry of assistantResponses) {
-      if (entry.pattern.test(question)) return entry.response;
-    }
-    return 'Lo siento, no he entendido. Prueba a preguntar sobre HTML, CSS o JavaScript.';
+  function getAssistantReply() {
+    return new Promise((resolve) => {
+      resolve(`El asistente IA estará disponible próximamente.
+
+Estamos trabajando para ofrecerte una experiencia increíble con inteligencia artificial real que te ayudará a resolver tus dudas de HTML, CSS y JavaScript al instante.
+
+Mientras tanto, puedes consultar nuestra <strong>enciclopedia</strong> o probar los <strong>retos</strong> para seguir aprendiendo.
+
+¡Gracias por tu paciencia! `);
+    });
   }
 
   function addAssistantMessage(text, sender = 'user') {
@@ -1801,6 +1051,8 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     changeFontSize(0);
     initSplitters();
     initPreviewSizes();
+
+    loadWikiData();
   }
 
 
@@ -1840,8 +1092,9 @@ const sleep = ms => new Promise(res => setTimeout(res, ms));</pre>`
     if (!question) return;
     addAssistantMessage(question, 'user');
     assistantInput.value = '';
-    const reply = getAssistantReply(question);
-    setTimeout(() => addAssistantMessage(reply, 'bot'), 300);
+    getAssistantReply().then(reply => {
+      addAssistantMessage(reply, 'bot');
+    });
   });
   assistantInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') btnSendAssistant.click();
