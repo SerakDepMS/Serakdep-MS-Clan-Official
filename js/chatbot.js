@@ -540,6 +540,86 @@
 
 
     {
+      keywords: ['sms studios', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
+      response: `💻 <strong>SMS Studios - Laboratorio de Código</strong><br><br>
+      <strong>SMS Studios</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio web del clan. Es un entorno de desarrollo interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> directamente desde el navegador, sin instalar nada.<br><br>
+      Incluye:<br>
+      • <strong>Editor profesional</strong> con autocompletado y detección de errores en tiempo real.<br>
+      • <strong>Vista previa en vivo</strong> de tu código.<br>
+      • <strong>Consola interactiva</strong> para depurar tus programas.<br>
+      • <strong>Enciclopedia interna</strong> con documentación de los tres lenguajes.<br>
+      • <strong>9 retos de programación</strong> guiados paso a paso.<br>
+      • <strong>Asistente IA</strong> (próximamente).<br>
+      • <strong>6 temas de editor</strong> personalizables (Monokai, Dracula, Solarized, Nord, Material, Default).<br>
+      • <strong>Exportación de proyectos</strong> en ZIP o HTML único.<br>
+      • <strong>Carga de archivos</strong> desde tu dispositivo o arrastrando y soltando.<br>
+      • <strong>Gestión de proyectos múltiples</strong> para guardar y cargar tu trabajo.<br><br>
+      Para acceder, visita <strong>SMS Studios</strong> desde el enlace en el footer.`
+    },
+    {
+      keywords: ['como entrar sms studios', 'acceder laboratorio', 'donde esta sms studios', 'abrir code lab', 'ingresar al laboratorio', 'entrar a sms studios', 'donde programar'],
+      response: `🚀 <strong>Cómo acceder a SMS Studios</strong><br><br>
+      Puedes acceder de dos maneras:<br>
+      • <strong>Desde el menú de navegación:</strong> Busca "SMS Studios" en el menú superior (próximamente tendrá su propio enlace). Mientras tanto, ve al footer y haz clic en "SMS Studios".<br>
+      • <strong>Enlace directo:</strong> Visita <strong>laboratorio.html</strong> en el navegador.<br><br>
+      Al entrar verás una pantalla de bienvenida con toda la información. Haz clic en <strong>"Ingresar al Laboratorio"</strong> para empezar a programar. ¡No necesitas instalar nada!`
+    },
+    {
+      keywords: ['guardar proyecto sms studios', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
+      response: `💾 <strong>Guardar y exportar proyectos en SMS Studios</strong><br><br>
+      SMS Studios guarda todo automáticamente para que no pierdas tu trabajo:<br>
+      • <strong>Guardado automático:</strong> Tu código se guarda cada 10 segundos en el navegador.<br>
+      • <strong>Gestión de proyectos:</strong> Haz clic en el icono de capas <i class="fas fa-layer-group"></i> para guardar tu proyecto con nombre y cargarlo cuando quieras.<br>
+      • <strong>Descarga ZIP:</strong> Haz clic en <i class="fas fa-download"></i> para descargar tu proyecto completo con todos los archivos.<br>
+      • <strong>Exportar HTML único:</strong> Haz clic en <i class="fas fa-file-export"></i> para generar un solo archivo .html con todo incrustado (CSS y JS), listo para publicar o compartir.<br><br>
+      También puedes <strong>cargar archivos</strong> desde tu dispositivo con el botón <i class="fas fa-upload"></i> o arrastrando y soltando sobre el explorador.`
+    },
+    {
+      keywords: ['personalizar editor', 'temas editor', 'cambiar tema', 'fuente editor', 'modo oscuro', 'monokai', 'dracula', 'solarized', 'nord', 'material', 'apariencia editor'],
+      response: `🎨 <strong>Personalización del editor en SMS Studios</strong><br><br>
+      Puedes personalizar la apariencia del editor a tu gusto:<br>
+      • <strong>6 temas de editor:</strong> Monokai, Dracula, Solarized, Nord, Material y Default. Haz clic en el icono de paleta <i class="fas fa-palette"></i> para cambiar entre ellos.<br>
+      • <strong>Tamaño de fuente:</strong> Usa los botones <i class="fas fa-search-plus"></i> y <i class="fas fa-search-minus"></i> en la barra de estado inferior para ajustar el tamaño del texto.<br>
+      • <strong>Modos de vista:</strong> Editor solo (<i class="fas fa-code"></i>), vista dividida (<i class="fas fa-columns"></i>), o solo vista previa (<i class="fas fa-eye"></i>).<br>
+      • <strong>Pantalla completa:</strong> Maximiza el laboratorio como un vídeo con el botón <i class="fas fa-expand-arrows-alt"></i> o con Ctrl+Shift+M.<br>
+      • <strong>Ajuste de línea:</strong> Activa o desactiva el ajuste de línea con el botón <i class="fas fa-text-width"></i>.`
+    },
+    {
+      keywords: ['retos programacion', 'desafios codigo', 'ejercicios html', 'practicas css', 'ejercicios javascript', 'challenges', 'tareas programacion'],
+      response: `🧩 <strong>Retos de programación en SMS Studios</strong><br><br>
+      SMS Studios incluye <strong>9 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
+      • <strong>Página de bienvenida</strong> (HTML básico).<br>
+      • <strong>Estilizando un botón</strong> (CSS intermedio).<br>
+      • <strong>Lista de tareas interactiva</strong> (JavaScript avanzado).<br>
+      • <strong>Contador de clics</strong> (DOM y eventos).<br>
+      • <strong>Cambiar color de fondo aleatorio</strong> (funciones JS).<br>
+      • <strong>Formulario de contacto</strong> (HTML, CSS y JS).<br>
+      • <strong>Galería de imágenes con CSS Grid</strong>.<br>
+      • <strong>Barra de navegación responsive</strong> (Flexbox y media queries).<br>
+      • <strong>Reloj digital en tiempo real</strong> (Date y setInterval).<br><br>
+      Para verlos, haz clic en el icono de puzzle <i class="fas fa-puzzle-piece"></i> y selecciona "Empezar reto". Cada reto carga una plantilla inicial y te guía con instrucciones detalladas.`
+    },
+    {
+      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial sms studios', 'robot programacion'],
+      response: `🤖 <strong>Asistente IA en SMS Studios</strong><br><br>
+      Actualmente el asistente IA del laboratorio está en modo <strong>"Próximamente"</strong>. Estamos trabajando para conectarlo a un modelo de inteligencia artificial real que podrá:<br>
+      • Responder preguntas sobre HTML, CSS y JavaScript.<br>
+      • Explicar conceptos de programación.<br>
+      • Sugerir mejoras en tu código.<br>
+      • Ayudarte a depurar errores.<br><br>
+      Mientras tanto, puedes usar la <strong>enciclopedia interna</strong> (icono de libro <i class="fas fa-book"></i>) y los <strong>retos</strong> para seguir aprendiendo. ¡Te avisaremos cuando el asistente IA esté listo!`
+    },
+    {
+      keywords: ['enciclopedia sms studios', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
+      response: `📚 <strong>Enciclopedia interna de SMS Studios</strong><br><br>
+      El laboratorio incluye una <strong>enciclopedia completa</strong> con documentación de los tres lenguajes:<br>
+      • <strong>HTML:</strong> Estructura básica, etiquetas de texto, enlaces, imágenes, listas, tablas, formularios, multimedia, semántica HTML5, accesibilidad, SEO y más.<br>
+      • <strong>CSS:</strong> Selectores, Box Model, posicionamiento, Flexbox, Grid, animaciones, media queries, variables, sombras, filtros y mucho más.<br>
+      • <strong>JavaScript:</strong> Variables, tipos de datos, operadores, condicionales, bucles, funciones, arrays, objetos, DOM, eventos, asincronía, clases, módulos y patrones útiles.<br><br>
+      Para abrirla, haz clic en el icono de libro <i class="fas fa-book"></i>. Puedes buscar cualquier término con el campo de búsqueda y copiar los ejemplos de código con el botón "Copiar".`
+    },
+
+    {
       keywords: ['admin', 'administracion', 'panel admin', 'login admin', 'acceso administrador'],
       response: `🔐 <strong>Panel de Administración</strong><br><br>
       El clan cuenta con un panel de administración protegido con credenciales. En él se pueden gestionar noticias, ver estadísticas y administrar contenido. El acceso es exclusivo para el staff autorizado. Si crees que deberías tener acceso, contacta con la Alta Dirección.`
@@ -692,7 +772,8 @@
     const suggestions = [
       'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos', 
       'juegos', 'contacto', 'reportar', 'sanciones', 'estructura', 
-      'noticias', 'legal', 'créditos', 'ser admin', 'alianzas', 'tutoriales'
+      'noticias', 'legal', 'créditos', 'ser admin', 'alianzas', 'tutoriales',
+      'sms studios', 'laboratorio código', 'retos programación', 'enciclopedia'
     ];
     
     return `🤔 No tengo una respuesta específica para "${query}". Pero puedo ayudarte con muchos otros temas. Prueba preguntando sobre:<br>
@@ -755,6 +836,7 @@
         • Eventos, torneos y juegos populares.<br>
         • Cómo reportar problemas o contactar al staff.<br>
         • La estructura del clan y cómo ascender.<br>
+        • <strong>SMS Studios</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
         • Noticias, legal, créditos, alianzas y tutoriales.<br><br>
         <strong>Escribe tu consulta con total libertad.</strong> Entiendo lenguaje natural, así que no necesitas usar palabras exactas. ¡Adelante!`);
         hasStarted = true;

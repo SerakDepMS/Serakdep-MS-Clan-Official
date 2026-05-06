@@ -73,9 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCloseAssistant = document.getElementById('btnCloseAssistant');
   const explorerSplitter = document.getElementById('explorerSplitter');
   const previewSplitter = document.getElementById('previewSplitter');
-
   const btnMaximizeEditor = document.getElementById('btnMaximizeEditor');
-
+  const imagePreviewModal = document.getElementById('imagePreviewModal');
+  const imagePreviewImg = document.getElementById('imagePreviewImg');
+  const imagePreviewName = document.getElementById('imagePreviewName');
+  const btnCloseImagePreview = document.getElementById('btnCloseImagePreview');
+  const btnExportSingle = document.getElementById('btnExportSingle');
 
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
@@ -186,6 +189,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function switchToFile(fileId) {
     const file = files.find(f => f.id === fileId);
     if (!file) return;
+    const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+    const ext = file.name.split('.').pop().toLowerCase();
+    if (imageExtensions.includes(ext)) {
+
+      imagePreviewImg.src = file.content;
+      imagePreviewName.textContent = file.name;
+      imagePreviewModal.style.display = 'flex';
+      return;
+    }
     activeFileId = fileId;
     Object.values(editors).forEach(ed => ed.getWrapperElement().style.display = 'none');
     let editor = getEditor(fileId);
@@ -220,16 +232,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
   function updateFileTree() {
-    fileTree.innerHTML = files.map(f => `
-      <div class="file-item ${f.id === activeFileId ? 'active' : ''}" data-fileid="${f.id}">
-        <i class="fab fa-${f.language === 'html' ? 'html5' : f.language === 'css' ? 'css3-alt' : 'js'}"></i>
-        ${f.name}
-      </div>
-    `).join('');
+    const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+    fileTree.innerHTML = files.map(f => {
+      const ext = f.name.split('.').pop().toLowerCase();
+      const isImage = imageExtensions.includes(ext);
+      let iconHtml = '';
+      if (isImage) {
+
+        iconHtml = `<img src="${f.content}" class="file-thumb" onerror="this.style.display='none'" />`;
+      } else {
+        const langIcon = f.language === 'html' ? 'html5' : f.language === 'css' ? 'css3-alt' : 'js';
+        iconHtml = `<i class="fab fa-${langIcon}"></i>`;
+      }
+      return `
+        <div class="file-item ${f.id === activeFileId && !isImage ? 'active' : ''}" data-fileid="${f.id}">
+          ${iconHtml}
+          <span>${f.name}</span>
+        </div>
+      `;
+    }).join('');
+
     document.querySelectorAll('.file-item').forEach(item => {
-      item.addEventListener('click', () => switchToFile(item.dataset.fileid));
-      item.addEventListener('dblclick', () => renameFile(item.dataset.fileid));
+      const fid = item.dataset.fileid;
+      const file = files.find(f => f.id === fid);
+      if (!file) return;
+      const ext = file.name.split('.').pop().toLowerCase();
+      const isImage = imageExtensions.includes(ext);
+
+      item.addEventListener('click', () => {
+        if (isImage) {
+          imagePreviewImg.src = file.content;
+          imagePreviewName.textContent = file.name;
+          imagePreviewModal.style.display = 'flex';
+        } else {
+          switchToFile(fid);
+        }
+      });
+      item.addEventListener('dblclick', () => {
+        if (!isImage) renameFile(fid);
+      });
     });
   }
 
@@ -396,6 +439,47 @@ document.addEventListener('DOMContentLoaded', () => {
       a.download = 'proyecto-sms.zip';
       a.click();
     });
+  }
+
+  function exportSingleHTML() {
+    const htmlFiles = files.filter(f => f.language === 'html');
+    const cssFiles = files.filter(f => f.language === 'css');
+    const jsFiles = files.filter(f => f.language === 'js');
+
+    let html = htmlFiles.length > 0
+      ? htmlFiles.map(f => f.content).join('\n')
+      : '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto SMS Studios</title>\n</head>\n<body>\n  <!-- Contenido aquí -->\n</body>\n</html>';
+
+    const css = cssFiles.map(f => f.content).join('\n');
+    const js = jsFiles.map(f => f.content).join('\n');
+
+    if (css.trim()) {
+      const styleTag = `  <style>\n${css}\n  </style>`;
+      if (html.includes('</head>')) {
+        html = html.replace('</head>', `${styleTag}\n</head>`);
+      } else if (html.includes('<body>')) {
+        html = html.replace('<body>', `<head>\n${styleTag}\n</head>\n<body>`);
+      } else {
+        html = html.replace('<html>', `<html>\n<head>\n${styleTag}\n</head>`);
+      }
+    }
+
+    if (js.trim()) {
+      const scriptTag = `  <script>\n${js}\n  </script>`;
+      if (html.includes('</body>')) {
+        html = html.replace('</body>', `${scriptTag}\n</body>`);
+      } else {
+        html += `\n${scriptTag}`;
+      }
+    }
+
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'proyecto-sms.html';
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   function resetToDefault() {
@@ -693,6 +777,90 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  function readFileAsDataURL(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function initDragDrop() {
+    const dropZone = explorer;
+
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropZone.classList.add('drag-over');
+    });
+
+    dropZone.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropZone.classList.remove('drag-over');
+    });
+
+    dropZone.addEventListener('drop', async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropZone.classList.remove('drag-over');
+
+      const droppedFiles = Array.from(e.dataTransfer.files);
+      if (droppedFiles.length === 0) return;
+
+      let firstNewFileId = null;
+      let loadedCount = 0;
+
+      for (let index = 0; index < droppedFiles.length; index++) {
+        const file = droppedFiles[index];
+        const extension = file.name.split('.').pop().toLowerCase();
+        const languageMap = {
+          html: 'html', htm: 'html',
+          css: 'css',
+          js: 'js', mjs: 'js',
+          json: 'js', xml: 'html', svg: 'html',
+          md: 'html', txt: 'js'
+        };
+        const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+
+        let content;
+        if (imageExtensions.includes(extension)) {
+          // Leer imagen como base64
+          content = await readFileAsDataURL(file);
+        } else {
+          content = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (ev) => resolve(ev.target.result);
+            reader.onerror = reject;
+            reader.readAsText(file, 'UTF-8');
+          });
+        }
+
+        const language = languageMap[extension] || 'js';
+        const newFile = {
+          id: (Date.now() + index).toString(),
+          name: file.name,
+          language: imageExtensions.includes(extension) ? 'html' : language,
+          content: content
+        };
+
+        files.push(newFile);
+        if (loadedCount === 0) firstNewFileId = newFile.id;
+        loadedCount++;
+      }
+
+      if (loadedCount > 0) {
+        updateFileTree();
+        updateTabs();
+        if (firstNewFileId) switchToFile(firstNewFileId);
+        saveToLocal();
+        if (autoRefreshCheck.checked) updatePreview();
+      }
+    });
+  }
+
+
   function initEnvironment() {
     if (!loadFromLocal()) {
       files.forEach(f => createEditor(f));
@@ -709,6 +877,7 @@ document.addEventListener('DOMContentLoaded', () => {
     changeFontSize(0);
     initSplitters();
     initPreviewSizes();
+    initDragDrop();
     loadWikiData(wikiContent, showWiki);
   }
 
@@ -763,6 +932,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnDownload.addEventListener('click', downloadZip);
+  btnExportSingle.addEventListener('click', exportSingleHTML);
   btnReset.addEventListener('click', resetToDefault);
 
   btnThemes.addEventListener('click', (e) => {
@@ -810,6 +980,14 @@ document.addEventListener('DOMContentLoaded', () => {
     newProjectName.value = '';
   });
   projectsModal.addEventListener('click', (e) => { if (e.target === projectsModal) projectsModal.style.display = 'none'; });
+
+  // Cerrar modal de imagen
+  btnCloseImagePreview.addEventListener('click', () => {
+    imagePreviewModal.style.display = 'none';
+  });
+  imagePreviewModal.addEventListener('click', (e) => {
+    if (e.target === imagePreviewModal) imagePreviewModal.style.display = 'none';
+  });
 
   btnLoadFile.addEventListener('click', () => fileInput.click());
   fileInput.addEventListener('change', (e) => {

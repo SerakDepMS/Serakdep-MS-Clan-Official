@@ -998,3 +998,18 @@
     max-width: 100%;
   }
 }
+
+
+.file-item img.file-thumb {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+
+.lab-explorer.drag-over {
+  background: rgba(212, 175, 55, 0.1) !important;
+  border: 2px dashed var(--lab-gold) !important;
+}
