@@ -1,7 +1,7 @@
-import { wikiData, wikiSection, loadWikiData, showWiki } from 'js/modules/wiki.js';
-import { challenges, renderChallenges } from 'js/modules/challenges.js';
-import { getAssistantReply, addAssistantMessage } from 'js/modules/assistant.js';
-import { themeList, changeTheme } from 'js/modules/themes.js';
+import { wikiData, wikiSection, loadWikiData, showWiki } from './modules/wiki.js';
+import { challenges, renderChallenges } from './modules/challenges.js';
+import { getAssistantReply, addAssistantMessage } from './modules/assistant.js';
+import { themeList, changeTheme } from './modules/themes.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const lobby = document.getElementById('labLobby');
