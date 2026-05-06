@@ -961,6 +961,33 @@
     padding: 30px 20px;
     margin: 0 10px;
   }
+
+
+
+  .modal-content {
+    width: 95%;
+    margin: 0 10px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .project-item .project-actions {
+    align-self: flex-end;
+  }
 }
 
 .assistant-message.typing {
