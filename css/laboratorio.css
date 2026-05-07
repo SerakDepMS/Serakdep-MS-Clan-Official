@@ -117,7 +117,7 @@
 
 .lab-environment {
   position: relative;
-  min-height: 75vh;
+  height: 100vh;              /* ← CAMBIO: altura fija a toda la ventana */
   display: flex;
   flex-direction: column;
   border-radius: var(--lab-radius);
@@ -185,6 +185,7 @@
 .lab-workspace {
   display: flex;
   flex: 1;
+  min-height: 0;              /* ← NUEVO: evita que crezca más de lo asignado */
   position: relative;
   overflow: hidden;
 }
@@ -251,11 +252,13 @@
 }
 
 
+/* ★ ÁREA DEL EDITOR – clave para que no estire el diseño ★ */
 .lab-editor-area {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  min-height: 0;             /* ← evita que crezca más de lo asignado */
 }
 .editor-tabs {
   display: flex;
@@ -300,14 +303,21 @@
   opacity: 1;
   color: #e74c3c;
 }
+
+/* CONTENEDOR DEL EDITOR DE CÓDIGO */
 .editor-container {
   flex: 1;
-  overflow: hidden;
+  min-height: 0;            /* ← NUEVO: permitir que se reduzca para generar scroll */
+  overflow: auto;           /* ← scroll interno vertical y horizontal */
 }
 .editor-container .CodeMirror {
   height: 100% !important;
   font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
   font-size: 14px;
+}
+/* Asegura que CodeMirror use scroll propio si es necesario */
+.CodeMirror-scroll {
+  overflow: auto !important;
 }
 
 
@@ -432,8 +442,14 @@
 }
 
 
+/* === PANELES LATERALES COMO OVERLAYS === */
 .lab-wiki,
 .lab-challenges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 50;
   width: 360px;
   background: var(--lab-surface);
   border-left: 1px solid var(--lab-border);
@@ -446,6 +462,25 @@
 .lab-challenges.show {
   display: flex;
 }
+
+.lab-assistant {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 50;
+  width: 360px;
+  background: var(--lab-surface);
+  border-left: 1px solid var(--lab-border);
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+.lab-assistant.show {
+  display: flex;
+}
+
 .wiki-header {
   padding: 18px 20px;
   border-bottom: 1px solid var(--lab-border);
@@ -750,18 +785,6 @@
 }
 
 
-.lab-assistant {
-  width: 360px;
-  background: var(--lab-surface);
-  border-left: 1px solid var(--lab-border);
-  display: none;
-  flex-direction: column;
-  overflow-y: auto;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
-}
-.lab-assistant.show {
-  display: flex;
-}
 .assistant-chat {
   flex: 1;
   overflow-y: auto;
@@ -885,21 +908,10 @@
   .lab-wiki,
   .lab-challenges,
   .lab-assistant {
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 100%;
-    height: 100%;
-    z-index: 50;
     border-left: none;
     box-shadow: -8px 0 20px rgba(0, 0, 0, 0.5);
   }
-  .lab-wiki.show,
-  .lab-challenges.show,
-  .lab-assistant.show {
-    display: flex;
-  }
-
 
   .splitter {
     display: none;
@@ -1039,4 +1051,21 @@
 .lab-explorer.drag-over {
   background: rgba(212, 175, 55, 0.1) !important;
   border: 2px dashed var(--lab-gold) !important;
+}
+
+
+
+#imagePreviewModal .modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+#imagePreviewModal .modal-body {
+  overflow: auto;
+  flex: 1;
+}
+#imagePreviewModal img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
 }

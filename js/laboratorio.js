@@ -824,30 +824,34 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
 
-        let content;
-        if (imageExtensions.includes(extension)) {
-          // Leer imagen como base64
-          content = await readFileAsDataURL(file);
-        } else {
-          content = await new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = (ev) => resolve(ev.target.result);
-            reader.onerror = reject;
-            reader.readAsText(file, 'UTF-8');
-          });
+        try {
+          let content;
+          if (imageExtensions.includes(extension)) {
+            content = await readFileAsDataURL(file);
+          } else {
+            content = await new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = (ev) => resolve(ev.target.result);
+              reader.onerror = reject;
+              reader.readAsText(file, 'UTF-8');
+            });
+          }
+
+          const language = languageMap[extension] || 'js';
+          const newFile = {
+            id: (Date.now() + index).toString(),
+            name: file.name,
+            language: imageExtensions.includes(extension) ? 'html' : language,
+            content: content
+          };
+
+          files.push(newFile);
+          if (loadedCount === 0) firstNewFileId = newFile.id;
+          loadedCount++;
+        } catch (err) {
+          console.error(`Error al procesar ${file.name}:`, err);
+          alert(`Error al leer el archivo ${file.name}`);
         }
-
-        const language = languageMap[extension] || 'js';
-        const newFile = {
-          id: (Date.now() + index).toString(),
-          name: file.name,
-          language: imageExtensions.includes(extension) ? 'html' : language,
-          content: content
-        };
-
-        files.push(newFile);
-        if (loadedCount === 0) firstNewFileId = newFile.id;
-        loadedCount++;
       }
 
       if (loadedCount > 0) {
@@ -990,33 +994,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnLoadFile.addEventListener('click', () => fileInput.click());
-  fileInput.addEventListener('change', (e) => {
+    fileInput.addEventListener('change', async (e) => {
     const selectedFiles = Array.from(e.target.files);
     if (selectedFiles.length === 0) return;
-    let firstNewFileId = null, loadedCount = 0;
-    selectedFiles.forEach((file, index) => {
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        const content = ev.target.result;
-        const extension = file.name.split('.').pop().toLowerCase();
+    let firstNewFileId = null;
+    let loadedCount = 0;
+    const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+
+    for (let index = 0; index < selectedFiles.length; index++) {
+      const file = selectedFiles[index];
+      const extension = file.name.split('.').pop().toLowerCase();
+      const isImage = imageExtensions.includes(extension);
+      try {
+        let content;
+        if (isImage) {
+          content = await readFileAsDataURL(file);
+        } else {
+          content = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (ev) => resolve(ev.target.result);
+            reader.onerror = reject;
+            reader.readAsText(file, 'UTF-8');
+          });
+        }
         const languageMap = { html: 'html', htm: 'html', css: 'css', js: 'js', mjs: 'js', json: 'js', xml: 'html', svg: 'html', md: 'html', txt: 'js' };
         const language = languageMap[extension] || 'js';
-        const newFile = { id: (Date.now() + index).toString(), name: file.name, language, content };
+        const newFile = { id: (Date.now() + index).toString(), name: file.name, language: isImage ? 'html' : language, content };
         files.push(newFile);
         if (loadedCount === 0) firstNewFileId = newFile.id;
         loadedCount++;
-        if (loadedCount === selectedFiles.length) {
-          updateFileTree();
-          updateTabs();
-          if (firstNewFileId) switchToFile(firstNewFileId);
-          saveToLocal();
-          if (autoRefreshCheck.checked) updatePreview();
-          fileInput.value = '';
-        }
-      };
-      reader.onerror = () => alert(`Error al leer el archivo ${file.name}`);
-      reader.readAsText(file, 'UTF-8');
-    });
+      } catch (err) {
+        console.error(`Error al leer ${file.name}:`, err);
+        alert(`Error al leer el archivo ${file.name}`);
+      }
+    }
+
+    if (loadedCount > 0) {
+      updateFileTree();
+      updateTabs();
+      if (firstNewFileId) switchToFile(firstNewFileId);
+      saveToLocal();
+      if (autoRefreshCheck.checked) updatePreview();
+      fileInput.value = '';
+    }
   });
 
   btnOpenPreview.addEventListener('click', () => {
