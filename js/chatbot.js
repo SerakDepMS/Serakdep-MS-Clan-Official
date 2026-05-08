@@ -13,7 +13,7 @@
       <strong>3️⃣ Contacto del Staff:</strong> En un plazo de 48 horas, un administrador te contactará por WhatsApp o Discord para una breve entrevista.<br>
       <strong>4️⃣ Entrevista:</strong> Charlaremos contigo para conocerte mejor y resolver dudas.<br>
       <strong>5️⃣ Periodo de prueba:</strong> Si todo va bien, pasarás un periodo de prueba de 7 a 14 días para adaptarte.<br><br>
-      ✅ <strong>Requisitos:</strong> Tener al menos 14 años, cuenta de Roblox activa (mínimo 3 meses) y disponibilidad para participar al menos 2 veces por semana.`
+      <strong>Requisitos:</strong> Tener al menos 14 años, cuenta de Roblox activa (mínimo 4 meses) y disponibilidad para participar al menos 7 veces por semana.`
     },
     {
       keywords: ['formulario campos', 'que piden formulario', 'datos inscripcion', 'whatsapp formulario', 'discord formulario', 'pais formulario', 'edad minima', 'preguntas formulario', 'informacion que piden'],
@@ -417,7 +417,7 @@
       keywords: ['requisitos admin', 'ser admin', 'moderador', 'postular staff', 'aspirante', 'administrador', 'quiero ser staff', 'como ser moderador'],
       response: `👑 <strong>¿Cómo ser administrador o staff?</strong><br><br>
       Para formar parte del equipo de administración debes:<br>
-      ✔️ Ser miembro activo del clan por al menos 2 meses.<br>
+      ✔️ Ser miembro activo del clan por al menos 4 meses.<br>
       ✔️ Tener un historial impecable (sin sanciones graves).<br>
       ✔️ Demostrar compromiso, respeto y capacidad de ayudar a otros.<br>
       ✔️ Estar atento a las convocatorias que se publican en Discord (#anuncios) y en el sitio web (Contacto → Aspirar a Admin).<br>
@@ -618,13 +618,6 @@
       • <strong>JavaScript:</strong> Variables, tipos de datos, operadores, condicionales, bucles, funciones, arrays, objetos, DOM, eventos, asincronía, clases, módulos y patrones útiles.<br><br>
       Para abrirla, haz clic en el icono de libro <i class="fas fa-book"></i>. Puedes buscar cualquier término con el campo de búsqueda y copiar los ejemplos de código con el botón "Copiar".`
     },
-
-    {
-      keywords: ['admin', 'administracion', 'panel admin', 'login admin', 'acceso administrador'],
-      response: `🔐 <strong>Panel de Administración</strong><br><br>
-      El clan cuenta con un panel de administración protegido con credenciales. En él se pueden gestionar noticias, ver estadísticas y administrar contenido. El acceso es exclusivo para el staff autorizado. Si crees que deberías tener acceso, contacta con la Alta Dirección.`
-    },
-
 
     {
       keywords: ['testimonios', 'opiniones', 'miembros dicen', 'experiencias', 'comentarios', 'shadowblade', 'diegosanval2012', 'icequeen', 'que dicen', 'reseñas'],
