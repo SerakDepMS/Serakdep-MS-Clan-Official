@@ -345,8 +345,8 @@
       • <strong>Director y Programador:</strong> Db_artworkFOUNDERSMS.<br>
       • <strong>Supervisor:</strong> Yanfeix6.<br>
       • <strong>Equipo de Edición:</strong> Diegosanval2012, putifino111, Teo_174bj.<br>
-      • <strong>Equipo de Gestión y Operaciones:</strong> joseprorico, year171, kakaroto11141, little_aldoxd.<br>
-      • <strong>Equipo de Comunidad y Desarrollo:</strong> 7huhuj08, y más colaboradores.<br>
+      • <strong>Equipo de Gestión y Operaciones:</strong> joseprorico, year171, Db_artwork, little_aldoxd.<br>
+      • <strong>Equipo de Comunidad y Desarrollo:</strong> 7huhuj08, Db_artwork y más colaboradores.<br>
       • <strong>Herramientas utilizadas:</strong> HTML5, CSS3, JavaScript, EmailJS, npoint.io, Font Awesome, GitHub Pages, Adobe Creative Suite, Figma.<br><br>
       ¿Quieres contribuir? Usa el formulario de sugerencias en Contacto.`
     },
