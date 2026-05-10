@@ -623,9 +623,9 @@
       keywords: ['testimonios', 'opiniones', 'miembros dicen', 'experiencias', 'comentarios', 'shadowblade', 'diegosanval2012', 'icequeen', 'que dicen', 'reseñas'],
       response: `💬 <strong>Testimonios de miembros</strong><br><br>
       Esto es lo que dicen algunos de nuestros miembros:<br>
-      • <strong>ShadowBlade</strong> (miembro desde 2025): "Serakdep MS es más que un clan, es una familia. He hecho amigos de todo el mundo."<br>
-      • <strong>Diegosanval2012</strong> (miembro desde 2025): "Los eventos son increíbles y los premios generosos. Nunca me aburro."<br>
-      • <strong>IceQueen</strong> (Administradora): "Es un ambiente muy sano y divertido. Me encanta ver crecer la comunidad."<br><br>
+      • <strong>kakaroto11141</strong> (FOUNDER): "me gusta mucho mi comunidad, porque es un espacio creado con mucho amor para brindarles seguridad y confianza en su manera libre de expresarse respetuosamente. SerakDepMS no es un clan como los demás, es una vida, una familia y un despertar a la innovación. porque aprender a vivir entre personas de diferentes lugares y distintas culturas es la forma más bella de compartir nuestros pensamientos e ideales sin ser juzgados.."<br>
+      • <strong>Diegosanval2012</strong> (Miembro desde 2026): "Me gusta su buen desarrollo administrativo y alta gerencia en los ámbitos de soporte técnico y toma de decisiones."<br>
+      • <strong>MiembroAnonimoMiembro</strong> (Miembro desde 2026): "Que la mayoría de los integrantes son divertidos y respetuosos."<br><br>
       ¿Quieres compartir tu experiencia? Envíala a través del formulario de sugerencias en Contacto.`
     },
 

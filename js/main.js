@@ -239,3 +239,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateHeader();
 })();
+
+(function() {
+  if (localStorage.getItem('cookieConsent') === null) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+})();
+
+function aceptarCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+
+function rechazarCookies() {
+  localStorage.setItem('cookieConsent', 'rejected');
+  document.getElementById('cookie-banner').style.display = 'none';
+
+}

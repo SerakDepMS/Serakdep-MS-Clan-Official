@@ -4,9 +4,9 @@ class VideoPlayerFinal {
     this.videoList = [
       {
         src: "video/video-number-one/video1.mp4",
-        title: "Te observo",
-        duration: "10",
-        size: "5 MB",
+        title: "MUAJAJAJAJA",
+        duration: "28",
+        size: "30 MB",
       },
       {
         src: "video/video-number-one/video2.mp4",
@@ -52,9 +52,9 @@ class VideoPlayerFinal {
       },
       {
         src: "video/video-number-one/video9.mp4",
-        title: "MUAJAJAJAJA",
-        duration: "28",
-        size: "30 MB",
+        title: "Te observo",
+        duration: "10",
+        size: "5 MB",
       },
       {
         src: "video/video-number-one/video10.mp4",

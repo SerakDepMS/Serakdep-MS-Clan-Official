@@ -25,6 +25,15 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(20,20,20,0.95); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 2px solid #d4af37; font-family: 'Poppins', sans-serif;">
+  <p style="margin: 0 0 15px 0; font-size: 16px;">
+    <strong>Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros para mejorar tu experiencia. 
+    Al hacer clic en "Aceptar", consientes su uso. 
+    <a href="cookies.html" style="color: #d4af37; text-decoration: underline;">Más información</a>
+  </p>
+  <button onclick="aceptarCookies()" style="background: #d4af37; border: none; color: black; padding: 10px 25px; border-radius: 25px; margin: 0 10px; cursor: pointer; font-weight: bold;">Aceptar</button>
+  <button onclick="rechazarCookies()" style="background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 10px 25px; border-radius: 25px; margin: 0 10px; cursor: pointer;">Rechazar</button>
+</div>
 <body>
   <header>
     <div class="container header-container">
