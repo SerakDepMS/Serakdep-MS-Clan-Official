@@ -3,244 +3,329 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página no encontrada - Serakdep MS</title>
-  <meta name="description" content="Página no encontrada. El panda se ha perdido." />
+  <title>404 - Página no encontrada | Serakdep MS</title>
+  <meta name="description" content="¡Ups! Página no encontrada. Parece que un panda travieso se ha llevado esta página." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/chatbot.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png" />
   <link rel="shortcut icon" href="favicon/favicon.ico" />
 
   <style>
-    .error-page {
-      text-align: center;
-      padding: 60px 20px;
-      min-height: 70vh;
+
+    body {
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .error-page {
+      flex: 1;
+      display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
     }
-    
+
+    .error-container {
+      max-width: 700px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
     .error-code {
-      font-size: 8rem;
-      font-weight: 800;
-      color: var(--primary-green);
+      font-size: 10rem;
+      font-weight: 900;
       line-height: 1;
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       margin-bottom: 10px;
-      text-shadow: 4px 4px 0 rgba(45, 106, 79, 0.15);
+      position: relative;
+      display: inline-block;
     }
-    
-    .error-icon {
-      font-size: 5rem;
-      color: var(--bamboo-gold);
-      margin-bottom: 20px;
-      animation: floatPanda 3s ease-in-out infinite;
+
+    .error-code::after {
+      content: "404";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--bamboo-gold) 0%, #ffd700 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0;
+      animation: glitch 2s infinite;
     }
-    
+
+    @keyframes glitch {
+      0% { opacity: 0; transform: translate(0); }
+      20% { opacity: 0.2; transform: translate(-3px, 3px); }
+      40% { opacity: 0; transform: translate(3px, -3px); }
+      60% { opacity: 0.15; transform: translate(-2px, -2px); }
+      80% { opacity: 0; transform: translate(2px, 2px); }
+      100% { opacity: 0; transform: translate(0); }
+    }
+
     .error-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: var(--primary-green);
       margin-bottom: 20px;
       font-weight: 700;
     }
-    
+
     .error-message {
       font-size: 1.2rem;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
+      color: #555;
+      margin-bottom: 40px;
+      line-height: 1.8;
     }
-    
-    .error-actions {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    .error-message .emoji {
+      font-size: 2.5rem;
+      display: inline-block;
+      animation: bounce 2s infinite;
     }
-    
-    @keyframes floatPanda {
-      0%, 100% { transform: translateY(0px); }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
     }
-    
-    .panda-trail {
+
+    .panda-lost {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-      color: var(--light-green);
-      font-size: 1.5rem;
-      opacity: 0.7;
+      margin: 30px 0;
+      position: relative;
     }
-    
-    .path-divider {
-      color: var(--bamboo-gold);
-      font-weight: bold;
+
+    .panda-icon {
+      font-size: 8rem;
+      animation: wander 3s infinite ease-in-out;
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+      position: relative;
     }
-    
-    .lost-section {
+
+    @keyframes wander {
+      0% { transform: translateX(0) rotate(0deg); }
+      25% { transform: translateX(-30px) rotate(-5deg); }
+      50% { transform: translateX(20px) rotate(5deg); }
+      75% { transform: translateX(-20px) rotate(-3deg); }
+      100% { transform: translateX(0) rotate(0deg); }
+    }
+
+    .panda-speech {
       background: white;
       border-radius: 20px;
-      padding: 40px;
+      padding: 15px 25px;
       box-shadow: var(--shadow-soft);
-      max-width: 800px;
-      margin: 0 auto;
-      border: 2px dashed var(--accent-green);
+      position: absolute;
+      top: -20px;
+      right: -40px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-green);
+      animation: float 2s infinite alternate;
+      white-space: nowrap;
     }
-    
+
+    .panda-speech::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid white;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .btn-home {
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-home:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(27, 67, 50, 0.2);
+    }
+
+    .btn-faq {
+      background: transparent;
+      border: 2px solid var(--accent-green);
+      color: var(--primary-green);
+      padding: 15px 35px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-faq:hover {
+      background: var(--accent-green);
+      color: white;
+      transform: translateY(-5px);
+    }
+
+
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      background: var(--light-green);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: floatParticle linear infinite;
+    }
+
+    @keyframes floatParticle {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+      }
+    }
+
+
     @media (max-width: 768px) {
       .error-code {
-        font-size: 5rem;
+        font-size: 6rem;
       }
       .error-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
-      .error-icon {
-        font-size: 3.5rem;
+      .error-message {
+        font-size: 1rem;
       }
-      .lost-section {
-        padding: 25px;
+      .panda-icon {
+        font-size: 5rem;
+      }
+      .panda-speech {
+        font-size: 0.8rem;
+        padding: 10px 18px;
+        top: -30px;
+        right: -20px;
+      }
+      .error-actions {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <a href="index.html">Serakdep <span>MS</span></a>
-      </div>
-      <button class="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="reglamento.html">Reglamento</a></li>
-          <li><a href="formulario.html">Formulario</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="creditos.html">Créditos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <div class="container">
-      <div class="error-page fade-in">
-        <div class="lost-section">
-          <div class="error-icon">🐼</div>
-          <div class="error-code">404</div>
-          <h1 class="error-title">¡El panda se ha perdido!</h1>
-          <p class="error-message">
-            Parece que nuestro panda explorador se adentró en una zona desconocida del bosque de bambú. 
-            La página que buscas no existe, ha sido movida o el panda se comió el enlace.
-          </p>
-          
-          <div class="panda-trail">
-            <span>🌿</span>
-            <span class="path-divider">···</span>
-            <span>🎋</span>
-            <span class="path-divider">···</span>
-            <span>🌿</span>
-            <span class="path-divider">···</span>
-            <span>🐾</span>
-            <span class="path-divider">···</span>
-            <span>❓</span>
-          </div>
-          
-          <div class="error-actions" style="margin-top: 30px;">
-            <a href="index.html" class="btn btn-large">
-              <i class="fas fa-home"></i> Volver al Inicio
-            </a>
-            <a href="contacto.html" class="btn btn-large btn-outline">
-              <i class="fas fa-search"></i> Buscar ayuda
-            </a>
-          </div>
-          
-          <p style="margin-top: 25px; color: #888; font-size: 0.9em;">
-            <i class="fas fa-info-circle"></i> Si crees que deberías ver algo aquí, 
-            <a href="reportar.html">reporta el problema</a> a nuestro equipo.
-          </p>
-        </div>
+  <div class="particles" id="particles"></div>
+
+  <main class="error-page">
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-title"><i class="fas fa-map-signs"></i> ¡Página no encontrada!</h1>
+
+      <div class="panda-lost">
+        <span class="panda-icon">🐼</span>
+        <div class="panda-speech">¡Me perdí! ¿Dónde está esa página?</div>
+      </div>
+
+      <p class="error-message">
+        <span class="emoji">🌿🌿🌿🌿🌿🌿</span><br>
+        Parece que nuestro <strong>panda explorador</strong> se ha desorientado y no encuentra la página que buscas.<br>
+        Puede que la URL sea incorrecta, que la página haya sido movida, o que el panda se la haya comido (sí, los pandas a veces hacen eso).
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="btn-home">
+          <i class="fas fa-home"></i> Volver al Inicio
+        </a>
       </div>
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3 class="footer-title">Serakdep MS</h3>
-          <p>Clan de Roblox para todas las edades. Únete a nuestra comunidad y vive la mejor experiencia de gaming.</p>
-          <div class="social-links">
-            <a href="https://discord.gg/vts4PTHR9K" title="Discord"><i class="fab fa-discord"></i></a>
-            <a href="https://x.com/serakdep?s=21" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/serakdep_sms?igsh=MWlveDhjcnpkaDJreg%3D%3D&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@serakdrji9t?_r=1&_t=ZS-92BbcmSBX8h" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3 class="footer-title">Enlaces Rápidos</h3>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
-            <li><a href="reglamento.html"><i class="fas fa-chevron-right"></i> Reglamento</a></li>
-            <li><a href="formulario.html"><i class="fas fa-chevron-right"></i> Formulario</a></li>
-            <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-            <li><a href="eventos.html"><i class="fas fa-chevron-right"></i> Eventos</a></li>
-            <li><a href="noticias.html"><i class="fas fa-chevron-right"></i> Noticias</a></li>
-            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
-            <li><a href="alianzas.html"><i class="fas fa-chevron-right"></i> Alianzas</a></li>
-            <li><a href="creditos.html"><i class="fas fa-chevron-right"></i> Créditos</a></li>
-            <li><a href="videotutoriales.html"><i class="fas fa-chevron-right"></i> Tutoriales</a></li>
-            <li><a href="laboratorio.html"><i class="fas fa-chevron-right"></i> SMS Studios</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3 class="footer-title">Contacto</h3>
-          <ul class="footer-links">
-            <li><a href="mailto:serakdepmsofficial7@gmail.com"><i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com</a></li>
-            <li><a href="https://wa.me/573116546484" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp del Clan</a></li>
-            <li><a href="reportar.html"><i class="fas fa-user-shield"></i> Reportar problema</a></li>
-            <li><a href="sugerencias.html"><i class="fas fa-lightbulb"></i> Sugerencias</a></li>
-            <li><a href="aspirantes-admin.html"><i class="fas fa-user-tie"></i> Aspirar a Admin</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3 class="footer-title">Información Legal</h3>
-          <ul class="footer-links">
-            <li><a href="privacidad.html"><i class="fas fa-user-shield"></i> Política de Privacidad</a></li>
-            <li><a href="terminos.html"><i class="fas fa-file-contract"></i> Términos de Servicio</a></li>
-            <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Política de Cookies</a></li>
-            <li><a href="dmca.html"><i class="fas fa-balance-scale"></i> Aviso DMCA</a></li>
-            <li><a href="creditos.html"><i class="fas fa-heart"></i> Créditos</a></li>
-            <li><a href="contacto.html#legal"><i class="fas fa-gavel"></i> Asuntos Legales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>© <span id="current-year">2026</span> Serakdep MS - Clan de Roblox. Todos los derechos reservados.</p>
-        <p>Esta página no está afiliada a Roblox Corporation.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/redirect.js"></script>
-  <script src="js/chatbot.js"></script>
-  <script src="js/scroll-reveal.js"></script>
+  <script>
+    const particlesContainer = document.getElementById('particles');
+    const colors = ['#95d5b2', '#40916c', '#52b788', '#d4af37'];
+    
+    for (let i = 0; i < 25; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      const size = Math.random() * 15 + 5;
+      const left = Math.random() * 100;
+      const delay = Math.random() * 5;
+      const duration = Math.random() * 10 + 10;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        particle.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${left}%;
+        background: ${color};
+        animation-delay: ${delay}s;
+        animation-duration: ${duration}s;
+        `;
+        particlesContainer.appendChild(particle);
+    }
+</script>
 </body>
 </html>
