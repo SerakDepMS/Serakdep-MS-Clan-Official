@@ -25,11 +25,11 @@ let datosAnterioresStr = '';
 
 let newsDatabase = {
   lastUpdate: new Date().toISOString(),
-  totalViews: 0,
+  totalViews: 786,
   whatsappStats: {
-    members: 9,
-    notifications: 0,
-    clicks: 0,
+    members: 158,
+    notifications: 25,
+    clicks: 67,
     joinLink: "https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31",
   },
   news: [],

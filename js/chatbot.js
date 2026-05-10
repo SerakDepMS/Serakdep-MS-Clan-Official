@@ -364,7 +364,7 @@
       6️⃣ Miembros Nuevos – En periodo de prueba (primeras 2 semanas).<br><br>
       <strong>Campos de juego:</strong> Blox Fruits, Brookhaven, Adopt Me, Arsenal, King Legacy, Driving Empire, Otros.<br>
       <strong>Departamentos:</strong> Eventos, Admisiones, Moderación, Relaciones, Técnico, Contenido.<br>
-      <strong>Miembros actuales:</strong> +256 verificados de diferentes países.<br><br>
+      <strong>Miembros actuales:</strong> +328 verificados de diferentes países.<br><br>
       Los ascensos son por mérito (actividad, comportamiento, contribuciones) y se evalúan mensualmente. Nunca se venden rangos.`
     },
     {
@@ -406,7 +406,7 @@
       Serakdep MS fue fundado con estos principios:<br>
       • <strong>Fundación:</strong> Creado por jugadores experimentados de Roblox que buscaban una comunidad organizada.<br>
       • <strong>Misión:</strong> Crear un espacio inclusivo y respetuoso para jugadores de todas las edades.<br>
-      • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +256 miembros verificados.<br>
+      • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +328 miembros verificados.<br>
       • <strong>Evolución:</strong> Hemos desarrollado estructura, normas, página web y herramientas propias.<br>
       • <strong>Futuro:</strong> Seguir creciendo como comunidad de referencia en Roblox.<br><br>
       Nuestra historia se construye día a día con cada miembro.`
