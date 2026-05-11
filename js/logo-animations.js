@@ -4,57 +4,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!clanLogo) return;
 
-  clanLogo.addEventListener("mouseenter", function () {
-    this.style.transform = "scale(1.1) rotate(5deg)";
-    this.style.filter =
-      "drop-shadow(0 10px 25px rgba(231, 76, 60, 0.5)) brightness(1.1)";
 
+  logoContainer.addEventListener("mouseenter", () => {
+    clanLogo.style.transform = "scale(1.08)";
+    clanLogo.style.filter =
+      "drop-shadow(0 10px 25px rgba(231, 76, 60, 0.45)) brightness(1.05)";
     createParticles();
   });
 
-  clanLogo.addEventListener("mouseleave", function () {
-    this.style.transform = "scale(1) rotate(0deg)";
-    this.style.filter = "drop-shadow(0 5px 15px rgba(231, 76, 60, 0.3))";
+  logoContainer.addEventListener("mouseleave", () => {
+    clanLogo.style.transform = "";
+    clanLogo.style.filter = "";
   });
 
-  clanLogo.addEventListener("click", function (e) {
-    e.preventDefault();
+  logoContainer.addEventListener("click", (e) => {
 
-    this.style.transform = "scale(0.95)";
+    clanLogo.style.transform = "scale(0.94)";
+    clanLogo.style.transition = "transform 0.15s ease";
 
     createRippleEffect(e.clientX, e.clientY);
 
     setTimeout(() => {
-      this.style.transform = "scale(1.1) rotate(5deg)";
-    }, 300);
+      clanLogo.style.transform = "scale(1.08)";
+      clanLogo.style.transition = "transform 0.4s cubic-bezier(0.34,1.56,0.64,1)";
+    }, 150);
   });
 
-  setInterval(() => {
-    if (!isElementHovered(clanLogo)) {
-      clanLogo.style.transform = "scale(1.05) rotate(2deg)";
 
+  setInterval(() => {
+    if (!clanLogo.matches(":hover")) {
+      clanLogo.style.transform = "scale(1.04) rotate(1deg)";
       setTimeout(() => {
-        if (!isElementHovered(clanLogo)) {
-          clanLogo.style.transform = "scale(1) rotate(0deg)";
+        if (!clanLogo.matches(":hover")) {
+          clanLogo.style.transform = "";
         }
-      }, 1000);
+      }, 1200);
     }
   }, 10000);
 
+
   animateBadges();
+
 
   animateSlogan();
 
-  function createParticles() {
-    const existingParticles = document.querySelectorAll(".particle");
-    existingParticles.forEach((p) => p.remove());
 
-    let particlesContainer = document.querySelector(".logo-particles");
-    if (!particlesContainer) {
-      particlesContainer = document.createElement("div");
-      particlesContainer.className = "logo-particles";
-      logoContainer.appendChild(particlesContainer);
-    }
+  function createParticles() {
+    // Limpiar partículas previas
+    const oldContainer = document.querySelector(".logo-particles");
+    if (oldContainer) oldContainer.remove();
+
+    const particlesContainer = document.createElement("div");
+    particlesContainer.className = "logo-particles";
+    logoContainer.appendChild(particlesContainer);
+
+    const fragment = document.createDocumentFragment();
+    const colors = [
+      "rgba(231, 76, 60, 0.8)",
+      "rgba(52, 152, 219, 0.8)",
+      "rgba(46, 204, 113, 0.8)",
+      "rgba(155, 89, 182, 0.8)",
+    ];
 
     for (let i = 0; i < 15; i++) {
       const particle = document.createElement("div");
@@ -62,57 +72,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const angle = Math.random() * Math.PI * 2;
       const distance = 80 + Math.random() * 60;
-      const x = Math.cos(angle) * distance;
-      const y = Math.sin(angle) * distance;
-
-      particle.style.left = "50%";
-      particle.style.top = "50%";
-      particle.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
-      particle.style.opacity = "0";
-
+      const tx = Math.cos(angle) * distance;
+      const ty = Math.sin(angle) * distance;
       const size = 2 + Math.random() * 4;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-
-      const colors = [
-        "rgba(231, 76, 60, 0.8)", 
-        "rgba(52, 152, 219, 0.8)", 
-        "rgba(46, 204, 113, 0.8)", 
-        "rgba(155, 89, 182, 0.8)", 
-      ];
       const color = colors[Math.floor(Math.random() * colors.length)];
-      particle.style.background = color;
-
       const duration = 2 + Math.random() * 2;
-      const delay = Math.random() * 1;
+      const delay = Math.random() * 0.8;
 
-      particle.style.animation = `particleFloat ${duration}s ease-out ${delay}s forwards`;
 
-      particlesContainer.appendChild(particle);
+      particle.style.cssText = `
+        left: 50%;
+        top: 50%;
+        width: ${size}px;
+        height: ${size}px;
+        background: ${color};
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) translate(${tx}px, ${ty}px) scale(0);
+        transition: opacity ${duration}s ease-out ${delay}s,
+                    transform ${duration}s ease-out ${delay}s;
+      `;
 
+      fragment.appendChild(particle);
+
+
+      requestAnimationFrame(() => {
+        particle.style.opacity = "1";
+        particle.style.transform = `translate(-50%, -50%) translate(${tx}px, ${ty}px) scale(1)`;
+      });
+
+
+      const removeDelay = (duration + delay) * 1000 + 200;
       setTimeout(() => {
-        if (particle.parentNode) {
-          particle.remove();
-        }
-      }, (duration + delay) * 1000);
+        if (particle.parentNode) particle.remove();
+      }, removeDelay);
     }
+
+    particlesContainer.appendChild(fragment);
+
+
+    setTimeout(() => {
+      if (particlesContainer.childElementCount === 0) {
+        particlesContainer.remove();
+      }
+    }, 5000);
   }
+
 
   function createRippleEffect(x, y) {
     const ripple = document.createElement("div");
     ripple.className = "ripple-effect";
-
-    ripple.style.position = "fixed";
-    ripple.style.width = "20px";
-    ripple.style.height = "20px";
-    ripple.style.borderRadius = "50%";
-    ripple.style.background =
-      "radial-gradient(circle, rgba(231, 76, 60, 0.6) 0%, transparent 70%)";
-    ripple.style.pointerEvents = "none";
-    ripple.style.zIndex = "1000";
     ripple.style.left = `${x - 10}px`;
     ripple.style.top = `${y - 10}px`;
-    ripple.style.transform = "scale(0)";
 
     document.body.appendChild(ripple);
 
@@ -125,101 +136,60 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1000,
         easing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
       }
-    );
-
-    setTimeout(() => {
-      if (ripple.parentNode) {
-        ripple.remove();
-      }
-    }, 1000);
+    ).onfinish = () => ripple.remove();
   }
 
+
   function animateBadges() {
-    const badges = document.querySelectorAll(".badge");
+    const badges = document.querySelectorAll(".clan-logo-section .badge");
 
     badges.forEach((badge, index) => {
-      badge.style.animationDelay = `${index * 0.2}s`;
-
       badge.style.opacity = "0";
       badge.style.transform = "translateY(20px)";
+      badge.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+      badge.style.transitionDelay = `${index * 0.15}s`;
 
-      setTimeout(() => {
-        badge.style.transition = "all 0.5s ease";
+      requestAnimationFrame(() => {
         badge.style.opacity = "1";
         badge.style.transform = "translateY(0)";
-      }, 300 + index * 200);
+      });
+
 
       setInterval(() => {
-        if (Math.random() > 0.7) {
+        if (Math.random() > 0.65) {
           badge.style.transform = "scale(1.05)";
-
           setTimeout(() => {
-            badge.style.transform = "scale(1)";
-          }, 300);
+            badge.style.transform = "";
+          }, 350);
         }
       }, 5000 + Math.random() * 5000);
     });
   }
 
+
   function animateSlogan() {
     const slogan = document.querySelector(".clan-slogan");
     if (!slogan) return;
 
-    const originalText = slogan.textContent;
-    const letters = originalText.split("");
-
+    const text = slogan.textContent.trim();
     slogan.textContent = "";
 
-    letters.forEach((letter, index) => {
+    const fragment = document.createDocumentFragment();
+
+    [...text].forEach((letter, i) => {
       const span = document.createElement("span");
       span.textContent = letter;
-      span.style.opacity = "0";
-      span.style.display = "inline-block";
-      span.style.animationDelay = `${index * 0.05}s`;
-
-      slogan.appendChild(span);
-
-      setTimeout(() => {
-        span.style.transition = "opacity 0.3s ease";
-        span.style.opacity = "1";
-
-        span.style.transform = "translateY(0)";
-      }, 1000 + index * 50);
+      span.style.animationDelay = `${0.04 * i}s`;
+      fragment.appendChild(span);
     });
+
+    slogan.appendChild(fragment);
 
     setInterval(() => {
       slogan.style.textShadow = "0 0 10px rgba(231, 76, 60, 0.5)";
-
       setTimeout(() => {
-        slogan.style.textShadow = "none";
-      }, 1000);
+        slogan.style.textShadow = "";
+      }, 1200);
     }, 15000);
   }
-
-  function isElementHovered(element) {
-    return element.matches(":hover");
-  }
-
-  const style = document.createElement("style");
-  style.textContent = `
-        @keyframes particleFloat {
-            0% {
-                opacity: 0;
-                transform: translate(-50%, -50%) translate(0, 0) scale(0);
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 0;
-                transform: translate(-50%, -50%) translate(${
-                  Math.random() * 100 - 50
-                }px, ${Math.random() * 100 - 50}px) scale(1);
-            }
-        }
-    `;
-  document.head.appendChild(style);
 });
