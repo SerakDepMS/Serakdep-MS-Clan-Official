@@ -256,14 +256,3 @@ function rechazarCookies() {
   document.getElementById('cookie-banner').style.display = 'none';
 
 }
-  document.addEventListener('DOMContentLoaded', function() {
-    var logo = document.getElementById('clan-logo');
-    if (logo && logo.play) {
-      logo.muted = true;
-      var promise = logo.play();
-      if (promise !== undefined) {
-        promise.catch(function() {
-        });
-      }
-    }
-  });
