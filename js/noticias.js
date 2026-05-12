@@ -239,7 +239,7 @@ function renderNews() {
             
             ${news.image ? `
             <div class="news-image-container">
-              <img src="${news.image}" alt="${news.title}" class="news-image" loading="lazy">
+              <img src="${news.image}" alt="${news.title}" class="news-image">
             </div>
             ` : ""}
             

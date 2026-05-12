@@ -5,7 +5,7 @@
   "content": "",
   "excerpt": "",
   "date": "2025-01-01",
-  "image": "https://i.imgur.com/IwAQI2z.png"",
+  "image": "image/clan-logo.png"",
   "important": false,
   "pinned": false,
   "views": 0,

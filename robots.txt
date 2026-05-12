@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Enlaces a tu sitemap
+Sitemap: https://serakdepms.github.io/Serakdep-MS-Clan-Official/sitemap.xml

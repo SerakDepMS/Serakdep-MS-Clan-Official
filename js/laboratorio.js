@@ -192,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
     const ext = file.name.split('.').pop().toLowerCase();
     if (imageExtensions.includes(ext)) {
-
       imagePreviewImg.src = file.content;
       imagePreviewName.textContent = file.name;
       imagePreviewModal.style.display = 'flex';
@@ -232,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   function updateFileTree() {
     const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
     fileTree.innerHTML = files.map(f => {
@@ -240,7 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const isImage = imageExtensions.includes(ext);
       let iconHtml = '';
       if (isImage) {
-
         iconHtml = `<img src="${f.content}" class="file-thumb" onerror="this.style.display='none'" />`;
       } else {
         const langIcon = f.language === 'html' ? 'html5' : f.language === 'css' ? 'css3-alt' : 'js';
@@ -335,6 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
     saveToLocal();
   }
 
+  // ========== FUNCIÓN updatePreview() CORREGIDA (Solución B - postMessage) ==========
   function updatePreview() {
     const htmlFile = files.find(f => f.language === 'html');
     const cssFile = files.find(f => f.language === 'css');
@@ -355,33 +353,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const originalLog = console.log;
     const originalError = console.error;
     const originalWarn = console.warn;
+    
     console.log = function(...args) {
-      parent.addConsoleEntry('log', args.join(' '));
+      window.parent.postMessage({ type: 'console', level: 'log', text: args.join(' ') }, '*');
       originalLog.apply(console, args);
     };
     console.error = function(...args) {
-      parent.addConsoleEntry('error', args.join(' '));
+      window.parent.postMessage({ type: 'console', level: 'error', text: args.join(' ') }, '*');
       originalError.apply(console, args);
     };
     console.warn = function(...args) {
-      parent.addConsoleEntry('warn', args.join(' '));
+      window.parent.postMessage({ type: 'console', level: 'warn', text: args.join(' ') }, '*');
       originalWarn.apply(console, args);
     };
+
+    window.onerror = function(message, source, lineno, colno, error) {
+      window.parent.postMessage({ type: 'console', level: 'error', text: message + ' (línea ' + lineno + ')' }, '*');
+      return true;
+    };
+
+    window.addEventListener('unhandledrejection', function(event) {
+      window.parent.postMessage({ type: 'console', level: 'error', text: 'Promesa rechazada: ' + event.reason }, '*');
+    });
   })();
-
-  window.onerror = function(message, source, lineno, colno, error) {
-    parent.addConsoleEntry('error', message + ' (línea ' + lineno + ')');
-    return true;
-  };
-
-  window.addEventListener('unhandledrejection', function(event) {
-    parent.addConsoleEntry('error', 'Promesa rechazada: ' + event.reason);
-  });
 
   try {
     new Function(\`${js.replace(/`/g, '\\`').replace(/\\/g, '\\\\')}\`)();
   } catch (error) {
-    parent.addConsoleEntry('error', error.name + ': ' + error.message);
+    window.parent.postMessage({ type: 'console', level: 'error', text: error.name + ': ' + error.message }, '*');
   }
 <\/script>
 </body>
@@ -390,16 +389,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const blob = new Blob([fullCode], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     previewFrame.src = url;
-
-    previewFrame.onload = () => {
-      try {
-        const iframeWin = previewFrame.contentWindow;
-        iframeWin.console.log = (...args) => addConsoleEntry('log', args.join(' '));
-        iframeWin.console.error = (...args) => addConsoleEntry('error', args.join(' '));
-        iframeWin.console.warn = (...args) => addConsoleEntry('warn', args.join(' '));
-      } catch (e) {}
-    };
+    // Ya no se necesita el onload para interceptar la consola
   }
+
+  // Listener para recibir mensajes del iframe (postMessage)
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'console') {
+      addConsoleEntry(event.data.level, event.data.text);
+    }
+  });
 
   window.addConsoleEntry = addConsoleEntry;
 
@@ -776,7 +774,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   function readFileAsDataURL(file) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -864,7 +861,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   function initEnvironment() {
     if (!loadFromLocal()) {
       files.forEach(f => createEditor(f));
@@ -884,7 +880,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initDragDrop();
     loadWikiData(wikiContent, showWiki);
   }
-
 
   enterBtn.addEventListener('click', () => {
     lobby.style.display = 'none';
@@ -985,7 +980,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   projectsModal.addEventListener('click', (e) => { if (e.target === projectsModal) projectsModal.style.display = 'none'; });
 
-  // Cerrar modal de imagen
   btnCloseImagePreview.addEventListener('click', () => {
     imagePreviewModal.style.display = 'none';
   });
@@ -994,7 +988,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnLoadFile.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', async (e) => {
+  fileInput.addEventListener('change', async (e) => {
     const selectedFiles = Array.from(e.target.files);
     if (selectedFiles.length === 0) return;
     let firstNewFileId = null;

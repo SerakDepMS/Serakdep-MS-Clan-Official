@@ -1,6 +1,3 @@
-// ==========================================
-// FUNCIONES AUXILIARES DE COOKIES
-// ==========================================
 function setCookie(name, value, days) {
   const expires = new Date();
   expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -13,9 +10,7 @@ function getCookie(name) {
 }
 
 
-// ==========================================
-// CLASE PRINCIPAL DEL REPRODUCTOR DE VIDEO
-// ==========================================
+
 class VideoPlayerFinal {
   constructor() {
     this.video = document.getElementById("main-video");
@@ -133,12 +128,12 @@ class VideoPlayerFinal {
   init() {
     this.setupElements();
     this.setupEventListeners();
-    this.loadSavedVolume(); // 🍪 Cargar volumen guardado
+    this.loadSavedVolume();
     this.loadVideo(this.currentVideoIndex);
     this.updateCounter();
   }
 
-  // 🍪 Cargar preferencia de volumen desde la cookie
+
   loadSavedVolume() {
     const savedVolume = getCookie('sms_volume');
     if (savedVolume !== null) {
@@ -156,9 +151,9 @@ class VideoPlayerFinal {
     }
   }
 
-  // 🍪 Guardar preferencia de volumen en cookie
+
   saveVolume(vol) {
-    setCookie('sms_volume', vol.toString(), 180); // 180 días = ~6 meses
+    setCookie('sms_volume', vol.toString(), 180);
   }
 
   setupElements() {
@@ -367,7 +362,7 @@ class VideoPlayerFinal {
       this.onMetadataLoaded()
     );
     this.video.addEventListener("timeupdate", () => this.updateProgress());
-    // 🍪 Guardar volumen cuando cambie directamente en el elemento video
+
     this.video.addEventListener("volumechange", () => {
       if (!this.volumeSlider || document.activeElement !== this.volumeSlider) {
         this.volume = this.video.volume;
@@ -715,7 +710,7 @@ class VideoPlayerFinal {
       if (this.currentPlayPromise !== undefined) {
         this.currentPlayPromise.catch((error) => {
           if (error.name !== 'AbortError') {
-            console.log("Autoplay falló:", error);
+            //console.log("Autoplay bloqueado por el navegador (normal)");
             this.showCenterPlayButton();
           }
         });
@@ -774,12 +769,18 @@ class VideoPlayerFinal {
   changeVolume(value) {
     this.volume = parseFloat(value);
     this.video.volume = this.volume;
-    this.video.muted = this.volume === 0;
+    
+
+    if (this.volume > 0 && (this.video.played.length > 0 || !this.video.paused)) {
+      this.video.muted = false;
+    } else {
+      this.video.muted = (this.volume === 0);
+    }
 
     this.updateVolumeIcon();
     this.updateVolumePercentage();
 
-    // 🍪 Guardar volumen al cambiar desde el slider
+
     this.saveVolume(this.volume);
 
     if (this.volume > 0) {
@@ -943,16 +944,19 @@ class VideoPlayerFinal {
   }
 
   handleTouchProgress(e) {
+
+  if (e.cancelable) {
     e.preventDefault();
-    if (!this.video.duration) return;
-
-    const rect = this.progressTrack.getBoundingClientRect();
-    const touch = e.touches[0];
-    const pos = (touch.clientX - rect.left) / rect.width;
-
-    const clampedPos = Math.max(0, Math.min(1, pos));
-    this.video.currentTime = clampedPos * this.video.duration;
   }
+  if (!this.video.duration) return;
+
+  const rect = this.progressTrack.getBoundingClientRect();
+  const touch = e.touches[0];
+  const pos = (touch.clientX - rect.left) / rect.width;
+
+  const clampedPos = Math.max(0, Math.min(1, pos));
+  this.video.currentTime = clampedPos * this.video.duration;
+}
 
   setupTouchGestures() {
     let touchStartX = 0;
