@@ -256,3 +256,42 @@ function rechazarCookies() {
   document.getElementById('cookie-banner').style.display = 'none';
 
 }
+
+
+(function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  
+  if (!themeToggle || !themeIcon) return;
+  
+  const savedTheme = getCookie('sms_theme') || localStorage.getItem('sms_theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    setCookie('sms_theme', isDark ? 'dark' : 'light', 180);
+    localStorage.setItem('sms_theme', isDark ? 'dark' : 'light');
+    
+    themeIcon.classList.toggle('fa-moon', !isDark);
+    themeIcon.classList.toggle('fa-sun', isDark);
+  });
+})();
+
+
+function setCookie(name, value, days) {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+}
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+  return match ? match[2] : null;
+}
+
+

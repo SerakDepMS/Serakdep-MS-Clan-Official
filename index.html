@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="css/creditos.css" />
     <link rel="stylesheet" href="css/loading.css" />
     <link rel="stylesheet" href="css/chatbot.css" />
+    <link rel="stylesheet" href="css/contador.css" />
 
 
     <link
@@ -274,6 +275,9 @@
             <li><a href="noticias.html">Noticias</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="creditos.html">Créditos</a></li>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Cambiar tema" aria-label="Cambiar entre tema claro y oscuro">
+              <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
           </ul>
         </nav>
       </div>
@@ -727,6 +731,183 @@
           </p>
         </div>
 
+
+<div class="card fade-in" style="text-align: center;">
+  <h2 class="card-title">
+    <i class="fas fa-hourglass-half"></i> Tiempo de Nuestro Clan
+  </h2>
+  <p style="font-size: 1.1rem; color: #555; margin-bottom: 25px;">
+    Desde nuestra fundación en <strong>enero de 2023</strong>, hemos crecido sin parar.
+  </p>
+  
+  <div id="clan-counter" style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin: 20px 0;
+  ">
+
+    <div class="counter-box" style="
+      background: linear-gradient(135deg, #e9f5eb 0%, #d4edda 100%);
+      border-radius: 15px;
+      padding: 18px 20px;
+      min-width: 110px;
+      box-shadow: 0 5px 15px rgba(27, 67, 50, 0.1);
+      border: 1px solid rgba(64, 145, 108, 0.15);
+    ">
+      <span id="counter-years" style="
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1;
+      ">0</span>
+      <span style="
+        display: block;
+        font-size: 0.9rem;
+        color: var(--secondary-green);
+        font-weight: 600;
+        margin-top: 5px;
+      ">Años</span>
+    </div>
+
+
+    <div class="counter-box" style="
+      background: linear-gradient(135deg, #e9f5eb 0%, #d4edda 100%);
+      border-radius: 15px;
+      padding: 18px 20px;
+      min-width: 110px;
+      box-shadow: 0 5px 15px rgba(27, 67, 50, 0.1);
+      border: 1px solid rgba(64, 145, 108, 0.15);
+    ">
+      <span id="counter-months" style="
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1;
+      ">0</span>
+      <span style="
+        display: block;
+        font-size: 0.9rem;
+        color: var(--secondary-green);
+        font-weight: 600;
+        margin-top: 5px;
+      ">Meses</span>
+    </div>
+
+
+    <div class="counter-box" style="
+      background: linear-gradient(135deg, #e9f5eb 0%, #d4edda 100%);
+      border-radius: 15px;
+      padding: 18px 20px;
+      min-width: 110px;
+      box-shadow: 0 5px 15px rgba(27, 67, 50, 0.1);
+      border: 1px solid rgba(64, 145, 108, 0.15);
+    ">
+      <span id="counter-days" style="
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1;
+      ">0</span>
+      <span style="
+        display: block;
+        font-size: 0.9rem;
+        color: var(--secondary-green);
+        font-weight: 600;
+        margin-top: 5px;
+      ">Días</span>
+    </div>
+
+
+    <div class="counter-box" style="
+      background: linear-gradient(135deg, #e9f5eb 0%, #d4edda 100%);
+      border-radius: 15px;
+      padding: 18px 20px;
+      min-width: 110px;
+      box-shadow: 0 5px 15px rgba(27, 67, 50, 0.1);
+      border: 1px solid rgba(64, 145, 108, 0.15);
+    ">
+      <span id="counter-hours" style="
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1;
+      ">0</span>
+      <span style="
+        display: block;
+        font-size: 0.9rem;
+        color: var(--secondary-green);
+        font-weight: 600;
+        margin-top: 5px;
+      ">Horas</span>
+    </div>
+
+
+    <div class="counter-box" style="
+      background: linear-gradient(135deg, #e9f5eb 0%, #d4edda 100%);
+      border-radius: 15px;
+      padding: 18px 20px;
+      min-width: 110px;
+      box-shadow: 0 5px 15px rgba(27, 67, 50, 0.1);
+      border: 1px solid rgba(64, 145, 108, 0.15);
+    ">
+      <span id="counter-minutes" style="
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1;
+      ">0</span>
+      <span style="
+        display: block;
+        font-size: 0.9rem;
+        color: var(--secondary-green);
+        font-weight: 600;
+        margin-top: 5px;
+      ">Minutos</span>
+    </div>
+
+
+    <div class="counter-box" style="
+      background: linear-gradient(135deg, #e9f5eb 0%, #d4edda 100%);
+      border-radius: 15px;
+      padding: 18px 20px;
+      min-width: 110px;
+      box-shadow: 0 5px 15px rgba(27, 67, 50, 0.1);
+      border: 1px solid rgba(64, 145, 108, 0.15);
+    ">
+      <span id="counter-seconds" style="
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1;
+      ">0</span>
+      <span style="
+        display: block;
+        font-size: 0.9rem;
+        color: var(--secondary-green);
+        font-weight: 600;
+        margin-top: 5px;
+      ">Segundos</span>
+    </div>
+  </div>
+
+  <p style="
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+  ">
+    <i class="fas fa-clock"></i> 
+    Fundado el <strong>1 de enero de 2023</strong> · Actualizado en tiempo real
+  </p>
+</div>
 
         <div class="card fade-in">
           <h2 class="card-title">
@@ -1199,5 +1380,6 @@
     <script src="js/loading.js"></script>
     <script src="js/chatbot.js"></script> 
     <script src="js/scroll-reveal.js"></script> 
+    <script src="js/contador.js"></script>
   </body>
 </html> 

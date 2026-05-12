@@ -1388,3 +1388,113 @@ li {
     font-size: 1.6rem;
   }
 }
+
+
+body.dark-theme {
+  --background-gradient: linear-gradient(135deg, #0d1f14 0%, #0a1610 100%);
+  color: #e0e0e0;
+}
+
+body.dark-theme .card,
+body.dark-theme .gallery-card,
+body.dark-theme .testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .card-title {
+  color: #a8d5be;
+}
+
+body.dark-theme .error-message,
+body.dark-theme p {
+  color: #ccc;
+}
+
+body.dark-theme .badge {
+  background: rgba(64, 145, 108, 0.3);
+  color: #a8d5be;
+}
+
+body.dark-theme .faq-question {
+  color: #a8d5be;
+}
+
+body.dark-theme .faq-answer {
+  color: #bbb;
+}
+
+body.dark-theme table th {
+  background: rgba(64, 145, 108, 0.2);
+  color: #a8d5be;
+}
+
+body.dark-theme table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ddd;
+}
+
+body.dark-theme .alert-info {
+  background: rgba(23, 162, 184, 0.15);
+  color: #8ed1e0;
+  border-color: rgba(23, 162, 184, 0.4);
+}
+
+body.dark-theme .alert-warning {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffd54f;
+  border-color: rgba(255, 193, 7, 0.4);
+}
+
+body.dark-theme .btn-outline {
+  border-color: #a8d5be;
+  color: #a8d5be;
+}
+
+body.dark-theme .btn-outline:hover {
+  background: #a8d5be;
+  color: #0d1f14;
+}
+
+body.dark-theme .feature-item {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .feature-item h3 {
+  color: #a8d5be;
+}
+
+body.dark-theme .feature-item p {
+  color: #bbb;
+}
+
+body.dark-theme .badge {
+  background: linear-gradient(135deg, rgba(64, 145, 108, 0.3) 0%, rgba(45, 106, 79, 0.3) 100%);
+  color: #a8d5be;
+}
+
+body.dark-theme .theme-toggle-btn {
+  color: #a8d5be;
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

@@ -1,3 +1,21 @@
+// ==========================================
+// FUNCIONES AUXILIARES DE COOKIES
+// ==========================================
+function setCookie(name, value, days) {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+}
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+  return match ? match[2] : null;
+}
+
+
+// ==========================================
+// CLASE PRINCIPAL DEL REPRODUCTOR DE VIDEO
+// ==========================================
 class VideoPlayerFinal {
   constructor() {
     this.video = document.getElementById("main-video");
@@ -115,9 +133,32 @@ class VideoPlayerFinal {
   init() {
     this.setupElements();
     this.setupEventListeners();
+    this.loadSavedVolume(); // 🍪 Cargar volumen guardado
     this.loadVideo(this.currentVideoIndex);
     this.updateCounter();
+  }
 
+  // 🍪 Cargar preferencia de volumen desde la cookie
+  loadSavedVolume() {
+    const savedVolume = getCookie('sms_volume');
+    if (savedVolume !== null) {
+      const vol = parseFloat(savedVolume);
+      if (!isNaN(vol) && vol >= 0 && vol <= 1) {
+        this.volume = vol;
+        this.video.volume = vol;
+        this.video.muted = (vol === 0);
+        if (this.volumeSlider) {
+          this.volumeSlider.value = vol;
+        }
+        this.updateVolumeIcon();
+        this.updateVolumePercentage();
+      }
+    }
+  }
+
+  // 🍪 Guardar preferencia de volumen en cookie
+  saveVolume(vol) {
+    setCookie('sms_volume', vol.toString(), 180); // 180 días = ~6 meses
   }
 
   setupElements() {
@@ -185,7 +226,9 @@ class VideoPlayerFinal {
     this.createFullscreenElements();
 
     this.video.volume = this.volume;
-    this.volumeSlider.value = this.volume;
+    if (this.volumeSlider) {
+      this.volumeSlider.value = this.volume;
+    }
     this.updateVolumePercentage();
 
     this.counterTotal.textContent = this.videoList.length;
@@ -324,6 +367,18 @@ class VideoPlayerFinal {
       this.onMetadataLoaded()
     );
     this.video.addEventListener("timeupdate", () => this.updateProgress());
+    // 🍪 Guardar volumen cuando cambie directamente en el elemento video
+    this.video.addEventListener("volumechange", () => {
+      if (!this.volumeSlider || document.activeElement !== this.volumeSlider) {
+        this.volume = this.video.volume;
+        this.saveVolume(this.volume);
+        if (this.volumeSlider) {
+          this.volumeSlider.value = this.volume;
+        }
+        this.updateVolumeIcon();
+        this.updateVolumePercentage();
+      }
+    });
 
     this.speedOptions.forEach((option) => {
       option.addEventListener("click", () => this.changePlaybackSpeed(option));
@@ -343,10 +398,9 @@ class VideoPlayerFinal {
     this.downloadVideoBtn.addEventListener("click", () => this.downloadVideo());
     this.shareVideoBtn.addEventListener("click", () => this.shareVideo());
 
-
-
     document.addEventListener("click", (e) => {
       if (
+        this.volumeSliderContainer &&
         !this.volumeSliderContainer.contains(e.target) &&
         !this.volumeToggle.contains(e.target) &&
         !this.mobileVolumeBtn.contains(e.target)
@@ -374,11 +428,13 @@ class VideoPlayerFinal {
       }
     });
 
-    this.fullscreenOverlay.addEventListener("click", (e) => {
-      if (e.target === this.fullscreenOverlay) {
-        this.toggleFullscreen();
-      }
-    });
+    if (this.fullscreenOverlay) {
+      this.fullscreenOverlay.addEventListener("click", (e) => {
+        if (e.target === this.fullscreenOverlay) {
+          this.toggleFullscreen();
+        }
+      });
+    }
 
     this.setupTouchGestures();
     this.setupDoubleTap();
@@ -623,7 +679,6 @@ class VideoPlayerFinal {
   loadVideo(index) {
     if (index < 0 || index >= this.videoList.length) return;
 
-
     if (this.currentPlayPromise && typeof this.currentPlayPromise.abort === 'function') {
       this.currentPlayPromise.abort();
     }
@@ -632,7 +687,6 @@ class VideoPlayerFinal {
     const videoData = this.videoList[index];
 
     this.showLoading();
-
 
     this.video.pause();
 
@@ -660,7 +714,6 @@ class VideoPlayerFinal {
       this.currentPlayPromise = this.video.play();
       if (this.currentPlayPromise !== undefined) {
         this.currentPlayPromise.catch((error) => {
-
           if (error.name !== 'AbortError') {
             console.log("Autoplay falló:", error);
             this.showCenterPlayButton();
@@ -725,6 +778,9 @@ class VideoPlayerFinal {
 
     this.updateVolumeIcon();
     this.updateVolumePercentage();
+
+    // 🍪 Guardar volumen al cambiar desde el slider
+    this.saveVolume(this.volume);
 
     if (this.volume > 0) {
       this.soundIndicator.classList.add("active");
@@ -1041,8 +1097,6 @@ class VideoPlayerFinal {
 
     setTimeout(() => this.nextVideo(), 2000);
   }
-
-
 
   toggleMute() {
     this.isMuted = !this.isMuted;
