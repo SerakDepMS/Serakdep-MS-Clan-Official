@@ -144,7 +144,6 @@
                   <td style="padding: 12px; vertical-align: top;">Necesarias para el funcionamiento básico del sitio. Sin ellas, algunas funcionalidades podrían no estar disponibles.</td>
                   <td style="padding: 12px; vertical-align: top;">
                     • Aceptación de la política de cookies (cookie de consentimiento).<br>
-                    • Datos de sesión del chatbot IA.
                   </td>
                   <td style="padding: 12px; vertical-align: top;">De sesión o persistentes (máx. 1 año)</td>
                 </tr>
@@ -152,7 +151,6 @@
                   <td style="padding: 12px; vertical-align: top;"><strong>Cookies de Funcionalidad</strong></td>
                   <td style="padding: 12px; vertical-align: top;">Permiten recordar tus preferencias y elecciones para ofrecerte una experiencia más personalizada. No recopilan información personal.</td>
                   <td style="padding: 12px; vertical-align: top;">
-                    • Recordar la última pestaña visitada en FAQ.<br>
                     • Guardar el volumen del reproductor de video.<br>
                     • Preferencias del editor en SMS Studios.
                   </td>
@@ -222,7 +220,7 @@
 
           <h3><i class="fas fa-cubes"></i> CDNs (Redes de Distribución de Contenido)</h3>
           <p>
-            Para optimizar la carga de recursos (iconos, fuentes, scripts), utilizamos CDNs como <strong>Cloudflare CDN (cdnjs.cloudflare.com)</strong> y <strong>jsDelivr (cdn.jsdelivr.net)</strong>. Estos servicios pueden instalar cookies técnicas necesarias para garantizar la seguridad y el rendimiento de la entrega de archivos estáticos.
+            Para optimizar la carga de recursos (iconos, fuentes, scripts), utilizamos CDNs como <strong>Cloudflare CDN (cdnjs.cloudflare.com)</strong>. Estos servicios pueden instalar cookies técnicas necesarias para garantizar la seguridad y el rendimiento de la entrega de archivos estáticos.
           </p>
 
           <h3><i class="fas fa-envelope"></i> EmailJS</h3>
@@ -513,6 +511,93 @@
         </div>
       </div>
     </footer>
+    <!-- Botón de Preferencias (flotante, arriba del chatbot) -->
+<button id="preferences-toggle" class="preferences-float-btn" title="Preferencias" aria-label="Abrir panel de preferencias">
+  <i class="fas fa-sliders-h"></i>
+</button>
+
+<!-- Panel de Preferencias -->
+<div id="preferences-panel" class="preferences-overlay" style="display: none;">
+  <div class="preferences-modal">
+    <div class="preferences-header">
+      <h3><i class="fas fa-sliders-h"></i> Preferencias</h3>
+      <button id="preferences-close" class="preferences-close-btn" title="Cerrar">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="preferences-body">
+      
+      <!-- Tema -->
+      <div class="pref-section">
+        <h4><i class="fas fa-palette"></i> Tema</h4>
+        <div class="pref-options">
+          <button class="pref-option active" data-pref="theme" data-value="light">
+            <i class="fas fa-sun"></i> Claro
+          </button>
+          <button class="pref-option" data-pref="theme" data-value="dark">
+            <i class="fas fa-moon"></i> Oscuro
+          </button>
+          <button class="pref-option" data-pref="theme" data-value="auto">
+            <i class="fas fa-sync-alt"></i> Automático
+          </button>
+        </div>
+      </div>
+
+      <!-- Tamaño de fuente -->
+      <div class="pref-section">
+        <h4><i class="fas fa-font"></i> Tamaño de fuente</h4>
+        <div class="pref-options">
+          <button class="pref-option" data-pref="fontSize" data-value="small">
+            <i class="fas fa-font"></i><small> Pequeño</small>
+          </button>
+          <button class="pref-option active" data-pref="fontSize" data-value="medium">
+            <i class="fas fa-font"></i> Mediano
+          </button>
+          <button class="pref-option" data-pref="fontSize" data-value="large">
+            <i class="fas fa-font"></i><strong> Grande</strong>
+          </button>
+        </div>
+      </div>
+
+      <!-- Animaciones -->
+      <div class="pref-section">
+        <h4><i class="fas fa-film"></i> Animaciones</h4>
+        <div class="pref-options">
+          <button class="pref-option active" data-pref="animations" data-value="enabled">
+            <i class="fas fa-play"></i> Activadas
+          </button>
+          <button class="pref-option" data-pref="animations" data-value="reduced">
+            <i class="fas fa-pause"></i> Reducidas
+          </button>
+        </div>
+      </div>
+
+      <!-- Densidad -->
+      <div class="pref-section">
+        <h4><i class="fas fa-th-large"></i> Densidad</h4>
+        <div class="pref-options">
+          <button class="pref-option" data-pref="density" data-value="compact">
+            <i class="fas fa-compress"></i> Compacta
+          </button>
+          <button class="pref-option active" data-pref="density" data-value="normal">
+            <i class="fas fa-th"></i> Normal
+          </button>
+          <button class="pref-option" data-pref="density" data-value="spacious">
+            <i class="fas fa-expand"></i> Espaciosa
+          </button>
+        </div>
+      </div>
+
+      <!-- Restablecer -->
+      <div class="pref-section">
+        <button id="preferences-reset" class="pref-reset-btn">
+          <i class="fas fa-undo-alt"></i> Restablecer valores por defecto
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
     <script src="js/main.js"></script>
     <script src="js/redirect.js"></script>
     <script src="js/chatbot.js"></script>
