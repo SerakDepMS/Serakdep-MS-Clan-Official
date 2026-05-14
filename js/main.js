@@ -300,13 +300,13 @@ function getCookie(name) {
     '#d4af37', '#f1c40f', '#f39c12',
     '#95d5b2', '#52b788', '#40916c', '#2d6a4f'
   ];
-  const MAX_PARTICLES = 40; // Reducido de 60 a 40 para aligerar aún más
+  const MAX_PARTICLES = 40;
   let particles = [];
   let canvas, ctx, animationId;
   let resizeTimer;
 
   function createParticle() {
-    const size = Math.random() * 3.5 + 1.5; // Ligeramente más pequeñas
+    const size = Math.random() * 3.5 + 1.5;
     const color = COLORS[Math.floor(Math.random() * COLORS.length)];
     return {
       x: Math.random() * canvas.width,
@@ -352,12 +352,12 @@ function getCookie(name) {
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    particles.length = 0; // Reiniciamos las partículas
+    particles.length = 0;
   }
 
   function debouncedResize() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(resizeCanvas, 150); // Solo redimensiona 150ms después del último evento
+    resizeTimer = setTimeout(resizeCanvas, 150);
   }
 
   function initParticleRain() {
