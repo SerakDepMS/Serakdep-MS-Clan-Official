@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function createParticles() {
-    // Limpiar partículas previas
+
     const oldContainer = document.querySelector(".logo-particles");
     if (oldContainer) oldContainer.remove();
 

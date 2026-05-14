@@ -332,14 +332,26 @@ document.addEventListener('DOMContentLoaded', () => {
     saveToLocal();
   }
 
-  // ========== FUNCIÓN updatePreview() CORREGIDA (Solución B - postMessage) ==========
-  function updatePreview() {
+
+    function updatePreview() {
     const htmlFile = files.find(f => f.language === 'html');
     const cssFile = files.find(f => f.language === 'css');
     const jsFile = files.find(f => f.language === 'js');
-    const html = htmlFile ? htmlFile.content : '';
+    let html = htmlFile ? htmlFile.content : '';
     const css = cssFile ? cssFile.content : '';
     const js = jsFile ? jsFile.content : '';
+
+
+    files.forEach(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+        if (imageExtensions.includes(ext) && f.content.startsWith('data:image')) {
+
+            const escapedName = f.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(["'\\(])${escapedName}(["'\\)])`, 'g');
+            html = html.replace(regex, `$1${f.content}$2`);
+        }
+    });
 
     const fullCode = `<!DOCTYPE html>
 <html>
@@ -389,10 +401,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const blob = new Blob([fullCode], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     previewFrame.src = url;
-    // Ya no se necesita el onload para interceptar la consola
   }
 
-  // Listener para recibir mensajes del iframe (postMessage)
+
   window.addEventListener('message', function(event) {
     if (event.data && event.data.type === 'console') {
       addConsoleEntry(event.data.level, event.data.text);
@@ -451,24 +462,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const css = cssFiles.map(f => f.content).join('\n');
     const js = jsFiles.map(f => f.content).join('\n');
 
-    if (css.trim()) {
-      const styleTag = `  <style>\n${css}\n  </style>`;
-      if (html.includes('</head>')) {
-        html = html.replace('</head>', `${styleTag}\n</head>`);
-      } else if (html.includes('<body>')) {
-        html = html.replace('<body>', `<head>\n${styleTag}\n</head>\n<body>`);
-      } else {
-        html = html.replace('<html>', `<html>\n<head>\n${styleTag}\n</head>`);
-      }
+    // Reemplazar nombres de imagen por Data URLs (ya lo tienes)
+    files.forEach(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+        if (imageExtensions.includes(ext) && f.content.startsWith('data:image')) {
+            const escapedName = f.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(["'\\(])${escapedName}(["'\\)])`, 'g');
+            html = html.replace(regex, `$1${f.content}$2`);
+        }
+    });
+
+    // Si el HTML no contiene una estructura completa (<!DOCTYPE html> o <html>), la creamos
+    const isFullDocument = /<(!doctype|html)[^>]*>/i.test(html);
+    if (!isFullDocument) {
+        html = `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto SMS Studios</title>\n</head>\n<body>\n${html}\n</body>\n</html>`;
     }
 
+    // Insertar CSS dentro de <style> en el <head>
+    if (css.trim()) {
+        const styleTag = `  <style>\n${css}\n  </style>`;
+        if (html.includes('</head>')) {
+            html = html.replace('</head>', `${styleTag}\n</head>`);
+        } else if (html.includes('<body>')) {
+            html = html.replace('<body>', `<head>\n${styleTag}\n</head>\n<body>`);
+        } else {
+            html = html.replace('<html>', `<html>\n<head>\n${styleTag}\n</head>`);
+        }
+    }
+
+    // Insertar JS dentro de <script> antes de </body>
     if (js.trim()) {
-      const scriptTag = `  <script>\n${js}\n  </script>`;
-      if (html.includes('</body>')) {
-        html = html.replace('</body>', `${scriptTag}\n</body>`);
-      } else {
-        html += `\n${scriptTag}`;
-      }
+        const scriptTag = `  <script>\n${js}\n  </script>`;
+        if (html.includes('</body>')) {
+            html = html.replace('</body>', `${scriptTag}\n</body>`);
+        } else {
+            html += `\n${scriptTag}`;
+        }
     }
 
     const blob = new Blob([html], { type: 'text/html' });
@@ -478,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
     a.download = 'proyecto-sms.html';
     a.click();
     URL.revokeObjectURL(url);
-  }
+}
 
   function resetToDefault() {
     if (!confirm('¿Restaurar los archivos de ejemplo originales? Se perderán los cambios no guardados.')) return;
@@ -1037,11 +1067,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const htmlFile = files.find(f => f.language === 'html');
     const cssFile = files.find(f => f.language === 'css');
     const jsFile = files.find(f => f.language === 'js');
-    const fullCode = `<!DOCTYPE html><html><head><style>${cssFile?.content || ''}</style></head><body>${htmlFile?.content || ''}<script>${jsFile?.content || ''}<\/script></body></html>`;
+    let html = htmlFile?.content || '';
+
+
+    files.forEach(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
+        if (imageExtensions.includes(ext) && f.content.startsWith('data:image')) {
+            const escapedName = f.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(["'\\(])${escapedName}(["'\\)])`, 'g');
+            html = html.replace(regex, `$1${f.content}$2`);
+        }
+    });
+
+    const fullCode = `<!DOCTYPE html><html><head><style>${cssFile?.content || ''}</style></head><body>${html}<script>${jsFile?.content || ''}<\/script></body></html>`;
     const newWin = window.open('', '_blank');
     newWin.document.write(fullCode);
     newWin.document.close();
-  });
+});
 
   consoleInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
