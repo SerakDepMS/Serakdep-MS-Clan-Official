@@ -339,3 +339,122 @@
     font-size: 0.85rem;
   }
 }
+
+
+body.dark-theme .search-box i {
+  color: #a0a0a0;
+}
+
+body.dark-theme #faq-search {
+  background: #1a1f1c;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-theme #faq-search:focus {
+  border-color: #5dade2;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+body.dark-theme .search-results-count {
+  background: #5dade2;
+}
+
+body.dark-theme .faq-category-btn {
+  background: #1a1f1c;
+  border-color: #444;
+  color: #d5d5d5;
+}
+
+body.dark-theme .faq-category-btn:hover {
+  background: #2a2f2c;
+  border-color: #5dade2;
+}
+
+body.dark-theme .faq-category-btn.active {
+  background: #5dade2;
+  border-color: #5dade2;
+  color: white;
+}
+
+body.dark-theme .faq-category-title {
+  color: #f0e6c5;
+  border-bottom-color: #5dade2;
+}
+
+body.dark-theme .faq-category-title i {
+  color: #5dade2;
+}
+
+body.dark-theme .faq-item {
+  border-color: #444;
+}
+
+body.dark-theme .faq-item.active {
+  border-color: #5dade2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .faq-question {
+  background: #1a1f1c;
+}
+
+body.dark-theme .faq-question:hover {
+  background: #2a2f2c;
+}
+
+body.dark-theme .faq-question i:first-child {
+  color: #5dade2;
+}
+
+body.dark-theme .faq-question span {
+  color: #f0e6c5;
+}
+
+body.dark-theme .faq-arrow {
+  color: #a0a0a0;
+}
+
+body.dark-theme .faq-item.active .faq-arrow {
+  color: #5dade2;
+}
+
+body.dark-theme .faq-answer {
+  background: #121815;
+}
+
+body.dark-theme .faq-answer p,
+body.dark-theme .faq-answer ul,
+body.dark-theme .faq-answer ol {
+  color: #d5d5d5;
+}
+
+body.dark-theme .faq-answer strong {
+  color: #f0e6c5;
+}
+
+body.dark-theme .game-item {
+  background: #1a1f1c;
+  border-color: #444;
+}
+
+body.dark-theme .game-item:hover {
+  border-color: #5dade2;
+}
+
+body.dark-theme .game-item i {
+  color: #5dade2;
+}
+
+body.dark-theme .game-item span {
+  color: #d5d5d5;
+}
+
+body.dark-theme .faq-support {
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
+}
+
+body.dark-theme .btn-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+}

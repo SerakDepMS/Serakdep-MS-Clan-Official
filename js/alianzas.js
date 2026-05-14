@@ -176,3 +176,5 @@ function renderizarAlianzas() {
 document.addEventListener("DOMContentLoaded", () => {
   renderizarAlianzas();
 });
+
+

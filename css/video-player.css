@@ -855,3 +855,190 @@
     font-size: 1.3rem;
   }
 }
+
+
+body.dark-theme .video-player {
+  background: rgba(20, 25, 22, 0.92);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .video-controls-panel {
+  background: rgba(15, 20, 17, 0.95);
+  border-top-color: rgba(212, 175, 55, 0.25);
+}
+
+body.dark-theme .video-current-title {
+  color: #f0e6c5;
+}
+
+body.dark-theme .video-current-description {
+  color: #b5b5b5;
+}
+
+body.dark-theme .progress-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .progress-slider {
+  background: linear-gradient(90deg, #2d6a4f, #d4af37);
+}
+
+body.dark-theme .slider-thumb {
+  background: #d4af37;
+  border-color: #2d6a4f;
+}
+
+body.dark-theme .time-indicators {
+  color: #b5b5b5;
+}
+
+body.dark-theme .control-button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #d5d5d5;
+}
+
+body.dark-theme .control-button:hover {
+  background: rgba(45, 106, 79, 0.25);
+  border-color: #d4af37;
+  color: #f0e6c5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .main-play-button {
+  background: linear-gradient(145deg, #1e3c2c, #2a5a3a);
+  border-color: #d4af37;
+  color: white;
+}
+
+body.dark-theme .main-play-button.playing {
+  background: linear-gradient(145deg, #c0392b, #e74c3c);
+  border-color: #f1c40f;
+}
+
+body.dark-theme .nav-button {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .video-counter-display {
+  background: #1a2e1f;
+  border-color: rgba(212, 175, 55, 0.4);
+  color: white;
+}
+
+body.dark-theme .counter-separator {
+  color: #d4af37;
+}
+
+body.dark-theme .function-button {
+  background: rgba(45, 106, 79, 0.15);
+  color: #d5d5d5;
+}
+
+body.dark-theme .action-button {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #f0e6c5;
+}
+
+body.dark-theme .touch-control-button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #d5d5d5;
+}
+
+body.dark-theme .touch-control-button:hover,
+body.dark-theme .touch-control-button:active {
+  background: rgba(45, 106, 79, 0.25);
+  border-color: #d4af37;
+}
+
+body.dark-theme .touch-control-button.large-touch-button,
+body.dark-theme .touch-control-button.play-button {
+  background: linear-gradient(145deg, #1e3c2c, #2a5a3a);
+  border-color: #d4af37;
+  color: white;
+}
+
+body.dark-theme .volume-slider-container {
+  background: rgba(20, 25, 22, 0.95);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+body.dark-theme .volume-slider {
+  background: linear-gradient(to right, #2d6a4f, #d4af37);
+}
+
+body.dark-theme .volume-percentage {
+  color: #f0e6c5;
+}
+
+body.dark-theme .settings-menu-container {
+  background: rgba(20, 25, 22, 0.97);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+body.dark-theme .settings-group {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .settings-group h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .speed-option,
+body.dark-theme .quality-option {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #d5d5d5;
+}
+
+body.dark-theme .speed-option:hover,
+body.dark-theme .quality-option:hover {
+  background: rgba(45, 106, 79, 0.25);
+  border-color: #d4af37;
+}
+
+body.dark-theme .speed-option.active,
+body.dark-theme .quality-option.active {
+  background: #2d6a4f;
+  border-color: #d4af37;
+  color: white;
+}
+
+body.dark-theme .setting-option:hover {
+  background: rgba(45, 106, 79, 0.12);
+}
+
+body.dark-theme .action-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #d5d5d5;
+}
+
+body.dark-theme .action-btn:hover {
+  background: rgba(45, 106, 79, 0.2);
+  border-color: #d4af37;
+  color: #f0e6c5;
+}
+
+body.dark-theme .restart-btn {
+  background: rgba(45, 106, 79, 0.2);
+  color: #a8d5be;
+}
+
+body.dark-theme .download-btn {
+  background: rgba(212, 175, 55, 0.25);
+  color: #f0d87a;
+}
+
+body.dark-theme .share-btn {
+  background: rgba(155, 89, 182, 0.2);
+  color: #c39bd3;
+}
+
+body.dark-theme .fullscreen-close-btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(212, 175, 55, 0.6) !important;
+}

@@ -622,3 +622,71 @@
     justify-content: center;
   }
 }
+
+
+body.dark-theme .direct-card {
+  background: rgba(30, 35, 32, 0.9);
+  border-color: rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .direct-card h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .direct-card p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .help-card {
+  background: rgba(30, 35, 32, 0.9);
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .help-card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .help-card h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .help-card p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .info-card {
+  background: rgba(30, 35, 32, 0.8);
+  border-color: rgba(212, 175, 55, 0.15);
+}
+
+body.dark-theme .info-card h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .info-card p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .contact-cta {
+  background: linear-gradient(135deg, #1a1f1c, #222825);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+body.dark-theme .contact-cta h2 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .contact-cta p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .section-title {
+  color: #f0e6c5;
+}
+
+body.dark-theme .section-subtitle {
+  color: #b5b5b5;
+}

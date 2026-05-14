@@ -295,3 +295,91 @@ function getCookie(name) {
 }
 
 
+(function() {
+
+  const COLORS = [
+    '#d4af37', 
+    '#f1c40f', 
+    '#f39c12', 
+    '#95d5b2', 
+    '#52b788', 
+    '#40916c', 
+    '#2d6a4f'  
+  ];
+
+  const PARTICLE_COUNT = 50;
+  let activeParticles = 0;
+
+  function createParticle(container) {
+    if (activeParticles >= PARTICLE_COUNT) return;
+
+    const particle = document.createElement('div');
+    particle.classList.add('rain-particle');
+
+
+    const size = Math.random() < 0.6 
+      ? Math.random() * 4 + 3
+      : Math.random() * 6 + 5;
+
+    const left = Math.random() * 100;
+    const duration = Math.random() * 5 + 5;
+    const delay = Math.random() * 3;
+    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    
+
+    const blur = size > 6 ? size * 3 : size * 1.5;
+    const isGold = color === '#d4af37' || color === '#f1c40f' || color === '#f39c12';
+    const extraGlow = isGold ? `0 0 ${blur * 2}px ${color}` : '';
+
+    particle.style.cssText = `
+      width: ${size}px;
+      height: ${size}px;
+      left: ${left}%;
+      background: ${color};
+      animation-duration: ${duration}s;
+      animation-delay: ${delay}s;
+      box-shadow: 0 0 ${blur}px ${color}${extraGlow ? ', ' + extraGlow : ''};
+    `;
+
+    container.appendChild(particle);
+    activeParticles++;
+
+
+    const totalDuration = (duration + delay) * 1000;
+    setTimeout(() => {
+      if (particle.parentNode) {
+        particle.remove();
+        activeParticles--;
+      }
+    }, totalDuration + 500);
+  }
+
+  function spawnParticle(container) {
+    createParticle(container);
+
+    const nextSpawn = Math.random() * 250 + 100;
+    setTimeout(() => spawnParticle(container), nextSpawn);
+  }
+
+  function initParticleRain() {
+    const container = document.createElement('div');
+    container.classList.add('particle-rain-container');
+    document.body.prepend(container);
+
+
+    const initialBurst = Math.floor(PARTICLE_COUNT * 0.8);
+    for (let i = 0; i < initialBurst; i++) {
+      setTimeout(() => createParticle(container), Math.random() * 1500);
+    }
+
+
+    setTimeout(() => spawnParticle(container), 1500);
+  }
+
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initParticleRain);
+  } else {
+    initParticleRain();
+  }
+})();

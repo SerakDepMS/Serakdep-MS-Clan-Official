@@ -997,3 +997,238 @@ textarea.form-control {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+
+body.dark-theme .form-container {
+  color: #e0e0e0;
+}
+
+body.dark-theme .form-label {
+  color: #a8d5be;
+}
+
+body.dark-theme .form-control {
+  background-color: #1a1f1c;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-theme .form-control:focus {
+  border-color: #3498db;
+  background-color: #222825;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+body.dark-theme .character-count {
+  color: #999;
+}
+
+body.dark-theme #aspirantes-admin .card-title {
+  color: #a8d5be;
+  border-bottom-color: #3498db;
+}
+
+body.dark-theme #aspirantes-admin .form-label {
+  color: #3498db;
+}
+
+body.dark-theme #aspirantes-admin .form-control {
+  border-color: #555;
+}
+
+body.dark-theme #aspirantes-admin .form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+body.dark-theme #aspirantes-admin .form-submit-btn {
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
+  color: white;
+}
+
+body.dark-theme #aspirantes-admin .form-submit-btn:hover {
+  background: linear-gradient(135deg, #1a252f, #0d151c);
+}
+
+body.dark-theme #aspirantes-admin .form-checkbox {
+  background-color: #121815;
+  border-left-color: #3498db;
+}
+
+body.dark-theme #aspirantes-admin .form-checkbox input[type="checkbox"]:checked + label {
+  color: #5dade2;
+}
+
+body.dark-theme #aspirantes-admin .form-help {
+  color: #5dade2;
+}
+
+body.dark-theme #aspirantes-admin textarea.form-control {
+  background-color: #121815;
+  border-color: #555;
+}
+
+body.dark-theme #aspirantes-admin textarea.form-control:focus {
+  background-color: #1a1f1c;
+  border-color: #3498db;
+}
+
+body.dark-theme #aspirantes-admin select.form-control {
+  background-color: #121815;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%233498db' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+body.dark-theme #aspirantes-admin .form-control:valid {
+  border-color: #27ae60;
+}
+
+body.dark-theme #aspirantes-admin .character-count {
+  color: #5dade2;
+}
+
+body.dark-theme #aspirantes-admin .contact-form {
+  background: #1a1f1c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme #aspirantes-admin .form-group:not(:last-child) {
+  border-bottom-color: #333;
+}
+
+body.dark-theme .requirement-section {
+  border-bottom-color: #333;
+}
+
+body.dark-theme .requirement-title {
+  color: #f0e6c5;
+}
+
+body.dark-theme .requirement-title i {
+  color: #3498db;
+}
+
+body.dark-theme .requirement-list li {
+  color: #d5d5d5;
+}
+
+body.dark-theme .requirement-list li strong {
+  color: #f0e6c5;
+}
+
+body.dark-theme .values-grid .value-card {
+  background: #1a1f1c;
+  border-color: #333;
+}
+
+body.dark-theme .value-card h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .value-card p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .scenario-intro {
+  color: #d5d5d5;
+}
+
+body.dark-theme .scenario-card {
+  background: #1a1f1c;
+  border-color: #333;
+}
+
+body.dark-theme .scenario-header {
+  border-bottom-color: #333;
+}
+
+body.dark-theme .scenario-header h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .scenario-content li {
+  color: #d5d5d5;
+}
+
+body.dark-theme .commitment-item {
+  background: #121815;
+  border-left-color: #3498db;
+}
+
+body.dark-theme .commitment-item h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .commitment-item p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .requirements-footer {
+  border-top-color: #333;
+}
+
+body.dark-theme .form-checkbox label {
+  color: #d5d5d5;
+}
+
+body.dark-theme .form-checkbox a {
+  color: #5dade2;
+}
+
+body.dark-theme .form-help {
+  color: #999;
+}
+
+body.dark-theme .alert-success {
+  background-color: rgba(46, 204, 113, 0.1);
+  border-color: #2ecc71;
+  color: #a5d6a7;
+}
+
+body.dark-theme .alert-danger {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: #e74c3c;
+  color: #ef9a9a;
+}
+
+body.dark-theme .alert-warning {
+  background-color: rgba(243, 156, 18, 0.1);
+  border-color: #f39c12;
+  color: #ffcc80;
+}
+
+body.dark-theme .alert-info {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-color: #3498db;
+  color: #90caf9;
+}
+
+body.dark-theme .requirements-continue-btn {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+body.dark-theme .back-to-requisitos-btn {
+  background: linear-gradient(135deg, #7f8c8d, #6c7b7d);
+}
+
+body.dark-theme #success-message {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) {
+  background-color: #121815;
+  border-left-color: #2ecc71;
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-label {
+  color: #f0e6c5;
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox {
+  background-color: #1a1f1c;
+  border-color: #333;
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox:hover {
+  border-color: #3498db;
+  background-color: #222825;
+}

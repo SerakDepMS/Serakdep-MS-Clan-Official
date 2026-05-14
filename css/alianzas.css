@@ -1,3 +1,4 @@
+
 .alianzas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -8,7 +9,8 @@
 
 
 .alianza-card {
-  background: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 24px;
@@ -22,9 +24,16 @@
   align-items: center;
   text-align: center;
   border: 1px solid rgba(212, 175, 55, 0.2);
-  animation: fadeInUp 0.6s ease forwards;
+  animation: fadeInCard 0.6s ease forwards;
   opacity: 0;
 }
+
+.alianza-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-color: #d4af37;
+}
+
 
 .alianza-card:nth-child(1) { animation-delay: 0.1s; }
 .alianza-card:nth-child(2) { animation-delay: 0.2s; }
@@ -35,7 +44,8 @@
 .alianza-card:nth-child(7) { animation-delay: 0.7s; }
 .alianza-card:nth-child(8) { animation-delay: 0.8s; }
 
-@keyframes fadeInUp {
+
+@keyframes fadeInCard {
   from {
     opacity: 0;
     transform: translateY(30px) rotateX(5deg);
@@ -46,26 +56,8 @@
   }
 }
 
-.alianza-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-  border-color: #d4af37;
-}
 
-
-.alianza-card.activo::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(46, 204, 113, 0.12) 0%, transparent 70%);
-  animation: auraPulse 4s infinite ease-in-out;
-  z-index: 0;
-  pointer-events: none;
-}
-
+.alianza-card.activo::before,
 .alianza-card.nueva::before {
   content: "";
   position: absolute;
@@ -73,10 +65,18 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
-  animation: auraPulseGold 3s infinite ease-in-out;
   z-index: 0;
   pointer-events: none;
+}
+
+.alianza-card.activo::before {
+  background: radial-gradient(circle at 50% 50%, rgba(46, 204, 113, 0.12) 0%, transparent 70%);
+  animation: auraPulse 4s infinite ease-in-out;
+}
+
+.alianza-card.nueva::before {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  animation: auraPulseGold 3s infinite ease-in-out;
 }
 
 @keyframes auraPulse {
@@ -170,7 +170,6 @@
   z-index: 2;
 }
 
-
 .alianza-card .descripcion {
   color: #555;
   font-size: 0.95em;
@@ -217,23 +216,6 @@
 }
 
 
-body {
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(46, 204, 113, 0.05) 0%, transparent 50%);
-  z-index: -1;
-  pointer-events: none;
-}
-
 
 @media (max-width: 768px) {
   .alianzas-grid {
@@ -246,4 +228,63 @@ body::before {
   .alianzas-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+body.dark-theme .alianza-card {
+  --card-bg: rgba(20, 25, 22, 0.85);
+  background: var(--card-bg);
+  border-color: rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .alianza-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  border-color: #d4af37;
+}
+
+body.dark-theme .alianza-card h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .alianza-card .descripcion {
+  color: #d5d5d5;
+}
+
+body.dark-theme .alianza-logo {
+  background: #1e2b23;
+  border-color: #d4af37;
+}
+
+body.dark-theme .estado-texto {
+  background: rgba(255, 255, 255, 0.1);
+  color: #d5d5d5;
+}
+
+body.dark-theme .estado-texto.activo {
+  color: #6fcf97;
+}
+
+body.dark-theme .estado-texto.inactivo {
+  color: #7a8c80;
+}
+
+body.dark-theme .fecha-alianza {
+  color: #aaaaaa;
+}
+
+
+body.dark-theme .estado-indicador.activo {
+  background: #2ecc71;
+  box-shadow: 0 0 15px #2ecc71;
+}
+
+body.dark-theme .estado-indicador.inactivo {
+  background: #5a6b5e;
+  box-shadow: 0 0 5px #5a6b5e;
+}
+
+body.dark-theme .badge-nueva {
+  color: white;
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
 }

@@ -1559,3 +1559,189 @@ a,
   color: #9c27b0;
   font-weight: 700;
 }
+
+
+body.dark-theme .team-member {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .team-member.featured {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: rgba(212, 175, 55, 0.15);
+}
+
+body.dark-theme .member-info h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .member-role {
+  color: #a8d5be;
+}
+
+body.dark-theme .skill-tag {
+  background: rgba(149, 213, 178, 0.15);
+  color: #a8d5be;
+}
+
+body.dark-theme .skill-tag:hover {
+  background: rgba(149, 213, 178, 0.25);
+}
+
+body.dark-theme .member-description {
+  color: #c5c5c5;
+}
+
+body.dark-theme .member-contribution {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #a8d5be;
+}
+
+body.dark-theme .member-contribution h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .member-contribution li {
+  color: #c5c5c5;
+}
+
+body.dark-theme .member-contribution li::before {
+  color: #a8d5be;
+}
+
+body.dark-theme .editors-grid .team-member {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .special-mention {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+  border-left-color: var(--bamboo-gold);
+}
+
+body.dark-theme .mention-content h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .mention-content p {
+  color: #c5c5c5;
+}
+
+body.dark-theme .tech-info .tech-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .tech-info .tech-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .tech-info .tech-item h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .tech-info .tech-item p {
+  color: #c5c5c5;
+}
+
+body.dark-theme .badge {
+  background: linear-gradient(135deg, rgba(64, 145, 108, 0.4) 0%, rgba(45, 106, 79, 0.4) 100%);
+  color: #f0e6c5;
+}
+
+body.dark-theme .timeline::before {
+  background: linear-gradient(to bottom, var(--accent-green), var(--bamboo-gold));
+}
+
+body.dark-theme .timeline-date {
+  color: #a8d5be;
+}
+
+body.dark-theme .timeline-content h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .timeline-content p {
+  color: #c5c5c5;
+}
+
+body.dark-theme .stats-grid .stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .stat-number {
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--bamboo-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.dark-theme .stat-label {
+  color: #c5c5c5;
+}
+
+body.dark-theme .gallery-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .gallery-title {
+  color: #f0e6c5;
+}
+
+body.dark-theme .gallery-role {
+  color: #a8d5be;
+}
+
+body.dark-theme .gallery-description {
+  color: #c5c5c5;
+}
+
+body.dark-theme .gallery-meta {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .gallery-meta span {
+  color: #b5b5b5;
+}
+
+body.dark-theme .gallery-stats {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-theme .gallery-stats .stat {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .gallery-stats .stat i {
+  color: #a8d5be;
+}
+
+body.dark-theme .gallery-stats .stat span {
+  color: #c5c5c5;
+}
+
+body.dark-theme .gallery-stats .stat strong {
+  color: #f0e6c5;
+}
+
+body.dark-theme .timeline-tags .tag {
+  background: rgba(76, 175, 80, 0.15);
+  color: #a8d5be;
+  border-color: rgba(76, 175, 80, 0.2);
+}
+
+body.dark-theme .timeline-tags .tag:hover {
+  background: #4caf50;
+  color: white;
+}
+
+body.dark-theme .timeline-item.present .timeline-content {
+  background: linear-gradient(145deg, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+}
+
+body.dark-theme .timeline-item.future .timeline-content {
+  background: linear-gradient(145deg, rgba(156, 39, 176, 0.1), rgba(156, 39, 176, 0.05));
+}

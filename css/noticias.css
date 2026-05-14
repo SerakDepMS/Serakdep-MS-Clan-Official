@@ -1489,3 +1489,386 @@
 .stat-item:last-child {
   margin-right: 0;
 }
+
+
+
+body.dark-theme .admin-login-btn {
+  background: linear-gradient(135deg, #5a6b7a 0%, #4a3a5a 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+body.dark-theme .login-box {
+  background: #222825;
+  border: 1px solid #3a3f3c;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .login-header h3 {
+  color: #d4af37;
+}
+
+body.dark-theme .close-login {
+  color: #999;
+}
+
+body.dark-theme .close-login:hover {
+  color: #f44336;
+}
+
+body.dark-theme .login-body p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .login-body input {
+  background: #1a1f1c;
+  border-color: #3a3f3c;
+  color: #e0e0e0;
+}
+
+body.dark-theme .login-body input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+body.dark-theme .login-footer {
+  border-top-color: #3a3f3c;
+  color: #b5b5b5;
+}
+
+body.dark-theme .admin-panel {
+  background: linear-gradient(135deg, #5a6b7a 0%, #4a3a5a 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .btn-logout {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-theme .btn-logout:hover {
+  background: white;
+  color: #4a3a5a;
+}
+
+body.dark-theme .stat-card.admin {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .news-form {
+  background: #222825;
+  border-color: #d4af37;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .news-form h3 {
+  color: #f0e6c5;
+  border-bottom-color: #d4af37;
+}
+
+body.dark-theme .form-group label {
+  color: #d5d5d5;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select,
+body.dark-theme .form-group textarea {
+  background: #1a1f1c;
+  border-color: #3a3f3c;
+  color: #e0e0e0;
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group select:focus,
+body.dark-theme .form-group textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+body.dark-theme .checkbox-label span {
+  color: #d5d5d5;
+}
+
+body.dark-theme .form-actions {
+  border-top-color: #3a3f3c;
+}
+
+body.dark-theme .page-subtitle {
+  color: #b5b5b5;
+}
+
+body.dark-theme .filter-btn {
+  background: transparent;
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+body.dark-theme .filter-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+body.dark-theme .filter-btn.active {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+body.dark-theme .stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .stat-item:hover {
+  border-color: #d4af37;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+}
+
+body.dark-theme .stat-content h3 {
+  color: #b5b5b5;
+}
+
+body.dark-theme .stat-value {
+  color: #f0e6c5;
+}
+
+body.dark-theme .loading-news {
+  color: #b5b5b5;
+}
+
+body.dark-theme .news-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: transparent;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .news-card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .news-category {
+  background: rgba(255, 255, 255, 0.05);
+  color: #d5d5d5;
+}
+
+body.dark-theme .news-date {
+  color: #b5b5b5;
+}
+
+body.dark-theme .news-title {
+  color: #f0e6c5;
+}
+
+body.dark-theme .news-title:hover {
+  color: #d4af37;
+}
+
+body.dark-theme .news-excerpt {
+  color: #c5c5c5;
+}
+
+body.dark-theme .news-stats {
+  color: #b5b5b5;
+}
+
+body.dark-theme .news-card-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .btn-read-more {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+body.dark-theme .btn-read-more:hover {
+  background: #f0d87a;
+}
+
+body.dark-theme .btn-action {
+  background: transparent;
+  border-color: #3a3f3c;
+  color: #b5b5b5;
+}
+
+body.dark-theme .btn-action:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+body.dark-theme .sidebar-widget {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .sidebar-widget h3 {
+  color: #f0e6c5;
+  border-bottom-color: #d4af37;
+}
+
+body.dark-theme .highlight-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-left-color: #d4af37;
+}
+
+body.dark-theme .highlight-item:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+body.dark-theme .highlight-item h4 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .highlight-item p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .subscribe-form input {
+  background: #1a1f1c;
+  border-color: #3a3f3c;
+  color: #e0e0e0;
+}
+
+body.dark-theme .page-btn {
+  background: transparent;
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+body.dark-theme .page-btn:hover:not(:disabled) {
+  background: #d4af37;
+  color: #1a1a1a;
+}
+
+body.dark-theme .page-number {
+  border-color: #3a3f3c;
+  color: #d5d5d5;
+}
+
+body.dark-theme .page-number:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+body.dark-theme .page-number.active {
+  background: #d4af37;
+  color: #1a1a1a;
+  border-color: #d4af37;
+}
+
+body.dark-theme .comments-section {
+  border-top-color: #3a3f3c;
+}
+
+body.dark-theme .comments-section h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .comment-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-left-color: #d4af37;
+}
+
+body.dark-theme .comment-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .comment-author {
+  color: #f0e6c5;
+}
+
+body.dark-theme .comment-date {
+  color: #b5b5b5;
+}
+
+body.dark-theme .comment-text {
+  color: #d5d5d5;
+}
+
+body.dark-theme .no-comments {
+  color: #b5b5b5;
+  background: rgba(255, 255, 255, 0.02);
+  border-color: #3a3f3c;
+}
+
+body.dark-theme .comment-form {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: #3a3f3c;
+}
+
+body.dark-theme .comment-form input,
+body.dark-theme .comment-form textarea {
+  background: #1a1f1c;
+  border-color: #3a3f3c;
+  color: #e0e0e0;
+}
+
+body.dark-theme .comment-form input:focus,
+body.dark-theme .comment-form textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+body.dark-theme .whatsapp-widget {
+  background: linear-gradient(135deg, #1a7a3a 0%, #0d5a2a 100%);
+}
+
+body.dark-theme .btn-outline-whatsapp {
+  border-color: white;
+  color: white;
+}
+
+body.dark-theme .btn-outline-whatsapp:hover {
+  background: white;
+  color: #0d5a2a;
+}
+
+body.dark-theme .whatsapp-features {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .whatsapp-features li {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .qr-modal-content {
+  background: #222825;
+  border: 1px solid #3a3f3c;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-theme .qr-header h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .qr-header p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .qr-image {
+  background: white;
+  border-color: #25d366;
+}
+
+body.dark-theme .qr-link {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #3a3f3c;
+  color: #d5d5d5;
+}
+
+body.dark-theme .qr-link:hover {
+  background: #25d366;
+  color: white;
+}
+
+body.dark-theme .close-qr {
+  color: #999;
+}
+
+body.dark-theme .close-qr:hover {
+  color: #f44336;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .whatsapp-clicks {
+  border-top-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}

@@ -117,7 +117,7 @@
 
 .lab-environment {
   position: relative;
-  height: 100vh;              /* ← CAMBIO: altura fija a toda la ventana */
+  height: 100vh;              
   display: flex;
   flex-direction: column;
   border-radius: var(--lab-radius);
@@ -185,7 +185,7 @@
 .lab-workspace {
   display: flex;
   flex: 1;
-  min-height: 0;              /* ← NUEVO: evita que crezca más de lo asignado */
+  min-height: 0;              
   position: relative;
   overflow: hidden;
 }
@@ -252,13 +252,13 @@
 }
 
 
-/* ★ ÁREA DEL EDITOR – clave para que no estire el diseño ★ */
+
 .lab-editor-area {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  min-height: 0;             /* ← evita que crezca más de lo asignado */
+  min-height: 0;
 }
 .editor-tabs {
   display: flex;
@@ -304,18 +304,18 @@
   color: #e74c3c;
 }
 
-/* CONTENEDOR DEL EDITOR DE CÓDIGO */
+
 .editor-container {
   flex: 1;
-  min-height: 0;            /* ← NUEVO: permitir que se reduzca para generar scroll */
-  overflow: auto;           /* ← scroll interno vertical y horizontal */
+  min-height: 0;
+  overflow: auto;
 }
 .editor-container .CodeMirror {
   height: 100% !important;
   font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
   font-size: 14px;
 }
-/* Asegura que CodeMirror use scroll propio si es necesario */
+
 .CodeMirror-scroll {
   overflow: auto !important;
 }
@@ -442,7 +442,7 @@
 }
 
 
-/* === PANELES LATERALES COMO OVERLAYS === */
+
 .lab-wiki,
 .lab-challenges {
   position: absolute;
@@ -1068,4 +1068,42 @@
   max-width: 100%;
   max-height: 70vh;
   object-fit: contain;
+}
+
+
+body.dark-theme .lobby-content {
+  background: var(--lab-surface);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: var(--lab-shadow),
+              0 0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+body.dark-theme .lobby-content .lobby-subtitle {
+  color: var(--lab-text-secondary);
+}
+
+body.dark-theme .lobby-feature {
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.2);
+  color: var(--lab-gold-light);
+}
+
+body.dark-theme .lobby-feature:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--lab-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .lobby-feature i {
+  color: var(--lab-gold);
+}
+
+body.dark-theme .lobby-content .page-title {
+  color: var(--lab-gold);
+}
+
+
+body.dark-theme .lobby-content p,
+body.dark-theme .lobby-content span {
+  color: var(--lab-text);
 }

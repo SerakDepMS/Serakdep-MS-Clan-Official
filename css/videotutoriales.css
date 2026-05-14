@@ -257,3 +257,26 @@
     width: 50px;
   }
 }
+
+
+body.dark-theme .tutorial-card {
+  background: rgba(20, 25, 22, 0.85);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .tutorial-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .tutorial-info h3 {
+  color: #f0e6c5;
+}
+
+body.dark-theme .tutorial-info p {
+  color: #b5b5b5;
+}
+
+body.dark-theme .volume-slider {
+  background: rgba(255, 255, 255, 0.2);
+}

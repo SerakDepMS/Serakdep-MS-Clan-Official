@@ -318,3 +318,47 @@
     justify-content: center;
   }
 }
+
+
+
+body.dark-theme .clan-logo-section {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    rgba(64, 145, 108, 0.08) 100%
+  );
+  border-color: rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .clan-slogan {
+  color: #a8d5be;
+}
+
+body.dark-theme .badge {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .badge:nth-child(1) {
+  background: linear-gradient(135deg, #3498db, #2c3e80);
+}
+
+body.dark-theme .badge:nth-child(2) {
+  background: linear-gradient(135deg, #27ae60, #1e8449);
+}
+
+body.dark-theme .badge:nth-child(3) {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+body.dark-theme .logo-glow {
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.15) 0%,
+    transparent 70%
+  );
+}
+
+body.dark-theme .particle {
+  background: rgba(212, 175, 55, 0.5);
+}
