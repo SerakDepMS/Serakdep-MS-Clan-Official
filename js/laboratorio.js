@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const css = cssFiles.map(f => f.content).join('\n');
     const js = jsFiles.map(f => f.content).join('\n');
 
-    // Reemplazar nombres de imagen por Data URLs (ya lo tienes)
+
     files.forEach(f => {
         const ext = f.name.split('.').pop().toLowerCase();
         const imageExtensions = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'ico'];
@@ -473,13 +473,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Si el HTML no contiene una estructura completa (<!DOCTYPE html> o <html>), la creamos
+
     const isFullDocument = /<(!doctype|html)[^>]*>/i.test(html);
     if (!isFullDocument) {
         html = `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto SMS Studios</title>\n</head>\n<body>\n${html}\n</body>\n</html>`;
     }
 
-    // Insertar CSS dentro de <style> en el <head>
+
     if (css.trim()) {
         const styleTag = `  <style>\n${css}\n  </style>`;
         if (html.includes('</head>')) {
@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Insertar JS dentro de <script> antes de </body>
+
     if (js.trim()) {
         const scriptTag = `  <script>\n${js}\n  </script>`;
         if (html.includes('</body>')) {
