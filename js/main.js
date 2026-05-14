@@ -297,31 +297,25 @@ function getCookie(name) {
 
 (function() {
   const COLORS = [
-    '#d4af37', // bamboo-gold
-    '#f1c40f', // dorado brillante
-    '#f39c12', // dorado intenso
-    '#95d5b2', // light-green
-    '#52b788', // variante verde
-    '#40916c', // accent-green
-    '#2d6a4f'  // secondary-green
+    '#d4af37', '#f1c40f', '#f39c12',
+    '#95d5b2', '#52b788', '#40916c', '#2d6a4f'
   ];
-
-  const MAX_PARTICLES = 60;
+  const MAX_PARTICLES = 40; // Reducido de 60 a 40 para aligerar aún más
   let particles = [];
   let canvas, ctx, animationId;
+  let resizeTimer;
 
   function createParticle() {
-    const size = Math.random() * 4 + 2;
+    const size = Math.random() * 3.5 + 1.5; // Ligeramente más pequeñas
     const color = COLORS[Math.floor(Math.random() * COLORS.length)];
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * -canvas.height,
-      size: size,
-      color: color,
-      speedY: Math.random() * 1.5 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.4,
-      opacity: Math.random() * 0.6 + 0.3,
-      blur: size > 4 ? size * 1.5 : 0
+      size, color,
+      speedY: Math.random() * 1.3 + 0.4,
+      speedX: (Math.random() - 0.5) * 0.35,
+      opacity: Math.random() * 0.55 + 0.25,
+      blur: size > 3.5 ? size * 1.3 : 0
     };
   }
 
@@ -329,27 +323,22 @@ function getCookie(name) {
     while (particles.length < MAX_PARTICLES) {
       particles.push(createParticle());
     }
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     for (let i = particles.length - 1; i >= 0; i--) {
       const p = particles[i];
       p.y += p.speedY;
       p.x += p.speedX;
-
       if (p.y > canvas.height + 10 || p.x < -10 || p.x > canvas.width + 10) {
         particles[i] = createParticle();
         particles[i].y = -10;
         continue;
       }
-
       ctx.save();
       ctx.globalAlpha = p.opacity;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
       ctx.fill();
-
       if (p.blur > 0) {
         ctx.shadowColor = p.color;
         ctx.shadowBlur = p.blur;
@@ -357,13 +346,18 @@ function getCookie(name) {
       }
       ctx.restore();
     }
-
     animationId = requestAnimationFrame(updateParticles);
   }
 
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    particles.length = 0; // Reiniciamos las partículas
+  }
+
+  function debouncedResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeCanvas, 150); // Solo redimensiona 150ms después del último evento
   }
 
   function initParticleRain() {
@@ -371,14 +365,9 @@ function getCookie(name) {
     canvas.classList.add('particle-rain-container');
     document.body.prepend(canvas);
     ctx = canvas.getContext('2d');
-
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    for (let i = 0; i < MAX_PARTICLES; i++) {
-      particles.push(createParticle());
-    }
-
+    window.addEventListener('resize', debouncedResize);
+    for (let i = 0; i < MAX_PARTICLES; i++) particles.push(createParticle());
     updateParticles();
   }
 
