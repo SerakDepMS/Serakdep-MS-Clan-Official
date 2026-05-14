@@ -1441,42 +1441,6 @@ body.dark-theme .theme-toggle-btn:hover {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  overflow: hidden;
-}
-
-.rain-particle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: rainFall linear infinite;
-  opacity: 0;
-  will-change: transform, opacity;
-  filter: blur(0.5px);
-}
-
-@keyframes rainFall {
-  0% {
-    transform: translateY(-10vh) translateX(0) scale(1);
-    opacity: 0;
-  }
-  5% {
-    opacity: 0.9;
-  }
-  30% {
-    opacity: 0.8;
-    transform: translateY(30vh) translateX(20px) scale(1.1);
-  }
-  60% {
-    opacity: 0.7;
-    transform: translateY(60vh) translateX(-15px) scale(0.9);
-  }
-  95% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(110vh) translateX(10px) scale(0.7);
-    opacity: 0;
-  }
 }
 
 
