@@ -490,7 +490,7 @@ function joinEventNow() {
   const todayKey = formatDateForKey(today);
   const event = window.calendarEvents[todayKey];
   if (event && event.status === "open") {
-    window.open("https://www.roblox.com/share?code=bb53c2c4362b054aa38d05a20baba28f&type=Server", "_blank");
+    window.open("https://www.roblox.com/share?code=9aecccc72e12ee43ba6fb5c7b31de346&type=Server", "_blank");
   } else {
     console.warn("Evento no está abierto para unirse.");
   }
