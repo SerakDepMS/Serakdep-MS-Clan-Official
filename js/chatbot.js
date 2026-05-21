@@ -1,8 +1,9 @@
 (function() {
   'use strict';
-
-
+ 
+ 
   const knowledgeBase = [
+ 
 
     {
       keywords: ['inscripcion', 'inscribirme', 'unirme', 'registro', 'formulario', 'admisión', 'entrar', 'ingresar', 'unirse', 'proceso', 'como me uno', 'quiero ser miembro', 'solicitud', 'aplicar', 'join', 'ingreso', 'etapas', 'requisitos', 'formulario de inscripcion', 'quiero unirme al clan', 'como entro al clan', 'hacerme miembro'],
@@ -38,17 +39,19 @@
       La edad mínima para unirse a Serakdep MS es de <strong>14 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
       Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 14, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
-
+ 
+ 
 
     {
-      keywords: ['reglamento', 'normas', 'reglas', 'sanciones', 'castigos', 'prohibido', 'penalizaciones', 'amonestaciones', 'derechos', 'staff', 'leer reglamento', 'etapa 1', 'normas generales', 'respeto', 'actividad minima', 'que no se puede hacer', 'que esta prohibido', 'codigo de conducta', 'convivencia'],
+      keywords: ['reglamento', 'normas', 'reglas', 'sanciones', 'castigos', 'prohibido', 'penalizaciones', 'amonestaciones', 'derechos', 'leer reglamento', 'etapa 1', 'normas generales', 'respeto', 'actividad minima', 'que no se puede hacer', 'que esta prohibido', 'codigo de conducta', 'convivencia', 'multicuentas', 'multiples cuentas', 'baja inactividad'],
       response: `📜 <strong>Reglamento general del clan</strong><br><br>
       En Serakdep MS valoramos el respeto y la buena convivencia. Estas son las normas fundamentales:<br>
       ✔️ <strong>Respeto obligatorio:</strong> No se tolera discriminación, acoso, bullying ni lenguaje ofensivo.<br>
       ✔️ <strong>Edad mínima 14 años</strong> (con permiso parental si eres menor).<br>
-      ✔️ <strong>Actividad mínima:</strong> Participar al menos una vez por semana para mantener tu membresía activa.<br>
+      ✔️ <strong>Actividad mínima:</strong> Participar al menos una vez por semana. Tras 3 semanas sin actividad sin justificación, se considerará baja por inactividad.<br>
       ✔️ <strong>Confidencialidad:</strong> No compartir información personal de otros miembros sin autorización.<br>
-      ✔️ <strong>Identificación clara:</strong> Usar nombres reconocibles en todas las plataformas.<br><br>
+      ✔️ <strong>Identificación clara:</strong> Usar nombres reconocibles en todas las plataformas.<br>
+      ✔️ <strong>Prohibición de multicuentas:</strong> No se permite tener múltiples cuentas en el clan sin autorización previa de la Alta Dirección.<br><br>
       <strong>Código de Conducta:</strong><br>
       🔸 <strong>Respeto Mutuo:</strong> Trata a los demás como te gustaría ser tratado.<br>
       🔸 <strong>Inclusión:</strong> Damos la bienvenida a jugadores de todos los orígenes, géneros y habilidades.<br>
@@ -81,12 +84,36 @@
       keywords: ['apelar sancion', 'apelacion', 'sancion injusta', 'como apelar', 'reclamar castigo'],
       response: `⚖️ <strong>Proceso de apelación de sanciones</strong><br><br>
       Si consideras que una sanción fue injusta, tienes derecho a apelar siguiendo estos pasos:<br>
-      1️⃣ Contacta a un administrador de mayor rango que quien aplicó la sanción.<br>
-      2️⃣ Presenta tu caso de manera clara y respetuosa, explicando por qué consideras injusta la medida.<br>
-      3️⃣ Proporciona pruebas que respalden tu apelación (capturas, videos, testimonios).<br>
-      4️⃣ El equipo de alta dirección revisará el caso en un plazo de 72 horas.<br>
-      5️⃣ Recibirás una respuesta final por escrito.<br><br>
+      1️⃣ Tienes hasta <strong>7 días</strong> después de recibir la notificación para presentar tu apelación.<br>
+      2️⃣ Contacta a un miembro de la <strong>Alta Dirección</strong> (Líder o Sub-Líder) por mensaje privado en Discord o WhatsApp.<br>
+      3️⃣ Incluye en tu apelación: tu nombre de usuario, la sanción recibida, explicación de por qué consideras que fue injusta o desproporcionada, y cualquier evidencia adicional.<br>
+      4️⃣ La Alta Dirección revisará el caso en un plazo de <strong>72 horas</strong> (puede consultar al moderador que aplicó la sanción).<br>
+      5️⃣ La decisión final (ratificación, reducción o anulación) es <strong>inapelable</strong> y se notificará por escrito.<br><br>
       Las apelaciones se tratan con confidencialidad y seriedad.`
+    },
+    {
+      keywords: ['proceso disciplinario', 'como se aplica sancion', 'investigacion falta', 'como actua el staff ante falta', 'pasos sancion', 'moderacion proceso'],
+      response: `🔍 <strong>Proceso Disciplinario del Clan</strong><br><br>
+      Cuando se detecta una posible infracción, el equipo de moderación sigue un proceso estandarizado para garantizar justicia y transparencia:<br>
+      1️⃣ <strong>Detección y Registro:</strong> Un miembro del staff detecta la falta o recibe un reporte. Se registra la evidencia (capturas, logs, testimonios).<br>
+      2️⃣ <strong>Investigación:</strong> Un moderador designado revisa la evidencia y, si es necesario, entrevista a las partes involucradas.<br>
+      3️⃣ <strong>Determinación:</strong> El moderador, en consulta con un administrador si la falta es grave, determina si hubo infracción y su gravedad según la tabla de sanciones.<br>
+      4️⃣ <strong>Notificación:</strong> Se contacta al miembro infractor por privado, explicando la falta, la sanción aplicada, su duración y su derecho a apelar.<br>
+      5️⃣ <strong>Registro Interno:</strong> La sanción queda registrada en el historial del miembro para seguimiento futuro.`
+    },
+    {
+      keywords: ['responsabilidades staff', 'que hace el staff', 'obligaciones admin', 'deberes administradores', 'que deben hacer los admins'],
+      response: `👑 <strong>Responsabilidades del Staff</strong><br><br>
+      El equipo de administración tiene las siguientes obligaciones con la comunidad:<br>
+      • Mantener el orden y hacer cumplir las normas de manera <strong>justa e imparcial</strong>.<br>
+      • Responder consultas y ayudar a miembros en un plazo máximo de <strong>24 horas</strong>.<br>
+      • Organizar y moderar eventos de manera profesional.<br>
+      • Mantener <strong>confidencialidad</strong> sobre información sensible del clan y datos de miembros.<br>
+      • Actuar como <strong>ejemplo de comportamiento</strong> para otros miembros.<br>
+      • <strong>No abusar</strong> de su posición o privilegios administrativos.<br>
+      • Comunicar cambios y actualizaciones de manera clara y oportuna.<br>
+      • Resolver conflictos de manera imparcial y constructiva, priorizando la mediación.<br><br>
+      El abuso de poder es considerado <strong>corrupción interna</strong> y conlleva expulsión permanente y bloqueo total.`
     },
     {
       keywords: ['procedimiento reportes', 'como reportar', 'reportar miembro', 'evidencia reporte'],
@@ -109,12 +136,49 @@
       • <strong>No Sabotaje:</strong> Está prohibido molestar intencionadamente a otros participantes, abandonar partidas a propósito en torneos de equipo o compartir información privilegiada.<br>
       • <strong>Premios:</strong> Los premios se entregarán según lo estipulado en las bases del evento. Cualquier disputa será resuelta por el staff.`
     },
+ 
+ 
 
+    {
+      keywords: ['colaborador', 'aspirar colaborador', 'ser colaborador', 'postular colaborador', 'colaboracion', 'aspirantes colaborador', 'areas colaboracion', 'quiero colaborar', 'formulario colaborador', 'aplicar colaborador', 'como ser colaborador', 'aspirante colaborador', 'colaboradores clan'],
+      response: `🤝 <strong>Aspirantes a Colaborador - Serakdep MS</strong><br><br>
+      Los colaboradores son miembros que apoyan al clan en áreas específicas <strong>sin tener el rol de administrador</strong>, pero desempeñan un papel fundamental para la comunidad.<br><br>
+      <strong>Áreas de colaboración disponibles:</strong><br>
+      • <strong>Actividades y Eventos:</strong> Organizar y coordinar torneos y actividades comunitarias. Deben asegurar que las normas de convivencia se cumplan.<br>
+      • <strong>Edición y Contenido:</strong> Crear material gráfico, videos, guías y contenido para redes sociales del clan. Deben respetar los derechos de autor y la identidad visual del clan.<br>
+      • <strong>Representante de Alianzas:</strong> Gestionar relaciones con otros clanes, buscar nuevas alianzas y representar a Serakdep MS con profesionalismo y lealtad.<br><br>
+      <strong>Requisitos para colaborador:</strong><br>
+      ✔️ Edad mínima: <strong>15 años</strong>.<br>
+      ✔️ Elegir <strong>una sola área</strong> de colaboración.<br>
+      ✔️ Disponibilidad mínima de <strong>5 horas semanales</strong>.<br>
+      ✔️ Compromiso con los valores del clan.<br>
+      ✔️ Cumplir las mismas normas que cualquier miembro y dar ejemplo en su área.<br><br>
+      Para postularte, ve a <strong>Contacto → Aspirar a Colaborador</strong> o accede directamente a <strong>aspirantes-colaborador.html</strong> y completa el formulario.`
+    },
+    {
+      keywords: ['campos formulario colaborador', 'que piden para colaborador', 'formulario aspirante colaborador', 'datos colaborador', 'area edicion contenido', 'area actividades eventos', 'area representante alianzas', 'disponibilidad colaborador', 'ideas mejoras colaborador', 'experiencia colaborador'],
+      response: `📋 <strong>Formulario de Aspirante a Colaborador</strong><br><br>
+      Estos son los datos que se solicitan en el formulario:<br>
+      • <strong>Nombre en Roblox</strong> (obligatorio).<br>
+      • <strong>Edad</strong> (mínimo 15 años).<br>
+      • <strong>País</strong> y <strong>zona horaria</strong>.<br>
+      • <strong>WhatsApp</strong> (opcional, para coordinación del proceso de selección).<br>
+      • <strong>Área de colaboración</strong>: Actividades y Eventos / Edición y Contenido / Representante de Alianzas (solo puedes elegir una).<br>
+      • <strong>Experiencia previa</strong> en roles similares (opcional).<br>
+      • <strong>¿Por qué quieres ser colaborador?</strong> y qué puedes aportar (obligatorio).<br>
+      • <strong>Disponibilidad semanal:</strong> 1-5h / 5-10h / 10-15h / más de 15h (obligatorio).<br>
+      • <strong>Ideas o mejoras</strong> que propondrías para el clan (obligatorio, mínimo una idea).<br>
+      • Checkboxes: aceptar el reglamento y compromiso de confidencialidad y colaboración activa.<br><br>
+      Accede desde <strong>Contacto → Aspirar a Colaborador</strong>.`
+    },
+ 
+ 
 
     {
       keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord'],
       response: `💬 <strong>Servidor de Discord de Serakdep MS</strong><br><br>
-      Nuestro servidor de Discord es el corazón de la comunidad. Para unirte, solicita el enlace a un administrador (por seguridad no lo publicamos abiertamente). Una vez dentro:<br>
+      Nuestro servidor de Discord es el corazón de la comunidad. Enlace de invitación: <strong>https://discord.gg/vts4PTHR9K</strong><br><br>
+      Una vez dentro:<br>
       🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
       🔹 Preséntate en <strong>#presentaciones</strong> para que te demos la bienvenida.<br><br>
       <strong>Estructura de canales:</strong><br>
@@ -149,7 +213,8 @@
       • <strong>#normas-de-alianzas:</strong> Reglas específicas para colaboraciones.<br><br>
       Si quieres proponer una alianza, usa #solicitudes-externas y un admin te responderá.`
     },
-
+ 
+ 
 
     {
       keywords: ['whatsapp', 'grupo whatsapp', 'unirse whatsapp', 'link whatsapp', 'whatsapp reglas', 'grupos whatsapp', 'sms principal', 'sms actividades', 'entrar a whatsapp'],
@@ -159,7 +224,7 @@
       • <strong>SMS-Actividades:</strong> Dinámicas como NGL (mensajes anónimos), sopa de letras, pintar imágenes en blanco y más.<br>
       • <strong>SMS-Nuevos Ingresos:</strong> Orientación para novatos durante su periodo de prueba.<br>
       • <strong>SMS-Inscripción:</strong> Inscripción a eventos y torneos.<br>
-      • <strong>SERAKDEPMS STUDIOS:</strong> El clan tiene otra comunidad encargada en la parte administrativa y gestión de labores, que mantienen el clan funcional y actualizado.<br><br>
+      • <strong>SERAKDEPMS STUDIOS:</strong> Comunidad encargada de la parte administrativa y gestión de labores, que mantienen el clan funcional y actualizado.<br><br>
       <strong>Normas en WhatsApp:</strong><br>
       • Usar cada grupo para su propósito.<br>
       • Evitar mensajes entre 00:00 y 08:00 (salvo urgencias).<br>
@@ -167,7 +232,7 @@
       • No hacer spam.<br>
       • Respetar a los administradores.<br>
       • No compartir números sin permiso.<br><br>
-      Los enlaces de invitación se proporcionan tras ser aceptado en el clan.`
+      Los enlaces de invitación se proporcionan tras ser aceptado en el clan. También puedes unirte al grupo principal desde: <strong>https://chat.whatsapp.com/FjFvWUam2ZzEZhHd8xxGDH</strong>`
     },
     {
       keywords: ['horario whatsapp', 'cuando enviar mensajes', 'silencio whatsapp', 'no molestar'],
@@ -179,7 +244,8 @@
       • <strong>SMS-Staff:</strong> 24/7 para asuntos urgentes del clan.<br><br>
       Respeta estos horarios para no molestar a los demás miembros.`
     },
-
+ 
+ 
 
     {
       keywords: ['eventos', 'torneos', 'actividades', 'calendario', 'próximos eventos', 'eventos pasados', 'torneo blox fruits', 'evento halloween', 'aniversario clan', 'torneo arsenal', 'epic fail', 'bienvenida nuevos', 'proximos torneos'],
@@ -191,7 +257,7 @@
       Para inscribirte, dirígete a la sección de eventos y mira el modal de Inscripción de Equipos. Una vez ahí, únete al grupo que te indica y completa el formulario cuando se te envíe en recepción. Los datos que debes tener en cuenta es que cada clan deberá elegir un equipo de los 72 disponibles y elegir 5 de sus mejores miembros para participar en los torneos.<br><br>
       <strong>Normas de convivencia en eventos:</strong><br>
       • Puntualidad: Llega a la hora acordada.<br>
-      • Seguir Instrucciones del anfitrión.<br>
+      •Folllow Instrucciones del anfitrión.<br>
       • Silenciar micrófono cuando no hables.<br>
       • Respetar turnos.<br>
       • No sabotaje.<br>
@@ -219,7 +285,8 @@
       • <strong>Grupos pre-existentes:</strong> Si ya juegan juntos regularmente.<br><br>
       El método específico se anunciará con anticipación en cada evento.`
     },
-
+ 
+ 
 
     {
       keywords: ['juegos', 'roblox juegos', 'blox fruits', 'brookhaven', 'adopt me', 'arsenal', 'king legacy', 'driving empire', 'royale high', 'jailbreak', 'murder mystery', 'salón de fiestas', 'juego de boxeo', 'categorias juegos', 'lista juegos', 'a que juegan'],
@@ -233,7 +300,8 @@
       • <strong>Otros:</strong> Jailbreak.<br><br>
       En la página de Inicio hay un filtro de juegos con <strong>351 títulos</strong> en 15 categorías. En Discord hay canales dedicados a cada juego para formar equipos.`
     },
-
+ 
+ 
 
     {
       keywords: ['contacto', 'email', 'correo', 'hablar admin', 'soporte', 'ayuda', 'asistencia', 'serakdepmsofficial7', 'formulario contacto', 'reportar problema', 'sugerencias', 'aspirar admin', 'legal contacto', 'como contacto'],
@@ -241,14 +309,16 @@
       ✉️ <strong>Correo electrónico:</strong> serakdepmsofficial7@gmail.com<br>
       📞 <strong>WhatsApp del clan:</strong> +57 311 6546484 (solo mensajes, no llamadas).<br>
       💬 <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br><br>
-      <strong>Formularios en la sección "Contacto":</strong><br>
+      <strong>Opciones en la sección "Contacto":</strong><br>
       • <strong>Reportar un problema:</strong> Para conductas inapropiadas, bugs o incidencias (adjunta pruebas).<br>
       • <strong>Sugerencias:</strong> Propuestas para mejorar el clan o la web.<br>
       • <strong>Aspirar a Admin:</strong> Postulación cuando haya convocatorias abiertas.<br>
+      • <strong>Aspirar a Colaborador:</strong> Postulación para áreas de eventos, edición o representante de alianzas.<br>
       • <strong>Asuntos legales:</strong> Derechos de autor, privacidad, etc.<br><br>
       El equipo de administración revisa todas las solicitudes y responde en un plazo de 48-72 horas.`
     },
-
+ 
+ 
 
     {
       keywords: ['reportar', 'reporte', 'denunciar', 'problema', 'queja', 'reportar miembro', 'incidencia', 'reportar problema', 'como reportar', 'denunciar a alguien'],
@@ -265,7 +335,8 @@
       - Capturas de pantalla o video (muy importante).<br><br>
       Todos los reportes se tratan con confidencialidad.`
     },
-
+ 
+ 
 
     {
       keywords: ['faq', 'preguntas frecuentes', 'dudas', 'preguntas', 'consulta', 'faq discord', 'faq whatsapp', 'faq admision', 'faq reglas', 'faq eventos', 'faq web'],
@@ -284,6 +355,8 @@
       🔹 <strong>Contribuciones:</strong> Cómo ayudar al clan, ser voluntario.<br><br>
       Visita la página FAQ para respuestas detalladas a cada pregunta.`
     },
+ 
+ 
 
     {
       keywords: ['legal', 'privacidad', 'terminos', 'cookies', 'dmca', 'derechos de autor', 'politica', 'términos de servicio', 'aviso dmca', 'datos personales', 'copyright', 'politica de privacidad'],
@@ -321,7 +394,7 @@
       En cualquier momento, podrás ejercer los siguientes derechos sobre tus datos personales, enviando una solicitud al correo electrónico serakdepmsofficial7@gmail.com:<br>
       • <strong>Derecho de Acceso:</strong> Conocer qué datos tuyos estamos tratando.<br>
       • <strong>Derecho de Rectificación:</strong> Solicitar la modificación de datos inexactos o incompletos.<br>
-      • <strong>Derecho de Supresión ("Derecho al Olvido"):</strong> Solicitar la eliminación de tus datos cuando, entre otros motivos, ya no sean necesarios para la finalidad con la que fueron recogidos.<br>
+      • <strong>Derecho de Supresión ("Derecho al Olvido"):</strong> Solicitar la eliminación de tus datos cuando ya no sean necesarios para la finalidad con la que fueron recogidos.<br>
       • <strong>Derecho de Oposición:</strong> Oponerte al tratamiento de tus datos basado en nuestro interés legítimo.<br>
       • <strong>Derecho a la Limitación del Tratamiento:</strong> Solicitar que suspendamos el tratamiento de tus datos en determinadas circunstancias.<br>
       • <strong>Derecho a la Portabilidad:</strong> Recibir tus datos en un formato estructurado y de uso común.<br><br>
@@ -336,7 +409,8 @@
       • Analizar de forma anónima el tráfico para optimizar la experiencia.<br><br>
       No usamos cookies para rastrearte fuera de nuestro sitio ni para publicidad. Puedes desactivarlas en la configuración de tu navegador, aunque algunas funciones podrían no estar disponibles.`
     },
-
+ 
+ 
 
     {
       keywords: ['creditos', 'creadores', 'desarrolladores', 'colaboradores', 'agradecimientos', 'autores', 'equipo', 'diseñadores', 'quien hizo la pagina'],
@@ -350,18 +424,20 @@
       • <strong>Herramientas utilizadas:</strong> HTML5, CSS3, JavaScript, EmailJS, npoint.io, Font Awesome, GitHub Pages, Adobe Creative Suite, Figma.<br><br>
       ¿Quieres contribuir? Usa el formulario de sugerencias en Contacto.`
     },
-
+ 
+ 
 
     {
-      keywords: ['estructura', 'organigrama', 'jerarquia', 'rangos', 'roles', 'staff', 'liderazgo', 'organizacion', 'miembros', 'campos de juego', 'departamentos', 'cuantos miembros', 'quien manda'],
+      keywords: ['estructura', 'organigrama', 'jerarquia', 'rangos', 'roles', 'liderazgo', 'organizacion', 'miembros', 'campos de juego', 'departamentos', 'cuantos miembros', 'quien manda'],
       response: `🏛️ <strong>Estructura organizativa del clan</strong><br><br>
       <strong>Jerarquía:</strong><br>
       1️⃣ Alta Dirección (Liderazgo) – Decisiones estratégicas.<br>
       2️⃣ Administradores – Gestionan áreas (eventos, admisiones, moderación).<br>
-      3️⃣ Moderadores / Staff – Mantienen el orden y ayudan a miembros.<br>
-      4️⃣ Miembros Destacados – Veteranos con privilegios.<br>
-      5️⃣ Miembros Activos – Participan regularmente.<br>
-      6️⃣ Miembros Nuevos – En periodo de prueba (primeras 2 semanas).<br><br>
+      3️⃣ Colaboradores – Apoyan en áreas específicas (eventos, edición, alianzas) sin rol de admin.<br>
+      4️⃣ Moderadores / Staff – Mantienen el orden y ayudan a miembros.<br>
+      5️⃣ Miembros Destacados – Veteranos con privilegios.<br>
+      6️⃣ Miembros Activos – Participan regularmente.<br>
+      7️⃣ Miembros Nuevos – En periodo de prueba (primeras 2 semanas).<br><br>
       <strong>Campos de juego:</strong> Blox Fruits, Brookhaven, Adopt Me, Arsenal, King Legacy, Driving Empire, Otros.<br>
       <strong>Departamentos:</strong> Eventos, Admisiones, Moderación, Relaciones, Técnico, Contenido.<br>
       <strong>Miembros actuales:</strong> +328 verificados de diferentes países.<br><br>
@@ -411,7 +487,8 @@
       • <strong>Futuro:</strong> Seguir creciendo como comunidad de referencia en Roblox.<br><br>
       Nuestra historia se construye día a día con cada miembro.`
     },
-
+ 
+ 
 
     {
       keywords: ['requisitos admin', 'ser admin', 'moderador', 'postular staff', 'aspirante', 'administrador', 'quiero ser staff', 'como ser moderador'],
@@ -422,27 +499,30 @@
       ✔️ Demostrar compromiso, respeto y capacidad de ayudar a otros.<br>
       ✔️ Estar atento a las convocatorias que se publican en Discord (#anuncios) y en el sitio web (Contacto → Aspirar a Admin).<br>
       ✔️ Completar el formulario de postulación cuando esté abierto.<br><br>
-      Los seleccionados pasan por un periodo de capacitación y prueba. <strong>Nunca</strong> se venden rangos ni se aceptan pagos por ascensos.`
+      Los seleccionados pasan por un periodo de capacitación y prueba. <strong>Nunca</strong> se venden rangos ni se aceptan pagos por ascensos.<br><br>
+      💡 Si aún no cumples los requisitos para admin, también puedes postularte como <strong>Colaborador</strong> (Contacto → Aspirar a Colaborador), con requisito mínimo de 15 años.`
     },
-
+ 
+ 
 
     {
       keywords: ['navegacion', 'menu', 'secciones', 'paginas', 'donde encuentro', 'ubicacion', 'sitio web', 'como funciona la pagina'],
       response: `🧭 <strong>Navegación del sitio web</strong><br><br>
       El menú superior te permite acceder a todas las secciones:<br>
       • <strong>Inicio:</strong> Presentación, video, juegos, testimonios, galería.<br>
-      • <strong>Reglamento:</strong> Normas completas, sanciones, derechos.<br>
+      • <strong>Reglamento:</strong> Normas completas, sanciones, derechos, colaboradores.<br>
       • <strong>Formulario:</strong> Inscripción al clan (etapa final).<br>
       • <strong>FAQ:</strong> Preguntas frecuentes categorizadas.<br>
       • <strong>Eventos:</strong> Información de próximos eventos y torneos.<br>
       • <strong>Noticias:</strong> Novedades y anuncios del clan.<br>
-      • <strong>Contacto:</strong> Formularios de reporte, sugerencias, legal.<br>
+      • <strong>Contacto:</strong> Formularios de reporte, sugerencias, aspirar a admin/colaborador y asuntos legales.<br>
       • <strong>Créditos:</strong> Reconocimiento a colaboradores.<br>
       • <strong>Alianzas:</strong> Clanes aliados (sección en el footer).<br>
       • <strong>Tutoriales:</strong> Videotutoriales sobre uso de la web y procesos del clan.<br><br>
       En el footer (parte inferior) encontrarás enlaces rápidos, redes sociales e información legal.`
     },
-
+ 
+ 
 
     {
       keywords: ['video', 'reproductor', 'clan video', 'presentacion', 'multimedia', 'trailer', 'video del clan'],
@@ -465,10 +545,11 @@
       • Momentos divertidos.<br><br>
       Cada tarjeta tiene una descripción y fecha. Haz clic en el botón de lupa para ampliar la imagen.`
     },
-
+ 
+ 
 
     {
-      keywords: ['filtro juegos', 'buscar juegos', 'categorias juegos', 'lista juegos', 'explorar juegos', 'buscar juego'],
+      keywords: ['filtro juegos', 'buscar juegos', 'categorias juegos', 'explorar juegos', 'buscar juego'],
       response: `🔍 <strong>Filtro de juegos en la página de Inicio</strong><br><br>
       Debajo del video hay una sección "Juegos que disfrutamos" con un sistema de filtrado. Puedes:<br>
       • Buscar por nombre usando la caja de búsqueda.<br>
@@ -477,7 +558,8 @@
       • Restablecer filtros.<br><br>
       Esta herramienta te ayuda a descubrir qué juegos son populares en el clan y unirte a las partidas.`
     },
-
+ 
+ 
 
     {
       keywords: ['noticias', 'news', 'actualizaciones', 'anuncios', 'novedades', 'canal noticias', 'npoint', 'carga noticias', 'filtros noticias', 'estadisticas noticias', 'ctrl shift r', 'ultimas noticias'],
@@ -502,7 +584,8 @@
       ✅ Anuncios importantes del staff.<br><br>
       Para unirte, ve a la página de Noticias y haz clic en "Unirse al Canal" o escanea el código QR en "Ver QR". También puedes acceder directamente al canal: https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31`
     },
-
+ 
+ 
 
     {
       keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'kian vove', 'golden vultures', 'nythera', 'the future legends', 'bloody legacy', 'wonderland', 'legion nova', 'luwance', 'bobox community', 'kira order', 'azeroth seraphim', 'celestial diamond', 'sovereign zenith', 'the black bulls'],
@@ -522,9 +605,10 @@
       • Celestial Diamond<br>
       • Sovereign Zenith Authority<br>
       • The Black Bulls<br><br>
-      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el canal #solicitudes-externas en Discord.`
+      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el canal #solicitudes-externas en Discord o postúlate como <strong>Colaborador - Representante de Alianzas</strong> en Contacto.`
     },
-
+ 
+ 
 
     {
       keywords: ['tutoriales', 'videotutoriales', 'videos tutoriales', 'como usar la pagina', 'guia'],
@@ -537,7 +621,8 @@
       • Cómo usar la página web.<br><br>
       Cada video tiene su propio reproductor con controles de reproducción, volumen y pantalla completa. ¡Échales un vistazo!`
     },
-
+ 
+ 
 
     {
       keywords: ['sms studios', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
@@ -560,7 +645,7 @@
       keywords: ['como entrar sms studios', 'acceder laboratorio', 'donde esta sms studios', 'abrir code lab', 'ingresar al laboratorio', 'entrar a sms studios', 'donde programar'],
       response: `🚀 <strong>Cómo acceder a SMS Studios</strong><br><br>
       Puedes acceder de dos maneras:<br>
-      • <strong>Desde el menú de navegación:</strong> Busca "SMS Studios" en el menú superior (próximamente tendrá su propio enlace). Mientras tanto, ve al footer y haz clic en "SMS Studios".<br>
+      • <strong>Desde el footer:</strong> Haz clic en "SMS Studios" en la parte inferior de cualquier página.<br>
       • <strong>Enlace directo:</strong> Visita <strong>laboratorio.html</strong> en el navegador.<br><br>
       Al entrar verás una pantalla de bienvenida con toda la información. Haz clic en <strong>"Ingresar al Laboratorio"</strong> para empezar a programar. ¡No necesitas instalar nada!`
     },
@@ -569,20 +654,20 @@
       response: `💾 <strong>Guardar y exportar proyectos en SMS Studios</strong><br><br>
       SMS Studios guarda todo automáticamente para que no pierdas tu trabajo:<br>
       • <strong>Guardado automático:</strong> Tu código se guarda cada 10 segundos en el navegador.<br>
-      • <strong>Gestión de proyectos:</strong> Haz clic en el icono de capas <i class="fas fa-layer-group"></i> para guardar tu proyecto con nombre y cargarlo cuando quieras.<br>
-      • <strong>Descarga ZIP:</strong> Haz clic en <i class="fas fa-download"></i> para descargar tu proyecto completo con todos los archivos.<br>
-      • <strong>Exportar HTML único:</strong> Haz clic en <i class="fas fa-file-export"></i> para generar un solo archivo .html con todo incrustado (CSS y JS), listo para publicar o compartir.<br><br>
-      También puedes <strong>cargar archivos</strong> desde tu dispositivo con el botón <i class="fas fa-upload"></i> o arrastrando y soltando sobre el explorador.`
+      • <strong>Gestión de proyectos:</strong> Haz clic en el icono de capas para guardar tu proyecto con nombre y cargarlo cuando quieras.<br>
+      • <strong>Descarga ZIP:</strong> Descarga tu proyecto completo con todos los archivos.<br>
+      • <strong>Exportar HTML único:</strong> Genera un solo archivo .html con todo incrustado (CSS y JS), listo para publicar o compartir.<br><br>
+      También puedes <strong>cargar archivos</strong> desde tu dispositivo o arrastrando y soltando sobre el explorador.`
     },
     {
       keywords: ['personalizar editor', 'temas editor', 'cambiar tema', 'fuente editor', 'modo oscuro', 'monokai', 'dracula', 'solarized', 'nord', 'material', 'apariencia editor'],
       response: `🎨 <strong>Personalización del editor en SMS Studios</strong><br><br>
       Puedes personalizar la apariencia del editor a tu gusto:<br>
-      • <strong>6 temas de editor:</strong> Monokai, Dracula, Solarized, Nord, Material y Default. Haz clic en el icono de paleta <i class="fas fa-palette"></i> para cambiar entre ellos.<br>
-      • <strong>Tamaño de fuente:</strong> Usa los botones <i class="fas fa-search-plus"></i> y <i class="fas fa-search-minus"></i> en la barra de estado inferior para ajustar el tamaño del texto.<br>
-      • <strong>Modos de vista:</strong> Editor solo (<i class="fas fa-code"></i>), vista dividida (<i class="fas fa-columns"></i>), o solo vista previa (<i class="fas fa-eye"></i>).<br>
-      • <strong>Pantalla completa:</strong> Maximiza el laboratorio como un vídeo con el botón <i class="fas fa-expand-arrows-alt"></i> o con Ctrl+Shift+M.<br>
-      • <strong>Ajuste de línea:</strong> Activa o desactiva el ajuste de línea con el botón <i class="fas fa-text-width"></i>.`
+      • <strong>6 temas de editor:</strong> Monokai, Dracula, Solarized, Nord, Material y Default.<br>
+      • <strong>Tamaño de fuente:</strong> Ajusta el tamaño del texto desde la barra de estado inferior.<br>
+      • <strong>Modos de vista:</strong> Editor solo, vista dividida, o solo vista previa.<br>
+      • <strong>Pantalla completa:</strong> Maximiza el laboratorio con el botón correspondiente o con Ctrl+Shift+M.<br>
+      • <strong>Ajuste de línea:</strong> Activa o desactiva el ajuste de línea desde la barra de herramientas.`
     },
     {
       keywords: ['retos programacion', 'desafios codigo', 'ejercicios html', 'practicas css', 'ejercicios javascript', 'challenges', 'tareas programacion'],
@@ -597,7 +682,7 @@
       • <strong>Galería de imágenes con CSS Grid</strong>.<br>
       • <strong>Barra de navegación responsive</strong> (Flexbox y media queries).<br>
       • <strong>Reloj digital en tiempo real</strong> (Date y setInterval).<br><br>
-      Para verlos, haz clic en el icono de puzzle <i class="fas fa-puzzle-piece"></i> y selecciona "Empezar reto". Cada reto carga una plantilla inicial y te guía con instrucciones detalladas.`
+      Selecciona "Empezar reto" en el panel de retos. Cada reto carga una plantilla inicial y te guía con instrucciones detalladas.`
     },
     {
       keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial sms studios', 'robot programacion'],
@@ -607,7 +692,7 @@
       • Explicar conceptos de programación.<br>
       • Sugerir mejoras en tu código.<br>
       • Ayudarte a depurar errores.<br><br>
-      Mientras tanto, puedes usar la <strong>enciclopedia interna</strong> (icono de libro <i class="fas fa-book"></i>) y los <strong>retos</strong> para seguir aprendiendo. ¡Te avisaremos cuando el asistente IA esté listo!`
+      Mientras tanto, puedes usar la <strong>enciclopedia interna</strong> y los <strong>retos</strong> para seguir aprendiendo. ¡Te avisaremos cuando el asistente IA esté listo!`
     },
     {
       keywords: ['enciclopedia sms studios', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
@@ -616,19 +701,22 @@
       • <strong>HTML:</strong> Estructura básica, etiquetas de texto, enlaces, imágenes, listas, tablas, formularios, multimedia, semántica HTML5, accesibilidad, SEO y más.<br>
       • <strong>CSS:</strong> Selectores, Box Model, posicionamiento, Flexbox, Grid, animaciones, media queries, variables, sombras, filtros y mucho más.<br>
       • <strong>JavaScript:</strong> Variables, tipos de datos, operadores, condicionales, bucles, funciones, arrays, objetos, DOM, eventos, asincronía, clases, módulos y patrones útiles.<br><br>
-      Para abrirla, haz clic en el icono de libro <i class="fas fa-book"></i>. Puedes buscar cualquier término con el campo de búsqueda y copiar los ejemplos de código con el botón "Copiar".`
+      Para abrirla, haz clic en el icono de libro. Puedes buscar cualquier término con el campo de búsqueda y copiar los ejemplos de código con el botón "Copiar".`
     },
+ 
+ 
 
     {
       keywords: ['testimonios', 'opiniones', 'miembros dicen', 'experiencias', 'comentarios', 'shadowblade', 'diegosanval2012', 'icequeen', 'que dicen', 'reseñas'],
       response: `💬 <strong>Testimonios de miembros</strong><br><br>
       Esto es lo que dicen algunos de nuestros miembros:<br>
-      • <strong>kakaroto11141</strong> (FOUNDER): "me gusta mucho mi comunidad, porque es un espacio creado con mucho amor para brindarles seguridad y confianza en su manera libre de expresarse respetuosamente. SerakDepMS no es un clan como los demás, es una vida, una familia y un despertar a la innovación. porque aprender a vivir entre personas de diferentes lugares y distintas culturas es la forma más bella de compartir nuestros pensamientos e ideales sin ser juzgados.."<br>
+      • <strong>kakaroto11141</strong> (FOUNDER): "SerakDepMS no es un clan como los demás, es una vida, una familia y un despertar a la innovación. Aprender a vivir entre personas de diferentes lugares y distintas culturas es la forma más bella de compartir nuestros pensamientos e ideales sin ser juzgados."<br>
       • <strong>Diegosanval2012</strong> (Miembro desde 2026): "Me gusta su buen desarrollo administrativo y alta gerencia en los ámbitos de soporte técnico y toma de decisiones."<br>
       • <strong>MiembroAnonimoMiembro</strong> (Miembro desde 2026): "Que la mayoría de los integrantes son divertidos y respetuosos."<br><br>
       ¿Quieres compartir tu experiencia? Envíala a través del formulario de sugerencias en Contacto.`
     },
-
+ 
+ 
 
     {
       keywords: ['redes sociales', 'twitter', 'instagram', 'tiktok', 'youtube', 'social media', 'x', 'discord link', 'seguir', 'rrss'],
@@ -641,7 +729,8 @@
       📺 <strong>YouTube:</strong> (canal en desarrollo)<br><br>
       Los enlaces directos están disponibles en el footer de cada página. ¡Síguenos para estar al día!`
     },
-
+ 
+ 
 
     {
       keywords: ['pc', 'laptop', 'recomendacion', 'experiencia', 'navegador', 'problemas tecnicos', 'error pagina', 'no carga', 'mobile', 'dispositivos moviles', 'problema tecnico', 'bug'],
@@ -665,7 +754,8 @@
       5️⃣ Si el problema persiste, repórtalo en Contacto → Reportar problema.<br><br>
       Incluye en tu reporte: navegador usado, sistema operativo, descripción del error y captura de pantalla.`
     },
-
+ 
+ 
 
     {
       keywords: ['contribuir', 'ayudar clan', 'voluntario', 'colaborar', 'aportar', 'quiero ayudar', 'como puedo ayudar'],
@@ -676,10 +766,12 @@
       • <strong>Proponiendo ideas:</strong> Usa el canal #sugerencias en Discord o el formulario de sugerencias en la web.<br>
       • <strong>Creando contenido:</strong> Guías, tutoriales, arte para el clan.<br>
       • <strong>Reportando problemas:</strong> Ayúdanos a mantener un ambiente seguro reportando conductas inapropiadas.<br>
+      • <strong>Postulándote como Colaborador:</strong> Apoya en áreas de eventos, edición o representación de alianzas (Contacto → Aspirar a Colaborador).<br>
       • <strong>Uniéndote a un departamento:</strong> Pregunta a un admin si hay vacantes en algún equipo.<br><br>
       ¡Toda contribución, grande o pequeña, es valorada!`
     },
-
+ 
+ 
 
     {
       keywords: ['logo', 'panda', 'serakdep ms significado', 'lema', 'slogan', 'splash screen', 'carga inicial', 'panda logo'],
@@ -690,28 +782,31 @@
       <strong>Splash Screen:</strong> Al cargar la página de Inicio aparece una animación con el panda y el mensaje "Invocando a los pandas ancestrales...".<br><br>
       El diseño del logo fue creado por artistas de la comunidad y es un símbolo de nuestra identidad.`
     },
-
+ 
+ 
 
     {
       keywords: ['hola', 'buenas', 'ayuda', 'gracias', 'saludos', 'buenos dias', 'buenas tardes', 'buenas noches', 'info', 'que sabes', 'ayudame', 'que puedes hacer'],
       response: `🐼 ¡Hola! Soy el asistente virtual de <strong>Serakdep MS</strong>, entrenado con toda la información del sitio web. Puedo ayudarte con:<br>
       • <strong>Inscripción y formulario</strong> (requisitos, pasos, campos).<br>
-      • <strong>Reglamento y sanciones</strong> (tabla completa, apelaciones, código de conducta).<br>
+      • <strong>Reglamento y sanciones</strong> (tabla completa, apelaciones, proceso disciplinario).<br>
       • <strong>Discord y WhatsApp</strong> (canales, grupos, normas, horarios).<br>
-      • <strong>Eventos y torneos</strong> (pasados, cómo participar, premios, normas de convivencia).<br>
+      • <strong>Eventos y torneos</strong> (cómo participar, premios, normas de convivencia).<br>
       • <strong>Juegos populares y filtro</strong> (351 títulos, 15 categorías).<br>
       • <strong>Contacto y reportes</strong> (email, formularios, cómo reportar).<br>
+      • <strong>Colaboradores</strong> (áreas, requisitos, formulario de postulación).<br>
       • <strong>FAQ categorizadas</strong> (12 categorías de dudas comunes).<br>
       • <strong>Legal</strong> (privacidad, términos, cookies, DMCA, derechos ARCO).<br>
-      • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, miembros del equipo).<br>
+      • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
-      • <strong>Alianzas</strong> (16 clanes aliados).<br>
+      • <strong>Alianzas</strong> (14 clanes aliados).<br>
       • <strong>Tutoriales</strong> (videotutoriales de ayuda).<br>
-      • <strong>Soporte técnico y contribuciones</strong>.<br><br>
+      • <strong>SMS Studios</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
     }
   ];
-
+ 
+ 
 
   function findBestResponse(query) {
     const lowerQuery = query.toLowerCase().trim();
@@ -719,11 +814,11 @@
     if (!lowerQuery) {
       return `🤔 No he entendido tu consulta. ¿Podrías ser más específico? Puedes preguntarme sobre inscripción, reglamento, Discord, eventos, juegos, contacto, legal, estructura del clan, noticias... ¡Lo que necesites!`;
     }
-
+ 
     let bestMatch = null;
     let bestScore = 0;
     const queryWords = lowerQuery.split(/\s+/);
-
+ 
     for (let entry of knowledgeBase) {
       let score = 0;
       
@@ -757,14 +852,14 @@
         bestMatch = entry;
       }
     }
-
+ 
     if (bestMatch && bestScore > 0) {
       return bestMatch.response;
     }
-
+ 
     const suggestions = [
-      'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos', 
-      'juegos', 'contacto', 'reportar', 'sanciones', 'estructura', 
+      'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos',
+      'juegos', 'contacto', 'reportar', 'sanciones', 'colaboradores',
       'noticias', 'legal', 'créditos', 'ser admin', 'alianzas', 'tutoriales',
       'sms studios', 'laboratorio código', 'retos programación', 'enciclopedia'
     ];
@@ -775,7 +870,8 @@
     • <strong>${suggestions.slice(12).join(' • ')}</strong><br><br>
     También puedes visitar la sección de <strong>FAQ</strong> en el menú superior para ver todas las preguntas frecuentes organizadas por categorías.`;
   }
-
+ 
+ 
 
   function createChatbot() {
     const container = document.createElement('div');
@@ -805,7 +901,8 @@
     `;
     document.body.appendChild(container);
   }
-
+ 
+ 
 
   function initChatbot() {
     const toggleBtn = document.getElementById('chatbotToggle');
@@ -814,9 +911,9 @@
     const messagesDiv = document.getElementById('chatbotMessages');
     const inputField = document.getElementById('chatbotInput');
     const sendBtn = document.getElementById('sendMessageBtn');
-
+ 
     let hasStarted = false;
-
+ 
     toggleBtn.addEventListener('click', () => {
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -824,18 +921,19 @@
         addBotMessage(`🐼 <strong>¡Hola! Soy el asistente IA de Serakdep MS.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre el clan. Puedes preguntarme sobre:<br>
         • Cómo inscribirte y los requisitos.<br>
-        • El reglamento y el sistema de sanciones.<br>
+        • El reglamento, sanciones y proceso disciplinario.<br>
         • Nuestro servidor de Discord y grupos de WhatsApp.<br>
         • Eventos, torneos y juegos populares.<br>
         • Cómo reportar problemas o contactar al staff.<br>
         • La estructura del clan y cómo ascender.<br>
+        • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>
         • <strong>SMS Studios</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
         • Noticias, legal, créditos, alianzas y tutoriales.<br><br>
         <strong>Escribe tu consulta con total libertad.</strong> Entiendo lenguaje natural, así que no necesitas usar palabras exactas. ¡Adelante!`);
         hasStarted = true;
       }
     });
-
+ 
     function closeModal() {
       modal.classList.remove('active');
       document.body.style.overflow = '';
@@ -844,7 +942,7 @@
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });
-
+ 
     function sendUserMessage(text) {
       if (!text.trim()) return;
       
@@ -867,12 +965,12 @@
       
       inputField.value = '';
     }
-
+ 
     sendBtn.addEventListener('click', () => sendUserMessage(inputField.value));
     inputField.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') sendUserMessage(inputField.value);
     });
-
+ 
     function addBotMessage(html) {
       const msgDiv = document.createElement('div');
       msgDiv.className = 'bot-message';
@@ -880,7 +978,7 @@
       messagesDiv.appendChild(msgDiv);
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
     }
-
+ 
     function addUserMessage(text) {
       const msgDiv = document.createElement('div');
       msgDiv.className = 'user-message';
@@ -889,6 +987,8 @@
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
     }
   }
+ 
+ 
 
   function ensureFontAwesome() {
     if (!document.querySelector('link[href*="font-awesome"]')) {
@@ -921,7 +1021,7 @@
     `;
     document.head.appendChild(style);
   }
-
+ 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       ensureFontAwesome();

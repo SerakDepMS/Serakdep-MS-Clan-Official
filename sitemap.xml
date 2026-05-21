@@ -110,6 +110,12 @@
   </url>
 
   <url>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/aspirantes-colaborador.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
     <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/404.html</loc>
     <priority>0.1</priority>
     <changefreq>never</changefreq>

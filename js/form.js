@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
     setupAdminApplicationForm();
   }
 
+  const colaboradorForm = document.getElementById("colaborador-application-form");
+  if (colaboradorForm) {
+    setupColaboradorForm();
+  }
+
   setupCharacterCounter();
   setupAdminNavigation();
 });
@@ -757,6 +762,164 @@ function validateAdminForm() {
   }
   return true;
 }
+
+
+
+function setupColaboradorForm() {
+  const form = document.getElementById("colaborador-application-form");
+  if (!form) return;
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  let messageContainer = form.querySelector(".colab-message-container");
+  if (!messageContainer) {
+    messageContainer = document.createElement("div");
+    messageContainer.className = "colab-message-container";
+    submitBtn.parentNode.insertBefore(messageContainer, submitBtn.nextSibling);
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    if (!validateColaboradorForm()) return;
+
+    submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+    try {
+      const formData = {
+        robloxName: document.getElementById("colab-roblox-name").value.trim(),
+        age: document.getElementById("colab-age").value.trim(),
+        country: document.getElementById("colab-country").value,
+        timezone: document.getElementById("colab-timezone").value,
+        whatsapp: document.getElementById("colab-whatsapp").value.trim() || "No proporcionado",
+        area: document.getElementById("colab-area").value,
+        experience: document.getElementById("colab-experience").value.trim() || "No especificada",
+        whyColab: document.getElementById("colab-why").value.trim(),
+        availability: document.getElementById("colab-availability").value,
+        improvements: document.getElementById("colab-improvements").value.trim(),
+        terms: document.getElementById("colab-terms").checked,
+        commitment: document.getElementById("colab-commitment").checked,
+      };
+      await sendColaboradorEmail(formData);
+      console.log("Enviado con éxito");
+      showToast("Solicitud de colaborador enviada con éxito", "success");
+      form.reset();
+    } catch (error) {
+      console.error("Error al enviar solicitud de colaborador:", error);
+      showMessageInContainer("Error al enviar la solicitud. Inténtalo de nuevo o contacta directamente por WhatsApp.", "error", messageContainer);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  });
+}
+
+async function sendColaboradorEmail(data) {
+  const areaText = {
+    actividades: "🎉 Actividades y Eventos",
+    edicion: "🎨 Edición y Contenido",
+    alianzas: "🤝 Representante de Alianzas"
+  }[data.area] || data.area;
+
+  const whatsappDisplay = data.whatsapp !== "No proporcionado"
+    ? `<a href="https://wa.me/${data.whatsapp.replace(/\D/g, '')}" style="color: #25D366; text-decoration: none; font-weight: bold;">${data.whatsapp}</a>`
+    : '<span style="color: #e74c3c;">No proporcionado</span>';
+
+  const contentHtml = `
+    <strong>ÁREA DE COLABORACIÓN:</strong> ${areaText}<br><br>
+    <strong>MOTIVACIÓN:</strong><br>${data.whyColab.replace(/\n/g, "<br>")}<br><br>
+    <strong>EXPERIENCIA PREVIA:</strong><br>${data.experience.replace(/\n/g, "<br>")}<br><br>
+    <strong>MEJORAS PROPUESTAS:</strong><br>${data.improvements.replace(/\n/g, "<br>")}<br><br>
+    <strong>DISPONIBILIDAD:</strong> ${data.availability} horas/semana
+  `;
+
+  const whatsappAction = data.whatsapp !== "No proporcionado"
+    ? '<div style="background: white; padding: 12px; border-radius: 5px; margin-bottom: 10px; border-left: 4px solid #25D366;">' +
+      '<strong style="color: #25D366;">📱 WHATSAPP:</strong> Contactar al número <strong>' + data.whatsapp + '</strong> para coordinar la incorporación.' +
+      "</div>"
+    : "";
+
+  const contactNote = data.whatsapp === "No proporcionado"
+    ? '<div style="background: white; padding: 12px; border-radius: 5px; margin-bottom: 10px; border-left: 4px solid #f39c12;">' +
+      '<strong style="color: #f39c12;">ℹ️ CONTACTO:</strong> No proporcionó WhatsApp. Contactar por Roblox: <strong>' + data.robloxName + '</strong>' +
+      "</div>"
+    : "";
+
+  const priority = data.whatsapp !== "No proporcionado"
+    ? '<span style="color: #f39c12; font-weight: bold;">MEDIA - Contactar para coordinar</span>'
+    : '<span style="color: #3498db; font-weight: bold;">BAJA - Contactar por Roblox</span>';
+
+  const priorityExplanation = data.whatsapp !== "No proporcionado"
+    ? "Contactar por WhatsApp para dar seguimiento a la solicitud."
+    : "Contactar por Roblox para seguimiento.";
+
+  const templateParams = {
+    roblox_name: `[ASPIRANTE COLABORADOR] ${data.robloxName}`,
+    age: data.age,
+    country: data.country,
+    timezone: data.timezone,
+    games: "No especificado",
+    experience: data.experience,
+    play_hours: "No especificado",
+    why_join: contentHtml,
+    referral: "Formulario Aspirantes a Colaborador",
+    whatsapp: data.whatsapp,
+    whatsapp_consent: "Sí",
+    newsletter: "No",
+    join_whatsapp: data.whatsapp !== "No proporcionado" ? "Sí" : "No",
+    join_discord: "No",
+    whatsapp_display: whatsappDisplay,
+    discord_display: '<span style="color: #e74c3c;">No proporcionado</span>',
+    whatsapp_consent_display: '<span style="color: #27ae60; font-weight: bold;">✓ Aceptado</span>',
+    newsletter_display: '<span style="color: #e74c3c;">✗ No suscrito</span>',
+    join_whatsapp_check: data.whatsapp !== "No proporcionado" ? '<span style="color: #25D366; font-weight: bold; margin-left: 10px;">✓ Teléfono registrado</span>' : "",
+    join_discord_check: "",
+    join_both_note: "",
+    whatsapp_action: whatsappAction,
+    discord_action: "",
+    contact_note: contactNote,
+    priority: priority,
+    priority_explanation: priorityExplanation,
+    classification: "Aspirante Colaborador",
+    date: new Date().toLocaleString("es-ES", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }),
+    timestamp: Date.now().toString(),
+  };
+
+  return emailjs.send("service_sjea029", "template_bso642c", templateParams);
+}
+
+function validateColaboradorForm() {
+  const age = parseInt(document.getElementById("colab-age").value, 10);
+  if (isNaN(age) || age < 15) {
+    showMessage("La edad mínima para ser colaborador es 15 años.", "error");
+    document.getElementById("colab-age").focus();
+    return false;
+  }
+  if (!document.getElementById("colab-terms").checked) {
+    showMessage("Debes aceptar haber leído el reglamento del clan.", "error");
+    return false;
+  }
+  if (!document.getElementById("colab-commitment").checked) {
+    showMessage("Debes comprometerte a mantener la confidencialidad.", "error");
+    return false;
+  }
+  const requiredFields = ["colab-roblox-name", "colab-age", "colab-country", "colab-timezone", "colab-area", "colab-why", "colab-availability", "colab-improvements"];
+  for (const fieldId of requiredFields) {
+    const field = document.getElementById(fieldId);
+    if (field && field.hasAttribute("required") && !field.value.trim()) {
+      showMessage("Por favor, completa todos los campos obligatorios.", "error");
+      field.focus();
+      return false;
+    }
+  }
+  const whyColab = document.getElementById("colab-why").value.trim();
+  if (whyColab.length < 20) {
+    showMessage("Por favor, explica con más detalle por qué quieres ser colaborador (mínimo 20 caracteres).", "error");
+    return false;
+  }
+  return true;
+}
+
 
 function showMessage(text, type, form = null) {
   let messageContainer;

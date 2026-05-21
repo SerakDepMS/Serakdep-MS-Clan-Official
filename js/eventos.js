@@ -12,16 +12,13 @@ let currentYear = new Date().getFullYear();
 let lastKnownDate = new Date();
 let ultimaActualizacionTimestamp = null;
 
-
 async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
   try {
-
     const cacheBuster = `_cb=${Date.now()}`;
     const urlConAntiCache = API_EVENTOS.includes('?') 
       ? `${API_EVENTOS}&${cacheBuster}` 
       : `${API_EVENTOS}?${cacheBuster}`;
     
-
     if (!esActualizacionPeriodica) {
       console.log("Cargando eventos iniciales...");
     }
@@ -30,7 +27,6 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
     if (!response.ok) throw new Error("Error al cargar eventos");
 
     const data = await response.json();
-
 
     const nuevosEventos = {};
     if (data.eventos && Array.isArray(data.eventos)) {
@@ -43,24 +39,20 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
           description: evento.descripcion || "¡No te pierdas este evento!",
           status: evento.estado || "closed",
           category: evento.categoria || "general",
+          link: evento.enlace || "" // ← NUEVO: campo de enlace dinámico
         };
       });
     }
-
 
     const eventosAnteriores = window.calendarEvents ? JSON.stringify(window.calendarEvents) : '';
     const eventosNuevosStr = JSON.stringify(nuevosEventos);
     const hanCambiado = eventosAnteriores !== eventosNuevosStr;
 
-
     window.calendarEvents = nuevosEventos;
 
     if (hanCambiado) {
       console.log(`¡DATOS ACTUALIZADOS! ${Object.keys(window.calendarEvents).length} eventos cargados.`);
-    } else {
-
     }
-
 
     initTodayEvent();
     renderCalendar(currentMonth, currentYear);
@@ -86,11 +78,9 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
   }
 }
 
-
 async function actualizarEventosPeriodicamente() {
   await cargarEventosDesdeAPI(true);
 }
-
 
 function getLocalDate(dateString = null) {
   if (!dateString) {
@@ -153,7 +143,6 @@ function navigateToCurrentMonth() {
   currentYear = now.getFullYear();
   renderCalendar(currentMonth, currentYear);
   renderEventList(currentMonth, currentYear);
-
 }
 
 function renderCalendar(month, year) {
@@ -375,20 +364,11 @@ function findNextEvent() {
   return null;
 }
 
-function initReminderSystem() {
-
-}
-
-function initStatistics() {
-
-}
-
 function initEventListeners() {
   document.getElementById("prev-month")?.addEventListener("click", () => changeMonth("prev"));
   document.getElementById("next-month")?.addEventListener("click", () => changeMonth("next"));
   document.getElementById("today-btn")?.addEventListener("click", navigateToCurrentMonth);
   
-
   document.addEventListener("click", (e) => {
     if (e.target.closest(".calendar-day.event-day")) {
       const dayElement = e.target.closest(".calendar-day");
@@ -459,9 +439,11 @@ function showEventModal(event, dateKey) {
   const joinBtn = modal.querySelector("#btn-join-now-modal");
   const today = getLocalDate();
   const isToday = formatDateForKey(eventDate) === formatDateForKey(today);
-  if (isToday && event.status === "open") {
+  const eventLink = event.link || "";
+  
+  if (isToday && event.status === "open" && eventLink) {
     joinBtn.style.display = "inline-block";
-    joinBtn.onclick = () => { joinEventNow(); modal.style.display = "none"; };
+    joinBtn.onclick = () => { window.open(eventLink, "_blank"); modal.style.display = "none"; };
   } else {
     joinBtn.style.display = "none";
   }
@@ -489,8 +471,10 @@ function joinEventNow() {
   const today = getLocalDate();
   const todayKey = formatDateForKey(today);
   const event = window.calendarEvents[todayKey];
-  if (event && event.status === "open") {
-    window.open("https://www.roblox.com/share?code=9cdda433d920c94b847643717cab2a13&type=Server", "_blank");
+  if (event && event.status === "open" && event.link) {
+    window.open(event.link, "_blank");
+  } else if (event && event.status === "open" && !event.link) {
+    console.warn("El evento no tiene enlace configurado.");
   } else {
     console.warn("Evento no está abierto para unirse.");
   }
@@ -500,8 +484,5 @@ function formatDate(date) {
   return date.toLocaleDateString("es-ES", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-
 initEventListeners();
-
-
 window.joinEventNow = joinEventNow;
