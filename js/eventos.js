@@ -39,7 +39,7 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
           description: evento.descripcion || "¡No te pierdas este evento!",
           status: evento.estado || "closed",
           category: evento.categoria || "general",
-          link: evento.enlace || "" // ← NUEVO: campo de enlace dinámico
+          link: evento.enlace || ""
         };
       });
     }

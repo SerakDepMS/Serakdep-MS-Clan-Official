@@ -28,6 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupCharacterCounter();
   setupAdminNavigation();
+
+  
+  window.addEventListener('serakdep:geoReady', function() {
+    
+    setTimeout(() => {
+      
+      document.querySelectorAll('form').forEach(f => {
+        if (f.checkValidity) f.checkValidity();
+      });
+    }, 100);
+  });
 });
 
 
@@ -403,8 +414,6 @@ function validateInscriptionForm() {
   const requiredFields = [
     "roblox-name",
     "age",
-    "country",
-    "timezone",
     "games",
     "experience",
     "play-hours",
@@ -743,7 +752,7 @@ function validateAdminForm() {
     return false;
   }
   const requiredFields = [
-    "admin-roblox-name", "admin-age", "admin-country", "admin-timezone",
+    "admin-roblox-name", "admin-age",
     "admin-whatsapp", "admin-why", "admin-availability", "admin-improvements"
   ];
   for (const fieldId of requiredFields) {
@@ -903,7 +912,7 @@ function validateColaboradorForm() {
     showMessage("Debes comprometerte a mantener la confidencialidad.", "error");
     return false;
   }
-  const requiredFields = ["colab-roblox-name", "colab-age", "colab-country", "colab-timezone", "colab-area", "colab-why", "colab-availability", "colab-improvements"];
+  const requiredFields = ["colab-roblox-name", "colab-age", "colab-area", "colab-why", "colab-availability", "colab-improvements"];
   for (const fieldId of requiredFields) {
     const field = document.getElementById(fieldId);
     if (field && field.hasAttribute("required") && !field.value.trim()) {
