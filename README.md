@@ -122,6 +122,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 - **GitHub Pages** – Hosting gratuito del sitio estático.
 - **Npoint.io** – Almacenamiento y carga dinámica de noticias, eventos y enciclopedia (API JSON).
 - **EmailJS** – Envío de correos electrónicos desde formularios (inscripción, reportes, sugerencias, aspirantes a admin y colaborador).
+- **ipapi.co** – Geolocalización automática para formularios (país y zona horaria).
 - **CodeMirror 5** – Editor de código para SMS Studios (HTML, CSS, JS, autocompletado, linting).
 - **JSHint** – Validación de JavaScript en tiempo real en SMS Studios.
 - **JSZip** – Descarga de proyectos en ZIP desde SMS Studios.
@@ -146,6 +147,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 - 🐼 **Splash screen** con animación de carga, partículas y panda SVG
 - 🎬 **Reproductor de video** con 15 videos, controles táctiles, pantalla completa, gestos swipe y volumen guardado
 - 🤖 **Chatbot IA** con base de conocimiento ampliada (incluye información sobre colaboradores, eventos y nuevas secciones)
+- 🌍 **Geolocalización automática** en formularios (detección de país y zona horaria)
 - ⏱️ **Contador del clan** en tiempo real (años, meses, días, horas, minutos, segundos)
 - 🌙 **Tema oscuro/claro** con botón de alternancia y cookie de preferencia
 - 🍪 **Banner de cookies** con aceptar/rechazar usando el diseño del clan
