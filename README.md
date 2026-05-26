@@ -202,7 +202,7 @@ no para ser reutilizado, modificado o distribuido.
 | Videotutoriales | 6 |
 | Cookies implementadas | 4 |
 | Clanes aliados | 14 |
-| Miembros del clan | +328 |
+| Miembros del clan | +337 |
 | Categorías FAQ | 15 |
 | Equipos en eventos | 72 |
 | Retos en SMS Studios | 9 |
