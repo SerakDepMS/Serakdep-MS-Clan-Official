@@ -24,14 +24,6 @@ const clanesAliados = [
     fechaAlianza: "2025-12-21"
   },
   {
-    nombre: "The Future Legends",
-    logo: "images/alianzas/TheFutureLegends.jpg",
-    descripcion: "Es un clan para socializar y hacer amigos, algunas veces se hay giveaways con robux.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-02-03"
-  },
-  {
     nombre: "Bloody Legacy",
     logo: "images/alianzas/BloodyLegacy.jpg",
     descripcion: "Clan enfocado en evade, llevando una buena comunicación, siendo un clan de palabra, en el cual nuestros aliados e integrantes pueden confiar plenamente.",
@@ -48,14 +40,6 @@ const clanesAliados = [
     fechaAlianza: "2025-12-31"
   },
   {
-    nombre: "Legión Nova",
-    logo: "images/alianzas/LegionNova.jpg",
-    descripcion: "Somos una alianza unida por la lealtad, la estrategia y el crecimiento constante. En Legión Nova no solo buscamos ganar, sino construir un equipo fuerte donde cada miembro tenga voz, apoyo y un proposito claro. Nos enfocamos en mejorar juntos, superar retos y mantener siempre el respeto como base de todo. Aqui nadie se queda atrás.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-01-20"
-  },
-  {
     nombre: "LUWANCE",
     logo: "images/alianzas/LUWANCE.jpg",
     descripcion: "Es un clan que prioriza la transparencia, el respeto y el crecimiento real. Aqui, la fuerza no se mide por ego, sino por el corazon de su comunidad.",
@@ -64,44 +48,12 @@ const clanesAliados = [
     fechaAlianza: "2025-12-13"
   },
   {
-    nombre: "BOBOX COMMUNITY",
-    logo: "images/alianzas/Boboxcommunity.jpg",
-    descripcion: "Es un lugar donde queremos que los integrantes puedan divertirse y ser una bonita familia. Nuestra mision es poder crear un buen ambiente con nuestros integrantes.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-02-25"
-  },
-  {
     nombre: "Kira's Order",
     logo: "images/alianzas/KirasOrder.jpg",
     descripcion: "Somos un clan enfocado en la diversion, donde lo mas importante es crear amistades y compartir buenos momentos. Nos gusta organizar eventos, participar juntos y mantener un ambiente entretenido.",
     activo: true,
     nuevaAlianza: false,
     fechaAlianza: "2025-12-19"
-  },
-  {
-    nombre: "Azeroth Seraphim Griever",
-    logo: "images/alianzas/AzerothSeraphimGriever.jpg",
-    descripcion: "En busca de la excelencia y la unidad, creamos un espacio donde la cooperación y el respeto son fundamentales.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-10-27"
-  },
-  {
-    nombre: "Celestial Diamond",
-    logo: "images/alianzas/CelestialDiamond.jpg",
-    descripcion: "Nuestro clan es una comunidad diversa, en busca de congregaciones divertidas.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2025-12-22"
-  },
-  {
-    nombre: "Sovereign Zenith Authority",
-    logo: "images/alianzas/SovereignZenithAuthority.jpg",
-    descripcion: "En busca de la perfeccion y la buena comunicacion entre alianzas, somos la fuerza que impulsa el cambio.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-02-04"
   },
   {
     nombre: "The Black Bulls",

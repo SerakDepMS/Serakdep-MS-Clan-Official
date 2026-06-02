@@ -60,7 +60,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 | 🎮 `eventos.html` | Calendario de eventos, torneos, 72 equipos y sistema de inscripción |
 | 📰 `noticias.html` | Sistema de noticias con npoint.io, actualización cada 12s y filtros |
 | 📞 `contacto.html` | Canales de contacto (WhatsApp, Discord, Email) y formularios de soporte |
-| 🤝 `alianzas.html` | 14 clanes aliados con tarjetas glassmorphism y auras animadas |
+| 🤝 `alianzas.html` | 8 clanes aliados con tarjetas glassmorphism y auras animadas |
 | 🎖️ `creditos.html` | Equipo del clan, línea de tiempo, galería y tecnologías utilizadas |
 | 🎬 `videotutoriales.html` | 6 tutoriales en video con reproductor personalizado |
 
@@ -201,7 +201,7 @@ no para ser reutilizado, modificado o distribuido.
 | Videos en reproductor | 15 |
 | Videotutoriales | 6 |
 | Cookies implementadas | 4 |
-| Clanes aliados | 14 |
+| Clanes aliados |8 |
 | Miembros del clan | +337 |
 | Categorías FAQ | 15 |
 | Equipos en eventos | 72 |
