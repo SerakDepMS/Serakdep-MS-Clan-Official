@@ -590,7 +590,7 @@
     {
       keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'kian vove', 'golden vultures', 'nythera', 'bloody legacy', 'wonderland', 'luwance', 'kira order', 'the black bulls'],
       response: `🤝 <strong>Alianzas de Serakdep MS</strong><br><br>
-      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 14 clanes aliados, entre ellos:<br>
+      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 8 clanes aliados, entre ellos:<br>
       • Kian Vove Xoar's<br>
       • Golden Vultures<br>
       • NYTHERA<br>
@@ -794,7 +794,7 @@
       • <strong>Legal</strong> (privacidad, términos, cookies, DMCA, derechos ARCO).<br>
       • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
-      • <strong>Alianzas</strong> (14 clanes aliados).<br>
+      • <strong>Alianzas</strong> (8 clanes aliados).<br>
       • <strong>Tutoriales</strong> (videotutoriales de ayuda).<br>
       • <strong>SMS Studios</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
