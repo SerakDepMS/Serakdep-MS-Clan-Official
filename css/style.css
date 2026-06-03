@@ -10,7 +10,9 @@
   --background-gradient: linear-gradient(135deg, #e3f2e8 0%, #c8e6c9 100%);
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.12);
-  --transition: all 0.3s ease;
+  /* Limitamos transition a propiedades seguras para evitar repaint costoso */
+  --transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  --transition-color: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 
@@ -84,7 +86,7 @@ nav ul li a {
   font-size: 1.1rem;
   padding: 8px 15px;
   border-radius: 5px;
-  transition: var(--transition);
+  transition: var(--transition-color);
 }
 
 nav ul li a:hover,
@@ -209,6 +211,7 @@ main .container > *:not(:last-child) {
 .gallery-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
+  will-change: transform;
 }
 
 .card-title {
@@ -328,7 +331,7 @@ main .container > *:not(:last-child) {
   padding: 25px;
   background: #f8f9fa;
   border-radius: 10px;
-  transition: var(--transition);
+  transition: transform 0.3s ease, background-color 0.25s ease;
 }
 
 .feature-item:hover {
@@ -367,7 +370,7 @@ main .container > *:not(:last-child) {
   border-radius: 25px;
   font-weight: 600;
   border: 1px solid rgba(45, 106, 79, 0.2);
-  transition: var(--transition);
+  transition: transform 0.3s ease;
 }
 
 .game-tag:hover {
@@ -571,7 +574,7 @@ footer {
 .footer-links a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: var(--transition);
+  transition: transform 0.3s ease, color 0.25s ease;
   display: flex;
   align-items: center;
 }
@@ -603,7 +606,7 @@ footer {
   border-radius: 50%;
   color: white;
   font-size: 1.2rem;
-  transition: var(--transition);
+  transition: transform 0.3s ease, background-color 0.25s ease;
   text-decoration: none;
 }
 
@@ -647,7 +650,7 @@ footer {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
-  transition: var(--transition);
+  transition: border-color 0.25s ease;
 }
 
 .form-group input:focus,
@@ -804,7 +807,7 @@ li {
   border: 2px solid #dee2e6;
   border-radius: 8px;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background: white;
 }
 
@@ -826,7 +829,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   opacity: 0.7;
 }
 
@@ -883,7 +886,7 @@ li {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .toggle-btn:hover {
@@ -898,7 +901,7 @@ li {
   gap: 15px;
   max-height: 400px;
   overflow-y: auto;
-  transition: all 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .categories-grid.collapsed {
@@ -915,7 +918,7 @@ li {
   border: 1px solid #dee2e6;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
   font-weight: 500;
 }
@@ -964,7 +967,7 @@ li {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1277,7 +1280,7 @@ body.dark-theme .theme-toggle-btn:hover {
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   margin-left: 15px;
 }
 

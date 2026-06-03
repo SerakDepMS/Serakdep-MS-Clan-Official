@@ -54,7 +54,7 @@
   object-fit: cover;
   border: 4px solid var(--accent-green);
   box-shadow: 0 8px 25px rgba(27, 67, 50, 0.2);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-member:hover .member-avatar img {
@@ -129,7 +129,7 @@
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .skill-tag:hover {
@@ -155,7 +155,7 @@
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
   border: 2px solid transparent;
   box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);
@@ -231,7 +231,7 @@
   padding: 15px;
   border-radius: 8px;
   border-left: 4px solid var(--accent-green);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .member-contribution:hover {
@@ -284,7 +284,7 @@
   padding: 25px;
   margin-bottom: 0;
   background: white;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -386,7 +386,7 @@
   background: #f8f9fa;
   border-radius: 8px;
   border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tech-info .tech-item:hover {
@@ -440,7 +440,7 @@
   );
   color: var(--primary-green);
   box-shadow: 0 4px 15px rgba(64, 145, 108, 0.2);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .badge:hover {
@@ -554,7 +554,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(27, 67, 50, 0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   border: 1px solid rgba(45, 106, 79, 0.1);
 }
 
@@ -574,7 +574,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .gallery-card:hover .gallery-image img {
@@ -597,7 +597,7 @@
   align-items: flex-start;
   padding: 15px;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-card:hover .gallery-overlay {
@@ -629,7 +629,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-zoom:hover {
@@ -791,7 +791,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
   flex-shrink: 0;
 }
 
@@ -1530,7 +1530,7 @@ a,
   font-size: 0.75em;
   font-weight: 600;
   border: 1px solid rgba(76, 175, 80, 0.3);
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .timeline-tags .tag:hover {
@@ -1762,7 +1762,7 @@ body.dark-theme .timeline-item.future .timeline-content {
   border-radius: 16px;
   padding: 25px 15px 20px;
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(45, 106, 79, 0.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   position: relative;

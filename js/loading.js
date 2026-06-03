@@ -17,13 +17,26 @@
         let W, H;
         const pts = [];
 
+        /* ── Pointer tracking (mouse + touch) ── */
+        let px = -9999, py = -9999;
+        const REPEL_R = 120;
+        const REPEL_F = 2.2;
+
+        function setPointer(cx, cy) { px = cx; py = cy; }
+        function clearPointer()     { px = -9999; py = -9999; }
+
+        window.addEventListener('mousemove',   function(e){ setPointer(e.clientX, e.clientY); }, { passive: true });
+        window.addEventListener('mouseleave',  clearPointer, { passive: true });
+        window.addEventListener('touchmove',   function(e){ if(e.touches.length){ setPointer(e.touches[0].clientX, e.touches[0].clientY); } }, { passive: true });
+        window.addEventListener('touchend',    clearPointer, { passive: true });
+        window.addEventListener('touchcancel', clearPointer, { passive: true });
+
         function resizeCanvas() {
             W = canvas.width  = window.innerWidth;
             H = canvas.height = window.innerHeight;
         }
-        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('resize', resizeCanvas, { passive: true });
         resizeCanvas();
-
 
         for (let i = 0; i < 65; i++) {
             pts.push({
@@ -31,6 +44,8 @@
                 y:   Math.random() * H,
                 vx:  (Math.random() - 0.5) * 0.22,
                 vy:  (Math.random() - 0.5) * 0.18,
+                dvx: 0,
+                dvy: 0,
                 rad: Math.random() * 1.6 + 0.3,
                 col: Math.random() < 0.6 ? 'rgba(212,175,55,' : 'rgba(82,183,136,',
                 alpha: Math.random() * 0.35 + 0.08
@@ -40,6 +55,7 @@
         function drawParticles() {
             ctx.clearRect(0, 0, W, H);
 
+            /* Draw connecting lines */
             for (let i = 0; i < pts.length; i++) {
                 for (let j = i + 1; j < pts.length; j++) {
                     const dx   = pts[i].x - pts[j].x;
@@ -56,13 +72,29 @@
                 }
             }
 
+            /* Update and draw each point */
             pts.forEach(p => {
-                p.x += p.vx;
-                p.y += p.vy;
+                /* Cursor / touch repulsion */
+                const dx   = p.x - px;
+                const dy   = p.y - py;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < REPEL_R && dist > 0) {
+                    const str = (1 - dist / REPEL_R) * REPEL_F;
+                    p.dvx += (dx / dist) * str;
+                    p.dvy += (dy / dist) * str;
+                }
 
-                if (p.x < -10) p.x = W + 10;
+                /* Dampen extra velocity */
+                p.dvx *= 0.90;
+                p.dvy *= 0.90;
+
+                /* Apply movement */
+                p.x += p.vx + p.dvx;
+                p.y += p.vy + p.dvy;
+
+                if (p.x < -10)    p.x = W + 10;
                 if (p.x > W + 10) p.x = -10;
-                if (p.y < -10) p.y = H + 10;
+                if (p.y < -10)    p.y = H + 10;
                 if (p.y > H + 10) p.y = -10;
 
                 ctx.beginPath();

@@ -76,7 +76,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   cursor: default;
 }
 .lobby-feature:hover {
@@ -157,7 +157,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
   position: relative;
 }
 .activity-btn:hover {
@@ -233,7 +233,7 @@
   color: var(--lab-text-secondary);
   border-radius: 6px;
   font-size: 0.9rem;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
   margin-bottom: 2px;
 }
 .file-item:hover {
@@ -281,7 +281,7 @@
   cursor: pointer;
   font-size: 0.85rem;
   white-space: nowrap;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 .editor-tab:hover {
   background: var(--lab-surface);
@@ -393,7 +393,7 @@
   cursor: pointer;
   border-radius: 20px;
   font-size: 0.8rem;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 .console-tab.active {
   background: rgba(212, 175, 55, 0.15);
@@ -524,7 +524,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), border-bottom-color var(--transition-fast);
 }
 .wiki-tab.active {
   background: rgba(212, 175, 55, 0.15);
@@ -574,7 +574,7 @@
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.75rem;
-  transition: all 0.2s;
+  transition: background 0.2s;
   margin-left: 8px;
 }
 .wiki-content .copy-example-btn:hover,
@@ -684,7 +684,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 .icon-btn:hover {
   background: var(--lab-activity-hover);
@@ -723,7 +723,7 @@
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 .status-btn:hover {
   background: var(--lab-activity-hover);
@@ -764,7 +764,7 @@
   cursor: pointer;
   color: #555;
   font-size: 0.9rem;
-  transition: all 0.2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 .size-btn.active, .size-btn:hover {
   background: var(--lab-gold-light);

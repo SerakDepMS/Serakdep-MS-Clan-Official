@@ -301,9 +301,37 @@ function getCookie(name) {
     '#95d5b2', '#52b788', '#40916c', '#2d6a4f'
   ];
   const MAX_PARTICLES = 40;
+  const REPULSION_RADIUS = 110;
+  const REPULSION_FORCE  = 2.8;
   let particles = [];
   let canvas, ctx, animationId;
   let resizeTimer;
+
+  /* Pointer tracking — works for mouse and touch */
+  let pointer = { x: -9999, y: -9999, active: false };
+
+  function onMouseMove(e) {
+    pointer.x = e.clientX;
+    pointer.y = e.clientY;
+    pointer.active = true;
+  }
+  function onMouseLeave() {
+    pointer.active = false;
+    pointer.x = -9999;
+    pointer.y = -9999;
+  }
+  function onTouchMove(e) {
+    if (e.touches.length > 0) {
+      pointer.x = e.touches[0].clientX;
+      pointer.y = e.touches[0].clientY;
+      pointer.active = true;
+    }
+  }
+  function onTouchEnd() {
+    pointer.active = false;
+    pointer.x = -9999;
+    pointer.y = -9999;
+  }
 
   function createParticle() {
     const size = Math.random() * 3.5 + 1.5;
@@ -311,6 +339,8 @@ function getCookie(name) {
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * -canvas.height,
+      vx: 0,
+      vy: 0,
       size, color,
       speedY: Math.random() * 1.3 + 0.4,
       speedX: (Math.random() - 0.5) * 0.35,
@@ -324,15 +354,41 @@ function getCookie(name) {
       particles.push(createParticle());
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     for (let i = particles.length - 1; i >= 0; i--) {
       const p = particles[i];
-      p.y += p.speedY;
-      p.x += p.speedX;
+
+      /* Natural drift */
+      p.x += p.speedX + p.vx;
+      p.y += p.speedY + p.vy;
+
+      /* Cursor / touch repulsion */
+      if (pointer.active) {
+        const dx = p.x - pointer.x;
+        const dy = p.y - pointer.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < REPULSION_RADIUS && dist > 0) {
+          const strength = (1 - dist / REPULSION_RADIUS) * REPULSION_FORCE;
+          p.vx += (dx / dist) * strength;
+          p.vy += (dy / dist) * strength;
+        }
+      }
+
+      /* Dampen velocity smoothly back to zero */
+      p.vx *= 0.88;
+      p.vy *= 0.88;
+
+      /* Clamp velocity so particles don't escape wildly */
+      const maxV = 6;
+      if (Math.abs(p.vx) > maxV) p.vx = maxV * Math.sign(p.vx);
+      if (Math.abs(p.vy) > maxV) p.vy = maxV * Math.sign(p.vy);
+
       if (p.y > canvas.height + 10 || p.x < -10 || p.x > canvas.width + 10) {
         particles[i] = createParticle();
         particles[i].y = -10;
         continue;
       }
+
       ctx.save();
       ctx.globalAlpha = p.opacity;
       ctx.beginPath();
@@ -341,16 +397,17 @@ function getCookie(name) {
       ctx.fill();
       if (p.blur > 0) {
         ctx.shadowColor = p.color;
-        ctx.shadowBlur = p.blur;
+        ctx.shadowBlur  = p.blur;
         ctx.fill();
       }
       ctx.restore();
     }
+
     animationId = requestAnimationFrame(updateParticles);
   }
 
   function resizeCanvas() {
-    canvas.width = window.innerWidth;
+    canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
     particles.length = 0;
   }
@@ -363,10 +420,18 @@ function getCookie(name) {
   function initParticleRain() {
     canvas = document.createElement('canvas');
     canvas.classList.add('particle-rain-container');
+    canvas.style.willChange = 'transform';
     document.body.prepend(canvas);
     ctx = canvas.getContext('2d');
     resizeCanvas();
-    window.addEventListener('resize', debouncedResize);
+
+    window.addEventListener('resize',     debouncedResize,  { passive: true });
+    window.addEventListener('mousemove',  onMouseMove,      { passive: true });
+    window.addEventListener('mouseleave', onMouseLeave,     { passive: true });
+    window.addEventListener('touchmove',  onTouchMove,      { passive: true });
+    window.addEventListener('touchend',   onTouchEnd,       { passive: true });
+    window.addEventListener('touchcancel',onTouchEnd,       { passive: true });
+
     for (let i = 0; i < MAX_PARTICLES; i++) particles.push(createParticle());
     updateParticles();
   }

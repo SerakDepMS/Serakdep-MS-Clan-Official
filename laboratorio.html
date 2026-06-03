@@ -51,6 +51,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Evitar parpadeo del splash en visitas repetidas -->
+  <script>
+    (function(){
+      try {
+        if (sessionStorage.getItem('serakdep_access_granted')) {
+          document.addEventListener('DOMContentLoaded', function(){
+            var s = document.getElementById('splash');
+            if(s){ s.style.display='none'; }
+            document.body.style.overflow = 'auto';
+          });
+        }
+      } catch(e){}
+    })();
+  </script>
 </head>
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
   <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
@@ -412,11 +427,11 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/chatbot.js"></script>
-  <script src="js/scroll-reveal.js"></script>
-  <script src="js/redirect.js"></script>
-  <script src="js/loading.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/scroll-reveal.js" defer></script>
+  <script src="js/redirect.js" defer></script>
+  <script src="js/loading.js" defer></script>
   <script type="module" src="js/laboratorio.js"></script>
 </body>
 </html>

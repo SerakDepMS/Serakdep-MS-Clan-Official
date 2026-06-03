@@ -691,7 +691,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid white;
   min-width: 250px;
 }
@@ -790,7 +790,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid white;
   min-width: 250px;
   width: 100%;
@@ -835,7 +835,7 @@ textarea.form-control {
   background-color: white;
   border-radius: 8px;
   border: 1px solid #e0e6ed;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .form-group:has(#join-whatsapp) .form-checkbox:hover {

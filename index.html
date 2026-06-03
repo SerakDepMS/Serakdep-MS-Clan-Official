@@ -71,7 +71,23 @@
 
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />  
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Evitar parpadeo del splash en visitas repetidas -->
+    <script>
+      (function(){
+        try {
+          if (sessionStorage.getItem('serakdep_access_granted')) {
+            document.documentElement.style.setProperty('--splash-skip','1');
+            document.addEventListener('DOMContentLoaded', function(){
+              var s = document.getElementById('splash');
+              if(s){ s.style.display='none'; }
+              document.body.style.overflow = 'auto';
+            });
+          }
+        } catch(e){}
+      })();
+    </script>
   </head>
 
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
@@ -301,6 +317,8 @@
       alt="Logo del Clan Serakdep MS"
       class="clan-logo"
       id="clan-logo"
+      width="180"
+      height="180"
     />
     <div class="logo-glow"></div>
   </div>
@@ -968,6 +986,8 @@
                 <img
                   src="images/members/Db_artworkFOUNDERSMS.jpg"
                   alt="kakaroto11141"
+                  width="50" height="50"
+                  loading="lazy"
                 />
                 <div>
                   <h4>kakaroto11141</h4>
@@ -985,6 +1005,8 @@
                 <img
                   src="images/members/Diegosanval2012.jpg"
                   alt="Miembro Anonimo"
+                  width="50" height="50"
+                  loading="lazy"
                 />
                 <div>
                   <h4>Miembro Anonimo</h4>
@@ -999,7 +1021,7 @@
                 </p>
               </div>
               <div class="testimonial-author">
-                <img src="images/members/joseprorico.jpg" alt="IceQueen" />
+                <img src="images/members/joseprorico.jpg" alt="IceQueen" width="50" height="50" loading="lazy" />
                 <div>
                   <h4>Miembro Anonimo</h4>
                   <span>Miembro desde 2026</span>
@@ -1013,7 +1035,7 @@
                 </p>
               </div>
               <div class="testimonial-author">
-                <img src="images/members/7huhuj08.jpg" alt="IceQueen" />
+                <img src="images/members/7huhuj08.jpg" alt="IceQueen" width="50" height="50" loading="lazy" />
                 <div>
                   <h4>Miembro Anonimo</h4>
                   <span>Miembro desde 2026</span>
@@ -1027,7 +1049,7 @@
                 </p>
               </div>
               <div class="testimonial-author">
-                <img src="images/members/little_aldoxd.jpg" alt="IceQueen" />
+                <img src="images/members/little_aldoxd.jpg" alt="IceQueen" width="50" height="50" loading="lazy" />
                 <div>
                   <h4>Miembro Anonimo</h4>
                   <span>Miembro desde 2026</span>
@@ -1041,7 +1063,7 @@
                 </p>
               </div>
               <div class="testimonial-author">
-                <img src="images/members/Teo_174bj.jpg" alt="IceQueen" />
+                <img src="images/members/Teo_174bj.jpg" alt="IceQueen" width="50" height="50" loading="lazy" />
                 <div>
                   <h4>Miembro Anonimo</h4>
                   <span>Miembro desde 2026</span>
@@ -1055,7 +1077,7 @@
                 </p>
               </div>
               <div class="testimonial-author">
-                <img src="images/members/putifino111.jpg" alt="IceQueen" />
+                <img src="images/members/putifino111.jpg" alt="IceQueen" width="50" height="50" loading="lazy" />
                 <div>
                   <h4>Miembro Anonimo</h4>
                   <span>Miembro desde 2026</span>
@@ -1088,7 +1110,7 @@
       "badgeIcon": "users"
     }'>
       <div class="gallery-image">
-        <img src="images/gallery-number-one/proximamente.jpg" alt="Reunión Mensual">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Reunión Mensual" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-badge">
             <i class="fas fa-users"></i> Reunión
@@ -1125,7 +1147,7 @@
       "badgeIcon": "birthday-cake"
     }'>
       <div class="gallery-image">
-        <img src="images/gallery-number-one/proximamente.jpg" alt="1er Aniversario">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="1er Aniversario" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-badge">
             <i class="fas fa-birthday-cake"></i> Aniversario
@@ -1162,7 +1184,7 @@
       "badgeIcon": "users"
     }'>
       <div class="gallery-image">
-        <img src="images/gallery-number-one/proximamente.jpg" alt="Bienvenida Nuevos">
+        <img src="images/gallery-number-one/proximamente.jpg" alt="Bienvenida Nuevos" loading="lazy">
         <div class="gallery-overlay">
           <div class="gallery-badge">
             <i class="fas fa-users"></i> Reunión
@@ -1380,14 +1402,14 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/video-player.js"></script>
-    <script src="js/logo-animations.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/loading.js"></script>
-    <script src="js/chatbot.js"></script> 
-    <script src="js/scroll-reveal.js"></script> 
-    <script src="js/contador.js"></script>
-    <script src="js/geolocation.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/video-player.js" defer></script>
+    <script src="js/logo-animations.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+    <script src="js/loading.js" defer></script>
+    <script src="js/chatbot.js" defer></script> 
+    <script src="js/scroll-reveal.js" defer></script> 
+    <script src="js/contador.js" defer></script>
+    <script src="js/geolocation.js" defer></script>
   </body>
-</html> 
+</html>
