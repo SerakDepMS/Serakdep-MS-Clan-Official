@@ -435,6 +435,7 @@ header {
   padding: 8px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  will-change: background-color;
   z-index: 1001;
 }
 
@@ -445,6 +446,7 @@ header {
 
 nav {
   transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  will-change: transform, opacity;
 }
 
 nav ul {
@@ -2335,5 +2337,30 @@ nav ul li a:hover {
 
   .video-overlay {
     background: rgba(0,0,0,0.5);
+  }
+}
+
+/* Desactivar animaciones pesadas de gran consumo GPU/CPU en móviles */
+@media (max-width: 768px) {
+  .ring-gold, 
+  .ring-green, 
+  .ring-dot, 
+  .ticks-ring, 
+  .p-glow, 
+  .ambient,
+  .success-icon {
+    animation: none !important;
+    will-change: auto !important; /* Liberar capa GPU: no hay animación en móvil */
+  }
+  .alianza-card.activo::before, 
+  .alianza-card.nueva::before {
+    animation: none !important;
+  }
+  .alianza-card {
+    will-change: auto !important; /* Sin hover complejo en táctil — liberar memoria GPU */
+  }
+  nav,
+  .mobile-menu-btn {
+    will-change: auto !important;
   }
 }

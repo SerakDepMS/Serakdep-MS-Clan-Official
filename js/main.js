@@ -366,8 +366,9 @@ function getCookie(name) {
       if (pointer.active) {
         const dx = p.x - pointer.x;
         const dy = p.y - pointer.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < REPULSION_RADIUS && dist > 0) {
+        const distSq = dx * dx + dy * dy;
+        if (distSq < 12100 && distSq > 0) { // 110 * 110 (REPULSION_RADIUS^2)
+          const dist = Math.sqrt(distSq);
           const strength = (1 - dist / REPULSION_RADIUS) * REPULSION_FORCE;
           p.vx += (dx / dist) * strength;
           p.vy += (dy / dist) * strength;
@@ -418,6 +419,7 @@ function getCookie(name) {
   }
 
   function initParticleRain() {
+    if (window.innerWidth < 768) return; // Desactivar en celulares para maximizar FPS
     canvas = document.createElement('canvas');
     canvas.classList.add('particle-rain-container');
     canvas.style.willChange = 'transform';
@@ -438,9 +440,11 @@ function getCookie(name) {
 
   function handleVisibilityChange() {
     if (document.hidden) {
-      cancelAnimationFrame(animationId);
-      animationId = null;
-    } else if (!animationId) {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    } else if (!animationId && canvas) {
       updateParticles();
     }
   }

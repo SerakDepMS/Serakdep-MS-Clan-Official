@@ -12,10 +12,12 @@
 
 
     const canvas = document.getElementById('cv');
-    if (canvas) {
+    const isMobile = window.innerWidth < 768;
+    if (canvas && !isMobile) {
         const ctx = canvas.getContext('2d');
         let W, H;
         const pts = [];
+        let loadingAnimId;
 
         /* ── Pointer tracking (mouse + touch) ── */
         let px = -9999, py = -9999;
@@ -60,8 +62,9 @@
                 for (let j = i + 1; j < pts.length; j++) {
                     const dx   = pts[i].x - pts[j].x;
                     const dy   = pts[i].y - pts[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
+                    const distSq = dx * dx + dy * dy;
+                    if (distSq < 14400) { // 120 * 120
+                        const dist = Math.sqrt(distSq);
                         ctx.beginPath();
                         ctx.moveTo(pts[i].x, pts[i].y);
                         ctx.lineTo(pts[j].x, pts[j].y);
@@ -74,11 +77,11 @@
 
             /* Update and draw each point */
             pts.forEach(p => {
-                /* Cursor / touch repulsion */
                 const dx   = p.x - px;
                 const dy   = p.y - py;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < REPEL_R && dist > 0) {
+                const distSq = dx * dx + dy * dy;
+                if (distSq < 14400 && distSq > 0) { // REPEL_R^2 (120 * 120)
+                    const dist = Math.sqrt(distSq);
                     const str = (1 - dist / REPEL_R) * REPEL_F;
                     p.dvx += (dx / dist) * str;
                     p.dvy += (dy / dist) * str;
@@ -103,9 +106,21 @@
                 ctx.fill();
             });
 
-            requestAnimationFrame(drawParticles);
+            loadingAnimId = requestAnimationFrame(drawParticles);
         }
         drawParticles();
+
+        function handleVisibilityChange() {
+            if (document.hidden) {
+                if (loadingAnimId) {
+                    cancelAnimationFrame(loadingAnimId);
+                    loadingAnimId = null;
+                }
+            } else if (!loadingAnimId) {
+                drawParticles();
+            }
+        }
+        document.addEventListener('visibilitychange', handleVisibilityChange);
     }
 
 
