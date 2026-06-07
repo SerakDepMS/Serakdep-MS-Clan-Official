@@ -6909,7 +6909,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, transición suave.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<header id="header">\n  <h1 id="logo">SMS Studios</h1>\n  <nav><a href="#">Inicio</a> <a href="#">Servicios</a></nav>\n</header>\n<div style="height:2000px;"></div>' },
+      { name: 'index.html', lang: 'html', content: '<header id="header">\n  <h1 id="logo">CodeTurbo</h1>\n  <nav><a href="#">Inicio</a> <a href="#">Servicios</a></nav>\n</header>\n<div style="height:2000px;"></div>' },
       { name: 'styles.css', lang: 'css', content: '#header { position: fixed; top:0; width:100%; background: #2d6a4f; color: white; padding: 20px; transition: padding 0.3s; }\n#logo { transition: font-size 0.3s; }\n#header.shrink { padding: 10px; }\n#header.shrink #logo { font-size: 1.2rem; }' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  document.getElementById("header").classList.toggle("shrink", window.scrollY > 100);\n});' }
     ]

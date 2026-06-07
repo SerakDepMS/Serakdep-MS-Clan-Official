@@ -67,7 +67,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 ### 🛠️ Herramientas (1)
 | Página | Descripción |
 |--------|-------------|
-| 💻 `laboratorio.html` | **SMS Studios** – Editor de código HTML/CSS/JS con CodeMirror, autocompletado, 6 temas, retos, enciclopedia y postMessage |
+| 💻 `laboratorio.html` | **CodeTurbo** – Editor de código HTML/CSS/JS con CodeMirror, autocompletado, 6 temas, retos, enciclopedia y postMessage |
 
 ### ⚖️ Páginas Legales (4)
 | Página | Descripción |
@@ -123,9 +123,9 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 - **Npoint.io** – Almacenamiento y carga dinámica de noticias, eventos y enciclopedia (API JSON).
 - **EmailJS** – Envío de correos electrónicos desde formularios (inscripción, reportes, sugerencias, aspirantes a admin y colaborador).
 - **ipapi.co** – Geolocalización automática para formularios (país y zona horaria).
-- **CodeMirror 5** – Editor de código para SMS Studios (HTML, CSS, JS, autocompletado, linting).
-- **JSHint** – Validación de JavaScript en tiempo real en SMS Studios.
-- **JSZip** – Descarga de proyectos en ZIP desde SMS Studios.
+- **CodeMirror 5** – Editor de código para CodeTurbo (HTML, CSS, JS, autocompletado, linting).
+- **JSHint** – Validación de JavaScript en tiempo real en CodeTurbo.
+- **JSZip** – Descarga de proyectos en ZIP desde CodeTurbo.
 - **Font Awesome 6.4** – Iconos vectoriales en toda la interfaz.
 - **Google Fonts** – Tipografía "Poppins" y "Segoe UI".
 
@@ -140,7 +140,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 |--------|-----------|:--------:|
 | `cookie_consent_sms` | Almacena preferencia de cookies (banner) | 1 año |
 | `sms_theme` | Guarda preferencia de tema oscuro/claro | 6 meses |
-| `sms_lab_project` | Guarda proyectos de SMS Studios (localStorage) | Persistente |
+| `sms_lab_project` | Guarda proyectos de CodeTurbo (localStorage) | Persistente |
 | `sms_volume` | Recuerda nivel de volumen del reproductor de video | 6 meses |
 
 ### Funcionalidades destacadas
@@ -152,7 +152,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 - 🌙 **Tema oscuro/claro** con botón de alternancia y cookie de preferencia
 - 🍪 **Banner de cookies** con aceptar/rechazar usando el diseño del clan
 - 📱 **Diseño responsive** adaptable a móviles, tablets y escritorio
-- ⌨️ **Atajos de teclado** en SMS Studios (Ctrl+S, Ctrl+E, Ctrl+`, etc.)
+- ⌨️ **Atajos de teclado** en CodeTurbo (Ctrl+S, Ctrl+E, Ctrl+`, etc.)
 - 🎨 **Lluvia de partículas** con canvas optimizado (requestAnimationFrame) en todo el sitio
 
 ---
@@ -205,7 +205,7 @@ no para ser reutilizado, modificado o distribuido.
 | Miembros del clan | +337 |
 | Categorías FAQ | 15 |
 | Equipos en eventos | 72 |
-| Retos en SMS Studios | 9 |
+| Retos en CodeTurbo | 9 |
 | Temas de editor | 6 |
 | Formularios de acción | 4 |
 

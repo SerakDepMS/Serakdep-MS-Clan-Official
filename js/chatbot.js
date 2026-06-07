@@ -7,7 +7,7 @@
 
     {
       keywords: ['inscripcion', 'inscribirme', 'unirme', 'registro', 'formulario', 'admisión', 'entrar', 'ingresar', 'unirse', 'proceso', 'como me uno', 'quiero ser miembro', 'solicitud', 'aplicar', 'join', 'ingreso', 'etapas', 'requisitos', 'formulario de inscripcion', 'quiero unirme al clan', 'como entro al clan', 'hacerme miembro'],
-      response: `📝 <strong>Proceso de inscripción al clan Serakdep MS</strong><br><br>
+      response: `<strong>Proceso de inscripción al clan Serakdep MS</strong><br><br>
       ¡Me alegra que quieras unirte! El proceso es sencillo y consta de 5 etapas:<br>
       <strong>1️⃣ Lectura del Reglamento:</strong> Ve al menú "Reglamento" y léelo completo. Es importante que conozcas nuestras normas.<br>
       <strong>2️⃣ Formulario de Inscripción:</strong> Completa el formulario en "Formulario" con tu nombre exacto de Roblox, edad, país, juegos que frecuentas y tu motivación.<br>
@@ -18,7 +18,7 @@
     },
     {
       keywords: ['formulario campos', 'que piden formulario', 'datos inscripcion', 'whatsapp formulario', 'discord formulario', 'pais formulario', 'edad minima', 'preguntas formulario', 'informacion que piden'],
-      response: `📋 <strong>Campos del formulario de inscripción</strong><br><br>
+      response: `<strong>Campos del formulario de inscripción</strong><br><br>
       Estos son los datos que te pediremos:<br>
       • <strong>Nombre en Roblox</strong> (obligatorio, debe ser exacto).<br>
       • <strong>Edad</strong> (mínimo 14 años).<br>
@@ -35,7 +35,7 @@
     },
     {
       keywords: ['edad minima', 'cuantos años', 'puedo entrar si tengo 12', 'menor de edad', 'permiso parental'],
-      response: `🔞 <strong>Política de edad del clan</strong><br><br>
+      response: `<strong>Política de edad del clan</strong><br><br>
       La edad mínima para unirse a Serakdep MS es de <strong>14 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
       Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 14, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
@@ -44,7 +44,7 @@
 
     {
       keywords: ['reglamento', 'normas', 'reglas', 'sanciones', 'castigos', 'prohibido', 'penalizaciones', 'amonestaciones', 'derechos', 'leer reglamento', 'etapa 1', 'normas generales', 'respeto', 'actividad minima', 'que no se puede hacer', 'que esta prohibido', 'codigo de conducta', 'convivencia', 'multicuentas', 'multiples cuentas', 'baja inactividad'],
-      response: `📜 <strong>Reglamento general del clan</strong><br><br>
+      response: `<strong>Reglamento general del clan</strong><br><br>
       En Serakdep MS valoramos el respeto y la buena convivencia. Estas son las normas fundamentales:<br>
       ✔️ <strong>Respeto obligatorio:</strong> No se tolera discriminación, acoso, bullying ni lenguaje ofensivo.<br>
       ✔️ <strong>Edad mínima 14 años</strong> (con permiso parental si eres menor).<br>
@@ -69,7 +69,7 @@
     },
     {
       keywords: ['tabla sanciones', 'tipos de falta', 'expulsion temporal', 'mute', 'advertencia', 'corrupcion interna', 'faltas leves graves', 'duracion sanciones', 'cuanto dura un mute', 'cuanto dura expulsion'],
-      response: `📊 <strong>Tabla completa de sanciones</strong><br><br>
+      response: `<strong>Tabla completa de sanciones</strong><br><br>
       <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
         <tr style="background:#2a5a3a; color:white;"><th>Tipo de Falta</th><th>Sanción</th><th>Duración</th><th>Ejemplos</th></tr>
         <tr><td>Leve (1ª vez)</td><td>Advertencia privada</td><td>-</td><td>Spam ligero, lenguaje inapropiado leve, uso incorrecto de canales</td></tr>
@@ -82,7 +82,7 @@
     },
     {
       keywords: ['apelar sancion', 'apelacion', 'sancion injusta', 'como apelar', 'reclamar castigo'],
-      response: `⚖️ <strong>Proceso de apelación de sanciones</strong><br><br>
+      response: `<strong>Proceso de apelación de sanciones</strong><br><br>
       Si consideras que una sanción fue injusta, tienes derecho a apelar siguiendo estos pasos:<br>
       1️⃣ Tienes hasta <strong>7 días</strong> después de recibir la notificación para presentar tu apelación.<br>
       2️⃣ Contacta a un miembro de la <strong>Alta Dirección</strong> (Líder o Sub-Líder) por mensaje privado en Discord o WhatsApp.<br>
@@ -93,7 +93,7 @@
     },
     {
       keywords: ['proceso disciplinario', 'como se aplica sancion', 'investigacion falta', 'como actua el staff ante falta', 'pasos sancion', 'moderacion proceso'],
-      response: `🔍 <strong>Proceso Disciplinario del Clan</strong><br><br>
+      response: `<strong>Proceso Disciplinario del Clan</strong><br><br>
       Cuando se detecta una posible infracción, el equipo de moderación sigue un proceso estandarizado para garantizar justicia y transparencia:<br>
       1️⃣ <strong>Detección y Registro:</strong> Un miembro del staff detecta la falta o recibe un reporte. Se registra la evidencia (capturas, logs, testimonios).<br>
       2️⃣ <strong>Investigación:</strong> Un moderador designado revisa la evidencia y, si es necesario, entrevista a las partes involucradas.<br>
@@ -103,7 +103,7 @@
     },
     {
       keywords: ['responsabilidades staff', 'que hace el staff', 'obligaciones admin', 'deberes administradores', 'que deben hacer los admins'],
-      response: `👑 <strong>Responsabilidades del Staff</strong><br><br>
+      response: `<strong>Responsabilidades del Staff</strong><br><br>
       El equipo de administración tiene las siguientes obligaciones con la comunidad:<br>
       • Mantener el orden y hacer cumplir las normas de manera <strong>justa e imparcial</strong>.<br>
       • Responder consultas y ayudar a miembros en un plazo máximo de <strong>24 horas</strong>.<br>
@@ -117,7 +117,7 @@
     },
     {
       keywords: ['procedimiento reportes', 'como reportar', 'reportar miembro', 'evidencia reporte'],
-      response: `🛡️ <strong>Procedimiento para reportes</strong><br><br>
+      response: `<strong>Procedimiento para reportes</strong><br><br>
       Para mantener un ambiente seguro, animamos a todos los miembros a reportar cualquier infracción que presencien. Para que un reporte sea efectivo, sigue estos pasos:<br>
       1️⃣ <strong>Reúne Evidencia:</strong> Toma capturas de pantalla, graba un video corto o guarda el ID del mensaje en Discord. Sin pruebas, es difícil tomar medidas.<br>
       2️⃣ <strong>Identifica a los Involucrados:</strong> Anota los nombres de usuario exactos de las personas implicadas.<br>
@@ -127,7 +127,7 @@
     },
     {
       keywords: ['normas eventos', 'convivencia eventos', 'reglas torneos', 'eventos puntualidad', 'premios torneos', 'sabotaje eventos'],
-      response: `🎉 <strong>Normas de convivencia en eventos</strong><br><br>
+      response: `<strong>Normas de convivencia en eventos</strong><br><br>
       Durante los eventos y torneos, se aplican reglas adicionales para garantizar una experiencia positiva para todos:<br>
       • <strong>Puntualidad:</strong> Llega a la hora acordada. Si llegas tarde, podrías perder tu lugar.<br>
       • <strong>Seguir Instrucciones:</strong> Respeta las indicaciones del anfitrión o moderador del evento en todo momento.<br>
@@ -141,7 +141,7 @@
 
     {
       keywords: ['colaborador', 'aspirar colaborador', 'ser colaborador', 'postular colaborador', 'colaboracion', 'aspirantes colaborador', 'areas colaboracion', 'quiero colaborar', 'formulario colaborador', 'aplicar colaborador', 'como ser colaborador', 'aspirante colaborador', 'colaboradores clan'],
-      response: `🤝 <strong>Aspirantes a Colaborador - Serakdep MS</strong><br><br>
+      response: `<strong>Aspirantes a Colaborador - Serakdep MS</strong><br><br>
       Los colaboradores son miembros que apoyan al clan en áreas específicas <strong>sin tener el rol de administrador</strong>, pero desempeñan un papel fundamental para la comunidad.<br><br>
       <strong>Áreas de colaboración disponibles:</strong><br>
       • <strong>Actividades y Eventos:</strong> Organizar y coordinar torneos y actividades comunitarias. Deben asegurar que las normas de convivencia se cumplan.<br>
@@ -157,7 +157,7 @@
     },
     {
       keywords: ['campos formulario colaborador', 'que piden para colaborador', 'formulario aspirante colaborador', 'datos colaborador', 'area edicion contenido', 'area actividades eventos', 'area representante alianzas', 'disponibilidad colaborador', 'ideas mejoras colaborador', 'experiencia colaborador'],
-      response: `📋 <strong>Formulario de Aspirante a Colaborador</strong><br><br>
+      response: `<strong>Formulario de Aspirante a Colaborador</strong><br><br>
       Estos son los datos que se solicitan en el formulario:<br>
       • <strong>Nombre en Roblox</strong> (obligatorio).<br>
       • <strong>Edad</strong> (mínimo 15 años).<br>
@@ -176,7 +176,7 @@
 
     {
       keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord'],
-      response: `💬 <strong>Servidor de Discord de Serakdep MS</strong><br><br>
+      response: `<strong>Servidor de Discord de Serakdep MS</strong><br><br>
       Nuestro servidor de Discord es el corazón de la comunidad. Enlace de invitación: <strong>https://discord.gg/vts4PTHR9K</strong><br><br>
       Una vez dentro:<br>
       🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
@@ -194,7 +194,7 @@
     },
     {
       keywords: ['zona dj', 'eventos dj', 'ser dj', 'musica discord', 'canal musica'],
-      response: `🎧 <strong>Zona DJ de Discord</strong><br><br>
+      response: `<strong>Zona DJ de Discord</strong><br><br>
       La Zona DJ es un espacio especial para eventos musicales y ambientación. Incluye:<br>
       • <strong>#eventos-dj:</strong> Anuncios de eventos musicales programados.<br>
       • <strong>#solicitudes-dj:</strong> Para pedir ser DJ del clan o solicitar canciones.<br>
@@ -205,7 +205,7 @@
     },
     {
       keywords: ['colaboraciones discord', 'alianzas', 'partnership', 'colaborar con otros clanes'],
-      response: `🤝 <strong>Colaboraciones y alianzas en Discord</strong><br><br>
+      response: `<strong>Colaboraciones y alianzas en Discord</strong><br><br>
       Gestionamos las alianzas con otros clanes a través de canales específicos:<br>
       • <strong>#anuncios-de-alianzas:</strong> Anuncios públicos de nuevas alianzas.<br>
       • <strong>#resultados-de-alianzas:</strong> Resultados de colaboraciones con otros clanes.<br>
@@ -218,7 +218,7 @@
 
     {
       keywords: ['whatsapp', 'grupo whatsapp', 'unirse whatsapp', 'link whatsapp', 'whatsapp reglas', 'grupos whatsapp', 'sms principal', 'sms actividades', 'entrar a whatsapp'],
-      response: `📱 <strong>Grupos oficiales de WhatsApp</strong><br><br>
+      response: `<strong>Grupos oficiales de WhatsApp</strong><br><br>
       El clan tiene varios grupos organizados por función:<br>
       • <strong>SMS-Principal:</strong> Comunicación general de todos los miembros.<br>
       • <strong>SMS-Actividades:</strong> Dinámicas como NGL (mensajes anónimos), sopa de letras, pintar imágenes en blanco y más.<br>
@@ -236,7 +236,7 @@
     },
     {
       keywords: ['horario whatsapp', 'cuando enviar mensajes', 'silencio whatsapp', 'no molestar'],
-      response: `🕒 <strong>Horarios de WhatsApp</strong><br><br>
+      response: `<strong>Horarios de WhatsApp</strong><br><br>
       Para mantener un ambiente agradable, respetamos estos horarios:<br>
       • <strong>Horario general:</strong> 08:00 - 23:59 (hora local del administrador).<br>
       • <strong>Horario silencioso:</strong> 00:00 - 07:59, evita enviar mensajes no urgentes.<br>
@@ -249,7 +249,7 @@
 
     {
       keywords: ['eventos', 'torneos', 'actividades', 'calendario', 'próximos eventos', 'eventos pasados', 'torneo blox fruits', 'evento halloween', 'aniversario clan', 'torneo arsenal', 'epic fail', 'bienvenida nuevos', 'proximos torneos'],
-      response: `🎉 <strong>Eventos y torneos del clan</strong><br><br>
+      response: `<strong>Eventos y torneos del clan</strong><br><br>
       Organizamos eventos periódicos que se anuncian en:<br>
       • <strong>Discord:</strong> canal #anuncios y #torneos.<br>
       • <strong>WhatsApp:</strong> canal oficial del clan, se encuentra en la sección de eventos.<br>
@@ -265,7 +265,7 @@
     },
     {
       keywords: ['premios eventos', 'que gano', 'recompensas', 'premios torneos'],
-      response: `🏅 <strong>Premios y recompensas</strong><br><br>
+      response: `<strong>Premios y recompensas</strong><br><br>
       Dependiendo del evento, puedes ganar:<br>
       • <strong>Rangos especiales</strong> en el clan.<br>
       • <strong>Insignias exclusivas</strong> en Discord.<br>
@@ -277,7 +277,7 @@
     },
     {
       keywords: ['formar equipos', 'equipo torneo', 'busco equipo', 'armar equipo'],
-      response: `👥 <strong>Formación de equipos para eventos</strong><br><br>
+      response: `<strong>Formación de equipos para eventos</strong><br><br>
       Los equipos se forman de diferentes maneras según el evento:<br>
       • <strong>Auto-formación:</strong> Usa el canal #formar-equipos en Discord para organizarte con otros miembros.<br>
       • <strong>Asignación aleatoria:</strong> Para eventos que buscan mezclar a los participantes.<br>
@@ -290,7 +290,7 @@
 
     {
       keywords: ['juegos', 'roblox juegos', 'blox fruits', 'brookhaven', 'adopt me', 'arsenal', 'king legacy', 'driving empire', 'royale high', 'jailbreak', 'murder mystery', 'salón de fiestas', 'juego de boxeo', 'categorias juegos', 'lista juegos', 'a que juegan'],
-      response: `🎮 <strong>Juegos populares en Serakdep MS</strong><br><br>
+      response: `<strong>Juegos populares en Serakdep MS</strong><br><br>
       Nuestros miembros disfrutan de una gran variedad de juegos en Roblox. Los más jugados son:<br>
       • <strong>Acción/Aventura:</strong> Blox Fruits, King Legacy, Juego de Boxeo.<br>
       • <strong>Roleplay:</strong> Brookhaven RP, Adopt Me!, Royale High.<br>
@@ -305,10 +305,10 @@
 
     {
       keywords: ['contacto', 'email', 'correo', 'hablar admin', 'soporte', 'ayuda', 'asistencia', 'serakdepmsofficial7', 'formulario contacto', 'reportar problema', 'sugerencias', 'aspirar admin', 'legal contacto', 'como contacto'],
-      response: `📧 <strong>Contacto oficial</strong><br><br>
-      ✉️ <strong>Correo electrónico:</strong> serakdepmsofficial7@gmail.com<br>
-      📞 <strong>WhatsApp del clan:</strong> +57 311 6546484 (solo mensajes, no llamadas).<br>
-      💬 <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br><br>
+      response: `<strong>Contacto oficial</strong><br><br>
+      <strong>Correo electrónico:</strong> serakdepmsofficial7@gmail.com<br>
+      <strong>WhatsApp del clan:</strong> +57 311 6546484 (solo mensajes, no llamadas).<br>
+      <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br><br>
       <strong>Opciones en la sección "Contacto":</strong><br>
       • <strong>Reportar un problema:</strong> Para conductas inapropiadas, bugs o incidencias (adjunta pruebas).<br>
       • <strong>Sugerencias:</strong> Propuestas para mejorar el clan o la web.<br>
@@ -322,7 +322,7 @@
 
     {
       keywords: ['reportar', 'reporte', 'denunciar', 'problema', 'queja', 'reportar miembro', 'incidencia', 'reportar problema', 'como reportar', 'denunciar a alguien'],
-      response: `🛡️ <strong>Sistema de reportes</strong><br><br>
+      response: `<strong>Sistema de reportes</strong><br><br>
       Si presencias alguna conducta inapropiada (acoso, trampas, spam, etc.) puedes reportarlo así:<br>
       🔸 <strong>Discord:</strong> Usa el canal #reportar-problemas (adjunta pruebas).<br>
       🔸 <strong>WhatsApp:</strong> Contacta directamente a un administrador.<br>
@@ -340,7 +340,7 @@
 
     {
       keywords: ['faq', 'preguntas frecuentes', 'dudas', 'preguntas', 'consulta', 'faq discord', 'faq whatsapp', 'faq admision', 'faq reglas', 'faq eventos', 'faq web'],
-      response: `❓ <strong>Preguntas Frecuentes (FAQ)</strong><br><br>
+      response: `<strong>Preguntas Frecuentes (FAQ)</strong><br><br>
       La sección FAQ está organizada en categorías para que encuentres rápido lo que buscas:<br>
       🔹 <strong>Discord:</strong> Cómo unirse, canales, verificación, zona DJ, colaboraciones.<br>
       🔹 <strong>WhatsApp:</strong> Grupos oficiales, ingreso, horarios, contenido prohibido.<br>
@@ -360,17 +360,17 @@
 
     {
       keywords: ['legal', 'privacidad', 'terminos', 'cookies', 'dmca', 'derechos de autor', 'politica', 'términos de servicio', 'aviso dmca', 'datos personales', 'copyright', 'politica de privacidad'],
-      response: `⚖️ <strong>Información legal del sitio</strong><br><br>
+      response: `<strong>Información legal del sitio</strong><br><br>
       En el footer de cada página encontrarás enlaces a nuestras políticas:<br>
-      🔒 <strong>Política de Privacidad:</strong> No compartimos tus datos con terceros sin consentimiento. Solo usamos tu información para gestionar tu membresía en el clan.<br>
-      📄 <strong>Términos de Servicio:</strong> Al unirte aceptas cumplir con el reglamento. Nos reservamos el derecho de admisión.<br>
-      🍪 <strong>Política de Cookies:</strong> Usamos cookies para recordar preferencias y mejorar la navegación. Puedes desactivarlas en tu navegador.<br>
-      ⚠️ <strong>Aviso DMCA:</strong> Si crees que algún contenido infringe tus derechos de autor, contáctanos por el formulario legal. Responderemos en 5 días hábiles.<br><br>
+      <strong>Política de Privacidad:</strong> No compartimos tus datos con terceros sin consentimiento. Solo usamos tu información para gestionar tu membresía en el clan.<br>
+      <strong>Términos de Servicio:</strong> Al unirte aceptas cumplir con el reglamento. Nos reservamos el derecho de admisión.<br>
+      <strong>Política de Cookies:</strong> Usamos cookies para recordar preferencias y mejorar la navegación. Puedes desactivarlas en tu navegador.<br>
+      <strong>Aviso DMCA:</strong> Si crees que algún contenido infringe tus derechos de autor, contáctanos por el formulario legal. Responderemos en 5 días hábiles.<br><br>
       <strong>Nota importante:</strong> Serakdep MS es un clan independiente y no está afiliado a Roblox Corporation.`
     },
     {
       keywords: ['datos personales', 'que hacen con mis datos', 'informacion personal', 'proteccion datos', 'responsable tratamiento'],
-      response: `🔐 <strong>Privacidad de tus datos</strong><br><br>
+      response: `<strong>Privacidad de tus datos</strong><br><br>
       En Serakdep MS tomamos muy en serio tu privacidad:<br>
       • Solo recopilamos los datos necesarios para gestionar tu membresía (nombre de usuario de Roblox/Discord, edad, país, contacto).<br>
       • El número de teléfono se recopila exclusivamente para colaborar con la justicia en casos de extrema gravedad, con tu consentimiento explícito.<br>
@@ -383,14 +383,14 @@
     },
     {
       keywords: ['menores edad', 'datos menores', 'tratamiento menores', 'menores 14 años'],
-      response: `👶 <strong>Tratamiento de datos de menores de edad</strong><br><br>
+      response: `<strong>Tratamiento de datos de menores de edad</strong><br><br>
       El Clan "Serakdep MS" es consciente de que muchos de sus miembros son menores de edad. Por ello, aplicamos medidas de protección reforzadas:<br>
       • <strong>Mayores de 14 años:</strong> Pueden prestar su consentimiento para el tratamiento de sus datos personales por sí mismos.<br>
       • <strong>Menores de 14 años:</strong> La ley exige que el consentimiento para el tratamiento de sus datos, especialmente del número de teléfono, sea otorgado por sus padres, madres o tutores legales. Al unirse al clan, solicitaremos que se nos confirme que se cuenta con dicha autorización.`
     },
     {
       keywords: ['derechos arco', 'derecho acceso', 'derecho rectificacion', 'derecho supresion', 'derecho al olvido', 'derecho oposicion', 'derecho portabilidad'],
-      response: `📜 <strong>Tus Derechos (Derechos ARCO+)</strong><br><br>
+      response: `<strong>Tus Derechos (Derechos ARCO+)</strong><br><br>
       En cualquier momento, podrás ejercer los siguientes derechos sobre tus datos personales, enviando una solicitud al correo electrónico serakdepmsofficial7@gmail.com:<br>
       • <strong>Derecho de Acceso:</strong> Conocer qué datos tuyos estamos tratando.<br>
       • <strong>Derecho de Rectificación:</strong> Solicitar la modificación de datos inexactos o incompletos.<br>
@@ -402,7 +402,7 @@
     },
     {
       keywords: ['cookies que son', 'que cookies usan', 'galletas navegador'],
-      response: `🍪 <strong>Uso de cookies en el sitio web</strong><br><br>
+      response: `<strong>Uso de cookies en el sitio web</strong><br><br>
       Utilizamos cookies para:<br>
       • Recordar tus preferencias de navegación.<br>
       • Mejorar la velocidad de carga del sitio.<br>
@@ -414,7 +414,7 @@
 
     {
       keywords: ['creditos', 'creadores', 'desarrolladores', 'colaboradores', 'agradecimientos', 'autores', 'equipo', 'diseñadores', 'quien hizo la pagina'],
-      response: `❤️ <strong>Créditos y agradecimientos</strong><br><br>
+      response: `<strong>Créditos y agradecimientos</strong><br><br>
       La página web de Serakdep MS es fruto del esfuerzo colectivo. En la sección "Créditos" del menú principal se reconoce a:<br>
       • <strong>Director y Programador:</strong> Db_artworkFOUNDERSMS.<br>
       • <strong>Supervisor:</strong> Yanfeix6.<br>
@@ -429,7 +429,7 @@
 
     {
       keywords: ['estructura', 'organigrama', 'jerarquia', 'rangos', 'roles', 'liderazgo', 'organizacion', 'miembros', 'campos de juego', 'departamentos', 'cuantos miembros', 'quien manda'],
-      response: `🏛️ <strong>Estructura organizativa del clan</strong><br><br>
+      response: `<strong>Estructura organizativa del clan</strong><br><br>
       <strong>Jerarquía:</strong><br>
       1️⃣ Alta Dirección (Liderazgo) – Decisiones estratégicas.<br>
       2️⃣ Administradores – Gestionan áreas (eventos, admisiones, moderación).<br>
@@ -445,7 +445,7 @@
     },
     {
       keywords: ['departamentos', 'comites', 'areas del clan', 'equipos internos'],
-      response: `📂 <strong>Departamentos del clan</strong><br><br>
+      response: `<strong>Departamentos del clan</strong><br><br>
       Tenemos varios equipos especializados para que el clan funcione correctamente:<br>
       • <strong>Comité de Eventos:</strong> Organiza torneos y actividades.<br>
       • <strong>Departamento de Admisiones:</strong> Gestiona nuevas incorporaciones.<br>
@@ -457,7 +457,7 @@
     },
     {
       keywords: ['ascender', 'subir de rango', 'como ser destacado', 'promocion', 'subir en el clan'],
-      response: `📈 <strong>¿Cómo ascender en el clan?</strong><br><br>
+      response: `<strong>¿Cómo ascender en el clan?</strong><br><br>
       El ascenso se basa en méritos y contribución, no en antigüedad ni pagos. Se evalúa:<br>
       • <strong>Actividad constante:</strong> Participación regular en eventos y juegos.<br>
       • <strong>Buen comportamiento:</strong> Cumplimiento ejemplar de las normas.<br>
@@ -469,7 +469,7 @@
     },
     {
       keywords: ['economia clan', 'pagar', 'cuotas', 'membresia pago', 'cuesta dinero', 'es gratis'],
-      response: `💰 <strong>Política económica del clan</strong><br><br>
+      response: `<strong>Política económica del clan</strong><br><br>
       <strong>Serakdep MS es 100% gratuito.</strong> No cobramos por:<br>
       • Membresía o participación.<br>
       • Ascensos o privilegios.<br>
@@ -478,7 +478,7 @@
     },
     {
       keywords: ['historia clan', 'origen', 'fundacion', 'quien creo el clan', 'cuando se fundo'],
-      response: `📖 <strong>Historia y origen del clan</strong><br><br>
+      response: `<strong>Historia y origen del clan</strong><br><br>
       Serakdep MS fue fundado con estos principios:<br>
       • <strong>Fundación:</strong> Creado por jugadores experimentados de Roblox que buscaban una comunidad organizada.<br>
       • <strong>Misión:</strong> Crear un espacio inclusivo y respetuoso para jugadores de todas las edades.<br>
@@ -492,7 +492,7 @@
 
     {
       keywords: ['requisitos admin', 'ser admin', 'moderador', 'postular staff', 'aspirante', 'administrador', 'quiero ser staff', 'como ser moderador'],
-      response: `👑 <strong>¿Cómo ser administrador o staff?</strong><br><br>
+      response: `<strong>¿Cómo ser administrador o staff?</strong><br><br>
       Para formar parte del equipo de administración debes:<br>
       ✔️ Ser miembro activo del clan por al menos 4 meses.<br>
       ✔️ Tener un historial impecable (sin sanciones graves).<br>
@@ -507,7 +507,7 @@
 
     {
       keywords: ['navegacion', 'menu', 'secciones', 'paginas', 'donde encuentro', 'ubicacion', 'sitio web', 'como funciona la pagina'],
-      response: `🧭 <strong>Navegación del sitio web</strong><br><br>
+      response: `<strong>Navegación del sitio web</strong><br><br>
       El menú superior te permite acceder a todas las secciones:<br>
       • <strong>Inicio:</strong> Presentación, video, juegos, testimonios, galería.<br>
       • <strong>Reglamento:</strong> Normas completas, sanciones, derechos, colaboradores.<br>
@@ -526,7 +526,7 @@
 
     {
       keywords: ['video', 'reproductor', 'clan video', 'presentacion', 'multimedia', 'trailer', 'video del clan'],
-      response: `🎬 <strong>Video de presentación del clan</strong><br><br>
+      response: `<strong>Video de presentación del clan</strong><br><br>
       En la página de Inicio hay un reproductor de video destacado que muestra contenido sobre el clan. Puedes controlar:<br>
       • Reproducción / pausa.<br>
       • Volumen.<br>
@@ -537,7 +537,7 @@
     },
     {
       keywords: ['galeria', 'fotos', 'recuerdos', 'imagenes', 'capturas', 'momentos', 'galeria de fotos'],
-      response: `🖼️ <strong>Galería de recuerdos</strong><br><br>
+      response: `<strong>Galería de recuerdos</strong><br><br>
       En la página de Inicio, después de la sección de juegos, encontrarás una galería con imágenes de eventos pasados:<br>
       • Torneos.<br>
       • Reuniones.<br>
@@ -550,7 +550,7 @@
 
     {
       keywords: ['filtro juegos', 'buscar juegos', 'categorias juegos', 'explorar juegos', 'buscar juego'],
-      response: `🔍 <strong>Filtro de juegos en la página de Inicio</strong><br><br>
+      response: `<strong>Filtro de juegos en la página de Inicio</strong><br><br>
       Debajo del video hay una sección "Juegos que disfrutamos" con un sistema de filtrado. Puedes:<br>
       • Buscar por nombre usando la caja de búsqueda.<br>
       • Filtrar por categorías (Acción, Aventura, RPG, Simulación, etc.).<br>
@@ -563,7 +563,7 @@
 
     {
       keywords: ['noticias', 'news', 'actualizaciones', 'anuncios', 'novedades', 'canal noticias', 'npoint', 'carga noticias', 'filtros noticias', 'estadisticas noticias', 'ctrl shift r', 'ultimas noticias'],
-      response: `📰 <strong>Sistema de Noticias del Clan</strong><br><br>
+      response: `<strong>Sistema de Noticias del Clan</strong><br><br>
       La página de Noticias es el centro oficial de información actualizada. Características:<br>
       🔹 <strong>Modo solo lectura:</strong> Las noticias son publicadas por el staff.<br>
       🔹 <strong>Actualizaciones semanales:</strong> Cada semana se añaden novedades.<br>
@@ -576,7 +576,7 @@
     },
     {
       keywords: ['canal whatsapp noticias', 'whatsapp channel', 'qr whatsapp', 'notificaciones instantaneas', 'unirse canal noticias', 'canal oficial whatsapp', 'noticiero sms'],
-      response: `📢 <strong>Canal de WhatsApp para Noticias - Noticiero SMS</strong><br><br>
+      response: `<strong>Canal de WhatsApp para Noticias - Noticiero SMS</strong><br><br>
       Además de los grupos de chat, el clan dispone de un <strong>canal oficial de WhatsApp</strong> exclusivo para recibir notificaciones instantáneas. Beneficios:<br>
       ✅ Notificaciones al instante de nuevas noticias.<br>
       ✅ Novedades exclusivas antes que en otros medios.<br>
@@ -589,7 +589,7 @@
 
     {
       keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'kian vove', 'golden vultures', 'nythera', 'bloody legacy', 'wonderland', 'luwance', 'kira order', 'the black bulls'],
-      response: `🤝 <strong>Alianzas de Serakdep MS</strong><br><br>
+      response: `<strong>Alianzas de Serakdep MS</strong><br><br>
       En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 8 clanes aliados, entre ellos:<br>
       • Kian Vove Xoar's<br>
       • Golden Vultures<br>
@@ -620,9 +620,9 @@
  
 
     {
-      keywords: ['sms studios', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
-      response: `💻 <strong>SMS Studios - Laboratorio de Código</strong><br><br>
-      <strong>SMS Studios</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio web del clan. Es un entorno de desarrollo interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> directamente desde el navegador, sin instalar nada.<br><br>
+      keywords: ['CodeTurbo', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
+      response: `<strong>CodeTurbo - Laboratorio de Código</strong><br><br>
+      <strong>CodeTurbo</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio web del clan. Es un entorno de desarrollo interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> directamente desde el navegador, sin instalar nada.<br><br>
       Incluye:<br>
       • <strong>Editor profesional</strong> con autocompletado y detección de errores en tiempo real.<br>
       • <strong>Vista previa en vivo</strong> de tu código.<br>
@@ -634,20 +634,20 @@
       • <strong>Exportación de proyectos</strong> en ZIP o HTML único.<br>
       • <strong>Carga de archivos</strong> desde tu dispositivo o arrastrando y soltando.<br>
       • <strong>Gestión de proyectos múltiples</strong> para guardar y cargar tu trabajo.<br><br>
-      Para acceder, visita <strong>SMS Studios</strong> desde el enlace en el footer.`
+      Para acceder, visita <strong>CodeTurbo</strong> desde el enlace en el footer.`
     },
     {
-      keywords: ['como entrar sms studios', 'acceder laboratorio', 'donde esta sms studios', 'abrir code lab', 'ingresar al laboratorio', 'entrar a sms studios', 'donde programar'],
-      response: `🚀 <strong>Cómo acceder a SMS Studios</strong><br><br>
+      keywords: ['como entrar CodeTurbo', 'acceder laboratorio', 'donde esta CodeTurbo', 'abrir code lab', 'ingresar al laboratorio', 'entrar a CodeTurbo', 'donde programar'],
+      response: `<strong>Cómo acceder a CodeTurbo</strong><br><br>
       Puedes acceder de dos maneras:<br>
-      • <strong>Desde el footer:</strong> Haz clic en "SMS Studios" en la parte inferior de cualquier página.<br>
+      • <strong>Desde el footer:</strong> Haz clic en "CodeTurbo" en la parte inferior de cualquier página.<br>
       • <strong>Enlace directo:</strong> Visita <strong>laboratorio.html</strong> en el navegador.<br><br>
       Al entrar verás una pantalla de bienvenida con toda la información. Haz clic en <strong>"Ingresar al Laboratorio"</strong> para empezar a programar. ¡No necesitas instalar nada!`
     },
     {
-      keywords: ['guardar proyecto sms studios', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
-      response: `💾 <strong>Guardar y exportar proyectos en SMS Studios</strong><br><br>
-      SMS Studios guarda todo automáticamente para que no pierdas tu trabajo:<br>
+      keywords: ['guardar proyecto CodeTurbo', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
+      response: `<strong>Guardar y exportar proyectos en CodeTurbo</strong><br><br>
+      CodeTurbo guarda todo automáticamente para que no pierdas tu trabajo:<br>
       • <strong>Guardado automático:</strong> Tu código se guarda cada 10 segundos en el navegador.<br>
       • <strong>Gestión de proyectos:</strong> Haz clic en el icono de capas para guardar tu proyecto con nombre y cargarlo cuando quieras.<br>
       • <strong>Descarga ZIP:</strong> Descarga tu proyecto completo con todos los archivos.<br>
@@ -656,7 +656,7 @@
     },
     {
       keywords: ['personalizar editor', 'temas editor', 'cambiar tema', 'fuente editor', 'modo oscuro', 'monokai', 'dracula', 'solarized', 'nord', 'material', 'apariencia editor'],
-      response: `🎨 <strong>Personalización del editor en SMS Studios</strong><br><br>
+      response: `<strong>Personalización del editor en CodeTurbo</strong><br><br>
       Puedes personalizar la apariencia del editor a tu gusto:<br>
       • <strong>6 temas de editor:</strong> Monokai, Dracula, Solarized, Nord, Material y Default.<br>
       • <strong>Tamaño de fuente:</strong> Ajusta el tamaño del texto desde la barra de estado inferior.<br>
@@ -666,8 +666,8 @@
     },
     {
       keywords: ['retos programacion', 'desafios codigo', 'ejercicios html', 'practicas css', 'ejercicios javascript', 'challenges', 'tareas programacion'],
-      response: `🧩 <strong>Retos de programación en SMS Studios</strong><br><br>
-      SMS Studios incluye <strong>9 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
+      response: `<strong>Retos de programación en CodeTurbo</strong><br><br>
+      CodeTurbo incluye <strong>9 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
       • <strong>Página de bienvenida</strong> (HTML básico).<br>
       • <strong>Estilizando un botón</strong> (CSS intermedio).<br>
       • <strong>Lista de tareas interactiva</strong> (JavaScript avanzado).<br>
@@ -680,8 +680,8 @@
       Selecciona "Empezar reto" en el panel de retos. Cada reto carga una plantilla inicial y te guía con instrucciones detalladas.`
     },
     {
-      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial sms studios', 'robot programacion'],
-      response: `🤖 <strong>Asistente IA en SMS Studios</strong><br><br>
+      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial CodeTurbo', 'robot programacion'],
+      response: `<strong>Asistente IA en CodeTurbo</strong><br><br>
       Actualmente el asistente IA del laboratorio está en modo <strong>"Próximamente"</strong>. Estamos trabajando para conectarlo a un modelo de inteligencia artificial real que podrá:<br>
       • Responder preguntas sobre HTML, CSS y JavaScript.<br>
       • Explicar conceptos de programación.<br>
@@ -690,8 +690,8 @@
       Mientras tanto, puedes usar la <strong>enciclopedia interna</strong> y los <strong>retos</strong> para seguir aprendiendo. ¡Te avisaremos cuando el asistente IA esté listo!`
     },
     {
-      keywords: ['enciclopedia sms studios', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
-      response: `📚 <strong>Enciclopedia interna de SMS Studios</strong><br><br>
+      keywords: ['enciclopedia CodeTurbo', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
+      response: `<strong>Enciclopedia interna de CodeTurbo</strong><br><br>
       El laboratorio incluye una <strong>enciclopedia completa</strong> con documentación de los tres lenguajes:<br>
       • <strong>HTML:</strong> Estructura básica, etiquetas de texto, enlaces, imágenes, listas, tablas, formularios, multimedia, semántica HTML5, accesibilidad, SEO y más.<br>
       • <strong>CSS:</strong> Selectores, Box Model, posicionamiento, Flexbox, Grid, animaciones, media queries, variables, sombras, filtros y mucho más.<br>
@@ -703,7 +703,7 @@
 
     {
       keywords: ['testimonios', 'opiniones', 'miembros dicen', 'experiencias', 'comentarios', 'shadowblade', 'diegosanval2012', 'icequeen', 'que dicen', 'reseñas'],
-      response: `💬 <strong>Testimonios de miembros</strong><br><br>
+      response: `<strong>Testimonios de miembros</strong><br><br>
       Esto es lo que dicen algunos de nuestros miembros:<br>
       • <strong>kakaroto11141</strong> (FOUNDER): "SerakDepMS no es un clan como los demás, es una vida, una familia y un despertar a la innovación. Aprender a vivir entre personas de diferentes lugares y distintas culturas es la forma más bella de compartir nuestros pensamientos e ideales sin ser juzgados."<br>
       • <strong>Diegosanval2012</strong> (Miembro desde 2026): "Me gusta su buen desarrollo administrativo y alta gerencia en los ámbitos de soporte técnico y toma de decisiones."<br>
@@ -715,13 +715,13 @@
 
     {
       keywords: ['redes sociales', 'twitter', 'instagram', 'tiktok', 'youtube', 'social media', 'x', 'discord link', 'seguir', 'rrss'],
-      response: `🌐 <strong>Redes sociales oficiales</strong><br><br>
+      response: `<strong>Redes sociales oficiales</strong><br><br>
       Encuéntranos en:<br>
-      🐦 <strong>Twitter/X:</strong> @serakdep<br>
-      📸 <strong>Instagram:</strong> @serakdep_sms<br>
-      🎵 <strong>TikTok:</strong> @serakdrji9t<br>
-      💬 <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br>
-      📺 <strong>YouTube:</strong> (canal en desarrollo)<br><br>
+      <strong>Twitter/X:</strong> @serakdep<br>
+      <strong>Instagram:</strong> @serakdep_sms<br>
+      <strong>TikTok:</strong> @serakdrji9t<br>
+      <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br>
+      <strong>YouTube:</strong> (canal en desarrollo)<br><br>
       Los enlaces directos están disponibles en el footer de cada página. ¡Síguenos para estar al día!`
     },
  
@@ -729,8 +729,8 @@
 
     {
       keywords: ['pc', 'laptop', 'recomendacion', 'experiencia', 'navegador', 'problemas tecnicos', 'error pagina', 'no carga', 'mobile', 'dispositivos moviles', 'problema tecnico', 'bug'],
-      response: `💻 <strong>Recomendaciones técnicas</strong><br><br>
-      ⚠️ <strong>Importante:</strong> Se recomienda usar PC o Laptop para una mejor experiencia. Algunas funciones pueden no estar optimizadas para móviles.<br><br>
+      response: `<strong>Recomendaciones técnicas</strong><br><br>
+      <strong>Importante:</strong> Se recomienda usar PC o Laptop para una mejor experiencia. Algunas funciones pueden no estar optimizadas para móviles.<br><br>
       Si encuentras errores:<br>
       • Recarga la página con F5 o Ctrl+F5.<br>
       • Limpia la caché del navegador.<br>
@@ -740,7 +740,7 @@
     },
     {
       keywords: ['soporte tecnico', 'ayuda tecnica', 'no funciona', 'problema con la pagina', 'error sitio web'],
-      response: `🔧 <strong>Soporte técnico</strong><br><br>
+      response: `<strong>Soporte técnico</strong><br><br>
       Si tienes problemas con el sitio web, sigue estos pasos:<br>
       1️⃣ Recarga la página (F5 o Ctrl+R).<br>
       2️⃣ Limpia la caché y cookies de tu navegador.<br>
@@ -754,7 +754,7 @@
 
     {
       keywords: ['contribuir', 'ayudar clan', 'voluntario', 'colaborar', 'aportar', 'quiero ayudar', 'como puedo ayudar'],
-      response: `🤲 <strong>¿Cómo contribuir al clan?</strong><br><br>
+      response: `<strong>¿Cómo contribuir al clan?</strong><br><br>
       Hay muchas formas de ayudar a Serakdep MS:<br>
       • <strong>Siendo activo:</strong> Participa en eventos, juegos y conversaciones.<br>
       • <strong>Ayudando a nuevos miembros:</strong> Orienta a los novatos en sus primeros días.<br>
@@ -796,7 +796,7 @@
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
       • <strong>Alianzas</strong> (8 clanes aliados).<br>
       • <strong>Tutoriales</strong> (videotutoriales de ayuda).<br>
-      • <strong>SMS Studios</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
+      • <strong>CodeTurbo</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
     }
   ];
@@ -856,7 +856,7 @@
       'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos',
       'juegos', 'contacto', 'reportar', 'sanciones', 'colaboradores',
       'noticias', 'legal', 'créditos', 'ser admin', 'alianzas', 'tutoriales',
-      'sms studios', 'laboratorio código', 'retos programación', 'enciclopedia'
+      'CodeTurbo', 'laboratorio código', 'retos programación', 'enciclopedia'
     ];
     
     return `🤔 No tengo una respuesta específica para "${query}". Pero puedo ayudarte con muchos otros temas. Prueba preguntando sobre:<br>
@@ -922,7 +922,7 @@
         • Cómo reportar problemas o contactar al staff.<br>
         • La estructura del clan y cómo ascender.<br>
         • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>
-        • <strong>SMS Studios</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
+        • <strong>CodeTurbo</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
         • Noticias, legal, créditos, alianzas y tutoriales.<br><br>
         <strong>Escribe tu consulta con total libertad.</strong> Entiendo lenguaje natural, así que no necesitas usar palabras exactas. ¡Adelante!`);
         hasStarted = true;

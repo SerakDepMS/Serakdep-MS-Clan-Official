@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusFontSize = document.getElementById('statusFontSize');
   const btnFormat = document.getElementById('btnFormat');
   const btnWrap = document.getElementById('btnWrap');
-
   const btnChallenges = document.getElementById('btnChallenges');
   const challengesPanel = document.getElementById('labChallenges');
   const challengesContent = document.getElementById('challengesContent');
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
     { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al SMS Studios de Serakdep MS!");' }
+    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al CodeTurbo de Serakdep MS!");' }
   ];
   let activeFileId = '1';
   let editors = {};
@@ -441,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function downloadZip() {
     const zip = new JSZip();
     files.forEach(f => zip.file(f.name, f.content));
-    zip.file('README.md', `# Proyecto Serakdep MS SMS Studios\n\n## Archivos\n${files.map(f => '- ' + f.name).join('\n')}\n\nCreado con el SMS Studios de Serakdep MS.`);
+    zip.file('README.md', `# Proyecto Serakdep MS CodeTurbo\n\n## Archivos\n${files.map(f => '- ' + f.name).join('\n')}\n\nCreado con el CodeTurbo de Serakdep MS.`);
     zip.generateAsync({ type: 'blob' }).then(content => {
       const a = document.createElement('a');
       a.href = URL.createObjectURL(content);
@@ -457,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let html = htmlFiles.length > 0
       ? htmlFiles.map(f => f.content).join('\n')
-      : '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto SMS Studios</title>\n</head>\n<body>\n  <!-- Contenido aquí -->\n</body>\n</html>';
+      : '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto CodeTurbo</title>\n</head>\n<body>\n  <!-- Contenido aquí -->\n</body>\n</html>';
 
     const css = cssFiles.map(f => f.content).join('\n');
     const js = jsFiles.map(f => f.content).join('\n');
@@ -476,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isFullDocument = /<(!doctype|html)[^>]*>/i.test(html);
     if (!isFullDocument) {
-        html = `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto SMS Studios</title>\n</head>\n<body>\n${html}\n</body>\n</html>`;
+        html = `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto CodeTurbo</title>\n</head>\n<body>\n${html}\n</body>\n</html>`;
     }
 
 
@@ -515,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
     files = [
       { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, Serakdep MS!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
       { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al SMS Studios de Serakdep MS!");' }
+      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al CodeTurbo de Serakdep MS!");' }
     ];
     Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
     editors = {};
