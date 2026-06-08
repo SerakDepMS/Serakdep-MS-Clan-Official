@@ -1,15 +1,15 @@
 const clanesAliados = [
   {
-    nombre: "Kian Vove Xoar's",
-    logo: "images/alianzas/KianVoveXoars.jpg",
-    descripcion: "Nuestro objetivo es tener un espacio de convivencia sana, ser como una familia, un espacio seguro para todos y todas.",
+    nombre: "CHIHUAHUENSE  DINASTY",
+    logo: "images/alianzas/CHIHUAHUENSEDINASTY.jpg",
+    descripcion: "Un lugar donde las pequeñas acciones son poderosas aparece chy un clan para socializar y convivir sanamente.",
     activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2026-04-02"
+    nuevaAlianza: true,
+    fechaAlianza: "2026-06-02"
   },
   {
-    nombre: "Golden Vultures",
-    logo: "images/alianzas/GoldenVultures.jpg",
+    nombre: "Zion Dynasty",
+    logo: "images/alianzas/ZionDynasty.jpg",
     descripcion: "Comunidad creada con el fin de garantizar un ambiente de convivencia y juego sano, a traves de la creacion de contenido y actividades en diferentes juegos.",
     activo: true,
     nuevaAlianza: false,
@@ -32,9 +32,9 @@ const clanesAliados = [
     fechaAlianza: "2025-12-27"
   },
   {
-    nombre: "Wonderland",
-    logo: "images/alianzas/Wonderland.jpg",
-    descripcion: "En Wonderland, buscamos ser un refugio lleno de magia, sueños y risas, donde cada habitante pueda sentirse cómodo, libre y parte de algo especial mientras forma parte de este mundo encantado.",
+    nombre: "WIND BREAKER",
+    logo: "images/alianzas/WINDBREAKER.jpg",
+    descripcion: "En WIND BREAKER, buscamos ser un refugio lleno de magia, sueños y risas, donde cada habitante pueda sentirse cómodo, libre y parte de algo especial mientras forma parte de este mundo encantado.",
     activo: true,
     nuevaAlianza: false,
     fechaAlianza: "2025-12-31"

@@ -588,14 +588,14 @@
  
 
     {
-      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'kian vove', 'golden vultures', 'nythera', 'bloody legacy', 'wonderland', 'luwance', 'kira order', 'the black bulls'],
+      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'nythera', 'bloody legacy', 'WIND BREAKER', 'luwance', 'kira order', 'the black bulls'],
       response: `<strong>Alianzas de Serakdep MS</strong><br><br>
       En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 8 clanes aliados, entre ellos:<br>
-      • Kian Vove Xoar's<br>
-      • Golden Vultures<br>
+      • CHIHUAHUENSE  DINASTY<br>
+      • Zion Dynasty<br>
       • NYTHERA<br>
       • Bloody Legacy<br>
-      • Wonderland<br>
+      • WIND BREAKER<br>
       • Legión Nova<br>
       • LUWANCE<br>
       • Kira's Order<br>
