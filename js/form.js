@@ -932,6 +932,9 @@ function validateColaboradorForm() {
 
 function showMessage(text, type, form = null) {
   let messageContainer;
+  if (!form) {
+    form = document.querySelector("form");
+  }
   if (form) {
     messageContainer = form.querySelector(".form-messages");
     if (!messageContainer) {
@@ -944,7 +947,7 @@ function showMessage(text, type, form = null) {
     if (!messageContainer) {
       messageContainer = document.createElement("div");
       messageContainer.className = "form-messages";
-      const formContainer = document.querySelector(".form-container");
+      const formContainer = document.querySelector(".form-container") || document.querySelector("main") || document.body;
       if (formContainer) formContainer.insertBefore(messageContainer, formContainer.firstChild);
     }
   }

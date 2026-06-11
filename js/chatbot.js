@@ -907,6 +907,11 @@
     const inputField = document.getElementById('chatbotInput');
     const sendBtn = document.getElementById('sendMessageBtn');
  
+    if (!toggleBtn || !modal || !closeBtn || !messagesDiv || !inputField || !sendBtn) {
+      console.warn("No se pudieron encontrar todos los elementos del chatbot en el DOM.");
+      return;
+    }
+
     let hasStarted = false;
  
     toggleBtn.addEventListener('click', () => {

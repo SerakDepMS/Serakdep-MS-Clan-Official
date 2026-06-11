@@ -692,7 +692,6 @@ textarea.form-control {
   justify-content: center;
   gap: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform, box-shadow;
   border: 2px solid white;
   min-width: 250px;
 }
@@ -792,7 +791,6 @@ textarea.form-control {
   justify-content: center;
   gap: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform, box-shadow;
   border: 2px solid white;
   min-width: 250px;
   width: 100%;

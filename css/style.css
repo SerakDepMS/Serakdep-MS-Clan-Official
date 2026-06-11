@@ -211,7 +211,6 @@ main .container > *:not(:last-child) {
 .gallery-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
-  will-change: transform;
 }
 
 .card-title {
@@ -1196,6 +1195,23 @@ li {
 }
 
 
+
+/* ================================================
+   TEMA OSCURO — Prevención de FOUC
+   El head-script aplica 'dark-theme' a <html> antes
+   del primer render; estas reglas garantizan fondo
+   oscuro inmediato sin esperar a que JS cargue.
+================================================ */
+html.dark-theme {
+  background: linear-gradient(135deg, #0d1f14 0%, #0a1610 100%);
+  color-scheme: dark;
+}
+
+html.dark-theme body {
+  background: linear-gradient(135deg, #0d1f14 0%, #0a1610 100%);
+  color: #e0e0e0;
+}
+
 body.dark-theme {
   --background-gradient: linear-gradient(135deg, #0d1f14 0%, #0a1610 100%);
   color: #e0e0e0;
@@ -1655,3 +1671,9 @@ body.dark-theme .pc-notice strong {
 body.dark-theme .pc-notice p {
   color: #e3f2fd;
 }
+
+/* Elemento faltante: contenedor de categorías de juegos */
+body.dark-theme .games-categories {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}

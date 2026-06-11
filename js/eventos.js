@@ -2,7 +2,10 @@ const API_EVENTOS = "https://api.npoint.io/b7d27b89b7da43de6683";
 const INTERVALO_ACTUALIZACION = 12000;
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("current-year").textContent = new Date().getFullYear();
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
   cargarEventosDesdeAPI();
   setInterval(actualizarEventosPeriodicamente, INTERVALO_ACTUALIZACION);
 });

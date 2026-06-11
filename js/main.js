@@ -242,19 +242,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 (function() {
   if (localStorage.getItem('cookieConsent') === null) {
-    document.getElementById('cookie-banner').style.display = 'block';
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'block';
   }
 })();
 
 function aceptarCookies() {
   localStorage.setItem('cookieConsent', 'accepted');
-  document.getElementById('cookie-banner').style.display = 'none';
+  const banner = document.getElementById('cookie-banner');
+  if (banner) banner.style.display = 'none';
 }
 
 function rechazarCookies() {
   localStorage.setItem('cookieConsent', 'rejected');
-  document.getElementById('cookie-banner').style.display = 'none';
-
+  const banner = document.getElementById('cookie-banner');
+  if (banner) banner.style.display = 'none';
 }
 
 
@@ -266,12 +268,14 @@ function rechazarCookies() {
   
   const savedTheme = getCookie('sms_theme') || localStorage.getItem('sms_theme');
   if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark-theme');
     document.body.classList.add('dark-theme');
     themeIcon.classList.remove('fa-moon');
     themeIcon.classList.add('fa-sun');
   }
   
   themeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-theme');
     document.body.classList.toggle('dark-theme');
     const isDark = document.body.classList.contains('dark-theme');
     setCookie('sms_theme', isDark ? 'dark' : 'light', 180);

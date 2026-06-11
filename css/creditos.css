@@ -1874,3 +1874,75 @@ body.dark-theme .gh-icon { background: rgba(36,41,46,0.2); }
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
+/* ================================================
+   GALLERY MODAL - Dark Theme
+   (Migrado desde dark-theme.css para consolidar)
+================================================ */
+body.dark-theme .gallery-modal {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+body.dark-theme .gallery-modal-content {
+  background: #1a1f1c;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .gallery-modal-header {
+  background: linear-gradient(135deg, #1a2520 0%, #0d1f14 100%);
+  border-bottom-color: rgba(212, 175, 55, 0.3);
+  color: white;
+}
+
+body.dark-theme .gallery-modal-title {
+  color: #f0e6c5;
+}
+
+body.dark-theme .gallery-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  color: #d5d5d5;
+}
+
+body.dark-theme .gallery-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .gallery-modal-image-container {
+  background: #0d1110;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .gallery-modal-image {
+  background: #0d1110;
+}
+
+body.dark-theme .gallery-modal-info {
+  background: #1a1f1c;
+  color: #d5d5d5;
+}
+
+body.dark-theme .gallery-modal-role {
+  color: #a8d5be;
+  border-bottom-color: rgba(212, 175, 55, 0.2);
+}
+
+body.dark-theme .gallery-modal-description {
+  color: #c5c5c5;
+}
+
+body.dark-theme .gallery-modal-meta {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .gallery-modal-meta span {
+  color: #b5b5b5;
+}
+
+body.dark-theme .gallery-modal-meta i {
+  color: #a8d5be;
+}
+
+body.dark-theme .gallery-modal-badge {
+  background: #d4af37;
+  color: #1a1a1a;
+}
