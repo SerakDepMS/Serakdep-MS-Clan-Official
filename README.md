@@ -50,7 +50,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 
 ## 🌐 Estructura del Sitio Web
 
-### 📄 Páginas Principales (10)
+### 📄 Páginas Principales (11)
 | Página | Descripción |
 |--------|-------------|
 | 🏠 `index.html` | Página de inicio con reproductor de video, contador del clan, splash screen y galería |
@@ -60,6 +60,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 | 🎮 `eventos.html` | Calendario de eventos, torneos, 72 equipos y sistema de inscripción |
 | 📰 `noticias.html` | Sistema de noticias con npoint.io, actualización cada 12s y filtros |
 | 📞 `contacto.html` | Canales de contacto (WhatsApp, Discord, Email) y formularios de soporte |
+| 🎬 `lore.html` | **Viaje Cinematográfico** – Recorrido interactivo de 26 escenas con audio y efectos dinámicos |
 | 🤝 `alianzas.html` | 8 clanes aliados con tarjetas glassmorphism y auras animadas |
 | 🎖️ `creditos.html` | Equipo del clan, línea de tiempo, galería y tecnologías utilizadas |
 | 🎬 `videotutoriales.html` | 6 tutoriales en video con reproductor personalizado |
@@ -195,7 +196,7 @@ no para ser reutilizado, modificado o distribuido.
 
 | Concepto | Cantidad |
 |----------|:--------:|
-| Páginas HTML | 20 |
+| Páginas HTML | 21 |
 | Archivos CSS | 15+ |
 | Archivos JavaScript | 12+ |
 | Videos en reproductor | 15 |
@@ -218,7 +219,7 @@ no para ser reutilizado, modificado o distribuido.
 **Última verificación legal:** 21/05/2026  
 **Estado:** Activo y Protegido  
 **Google Search Console:** ✅ Verificado  
-**Sitemap:** ✅ Enviado (20 URLs)  
+**Sitemap:** ✅ Enviado (21 URLs)  
 **Chatbot IA:** ✅ Actualizado  
 **Violaciones recientes:** 0  
 **Acciones DMCA pendientes:** 0  

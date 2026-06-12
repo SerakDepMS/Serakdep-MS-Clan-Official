@@ -2338,7 +2338,7 @@ nav ul li a:hover {
   }
 }
 
-/* Desactivar animaciones pesadas de gran consumo GPU/CPU en móviles */
+
 @media (max-width: 768px) {
   .ring-gold, 
   .ring-green, 
@@ -2348,14 +2348,14 @@ nav ul li a:hover {
   .ambient,
   .success-icon {
     animation: none !important;
-    will-change: auto !important; /* Liberar capa GPU: no hay animación en móvil */
+    will-change: auto !important; 
   }
   .alianza-card.activo::before, 
   .alianza-card.nueva::before {
     animation: none !important;
   }
   .alianza-card {
-    will-change: auto !important; /* Sin hover complejo en táctil — liberar memoria GPU */
+    will-change: auto !important; 
   }
   nav,
   .mobile-menu-btn {

@@ -1874,10 +1874,7 @@ body.dark-theme .gh-icon { background: rgba(36,41,46,0.2); }
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
-/* ================================================
-   GALLERY MODAL - Dark Theme
-   (Migrado desde dark-theme.css para consolidar)
-================================================ */
+
 body.dark-theme .gallery-modal {
   background: rgba(0, 0, 0, 0.95);
 }

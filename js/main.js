@@ -311,7 +311,7 @@ function getCookie(name) {
   let canvas, ctx, animationId;
   let resizeTimer;
 
-  /* Pointer tracking — works for mouse and touch */
+
   let pointer = { x: -9999, y: -9999, active: false };
 
   function onMouseMove(e) {
@@ -362,16 +362,16 @@ function getCookie(name) {
     for (let i = particles.length - 1; i >= 0; i--) {
       const p = particles[i];
 
-      /* Natural drift */
+
       p.x += p.speedX + p.vx;
       p.y += p.speedY + p.vy;
 
-      /* Cursor / touch repulsion */
+
       if (pointer.active) {
         const dx = p.x - pointer.x;
         const dy = p.y - pointer.y;
         const distSq = dx * dx + dy * dy;
-        if (distSq < 12100 && distSq > 0) { // 110 * 110 (REPULSION_RADIUS^2)
+        if (distSq < 12100 && distSq > 0) {
           const dist = Math.sqrt(distSq);
           const strength = (1 - dist / REPULSION_RADIUS) * REPULSION_FORCE;
           p.vx += (dx / dist) * strength;
@@ -379,11 +379,11 @@ function getCookie(name) {
         }
       }
 
-      /* Dampen velocity smoothly back to zero */
+
       p.vx *= 0.88;
       p.vy *= 0.88;
 
-      /* Clamp velocity so particles don't escape wildly */
+
       const maxV = 6;
       if (Math.abs(p.vx) > maxV) p.vx = maxV * Math.sign(p.vx);
       if (Math.abs(p.vy) > maxV) p.vy = maxV * Math.sign(p.vy);

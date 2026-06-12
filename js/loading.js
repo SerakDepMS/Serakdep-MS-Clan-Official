@@ -19,7 +19,7 @@
         const pts = [];
         let loadingAnimId;
 
-        /* ── Pointer tracking (mouse + touch) ── */
+
         let px = -9999, py = -9999;
         const REPEL_R = 120;
         const REPEL_F = 2.2;
@@ -57,7 +57,6 @@
         function drawParticles() {
             ctx.clearRect(0, 0, W, H);
 
-            /* Draw connecting lines */
             for (let i = 0; i < pts.length; i++) {
                 for (let j = i + 1; j < pts.length; j++) {
                     const dx   = pts[i].x - pts[j].x;
@@ -75,23 +74,23 @@
                 }
             }
 
-            /* Update and draw each point */
+
             pts.forEach(p => {
                 const dx   = p.x - px;
                 const dy   = p.y - py;
                 const distSq = dx * dx + dy * dy;
-                if (distSq < 14400 && distSq > 0) { // REPEL_R^2 (120 * 120)
+                if (distSq < 14400 && distSq > 0) { 
                     const dist = Math.sqrt(distSq);
                     const str = (1 - dist / REPEL_R) * REPEL_F;
                     p.dvx += (dx / dist) * str;
                     p.dvy += (dy / dist) * str;
                 }
 
-                /* Dampen extra velocity */
+
                 p.dvx *= 0.90;
                 p.dvy *= 0.90;
 
-                /* Apply movement */
+
                 p.x += p.vx + p.dvx;
                 p.y += p.vy + p.dvy;
 

@@ -31,7 +31,7 @@
     '.gallery-stats .stat',
   ];
 
-  /* Inject the hidden state via a single <style> tag — avoids per-element inline style */
+
   const style = document.createElement('style');
   style.textContent = '.sr-hidden{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}';
   document.head.appendChild(style);
@@ -54,7 +54,7 @@
     );
 
     elements.forEach(function(el) {
-      /* Don't re-hide elements already in viewport on page load */
+
       const rect = el.getBoundingClientRect();
       if (rect.top > window.innerHeight * 0.05) {
         el.classList.add('sr-hidden');
@@ -68,4 +68,4 @@
   } else {
     initReveal();
   }
-})();
+})();
