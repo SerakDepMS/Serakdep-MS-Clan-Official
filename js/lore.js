@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let autoplayTimer = null;
   let autoplayPaused = false;
 
-  // ── TTS (Text-to-Speech) ──────────────────────────
   let ttsEnabled = false;
   let ttsCurrentUtterance = null;
   const ttsBtn = document.getElementById("tts-toggle");
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ttsVoicesLoaded) return;
     const voices = window.speechSynthesis.getVoices();
     if (voices.length > 0) {
-      // Prefer a local Spanish voice, fall back to any es voice
       spanishVoice =
         voices.find(v => v.lang === "es-ES" && v.localService) ||
         voices.find(v => v.lang === "es-419" && v.localService) ||
@@ -103,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!ttsEnabled) {
         stopTTS();
       } else {
-        // Speak the current scene immediately
         const currentSec = sections[activeIndex];
         const narEl = currentSec && currentSec.querySelector(".scene-narration");
         const text = narEl ? narEl.getAttribute("data-text") || "" : "";
@@ -319,33 +316,28 @@ document.addEventListener("DOMContentLoaded", function () {
   initLobbyParticles();
 
 
-  // ── Música de fondo MP3 ───────────────────────────
-  // Coloca tu archivo en: audio/musica.mp3
   let bgMusic = null;
   let fadeInterval = null;
-  const BG_VOLUME = 0.25; // volumen objetivo (0.0 – 1.0)
+  const BG_VOLUME = 0.2;
 
   function initAudioContext() {
     if (isMuted) return;
 
     if (bgMusic) {
-      // Ya existe: solo reanudar
       bgMusic.play().catch(() => {});
       return;
     }
 
     bgMusic = new Audio("audio/musica1.mp3");
     bgMusic.loop   = true;
-    bgMusic.volume = 0;           // empieza en silencio
+    bgMusic.volume = 0;           
     bgMusic.preload = "auto";
 
     bgMusic.play().catch(() => {
-      // El navegador bloqueó la reproducción (poco probable aquí
-      // porque el usuario ya hizo click en "Iniciar el Viaje")
       console.warn("No se pudo reproducir el audio.");
     });
 
-    // Fade in suave en ~3 s
+
     clearInterval(fadeInterval);
     fadeInterval = setInterval(() => {
       if (!bgMusic) return clearInterval(fadeInterval);
@@ -357,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function stopAmbientSynth() {
     if (!bgMusic) return;
-    // Fade out suave en ~1.5 s
+
     clearInterval(fadeInterval);
     fadeInterval = setInterval(() => {
       if (!bgMusic) return clearInterval(fadeInterval);
@@ -371,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 40);
   }
 
-  // ── Arpeggio de escena (efecto de transición ligero) ─
+
   let arpeggioCtx = null;
 
   const arpeggioNotes = [
@@ -620,10 +612,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (narrationEl) {
       const text = narrationEl.getAttribute("data-text") || "";
       revealWords(narrationEl, text, 62);
-      // TTS: read aloud after a short cinematic pause
       if (ttsEnabled && text) {
         setTimeout(() => {
-          if (activeIndex === index) speakText(text); // guard: still on this scene
+          if (activeIndex === index) speakText(text);
         }, 1100);
       }
     }
@@ -656,7 +647,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollToScene(index) {
     if (index < 0 || index >= sections.length) return;
-    stopTTS(); // cancel any ongoing speech before transitioning
+    stopTTS();
     isTravelling = true;
     triggerFlash(() => {
       activateScene(index);
