@@ -1,5 +1,3 @@
-
-
 :root {
   --cinematic-gold: #d4af37;
   --cinematic-green: #2d6a4f;
@@ -1302,51 +1300,51 @@
 
 @media (max-width: 768px) {
   .lobby-title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     letter-spacing: 2px;
   }
 
   .lobby-title-line2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 5px;
   }
 
   .lobby-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 
   .lobby-logo-wrapper {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 30px;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 26px;
   }
 
   .lobby-logo-inner {
-    top: 16px;
-    left: 16px;
-    width: 108px;
-    height: 108px;
+    top: 14px;
+    left: 14px;
+    width: 102px;
+    height: 102px;
   }
 
   .lobby-logo-inner i {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   .scene-section {
-    padding: 70px 22px 100px;
+    padding: 68px 20px 96px;
   }
 
   .scene-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .scene-narration {
-    font-size: 0.96rem;
+    font-size: 0.94rem;
     line-height: 1.78;
   }
 
   .scene-chapter-numeral {
-    font-size: 28vh;
+    font-size: 26vh;
   }
 
   .cinematic-exit-btn {
@@ -1367,6 +1365,13 @@
     height: 34px;
   }
 
+  .cinematic-tts-btn {
+    top: 56px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+
   .scene-counter {
     top: 14px;
     font-size: 0.68rem;
@@ -1376,6 +1381,7 @@
   .cinematic-navigation {
     bottom: 18px;
     padding: 9px 14px;
+    max-width: calc(100vw - 80px);
   }
 
   .nav-node {
@@ -1406,6 +1412,306 @@
   }
 }
 
+/* ─── TTS Button ─────────────────────────────────── */
+.cinematic-tts-btn {
+  position: fixed;
+  top: 68px;
+  right: 20px;
+  z-index: 1001;
+  background: rgba(6, 14, 11, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.45);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  transition: background 0.3s, transform 0.2s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cinematic-tts-btn:hover {
+  color: var(--scene-accent);
+  border-color: rgba(var(--scene-accent-rgb), 0.35);
+  transform: scale(1.1);
+}
+
+.cinematic-tts-btn.active {
+  color: var(--scene-accent);
+  border-color: rgba(var(--scene-accent-rgb), 0.55);
+  background: rgba(var(--scene-accent-rgb), 0.12);
+  box-shadow: 0 0 16px rgba(var(--scene-accent-rgb), 0.28);
+}
+
+.cinematic-tts-btn.speaking {
+  animation: ttsPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes ttsPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(var(--scene-accent-rgb), 0.3); }
+  50%       { box-shadow: 0 0 22px rgba(var(--scene-accent-rgb), 0.72); }
+}
+
+/* ─── 480 px y menos ─────────────────────────────── */
+@media (max-width: 480px) {
+  .lobby-inner {
+    padding: 20px 16px 24px;
+  }
+
+  .lobby-logo-wrapper {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .lobby-logo-inner {
+    top: 12px;
+    left: 12px;
+    width: 86px;
+    height: 86px;
+  }
+
+  .lobby-logo-inner i {
+    font-size: 2.2rem;
+  }
+
+  .lobby-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .lobby-title-line2 {
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+  }
+
+  .lobby-subtitle {
+    font-size: 0.82rem;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .lobby-btn {
+    padding: 13px 26px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .lobby-btn-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.72rem;
+  }
+
+  .lobby-hint {
+    display: none;
+  }
+
+  .scene-section {
+    padding: 58px 14px 86px;
+  }
+
+  .scene-title {
+    font-size: 1.55rem;
+    line-height: 1.15;
+  }
+
+  .scene-title-sub {
+    font-size: 0.62em;
+    letter-spacing: 3px;
+  }
+
+  .scene-narration {
+    font-size: 0.85rem;
+    line-height: 1.72;
+    min-height: 60px;
+  }
+
+  .scene-chapter-numeral {
+    font-size: 20vh;
+  }
+
+  .scene-era {
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+  }
+
+  .scene-timestamp {
+    font-size: 0.6rem;
+  }
+
+  .scene-divider {
+    margin: 14px 0 16px;
+  }
+
+  .divider-line {
+    flex: 0 0 36px;
+  }
+
+  .cinematic-exit-btn {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    font-size: 0.68rem;
+    gap: 0;
+  }
+
+  .cinematic-exit-btn span {
+    display: none;
+  }
+
+  .cinematic-audio-btn {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.78rem;
+  }
+
+  .cinematic-tts-btn {
+    top: 52px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.72rem;
+  }
+
+  .scene-counter {
+    top: 12px;
+    font-size: 0.62rem;
+    padding: 3px 9px;
+    letter-spacing: 2px;
+  }
+
+  #scene-current {
+    font-size: 0.88rem;
+  }
+
+  .cinematic-navigation {
+    bottom: 12px;
+    padding: 7px 12px;
+    max-width: calc(100vw - 60px);
+    gap: 5px;
+  }
+
+  .nav-node {
+    height: 5px;
+    width: 5px;
+    border-radius: 2.5px;
+  }
+
+  .nav-node.active {
+    width: 16px;
+  }
+
+  .scene-final-cta {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .final-cta-btn {
+    padding: 12px 22px;
+    font-size: 0.84rem;
+    justify-content: center;
+  }
+}
+
+/* ─── Landscape móvil (altura reducida) ─────────── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .lobby-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 32px;
+    padding: 16px 20px;
+    max-width: 100%;
+  }
+
+  .lobby-logo-wrapper {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  .lobby-logo-inner {
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .lobby-logo-inner i {
+    font-size: 1.8rem;
+  }
+
+  .lobby-text-block {
+    text-align: left;
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .lobby-title {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+
+  .lobby-title-line2 {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+
+  .lobby-title-rule {
+    margin: 8px 0;
+  }
+
+  .lobby-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .lobby-btn {
+    padding: 10px 22px;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .lobby-hint {
+    display: none;
+  }
+
+  .scene-section {
+    padding: 50px 60px 60px 22px;
+    justify-content: center;
+  }
+
+  .scene-title {
+    font-size: 1.5rem;
+  }
+
+  .scene-narration {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    min-height: 40px;
+  }
+
+  .scene-chapter-numeral {
+    font-size: 28vh;
+  }
+
+  .scene-divider {
+    margin: 10px 0 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .word-reveal {
     animation: none;
@@ -1429,5 +1735,9 @@
   #star-field,
   #meteor-field {
     display: none;
+  }
+
+  .cinematic-tts-btn.speaking {
+    animation: none;
   }
 }

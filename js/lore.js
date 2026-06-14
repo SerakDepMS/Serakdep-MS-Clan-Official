@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -31,7 +29,90 @@ document.addEventListener("DOMContentLoaded", function () {
   let autoplayTimer = null;
   let autoplayPaused = false;
 
-  const SCENE_DURATION = 20000;
+  // ── TTS (Text-to-Speech) ──────────────────────────
+  let ttsEnabled = false;
+  let ttsCurrentUtterance = null;
+  const ttsBtn = document.getElementById("tts-toggle");
+  const ttsIcon = document.getElementById("tts-icon");
+  let ttsVoicesLoaded = false;
+  let spanishVoice = null;
+
+  function loadTTSVoices() {
+    if (ttsVoicesLoaded) return;
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length > 0) {
+      // Prefer a local Spanish voice, fall back to any es voice
+      spanishVoice =
+        voices.find(v => v.lang === "es-ES" && v.localService) ||
+        voices.find(v => v.lang === "es-419" && v.localService) ||
+        voices.find(v => v.lang.startsWith("es") && v.localService) ||
+        voices.find(v => v.lang.startsWith("es")) ||
+        null;
+      ttsVoicesLoaded = true;
+    }
+  }
+
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.onvoiceschanged = loadTTSVoices;
+    loadTTSVoices();
+  }
+
+  function speakText(text) {
+    if (!ttsEnabled || !text || !("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    ttsCurrentUtterance = new SpeechSynthesisUtterance(text);
+    ttsCurrentUtterance.lang = "es-ES";
+    ttsCurrentUtterance.rate = 0.9;
+    ttsCurrentUtterance.pitch = 1.0;
+    ttsCurrentUtterance.volume = 1.0;
+    if (spanishVoice) ttsCurrentUtterance.voice = spanishVoice;
+
+    ttsCurrentUtterance.onstart = () => { if (ttsBtn) ttsBtn.classList.add("speaking"); };
+    ttsCurrentUtterance.onend   = () => { if (ttsBtn) ttsBtn.classList.remove("speaking"); };
+    ttsCurrentUtterance.onerror = () => { if (ttsBtn) ttsBtn.classList.remove("speaking"); };
+
+    window.speechSynthesis.speak(ttsCurrentUtterance);
+  }
+
+  function stopTTS() {
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    if (ttsBtn) ttsBtn.classList.remove("speaking");
+  }
+
+  function updateTTSIcon() {
+    if (!ttsBtn || !ttsIcon) return;
+    if (ttsEnabled) {
+      ttsBtn.classList.add("active");
+      ttsIcon.className = "fas fa-microphone";
+      ttsBtn.title = "Silenciar Narración";
+    } else {
+      ttsBtn.classList.remove("active", "speaking");
+      ttsIcon.className = "fas fa-microphone-slash";
+      ttsBtn.title = "Activar Narración de Voz";
+    }
+  }
+
+  if (ttsBtn) {
+    ttsBtn.addEventListener("click", function () {
+      if (!("speechSynthesis" in window)) {
+        ttsBtn.title = "TTS no disponible en este navegador";
+        return;
+      }
+      ttsEnabled = !ttsEnabled;
+      updateTTSIcon();
+      if (!ttsEnabled) {
+        stopTTS();
+      } else {
+        // Speak the current scene immediately
+        const currentSec = sections[activeIndex];
+        const narEl = currentSec && currentSec.querySelector(".scene-narration");
+        const text = narEl ? narEl.getAttribute("data-text") || "" : "";
+        if (text) setTimeout(() => speakText(text), 300);
+      }
+    });
+  }
+
+  const SCENE_DURATION = 30000;
   const TOTAL_SCENES = sections.length;
 
 
@@ -238,26 +319,60 @@ document.addEventListener("DOMContentLoaded", function () {
   initLobbyParticles();
 
 
-  let audioCtx = null;
-  let synthInterval = null;
-  let activeNodes = [];
-  let masterGain = null;
-  let reverbNode = null;
-  let currentChordIdx = 0;
+  // ── Música de fondo MP3 ───────────────────────────
+  // Coloca tu archivo en: audio/musica.mp3
+  let bgMusic = null;
+  let fadeInterval = null;
+  const BG_VOLUME = 0.25; // volumen objetivo (0.0 – 1.0)
 
+  function initAudioContext() {
+    if (isMuted) return;
 
-  const chords = [
-    [220.00, 277.18, 329.63, 392.00, 523.25],
-    [174.61, 261.63, 349.23, 440.00, 523.25],
-    [196.00, 293.66, 392.00, 493.88, 587.33],
-    [261.63, 329.63, 392.00, 493.88, 659.25],
-    [164.81, 246.94, 329.63, 392.00, 493.88],
-    [146.83, 220.00, 293.66, 369.99, 466.16],
-    [185.00, 246.94, 311.13, 415.30, 523.25],
-    [207.65, 261.63, 311.13, 392.00, 523.25],
-    [233.08, 293.66, 349.23, 440.00, 587.33],
-    [246.94, 311.13, 369.99, 493.88, 622.25],
-  ];
+    if (bgMusic) {
+      // Ya existe: solo reanudar
+      bgMusic.play().catch(() => {});
+      return;
+    }
+
+    bgMusic = new Audio("audio/musica1.mp3");
+    bgMusic.loop   = true;
+    bgMusic.volume = 0;           // empieza en silencio
+    bgMusic.preload = "auto";
+
+    bgMusic.play().catch(() => {
+      // El navegador bloqueó la reproducción (poco probable aquí
+      // porque el usuario ya hizo click en "Iniciar el Viaje")
+      console.warn("No se pudo reproducir el audio.");
+    });
+
+    // Fade in suave en ~3 s
+    clearInterval(fadeInterval);
+    fadeInterval = setInterval(() => {
+      if (!bgMusic) return clearInterval(fadeInterval);
+      const next = Math.min(bgMusic.volume + 0.012, BG_VOLUME);
+      bgMusic.volume = next;
+      if (next >= BG_VOLUME) clearInterval(fadeInterval);
+    }, 80);
+  }
+
+  function stopAmbientSynth() {
+    if (!bgMusic) return;
+    // Fade out suave en ~1.5 s
+    clearInterval(fadeInterval);
+    fadeInterval = setInterval(() => {
+      if (!bgMusic) return clearInterval(fadeInterval);
+      const next = Math.max(bgMusic.volume - 0.025, 0);
+      bgMusic.volume = next;
+      if (next <= 0) {
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+        clearInterval(fadeInterval);
+      }
+    }, 40);
+  }
+
+  // ── Arpeggio de escena (efecto de transición ligero) ─
+  let arpeggioCtx = null;
 
   const arpeggioNotes = [
     [523.25, 659.25, 783.99, 1046.50],
@@ -270,151 +385,45 @@ document.addEventListener("DOMContentLoaded", function () {
     [587.33, 698.46, 880.00, 1046.50],
   ];
 
-  function createReverb(ac, duration, decay) {
-    const len = ac.sampleRate * duration;
-    const buffer = ac.createBuffer(2, len, ac.sampleRate);
-    for (let ch = 0; ch < 2; ch++) {
-      const d = buffer.getChannelData(ch);
-      for (let i = 0; i < len; i++) {
-        d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, decay);
-      }
-    }
-    const node = ac.createConvolver();
-    node.buffer = buffer;
-    return node;
-  }
-
-  function initAudioContext() {
+  function playArpeggio(index) {
     if (isMuted) return;
     try {
       const AC = window.AudioContext || window.webkitAudioContext;
-      if (!audioCtx) audioCtx = new AC();
-      if (audioCtx.state === "suspended") audioCtx.resume();
+      if (!arpeggioCtx) arpeggioCtx = new AC();
+      if (arpeggioCtx.state === "suspended") arpeggioCtx.resume();
 
-      if (!masterGain) {
-        masterGain = audioCtx.createGain();
-        masterGain.gain.setValueAtTime(0.078, audioCtx.currentTime);
+      const notes = arpeggioNotes[index % arpeggioNotes.length];
+      const now = arpeggioCtx.currentTime;
 
-        reverbNode = createReverb(audioCtx, 3.8, 2.8);
-        const reverbGain = audioCtx.createGain();
-        reverbGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
-
-        const lowpass = audioCtx.createBiquadFilter();
-        lowpass.type = "lowpass";
-        lowpass.frequency.setValueAtTime(1200, audioCtx.currentTime);
-
-        const compressor = audioCtx.createDynamicsCompressor();
-        compressor.threshold.value = -24;
-        compressor.knee.value = 18;
-        compressor.ratio.value = 4;
-
-        masterGain.connect(lowpass);
-        lowpass.connect(compressor);
-        compressor.connect(audioCtx.destination);
-
-        masterGain.connect(reverbNode);
-        reverbNode.connect(reverbGain);
-        reverbGain.connect(audioCtx.destination);
-      }
-
-      startAmbientSynth();
-    } catch (e) {
-      console.log("AudioContext not supported.");
-    }
-  }
-
-  function playChord(frequencies) {
-    if (!audioCtx || isMuted) return;
-    const now = audioCtx.currentTime;
-    const fadeIn = 3.0, dur = 7.5;
-
-    activeNodes.forEach(n => {
-      try {
-        n.gainNode.gain.cancelScheduledValues(now);
-        n.gainNode.gain.setValueAtTime(n.gainNode.gain.value, now);
-        n.gainNode.gain.exponentialRampToValueAtTime(0.001, now + 1.8);
-        n.oscNode.stop(now + 1.9);
-      } catch (e) { }
-    });
-    activeNodes = [];
-
-    frequencies.forEach((freq, i) => {
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = i % 3 === 0 ? "triangle" : i % 3 === 1 ? "sine" : "triangle";
-      osc.frequency.setValueAtTime(freq, now);
-
-      const lfo = audioCtx.createOscillator();
-      const lfoGain = audioCtx.createGain();
-      lfo.frequency.value = 0.4 + Math.random() * 0.4;
-      lfoGain.gain.value = freq * 0.001;
-      lfo.connect(lfoGain);
-      lfoGain.connect(osc.frequency);
-      lfo.start(now);
-      lfo.stop(now + dur + 0.3);
-
-      gain.gain.setValueAtTime(0.001, now);
-      gain.gain.exponentialRampToValueAtTime(0.075 / frequencies.length, now + fadeIn);
-      gain.gain.setValueAtTime(0.075 / frequencies.length, now + dur - fadeIn);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + dur);
-
-      osc.connect(gain);
-      gain.connect(masterGain);
-      osc.start(now);
-      osc.stop(now + dur + 0.2);
-      activeNodes.push({ oscNode: osc, gainNode: gain });
-    });
-  }
-
-  function playArpeggio(index) {
-    if (!audioCtx || isMuted) return;
-    const notes = arpeggioNotes[index % arpeggioNotes.length];
-    const now = audioCtx.currentTime;
-    notes.forEach((freq, i) => {
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(freq, now);
-      gain.gain.setValueAtTime(0.001, now);
-      gain.gain.exponentialRampToValueAtTime(0.045, now + 0.04 + i * 0.14);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35 + i * 0.14);
-      osc.connect(gain);
-      gain.connect(masterGain);
-      osc.start(now + i * 0.14);
-      osc.stop(now + 0.7 + i * 0.14);
-    });
-  }
-
-  function startAmbientSynth() {
-    if (synthInterval) clearInterval(synthInterval);
-    playChord(chords[currentChordIdx]);
-    currentChordIdx = (currentChordIdx + 1) % chords.length;
-    synthInterval = setInterval(() => {
-      playChord(chords[currentChordIdx]);
-      currentChordIdx = (currentChordIdx + 1) % chords.length;
-    }, 7500);
-  }
-
-  function stopAmbientSynth() {
-    if (synthInterval) { clearInterval(synthInterval); synthInterval = null; }
-    const now = audioCtx ? audioCtx.currentTime : 0;
-    activeNodes.forEach(n => {
-      try {
-        n.gainNode.gain.cancelScheduledValues(now);
-        n.gainNode.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
-        n.oscNode.stop(now + 1.3);
-      } catch (e) { }
-    });
-    activeNodes = [];
+      notes.forEach((freq, i) => {
+        const osc  = arpeggioCtx.createOscillator();
+        const gain = arpeggioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.exponentialRampToValueAtTime(0.038, now + 0.04 + i * 0.13);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32 + i * 0.13);
+        osc.connect(gain);
+        gain.connect(arpeggioCtx.destination);
+        osc.start(now + i * 0.13);
+        osc.stop(now + 0.65 + i * 0.13);
+      });
+    } catch (e) { /* AudioContext no soportado */ }
   }
 
   function updateAudioIcon() {
+    if (!audioBtn) return;
     if (isMuted) {
       audioBtn.classList.remove("playing");
       audioBtn.title = "Activar Sonido";
+      if (bgMusic) {
+        clearInterval(fadeInterval);
+        bgMusic.pause();
+      }
     } else {
       audioBtn.classList.add("playing");
       audioBtn.title = "Silenciar Sonido";
+      initAudioContext();
     }
   }
 
@@ -440,6 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (exitBtn) {
     exitBtn.addEventListener("click", function () {
+      stopTTS();
       stopAmbientSynth();
       clearAutoplay();
       window.location.href = "index.html";
@@ -610,6 +620,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (narrationEl) {
       const text = narrationEl.getAttribute("data-text") || "";
       revealWords(narrationEl, text, 62);
+      // TTS: read aloud after a short cinematic pause
+      if (ttsEnabled && text) {
+        setTimeout(() => {
+          if (activeIndex === index) speakText(text); // guard: still on this scene
+        }, 1100);
+      }
     }
 
 
@@ -640,6 +656,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollToScene(index) {
     if (index < 0 || index >= sections.length) return;
+    stopTTS(); // cancel any ongoing speech before transitioning
     isTravelling = true;
     triggerFlash(() => {
       activateScene(index);
@@ -676,6 +693,8 @@ document.addEventListener("DOMContentLoaded", function () {
       clearAutoplay(); scrollToScene(sections.length - 1);
     } else if (e.key === "m" || e.key === "M") {
       if (audioBtn) audioBtn.click();
+    } else if (e.key === "v" || e.key === "V") {
+      if (ttsBtn) ttsBtn.click();
     } else if (e.key === "p" || e.key === "P") {
       if (autoplayToggle) autoplayToggle.click();
     }
