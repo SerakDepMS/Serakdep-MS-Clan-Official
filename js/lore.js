@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let autoplayTimer = null;
   let autoplayPaused = false;
 
-  let ttsEnabled = false;
+  // ── TTS (Text-to-Speech) ──────────────────────────
+  let ttsEnabled = true;
   let ttsCurrentUtterance = null;
   const ttsBtn = document.getElementById("tts-toggle");
   const ttsIcon = document.getElementById("tts-icon");
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ttsVoicesLoaded) return;
     const voices = window.speechSynthesis.getVoices();
     if (voices.length > 0) {
+      // Prefer a local Spanish voice, fall back to any es voice
       spanishVoice =
         voices.find(v => v.lang === "es-ES" && v.localService) ||
         voices.find(v => v.lang === "es-419" && v.localService) ||
@@ -90,6 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  updateTTSIcon(); // ícono activo desde el inicio
+
   if (ttsBtn) {
     ttsBtn.addEventListener("click", function () {
       if (!("speechSynthesis" in window)) {
@@ -101,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!ttsEnabled) {
         stopTTS();
       } else {
+        // Speak the current scene immediately
         const currentSec = sections[activeIndex];
         const narEl = currentSec && currentSec.querySelector(".scene-narration");
         const text = narEl ? narEl.getAttribute("data-text") || "" : "";
@@ -109,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const SCENE_DURATION = 30000;
+  const SCENE_DURATION = 20000;
   const TOTAL_SCENES = sections.length;
 
 
@@ -316,28 +321,33 @@ document.addEventListener("DOMContentLoaded", function () {
   initLobbyParticles();
 
 
+  // ── Música de fondo MP3 ───────────────────────────
+  // Coloca tu archivo en: audio/musica.mp3
   let bgMusic = null;
   let fadeInterval = null;
-  const BG_VOLUME = 0.2;
+  const BG_VOLUME = 0.38; // volumen objetivo (0.0 – 1.0)
 
   function initAudioContext() {
     if (isMuted) return;
 
     if (bgMusic) {
+      // Ya existe: solo reanudar
       bgMusic.play().catch(() => {});
       return;
     }
 
-    bgMusic = new Audio("audio/musica1.mp3");
+    bgMusic = new Audio("audio/musica.mp3");
     bgMusic.loop   = true;
-    bgMusic.volume = 0;           
+    bgMusic.volume = 0;           // empieza en silencio
     bgMusic.preload = "auto";
 
     bgMusic.play().catch(() => {
+      // El navegador bloqueó la reproducción (poco probable aquí
+      // porque el usuario ya hizo click en "Iniciar el Viaje")
       console.warn("No se pudo reproducir el audio.");
     });
 
-
+    // Fade in suave en ~3 s
     clearInterval(fadeInterval);
     fadeInterval = setInterval(() => {
       if (!bgMusic) return clearInterval(fadeInterval);
@@ -349,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function stopAmbientSynth() {
     if (!bgMusic) return;
-
+    // Fade out suave en ~1.5 s
     clearInterval(fadeInterval);
     fadeInterval = setInterval(() => {
       if (!bgMusic) return clearInterval(fadeInterval);
@@ -363,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 40);
   }
 
-
+  // ── Arpeggio de escena (efecto de transición ligero) ─
   let arpeggioCtx = null;
 
   const arpeggioNotes = [
@@ -612,9 +622,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (narrationEl) {
       const text = narrationEl.getAttribute("data-text") || "";
       revealWords(narrationEl, text, 62);
+      // TTS: read aloud after a short cinematic pause
       if (ttsEnabled && text) {
         setTimeout(() => {
-          if (activeIndex === index) speakText(text);
+          if (activeIndex === index) speakText(text); // guard: still on this scene
         }, 1100);
       }
     }
@@ -647,8 +658,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollToScene(index) {
     if (index < 0 || index >= sections.length) return;
-    stopTTS();
-    isTravelling = true;
+    stopTTS(); 
     triggerFlash(() => {
       activateScene(index);
       container.scrollTop = sections[index].offsetTop;
