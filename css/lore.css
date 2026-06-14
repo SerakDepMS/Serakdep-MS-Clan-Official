@@ -1412,7 +1412,7 @@
   }
 }
 
-/* ─── TTS Button ─────────────────────────────────── */
+
 .cinematic-tts-btn {
   position: fixed;
   top: 68px;
@@ -1456,7 +1456,7 @@
   50%       { box-shadow: 0 0 22px rgba(var(--scene-accent-rgb), 0.72); }
 }
 
-/* ─── 480 px y menos ─────────────────────────────── */
+
 @media (max-width: 480px) {
   .lobby-inner {
     padding: 20px 16px 24px;
@@ -1623,7 +1623,7 @@
   }
 }
 
-/* ─── Landscape móvil (altura reducida) ─────────── */
+
 @media (max-height: 500px) and (orientation: landscape) {
   .lobby-inner {
     flex-direction: row;
