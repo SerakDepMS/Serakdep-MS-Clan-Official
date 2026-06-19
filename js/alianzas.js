@@ -16,14 +16,6 @@ const clanesAliados = [
     fechaAlianza: "2025-11-24"
   },
   {
-    nombre: "NYTHERA",
-    logo: "images/alianzas/NYTHERA.jpg",
-    descripcion: "Nuestra mision es crecer como una comunidad fuerte, confiable y sobre todo poder forjar una gran amistad entre todos.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2025-12-21"
-  },
-  {
     nombre: "Bloody Legacy",
     logo: "images/alianzas/BloodyLegacy.jpg",
     descripcion: "Clan enfocado en evade, llevando una buena comunicación, siendo un clan de palabra, en el cual nuestros aliados e integrantes pueden confiar plenamente.",

@@ -61,7 +61,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 | 📰 `noticias.html` | Sistema de noticias con npoint.io, actualización cada 12s y filtros |
 | 📞 `contacto.html` | Canales de contacto (WhatsApp, Discord, Email) y formularios de soporte |
 | 🎬 `lore.html` | **Viaje Cinematográfico** – Recorrido interactivo de 26 escenas con audio y efectos dinámicos |
-| 🤝 `alianzas.html` | 8 clanes aliados con tarjetas glassmorphism y auras animadas |
+| 🤝 `alianzas.html` | 7 clanes aliados con tarjetas glassmorphism y auras animadas |
 | 🎖️ `creditos.html` | Equipo del clan, línea de tiempo, galería y tecnologías utilizadas |
 | 🎬 `videotutoriales.html` | 6 tutoriales en video con reproductor personalizado |
 

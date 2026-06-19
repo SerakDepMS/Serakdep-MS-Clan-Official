@@ -588,12 +588,11 @@
  
 
     {
-      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'nythera', 'bloody legacy', 'WIND BREAKER', 'luwance', 'kira order', 'the black bulls'],
+      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'bloody legacy', 'WIND BREAKER', 'luwance', 'kira order', 'the black bulls'],
       response: `<strong>Alianzas de Serakdep MS</strong><br><br>
-      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 8 clanes aliados, entre ellos:<br>
+      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 7 clanes aliados, entre ellos:<br>
       • CHIHUAHUENSE  DINASTY<br>
       • Zion Dynasty<br>
-      • NYTHERA<br>
       • Bloody Legacy<br>
       • WIND BREAKER<br>
       • Legión Nova<br>
@@ -794,7 +793,7 @@
       • <strong>Legal</strong> (privacidad, términos, cookies, DMCA, derechos ARCO).<br>
       • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
-      • <strong>Alianzas</strong> (8 clanes aliados).<br>
+      • <strong>Alianzas</strong> (7 clanes aliados).<br>
       • <strong>Tutoriales</strong> (videotutoriales de ayuda).<br>
       • <strong>CodeTurbo</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
