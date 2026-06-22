@@ -17,7 +17,7 @@ class VideoPlayerFinal {
     this.videoList = [
       {
         src: "video/video-number-one/video1.mp4",
-        title: "POR LA VIDA Y LA LIBERTAD",
+        title: "POR LA VIDA Y LA LIBERTAD, SIEMPRE, SIEMPRE, SIEMPRE.",
         duration: "28",
         size: "30 MB",
       },
