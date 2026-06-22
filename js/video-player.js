@@ -16,7 +16,7 @@ class VideoPlayerFinal {
     this.video = document.getElementById("main-video");
     this.videoList = [
       {
-        src: "video/video-number-one/video1.mp4",
+        src: "video/video-number-one/1video1.mp4",
         title: "POR LA VIDA Y LA LIBERTAD",
         duration: "28",
         size: "30 MB",
