@@ -99,11 +99,20 @@
     'Australia/Sydney': 'GMT+10', 'Pacific/Auckland': 'GMT+12'
   };
 
-  async function fetchGeoData() {
+  async function fetchGeoData(attempt = 1) {
     try {
       const r = await fetch('https://ipapi.co/json/');
-      if (!r.ok) throw new Error('API falló');
-      const d = await r.json();
+      if (!r.ok) {
+        throw new Error(`API returned status ${r.status}`);
+      }
+      
+      let d;
+      try {
+        d = await r.json();
+      } catch (parseError) {
+        throw new Error('Invalid JSON response from geolocation API');
+      }
+      
       const geo = {
         country: d.country_name || '',
         countryCode: d.country_code || '',
@@ -119,6 +128,17 @@
       localStorage.setItem(GEO_STORAGE_KEY, JSON.stringify(geo));
       return geo;
     } catch (e) {
+      // Sistema de reintentos
+      const MAX_RETRIES = 2;
+      if (attempt <= MAX_RETRIES) {
+        const delay = Math.pow(2, attempt - 1) * 500; // Backoff exponencial: 500ms, 1000ms
+        console.warn(`Reintentando geolocalización en ${delay}ms (intento ${attempt}/${MAX_RETRIES})`);
+        await new Promise(res => setTimeout(res, delay));
+        return fetchGeoData(attempt + 1);
+      }
+      
+      // Fallback si todos los reintentos fallan
+      console.error('Error al obtener geolocalización:', e.message);
       const fallback = {
         country: '', countryCode: '',
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,

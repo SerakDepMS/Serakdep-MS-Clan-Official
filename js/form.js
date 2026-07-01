@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("KZquan0PhqC35uDYw");
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("KZquan0PhqC35uDYw");
+  } else {
+    console.warn('EmailJS no se cargó correctamente. Los formularios de contacto no funcionarán.');
+  }
 
   const inscriptionForm = document.getElementById("inscription-form");
   if (inscriptionForm) {

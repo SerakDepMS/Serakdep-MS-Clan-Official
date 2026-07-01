@@ -27,9 +27,18 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
     }
     
     const response = await fetch(urlConAntiCache);
-    if (!response.ok) throw new Error("Error al cargar eventos");
+    if (!response.ok) {
+      if (response.status === 404) throw new Error("Base de datos de eventos no encontrada");
+      if (response.status >= 500) throw new Error("Error del servidor - Intenta más tarde");
+      throw new Error(`Error HTTP ${response.status}: No se pudieron cargar los eventos`);
+    }
 
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch (parseError) {
+      throw new Error("Error al procesar datos de eventos: respuesta inválida");
+    }
 
     const nuevosEventos = {};
     if (data.eventos && Array.isArray(data.eventos)) {

@@ -60,9 +60,18 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
       : `${cleanUrl}?${cacheBuster}`;
 
     const response = await fetch(urlConAntiCache);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    if (!response.ok) {
+      if (response.status === 404) throw new Error("Base de datos de noticias no encontrada");
+      if (response.status >= 500) throw new Error("Error del servidor - Intenta más tarde");
+      throw new Error(`Error HTTP ${response.status}: No se pudieron cargar las noticias`);
+    }
 
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch (parseError) {
+      throw new Error("Error al procesar datos de noticias: respuesta inválida");
+    }
 
     const nuevasNoticias = (data.news || []).map((newsItem) => ({
       id: newsItem.id,
