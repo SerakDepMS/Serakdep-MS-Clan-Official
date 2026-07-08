@@ -30,7 +30,7 @@ let newsDatabase = {
     members: 151,
     notifications: 12,
     clicks: 67,
-    joinLink: "https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31",
+    joinLink: "https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j",
   },
   news: [],
 };
@@ -697,7 +697,7 @@ function loadFromLocalStorage() {
             members: 0,
             notifications: 0,
             clicks: 0,
-            joinLink: "https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31",
+            joinLink: "https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j",
           };
         }
       }

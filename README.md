@@ -106,7 +106,7 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 ## 🔗 Enlaces importantes
 
 - [WhatsApp del clan](https://wa.me/573116546484)
-- [Canal de WhatsApp](https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31)
+- [Canal de WhatsApp](https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j)
 - [Discord oficial](https://discord.gg/vts4PTHR9K)
 - Correo oficial: `serakdepmsofficial7@gmail.com`
 

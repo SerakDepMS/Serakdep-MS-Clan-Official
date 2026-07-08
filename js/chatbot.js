@@ -582,7 +582,7 @@
       ✅ Novedades exclusivas antes que en otros medios.<br>
       ✅ Recordatorios de eventos y torneos.<br>
       ✅ Anuncios importantes del staff.<br><br>
-      Para unirte, ve a la página de Noticias y haz clic en "Unirse al Canal" o escanea el código QR en "Ver QR". También puedes acceder directamente al canal: https://whatsapp.com/channel/0029VbBhOLo60eBgats9rn31`
+      Para unirte, ve a la página de Noticias y haz clic en "Unirse al Canal" o escanea el código QR en "Ver QR". También puedes acceder directamente al canal: https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j`
     },
  
  
