@@ -203,7 +203,7 @@ no para ser reutilizado, modificado o distribuido.
 | Videotutoriales | 6 |
 | Cookies implementadas | 4 |
 | Clanes aliados |8 |
-| Miembros del clan | +344 |
+| Miembros del clan | +266 |
 | Categorías FAQ | 15 |
 | Equipos en eventos | 72 |
 | Retos en CodeTurbo | 9 |
