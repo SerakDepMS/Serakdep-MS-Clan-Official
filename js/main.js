@@ -423,7 +423,7 @@ function getCookie(name) {
   }
 
   function initParticleRain() {
-    if (window.innerWidth < 768) return; // Desactivar en celulares para maximizar FPS
+    if (window.innerWidth < 768) return;
     canvas = document.createElement('canvas');
     canvas.classList.add('particle-rain-container');
     canvas.style.willChange = 'transform';

@@ -128,16 +128,16 @@
       localStorage.setItem(GEO_STORAGE_KEY, JSON.stringify(geo));
       return geo;
     } catch (e) {
-      // Sistema de reintentos
+
       const MAX_RETRIES = 2;
       if (attempt <= MAX_RETRIES) {
-        const delay = Math.pow(2, attempt - 1) * 500; // Backoff exponencial: 500ms, 1000ms
+        const delay = Math.pow(2, attempt - 1) * 500; 
         console.warn(`Reintentando geolocalización en ${delay}ms (intento ${attempt}/${MAX_RETRIES})`);
         await new Promise(res => setTimeout(res, delay));
         return fetchGeoData(attempt + 1);
       }
       
-      // Fallback si todos los reintentos fallan
+
       console.error('Error al obtener geolocalización:', e.message);
       const fallback = {
         country: '', countryCode: '',

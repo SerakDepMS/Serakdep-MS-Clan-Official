@@ -1,629 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
-  <script>try { var t = localStorage.getItem('sms_theme') || (document.cookie.match(/sms_theme=([^;]+)/) || [])[1]; if (t === 'dark') document.documentElement.classList.add('dark-theme'); } catch (e) { }</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viaje Cinematográfico - Serakdep MS</title>
-  <meta name="description" content="Embárcate en un viaje cinematográfico autoguiado a través de la mitología, historia de los fundadores y eras de la comunidad Serakdep MS" />
-  <meta name="keywords" content="Roblox, clan, lore, historia, animación de viaje, cinematografía, Serakdep, MS" />
-  <meta name="google-site-verification" content="9tjYSYGFCUfKDVZdeJDtDbpOyUBxd0uEh86botq02_0" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-  <link rel="manifest" href="favicon/site.webmanifest" />
-  <link rel="shortcut icon" href="favicon/favicon.ico" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#070f0b" />
-  <meta name="msapplication-navbutton-color" content="#070f0b" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Terminal · Serakdep MS · Archivo Histórico · v18.0</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/lore.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cinzel:wght@500;600;700;900&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <div class="cinematic-universe" id="cinematic-universe">
 
-
-    <canvas id="lore-particles"></canvas>
-
-
-    <canvas id="star-field"></canvas>
-
-
-    <canvas id="meteor-field"></canvas>
-
-  
-    <div class="scene-flash" id="scene-flash"></div>
-
-
-    <div class="film-grain-overlay"></div>
-
-
-    <div class="progress-rail" id="progress-rail">
-      <div class="progress-track">
-        <div class="progress-fill" id="progress-fill"></div>
+  <div id="boot-overlay">
+    <div class="boot-galaxy" aria-hidden="true">
+      <div class="galaxy-nebula"></div>
+      <div class="galaxy-arms"></div>
+      <div class="galaxy-stars-far"></div>
+      <div class="galaxy-stars-near"></div>
+      <div class="galaxy-core-glow"></div>
+    </div>
+    <div class="boot-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="boot-container">
+      <div class="boot-title glitch-text">SERAKDEP MS</div>
+      <div class="boot-sub">INICIALIZANDO SISTEMA...</div>
+      <div class="boot-progress">
+        <span class="boot-percent" id="boot-percent">0%</span>
+        <div class="boot-bar"><div class="boot-fill" id="boot-fill"></div></div>
       </div>
-      <div class="progress-chapters" id="progress-chapters"></div>
-    </div>
-
-
-    <div class="autoplay-topbar" id="autoplay-topbar">
-      <div class="autoplay-fill" id="autoplay-fill"></div>
-    </div>
-
-
-    <button class="cinematic-exit-btn" id="exit-journey" title="Volver a Inicio">
-      <i class="fas fa-arrow-left"></i> <span>Volver</span>
-    </button>
-
-
-    <button class="cinematic-audio-btn" id="audio-toggle" title="Activar/Silenciar Música Ambiental">
-      <i class="fas fa-volume-mute" id="audio-icon"></i>
-      <div class="audio-waves" id="audio-waves">
-        <span></span><span></span><span></span><span></span><span></span>
+      <div class="boot-messages" id="boot-messages">
+        <div class="boot-line">Cargando núcleo...</div>
       </div>
-    </button>
-
-    <button class="cinematic-tts-btn" id="tts-toggle" title="Activar Narración de Voz">
-      <i class="fas fa-microphone-slash" id="tts-icon"></i>
-    </button>
-
-
-    <div class="scene-counter" id="scene-counter">
-      <span id="scene-current">1</span> <span class="counter-sep">/</span> <span id="scene-total">26</span>
-    </div>
-
-
-    <div class="chapter-badge" id="chapter-badge">
-      <span class="chapter-badge-numeral">I</span>
-      <span class="chapter-badge-label">El Despertar</span>
-    </div>
-
-
-    <div class="cinematic-lobby" id="cinematic-lobby">
-      <div class="lobby-bg-particles" id="lobby-bg-particles"></div>
-      <div class="lobby-inner">
-        <div class="lobby-logo-wrapper">
-          <svg class="lobby-svg-ring" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(212,175,55,0.18)" stroke-width="1" stroke-dasharray="4 6" />
-            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="0.5" />
-          </svg>
-          <div class="lobby-logo-circle"></div>
-          <div class="lobby-logo-inner">
-            <i class="fas fa-scroll"></i>
-          </div>
-          <div class="lobby-logo-orbiter">
-            <div class="orbiter-dot"></div>
-          </div>
-        </div>
-
-        <div class="lobby-text-block">
-          <div class="lobby-eyebrow">CLAN SERAKDEP MS · ARCHIVO HISTÓRICO</div>
-          <h1 class="lobby-title">
-            <span class="lobby-title-line1">VIAJE</span>
-            <span class="lobby-title-line2">CINEMATOGRÁFICO</span>
-          </h1>
-          <div class="lobby-title-rule"></div>
-          <p class="lobby-subtitle">
-            Veintiséis capítulos. Una sola leyenda.<br>
-            Desbloquea la historia, mitología y destino del clan.
-          </p>
-        </div>
-
-        <button class="lobby-btn" id="start-journey-btn">
-          <span class="lobby-btn-icon"><i class="fas fa-play"></i></span>
-          <span class="lobby-btn-text">Iniciar el Viaje</span>
-          <span class="lobby-btn-glow"></span>
-        </button>
-
-        <div class="lobby-hint">
-          <i class="fas fa-keyboard"></i> Flechas / desliza para navegar · <b>M</b> música · <b>V</b> voz
-        </div>
-      </div>
-    </div>
-
-
-    <div class="cinematic-navigation" id="cinematic-navigation">
-      <div class="nav-nodes" id="nav-nodes-container"></div>
-    </div>
-
-    <button class="autoplay-toggle" id="autoplay-toggle" title="Pausar / Reanudar Autoplay">
-      <i class="fas fa-pause" id="autoplay-icon"></i>
-    </button>
-
-
-    <div class="scenes-container" id="scenes-container">
-
-
-      <section class="scene-section active" data-index="0" id="scene-0" data-accent="#d4af37" data-chapter="I" data-chapter-label="La Chispa Inicial">
-        <div class="scene-bg" style="background-image: url('images/lore/origin_temple.png');"></div>
-        <div class="scene-chapter-numeral">I</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 70%; --flare-y: 20%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-infinity"></i> El Origen</div>
-            <div class="scene-timestamp">Capítulo I</div>
-          </div>
-          <h2 class="scene-title">La Chispa<br><span class="scene-title-sub">Inicial</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Antes de que existiera el servidor oficial de Discord, a principios de 2023, una idea comenzó a formarse entre experimentados jugadores de Roblox: la visión de una comunidad donde la diversión, el juego limpio y el respeto fueran los únicos estandartes."></p>
-          <div class="scene-scroll-hint"><i class="fas fa-chevron-down"></i></div>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="1" id="scene-1" data-accent="#c8a800" data-chapter="II" data-chapter-label="El Emblema Panda">
-        <div class="scene-bg" style="background-image: url('images/lore/origin_temple.png');"></div>
-        <div class="scene-chapter-numeral">II</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 30%; --flare-y: 15%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-yin-yang"></i> El Símbolo</div>
-            <div class="scene-timestamp">Capítulo II</div>
-          </div>
-          <h2 class="scene-title">El Emblema<br><span class="scene-title-sub">Panda</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="El Panda estilizado emergió como símbolo oficial de Serakdep MS, portando los colores verde y dorado. Representa la sabiduría en la toma de decisiones, la paz comunitaria y el equilibrio entre diversión y disciplina."></p>
-        </div>
-      </section>
-
-      <section class="scene-section" data-index="2" id="scene-2" data-accent="#e8914a" data-chapter="III" data-chapter-label="El Pacto Fundador">
-        <div class="scene-bg" style="background-image: url('images/members/Db_artworkFOUNDERSMS.jpg');"></div>
-        <div class="scene-chapter-numeral">III</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 20%; --flare-y: 12%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-handshake"></i> El Juramento</div>
-            <div class="scene-timestamp">Capítulo III</div>
-          </div>
-          <h2 class="scene-title">El Pacto<br><span class="scene-title-sub">Fundador</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="En una noche de enero de 2023, los primeros 5 miembros fundadores, liderados por Db_artworkFOUNDERSMS y Yoosung_SMS, sellaron el juramento de construir un clan inclusivo y libre de toxicidad."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="3" id="scene-3" data-accent="#e87b3a" data-chapter="IV" data-chapter-label="Primeras Normas">
-        <div class="scene-bg" style="background-image: url('images/members/Db_artworkFOUNDERSMS.jpg');"></div>
-        <div class="scene-chapter-numeral">IV</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 25%; --flare-y: 15%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-hammer"></i> Noviembre 2023</div>
-            <div class="scene-timestamp">Capítulo IV</div>
-          </div>
-          <h2 class="scene-title">Primeras<br><span class="scene-title-sub">Normas</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="En noviembre de 2023 se redactó el primer reglamento interno y se definieron los primeros rangos oficiales. La visión de una comunidad estructurada se materializaba y las puertas del clan se abrían a nuevos miembros."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="4" id="scene-4" data-accent="#d4601a" data-chapter="V" data-chapter-label="Valores del Clan">
-        <div class="scene-bg" style="background-image: url('images/lore/origin_temple.png');"></div>
-        <div class="scene-chapter-numeral">V</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 75%; --flare-y: 25%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-gavel"></i> Código de Conducta</div>
-            <div class="scene-timestamp">Capítulo V</div>
-          </div>
-          <h2 class="scene-title">Valores<br><span class="scene-title-sub">del Clan</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Establecido como el pilar ético de Serakdep MS, el Código de Conducta exige respeto mutuo, inclusión, honestidad en los juegos, lealtad y comunicación constructiva. Un estandarte de convivencia intachable."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="5" id="scene-5" data-accent="#52b788" data-chapter="VI" data-chapter-label="Los Forjadores del Código">
-        <div class="scene-bg" style="background-image: url('images/lore/builder_city.png');"></div>
-        <div class="scene-chapter-numeral">VI</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 60%; --flare-y: 30%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-drafting-compass"></i> Equipo Técnico</div>
-            <div class="scene-timestamp">Capítulo VI</div>
-          </div>
-          <h2 class="scene-title">Los Forjadores<br><span class="scene-title-sub">del Código</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Para dar presencia al clan ante el mundo, el director y programador principal Db_artworkFOUNDERSMS, junto con maikol-dev-code-cyber, unieron fuerzas para escribir el código base del portal web oficial."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="6" id="scene-6" data-accent="#40916c" data-chapter="VII" data-chapter-label="La Fortaleza Digital">
-        <div class="scene-bg" style="background-image: url('images/lore/builder_city.png');"></div>
-        <div class="scene-chapter-numeral">VII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 50%; --flare-y: 10%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-city"></i> Diciembre 2023</div>
-            <div class="scene-timestamp">Capítulo VII</div>
-          </div>
-          <h2 class="scene-title">La Fortaleza<br><span class="scene-title-sub">Digital</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="En diciembre de 2023, la comunidad dio su gran salto al crear el servidor oficial de Discord. Con canales dedicados como #bienvenida, #reglas, #verificación y #anuncios, se convirtió en el punto de encuentro por excelencia."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="7" id="scene-7" data-accent="#2d9e6b" data-chapter="VIII" data-chapter-label="Los Lazos Móviles">
-        <div class="scene-bg" style="background-image: url('images/lore/builder_city.png');"></div>
-        <div class="scene-chapter-numeral">VIII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 35%; --flare-y: 20%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-book-open"></i> Redes Oficiales</div>
-            <div class="scene-timestamp">Capítulo VIII</div>
-          </div>
-          <h2 class="scene-title">Los Lazos<br><span class="scene-title-sub">Móviles</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Para facilitar la comunicación diaria se estructuraron los grupos oficiales de WhatsApp: SMS-Principal, SMS-Actividades, SMS-Nuevos Ingresos, y el grupo de trabajo SERAKDEPMS STUDIOS para la gestión del clan."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="8" id="scene-8" data-accent="#e05c2c" data-chapter="IX" data-chapter-label="Los Emisarios del Estandarte">
-        <div class="scene-bg" style="background-image: url('images/lore/battle_arena.png');"></div>
-        <div class="scene-chapter-numeral">IX</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 80%; --flare-y: 10%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-compass"></i> Relaciones Públicas</div>
-            <div class="scene-timestamp">Capítulo IX</div>
-          </div>
-          <h2 class="scene-title">Los Emisarios<br><span class="scene-title-sub">del Estandarte</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Con el fin de entablar lazos externos, se designó el Departamento de Alianzas y Relaciones. Miembros clave como year171 asumieron la tarea de representar con orgullo y honor a Serakdep MS ante otras comunidades."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="9" id="scene-9" data-accent="#c94a1a" data-chapter="X" data-chapter-label="Campos de Batalla">
-        <div class="scene-bg" style="background-image: url('images/lore/battle_arena.png');"></div>
-        <div class="scene-chapter-numeral">X</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 80%; --flare-y: 10%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-shield-alt"></i> Juegos del Clan</div>
-            <div class="scene-timestamp">Capítulo X</div>
-          </div>
-          <h2 class="scene-title">Campos<br><span class="scene-title-sub">de Batalla</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Los miembros demostraron sus habilidades en mundos como Blox Fruits, Brookhaven RP, Adopt Me, Arsenal, King Legacy y Driving Empire, combatiendo siempre con espíritu deportivo e integridad total."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="10" id="scene-10" data-accent="#b83a10" data-chapter="XI" data-chapter-label="Torneos Interclanes">
-        <div class="scene-bg" style="background-image: url('images/lore/battle_arena.png');"></div>
-        <div class="scene-chapter-numeral">XI</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 65%; --flare-y: 8%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-fist-raised"></i> Abril 2026</div>
-            <div class="scene-timestamp">Capítulo XI</div>
-          </div>
-          <h2 class="scene-title">Torneos<br><span class="scene-title-sub">Interclanes</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="En abril de 2026 se diseñó el sistema de guerras de clanes. Cada equipo representa al clan eligiendo 5 de sus mejores guerreros de una base de 72 selecciones posibles, listos para defender el honor del estandarte."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="11" id="scene-11" data-accent="#9c3015" data-chapter="XII" data-chapter-label="El Memorial de los Viajeros">
-        <div class="scene-bg" style="background-image: url('images/lore/guardians_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 40%; --flare-y: 20%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-monument"></i> Canal de Despedida</div>
-            <div class="scene-timestamp">Capítulo XII</div>
-          </div>
-          <h2 class="scene-title">El Memorial<br><span class="scene-title-sub">de los Viajeros</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Aquellos miembros que deciden partir hacia nuevos rumbos dejan su huella grabada. A través del canal de Discord #despedida, el clan agradece y honra sus contribuciones. En Serakdep MS ningún amigo se olvida."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="12" id="scene-12" data-accent="#9d7fc8" data-chapter="XIII" data-chapter-label="La Alta Dirección">
-        <div class="scene-bg" style="background-image: url('images/lore/guardians_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XIII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 50%; --flare-y: 5%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-crown"></i> Alta Dirección</div>
-            <div class="scene-timestamp">Capítulo XIII</div>
-          </div>
-          <h2 class="scene-title">La Alta<br><span class="scene-title-sub">Dirección</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="La toma de decisiones estratégicas recae sobre la Alta Dirección. Encargados de dirigir la política y visión del clan, sus miembros aseguran que el desarrollo del portal y la comunidad sigan una senda ascendente."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="13" id="scene-13" data-accent="#8c6db8" data-chapter="XIV" data-chapter-label="Custodios del Estandarte">
-        <div class="scene-bg" style="background-image: url('images/lore/guardians_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XIV</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 55%; --flare-y: 8%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-star"></i> Administradores</div>
-            <div class="scene-timestamp">Capítulo XIV</div>
-          </div>
-          <h2 class="scene-title">Custodios<br><span class="scene-title-sub">del Estandarte</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Los Administradores gestionan las áreas críticas: eventos, admisiones, relaciones, contenido y soporte técnico. Su labor incansable mantiene la maquinaria del clan funcionando de manera fluida y organizada."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="14" id="scene-14" data-accent="#7a5aa8" data-chapter="XV" data-chapter-label="Escalafón de Honor">
-        <div class="scene-bg" style="background-image: url('images/lore/guardians_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XV</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 70%; --flare-y: 15%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-medal"></i> Rangos Oficiales</div>
-            <div class="scene-timestamp">Capítulo XV</div>
-          </div>
-          <h2 class="scene-title">Escalafón<br><span class="scene-title-sub">de Honor</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Desde los Miembros Nuevos en período de prueba, pasando por Miembros Activos, Miembros Destacados, Moderadores y Colaboradores, hasta la Alta Dirección. Los ascensos se ganan con méritos y actividad mensual."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="15" id="scene-15" data-accent="#6a4a98" data-chapter="XVI" data-chapter-label="El Santuario del Respeto">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XVI</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 30%; --flare-y: 25%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-heart-broken"></i> Moderadores</div>
-            <div class="scene-timestamp">Capítulo XVI</div>
-          </div>
-          <h2 class="scene-title">El Santuario<br><span class="scene-title-sub">del Respeto</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="El equipo de Moderación, con miembros comprometidos como 7huhuj08, vela por el cumplimiento de las normas en Discord y WhatsApp, garantizando un ambiente seguro, sano y totalmente libre de toxicidad."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="16" id="scene-16" data-accent="#22c55e" data-chapter="XVII" data-chapter-label="El Marco Legal">
-        <div class="scene-bg" style="background-image: url('images/lore/builder_city.png');"></div>
-        <div class="scene-chapter-numeral">XVII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 45%; --flare-y: 18%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-magic"></i> Febrero 2026</div>
-            <div class="scene-timestamp">Capítulo XVII</div>
-          </div>
-          <h2 class="scene-title">El Marco<br><span class="scene-title-sub">Legal</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="En febrero de 2026, la página web se adaptó a la legalidad vigente (LOPD, Cookies, Aviso Legal y DMCA). El clan protege rigurosamente la privacidad y los datos de menores de 14 años con consentimiento paterno."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="17" id="scene-17" data-accent="#16a34a" data-chapter="XVIII" data-chapter-label="La Inteligencia Virtual">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XVIII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 55%; --flare-y: 12%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-eye"></i> Abril 2026</div>
-            <div class="scene-timestamp">Capítulo XVIII</div>
-          </div>
-          <h2 class="scene-title">La Inteligencia<br><span class="scene-title-sub">Virtual</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="A inicios de abril de 2026 se integró el Chatbot IA en todas las secciones de la página. Un asistente virtual entrenado para responder con rapidez preguntas sobre inscripciones, reglamento, Discord y eventos."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="18" id="scene-18" data-accent="#15803d" data-chapter="XIX" data-chapter-label="El Laboratorio CodeTurbo">
-        <div class="scene-bg" style="background-image: url('images/lore/origin_temple.png');"></div>
-        <div class="scene-chapter-numeral">XIX</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 28%; --flare-y: 22%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-gem"></i> CodeTurbo</div>
-            <div class="scene-timestamp">Capítulo XIX</div>
-          </div>
-          <h2 class="scene-title">El Núcleo<br><span class="scene-title-sub">de Código</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Creado como entorno interactivo de programación, CodeTurbo permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 9 retos de programación y enciclopedia de desarrollo."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="19" id="scene-19" data-accent="#14532d" data-chapter="XX" data-chapter-label="El Rumbo Futuro">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XX</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 60%; --flare-y: 8%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-meteor"></i> Próximamente</div>
-            <div class="scene-timestamp">Capítulo XX</div>
-          </div>
-          <h2 class="scene-title">El Rumbo<br><span class="scene-title-sub">Futuro</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="El futuro de Serakdep MS incluye la integración de rankings, APIs de Roblox, la aplicación móvil RSP para Android, y la traducción completa de toda la plataforma web oficial al inglés y portugués."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="20" id="scene-20" data-accent="#fbbf24" data-chapter="XXI" data-chapter-label="La Gran Hermandad">
-        <div class="scene-bg" style="background-image: url('images/members/Db_artworkFOUNDERSMS.jpg');"></div>
-        <div class="scene-chapter-numeral">XXI</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 75%; --flare-y: 18%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-users"></i> Miembros Activos</div>
-            <div class="scene-timestamp">Capítulo XXI</div>
-          </div>
-          <h2 class="scene-title">La Gran<br><span class="scene-title-sub">Hermandad</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Con más de 266 miembros verificados de múltiples países y edades, el clan se consolida como una verdadera familia unida por la pasión al gaming y la camaradería inquebrantable en todas las plataformas."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="21" id="scene-21" data-accent="#f59e0b" data-chapter="XXII" data-chapter-label="Alianzas Sagradas">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XXII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 40%; --flare-y: 14%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-globe"></i> Clanes Aliados</div>
-            <div class="scene-timestamp">Capítulo XXII</div>
-          </div>
-          <h2 class="scene-title">Alianzas<br><span class="scene-title-sub">Sagradas</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Nuestra red de aliados se expandió con clanes de gran renombre: CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy, WIND BREAKER, LUWANCE, Kira's Order y The Black Bulls, en un pacto de respeto mutuo."></p>
-        </div>
-      </section>
-
-      <section class="scene-section" data-index="22" id="scene-22" data-accent="#d97706" data-chapter="XXIII" data-chapter-label="Evolución Digital">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XXIII</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 60%; --flare-y: 20%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-laptop-code"></i> Desarrollo Web</div>
-            <div class="scene-timestamp">Capítulo XXIII</div>
-          </div>
-          <h2 class="scene-title">Evolución<br><span class="scene-title-sub">Digital</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Desde la beta 0.5 estática, el portal evolucionó a la v1.0, v2.0 con bases npoint.io y FAQ, la v3.7 ultra-optimizada con actualización automática cada 12 segundos, y la v6 actual de este viaje cinematográfico."></p>
-        </div>
-      </section>
-
-      <section class="scene-section" data-index="23" id="scene-23" data-accent="#b45309" data-chapter="XXIV" data-chapter-label="La Forja Creativa">
-        <div class="scene-bg" style="background-image: url('images/members/Db_artworkFOUNDERSMS.jpg');"></div>
-        <div class="scene-chapter-numeral">XXIV</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 35%; --flare-y: 10%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-user-shield"></i> Equipo de Edición</div>
-            <div class="scene-timestamp">Capítulo XXIV</div>
-          </div>
-          <h2 class="scene-title">La Forja<br><span class="scene-title-sub">Creativa</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="El equipo creativo, integrado por editores y diseñadores como Diegosanval2012, putifino111 y Teo_174bj, da vida a los logos, banners, guías y videos promocionales que realzan la imagen del clan."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="24" id="scene-24" data-accent="#ffd700" data-chapter="XXV" data-chapter-label="El Amanecer de 2026">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XXV</div>
-        <div class="scene-overlay"></div>
-        <div class="lens-flare" style="--flare-x: 50%; --flare-y: 15%;"></div>
-        <div class="scene-vignette"></div>
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-bolt"></i> Año 2026</div>
-            <div class="scene-timestamp">Capítulo XXV</div>
-          </div>
-          <h2 class="scene-title">El Amanecer<br><span class="scene-title-sub">de 2026</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="Con eventos semanales programados de forma dinámica, chat activo en Discord, grupos de WhatsApp vibrantes, y el noticiero digital oficial, el año 2026 se establece como la época dorada de Serakdep MS."></p>
-        </div>
-      </section>
-
-
-      <section class="scene-section" data-index="25" id="scene-25" data-accent="#ffd700" data-chapter="XXVI" data-chapter-label="Un Clan, Una Leyenda">
-        <div class="scene-bg" style="background-image: url('images/lore/future_sanctuary.png');"></div>
-        <div class="scene-chapter-numeral">XXVI</div>
-        <div class="scene-overlay scene-overlay--final"></div>
-        <div class="lens-flare lens-flare--epic" style="--flare-x: 50%; --flare-y: 25%;"></div>
-        <div class="scene-vignette"></div>
-
-        <div class="scene-content">
-          <div class="scene-meta-row">
-            <div class="scene-era"><i class="fas fa-infinity"></i> Y más allá</div>
-            <div class="scene-timestamp">Capítulo XXVI · Final</div>
-          </div>
-          <h2 class="scene-title">Un Clan,<br><span class="scene-title-sub">Una Leyenda</span></h2>
-          <div class="scene-divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
-          <p class="scene-narration" data-text="El mañana nos pertenece. La historia de Serakdep MS no tiene final; cada nuevo miembro añade su propia página al archivo. El Panda Ancestral observa con orgullo cómo la leyenda continúa su curso hacia la inmortalidad."></p>
-          <div class="scene-final-cta">
-            <a href="index.html" class="final-cta-btn">
-              <i class="fas fa-home"></i> Volver al Inicio
-            </a>
-            <a href="formulario.html" class="final-cta-btn final-cta-btn--secondary">
-              <i class="fas fa-envelope"></i> Únete al Clan
-            </a>
-          </div>
-        </div>
-      </section>
-
+      <div class="boot-footer">0x7F3A9B2C · v18.0 ULTRA</div>
     </div>
   </div>
 
-  <script src="js/main.js" defer></script>
-  <script src="js/lore.js" defer></script>
-  <script src="js/redirect.js" defer></script>
-</body>
 
+  <div id="shutdown-overlay">
+    <div class="shutdown-text glitch-text">SESIÓN CERRADA</div>
+    <div class="shutdown-sub">Desconectando...</div>
+  </div>
+
+
+  <div id="terminal-container">
+    <div id="terminal-header">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+      <span class="terminal-title">SERAKDEP_MS · LORE_TERMINAL v18.0</span>
+      <span class="terminal-time" id="term-time">00:00:00</span>
+      <span class="terminal-session" id="term-session">00:00</span>
+      <button id="exit-btn" title="Apagar"><i class="fas fa-power-off"></i></button>
+    </div>
+
+    <div id="chapter-progress" aria-hidden="true">
+      <div id="chapter-progress-fill"></div>
+    </div>
+
+    <div id="terminal-body">
+      <div id="terminal-output"></div>
+      <div id="terminal-cursor">
+        <span class="cursor-symbol">⨠</span>
+        <span class="cursor-blink">▌</span>
+      </div>
+    </div>
+
+    <div id="terminal-footer">
+      <button id="prev-btn" title="← Anterior"><i class="fas fa-chevron-left"></i></button>
+      <span id="chapter-indicator">01 / 26</span>
+      <button id="next-btn" title="Siguiente →"><i class="fas fa-chevron-right"></i></button>
+      <span class="footer-hint">← → · Enter · Ctrl+Home / Ctrl+End</span>
+    </div>
+  </div>
+
+  <script src="js/lore.js" defer></script>
+</body>
 </html>
