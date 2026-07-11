@@ -192,26 +192,6 @@ no para ser reutilizado, modificado o distribuido.
 
 ---
 
-## 📊 ESTADÍSTICAS DEL PROYECTO
-
-| Concepto | Cantidad |
-|----------|:--------:|
-| Páginas HTML | 21 |
-| Archivos CSS | 15+ |
-| Archivos JavaScript | 12+ |
-| Videos en reproductor | 15 |
-| Videotutoriales | 6 |
-| Cookies implementadas | 4 |
-| Clanes aliados |8 |
-| Miembros del clan | +266 |
-| Categorías FAQ | 15 |
-| Equipos en eventos | 72 |
-| Retos en CodeTurbo | 9 |
-| Temas de editor | 6 |
-| Formularios de acción | 4 |
-
----
-
 **"UNIDOS POR LA PASIÓN DEL GAMING, PROTEGIDOS POR LA LEY"**  
 © 2026 D3B1A2C4F5E67890 - Serakdep MS Clan
 

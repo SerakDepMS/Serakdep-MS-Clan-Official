@@ -27,9 +27,9 @@ let newsDatabase = {
   lastUpdate: new Date().toISOString(),
   totalViews: 786,
   whatsappStats: {
-    members: 151,
-    notifications: 12,
-    clicks: 67,
+    members: 6,
+    notifications: 1,
+    clicks: 6,
     joinLink: "https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j",
   },
   news: [],
