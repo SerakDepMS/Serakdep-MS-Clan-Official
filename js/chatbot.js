@@ -14,14 +14,14 @@
       <strong>3️⃣ Contacto del Staff:</strong> En un plazo de 48 horas, un administrador te contactará por WhatsApp o Discord para una breve entrevista.<br>
       <strong>4️⃣ Entrevista:</strong> Charlaremos contigo para conocerte mejor y resolver dudas.<br>
       <strong>5️⃣ Periodo de prueba:</strong> Si todo va bien, pasarás un periodo de prueba de 7 a 14 días para adaptarte.<br><br>
-      <strong>Requisitos:</strong> Tener al menos 14 años, cuenta de Roblox activa (mínimo 4 meses) y disponibilidad para participar al menos 7 veces por semana.`
+      <strong>Requisitos:</strong> Tener al menos 16 años, cuenta de Roblox activa (mínimo 4 meses) y disponibilidad para participar al menos 7 veces por semana.`
     },
     {
       keywords: ['formulario campos', 'que piden formulario', 'datos inscripcion', 'whatsapp formulario', 'discord formulario', 'pais formulario', 'edad minima', 'preguntas formulario', 'informacion que piden'],
       response: `<strong>Campos del formulario de inscripción</strong><br><br>
       Estos son los datos que te pediremos:<br>
       • <strong>Nombre en Roblox</strong> (obligatorio, debe ser exacto).<br>
-      • <strong>Edad</strong> (mínimo 14 años).<br>
+      • <strong>Edad</strong> (mínimo 16 años).<br>
       • <strong>País</strong> y <strong>zona horaria</strong>.<br>
       • <strong>Juegos de Roblox</strong> que juegas (mínimo 2).<br>
       • <strong>Experiencia en Roblox</strong> (principiante, intermedio, avanzado, veterano).<br>
@@ -36,8 +36,8 @@
     {
       keywords: ['edad minima', 'cuantos años', 'puedo entrar si tengo 12', 'menor de edad', 'permiso parental'],
       response: `<strong>Política de edad del clan</strong><br><br>
-      La edad mínima para unirse a Serakdep MS es de <strong>14 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
-      Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 14, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
+      La edad mínima para unirse a Serakdep MS es de <strong>16 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
+      Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 16, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
  
  
@@ -47,7 +47,7 @@
       response: `<strong>Reglamento general del clan</strong><br><br>
       En Serakdep MS valoramos el respeto y la buena convivencia. Estas son las normas fundamentales:<br>
       ✔️ <strong>Respeto obligatorio:</strong> No se tolera discriminación, acoso, bullying ni lenguaje ofensivo.<br>
-      ✔️ <strong>Edad mínima 14 años</strong> (con permiso parental si eres menor).<br>
+      ✔️ <strong>Edad mínima 16 años</strong> (con permiso parental si eres menor).<br>
       ✔️ <strong>Actividad mínima:</strong> Participar al menos una vez por semana. Tras 3 semanas sin actividad sin justificación, se considerará baja por inactividad.<br>
       ✔️ <strong>Confidencialidad:</strong> No compartir información personal de otros miembros sin autorización.<br>
       ✔️ <strong>Identificación clara:</strong> Usar nombres reconocibles en todas las plataformas.<br>
@@ -148,7 +148,7 @@
       • <strong>Edición y Contenido:</strong> Crear material gráfico, videos, guías y contenido para redes sociales del clan. Deben respetar los derechos de autor y la identidad visual del clan.<br>
       • <strong>Representante de Alianzas:</strong> Gestionar relaciones con otros clanes, buscar nuevas alianzas y representar a Serakdep MS con profesionalismo y lealtad.<br><br>
       <strong>Requisitos para colaborador:</strong><br>
-      ✔️ Edad mínima: <strong>15 años</strong>.<br>
+      ✔️ Edad mínima: <strong>17 años</strong>.<br>
       ✔️ Elegir <strong>una sola área</strong> de colaboración.<br>
       ✔️ Disponibilidad mínima de <strong>5 horas semanales</strong>.<br>
       ✔️ Compromiso con los valores del clan.<br>
@@ -160,7 +160,7 @@
       response: `<strong>Formulario de Aspirante a Colaborador</strong><br><br>
       Estos son los datos que se solicitan en el formulario:<br>
       • <strong>Nombre en Roblox</strong> (obligatorio).<br>
-      • <strong>Edad</strong> (mínimo 15 años).<br>
+      • <strong>Edad</strong> (mínimo 17 años).<br>
       • <strong>País</strong> y <strong>zona horaria</strong>.<br>
       • <strong>WhatsApp</strong> (opcional, para coordinación del proceso de selección).<br>
       • <strong>Área de colaboración</strong>: Actividades y Eventos / Edición y Contenido / Representante de Alianzas (solo puedes elegir una).<br>
@@ -374,7 +374,7 @@
       En Serakdep MS tomamos muy en serio tu privacidad:<br>
       • Solo recopilamos los datos necesarios para gestionar tu membresía (nombre de usuario de Roblox/Discord, edad, país, contacto).<br>
       • El número de teléfono se recopila exclusivamente para colaborar con la justicia en casos de extrema gravedad, con tu consentimiento explícito.<br>
-      • Para los menores de 14 años, el consentimiento debe ser otorgado por sus padres, madres o tutores legales.<br>
+      • Para los menores de 16 años, el consentimiento debe ser otorgado por sus padres, madres o tutores legales.<br>
       • No compartimos tu información con terceros sin tu consentimiento explícito.<br>
       • Puedes solicitar la eliminación de tus datos en cualquier momento contactando a un administrador.<br>
       • Toda la información se almacena de forma segura y solo el staff autorizado tiene acceso.<br>
@@ -382,11 +382,11 @@
       Para más detalles, consulta nuestra Política de Privacidad en el footer.`
     },
     {
-      keywords: ['menores edad', 'datos menores', 'tratamiento menores', 'menores 14 años'],
+      keywords: ['menores edad', 'datos menores', 'tratamiento menores', 'menores 16 años'],
       response: `<strong>Tratamiento de datos de menores de edad</strong><br><br>
       El Clan "Serakdep MS" es consciente de que muchos de sus miembros son menores de edad. Por ello, aplicamos medidas de protección reforzadas:<br>
-      • <strong>Mayores de 14 años:</strong> Pueden prestar su consentimiento para el tratamiento de sus datos personales por sí mismos.<br>
-      • <strong>Menores de 14 años:</strong> La ley exige que el consentimiento para el tratamiento de sus datos, especialmente del número de teléfono, sea otorgado por sus padres, madres o tutores legales. Al unirse al clan, solicitaremos que se nos confirme que se cuenta con dicha autorización.`
+      • <strong>Mayores de 16 años:</strong> Pueden prestar su consentimiento para el tratamiento de sus datos personales por sí mismos.<br>
+      • <strong>Menores de 16 años:</strong> La ley exige que el consentimiento para el tratamiento de sus datos, especialmente del número de teléfono, sea otorgado por sus padres, madres o tutores legales. Al unirse al clan, solicitaremos que se nos confirme que se cuenta con dicha autorización.`
     },
     {
       keywords: ['derechos arco', 'derecho acceso', 'derecho rectificacion', 'derecho supresion', 'derecho al olvido', 'derecho oposicion', 'derecho portabilidad'],
@@ -481,7 +481,7 @@
       response: `<strong>Historia y origen del clan</strong><br><br>
       Serakdep MS fue fundado con estos principios:<br>
       • <strong>Fundación:</strong> Creado por jugadores experimentados de Roblox que buscaban una comunidad organizada.<br>
-      • <strong>Misión:</strong> Crear un espacio inclusivo y respetuoso para jugadores de todas las edades.<br>
+      • <strong>Misión:</strong> Crear un espacio inclusivo y respetuoso para jugadores de 16 años.<br>
       • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +266 miembros verificados.<br>
       • <strong>Evolución:</strong> Hemos desarrollado estructura, normas, página web y herramientas propias.<br>
       • <strong>Futuro:</strong> Seguir creciendo como comunidad de referencia en Roblox.<br><br>
@@ -500,7 +500,7 @@
       ✔️ Estar atento a las convocatorias que se publican en Discord (#anuncios) y en el sitio web (Contacto → Aspirar a Admin).<br>
       ✔️ Completar el formulario de postulación cuando esté abierto.<br><br>
       Los seleccionados pasan por un periodo de capacitación y prueba. <strong>Nunca</strong> se venden rangos ni se aceptan pagos por ascensos.<br><br>
-      💡 Si aún no cumples los requisitos para admin, también puedes postularte como <strong>Colaborador</strong> (Contacto → Aspirar a Colaborador), con requisito mínimo de 15 años.`
+      💡 Si aún no cumples los requisitos para admin, también puedes postularte como <strong>Colaborador</strong> (Contacto → Aspirar a Colaborador), con requisito mínimo de 17 años.`
     },
  
  

@@ -904,7 +904,7 @@ async function sendColaboradorEmail(data) {
 function validateColaboradorForm() {
   const age = parseInt(document.getElementById("colab-age").value, 10);
   if (isNaN(age) || age < 15) {
-    showMessage("La edad mínima para ser colaborador es 15 años.", "error");
+    showMessage("La edad mínima para ser colaborador es 17 años.", "error");
     document.getElementById("colab-age").focus();
     return false;
   }
