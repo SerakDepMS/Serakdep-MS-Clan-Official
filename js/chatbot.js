@@ -220,11 +220,10 @@
       keywords: ['whatsapp', 'grupo whatsapp', 'unirse whatsapp', 'link whatsapp', 'whatsapp reglas', 'grupos whatsapp', 'sms principal', 'sms actividades', 'entrar a whatsapp'],
       response: `<strong>Grupos oficiales de WhatsApp</strong><br><br>
       El clan tiene varios grupos organizados por función:<br>
-      • <strong>SMS-Principal:</strong> Comunicación general de todos los miembros.<br>
-      • <strong>SMS-Actividades:</strong> Dinámicas como NGL (mensajes anónimos), sopa de letras, pintar imágenes en blanco y más.<br>
-      • <strong>SMS-Nuevos Ingresos:</strong> Orientación para novatos durante su periodo de prueba.<br>
-      • <strong>SMS-Inscripción:</strong> Inscripción a eventos y torneos.<br>
-      • <strong>SERAKDEPMS STUDIOS:</strong> Comunidad encargada de la parte administrativa y gestión de labores, que mantienen el clan funcional y actualizado.<br><br>
+      • <strong>Principal:</strong> Comunicación general de todos los miembros.<br>
+      • <strong>Actividades:</strong> Dinámicas como NGL (mensajes anónimos), sopa de letras, pintar imágenes en blanco y más.<br>
+      • <strong>Nuevos Ingresos:</strong> Orientación para novatos durante su periodo de prueba.<br>
+      • <strong>Inscripción:</strong> Inscripción a eventos y torneos.<br>
       <strong>Normas en WhatsApp:</strong><br>
       • Usar cada grupo para su propósito.<br>
       • Evitar mensajes entre 00:00 y 08:00 (salvo urgencias).<br>
@@ -241,7 +240,7 @@
       • <strong>Horario general:</strong> 08:00 - 23:59 (hora local del administrador).<br>
       • <strong>Horario silencioso:</strong> 00:00 - 07:59, evita enviar mensajes no urgentes.<br>
       • <strong>Excepciones:</strong> Emergencias, eventos programados, torneos en vivo.<br>
-      • <strong>SMS-Staff:</strong> 24/7 para asuntos urgentes del clan.<br><br>
+      • <strong>Staff:</strong> 24/7 para asuntos urgentes del clan.<br><br>
       Respeta estos horarios para no molestar a los demás miembros.`
     },
  
