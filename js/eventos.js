@@ -212,10 +212,7 @@ function renderCalendar(month, year) {
       dayElement.appendChild(eventIcons);
     }
     if (isToday) {
-      const todayIndicator = document.createElement("div");
-      todayIndicator.className = "today-indicator";
-      todayIndicator.textContent = "HOY";
-      dayElement.appendChild(todayIndicator);
+      // El indicador de 'Hoy' ya se muestra con CSS en .calendar-day.today::before
     }
     calendarGrid.appendChild(dayElement);
   }
