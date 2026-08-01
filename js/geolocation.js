@@ -194,7 +194,9 @@
     const countryVal = countryCode in COUNTRY_MAP ? countryCode : 'OT';
     const tzVal = TIMEZONE_MAP[geo.timezone] || geo.timezone;
     const flag = COUNTRY_MAP[countryVal] ? COUNTRY_MAP[countryVal].split(' ')[0] : '🌍';
-    const displayCountry = COUNTRY_MAP[countryVal] ? COUNTRY_MAP[countryVal] : geo.country || 'Otro país';
+    const displayCountry = COUNTRY_MAP[countryVal]
+      ? COUNTRY_MAP[countryVal].replace(/^[^\w\s]+/, '').trim()
+      : geo.country || 'Otro país';
     const displayTz = tzVal || geo.timezone;
 
     ['country', 'admin-country', 'colab-country'].forEach(id => {

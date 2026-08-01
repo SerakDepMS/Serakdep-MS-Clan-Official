@@ -497,12 +497,17 @@ nav ul li a:hover {
   .clan-logo-section {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
-    padding: 25px;
+    gap: 24px;
+    padding: 20px 15px;
   }
 
   .clan-slogan {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    line-height: 1.2;
+    word-break: break-word;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    padding: 0 10px;
   }
 
   .logo-badges {
@@ -606,6 +611,13 @@ nav ul li a:hover {
     margin-top: 60px;
   }
 
+  html {
+    scroll-padding-top: 90px;
+  }
+
+  main {
+    padding-top: calc(80px + env(safe-area-inset-top, 0px));
+  }
 
   .page-title {
     font-size: 2rem;
