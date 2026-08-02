@@ -16,91 +16,91 @@ class VideoPlayerFinal {
     this.video = document.getElementById("main-video");
     this.videoList = [
       {
-        src: "video/video-number-one/video1.mp4",
+        src: "assets/video/video-number-one/video1.mp4",
         title: "POR LA VIDA Y LA LIBERTAD, SIEMPRE, SIEMPRE, SIEMPRE POR LA VIDA.",
         duration: "28",
         size: "30 MB",
       },
       {
-        src: "video/video-number-one/video2.mp4",
+        src: "assets/video/video-number-one/video2.mp4",
         title: "Loney Loney",
         duration: "16",
         size: "12 MB",
       },
       {
-        src: "video/video-number-one/video3.mp4",
+        src: "assets/video/video-number-one/video3.mp4",
         title: "Avion de guerra",
         duration: "13",
         size: "7 MB",
       },
       {
-        src: "video/video-number-one/video4.mp4",
+        src: "assets/video/video-number-one/video4.mp4",
         title: "Formula 1",
         duration: "39",
         size: "26 MB",
       },
       {
-        src: "video/video-number-one/video5.mp4",
+        src: "assets/video/video-number-one/video5.mp4",
         title: "War Thunder",
         duration: "14",
         size: "5 MB",
       },
       {
-        src: "video/video-number-one/video6.mp4",
+        src: "assets/video/video-number-one/video6.mp4",
         title: "Marcas de autos edit",
         duration: "17",
         size: "11 MB",
       },
       {
-        src: "video/video-number-one/video7.mp4",
+        src: "assets/video/video-number-one/video7.mp4",
         title: "NEED FOR SPEED MOST WANTED",
         duration: "22",
         size: "24 MB",
       },
       {
-        src: "video/video-number-one/video8.mp4",
+        src: "assets/video/video-number-one/video8.mp4",
         title: "CARS",
         duration: "21",
         size: "23 MB",
       },
       {
-        src: "video/video-number-one/video9.mp4",
+        src: "assets/video/video-number-one/video9.mp4",
         title: "Te observo",
         duration: "10",
         size: "5 MB",
       },
       {
-        src: "video/video-number-one/video10.mp4",
+        src: "assets/video/video-number-one/video10.mp4",
         title: "I'LL WATCH YOU HATE",
         duration: "1:02",
         size: "59 MB",
       },
       {
-        src: "video/video-number-one/video11.mp4",
+        src: "assets/video/video-number-one/video11.mp4",
         title: "Spider Man edit",
         duration: "16",
         size: "13 MB",
       },
       {
-        src: "video/video-number-one/video12.mp4",
+        src: "assets/video/video-number-one/video12.mp4",
         title: "Arabia Saudi edit",
         duration: "16",
         size: "13 MB",
       },
       {
-        src: "video/video-number-one/video13.mp4",
+        src: "assets/video/video-number-one/video13.mp4",
         title: "Dexter Morgan edit",
         duration: "19",
         size: "15 MB",
       },
       {
-        src: "video/video-number-one/video14.mp4",
+        src: "assets/video/video-number-one/video14.mp4",
         title: "Mita edit",
         duration: "14",
         size: "11 MB",
       },
       {
-        src: "video/video-number-one/video15.mp4",
+        src: "assets/video/video-number-one/video15.mp4",
         title: "UNDER YOUR SPELL",
         duration: "1:00",
         size: "57 MB",
@@ -491,7 +491,7 @@ class VideoPlayerFinal {
             ).textContent = this.videoList[this.currentVideoIndex].title;
           }
 
-          this.showNotification("🖥️ Pantalla completa activada");
+          this.showNotification("ðŸ–¥ï¸ Pantalla completa activada");
 
           window.dispatchEvent(new Event("resize"));
         })
@@ -631,7 +631,7 @@ class VideoPlayerFinal {
     this.isFullscreen = false;
     this.fullscreenState.isActive = false;
 
-    this.showNotification("🖥️ Pantalla completa desactivada");
+    this.showNotification("ðŸ–¥ï¸ Pantalla completa desactivada");
   }
 
   onFullscreenChange() {
@@ -703,7 +703,7 @@ class VideoPlayerFinal {
     }
 
     this.updateCounter();
-    this.showNotification(`🎬 ${videoData.title}`);
+    this.showNotification(`ðŸŽ¬ ${videoData.title}`);
 
     if (this.autoplayToggle.checked) {
       this.currentPlayPromise = this.video.play();
@@ -825,7 +825,7 @@ class VideoPlayerFinal {
     this.playbackSpeed = parseFloat(button.dataset.speed);
     this.video.playbackRate = this.playbackSpeed;
 
-    this.showNotification(`⚡ Velocidad: ${this.playbackSpeed}x`);
+    this.showNotification(`âš¡ Velocidad: ${this.playbackSpeed}x`);
   }
 
   changeQuality(button) {
@@ -835,15 +835,15 @@ class VideoPlayerFinal {
 
     const quality = button.dataset.quality;
     this.showNotification(
-      `📺 Calidad: ${quality === "auto" ? "Automática" : quality + "p"}`
+      `ðŸ“º Calidad: ${quality === "auto" ? "AutomÃ¡tica" : quality + "p"}`
     );
   }
 
   toggleAutoplay() {
     this.showNotification(
       this.autoplayToggle.checked
-        ? "▶️ Autoplay activado"
-        : "⏸️ Autoplay desactivado"
+        ? "â–¶ï¸ Autoplay activado"
+        : "â¸ï¸ Autoplay desactivado"
     );
   }
 
@@ -851,23 +851,23 @@ class VideoPlayerFinal {
     this.video.loop = this.loopToggle.checked;
     this.showNotification(
       this.loopToggle.checked
-        ? "🔁 Repetición activada"
-        : "🔁 Repetición desactivada"
+        ? "ðŸ” RepeticiÃ³n activada"
+        : "ðŸ” RepeticiÃ³n desactivada"
     );
   }
 
   toggleSubtitles() {
     this.showNotification(
       this.subtitlesToggle.checked
-        ? "📝 Subtítulos activados"
-        : "📝 Subtítulos desactivados"
+        ? "ðŸ“ SubtÃ­tulos activados"
+        : "ðŸ“ SubtÃ­tulos desactivados"
     );
   }
 
   restartVideo() {
     this.video.currentTime = 0;
     this.video.play();
-    this.showNotification("🔄 Video reiniciado");
+    this.showNotification("ðŸ”„ Video reiniciado");
     this.closeSettings();
   }
 
@@ -881,7 +881,7 @@ class VideoPlayerFinal {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    this.showNotification("📥 Descargando video...");
+    this.showNotification("ðŸ“¥ Descargando video...");
     this.closeSettings();
   }
 
@@ -898,7 +898,7 @@ class VideoPlayerFinal {
       });
     } else {
       navigator.clipboard.writeText(`${shareText} - ${shareUrl}`);
-      this.showNotification("📋 Enlace copiado al portapapeles");
+      this.showNotification("ðŸ“‹ Enlace copiado al portapapeles");
     }
 
     this.closeSettings();
@@ -1097,7 +1097,7 @@ class VideoPlayerFinal {
   onVideoError(e) {
     console.error("Error cargando video:", e);
     this.hideLoading();
-    this.showNotification("❌ Error cargando el video");
+    this.showNotification("âŒ Error cargando el video");
 
     setTimeout(() => this.nextVideo(), 2000);
   }
@@ -1109,11 +1109,11 @@ class VideoPlayerFinal {
     if (this.isMuted) {
       this.volumeToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
       this.mobileVolumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-      this.showNotification("🔇 Sonido silenciado");
+      this.showNotification("ðŸ”‡ Sonido silenciado");
     } else {
       this.volumeToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
       this.mobileVolumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-      this.showNotification("🔊 Sonido activado");
+      this.showNotification("ðŸ”Š Sonido activado");
       this.video.volume = this.volume > 0 ? this.volume : 0.5;
       this.volumeSlider.value = this.video.volume;
     }

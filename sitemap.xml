@@ -8,123 +8,93 @@
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/reglamento.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/clan/reglamento.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/formulario.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/forms/inscripcion.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/faq.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/clan/faq.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/eventos.html</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/noticias.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/eventos.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/contacto.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/contacto.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/alianzas.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/clan/alianzas.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/creditos.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/creditos.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/lore.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/lore.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/videotutoriales.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/videotutoriales.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/laboratorio.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/laboratorio.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/privacidad.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/legal/privacidad.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/terminos.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/legal/terminos.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/cookies.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/legal/cookies.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/dmca.html</loc>
+    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/legal/dmca.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/reportar.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/sugerencias.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/aspirantes-admin.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/aspirantes-colaborador.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://serakdepms.github.io/Serakdep-MS-Clan-Official/404.html</loc>
-    <priority>0.2</priority>
-    <changefreq>never</changefreq>
   </url>
 
 </urlset>

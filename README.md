@@ -50,43 +50,54 @@ Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblo
 
 ## 🌐 Estructura del Sitio Web
 
-### 📄 Páginas Principales (11)
+```text
+├── index.html (Página de inicio principal en la raíz)
+├── 404.html (Página de error 404 personalizada)
+├── assets/ (Estilos CSS, scripts JS, imágenes, videos y favicons)
+├── pages/
+│   ├── clan/ (reglamento.html, faq.html, alianzas.html)
+│   ├── media/ (lore.html, videotutoriales.html, noticias.html)
+│   ├── eventos.html
+│   ├── contacto.html
+│   ├── creditos.html
+│   └── laboratorio.html
+├── forms/ (inscripcion.html, reportar.html, sugerencias.html, aspirantes-admin.html, aspirantes-colaborador.html)
+└── legal/ (privacidad.html, terminos.html, cookies.html, dmca.html)
+```
+
+### 📄 Páginas Principales
 | Página | Descripción |
 |--------|-------------|
 | 🏠 `index.html` | Página de inicio con reproductor de video, contador del clan, splash screen y galería |
-| 📜 `reglamento.html` | Normas de convivencia, sistema de sanciones y código de conducta |
-| 📝 `formulario.html` | Formulario de inscripción oficial con validación y envío por EmailJS |
-| ❓ `faq.html` | 15 categorías de preguntas frecuentes con buscador integrado |
-| 🎮 `eventos.html` | Calendario de eventos, torneos, 72 equipos y sistema de inscripción |
-| 📰 `noticias.html` | Sistema de noticias con npoint.io, actualización cada 12s y filtros |
-| 📞 `contacto.html` | Canales de contacto (WhatsApp, Discord, Email) y formularios de soporte |
-| 🎬 `lore.html` | **Viaje Cinematográfico** – Recorrido interactivo de 26 escenas con audio y efectos dinámicos |
-| 🤝 `alianzas.html` | 7 clanes aliados con tarjetas glassmorphism y auras animadas |
-| 🎖️ `creditos.html` | Equipo del clan, línea de tiempo, galería y tecnologías utilizadas |
-| 🎬 `videotutoriales.html` | 6 tutoriales en video con reproductor personalizado |
+| 📜 `pages/clan/reglamento.html` | Normas de convivencia, sistema de sanciones y código de conducta |
+| ❓ `pages/clan/faq.html` | 15 categorías de preguntas frecuentes con buscador integrado |
+| 🤝 `pages/clan/alianzas.html` | 7 clanes aliados con tarjetas glassmorphism y auras animadas |
+| 🎬 `pages/media/lore.html` | **Viaje Cinematográfico** – Recorrido interactivo de 26 escenas con audio y efectos dinámicos |
+| 🎬 `pages/media/videotutoriales.html` | 6 tutoriales en video con reproductor personalizado |
+| 📰 `pages/media/noticias.html` | Sistema de noticias con npoint.io, actualización cada 12s y filtros |
+| 🎮 `pages/eventos.html` | Calendario de eventos, torneos, 72 equipos y sistema de inscripción |
+| 📞 `pages/contacto.html` | Canales de contacto (WhatsApp, Discord, Email) y formularios de soporte |
+| 🎖️ `pages/creditos.html` | Equipo del clan, línea de tiempo, galería y tecnologías utilizadas |
+| 💻 `pages/laboratorio.html` | **CodeTurbo** – Editor de código HTML/CSS/JS con CodeMirror, autocompletado, 6 temas, retos, enciclopedia y postMessage |
 
-### 🛠️ Herramientas (1)
+### 📩 Formularios de Acción
 | Página | Descripción |
 |--------|-------------|
-| 💻 `laboratorio.html` | **CodeTurbo** – Editor de código HTML/CSS/JS con CodeMirror, autocompletado, 6 temas, retos, enciclopedia y postMessage |
+| 📝 `forms/inscripcion.html` | Formulario de inscripción oficial con validación y envío por EmailJS |
+| 🛡️ `forms/reportar.html` | Formulario para reportar problemas o conductas inapropiadas |
+| 💡 `forms/sugerencias.html` | Formulario para enviar sugerencias y mejoras |
+| 👔 `forms/aspirantes-admin.html` | Requisitos, escenarios y formulario para aspirar a administrador |
+| 🤝 `forms/aspirantes-colaborador.html` | Requisitos, áreas (actividades, edición, alianzas) y formulario para aspirar a colaborador |
 
-### ⚖️ Páginas Legales (4)
+### ⚖️ Páginas Legales
 | Página | Descripción |
 |--------|-------------|
-| 🔒 `privacidad.html` | Política de Privacidad completa con RGPD, derechos ARCO+ y tablas detalladas |
-| 📜 `terminos.html` | Términos de Servicio con 12 secciones cubriendo todas las plataformas |
-| 🍪 `cookies.html` | Política de Cookies con tablas de cookies específicas, guías de navegadores y banner de consentimiento |
-| ⚖️ `dmca.html` | Aviso DMCA con procedimiento de reclamación, contra-notificación y política de reincidentes |
+| 🔒 `legal/privacidad.html` | Política de Privacidad completa con RGPD, derechos ARCO+ y tablas detalladas |
+| 📜 `legal/terminos.html` | Términos de Servicio con 12 secciones cubriendo todas las plataformas |
+| 🍪 `legal/cookies.html` | Política de Cookies con tablas de cookies específicas, guías de navegadores y banner de consentimiento |
+| ⚖️ `legal/dmca.html` | Aviso DMCA con procedimiento de reclamación, contra-notificación y política de reincidentes |
 
-### 📩 Formularios de Acción (4)
-| Página | Descripción |
-|--------|-------------|
-| 🛡️ `reportar.html` | Formulario para reportar problemas o conductas inapropiadas |
-| 💡 `sugerencias.html` | Formulario para enviar sugerencias y mejoras |
-| 👔 `aspirantes-admin.html` | Requisitos, escenarios y formulario para aspirar a administrador |
-| 🤝 `aspirantes-colaborador.html` | Requisitos, áreas (actividades, edición, alianzas) y formulario para aspirar a colaborador |
-
-### ❌ Página de Error (1)
+### ❌ Página de Error
 | Página | Descripción |
 |--------|-------------|
 | 🐼 `404.html` | Página de error personalizada con animaciones, partículas y panda perdido |

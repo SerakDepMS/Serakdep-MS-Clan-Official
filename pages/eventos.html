@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -19,42 +19,42 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="favicon/apple-touch-icon.png"
+      href="../assets/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="favicon/favicon-32x32.png"
+      href="../assets/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="favicon/favicon-16x16.png"
+      href="../assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="favicon/android-chrome-192x192.png"
+      href="../assets/favicon/android-chrome-192x192.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="favicon/android-chrome-512x512.png"
+      href="../assets/favicon/android-chrome-512x512.png"
     />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
 
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
     <meta name="msapplication-navbutton-color" content="#ffffff" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/eventos.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/chatbot.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/eventos.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/chatbot.css" />
 
     <link
       rel="stylesheet"
@@ -71,12 +71,33 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="theme-color" content="#2d6a4f" />
+
+  <!-- Open Graph / Facebook / WhatsApp / Discord -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/eventos.html" />
+  <meta property="og:title" content="Calendario de Eventos y Torneos - Serakdep MS" />
+  <meta property="og:description" content="Consulta el calendario de torneos, reuniones y actividades especiales del clan Serakdep MS en Roblox." />
+  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Serakdep MS Clan Official" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/eventos.html" />
+  <meta name="twitter:title" content="Calendario de Eventos y Torneos - Serakdep MS" />
+  <meta name="twitter:description" content="Consulta el calendario de torneos, reuniones y actividades especiales del clan Serakdep MS en Roblox." />
+  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
+  <meta name="twitter:site" content="@serakdepms" />
+  <meta name="theme-color" content="#2d6a4f" />
 </head>
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
   <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
     <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros para mejorar tu experiencia. 
     Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso. 
-    <a href="cookies.html" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Más información</a>
+    <a href="../legal/cookies.html" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Más información</a>
   </p>
   <button onclick="aceptarCookies()" style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
   <button onclick="rechazarCookies()" style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
@@ -85,7 +106,7 @@
     <header>
       <div class="container header-container">
         <div class="logo">
-          <a href="index.html">Serakdep <span>MS</span></a>
+          <a href="../index.html">Serakdep <span>MS</span></a>
         </div>
         <button
           class="mobile-menu-btn"
@@ -96,12 +117,12 @@
         </button>
         <nav>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="reglamento.html">Reglamento</a></li>
-            <li><a href="formulario.html">Formulario</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="clan/reglamento.html">Reglamento</a></li>
+            <li><a href="../forms/inscripcion.html">Formulario</a></li>
+            <li><a href="clan/faq.html">FAQ</a></li>
             <li><a href="eventos.html" class="active">Eventos</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="media/noticias.html">Noticias</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="creditos.html">Créditos</a></li>
             <button id="theme-toggle" class="theme-toggle-btn" title="Cambiar tema" aria-label="Cambiar entre tema claro y oscuro">
@@ -1287,7 +1308,7 @@
         <div class="alert alert-info">
           <i class="fas fa-info-circle"></i>
           <strong>¡Consulta nuestras últimas noticias!</strong>
-          <a href="noticias.html" class="news-link">
+          <a href="media/noticias.html" class="news-link">
             Haz clic aquí para ver actualizaciones, colaboraciones y anuncios
             importantes.
           </a>
@@ -1329,22 +1350,22 @@
             <h3 class="footer-title">Enlaces Rápidos</h3>
             <ul class="footer-links">
               <li>
-                <a href="index.html"
+                <a href="../index.html"
                   ><i class="fas fa-chevron-right"></i> Inicio</a
                 >
               </li>
               <li>
-                <a href="reglamento.html"
+                <a href="clan/reglamento.html"
                   ><i class="fas fa-chevron-right"></i> Reglamento</a
                 >
               </li>
               <li>
-                <a href="formulario.html"
+                <a href="../forms/inscripcion.html"
                   ><i class="fas fa-chevron-right"></i> Formulario</a
                 >
               </li>
               <li>
-                <a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
+                <a href="clan/faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
               </li>
               <li>
                 <a href="eventos.html"
@@ -1352,7 +1373,7 @@
                 >
               </li>
               <li>
-                <a href="noticias.html"
+                <a href="media/noticias.html"
                   ><i class="fas fa-chevron-right"></i> Noticias</a
                 >
               </li>
@@ -1362,12 +1383,12 @@
                 >
               </li>
               <li>
-                <a href="lore.html"
+                <a href="media/lore.html"
                   ><i class="fas fa-chevron-right"></i> Lore del Clan</a
                 >
               </li>
               <li>
-                <a href="alianzas.html"
+                <a href="clan/alianzas.html"
                   ><i class="fas fa-chevron-right"></i> Alianzas</a
                 >
               </li>
@@ -1377,7 +1398,7 @@
                 >
               </li>
               <li>
-                <a href="videotutoriales.html"
+                <a href="media/videotutoriales.html"
                   ><i class="fas fa-chevron-right"></i> Tutoriales</a
                 >
               </li>
@@ -1407,22 +1428,22 @@
                 </a>
               </li>
               <li>
-                <a href="reportar.html">
+                <a href="../forms/reportar.html">
                   <i class="fas fa-user-shield"></i> Reportar problema
                 </a>
               </li>
               <li>
-                <a href="sugerencias.html">
+                <a href="../forms/sugerencias.html">
                   <i class="fas fa-lightbulb"></i> Sugerencias
                 </a>
               </li>
               <li>
-                <a href="aspirantes-admin.html">
+                <a href="../forms/aspirantes-admin.html">
                   <i class="fas fa-user-tie"></i> Aspirar a Admin
                 </a>
               </li>
               <li>
-                <a href="aspirantes-colaborador.html">
+                <a href="../forms/aspirantes-colaborador.html">
                   <i class="fas fa-users-cog"></i> Aspirar a Colaborador
                 </a>
               </li>
@@ -1433,22 +1454,22 @@
             <h3 class="footer-title">Información Legal</h3>
             <ul class="footer-links">
               <li>
-                <a href="privacidad.html">
+                <a href="../legal/privacidad.html">
                   <i class="fas fa-user-shield"></i> Política de Privacidad
                 </a>
               </li>
               <li>
-                <a href="terminos.html">
+                <a href="../legal/terminos.html">
                   <i class="fas fa-file-contract"></i> Términos de Servicio
                 </a>
               </li>
               <li>
-                <a href="cookies.html">
+                <a href="../legal/cookies.html">
                   <i class="fas fa-cookie-bite"></i> Política de Cookies
                 </a>
               </li>
               <li>
-                <a href="dmca.html">
+                <a href="../legal/dmca.html">
                   <i class="fas fa-balance-scale"></i> Aviso DMCA
                 </a>
               </li>
@@ -1476,11 +1497,11 @@
       </div>
     </footer>
 
-    <script src="js/config.js" defer></script>
-    <script src="js/main.js" defer></script>
-    <script src="js/eventos.js" defer></script>
-    <script src="js/redirect.js" defer></script>
-    <script src="js/chatbot.js" defer></script>
-    <script src="js/scroll-reveal.js" defer></script>
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/eventos.js" defer></script>
+    <script src="../assets/js/redirect.js" defer></script>
+    <script src="../assets/js/chatbot.js" defer></script>
+    <script src="../assets/js/scroll-reveal.js" defer></script>
   </body>
 </html>

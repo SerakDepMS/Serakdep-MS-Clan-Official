@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   if (typeof emailjs !== 'undefined') {
     emailjs.init("KZquan0PhqC35uDYw");
   } else {
@@ -164,7 +164,7 @@ function setupAdminNavigation() {
 
   document.querySelectorAll('a[href*="#requisitos-admin"]').forEach((link) => {
     link.addEventListener("click", function (e) {
-      if (window.location.pathname.includes("contacto.html")) {
+      if (window.location.pathname.includes("pages/contacto.html")) {
         e.preventDefault();
         smoothScrollToSection("requisitos-admin");
       }
@@ -173,7 +173,7 @@ function setupAdminNavigation() {
 
   document.querySelectorAll('a[href*="#aspirantes-admin"]').forEach((link) => {
     link.addEventListener("click", function (e) {
-      if (window.location.pathname.includes("contacto.html")) {
+      if (window.location.pathname.includes("pages/contacto.html")) {
         e.preventDefault();
         smoothScrollToSection("aspirantes-admin", true);
       }

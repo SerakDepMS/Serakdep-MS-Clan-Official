@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
 
   const scenesData = [
     { chapter: "I",   label: "La Chispa Inicial",       text: "Antes de que existiera el servidor oficial de Discord, a principios de 2023, una idea comenzó a formarse entre experimentados jugadores de Roblox: la visión de una comunidad donde la diversión, el juego limpio y el respeto fueran los únicos estandartes." },
@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     bootOverlay.classList.add('hidden');
     setTimeout(() => {
-      window.location.href = 'index.html';
+      window.location.href = '../../index.html';
     }, 2200);
   });
 

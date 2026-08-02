@@ -1,7 +1,7 @@
-const clanesAliados = [
+﻿const clanesAliados = [
   {
     nombre: "CHIHUAHUENSE  DINASTY",
-    logo: "images/alianzas/CHIHUAHUENSEDINASTY.jpg",
+    logo: "../../assets/img/alianzas/CHIHUAHUENSEDINASTY.jpg",
     descripcion: "Un lugar donde las pequeñas acciones son poderosas aparece chy un clan para socializar y convivir sanamente.",
     activo: true,
     nuevaAlianza: true,
@@ -9,7 +9,7 @@ const clanesAliados = [
   },
   {
     nombre: "Zion Dynasty",
-    logo: "images/alianzas/ZionDynasty.jpg",
+    logo: "../../assets/img/alianzas/ZionDynasty.jpg",
     descripcion: "Comunidad creada con el fin de garantizar un ambiente de convivencia y juego sano, a traves de la creacion de contenido y actividades en diferentes juegos.",
     activo: true,
     nuevaAlianza: false,
@@ -17,7 +17,7 @@ const clanesAliados = [
   },
   {
     nombre: "Bloody Legacy",
-    logo: "images/alianzas/BloodyLegacy.jpg",
+    logo: "../../assets/img/alianzas/BloodyLegacy.jpg",
     descripcion: "Clan enfocado en evade, llevando una buena comunicación, siendo un clan de palabra, en el cual nuestros aliados e integrantes pueden confiar plenamente.",
     activo: true,
     nuevaAlianza: false,
@@ -25,7 +25,7 @@ const clanesAliados = [
   },
   {
     nombre: "WIND BREAKER",
-    logo: "images/alianzas/WINDBREAKER.jpg",
+    logo: "../../assets/img/alianzas/WINDBREAKER.jpg",
     descripcion: "En WIND BREAKER, buscamos ser un refugio lleno de magia, sueños y risas, donde cada habitante pueda sentirse cómodo, libre y parte de algo especial mientras forma parte de este mundo encantado.",
     activo: true,
     nuevaAlianza: false,
@@ -33,7 +33,7 @@ const clanesAliados = [
   },
   {
     nombre: "LUWANCE",
-    logo: "images/alianzas/LUWANCE.jpg",
+    logo: "../../assets/img/alianzas/LUWANCE.jpg",
     descripcion: "Es un clan que prioriza la transparencia, el respeto y el crecimiento real. Aqui, la fuerza no se mide por ego, sino por el corazon de su comunidad.",
     activo: true,
     nuevaAlianza: false,
@@ -41,7 +41,7 @@ const clanesAliados = [
   },
   {
     nombre: "Kira's Order",
-    logo: "images/alianzas/KirasOrder.jpg",
+    logo: "../../assets/img/alianzas/KirasOrder.jpg",
     descripcion: "Somos un clan enfocado en la diversion, donde lo mas importante es crear amistades y compartir buenos momentos. Nos gusta organizar eventos, participar juntos y mantener un ambiente entretenido.",
     activo: true,
     nuevaAlianza: false,
@@ -49,7 +49,7 @@ const clanesAliados = [
   },
   {
     nombre: "The Black Bulls",
-    logo: "images/alianzas/TheBlackBulls.jpg",
+    logo: "../../assets/img/alianzas/TheBlackBulls.jpg",
     descripcion: "The Black Bulls simboliza el poder absoluto, la fuerza imponente y el misterio indomable.",
     activo: true,
     nuevaAlianza: false,
@@ -120,5 +120,6 @@ function renderizarAlianzas() {
 document.addEventListener("DOMContentLoaded", () => {
   renderizarAlianzas();
 });
+
 
 
