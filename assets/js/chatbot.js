@@ -936,9 +936,9 @@
       if (!hasStarted) {
         addBotMessage(`🐼 <strong>¡Hola! Soy el asistente IA de Serakdep MS Multi-Gamer.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre nuestra comunidad eSports y clan. Puedes preguntarme sobre:<br>
-        • 🎮 <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, LoL, CS2, Rocket League, Supercell, Guardian Tales y Blood Strike.<br>
+        • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, LoL, CS2, Rocket League, Supercell, Guardian Tales y Blood Strike.<br>
         • Cómo inscribirte y los requisitos.<br>
-        • El 📜 <strong>Reglamento General Multi-Gamer</strong>, sanciones y proceso disciplinario.<br>
+        • El <strong>Reglamento General Multi-Gamer</strong>, sanciones y proceso disciplinario.<br>
         • Nuestro servidor de Discord y grupos de WhatsApp por división.<br>
         • Eventos, torneos eSports y convocatorias.<br>
         • Cómo reportar problemas o contactar al staff.<br>
