@@ -116,32 +116,34 @@
   letter-spacing: 1px;
 }
 
-/* Hero Section Optimizado */
+/* ============================================================
+   HERO: IMAGEN DE FONDO A PANTALLA COMPLETA (SIN CONTENIDO)
+   ============================================================ */
 .game-hero {
-  padding: 55px 0 40px 0;
-  text-align: center;
-  position: relative;
-  border-bottom: 1px solid var(--border-color);
+  height: 100vh;          /* Ocupa toda la altura de la pantalla en escritorio */
+  min-height: 500px;      /* Altura mínima para que no se encoja demasiado */
+  max-height: none;       /* Eliminamos el límite superior */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #0b170e;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.game-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, rgba(6, 12, 8, 0.75) 0%, rgba(6, 12, 8, 0.96) 100%);
-  z-index: 1;
+/* ============================================================
+   SECCIÓN DE CONTENIDO DEL HERO (DEBAJO DE LA IMAGEN)
+   ============================================================ */
+.hero-content-section {
+  padding: 40px 0;
+  text-align: center;
+  background: var(--dark-bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.game-hero .game-container {
-  position: relative;
-  z-index: 2;
+.hero-content-section .game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Badges e Indicadores de Rendimiento */
@@ -169,7 +171,7 @@
   box-shadow: 0 0 8px #22c55e;
 }
 
-.game-hero h1 {
+.hero-content-section h1 {
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   font-weight: 800;
   margin: 0 0 14px 0;
@@ -177,11 +179,11 @@
   line-height: 1.15;
 }
 
-.game-hero h1 span {
+.hero-content-section h1 span {
   color: var(--light-green);
 }
 
-.game-hero p {
+.hero-content-section p {
   font-size: clamp(1rem, 2vw, 1.1rem);
   color: var(--text-color);
   max-width: 760px;
@@ -198,7 +200,8 @@
 }
 
 .game-stat-chip {
-  background: rgba(10, 20, 14, 0.9);
+  background: rgba(10, 20, 14, 0.85);
+  backdrop-filter: blur(4px);
   border: 1px solid var(--border-color);
   padding: 9px 18px;
   border-radius: 24px;
@@ -733,6 +736,17 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
   }
+
+  /* Ajuste de altura del hero para tablet */
+  .game-hero {
+    height: 60vh;
+    min-height: 400px;
+    max-height: none;
+  }
+
+  .hero-content-section {
+    padding: 30px 0;
+  }
 }
 
 /* Tablets en vertical y Móviles grandes (481px - 768px) */
@@ -759,16 +773,23 @@
     letter-spacing: 0.5px;
   }
 
+  /* Ajuste de altura del hero para móvil grande */
   .game-hero {
-    padding: 40px 0 30px 0;
+    height: 50vh;
+    min-height: 300px;
+    max-height: none;
   }
 
-  .game-hero h1 {
+  .hero-content-section {
+    padding: 25px 0;
+  }
+
+  .hero-content-section h1 {
     font-size: 1.9rem;
     margin-bottom: 12px;
   }
 
-  .game-hero p {
+  .hero-content-section p {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -882,7 +903,18 @@
     gap: 4px;
   }
 
-  .game-hero h1 {
+  /* Ajuste de altura del hero para móvil pequeño */
+  .game-hero {
+    height: 40vh;
+    min-height: 250px;
+    max-height: none;
+  }
+
+  .hero-content-section {
+    padding: 20px 0;
+  }
+
+  .hero-content-section h1 {
     font-size: 1.65rem;
   }
 
