@@ -11,7 +11,7 @@
 
 ![Clan Logo](images/clan-logo.jpeg)
 
-Bienvenido al sitio web oficial del clan **Serakdep MS**, una comunidad de Roblox dedicada al gaming organizado, respetuoso y divertido.
+Bienvenido al sitio web oficial de **Serakdep MS**, una comunidad multi-gamer dedicada al gaming organizado, respetuoso y divertido, con presencia en distintas plataformas y divisiones.
 
 ---
 
