@@ -1,4 +1,10 @@
-(function () {
+/**
+ * scroll-reveal.js - Efecto de aparición al hacer scroll
+ * Versión robusta: no falla si faltan selectores.
+ */
+(function() {
+  'use strict';
+
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
   const SELECTORS = [
@@ -7,7 +13,6 @@
     '.clan-logo-section',
     '.contact-cards .contact-card',
     '.team-member',
-    '.timeline-item',
     '.alianza-card',
     '.tutorial-card',
     '.stat-card',
@@ -33,25 +38,30 @@
     '.div-section',
     '.rule-card',
     '.sanction-card',
-    '.whatsapp-section',
-    '.game-info-block',
+    '.game-info-block'
   ];
 
-
-  const style = document.createElement('style');
-  style.textContent = '.sr-hidden{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}';
-  document.head.appendChild(style);
+  if (!document.getElementById('scroll-reveal-styles')) {
+    const style = document.createElement('style');
+    style.id = 'scroll-reveal-styles';
+    style.textContent = `
+      .sr-hidden { opacity:0; transform:translateY(22px); transition:opacity .55s ease,transform .55s ease; }
+      .sr-visible { opacity:1 !important; transform:translateY(0) !important; }
+    `;
+    document.head.appendChild(style);
+  }
 
   function initReveal() {
     const elements = document.querySelectorAll(SELECTORS.join(', '));
     if (!elements.length) return;
 
     const observer = new IntersectionObserver(
-      function(entries) {
-        entries.forEach(function(entry) {
+      (entries) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const el = entry.target;
             el.classList.remove('sr-hidden');
+            el.classList.add('sr-visible');
             observer.unobserve(el);
           }
         });
@@ -59,12 +69,15 @@
       { threshold: 0.08, rootMargin: '0px 0px -25px 0px' }
     );
 
-    elements.forEach(function(el) {
-
+    elements.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top > window.innerHeight * 0.05) {
-        el.classList.add('sr-hidden');
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < windowHeight - 50 && rect.bottom > 0) {
+        el.classList.add('sr-visible');
+        el.classList.remove('sr-hidden');
+        return;
       }
+      el.classList.add('sr-hidden');
       observer.observe(el);
     });
   }

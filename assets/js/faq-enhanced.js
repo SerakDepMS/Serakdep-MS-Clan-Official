@@ -15,7 +15,8 @@ class EnhancedFAQ {
   init() {
     this.setupEventListeners();
     this.setupFAQAccordion();
-    this.updateSearchResults();
+    // Aplicar filtro inicial para mostrar el contador correcto
+    this.filterFAQs();
   }
 
   setupEventListeners() {
@@ -229,28 +230,31 @@ class EnhancedFAQ {
   updateSearchResultsCount(count) {
     if (!this.searchResultsCount) return;
 
-    if (this.searchQuery) {
+    const totalPreguntas = this.faqItems.length;
+    const hayBusqueda = this.searchQuery && this.searchQuery.length > 0;
+    const hayCategoria = this.currentCategory !== "all";
+
+    if (hayBusqueda) {
+      // Mostrar resultados de búsqueda
       this.searchResultsCount.textContent = `${count} resultado${count !== 1 ? "s" : ""}`;
       this.searchResultsCount.style.display = "block";
+    } else if (hayCategoria) {
+      // Mostrar total de preguntas en la categoría seleccionada
+      const preguntasEnCategoria = Array.from(this.faqItems).filter(
+        (item) => item.dataset.category === this.currentCategory
+      ).length;
+      this.searchResultsCount.textContent = `${preguntasEnCategoria} preguntas en esta categoría`;
+      this.searchResultsCount.style.display = "block";
     } else {
-      this.searchResultsCount.style.display = "none";
-    }
-  }
-
-  updateSearchResults() {
-    if (this.searchResultsCount && !this.searchQuery) {
-      const total = this.faqItems.length;
-      this.searchResultsCount.textContent = `${total} preguntas`;
+      // Mostrar total general
+      this.searchResultsCount.textContent = `${totalPreguntas} preguntas`;
       this.searchResultsCount.style.display = "block";
     }
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
   new EnhancedFAQ();
-
 
   if (!document.querySelector("#faq-highlight-styles")) {
     const style = document.createElement("style");

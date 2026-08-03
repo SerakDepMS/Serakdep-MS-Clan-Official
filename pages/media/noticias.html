@@ -2,37 +2,22 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-  <script>try{var t=localStorage.getItem('sms_theme')||(document.cookie.match(/sms_theme=([^;]+)/)||[])[1];if(t==='dark')document.documentElement.classList.add('dark-theme');}catch(e){}</script>
+    <script>
+      try {
+        var t = localStorage.getItem('sms_theme') || (document.cookie.match(/sms_theme=([^;]+)/) || [])[1];
+        if (t === 'dark') document.documentElement.classList.add('dark-theme');
+      } catch (e) {}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Noticias del Clan - Serakdep MS</title>
-    <meta
-      name="description"
-      content="Últimas noticias, actualizaciones y anuncios del clan Serakdep MS de Roblox"
-    />
-    <meta
-      name="keywords"
-      content="Roblox, clan, noticias, actualizaciones, anuncios, eventos, torneos"
-    />
+    <meta name="description" content="Últimas noticias, actualizaciones y anuncios del clan Multi-Gamer Serakdep MS" />
+    <meta name="keywords" content="Multi-Gamer, clan, noticias, actualizaciones, anuncios, eventos, torneos, eSports" />
     <meta name="google-site-verification" content="9tjYSYGFCUfKDVZdeJDtDbpOyUBxd0uEh86botq02_0" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../../assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../../assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../../assets/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="../../assets/favicon/site.webmanifest" />
     <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
@@ -43,19 +28,10 @@
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
     <link rel="stylesheet" href="../../assets/css/chatbot.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <script>
-
-
       const API_DB = "https://api.npoint.io/c7935f8e8b0b09b0b07b";
 
       window.APP_CONFIG = {
@@ -69,43 +45,46 @@
       console.log("URL npoint.io:", API_DB);
       console.log("Modo: Solo lectura (sin comentarios)");
     </script>
-  
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#2d6a4f" />
 
-  <!-- Open Graph / Facebook / WhatsApp / Discord -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html" />
-  <meta property="og:title" content="Noticias y Novedades - Serakdep MS" />
-  <meta property="og:description" content="Mantente al dia con las ultimas noticias, actualizaciones y comunicados oficiales del clan Serakdep MS." />
-  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="Serakdep MS Clan Official" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="theme-color" content="#2d6a4f" />
 
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html" />
-  <meta name="twitter:title" content="Noticias y Novedades - Serakdep MS" />
-  <meta name="twitter:description" content="Mantente al dia con las ultimas noticias, actualizaciones y comunicados oficiales del clan Serakdep MS." />
-  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
-  <meta name="twitter:site" content="@serakdepms" />
-  <meta name="theme-color" content="#2d6a4f" />
-</head>
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
-  <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
-    <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros para mejorar tu experiencia. 
-    Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso. 
-    <a href="../../legal/cookies.html" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Más información</a>
-  </p>
-  <button onclick="aceptarCookies()" style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
-  <button onclick="rechazarCookies()" style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
-</div>
+    <!-- Open Graph / Facebook / WhatsApp / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html" />
+    <meta property="og:title" content="Noticias y Novedades - Serakdep MS" />
+    <meta property="og:description" content="Mantente al dia con las ultimas noticias, actualizaciones y comunicados oficiales del clan Serakdep MS." />
+    <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Serakdep MS Clan Official" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html" />
+    <meta name="twitter:title" content="Noticias y Novedades - Serakdep MS" />
+    <meta name="twitter:description" content="Mantente al dia con las ultimas noticias, actualizaciones y comunicados oficiales del clan Serakdep MS." />
+    <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
+    <meta name="twitter:site" content="@serakdepms" />
+    <meta name="theme-color" content="#2d6a4f" />
+  </head>
+
   <body>
+    <!-- COOKIE BANNER - Ahora dentro del body -->
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
+      <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
+        <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros para mejorar tu experiencia.
+        Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso.
+        <a href="../../legal/cookies.html" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Más información</a>
+      </p>
+      <button onclick="aceptarCookies()" style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
+      <button onclick="rechazarCookies()" style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
+    </div>
+
     <header>
       <div class="container header-container">
         <div class="logo">
@@ -232,66 +211,7 @@
               </div>
             </div>
           </div>
-
-          <div class="sidebar-widget">
-            <h3><i class="fab fa-whatsapp"></i> Canal de WhatsApp</h3>
-            <p>
-              Únete a nuestro canal oficial para recibir notificaciones
-              instantáneas
-            </p>
-
-            <div class="whatsapp-widget">
-              <div class="whatsapp-stats">
-                <div class="whatsapp-stat">
-                  <i class="fas fa-users"></i>
-                  <div>
-                    <h4>Miembros</h4>
-                    <p id="whatsapp-members">0</p>
-                  </div>
-                </div>
-                <div class="whatsapp-stat">
-                  <i class="fas fa-bell"></i>
-                  <div>
-                    <h4>Notificaciones</h4>
-                    <p id="whatsapp-notifications">12</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="whatsapp-buttons">
-                <a
-                  href="https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j"
-                  class="btn btn-whatsapp"
-                  target="_blank"
-                  rel="noopener"
-                  id="join-whatsapp-btn"
-                >
-                  <i class="fab fa-whatsapp"></i> Unirse al Canal
-                </a>
-
-                <button class="btn btn-outline-whatsapp" id="whatsapp-qr-btn">
-                  <i class="fas fa-qrcode"></i> Ver QR
-                </button>
-              </div>
-
-              <div class="whatsapp-features">
-                <h4><i class="fas fa-check-circle"></i> Beneficios:</h4>
-                <ul>
-                  <li>
-                    <i class="fas fa-bolt"></i> Notificaciones al instante
-                  </li>
-                  <li><i class="fas fa-newspaper"></i> Novedades exclusivas</li>
-                  <li>
-                    <i class="fas fa-gamepad"></i> Recordatorios de
-                    eventos
-                  </li>
-                  <li><i class="fas fa-trophy"></i> Anuncios de torneos</li>
-                </ul>
-              </div>
-
-              <div class="whatsapp-clicks" id="whatsapp-clicks"></div>
-            </div>
-          </div>
+          <!-- El widget de Canal de WhatsApp ha sido eliminado completamente -->
         </aside>
 
         <div class="pagination" id="pagination">
@@ -316,166 +236,56 @@
               vive la mejor experiencia de gaming.
             </p>
             <div class="social-links">
-              <a href="https://discord.gg/vts4PTHR9K" title="Discord"
-                ><i class="fab fa-discord"></i
-              ></a>
-              <a href="https://x.com/serakdepms?s=21" title="Twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
+              <a href="https://discord.gg/vts4PTHR9K" title="Discord"><i class="fab fa-discord"></i></a>
+              <a href="https://x.com/serakdepms?s=21" title="Twitter"><i class="fab fa-twitter"></i></a>
               <a href="https://www.youtube.com/channel/UCKHUTv_to41m9G3ySa-FkoA" title="YouTube"><i class="fab fa-youtube"></i></a>
-              <a
-                href="https://www.instagram.com/serakdep?igsh=bGlvbnZ0OGE1bnZ0&utm_source=qr"
-                title="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.tiktok.com/@serakdep_ms?_r=1&_t=ZS-97rpCvctkQ9"
-                title="TikTok"
-                ><i class="fab fa-tiktok"></i
-              ></a>
+              <a href="https://www.instagram.com/serakdep?igsh=bGlvbnZ0OGE1bnZ0&utm_source=qr" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@serakdep_ms?_r=1&_t=ZS-97rpCvctkQ9" title="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
 
           <div class="footer-section">
             <h3 class="footer-title">Enlaces Rápidos</h3>
             <ul class="footer-links">
-              <li>
-                <a href="../../index.html"
-                  ><i class="fas fa-chevron-right"></i> Inicio</a
-                >
-              </li>
-              <li>
-                <a href="../clan/reglamento.html"
-                  ><i class="fas fa-chevron-right"></i> Reglamento</a
-                >
-              </li>
-              <li>
-                <a href="../../forms/inscripcion.html"
-                  ><i class="fas fa-chevron-right"></i> Formulario</a
-                >
-              </li>
-              <li>
-                <a href="../clan/faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
-              </li>
-              <li>
-                <a href="../eventos.html"
-                  ><i class="fas fa-chevron-right"></i> Eventos</a
-                >
-              </li>
-              <li>
-                <a href="noticias.html"
-                  ><i class="fas fa-chevron-right"></i> Noticias</a
-                >
-              </li>
-              <li>
-                <a href="../contacto.html"
-                  ><i class="fas fa-chevron-right"></i> Contacto</a
-                >
-              </li>
-              <li>
-                <a href="lore.html"
-                  ><i class="fas fa-chevron-right"></i> Lore del Clan</a
-                >
-              </li>
-              <li>
-                <a href="../clan/alianzas.html"
-                  ><i class="fas fa-chevron-right"></i> Alianzas</a
-                >
-              </li>
-              <li>
-                <a href="../creditos.html"
-                  ><i class="fas fa-chevron-right"></i> Créditos</a
-                >
-              </li>
-              <li>
-                <a href="videotutoriales.html"
-                  ><i class="fas fa-chevron-right"></i> Tutoriales</a
-                >
-              </li>
-              <li>
-                <a href="../laboratorio.html"
-                  ><i class="fas fa-chevron-right"></i> CodeTurbo</a
-                >
-              </li>
+              <li><a href="../../index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+              <li><a href="../clan/reglamento.html"><i class="fas fa-chevron-right"></i> Reglamento</a></li>
+              <li><a href="../../forms/inscripcion.html"><i class="fas fa-chevron-right"></i> Formulario</a></li>
+              <li><a href="../clan/faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+              <li><a href="../eventos.html"><i class="fas fa-chevron-right"></i> Eventos</a></li>
+              <li><a href="noticias.html"><i class="fas fa-chevron-right"></i> Noticias</a></li>
+              <li><a href="../contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+              <li><a href="lore.html"><i class="fas fa-chevron-right"></i> Lore del Clan</a></li>
+              <li><a href="../clan/alianzas.html"><i class="fas fa-chevron-right"></i> Alianzas</a></li>
+              <li><a href="../creditos.html"><i class="fas fa-chevron-right"></i> Créditos</a></li>
+              <li><a href="videotutoriales.html"><i class="fas fa-chevron-right"></i> Tutoriales</a></li>
+              <li><a href="../laboratorio.html"><i class="fas fa-chevron-right"></i> CodeTurbo</a></li>
             </ul>
           </div>
-
 
           <div class="footer-section">
             <h3 class="footer-title">Contacto</h3>
             <ul class="footer-links">
-              <li>
-                <a href="mailto:serakdepmsofficial7@gmail.com">
-                  <i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/573116546484"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-whatsapp"></i> WhatsApp del Clan
-                </a>
-              </li>
-              <li>
-                <a href="../../forms/reportar.html">
-                  <i class="fas fa-user-shield"></i> Reportar problema
-                </a>
-              </li>
-              <li>
-                <a href="../../forms/sugerencias.html">
-                  <i class="fas fa-lightbulb"></i> Sugerencias
-                </a>
-              </li>
-              <li>
-                <a href="../../forms/aspirantes-admin.html">
-                  <i class="fas fa-user-tie"></i> Aspirar a Admin
-                </a>
-              </li>
-              <li>
-                <a href="../../forms/aspirantes-colaborador.html">
-                  <i class="fas fa-users-cog"></i> Aspirar a Colaborador
-                </a>
-              </li>
+              <li><a href="mailto:serakdepmsofficial7@gmail.com"><i class="fas fa-envelope"></i> serakdepmsofficial7@gmail.com</a></li>
+              <li><a href="https://wa.me/573116546484" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp del Clan</a></li>
+              <li><a href="../../forms/reportar.html"><i class="fas fa-user-shield"></i> Reportar problema</a></li>
+              <li><a href="../../forms/sugerencias.html"><i class="fas fa-lightbulb"></i> Sugerencias</a></li>
+              <li><a href="../../forms/aspirantes-admin.html"><i class="fas fa-user-tie"></i> Aspirar a Admin</a></li>
+              <li><a href="../../forms/aspirantes-colaborador.html"><i class="fas fa-users-cog"></i> Aspirar a Colaborador</a></li>
             </ul>
           </div>
 
           <div class="footer-section">
             <h3 class="footer-title">Información Legal</h3>
             <ul class="footer-links">
-              <li>
-                <a href="../../legal/privacidad.html">
-                  <i class="fas fa-user-shield"></i> Política de Privacidad
-                </a>
-              </li>
-              <li>
-                <a href="../../legal/terminos.html">
-                  <i class="fas fa-file-contract"></i> Términos de Servicio
-                </a>
-              </li>
-              <li>
-                <a href="../../legal/cookies.html">
-                  <i class="fas fa-cookie-bite"></i> Política de Cookies
-                </a>
-              </li>
-              <li>
-                <a href="../../legal/dmca.html">
-                  <i class="fas fa-balance-scale"></i> Aviso DMCA
-                </a>
-              </li>
-              <li>
-                <a href="../creditos.html">
-                  <i class="fas fa-heart"></i> Créditos
-                </a>
-              </li>
-              <li>
-                <a href="../contacto.html">
-                  <i class="fas fa-gavel"></i> Asuntos Legales
-                </a>
-              </li>
+              <li><a href="../../legal/privacidad.html"><i class="fas fa-user-shield"></i> Política de Privacidad</a></li>
+              <li><a href="../../legal/terminos.html"><i class="fas fa-file-contract"></i> Términos de Servicio</a></li>
+              <li><a href="../../legal/cookies.html"><i class="fas fa-cookie-bite"></i> Política de Cookies</a></li>
+              <li><a href="../../legal/dmca.html"><i class="fas fa-balance-scale"></i> Aviso DMCA</a></li>
+              <li><a href="../creditos.html"><i class="fas fa-heart"></i> Créditos</a></li>
+              <li><a href="../contacto.html"><i class="fas fa-gavel"></i> Asuntos Legales</a></li>
             </ul>
           </div>
+
           <div class="footer-section">
             <h3 class="footer-title">Noticias Recientes</h3>
             <ul class="recent-news" id="recent-news-footer">
@@ -492,7 +302,7 @@
             © <span id="current-year">2026</span> Serakdep MS - Comunidad & Clan Oficial Multi-Gamer.
             Todos los derechos reservados.
           </p>
-          <p>Esta página no está afiliada a Roblox Corporation.</p>
+          <p>Esta página no está afiliada a Roblox Corporation, Riot Games, Epic Games, Activision, Valve, Garena, Psyonix, Kakao Games, NetEase, Supercell ni Microsoft/Mojang.</p>
         </div>
       </div>
     </footer>
@@ -506,14 +316,12 @@
 
       setTimeout(() => {
         const loading = document.querySelector(".loading-news");
-        if (
-          loading &&
-          document.getElementById("news-container").children.length > 1
-        ) {
+        if (loading && document.getElementById("news-container").children.length > 1) {
           loading.style.display = "none";
         }
       }, 3000);
     </script>
+
     <script src="../../assets/js/noticias.js" defer></script>
     <script src="../../assets/js/redirect.js" defer></script>
     <script src="../../assets/js/chatbot.js" defer></script>

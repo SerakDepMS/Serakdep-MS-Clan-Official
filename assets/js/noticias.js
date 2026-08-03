@@ -26,12 +26,6 @@ let datosAnterioresStr = '';
 let newsDatabase = {
   lastUpdate: new Date().toISOString(),
   totalViews: 786,
-  whatsappStats: {
-    members: 6,
-    notifications: 1,
-    clicks: 6,
-    joinLink: "https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j",
-  },
   news: [],
 };
 
@@ -43,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initializeData();
   initEventListeners();
-  setupWhatsappSystem();
   initStatsScroll();
 
   setInterval(actualizarNoticiasPeriodicamente, INTERVALO_ACTUALIZACION);
@@ -89,8 +82,7 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
 
     const nuevoEstado = {
       news: nuevasNoticias,
-      totalViews: nuevasNoticias.reduce((sum, n) => sum + (n.views || 0), 0),
-      whatsappMembers: data.stats?.whatsappMembers || newsDatabase.whatsappStats.members
+      totalViews: nuevasNoticias.reduce((sum, n) => sum + (n.views || 0), 0)
     };
 
     const nuevoEstadoStr = JSON.stringify(nuevoEstado);
@@ -99,9 +91,6 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
     if (hanCambiado) {
       newsDatabase.news = nuevasNoticias;
       newsDatabase.totalViews = nuevoEstado.totalViews;
-      if (data.stats && data.stats.whatsappMembers) {
-        newsDatabase.whatsappStats.members = data.stats.whatsappMembers;
-      }
       
       console.log(`✅ ¡NOTICIAS ACTUALIZADAS! ${newsDatabase.news.length} noticias cargadas.`);
       datosAnterioresStr = nuevoEstadoStr;
@@ -130,8 +119,7 @@ async function initializeData() {
     if (success) {
       datosAnterioresStr = JSON.stringify({
         news: newsDatabase.news,
-        totalViews: newsDatabase.totalViews,
-        whatsappMembers: newsDatabase.whatsappStats.members
+        totalViews: newsDatabase.totalViews
       });
       return;
     }
@@ -160,14 +148,12 @@ async function initializeData() {
   updateAll();
   datosAnterioresStr = JSON.stringify({
     news: newsDatabase.news,
-    totalViews: newsDatabase.totalViews,
-    whatsappMembers: newsDatabase.whatsappStats.members
+    totalViews: newsDatabase.totalViews
   });
 }
 
 function updateAll() {
   updateStats();
-  updateWhatsappStats();
   renderNews();
   loadSidebar();
 }
@@ -436,108 +422,6 @@ async function readMoreNews(id) {
   });
 }
 
-function setupWhatsappSystem() {
-  const joinBtn = document.getElementById("join-whatsapp-btn");
-  if (joinBtn) {
-    joinBtn.addEventListener("click", function (e) {
-      newsDatabase.whatsappStats.clicks++;
-
-      if (newsDatabase.whatsappStats.clicks % 3 === 0) {
-        newsDatabase.whatsappStats.members++;
-        showNotification("¡Bienvenido al canal! Ya somos " + newsDatabase.whatsappStats.members + " miembros", "success");
-      }
-
-      saveToLocalStorage();
-      updateWhatsappStats();
-    });
-  }
-
-  const qrBtn = document.getElementById("whatsapp-qr-btn");
-  if (qrBtn) {
-    qrBtn.addEventListener("click", showWhatsappQR);
-  }
-
-  updateWhatsappStats();
-}
-
-function updateWhatsappStats() {
-  const membersElement = document.getElementById("whatsapp-members");
-  const notificationsElement = document.getElementById("whatsapp-notifications");
-  const clicksElement = document.getElementById("whatsapp-clicks");
-
-  if (membersElement) membersElement.textContent = newsDatabase.whatsappStats.members;
-  if (notificationsElement) notificationsElement.textContent = newsDatabase.whatsappStats.notifications;
-  if (clicksElement) {
-    clicksElement.innerHTML = `<strong>${newsDatabase.whatsappStats.clicks}</strong> personas han accedido`;
-  }
-}
-
-function showWhatsappQR() {
-  const modalHTML = `
-    <div class="whatsapp-qr-modal active">
-      <div class="qr-modal-content">
-        <button class="close-qr">&times;</button>
-        <div class="qr-header">
-          <h3><i class="fab fa-whatsapp"></i> Únete por QR</h3>
-          <p>Escanea este código con WhatsApp para unirte al canal</p>
-        </div>
-        <div class="qr-image">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
-            newsDatabase.whatsappStats.joinLink
-          )}&format=png&color=25D366&bgcolor=ffffff&margin=10" 
-               alt="QR Code para unirse al canal de WhatsApp" 
-               style="width:100%;height:100%;object-fit:contain;">
-        </div>
-        <div class="qr-actions">
-          <a href="${newsDatabase.whatsappStats.joinLink}" class="qr-link" target="_blank" id="direct-whatsapp-link">
-            <i class="fab fa-whatsapp"></i> Abrir en WhatsApp Web
-          </a>
-          <button class="btn btn-primary copy-whatsapp-link">
-            <i class="fas fa-copy"></i> Copiar Enlace
-          </button>
-        </div>
-        <div class="whatsapp-clicks" id="whatsapp-clicks-modal">
-          ${newsDatabase.whatsappStats.clicks} personas han accedido
-        </div>
-      </div>
-    </div>
-  `;
-
-  document.body.insertAdjacentHTML("beforeend", modalHTML);
-
-  const modal = document.querySelector(".whatsapp-qr-modal.active");
-  const closeBtn = modal.querySelector(".close-qr");
-  const copyBtn = modal.querySelector(".copy-whatsapp-link");
-  const directLink = modal.querySelector("#direct-whatsapp-link");
-
-  closeBtn.addEventListener("click", () => modal.remove());
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.remove();
-  });
-
-  directLink.addEventListener("click", () => {
-    newsDatabase.whatsappStats.clicks++;
-    saveToLocalStorage();
-    updateWhatsappStats();
-    const clicksModalElement = document.getElementById("whatsapp-clicks-modal");
-    if (clicksModalElement) {
-      clicksModalElement.innerHTML = `${newsDatabase.whatsappStats.clicks} personas han accedido`;
-    }
-  });
-
-  copyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(newsDatabase.whatsappStats.joinLink).then(() => {
-      showNotification("Enlace copiado al portapapeles", "success");
-      copyBtn.innerHTML = '<i class="fas fa-check"></i> ¡Copiado!';
-      setTimeout(() => {
-        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar Enlace';
-      }, 2000);
-    }).catch(() => {
-      showNotification("Error al copiar", "error");
-    });
-  });
-}
-
 function updateStats() {
   const totalNews = newsDatabase.news.length;
   const importantNews = newsDatabase.news.filter((n) => n.important).length;
@@ -691,15 +575,8 @@ function loadFromLocalStorage() {
     if (saved) {
       const parsed = JSON.parse(saved);
       if (parsed.news && Array.isArray(parsed.news)) {
-        newsDatabase = parsed;
-        if (!newsDatabase.whatsappStats) {
-          newsDatabase.whatsappStats = {
-            members: 0,
-            notifications: 0,
-            clicks: 0,
-            joinLink: "https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j",
-          };
-        }
+        newsDatabase.news = parsed.news;
+        newsDatabase.totalViews = parsed.totalViews || 0;
       }
     }
   } catch (e) {}

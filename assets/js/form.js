@@ -454,6 +454,7 @@ function setupReportForm() {
     try {
       const formData = {
         reportType: document.getElementById("report-type").value,
+        reportDivision: document.getElementById("report-division").value, // <-- NUEVO
         reportDetails: document.getElementById("report-details").value.trim(),
         reportEvidence: document.getElementById("report-evidence").value.trim() || "No proporcionada",
         confidential: document.getElementById("report-confidential").checked,
@@ -474,6 +475,7 @@ function setupReportForm() {
 
 async function sendReportEmail(data) {
   const contentHtml = `
+    <strong>DIVISIÓN:</strong> ${data.reportDivision}<br><br>
     <strong>TIPO DE PROBLEMA:</strong> ${data.reportType}<br><br>
     <strong>DESCRIPCIÓN:</strong><br>${data.reportDetails.replace(/\n/g, "<br>")}<br><br>
     <strong>EVIDENCIA:</strong> ${data.reportEvidence}
@@ -481,6 +483,7 @@ async function sendReportEmail(data) {
 
   const templateParams = {
     roblox_name: "REPORTE DE PROBLEMA",
+    division: data.reportDivision, // <-- NUEVO
     age: "N/A",
     country: "N/A",
     timezone: "N/A",
@@ -544,6 +547,7 @@ function setupSuggestionForm() {
     try {
       const formData = {
         suggestionType: document.getElementById("suggestion-type").value,
+        suggestionDivision: document.getElementById("suggestion-division").value, // <-- NUEVO
         suggestionDetails: document.getElementById("suggestion-details").value.trim(),
         anonymous: document.getElementById("suggestion-anonymous").checked,
       };
@@ -563,6 +567,7 @@ function setupSuggestionForm() {
 
 async function sendSuggestionEmail(data) {
   const contentHtml = `
+    <strong>DIVISIÓN:</strong> ${data.suggestionDivision}<br><br>
     <strong>ÁREA DE MEJORA:</strong> ${data.suggestionType}<br><br>
     <strong>SUGERENCIA:</strong><br>${data.suggestionDetails.replace(/\n/g, "<br>")}<br><br>
     <strong>ANÓNIMO:</strong> ${data.anonymous ? "Sí" : "No"}
@@ -570,6 +575,7 @@ async function sendSuggestionEmail(data) {
 
   const templateParams = {
     roblox_name: "SUGERENCIA PARA EL CLAN",
+    division: data.suggestionDivision, // <-- NUEVO
     age: "N/A",
     country: "N/A",
     timezone: "N/A",
@@ -637,6 +643,7 @@ function setupAdminApplicationForm() {
       const formData = {
         robloxName: document.getElementById("admin-roblox-name").value.trim(),
         age: document.getElementById("admin-age").value.trim(),
+        division: document.getElementById("admin-division").value,
         country: document.getElementById("admin-country").value,
         timezone: document.getElementById("admin-timezone").value,
         whatsapp: document.getElementById("admin-whatsapp").value.trim(),
@@ -679,6 +686,7 @@ async function sendAdminApplicationEmail(data) {
   const discordDisplay = '<span style="color: #e74c3c;">No proporcionado</span>';
 
   const contentHtml = `
+    <strong>DIVISIÓN PRINCIPAL:</strong> ${data.division}<br><br>
     <strong>MOTIVACIÓN PARA SER ADMIN:</strong><br>${data.whyAdmin.replace(/\n/g, "<br>")}<br><br>
     <strong>EXPERIENCIA PREVIA:</strong><br>${data.experience.replace(/\n/g, "<br>")}<br><br>
     <strong>MEJORAS PROPUESTAS:</strong><br>${data.improvements.replace(/\n/g, "<br>")}<br><br>
@@ -707,6 +715,7 @@ async function sendAdminApplicationEmail(data) {
 
   const templateParams = {
     roblox_name: `[ASPIRANTE ADMIN] ${data.robloxName}`,
+    division: data.division,
     age: data.age,
     country: data.country,
     timezone: data.timezone,
@@ -802,6 +811,7 @@ function setupColaboradorForm() {
       const formData = {
         robloxName: document.getElementById("colab-roblox-name").value.trim(),
         age: document.getElementById("colab-age").value.trim(),
+        division: document.getElementById("colab-division").value,
         country: document.getElementById("colab-country").value,
         timezone: document.getElementById("colab-timezone").value,
         whatsapp: document.getElementById("colab-whatsapp").value.trim() || "No proporcionado",
@@ -839,6 +849,7 @@ async function sendColaboradorEmail(data) {
     : '<span style="color: #e74c3c;">No proporcionado</span>';
 
   const contentHtml = `
+    <strong>DIVISIÓN PRINCIPAL:</strong> ${data.division}<br><br>
     <strong>ÁREA DE COLABORACIÓN:</strong> ${areaText}<br><br>
     <strong>MOTIVACIÓN:</strong><br>${data.whyColab.replace(/\n/g, "<br>")}<br><br>
     <strong>EXPERIENCIA PREVIA:</strong><br>${data.experience.replace(/\n/g, "<br>")}<br><br>
@@ -868,6 +879,7 @@ async function sendColaboradorEmail(data) {
 
   const templateParams = {
     roblox_name: `[ASPIRANTE COLABORADOR] ${data.robloxName}`,
+    division: data.division,
     age: data.age,
     country: data.country,
     timezone: data.timezone,
@@ -903,7 +915,7 @@ async function sendColaboradorEmail(data) {
 
 function validateColaboradorForm() {
   const age = parseInt(document.getElementById("colab-age").value, 10);
-  if (isNaN(age) || age < 15) {
+  if (isNaN(age) || age < 17) {
     showMessage("La edad mínima para ser colaborador es 17 años.", "error");
     document.getElementById("colab-age").focus();
     return false;
