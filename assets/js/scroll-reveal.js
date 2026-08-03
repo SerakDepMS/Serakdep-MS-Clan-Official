@@ -29,6 +29,12 @@
     '.rank-item',
     '.tech-item',
     '.gallery-stats .stat',
+    '.direct-card',
+    '.div-section',
+    '.rule-card',
+    '.sanction-card',
+    '.whatsapp-section',
+    '.game-info-block',
   ];
 
 

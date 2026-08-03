@@ -39,6 +39,24 @@
       La edad mínima para unirse a Serakdep MS es de <strong>16 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
       Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 16, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
+    {
+      keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'league of legends', 'cs2', 'counter strike', 'rocket league', 'supercell', 'brawl stars', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
+      response: `<strong>Sección & Divisiones Multi-Gamer de Serakdep MS</strong><br><br>
+      Serakdep MS es una comunidad y clan oficial Multi-Gamer con <strong>12 divisiones competitivas</strong> activas:<br><br>
+      🎮 <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
+      ⛏️ <strong>Minecraft:</strong> Servidor con economía, Bedwars 4v4 y arenas PvP.<br>
+      🔫 <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
+      🎯 <strong>Valorant:</strong> Escuadras 5v5, tácticas de agentes y clasificatorias.<br>
+      🏆 <strong>Fortnite:</strong> Battle Royale, cero construcción y torneos de mapa.<br>
+      🔥 <strong>Free Fire:</strong> Duelos de Escuadra 4v4 y salas personalizadas.<br>
+      🚗 <strong>Rocket League:</strong> Competencias 2v2, 3v3 y mecánicas aéreas.<br>
+      ⚔️ <strong>League of Legends:</strong> Grieta del Invocador 5v5 y Clash.<br>
+      💣 <strong>Counter-Strike 2:</strong> Modo Premier 5v5 y ejecuciones tácticas.<br>
+      📱 <strong>Supercell:</strong> Brawl Stars (Mega Hachas) y Clash Royale.<br>
+      🛡️ <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
+      💥 <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
+      Puedes explorar cada división y unirte a su grupo oficial de WhatsApp desde el <strong>Catálogo Multi-Gamer</strong> en el menú o desde <code>pages/juegos/portal.html</code>.`
+    },
  
  
 
@@ -916,12 +934,13 @@
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
       if (!hasStarted) {
-        addBotMessage(`🐼 <strong>¡Hola! Soy el asistente IA de Serakdep MS.</strong><br><br>
-        Estoy aquí para resolver todas tus dudas sobre el clan. Puedes preguntarme sobre:<br>
+        addBotMessage(`🐼 <strong>¡Hola! Soy el asistente IA de Serakdep MS Multi-Gamer.</strong><br><br>
+        Estoy aquí para resolver todas tus dudas sobre nuestra comunidad eSports y clan. Puedes preguntarme sobre:<br>
+        • 🎮 <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, LoL, CS2, Rocket League, Supercell, Guardian Tales y Blood Strike.<br>
         • Cómo inscribirte y los requisitos.<br>
-        • El reglamento, sanciones y proceso disciplinario.<br>
-        • Nuestro servidor de Discord y grupos de WhatsApp.<br>
-        • Eventos, torneos y juegos populares.<br>
+        • El 📜 <strong>Reglamento General Multi-Gamer</strong>, sanciones y proceso disciplinario.<br>
+        • Nuestro servidor de Discord y grupos de WhatsApp por división.<br>
+        • Eventos, torneos eSports y convocatorias.<br>
         • Cómo reportar problemas o contactar al staff.<br>
         • La estructura del clan y cómo ascender.<br>
         • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>

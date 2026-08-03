@@ -491,7 +491,7 @@ class VideoPlayerFinal {
             ).textContent = this.videoList[this.currentVideoIndex].title;
           }
 
-          this.showNotification("ðŸ–¥ï¸ Pantalla completa activada");
+          this.showNotification("🖥️ Pantalla completa activada");
 
           window.dispatchEvent(new Event("resize"));
         })
@@ -631,7 +631,7 @@ class VideoPlayerFinal {
     this.isFullscreen = false;
     this.fullscreenState.isActive = false;
 
-    this.showNotification("ðŸ–¥ï¸ Pantalla completa desactivada");
+    this.showNotification("🖥️ Pantalla completa desactivada");
   }
 
   onFullscreenChange() {
@@ -703,7 +703,7 @@ class VideoPlayerFinal {
     }
 
     this.updateCounter();
-    this.showNotification(`ðŸŽ¬ ${videoData.title}`);
+    this.showNotification(`🎬 ${videoData.title}`);
 
     if (this.autoplayToggle.checked) {
       this.currentPlayPromise = this.video.play();
@@ -825,7 +825,7 @@ class VideoPlayerFinal {
     this.playbackSpeed = parseFloat(button.dataset.speed);
     this.video.playbackRate = this.playbackSpeed;
 
-    this.showNotification(`âš¡ Velocidad: ${this.playbackSpeed}x`);
+    this.showNotification(`⚡ Velocidad: ${this.playbackSpeed}x`);
   }
 
   changeQuality(button) {
@@ -835,15 +835,15 @@ class VideoPlayerFinal {
 
     const quality = button.dataset.quality;
     this.showNotification(
-      `ðŸ“º Calidad: ${quality === "auto" ? "AutomÃ¡tica" : quality + "p"}`
+      `📺 Calidad: ${quality === "auto" ? "Automática" : quality + "p"}`
     );
   }
 
   toggleAutoplay() {
     this.showNotification(
       this.autoplayToggle.checked
-        ? "â–¶ï¸ Autoplay activado"
-        : "â¸ï¸ Autoplay desactivado"
+        ? "▶️ Autoplay activado"
+        : "⏸️ Autoplay desactivado"
     );
   }
 
@@ -851,23 +851,23 @@ class VideoPlayerFinal {
     this.video.loop = this.loopToggle.checked;
     this.showNotification(
       this.loopToggle.checked
-        ? "ðŸ” RepeticiÃ³n activada"
-        : "ðŸ” RepeticiÃ³n desactivada"
+        ? "🔄 Repetición activada"
+        : "🔄 Repetición desactivada"
     );
   }
 
   toggleSubtitles() {
     this.showNotification(
       this.subtitlesToggle.checked
-        ? "ðŸ“ SubtÃ­tulos activados"
-        : "ðŸ“ SubtÃ­tulos desactivados"
+        ? "💬 Subtítulos activados"
+        : "💬 Subtítulos desactivados"
     );
   }
 
   restartVideo() {
     this.video.currentTime = 0;
     this.video.play();
-    this.showNotification("ðŸ”„ Video reiniciado");
+    this.showNotification("🔄 Video reiniciado");
     this.closeSettings();
   }
 
@@ -881,7 +881,7 @@ class VideoPlayerFinal {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    this.showNotification("ðŸ“¥ Descargando video...");
+    this.showNotification("📥 Descargando video...");
     this.closeSettings();
   }
 
@@ -898,7 +898,7 @@ class VideoPlayerFinal {
       });
     } else {
       navigator.clipboard.writeText(`${shareText} - ${shareUrl}`);
-      this.showNotification("ðŸ“‹ Enlace copiado al portapapeles");
+      this.showNotification("📋 Enlace copiado al portapapeles");
     }
 
     this.closeSettings();
@@ -1097,7 +1097,7 @@ class VideoPlayerFinal {
   onVideoError(e) {
     console.error("Error cargando video:", e);
     this.hideLoading();
-    this.showNotification("âŒ Error cargando el video");
+    this.showNotification("❌ Error cargando el video");
 
     setTimeout(() => this.nextVideo(), 2000);
   }
@@ -1109,11 +1109,11 @@ class VideoPlayerFinal {
     if (this.isMuted) {
       this.volumeToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
       this.mobileVolumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-      this.showNotification("ðŸ”‡ Sonido silenciado");
+      this.showNotification("🔇 Sonido silenciado");
     } else {
       this.volumeToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
       this.mobileVolumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-      this.showNotification("ðŸ”Š Sonido activado");
+      this.showNotification("🔊 Sonido activado");
       this.video.volume = this.volume > 0 ? this.volume : 0.5;
       this.volumeSlider.value = this.video.volume;
     }
