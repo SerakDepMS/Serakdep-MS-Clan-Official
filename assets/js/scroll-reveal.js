@@ -1,7 +1,4 @@
-/**
- * scroll-reveal.js - Efecto de aparición al hacer scroll
- * Versión robusta: no falla si faltan selectores.
- */
+
 (function() {
   'use strict';
 

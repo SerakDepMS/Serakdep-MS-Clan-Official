@@ -710,7 +710,7 @@ class VideoPlayerFinal {
       if (this.currentPlayPromise !== undefined) {
         this.currentPlayPromise.catch((error) => {
           if (error.name !== 'AbortError') {
-            //console.log("Autoplay bloqueado por el navegador (normal)");
+
             this.showCenterPlayButton();
           }
         });

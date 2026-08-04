@@ -625,7 +625,7 @@
   100% { opacity: 1; }
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .calendar-grid {
     gap: 5px;
@@ -766,7 +766,7 @@
   }
 }
 
-/* Dark Theme Overrides (solo para elementos que existen) */
+
 body.dark-theme .event-calendar {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);

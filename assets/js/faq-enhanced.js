@@ -15,7 +15,7 @@ class EnhancedFAQ {
   init() {
     this.setupEventListeners();
     this.setupFAQAccordion();
-    // Aplicar filtro inicial para mostrar el contador correcto
+
     this.filterFAQs();
   }
 
@@ -235,18 +235,18 @@ class EnhancedFAQ {
     const hayCategoria = this.currentCategory !== "all";
 
     if (hayBusqueda) {
-      // Mostrar resultados de búsqueda
+
       this.searchResultsCount.textContent = `${count} resultado${count !== 1 ? "s" : ""}`;
       this.searchResultsCount.style.display = "block";
     } else if (hayCategoria) {
-      // Mostrar total de preguntas en la categoría seleccionada
+
       const preguntasEnCategoria = Array.from(this.faqItems).filter(
         (item) => item.dataset.category === this.currentCategory
       ).length;
       this.searchResultsCount.textContent = `${preguntasEnCategoria} preguntas en esta categoría`;
       this.searchResultsCount.style.display = "block";
     } else {
-      // Mostrar total general
+
       this.searchResultsCount.textContent = `${totalPreguntas} preguntas`;
       this.searchResultsCount.style.display = "block";
     }

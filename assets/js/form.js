@@ -454,7 +454,7 @@ function setupReportForm() {
     try {
       const formData = {
         reportType: document.getElementById("report-type").value,
-        reportDivision: document.getElementById("report-division").value, // <-- NUEVO
+        reportDivision: document.getElementById("report-division").value,
         reportDetails: document.getElementById("report-details").value.trim(),
         reportEvidence: document.getElementById("report-evidence").value.trim() || "No proporcionada",
         confidential: document.getElementById("report-confidential").checked,
@@ -483,7 +483,7 @@ async function sendReportEmail(data) {
 
   const templateParams = {
     roblox_name: "REPORTE DE PROBLEMA",
-    division: data.reportDivision, // <-- NUEVO
+    division: data.reportDivision,
     age: "N/A",
     country: "N/A",
     timezone: "N/A",
@@ -547,7 +547,7 @@ function setupSuggestionForm() {
     try {
       const formData = {
         suggestionType: document.getElementById("suggestion-type").value,
-        suggestionDivision: document.getElementById("suggestion-division").value, // <-- NUEVO
+        suggestionDivision: document.getElementById("suggestion-division").value,
         suggestionDetails: document.getElementById("suggestion-details").value.trim(),
         anonymous: document.getElementById("suggestion-anonymous").checked,
       };
@@ -575,7 +575,7 @@ async function sendSuggestionEmail(data) {
 
   const templateParams = {
     roblox_name: "SUGERENCIA PARA EL CLAN",
-    division: data.suggestionDivision, // <-- NUEVO
+    division: data.suggestionDivision, 
     age: "N/A",
     country: "N/A",
     timezone: "N/A",

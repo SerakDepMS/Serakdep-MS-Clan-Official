@@ -29,22 +29,8 @@
     <link rel="stylesheet" href="../../assets/css/chatbot.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <script>
-      const API_DB = "https://api.npoint.io/c7935f8e8b0b09b0b07b";
-
-      window.APP_CONFIG = {
-        API_DB: API_DB,
-        VERSION: "2.0.0",
-        DEBUG: true,
-        MODE: "read-only",
-      };
-
-      console.log("Sistema de Noticias Solo Lectura");
-      console.log("URL npoint.io:", API_DB);
-      console.log("Modo: Solo lectura (sin comentarios)");
-    </script>
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
@@ -52,7 +38,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="theme-color" content="#2d6a4f" />
 
-    <!-- Open Graph / Facebook / WhatsApp / Discord -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html" />
     <meta property="og:title" content="Noticias y Novedades - Serakdep MS" />
@@ -63,7 +48,6 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Serakdep MS Clan Official" />
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/media/noticias.html" />
     <meta name="twitter:title" content="Noticias y Novedades - Serakdep MS" />
@@ -74,7 +58,7 @@
   </head>
 
   <body>
-    <!-- COOKIE BANNER - Ahora dentro del body -->
+    <!-- COOKIE BANNER -->
     <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
       <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
         <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros para mejorar tu experiencia.
@@ -118,8 +102,7 @@
             <i class="fas fa-newspaper"></i> Noticias del Clan
           </h1>
           <p class="page-subtitle">
-            Mantente informado sobre las últimas actualizaciones, colaboraciones
-            y eventos
+            Mantente informado sobre las últimas actualizaciones, colaboraciones y eventos
           </p>
           <div class="system-info">
             <span class="info-badge">
@@ -145,84 +128,21 @@
             <i class="fas fa-handshake"></i> Colaboraciones
           </button>
           <button class="filter-btn" data-filter="event">
-            <i class="fas fa-calendar-star"></i> Eventos
+            <i class="fas fa-calendar"></i> Eventos
           </button>
           <button class="filter-btn" data-filter="important">
             <i class="fas fa-exclamation-circle"></i> Importantes
           </button>
         </div>
 
-        <div class="news-stats">
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="fas fa-newspaper"></i>
-            </div>
-            <div class="stat-content">
-              <h3>Total de Noticias</h3>
-              <div class="stat-value" id="total-news">0</div>
-            </div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="fas fa-bullhorn"></i>
-            </div>
-            <div class="stat-content">
-              <h3>Anuncios Activos</h3>
-              <div class="stat-value" id="active-announcements">0</div>
-            </div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="fas fa-calendar-check"></i>
-            </div>
-            <div class="stat-content">
-              <h3>Este Mes</h3>
-              <div class="stat-value" id="month-news">0</div>
-            </div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-icon">
-              <i class="fas fa-eye"></i>
-            </div>
-            <div class="stat-content">
-              <h3>Vistas Totales</h3>
-              <div class="stat-value" id="total-views">0</div>
-            </div>
-          </div>
-        </div>
-
         <div class="news-container" id="news-container">
           <div class="loading-news">
             <i class="fas fa-spinner fa-spin"></i>
-            <p>Cargando noticias desde el servidor...</p>
+            <p>Cargando noticias...</p>
           </div>
         </div>
 
-        <aside class="sidebar">
-          <div class="sidebar-widget">
-            <h3><i class="fas fa-fire"></i> Noticias Destacadas</h3>
-            <div class="highlighted-news" id="highlighted-news">
-              <div class="loading-highlighted">
-                <i class="fas fa-spinner fa-spin"></i>
-                <p>Cargando destacadas...</p>
-              </div>
-            </div>
-          </div>
-          <!-- El widget de Canal de WhatsApp ha sido eliminado completamente -->
-        </aside>
 
-        <div class="pagination" id="pagination">
-          <button class="page-btn prev" id="prev-page">
-            <i class="fas fa-chevron-left"></i> Anterior
-          </button>
-          <div class="page-numbers" id="page-numbers"></div>
-          <button class="page-btn next" id="next-page">
-            Siguiente <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
       </div>
     </main>
 
@@ -286,15 +206,7 @@
             </ul>
           </div>
 
-          <div class="footer-section">
-            <h3 class="footer-title">Noticias Recientes</h3>
-            <ul class="recent-news" id="recent-news-footer">
-              <li>
-                <i class="fas fa-spinner fa-spin"></i>
-                <span>Cargando noticias...</span>
-              </li>
-            </ul>
-          </div>
+
         </div>
 
         <div class="copyright">
@@ -302,26 +214,13 @@
             © <span id="current-year">2026</span> Serakdep MS - Comunidad & Clan Oficial Multi-Gamer.
             Todos los derechos reservados.
           </p>
-          <p>Esta página no está afiliada a Roblox Corporation, Riot Games, Epic Games, Activision, Valve, Garena, Psyonix, Kakao Games, NetEase, Supercell ni Microsoft/Mojang.</p>
+          <p>Este sitio web es una plataforma eSports y comunidad independiente Multi-Gamer no afiliada a las desarrolladoras oficiales de los juegos.</p>
         </div>
       </div>
     </footer>
 
     <script src="../../assets/js/config.js" defer></script>
     <script src="../../assets/js/main.js" defer></script>
-
-    <script>
-      console.log("Sistema de Noticias - Modo Solo Lectura");
-      console.log("Conectando con npoint.io...");
-
-      setTimeout(() => {
-        const loading = document.querySelector(".loading-news");
-        if (loading && document.getElementById("news-container").children.length > 1) {
-          loading.style.display = "none";
-        }
-      }, 3000);
-    </script>
-
     <script src="../../assets/js/noticias.js" defer></script>
     <script src="../../assets/js/redirect.js" defer></script>
     <script src="../../assets/js/chatbot.js" defer></script>

@@ -74,7 +74,7 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
     ultimaActualizacionTimestamp = Date.now();
 
   } catch (error) {
-    console.error("❌ Error cargando eventos desde API:", error);
+    console.error("Error cargando eventos desde API:", error);
     const todayEventElement = document.getElementById("today-event");
     if (todayEventElement) {
       todayEventElement.innerHTML = `
@@ -212,7 +212,7 @@ function renderCalendar(month, year) {
       dayElement.appendChild(eventIcons);
     }
     if (isToday) {
-      // El indicador de 'Hoy' ya se muestra con CSS en .calendar-day.today::before
+
     }
     calendarGrid.appendChild(dayElement);
   }

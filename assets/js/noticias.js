@@ -1,12 +1,11 @@
 const CONFIG = {
-  ITEMS_PER_PAGE: 6,
   CATEGORIES: {
-    announcement: { icon: "📢", text: "Anuncio" },
-    tournament: { icon: "🏆", text: "Torneo" },
-    collaboration: { icon: "🤝", text: "Colaboración" },
-    maintenance: { icon: "🔧", text: "Mantenimiento" },
-    update: { icon: "🔄", text: "Actualización" },
-    event: { icon: "🎉", text: "Evento" },
+    announcement: { text: "Anuncio" },
+    tournament: { text: "Torneo" },
+    collaboration: { text: "Colaboración" },
+    maintenance: { text: "Mantenimiento" },
+    update: { text: "Actualización" },
+    event: { text: "Evento" },
   },
 };
 
@@ -19,13 +18,11 @@ if (typeof API_DB === "undefined") {
 const INTERVALO_ACTUALIZACION = 12000;
 
 let currentFilter = "all";
-let currentPage = 1;
 let ultimaActualizacionTimestamp = null;
 let datosAnterioresStr = '';
 
 let newsDatabase = {
   lastUpdate: new Date().toISOString(),
-  totalViews: 786,
   news: [],
 };
 
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initializeData();
   initEventListeners();
-  initStatsScroll();
 
   setInterval(actualizarNoticiasPeriodicamente, INTERVALO_ACTUALIZACION);
 });
@@ -76,13 +72,11 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
       image: newsItem.image || "",
       important: newsItem.important || false,
       pinned: newsItem.pinned || false,
-      views: newsItem.views || 0,
       author: newsItem.author || "Administrador",
     }));
 
     const nuevoEstado = {
       news: nuevasNoticias,
-      totalViews: nuevasNoticias.reduce((sum, n) => sum + (n.views || 0), 0)
     };
 
     const nuevoEstadoStr = JSON.stringify(nuevoEstado);
@@ -90,12 +84,9 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
 
     if (hanCambiado) {
       newsDatabase.news = nuevasNoticias;
-      newsDatabase.totalViews = nuevoEstado.totalViews;
-      
-      console.log(`✅ ¡NOTICIAS ACTUALIZADAS! ${newsDatabase.news.length} noticias cargadas.`);
+      console.log(`¡NOTICIAS ACTUALIZADAS! ${newsDatabase.news.length} noticias cargadas.`);
       datosAnterioresStr = nuevoEstadoStr;
-      
-      updateAll();
+      renderNews();
       saveToLocalStorage();
     }
 
@@ -112,14 +103,13 @@ async function actualizarNoticiasPeriodicamente() {
 }
 
 async function initializeData() {
-  console.log("🔄 Cargando noticias iniciales...");
+  console.log("Cargando noticias iniciales...");
 
   if (window.API_DB && window.API_DB.trim() !== "") {
     const success = await loadFromNpoint();
     if (success) {
       datosAnterioresStr = JSON.stringify({
-        news: newsDatabase.news,
-        totalViews: newsDatabase.totalViews
+        news: newsDatabase.news
       });
       return;
     }
@@ -131,31 +121,23 @@ async function initializeData() {
     newsDatabase.news = [
       {
         id: 1,
-        title: "¡Bienvenidos al Clan Serakdep MS! 🐼",
+        title: "Bienvenidos al Clan Serakdep MS",
         category: "announcement",
-        content: "Es un gran placer darles la bienvenida oficial a nuestro clan...",
+        content: "Bienvenida oficial al clan Serakdep MS.",
         excerpt: "Bienvenida oficial al clan Serakdep MS.",
         date: new Date().toISOString().split("T")[0],
         image: "",
         important: true,
         pinned: true,
-        views: 0,
         author: "Admin Principal",
       },
     ];
   }
 
-  updateAll();
-  datosAnterioresStr = JSON.stringify({
-    news: newsDatabase.news,
-    totalViews: newsDatabase.totalViews
-  });
-}
-
-function updateAll() {
-  updateStats();
   renderNews();
-  loadSidebar();
+  datosAnterioresStr = JSON.stringify({
+    news: newsDatabase.news
+  });
 }
 
 function initEventListeners() {
@@ -164,15 +146,9 @@ function initEventListeners() {
       document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
       this.classList.add("active");
       currentFilter = this.dataset.filter;
-      currentPage = 1;
       renderNews();
     });
   });
-
-  const prevPageBtn = document.getElementById("prev-page");
-  const nextPageBtn = document.getElementById("next-page");
-  if (prevPageBtn) prevPageBtn.addEventListener("click", () => changePage(-1));
-  if (nextPageBtn) nextPageBtn.addEventListener("click", () => changePage(1));
 }
 
 function renderNews() {
@@ -187,19 +163,16 @@ function renderNews() {
     }
   }
 
+
   filteredNews.sort((a, b) => {
     if (a.pinned && !b.pinned) return -1;
     if (!a.pinned && b.pinned) return 1;
     return new Date(b.date) - new Date(a.date);
   });
 
-  const totalPages = Math.ceil(filteredNews.length / CONFIG.ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * CONFIG.ITEMS_PER_PAGE;
-  const paginatedNews = filteredNews.slice(startIndex, startIndex + CONFIG.ITEMS_PER_PAGE);
-
   container.innerHTML = "";
 
-  if (paginatedNews.length === 0) {
+  if (filteredNews.length === 0) {
     container.innerHTML = `
       <div class="no-news">
         <i class="far fa-newspaper"></i>
@@ -208,8 +181,8 @@ function renderNews() {
       </div>
     `;
   } else {
-    paginatedNews.forEach((news) => {
-      const category = CONFIG.CATEGORIES[news.category] || { icon: "📰", text: "Noticia" };
+    filteredNews.forEach((news) => {
+      const category = CONFIG.CATEGORIES[news.category] || { text: "Noticia" };
       const date = new Date(news.date).toLocaleDateString("es-ES");
 
       const newsHTML = `
@@ -217,7 +190,6 @@ function renderNews() {
           <div class="news-card-header">
             <div class="news-meta-top">
               <div class="news-category">
-                <span class="category-icon">${category.icon}</span>
                 <span class="category-text">${category.text}</span>
               </div>
               <div class="news-date">
@@ -227,39 +199,21 @@ function renderNews() {
             </div>
             
             <div class="news-badges">
-              ${news.important ? '<span class="badge-important"><i class="fas fa-exclamation-triangle"></i> Importante</span>' : ""}
-              ${news.pinned ? '<span class="badge-pinned"><i class="fas fa-thumbtack"></i> Fijado</span>' : ""}
-              ${isNewNews(news.date) ? '<span class="badge-new"><i class="fas fa-star"></i> Nuevo</span>' : ""}
+              ${news.important ? '<span class="badge-important">Importante</span>' : ""}
+              ${news.pinned ? '<span class="badge-pinned">Fijado</span>' : ""}
+              ${isNewNews(news.date) ? '<span class="badge-new">Nuevo</span>' : ""}
             </div>
           </div>
           
           <div class="news-card-content">
             <h3 class="news-title">${news.title}</h3>
             <div class="news-excerpt">${news.excerpt}</div>
-            
-            ${news.image ? `
-            <div class="news-image-container">
-              <img src="${news.image}" alt="${news.title}" class="news-image">
-            </div>
-            ` : ""}
-            
-            <div class="news-stats">
-              <span class="news-views">
-                <i class="far fa-eye"></i>
-                <span class="views-count">${news.views}</span> vistas
-              </span>
-            </div>
           </div>
           
           <div class="news-card-footer">
             <button class="btn-read-more">
-              <i class="fas fa-arrow-right"></i> Leer más
+              Leer más
             </button>
-            <div class="news-actions">
-              <button class="btn-action btn-share" title="Compartir">
-                <i class="fas fa-share-alt"></i>
-              </button>
-            </div>
           </div>
         </article>
       `;
@@ -269,8 +223,6 @@ function renderNews() {
 
     addNewsEvents();
   }
-
-  updatePagination(filteredNews.length, totalPages);
 }
 
 function addNewsEvents() {
@@ -281,49 +233,41 @@ function addNewsEvents() {
       readMoreNews(newsId);
     });
   });
-
-  document.querySelectorAll(".btn-share").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const newsCard = this.closest(".news-card");
-      const newsId = parseInt(newsCard.dataset.id);
-      const news = newsDatabase.news.find((n) => n.id === newsId);
-      if (news) shareNews(news);
-    });
-  });
 }
 
 async function readMoreNews(id) {
   const news = newsDatabase.news.find((n) => n.id === id);
   if (!news) return;
 
-  news.views++;
-  newsDatabase.totalViews++;
-  saveToLocalStorage();
-  updateStats();
-
-  const category = CONFIG.CATEGORIES[news.category] || { icon: "📰", text: "Noticia" };
-  const date = new Date(news.date).toLocaleDateString("es-ES");
+  const category = CONFIG.CATEGORIES[news.category] || { text: "Noticia" };
+  const date = new Date(news.date).toLocaleDateString("es-ES", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   const modalHTML = `
-    <div class="news-modal active">
-      <div class="modal-content">
-        <button class="close-modal">&times;</button>
+    <div class="news-modal active" id="news-modal-blog">
+      <div class="modal-overlay"></div>
+      <div class="modal-content blog-style">
+        <button class="close-modal" aria-label="Cerrar noticia">
+          <i class="fas fa-times"></i>
+        </button>
+        
         <div class="modal-header">
-          <span class="category">${category.icon} ${category.text}</span>
-          <span class="date">${date}</span>
+          <div class="modal-meta">
+            <span class="category-badge">${category.text}</span>
+            <span class="date-badge"><i class="far fa-calendar"></i> ${date}</span>
+          </div>
+          <h2 class="modal-title">${news.title}</h2>
         </div>
-        <h2>${news.title}</h2>
-        ${news.image ? `<img src="${news.image}" alt="${news.title}" class="modal-image">` : ""}
+
+        <div class="modal-image-wrapper">
+          <img src="../../assets/img/clan-logo.jpeg" alt="Serakdep MS" class="modal-featured-image">
+        </div>
+
         <div class="modal-body">
           ${news.content.split("\n").map((p) => `<p>${p}</p>`).join("")}
         </div>
+
         <div class="modal-footer">
-          <div class="modal-stats">
-            <span><i class="far fa-eye"></i> ${news.views} vistas</span>
-          </div>
-          <button class="btn btn-primary share-news-modal">
-            <i class="fas fa-share-alt"></i> Compartir
-          </button>
+          <span class="modal-author">Publicado por ${news.author}</span>
         </div>
       </div>
     </div>
@@ -331,9 +275,9 @@ async function readMoreNews(id) {
 
   document.body.insertAdjacentHTML("beforeend", modalHTML);
 
-  if (!document.querySelector("#modal-styles")) {
+  if (!document.querySelector("#modal-blog-styles")) {
     const styles = document.createElement("style");
-    styles.id = "modal-styles";
+    styles.id = "modal-blog-styles";
     styles.textContent = `
       .news-modal {
         position: fixed;
@@ -341,67 +285,197 @@ async function readMoreNews(id) {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.8);
         display: none;
         align-items: center;
         justify-content: center;
-        z-index: 3000;
+        z-index: 5000;
         padding: 20px;
       }
       .news-modal.active {
         display: flex;
       }
-      .news-modal .modal-content {
-        background: white;
-        border-radius: 15px;
-        max-width: 800px;
+      .modal-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      .modal-content.blog-style {
+        position: relative;
+        background: #ffffff;
+        border-radius: 20px;
+        max-width: 820px;
+        width: 100%;
         max-height: 90vh;
         overflow-y: auto;
-        padding: 30px;
-        position: relative;
-        width: 100%;
+        padding: 0;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        animation: modalFadeIn 0.4s ease;
       }
-      .news-modal .close-modal {
-        position: absolute;
+      @keyframes modalFadeIn {
+        from { opacity: 0; transform: scale(0.95) translateY(20px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .modal-content.blog-style .close-modal {
+        position: sticky;
         top: 15px;
         right: 15px;
-        background: none;
+        float: right;
+        background: rgba(0,0,0,0.05);
         border: none;
-        font-size: 2em;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 1.3rem;
         cursor: pointer;
-        color: #666;
-      }
-      .news-modal .modal-header {
+        color: #333;
+        transition: background 0.2s ease, transform 0.2s ease;
+        z-index: 10;
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        color: #666;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 15px 0 0;
       }
-      .news-modal h2 {
-        margin: 0 0 20px 0;
+      .modal-content.blog-style .close-modal:hover {
+        background: rgba(0,0,0,0.1);
+        transform: rotate(90deg);
+      }
+      .modal-header {
+        padding: 20px 35px 0 35px;
+      }
+      .modal-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .category-badge {
+        background: #e8f5e9;
+        color: #2d6a4f;
+        padding: 6px 16px;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .date-badge {
+        color: #666;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #f5f5f5;
+        padding: 6px 16px;
+        border-radius: 30px;
+      }
+      .modal-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #1a1a1a;
+        line-height: 1.3;
+        margin: 10px 0 20px 0;
+        font-family: 'Poppins', sans-serif;
+      }
+      .modal-image-wrapper {
+        padding: 0 35px;
+        margin-bottom: 25px;
+      }
+      .modal-featured-image {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      }
+      .modal-body {
+        padding: 0 35px 30px 35px;
+        font-size: 1.05rem;
+        line-height: 1.8;
         color: #333;
       }
-      .news-modal .modal-image {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 25px;
+      .modal-body p {
+        margin-bottom: 1.2rem;
       }
-      .news-modal .modal-body {
-        line-height: 1.8;
-        color: #444;
-        margin-bottom: 25px;
-      }
-      .news-modal .modal-body p {
-        margin-bottom: 15px;
-      }
-      .news-modal .modal-footer {
+      .modal-footer {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 20px;
+        justify-content: flex-end;
+        padding: 20px 35px 30px 35px;
         border-top: 1px solid #eee;
+        background: #fafafa;
+        border-radius: 0 0 20px 20px;
+      }
+      .modal-author {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        .modal-content.blog-style {
+          max-width: 100%;
+          border-radius: 12px;
+          max-height: 95vh;
+        }
+        .modal-header {
+          padding: 15px 20px 0 20px;
+        }
+        .modal-title {
+          font-size: 1.5rem;
+        }
+        .modal-image-wrapper {
+          padding: 0 20px;
+        }
+        .modal-body {
+          padding: 0 20px 20px 20px;
+          font-size: 0.95rem;
+        }
+        .modal-footer {
+          padding: 15px 20px 20px 20px;
+        }
+        .modal-content.blog-style .close-modal {
+          top: 10px;
+          right: 10px;
+          width: 38px;
+          height: 38px;
+          font-size: 1.1rem;
+          margin: 10px 10px 0 0;
+        }
+      }
+      body.dark-theme .modal-content.blog-style {
+        background: #1a1f1c;
+        color: #e0e0e0;
+      }
+      body.dark-theme .modal-title {
+        color: #f0e6c5;
+      }
+      body.dark-theme .modal-body {
+        color: #d5d5d5;
+      }
+      body.dark-theme .category-badge {
+        background: rgba(45, 106, 79, 0.3);
+        color: #a8d5be;
+      }
+      body.dark-theme .date-badge {
+        background: rgba(255,255,255,0.05);
+        color: #b5b5b5;
+      }
+      body.dark-theme .modal-footer {
+        background: rgba(255,255,255,0.03);
+        border-top-color: rgba(255,255,255,0.08);
+      }
+      body.dark-theme .modal-author {
+        color: #b5b5b5;
+      }
+      body.dark-theme .modal-content.blog-style .close-modal {
+        background: rgba(255,255,255,0.08);
+        color: #d5d5d5;
+      }
+      body.dark-theme .modal-content.blog-style .close-modal:hover {
+        background: rgba(255,255,255,0.15);
       }
     `;
     document.head.appendChild(styles);
@@ -409,150 +483,18 @@ async function readMoreNews(id) {
 
   const modal = document.querySelector(".news-modal.active");
   const closeBtn = modal.querySelector(".close-modal");
-  const shareBtn = modal.querySelector(".share-news-modal");
 
-  closeBtn.addEventListener("click", () => modal.remove());
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    setTimeout(() => modal.remove(), 300);
+  });
+
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.remove();
+    if (e.target === modal || e.target.classList.contains("modal-overlay")) {
+      modal.classList.remove("active");
+      setTimeout(() => modal.remove(), 300);
+    }
   });
-
-  shareBtn.addEventListener("click", () => {
-    shareNews(news);
-    modal.remove();
-  });
-}
-
-function updateStats() {
-  const totalNews = newsDatabase.news.length;
-  const importantNews = newsDatabase.news.filter((n) => n.important).length;
-
-  const currentMonth = new Date().getMonth();
-  const currentYear = new Date().getFullYear();
-  const monthNews = newsDatabase.news.filter((n) => {
-    const date = new Date(n.date);
-    return date.getMonth() === currentMonth && date.getFullYear() === currentYear;
-  }).length;
-
-  const elTotalNews = document.getElementById("total-news");
-  const elActiveAnnouncements = document.getElementById("active-announcements");
-  const elMonthNews = document.getElementById("month-news");
-  const elTotalViews = document.getElementById("total-views");
-  if (elTotalNews) elTotalNews.textContent = totalNews;
-  if (elActiveAnnouncements) elActiveAnnouncements.textContent = importantNews;
-  if (elMonthNews) elMonthNews.textContent = monthNews;
-  if (elTotalViews) elTotalViews.textContent = newsDatabase.totalViews;
-}
-
-function loadSidebar() {
-  const highlighted = [...newsDatabase.news]
-    .sort((a, b) => {
-      if (a.important && !b.important) return -1;
-      if (!a.important && b.important) return 1;
-      if (a.pinned && !b.pinned) return -1;
-      if (!a.pinned && b.pinned) return 1;
-      return new Date(b.date) - new Date(a.date);
-    })
-    .slice(0, 3);
-
-  const container = document.getElementById("highlighted-news");
-  if (!container) return;
-  container.innerHTML = highlighted
-    .map(
-      (news) => `
-    <div class="highlight-item" data-id="${news.id}">
-      <h4>${news.title}</h4>
-      <p>${new Date(news.date).toLocaleDateString("es-ES")}</p>
-    </div>
-  `
-    )
-    .join("");
-
-  document.querySelectorAll("#highlighted-news .highlight-item").forEach((item) => {
-    item.addEventListener("click", function () {
-      const id = parseInt(this.dataset.id);
-      readMoreNews(id);
-    });
-  });
-
-  const recent = newsDatabase.news.slice(0, 3);
-  const footerContainer = document.getElementById("recent-news-footer");
-  if (!footerContainer) return;
-  footerContainer.innerHTML = recent
-    .map(
-      (news) => `
-    <li>
-      <a href="javascript:void(0)" data-id="${news.id}">
-        <i class="fas fa-newspaper"></i> ${news.title}
-      </a>
-    </li>
-  `
-    )
-    .join("");
-
-  document.querySelectorAll("#recent-news-footer a").forEach((link) => {
-    link.addEventListener("click", function () {
-      const id = parseInt(this.dataset.id);
-      readMoreNews(id);
-    });
-  });
-}
-
-function changePage(direction) {
-  const totalNews =
-    currentFilter === "all"
-      ? newsDatabase.news.length
-      : newsDatabase.news.filter((n) =>
-          currentFilter === "important" ? n.important : n.category === currentFilter
-        ).length;
-  const totalPages = Math.ceil(totalNews / CONFIG.ITEMS_PER_PAGE);
-
-  currentPage += direction;
-  if (currentPage < 1) currentPage = 1;
-  if (currentPage > totalPages) currentPage = totalPages;
-
-  renderNews();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-function updatePagination(totalItems, totalPages) {
-  const prevBtn = document.getElementById("prev-page");
-  const nextBtn = document.getElementById("next-page");
-  const pageNumbers = document.getElementById("page-numbers");
-
-  if (prevBtn) prevBtn.disabled = currentPage === 1;
-  if (nextBtn) nextBtn.disabled = currentPage === totalPages || totalPages === 0;
-
-  if (!pageNumbers) return;
-  pageNumbers.innerHTML = "";
-  for (let i = 1; i <= totalPages; i++) {
-    const btn = document.createElement("button");
-    btn.className = "page-number";
-    if (i === currentPage) btn.classList.add("active");
-    btn.textContent = i;
-    btn.addEventListener("click", () => {
-      currentPage = i;
-      renderNews();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-    pageNumbers.appendChild(btn);
-  }
-}
-
-function shareNews(news) {
-  const text = `${news.title} - Serakdep MS Clan`;
-  const url = window.location.href;
-
-  if (navigator.share) {
-    navigator.share({
-      title: news.title,
-      text: news.excerpt,
-      url: url,
-    });
-  } else {
-    navigator.clipboard.writeText(`${text}\n${url}`).then(() => {
-      showNotification("Enlace copiado al portapapeles", "info");
-    });
-  }
 }
 
 function isNewNews(dateString) {
@@ -576,95 +518,7 @@ function loadFromLocalStorage() {
       const parsed = JSON.parse(saved);
       if (parsed.news && Array.isArray(parsed.news)) {
         newsDatabase.news = parsed.news;
-        newsDatabase.totalViews = parsed.totalViews || 0;
       }
     }
   } catch (e) {}
-}
-
-function showNotification(message, type = "info") {
-  const notification = document.createElement("div");
-  notification.className = "notification";
-  notification.innerHTML = `
-    <i class="fas fa-${type === "success" ? "check-circle" : type === "error" ? "exclamation-circle" : "info-circle"}"></i>
-    <span>${message}</span>
-  `;
-
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: ${type === "success" ? "#4CAF50" : type === "error" ? "#f44336" : "#2196F3"};
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    z-index: 4000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    animation: slideIn 0.3s ease;
-  `;
-
-  if (!document.querySelector("#notification-styles")) {
-    const styles = document.createElement("style");
-    styles.id = "notification-styles";
-    styles.textContent = `
-      @keyframes slideIn {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-      @keyframes slideOut {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(100%); opacity: 0; }
-      }
-    `;
-    document.head.appendChild(styles);
-  }
-
-  document.body.appendChild(notification);
-
-  setTimeout(() => {
-    notification.style.animation = "slideOut 0.3s ease";
-    setTimeout(() => notification.remove(), 300);
-  }, 3000);
-}
-
-function initStatsScroll() {
-  const statsContainer = document.querySelector(".news-stats");
-  if (!statsContainer) return;
-
-  function checkOverflow() {
-    const hasOverflow = statsContainer.scrollWidth > statsContainer.clientWidth;
-    statsContainer.classList.toggle("has-overflow", hasOverflow);
-  }
-
-  statsContainer.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") {
-      statsContainer.scrollBy({ left: -100, behavior: "smooth" });
-    } else if (e.key === "ArrowRight") {
-      statsContainer.scrollBy({ left: 100, behavior: "smooth" });
-    }
-  });
-
-  document.querySelectorAll(".stat-item").forEach((item, index) => {
-    item.setAttribute("tabindex", "0");
-    item.setAttribute("role", "button");
-    item.setAttribute("aria-label", `Estadística ${index + 1}: ${item.querySelector("h3").textContent}`);
-
-    item.addEventListener("click", () => {
-      const itemLeft = item.offsetLeft;
-      const itemWidth = item.clientWidth;
-      const containerWidth = statsContainer.clientWidth;
-      const scrollTo = itemLeft - containerWidth / 2 + itemWidth / 2;
-
-      statsContainer.scrollTo({
-        left: scrollTo,
-        behavior: "smooth",
-      });
-    });
-  });
-
-  checkOverflow();
-  window.addEventListener("resize", checkOverflow);
 }

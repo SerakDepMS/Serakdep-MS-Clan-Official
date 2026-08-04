@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Serakdep MS - Seccion Multi-Gamer (Estilos Ultra-Optimizados / High Performance)
-   ========================================================================== */
+
 
 :root {
   --primary-green: #1b4332;
@@ -26,7 +24,7 @@
   scroll-behavior: smooth;
 }
 
-/* Scrollbar Personalizada — solo en páginas Multi-Gamer */
+
 .standalone-game-body::-webkit-scrollbar {
   width: 10px;
   height: 6px;
@@ -43,7 +41,7 @@
   background: var(--light-green);
 }
 
-/* Reset y base ultra liviana sin filtros pesados */
+
 .standalone-game-body {
   margin: 0;
   padding: 0;
@@ -67,7 +65,7 @@
   width: 100%;
 }
 
-/* Navbar limpio y liviano (sin backdrop-filter) */
+
 .standalone-navbar {
   background: #08110b;
   border-bottom: 1px solid var(--border-color);
@@ -116,13 +114,11 @@
   letter-spacing: 1px;
 }
 
-/* ============================================================
-   HERO: IMAGEN DE FONDO A PANTALLA COMPLETA (SIN CONTENIDO)
-   ============================================================ */
+
 .game-hero {
-  height: 100vh;          /* Ocupa toda la altura de la pantalla en escritorio */
-  min-height: 500px;      /* Altura mínima para que no se encoja demasiado */
-  max-height: none;       /* Eliminamos el límite superior */
+  height: 100vh;          
+  min-height: 500px;   
+  max-height: none;       
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,9 +126,7 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-/* ============================================================
-   SECCIÓN DE CONTENIDO DEL HERO (DEBAJO DE LA IMAGEN)
-   ============================================================ */
+
 .hero-content-section {
   padding: 40px 0;
   text-align: center;
@@ -146,7 +140,7 @@
   align-items: center;
 }
 
-/* Badges e Indicadores de Rendimiento */
+
 .hero-game-badge {
   display: inline-flex;
   align-items: center;
@@ -223,7 +217,7 @@
   color: var(--bamboo-gold);
 }
 
-/* Grid de tarjetas directas (Portal Hub) */
+
 .game-direct-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -326,9 +320,7 @@
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   DISEÑO ULTRA-OPTIMIZADO DE DIVISIÓN (SÚPER RÁPIDO & SIN LAG)
-   ========================================================================== */
+
 
 .divisions-layout {
   display: flex;
@@ -398,7 +390,7 @@
   margin: 0;
 }
 
-/* Tarjetas de Reglas Estilizadas */
+
 .rules-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -459,7 +451,7 @@
   margin: 0;
 }
 
-/* Sanciones Grid Optimizado */
+
 .sanctions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -502,7 +494,7 @@
   border-radius: 16px;
 }
 
-/* Barras de severidad */
+
 .severity-bar-bg {
   width: 100%;
   height: 5px;
@@ -576,7 +568,7 @@
   margin: 0;
 }
 
-/* Sección WhatsApp Banner Optimizado */
+
 .whatsapp-section {
   text-align: center;
   border-color: rgba(37, 211, 102, 0.35);
@@ -633,7 +625,7 @@
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
 }
 
-/* Bloques adicionales e informativos */
+
 .game-info-block {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -682,7 +674,7 @@
   background: #c29f2e !important;
 }
 
-/* Footer Aislado */
+
 .standalone-footer {
   margin-top: auto;
   background: #040905;
@@ -705,18 +697,16 @@
   line-height: 1.5;
 }
 
-/* ==========================================================================
-   RESPONSIVO MULTI-DISPOSITIVO (MOBILE FIRST & BREAKPOINTS)
-   ========================================================================== */
 
-/* Pantallas grandes y Escritorios (> 1024px) */
+
+
 @media (min-width: 1025px) {
   .game-direct-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Tablets en horizontal y Laptops pequeñas (769px - 1024px) */
+
 @media (max-width: 1024px) and (min-width: 769px) {
   .game-container {
     padding: 0 20px;
@@ -737,7 +727,7 @@
     gap: 14px;
   }
 
-  /* Ajuste de altura del hero para tablet */
+
   .game-hero {
     height: 60vh;
     min-height: 400px;
@@ -749,7 +739,7 @@
   }
 }
 
-/* Tablets en vertical y Móviles grandes (481px - 768px) */
+
 @media (max-width: 768px) {
   .game-container {
     padding: 0 16px;
@@ -773,7 +763,7 @@
     letter-spacing: 0.5px;
   }
 
-  /* Ajuste de altura del hero para móvil grande */
+
   .game-hero {
     height: 50vh;
     min-height: 300px;
@@ -880,7 +870,7 @@
   }
 }
 
-/* Móviles pequeños (<= 480px) */
+
 @media (max-width: 480px) {
   .game-container {
     padding: 0 12px;
@@ -903,7 +893,7 @@
     gap: 4px;
   }
 
-  /* Ajuste de altura del hero para móvil pequeño */
+
   .game-hero {
     height: 40vh;
     min-height: 250px;
