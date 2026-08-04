@@ -526,7 +526,7 @@
       keywords: ['navegacion', 'menu', 'secciones', 'paginas', 'donde encuentro', 'ubicacion', 'sitio web', 'como funciona la pagina'],
       response: `<strong>Navegación del sitio web</strong><br><br>
       El menú superior te permite acceder a todas las secciones:<br>
-      • <strong>Inicio:</strong> Presentación, video, juegos, testimonios, galería.<br>
+      • <strong>Inicio:</strong> Presentación, video, juegos.<br>
       • <strong>Reglamento:</strong> Normas completas, sanciones, derechos, colaboradores.<br>
       • <strong>Formulario:</strong> Inscripción al clan (etapa final).<br>
       • <strong>FAQ:</strong> Preguntas frecuentes categorizadas.<br>
@@ -535,7 +535,6 @@
       • <strong>Contacto:</strong> Formularios de reporte, sugerencias, aspirar a admin/colaborador y asuntos legales.<br>
       • <strong>Créditos:</strong> Reconocimiento a colaboradores.<br>
       • <strong>Alianzas:</strong> Clanes aliados (sección en el footer).<br>
-      • <strong>Tutoriales:</strong> Videotutoriales sobre uso de la web y procesos del clan.<br><br>
       En el footer (parte inferior) encontrarás enlaces rápidos, redes sociales e información legal.`
     },
  
@@ -550,17 +549,7 @@
       • Velocidad de reproducción.<br>
       • Calidad (automática, 720p, 480p).<br>
       • Pantalla completa.<br><br>
-      También hay una galería de imágenes con momentos destacados del clan. Si el video no carga, intenta recargar la página o usar otro navegador.`
-    },
-    {
-      keywords: ['galeria', 'fotos', 'recuerdos', 'imagenes', 'capturas', 'momentos', 'galeria de fotos'],
-      response: `<strong>Galería de recuerdos</strong><br><br>
-      En la página de Inicio, después de la sección de juegos, encontrarás una galería con imágenes de eventos pasados:<br>
-      • Torneos.<br>
-      • Reuniones.<br>
-      • Aniversarios.<br>
-      • Momentos divertidos.<br><br>
-      Cada tarjeta tiene una descripción y fecha. Haz clic en el botón de lupa para ampliar la imagen.`
+      Si el video no carga, intenta recargar la página o usar otro navegador.`
     },
  
  
@@ -617,20 +606,6 @@
       • Kira's Order<br>
       • The Black Bulls<br><br>
       Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el canal #solicitudes-externas en Discord o postúlate como <strong>Colaborador - Representante de Alianzas</strong> en Contacto.`
-    },
- 
- 
-
-    {
-      keywords: ['tutoriales', 'videotutoriales', 'videos tutoriales', 'como usar la pagina', 'guia'],
-      response: `🎥 <strong>Videotutoriales</strong><br><br>
-      En la sección "Tutoriales" del menú encontrarás videos explicativos sobre:<br>
-      • Cómo unirse al clan.<br>
-      • Cómo aspirar a Administrador.<br>
-      • Cómo reportar un problema.<br>
-      • Cómo enviar sugerencias.<br>
-      • Cómo usar la página web.<br><br>
-      Cada video tiene su propio reproductor con controles de reproducción, volumen y pantalla completa. ¡Échales un vistazo!`
     },
  
  
@@ -718,18 +693,6 @@
  
 
     {
-      keywords: ['testimonios', 'opiniones', 'miembros dicen', 'experiencias', 'comentarios', 'shadowblade', 'diegosanval2012', 'icequeen', 'que dicen', 'reseñas'],
-      response: `<strong>Testimonios de miembros</strong><br><br>
-      Esto es lo que dicen algunos de nuestros miembros:<br>
-      • <strong>kakaroto11141</strong> (FOUNDER): "SerakDepMS no es un clan como los demás, es una vida, una familia y un despertar a la innovación. Aprender a vivir entre personas de diferentes lugares y distintas culturas es la forma más bella de compartir nuestros pensamientos e ideales sin ser juzgados."<br>
-      • <strong>Diegosanval2012</strong> (Miembro desde 2026): "Me gusta su buen desarrollo administrativo y alta gerencia en los ámbitos de soporte técnico y toma de decisiones."<br>
-      • <strong>MiembroAnonimoMiembro</strong> (Miembro desde 2026): "Que la mayoría de los integrantes son divertidos y respetuosos."<br><br>
-      ¿Quieres compartir tu experiencia? Envíala a través del formulario de sugerencias en Contacto.`
-    },
- 
- 
-
-    {
       keywords: ['redes sociales', 'twitter', 'instagram', 'tiktok', 'youtube', 'social media', 'x', 'discord link', 'seguir', 'rrss'],
       response: `<strong>Redes sociales oficiales</strong><br><br>
       Encuéntranos en:<br>
@@ -811,7 +774,6 @@
       • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
       • <strong>Alianzas</strong> (7 clanes aliados).<br>
-      • <strong>Tutoriales</strong> (videotutoriales de ayuda).<br>
       • <strong>CodeTurbo</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
     }
@@ -871,7 +833,7 @@
     const suggestions = [
       'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos',
       'juegos', 'contacto', 'reportar', 'sanciones', 'colaboradores',
-      'noticias', 'legal', 'créditos', 'ser admin', 'alianzas', 'tutoriales',
+      'noticias', 'legal', 'créditos', 'ser admin', 'alianzas',
       'CodeTurbo', 'laboratorio código', 'retos programación', 'enciclopedia'
     ];
     
@@ -945,7 +907,7 @@
         • La estructura del clan y cómo ascender.<br>
         • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>
         • <strong>CodeTurbo</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
-        • Noticias, legal, créditos, alianzas y tutoriales.<br><br>
+        • Noticias, legal, créditos, alianzas.<br><br>
         <strong>Escribe tu consulta con total libertad.</strong> Entiendo lenguaje natural, así que no necesitas usar palabras exactas. ¡Adelante!`);
         hasStarted = true;
       }

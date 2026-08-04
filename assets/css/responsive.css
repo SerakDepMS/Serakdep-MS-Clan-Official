@@ -632,8 +632,7 @@ nav ul li a:hover {
   }
 
 
-  .card,
-  .gallery-card {
+  .card {
     padding: 20px;
     margin-bottom: 25px;
   }
@@ -678,38 +677,6 @@ nav ul li a:hover {
   .ranking-table td {
     padding: 10px;
     white-space: nowrap;
-  }
-
-
-  .testimonials-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .testimonial {
-    padding: 20px;
-  }
-
-  .testimonial-content {
-    font-size: 15px;
-    padding-left: 15px;
-  }
-
-  .testimonial-content::before {
-    font-size: 2rem;
-  }
-
-  .testimonial-author img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .testimonial-author h4 {
-    font-size: 1rem;
-  }
-
-  .testimonial-author span {
-    font-size: 0.85rem;
   }
 
 
@@ -770,8 +737,7 @@ nav ul li a:hover {
   }
 
 
-  .card,
-  .gallery-card {
+  .card {
     padding: 15px;
     margin-bottom: 20px;
   }
@@ -831,27 +797,6 @@ nav ul li a:hover {
   }
 
 
-  .testimonial {
-    padding: 15px;
-  }
-
-  .testimonial-content {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .testimonial-author {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .testimonial-author img {
-    width: 50px;
-    height: 50px;
-  }
-
-
   .btn {
     padding: 10px 20px;
     font-size: 0.95rem;
@@ -876,194 +821,8 @@ nav ul li a:hover {
 }
 
 
-@media (max-width: 992px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  .modal-content {
-    grid-template-columns: 1fr;
-    max-height: 80vh;
-  }
-
-  .modal-image-wrapper {
-    min-height: 300px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .gallery-card .card-title {
-    font-size: 1.5rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .filters-container {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-    gap: 8px;
-    justify-content: flex-start;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .filter-btn {
-    padding: 8px 16px;
-    font-size: 13px;
-    flex-shrink: 0;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-  }
-
-
-  .modal-container {
-    width: 95%;
-    height: auto;
-    max-height: 90vh;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 20px 0;
-  }
-
-  .modal-header {
-    padding: 15px 20px;
-  }
-
-  .modal-title {
-    font-size: 1.2rem;
-  }
-
-  .modal-close {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
-
-  .modal-image-wrapper {
-    min-height: 250px;
-  }
-
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-
-  .modal-details {
-    padding: 20px;
-  }
-
-  .details-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .modal-actions {
-    flex-direction: column;
-  }
-
-  .action-btn {
-    width: 100%;
-  }
-
-  .modal-footer {
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-
-  .controls-container {
-    flex-direction: column;
-  }
-
-  .gallery-card .btn {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-card {
-    padding: 20px 15px;
-  }
-
-  .gallery-card .card-title {
-    font-size: 1.3rem;
-  }
-
-  .section-subtitle {
-    font-size: 0.95rem;
-  }
-
-
-  .modal-container {
-    width: 98%;
-    border-radius: 8px;
-  }
-
-  .modal-header {
-    padding: 12px 15px;
-  }
-
-  .modal-title {
-    font-size: 1.1rem;
-  }
-
-  .modal-image-wrapper {
-    min-height: 200px;
-  }
-
-  .nav-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-  }
-
-  .modal-details {
-    padding: 15px;
-  }
-
-  .detail-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .detail-item i {
-    font-size: 18px;
-  }
-
-  .filters-container {
-    padding: 8px;
-  }
-
-  .filter-btn {
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-}
-
-
 @media (hover: none) and (pointer: coarse) {
-  .gallery-item:hover {
-    transform: none;
-  }
-
-  .card:hover,
-  .gallery-card:hover {
+  .card:hover {
     transform: none;
   }
 
@@ -1080,8 +839,7 @@ nav ul li a:hover {
     .filter-btn,
     .btn,
     .action-btn,
-    .nav-btn,
-    .modal-close {
+    .nav-btn {
       min-height: 44px;
     }
 
@@ -1117,7 +875,6 @@ nav ul li a:hover {
 
 .ranking-table td,
 .ranking-table th,
-.testimonial-content,
 .modal-description p {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1133,11 +890,11 @@ nav ul li a:hover {
 
 
 @media (max-width: 360px) {
-  .gallery-card {
+  .card {
     padding: 15px 10px;
   }
 
-  .gallery-card .card-title {
+  .card-title {
     font-size: 1.2rem;
   }
 

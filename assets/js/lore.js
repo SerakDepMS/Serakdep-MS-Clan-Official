@@ -69,7 +69,7 @@
   {
     chapter: "XIV",
     label: "Custodios del Estandarte",
-    text: "Los Administradores gestionan las áreas críticas: eventos (organización de torneos y actividades), admisiones (revisión de solicitudes y entrevistas), relaciones (alianzas y representación), contenido (guías, tutoriales y material gráfico) y soporte técnico (mantenimiento de Discord, web y herramientas). Su labor incansable mantiene la maquinaria del clan funcionando de manera fluida y organizada."
+    text: "Los Administradores gestionan las áreas críticas: eventos (organización de torneos y actividades), admisiones (revisión de solicitudes y entrevistas), relaciones (alianzas y representación), contenido (guías, gráficos y material multimedia) y soporte técnico (mantenimiento de Discord, web y herramientas). Su labor incansable mantiene la maquinaria del clan funcionando de manera fluida y organizada."
   },
   {
     chapter: "XV",
@@ -114,12 +114,12 @@
   {
     chapter: "XXIII",
     label: "Evolución Digital",
-    text: "Desde la beta 0.5 estática, el portal evolucionó a la v1.0 con el reglamento y formulario, la v2.0 con bases de datos npoint.io para noticias y preguntas frecuentes, y la v3.9 ultra-optimizada con actualización automática de noticias cada 12 segundos, reproductor de video mejorado, filtros de juegos (más de 350 títulos) y una galería de recuerdos interactiva. La web actual es el resultado de un desarrollo continuo y colaborativo."
+    text: "Desde la beta 0.5 estática, el portal evolucionó a la v1.0 con el reglamento y formulario, la v2.0 con bases de datos npoint.io para noticias y preguntas frecuentes, y la v3.9 ultra-optimizada con actualización automática de noticias cada 12 segundos, reproductor de video mejorado y filtros de juegos (más de 350 títulos). La web actual es el resultado de un desarrollo continuo y colaborativo."
   },
   {
     chapter: "XXIV",
     label: "La Forja Creativa",
-    text: "El equipo creativo, integrado por editores y diseñadores como Diegosanval2012 (diseño gráfico), putifino111 (edición de video y contenido) y Teo_174bj (control de calidad), da vida a los logos, banners, guías visuales, videotutoriales y material promocional que realzan la imagen del clan. Su trabajo es visible en la página de Créditos y en cada rincón del portal."
+    text: "El equipo creativo, integrado por editores y diseñadores como Diegosanval2012 (diseño gráfico), putifino111 (edición de video y contenido) y Teo_174bj (control de calidad), da vida a los logos, banners, guías visuales y material promocional que realzan la imagen del clan. Su trabajo es visible en la página de Créditos y en cada rincón del portal."
   },
   {
     chapter: "XXV",

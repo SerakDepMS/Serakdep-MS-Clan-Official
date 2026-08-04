@@ -1,4 +1,3 @@
-```markdown
 # ⚠️ PROPIEDAD INTELECTUAL PROTEGIDA - NO OPEN SOURCE ⚠️
 
 **Copyright © 2026 D3B1A2C4F5E67890. Todos los derechos reservados.**
@@ -10,7 +9,7 @@
 
 # 🎮 Serakdep MS Clan – Sitio Web Oficial
 
-![Clan Logo](images/clan-logo.jpeg)
+![Clan Logo](assets/img/clan-logo.jpeg)
 
 Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer** dedicada al gaming organizado, respetuoso y divertido, con presencia en **12 divisiones oficiales** y múltiples plataformas de juego.
 
@@ -23,7 +22,7 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 - 👤 **Autor:** Db_artworkFOUNDERSMS
 - 🌐 **URL oficial:** https://serakdepms.github.io/Serakdep-MS-Clan-Official/
 - 📜 **Licencia:** Propietaria - Todos los derechos reservados
-- 📅 **Última actualización:** 3 de agosto de 2026
+- 📅 **Última actualización:** 4 de agosto de 2026
 - 🏛️ **Verificado en Google Search Console:** ✅
 
 ---
@@ -72,18 +71,18 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 ### Frontend
 - **HTML5** – Estructura semántica de las 20+ páginas.
 - **CSS3** – Variables CSS, glassmorphism, animaciones, diseño responsivo y tema oscuro/claro.
-- **JavaScript (Vanilla ES6+)** – Módulos ES6, interactividad, lógica de formularios, reproductor de video, chatbot, calendario, sistema de noticias, etc.
+- **JavaScript (Vanilla ES6+)** – Módulos ES6, interactividad, lógica de formularios, reproductor de video, chatbot, calendario, sistema de noticias y editor de código.
 
 ### Servicios y Bibliotecas
 - **GitHub Pages** – Hosting gratuito del sitio estático.
 - **Npoint.io** – Almacenamiento y carga dinámica de noticias, eventos y enciclopedia (API JSON).
-- **EmailJS** – Envío de correos electrónicos desde formularios (inscripción, reportes, sugerencias, aspirantes a admin y colaborador) con plantilla actualizada que incluye el campo "División".
+- **EmailJS** – Envío de correos electrónicos desde formularios (inscripción, reportes, sugerencias, aspirantes a admin y colaborador).
 - **ipapi.co** – Geolocalización automática para formularios (país y zona horaria).
 - **CodeMirror 5** – Editor de código para CodeTurbo (HTML, CSS, JS, autocompletado, linting).
 - **JSHint** – Validación de JavaScript en tiempo real en CodeTurbo.
 - **JSZip** – Descarga de proyectos en ZIP desde CodeTurbo.
 - **Font Awesome 6.4** – Iconos vectoriales en toda la interfaz.
-- **Google Fonts** – Tipografía "Poppins" y "Segoe UI".
+- **Google Fonts** – Tipografía "Poppins", "Cinzel", "Share Tech Mono".
 
 ### SEO
 - **Google Search Console** – Sitio verificado y monitoreado.
@@ -98,7 +97,6 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 | `sms_theme` | Guarda preferencia de tema oscuro/claro | 6 meses |
 | `sms_lab_project` | Guarda proyectos de CodeTurbo (localStorage) | Persistente |
 | `sms_volume` | Recuerda nivel de volumen del reproductor de video | 6 meses |
-
 
 ---
 
@@ -139,7 +137,7 @@ no para ser reutilizado, modificado o distribuido.
 **"UNIDOS POR LA PASIÓN DEL GAMING, PROTEGIDOS POR LA LEY"**  
 © 2026 D3B1A2C4F5E67890 - Serakdep MS Clan
 
-**Última verificación legal:** 03/08/2026  
+**Última verificación legal:** 04/08/2026  
 **Estado:** Activo y Protegido  
 **Google Search Console:** ✅ Verificado  
 **Sitemap:** ✅ Enviado  
