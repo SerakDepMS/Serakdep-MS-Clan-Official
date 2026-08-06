@@ -1,4 +1,4 @@
-# ⚠️ PROPIEDAD INTELECTUAL PROTEGIDA - NO OPEN SOURCE ⚠️
+#  PROPIEDAD INTELECTUAL PROTEGIDA - NO OPEN SOURCE 
 
 **Copyright © 2026 D3B1A2C4F5E67890. Todos los derechos reservados.**
 
@@ -7,7 +7,7 @@
 
 ---
 
-# 🎮 Serakdep MS Clan – Sitio Web Oficial
+#  Serakdep MS Clan – Sitio Web Oficial
 
 ![Clan Logo](assets/img/clan-logo.jpeg)
 
@@ -15,28 +15,28 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 
 ---
 
-## 🔒 ESTATUS LEGAL
+## ESTATUS LEGAL
 
 **PROYECTO PRIVADO CON LICENCIA RESTRICTIVA**
-- 🔐 **Propiedad intelectual:** D3B1A2C4F5E67890
-- 👤 **Autor:** Db_artworkFOUNDERSMS
-- 🌐 **URL oficial:** https://serakdepms.github.io/Serakdep-MS-Clan-Official/
-- 📜 **Licencia:** Propietaria - Todos los derechos reservados
-- 📅 **Última actualización:** 4 de agosto de 2026
-- 🏛️ **Verificado en Google Search Console:** ✅
+-  **Propiedad intelectual:** D3B1A2C4F5E67890
+-  **Autor:** Db_artworkFOUNDERSMS
+-  **URL oficial:** https://serakdepms.github.io/Serakdep-MS-Clan-Official/
+-  **Licencia:** Propietaria - Todos los derechos reservados
+-  **Última actualización:** 4 de agosto de 2026
+-  **Verificado en Google Search Console**
 
 ---
 
-## 📋 TÉRMINOS DE USO
+## TÉRMINOS DE USO
 
-### ✅ **PERMITIDO:**
+###  **PERMITIDO:**
 - Ver el sitio web en modo de solo lectura
 - Reportar errores mediante Issues de GitHub
 - Sugerir mejoras mediante Discussions
 - Usar el formulario de inscripción como usuario final
 - Navegar por todas las páginas públicas
 
-### ❌ **ESTRICTAMENTE PROHIBIDO:**
+### **ESTRICTAMENTE PROHIBIDO:**
 - Copiar, clonar o replicar el código fuente
 - Crear forks no autorizados
 - Modificar o crear trabajos derivados
@@ -48,7 +48,7 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 
 ---
 
-## 🚀 Cómo unirse al clan
+## Cómo unirse al clan
 
 1. **Lee el reglamento** – Aceptación obligatoria (incluye normas por división).
 2. **Completa el formulario** – Selecciona tu división principal (12 disponibles).
@@ -58,7 +58,7 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 
 ---
 
-## 🔗 Enlaces importantes
+## Enlaces importantes
 
 - [WhatsApp del clan](https://wa.me/573116546484)
 - [Discord oficial](https://discord.gg/vts4PTHR9K)
@@ -66,7 +66,7 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 ### Frontend
 - **HTML5** – Estructura semántica de las 20+ páginas.
@@ -100,34 +100,34 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 
 ---
 
-## ⚖️ INFORMACIÓN LEGAL COMPLETA
+## INFORMACIÓN LEGAL COMPLETA
 
-### 📜 **LICENCIA:**
+### **LICENCIA:**
 Este proyecto está protegido por derechos de autor bajo licencia restrictiva. No es software libre ni open source.
 
-### ⚠️ **AVISO DE PROTECCIÓN:**
+### **AVISO DE PROTECCIÓN:**
 Este repositorio está monitoreado por sistemas automáticos de detección de violaciones de copyright.
 
-### 🔍 **DETECCIÓN DE VIOLACIONES:**
+### **DETECCIÓN DE VIOLACIONES:**
 - Monitoreo automático de copias no autorizadas
 - Rastreo de forks y clones
 - Detección de uso comercial ilícito
 - Alertas DMCA automáticas
 
-### 📞 **REPORTAR VIOLACIONES:**
+### **REPORTAR VIOLACIONES:**
 Si observas uso no autorizado de este proyecto:
 1. Contacta al propietario: serakdepmsofficial7@gmail.com
 2. Reporta en GitHub mediante "Report Abuse"
 3. Envía evidencia a: serakdepmsofficial7@gmail.com
 
-### ⚠️ **ADVERTENCIA LEGAL FINAL:**
+### **ADVERTENCIA LEGAL FINAL:**
 **"LA VISUALIZACIÓN DE ESTE CÓDIGO NO CONSTITUYE UNA LICENCIA PARA SU USO.  
 CUALQUIER REPRODUCCIÓN, MODIFICACIÓN O DISTRIBUCIÓN SIN AUTORIZACIÓN ESCRITA  
 CONSTITUYE UNA VIOLACIÓN DE DERECHOS DE AUTOR Y SERÁ PERSEGUIDA LEGALMENTE."**
 
 ---
 
-## 📄 **POLÍTICA DE ACCESO:**
+## **POLÍTICA DE ACCESO:**
 Este repositorio es de **SOLA VISUALIZACIÓN**.  
 El código se proporciona únicamente para demostración y transparencia,  
 no para ser reutilizado, modificado o distribuido.
@@ -139,9 +139,9 @@ no para ser reutilizado, modificado o distribuido.
 
 **Última verificación legal:** 04/08/2026  
 **Estado:** Activo y Protegido  
-**Google Search Console:** ✅ Verificado  
-**Sitemap:** ✅ Enviado  
-**Chatbot IA:** ✅ Actualizado  
+**Google Search Console:** Verificado  
+**Sitemap:** Enviado  
+**Chatbot IA:** Actualizado  
 **Violaciones recientes:** 0  
 **Acciones DMCA pendientes:** 0  
 
