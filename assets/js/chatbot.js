@@ -43,18 +43,18 @@
       keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'league of legends', 'cs2', 'counter strike', 'rocket league', 'supercell', 'brawl stars', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
       response: `<strong>Sección & Divisiones Multi-Gamer de Serakdep MS</strong><br><br>
       Serakdep MS es una comunidad y clan oficial Multi-Gamer con <strong>12 divisiones competitivas</strong> activas:<br><br>
-      🎮 <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
-      ⛏️ <strong>Minecraft:</strong> Servidor con economía, Bedwars 4v4 y arenas PvP.<br>
-      🔫 <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
-      🎯 <strong>Valorant:</strong> Escuadras 5v5, tácticas de agentes y clasificatorias.<br>
-      🏆 <strong>Fortnite:</strong> Battle Royale, cero construcción y torneos de mapa.<br>
-      🔥 <strong>Free Fire:</strong> Duelos de Escuadra 4v4 y salas personalizadas.<br>
-      🚗 <strong>Rocket League:</strong> Competencias 2v2, 3v3 y mecánicas aéreas.<br>
-      ⚔️ <strong>League of Legends:</strong> Grieta del Invocador 5v5 y Clash.<br>
-      💣 <strong>Counter-Strike 2:</strong> Modo Premier 5v5 y ejecuciones tácticas.<br>
-      📱 <strong>Supercell:</strong> Brawl Stars (Mega Hachas) y Clash Royale.<br>
-      🛡️ <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
-      💥 <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
+      <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
+      <strong>Minecraft:</strong> Servidor con economía, Bedwars 4v4 y arenas PvP.<br>
+      <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
+      <strong>Valorant:</strong> Escuadras 5v5, tácticas de agentes y clasificatorias.<br>
+      <strong>Fortnite:</strong> Battle Royale, cero construcción y torneos de mapa.<br>
+      <strong>Free Fire:</strong> Duelos de Escuadra 4v4 y salas personalizadas.<br>
+      <strong>Rocket League:</strong> Competencias 2v2, 3v3 y mecánicas aéreas.<br>
+      <strong>League of Legends:</strong> Grieta del Invocador 5v5 y Clash.<br>
+      <strong>Counter-Strike 2:</strong> Modo Premier 5v5 y ejecuciones tácticas.<br>
+      <strong>Supercell:</strong> Brawl Stars (Mega Hachas) y Clash Royale.<br>
+      <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
+      <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
       Puedes explorar cada división y unirte a su grupo oficial de WhatsApp desde el <strong>Catálogo Multi-Gamer</strong> en el menú o desde <code>pages/juegos/portal.html</code>.`
     },
  
@@ -64,12 +64,12 @@
       keywords: ['reglamento', 'normas', 'reglas', 'sanciones', 'castigos', 'prohibido', 'penalizaciones', 'amonestaciones', 'derechos', 'leer reglamento', 'etapa 1', 'normas generales', 'respeto', 'actividad minima', 'que no se puede hacer', 'que esta prohibido', 'codigo de conducta', 'convivencia', 'multicuentas', 'multiples cuentas', 'baja inactividad'],
       response: `<strong>Reglamento general del clan</strong><br><br>
       En Serakdep MS valoramos el respeto y la buena convivencia. Estas son las normas fundamentales:<br>
-      ✔️ <strong>Respeto obligatorio:</strong> No se tolera discriminación, acoso, bullying ni lenguaje ofensivo.<br>
-      ✔️ <strong>Edad mínima 16 años</strong> (con permiso parental si eres menor).<br>
-      ✔️ <strong>Actividad mínima:</strong> Participar al menos una vez por semana. Tras 3 semanas sin actividad sin justificación, se considerará baja por inactividad.<br>
-      ✔️ <strong>Confidencialidad:</strong> No compartir información personal de otros miembros sin autorización.<br>
-      ✔️ <strong>Identificación clara:</strong> Usar nombres reconocibles en todas las plataformas.<br>
-      ✔️ <strong>Prohibición de multicuentas:</strong> No se permite tener múltiples cuentas en el clan sin autorización previa de la Alta Dirección.<br><br>
+      <strong>Respeto obligatorio:</strong> No se tolera discriminación, acoso, bullying ni lenguaje ofensivo.<br>
+      <strong>Edad mínima 16 años</strong> (con permiso parental si eres menor).<br>
+      <strong>Actividad mínima:</strong> Participar al menos una vez por semana. Tras 3 semanas sin actividad sin justificación, se considerará baja por inactividad.<br>
+      <strong>Confidencialidad:</strong> No compartir información personal de otros miembros sin autorización.<br>
+      <strong>Identificación clara:</strong> Usar nombres reconocibles en todas las plataformas.<br>
+      <strong>Prohibición de multicuentas:</strong> No se permite tener múltiples cuentas en el clan sin autorización previa de la Alta Dirección.<br><br>
       <strong>Código de Conducta:</strong><br>
       🔸 <strong>Respeto Mutuo:</strong> Trata a los demás como te gustaría ser tratado.<br>
       🔸 <strong>Inclusión:</strong> Damos la bienvenida a jugadores de todos los orígenes, géneros y habilidades.<br>
@@ -271,10 +271,10 @@
       • <strong>Discord:</strong> canal #anuncios y #torneos.<br>
       • <strong>WhatsApp:</strong> canal oficial del clan, se encuentra en la sección de eventos.<br>
       • <strong>Página web:</strong> consulta la sección de Eventos para ver el calendario actualizado.<br><br>
-      Para inscribirte, dirígete a la sección de eventos y mira el modal de Inscripción de Equipos. Una vez ahí, únete al grupo que te indica y completa el formulario cuando se te envíe en recepción. Los datos que debes tener en cuenta es que cada clan deberá elegir un equipo de los 72 disponibles y elegir 5 de sus mejores miembros para participar en los torneos.<br><br>
+      Para inscribirte, dirígete a la sección de eventos y sigue las instrucciones publicadas para cada torneo. La inscripción se realiza a través de los canales oficiales que se indican en cada convocatoria.<br><br>
       <strong>Normas de convivencia en eventos:</strong><br>
       • Puntualidad: Llega a la hora acordada.<br>
-      •Folllow Instrucciones del anfitrión.<br>
+      • Seguir Instrucciones del anfitrión.<br>
       • Silenciar micrófono cuando no hables.<br>
       • Respetar turnos.<br>
       • No sabotaje.<br>
@@ -315,7 +315,7 @@
       • <strong>Carreras:</strong> Driving Empire.<br>
       • <strong>Social:</strong> Salón de Fiestas.<br>
       • <strong>Otros:</strong> Jailbreak.<br><br>
-      En la página de Inicio hay un filtro de juegos con <strong>351 títulos</strong> en 15 categorías. En Discord hay canales dedicados a cada juego para formar equipos.`
+      En la página de Inicio hay una sección con juegos populares organizados por categorías, donde puedes explorar y descubrir nuevos títulos para jugar con la comunidad. En Discord hay canales dedicados a cada juego para formar equipos.`
     },
  
  
@@ -351,26 +351,6 @@
       - Descripción clara de lo sucedido.<br>
       - Capturas de pantalla o video (muy importante).<br><br>
       Todos los reportes se tratan con confidencialidad.`
-    },
- 
- 
-
-    {
-      keywords: ['faq', 'preguntas frecuentes', 'dudas', 'preguntas', 'consulta', 'faq discord', 'faq whatsapp', 'faq admision', 'faq reglas', 'faq eventos', 'faq web'],
-      response: `<strong>Preguntas Frecuentes (FAQ)</strong><br><br>
-      La sección FAQ está organizada en categorías para que encuentres rápido lo que buscas:<br>
-      🔹 <strong>Discord:</strong> Cómo unirse, canales, verificación, zona DJ, colaboraciones.<br>
-      🔹 <strong>WhatsApp:</strong> Grupos oficiales, ingreso, horarios, contenido prohibido.<br>
-      🔹 <strong>Admisión:</strong> Proceso completo, requisitos, motivos de rechazo, re-aplicación.<br>
-      🔹 <strong>Reglas:</strong> Sistema de sanciones, cómo reportar, apelaciones, normas en juegos.<br>
-      🔹 <strong>Eventos:</strong> Inscripción, premios, formación de equipos, propuestas.<br>
-      🔹 <strong>Web:</strong> Propósito, actualizaciones, compatibilidad móvil, reporte de errores.<br>
-      🔹 <strong>Estructura:</strong> Jerarquía, campos de juego, departamentos, ascensos.<br>
-      🔹 <strong>Legal:</strong> Privacidad, términos de servicio, cookies, DMCA.<br>
-      🔹 <strong>Noticias:</strong> Sistema de noticias, canal WhatsApp, filtros.<br>
-      🔹 <strong>Soporte:</strong> Problemas técnicos, contacto con staff.<br>
-      🔹 <strong>Contribuciones:</strong> Cómo ayudar al clan, ser voluntario.<br><br>
-      Visita la página FAQ para respuestas detalladas a cada pregunta.`
     },
  
  
@@ -455,7 +435,6 @@
       5️⃣ Miembros Destacados – Veteranos con privilegios.<br>
       6️⃣ Miembros Activos – Participan regularmente.<br>
       7️⃣ Miembros Nuevos – En periodo de prueba (primeras 2 semanas).<br><br>
-      <strong>Campos de juego:</strong> Blox Fruits, Brookhaven, Adopt Me, Arsenal, King Legacy, Driving Empire, Otros.<br>
       <strong>Departamentos:</strong> Eventos, Admisiones, Moderación, Relaciones, Técnico, Contenido.<br>
       <strong>Miembros actuales:</strong> +266 verificados de diferentes países.<br><br>
       Los ascensos son por mérito (actividad, comportamiento, contribuciones) y se evalúan mensualmente. Nunca se venden rangos.`
@@ -515,9 +494,9 @@
       ✔️ Tener un historial impecable (sin sanciones graves).<br>
       ✔️ Demostrar compromiso, respeto y capacidad de ayudar a otros.<br>
       ✔️ Estar atento a las convocatorias que se publican en Discord (#anuncios) y en el sitio web (Contacto → Aspirar a Admin).<br>
-      ✔️ Completar el formulario de postulación cuando esté abierto.<br><br>
+      Completar el formulario de postulación cuando esté abierto.<br><br>
       Los seleccionados pasan por un periodo de capacitación y prueba. <strong>Nunca</strong> se venden rangos ni se aceptan pagos por ascensos.<br><br>
-      💡 Si aún no cumples los requisitos para admin, también puedes postularte como <strong>Colaborador</strong> (Contacto → Aspirar a Colaborador), con requisito mínimo de 17 años.`
+      Si aún no cumples los requisitos para admin, también puedes postularte como <strong>Colaborador</strong> (Contacto → Aspirar a Colaborador), con requisito mínimo de 17 años.`
     },
  
  
@@ -529,7 +508,6 @@
       • <strong>Inicio:</strong> Presentación, video, juegos.<br>
       • <strong>Reglamento:</strong> Normas completas, sanciones, derechos, colaboradores.<br>
       • <strong>Formulario:</strong> Inscripción al clan (etapa final).<br>
-      • <strong>FAQ:</strong> Preguntas frecuentes categorizadas.<br>
       • <strong>Eventos:</strong> Información de próximos eventos y torneos.<br>
       • <strong>Noticias:</strong> Novedades y anuncios del clan.<br>
       • <strong>Contacto:</strong> Formularios de reporte, sugerencias, aspirar a admin/colaborador y asuntos legales.<br>
@@ -584,10 +562,10 @@
       keywords: ['canal whatsapp noticias', 'whatsapp channel', 'qr whatsapp', 'notificaciones instantaneas', 'unirse canal noticias', 'canal oficial whatsapp', 'noticiero sms'],
       response: `<strong>Canal de WhatsApp para Noticias - Noticiero SMS</strong><br><br>
       Además de los grupos de chat, el clan dispone de un <strong>canal oficial de WhatsApp</strong> exclusivo para recibir notificaciones instantáneas. Beneficios:<br>
-      ✅ Notificaciones al instante de nuevas noticias.<br>
-      ✅ Novedades exclusivas antes que en otros medios.<br>
-      ✅ Recordatorios de eventos y torneos.<br>
-      ✅ Anuncios importantes del staff.<br><br>
+      Notificaciones al instante de nuevas noticias.<br>
+      Novedades exclusivas antes que en otros medios.<br>
+      Recordatorios de eventos y torneos.<br>
+      Anuncios importantes del staff.<br><br>
       Para unirte, ve a la página de Noticias y haz clic en "Unirse al Canal" o escanea el código QR en "Ver QR". También puedes acceder directamente al canal: https://whatsapp.com/channel/0029Vb8eLdmKAwEimFehzt3j`
     },
  
@@ -619,7 +597,7 @@
       • <strong>Vista previa en vivo</strong> de tu código.<br>
       • <strong>Consola interactiva</strong> para depurar tus programas.<br>
       • <strong>Enciclopedia interna</strong> con documentación de los tres lenguajes.<br>
-      • <strong>9 retos de programación</strong> guiados paso a paso.<br>
+      • <strong>500 retos de programación</strong> guiados paso a paso.<br>
       • <strong>Asistente IA</strong> (próximamente).<br>
       • <strong>6 temas de editor</strong> personalizables (Monokai, Dracula, Solarized, Nord, Material, Default).<br>
       • <strong>Exportación de proyectos</strong> en ZIP o HTML único.<br>
@@ -658,7 +636,7 @@
     {
       keywords: ['retos programacion', 'desafios codigo', 'ejercicios html', 'practicas css', 'ejercicios javascript', 'challenges', 'tareas programacion'],
       response: `<strong>Retos de programación en CodeTurbo</strong><br><br>
-      CodeTurbo incluye <strong>9 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
+      CodeTurbo incluye <strong>500 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
       • <strong>Página de bienvenida</strong> (HTML básico).<br>
       • <strong>Estilizando un botón</strong> (CSS intermedio).<br>
       • <strong>Lista de tareas interactiva</strong> (JavaScript avanzado).<br>
@@ -749,7 +727,7 @@
 
     {
       keywords: ['logo', 'panda', 'serakdep ms significado', 'lema', 'slogan', 'splash screen', 'carga inicial', 'panda logo'],
-      response: `🐼 <strong>Identidad del clan</strong><br><br>
+      response: `<strong>Identidad del clan</strong><br><br>
       <strong>Logo:</strong> Un panda estilizado con detalles dorados y verdes, que representa sabiduría, comunidad y la fusión de elementos naturales y tecnológicos.<br>
       <strong>Lema:</strong> "Un clan, una leyenda".<br>
       <strong>Slogan:</strong> "Unidos por la pasión del gaming".<br>
@@ -761,15 +739,14 @@
 
     {
       keywords: ['hola', 'buenas', 'ayuda', 'gracias', 'saludos', 'buenos dias', 'buenas tardes', 'buenas noches', 'info', 'que sabes', 'ayudame', 'que puedes hacer'],
-      response: `🐼 ¡Hola! Soy el asistente virtual de <strong>Serakdep MS</strong>, entrenado con toda la información del sitio web. Puedo ayudarte con:<br>
+      response: `¡Hola! Soy el asistente virtual de <strong>Serakdep MS</strong>, entrenado con toda la información del sitio web. Puedo ayudarte con:<br>
       • <strong>Inscripción y formulario</strong> (requisitos, pasos, campos).<br>
       • <strong>Reglamento y sanciones</strong> (tabla completa, apelaciones, proceso disciplinario).<br>
       • <strong>Discord y WhatsApp</strong> (canales, grupos, normas, horarios).<br>
       • <strong>Eventos y torneos</strong> (cómo participar, premios, normas de convivencia).<br>
-      • <strong>Juegos populares y filtro</strong> (351 títulos, 15 categorías).<br>
+      • <strong>Juegos populares y filtro</strong> (explora juegos por categorías).<br>
       • <strong>Contacto y reportes</strong> (email, formularios, cómo reportar).<br>
       • <strong>Colaboradores</strong> (áreas, requisitos, formulario de postulación).<br>
-      • <strong>FAQ categorizadas</strong> (12 categorías de dudas comunes).<br>
       • <strong>Legal</strong> (privacidad, términos, cookies, DMCA, derechos ARCO).<br>
       • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
@@ -785,7 +762,7 @@
     const lowerQuery = query.toLowerCase().trim();
     
     if (!lowerQuery) {
-      return `🤔 No he entendido tu consulta. ¿Podrías ser más específico? Puedes preguntarme sobre inscripción, reglamento, Discord, eventos, juegos, contacto, legal, estructura del clan, noticias... ¡Lo que necesites!`;
+      return `No he entendido tu consulta. ¿Podrías ser más específico? Puedes preguntarme sobre inscripción, reglamento, Discord, eventos, juegos, contacto, legal, estructura del clan, noticias... ¡Lo que necesites!`;
     }
  
     let bestMatch = null;
@@ -837,11 +814,10 @@
       'CodeTurbo', 'laboratorio código', 'retos programación', 'enciclopedia'
     ];
     
-    return `🤔 No tengo una respuesta específica para "${query}". Pero puedo ayudarte con muchos otros temas. Prueba preguntando sobre:<br>
+    return `No tengo una respuesta específica para "${query}". Pero puedo ayudarte con muchos otros temas. Prueba preguntando sobre:<br>
     • <strong>${suggestions.slice(0, 6).join(' • ')}</strong><br>
     • <strong>${suggestions.slice(6, 12).join(' • ')}</strong><br>
-    • <strong>${suggestions.slice(12).join(' • ')}</strong><br><br>
-    También puedes visitar la sección de <strong>FAQ</strong> en el menú superior para ver todas las preguntas frecuentes organizadas por categorías.`;
+    • <strong>${suggestions.slice(12).join(' • ')}</strong><br><br>`;
   }
  
  
@@ -896,7 +872,7 @@
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
       if (!hasStarted) {
-        addBotMessage(`🐼 <strong>¡Hola! Soy el asistente IA de Serakdep MS Multi-Gamer.</strong><br><br>
+        addBotMessage(`<strong>¡Hola! Soy el asistente IA de Serakdep MS Multi-Gamer.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre nuestra comunidad eSports y clan. Puedes preguntarme sobre:<br>
         • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, LoL, CS2, Rocket League, Supercell, Guardian Tales y Blood Strike.<br>
         • Cómo inscribirte y los requisitos.<br>

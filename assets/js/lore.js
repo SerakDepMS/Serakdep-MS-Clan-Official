@@ -14,7 +14,7 @@
   {
     chapter: "III",
     label: "El Pacto Fundador",
-    text: "En una noche de enero de 2023, los primeros 5 miembros fundadores, liderados por Db_artworkFOUNDERSMS y Yoosung_SMS, sellaron el juramento de construir un clan inclusivo y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una hermandad Multi-Gamer con presencia en PC, móviles y consolas."
+    text: "En una noche de enero de 2023, los primeros miembros fundadores, liderados por Db_artworkFOUNDERSMS, sellaron el juramento de construir un clan inclusivo y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una hermandad Multi-Gamer con presencia en PC, móviles y consolas."
   },
   {
     chapter: "IV",
@@ -54,7 +54,7 @@
   {
     chapter: "XI",
     label: "Torneos Interclanes",
-    text: "En abril de 2026 se diseñó el sistema de guerras de clanes y torneos internos. Cada equipo representa al clan eligiendo 5 de sus mejores guerreros de una base de 72 selecciones posibles, listos para defender el honor del estandarte. Los eventos se anuncian en el canal #torneos de Discord y en el calendario de la página web, con inscripciones a través del formulario de Eventos."
+    text: "En abril de 2026 se diseñó el sistema de guerras de clanes y torneos internos. Los eventos se anuncian en el canal #torneos de Discord y en el calendario de la página web, con inscripciones abiertas a todos los miembros que cumplan los requisitos de cada torneo. La organización fomenta la sana competencia y el trabajo en equipo."
   },
   {
     chapter: "XII",
@@ -89,12 +89,12 @@
   {
     chapter: "XVIII",
     label: "La Inteligencia Virtual",
-    text: "A inicios de abril de 2026 se integró el Chatbot IA en todas las secciones de la página. Un asistente virtual entrenado con la base de conocimiento del sitio (reglamento, FAQ, eventos, divisiones, etc.) que responde con rapidez preguntas sobre inscripciones, Discord, WhatsApp, torneos y cualquier otra duda. Disponible 24/7, es el primer punto de contacto para los aspirantes."
+    text: "A inicios de abril de 2026 se integró el Chatbot IA en todas las secciones de la página. Un asistente virtual entrenado con la base de conocimiento del sitio (reglamento, eventos, divisiones, etc.) que responde con rapidez preguntas sobre inscripciones, Discord, WhatsApp, torneos y cualquier otra duda. Disponible 24/7, es el primer punto de contacto para los aspirantes."
   },
   {
     chapter: "XIX",
     label: "El Núcleo de Código",
-    text: "Creado como entorno interactivo de programación, CodeTurbo permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 9 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de Serakdep MS para desarrollar habilidades técnicas."
+    text: "Creado como entorno interactivo de programación, CodeTurbo permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de Serakdep MS para desarrollar habilidades técnicas."
   },
   {
     chapter: "XX",
@@ -114,7 +114,7 @@
   {
     chapter: "XXIII",
     label: "Evolución Digital",
-    text: "Desde la beta 0.5 estática, el portal evolucionó a la v1.0 con el reglamento y formulario, la v2.0 con bases de datos npoint.io para noticias y preguntas frecuentes, y la v3.9 ultra-optimizada con actualización automática de noticias cada 12 segundos, reproductor de video mejorado y filtros de juegos (más de 350 títulos). La web actual es el resultado de un desarrollo continuo y colaborativo."
+    text: "Desde la beta 0.5 estática, el portal evolucionó a la v1.0 con el reglamento y formulario, la v2.0 con bases de datos npoint.io para noticias, y la v5.0 ultra-optimizada con actualización automática de noticias cada 12 segundos, reproductor de video mejorado y filtros de juegos (más de 350 títulos). La web actual es el resultado de un desarrollo continuo y colaborativo."
   },
   {
     chapter: "XXIV",
@@ -274,7 +274,7 @@
 
     const now = new Date();
     const dateStr = now.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
-    addInstantLine(`> SISTEMA::LORE_TERMINAL v3.0`, 'dim');
+    addInstantLine(`> SISTEMA::LORE_TERMINAL`, 'dim');
     addInstantLine(`> FECHA: ${dateStr}  HORA: ${getTimestamp()}`, 'dim');
     addInstantLine(`> ACCEDIENDO AL ARCHIVO HISTÓRICO...`, 'dim');
     await addLine(``, '', 10);
@@ -367,7 +367,7 @@
 
 
     addInstantLine('', '');
-    addInstantLine('   SERAKDEP MS · ARCHIVO HISTÓRICO v3.0', 'highlight glitch');
+    addInstantLine('   SERAKDEP MS · ARCHIVO HISTÓRICO', 'highlight glitch');
     addInstantLine('   TERMINAL INTERACTIVA', 'highlight');
     addInstantLine('   Usa ← → o Enter para navegar', 'dim');
     addInstantLine('   Ctrl+Home / Ctrl+End para extremos', 'dim');
@@ -387,7 +387,7 @@
       termContainer.classList.add('visible');
 
       addInstantLine('', '');
-      addInstantLine('   SERAKDEP MS · ARCHIVO HISTÓRICO v3.0', 'highlight glitch');
+      addInstantLine('   SERAKDEP MS · ARCHIVO HISTÓRICO', 'highlight glitch');
       addInstantLine('   TERMINAL INTERACTIVA', 'highlight');
       addInstantLine('   Usa ← → o Enter para navegar', 'dim');
       addInstantLine('   Ctrl+Home / Ctrl+End para extremos', 'dim');
