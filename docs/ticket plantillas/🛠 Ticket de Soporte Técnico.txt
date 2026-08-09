@@ -1,0 +1,13 @@
+# 🛠 Ticket de Soporte Técnico
+
+¡Hola! Has abierto un ticket de **Soporte Técnico**.
+
+**¿En qué podemos ayudarte?**
+Por favor, describe tu problema o consulta con el mayor detalle posible. Incluye:
+- Nombre de usuario (Discord y/o del juego).
+- División afectada (si aplica).
+- Capturas de pantalla o enlaces relevantes.
+
+Un miembro del staff te atenderá en breve. Mientras tanto, revisa si tu duda ya está resuelta en `#preguntas-frecuentes` o consulta el reglamento en `#reglas`.
+
+**¡Gracias por tu paciencia!**

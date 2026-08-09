@@ -49,7 +49,7 @@
   {
     chapter: "X",
     label: "Campos de Batalla Multi-Gamer",
-    text: "Las 12 divisiones oficiales del clan abarcan los títulos más competitivos del momento: Roblox (con juegos como Blox Fruits, Arsenal y King Legacy), Minecraft (servidor 24/7 con Bedwars y PvP), Call of Duty (Warzone y CODM Mobile), Fortnite (Battle Royale y Zero Build), Free Fire (Guild y DE clasificatorio), Valorant (5v5 táctico y Premier), Rocket League (2v2 y 3v3 con rotaciones), League of Legends (Flex y Clash), Counter-Strike 2 (Premier y utilería), Supercell (Brawl Stars y Clash Royale), Guardian Tales (Arena y gremios) y Blood Strike (Battle Royale táctico móvil). Cada división cuenta con su propio reglamento, sistema de sanciones y grupo de comunicación."
+    text: "Las 12 divisiones oficiales del clan abarcan los títulos más competitivos del momento: Roblox (con juegos como Blox Fruits, Arsenal y King Legacy), Minecraft (servidor 24/7 con Bedwars y PvP), Call of Duty (Warzone y CODM Mobile), Fortnite (Battle Royale y Zero Build), Free Fire (Guild y DE clasificatorio), Valorant (5v5 táctico y Premier), Among Us (partidas de deducción y estrategia), Counter-Strike 2 (Premier y utilería), FC Mobile (Ultimate Team y ligas), Clash Royale (guerras de clan y 1v1), Guardian Tales (Arena y gremios) y Blood Strike (Battle Royale táctico móvil). Cada división cuenta con su propio reglamento, sistema de sanciones y grupo de comunicación."
   },
   {
     chapter: "XI",

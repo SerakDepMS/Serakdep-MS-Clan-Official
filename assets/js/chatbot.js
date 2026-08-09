@@ -40,7 +40,7 @@
       Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 16, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
     {
-      keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'league of legends', 'cs2', 'counter strike', 'rocket league', 'supercell', 'brawl stars', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
+      keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'among us', 'cs2', 'counter strike', 'fc mobile', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
       response: `<strong>Sección & Divisiones Multi-Gamer de Serakdep MS</strong><br><br>
       Serakdep MS es una comunidad y clan oficial Multi-Gamer con <strong>12 divisiones competitivas</strong> activas:<br><br>
       <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
@@ -49,10 +49,10 @@
       <strong>Valorant:</strong> Escuadras 5v5, tácticas de agentes y clasificatorias.<br>
       <strong>Fortnite:</strong> Battle Royale, cero construcción y torneos de mapa.<br>
       <strong>Free Fire:</strong> Duelos de Escuadra 4v4 y salas personalizadas.<br>
-      <strong>Rocket League:</strong> Competencias 2v2, 3v3 y mecánicas aéreas.<br>
-      <strong>League of Legends:</strong> Grieta del Invocador 5v5 y Clash.<br>
+      <strong>Among Us:</strong> Partidas de traición, deducción y modos personalizados.<br>
       <strong>Counter-Strike 2:</strong> Modo Premier 5v5 y ejecuciones tácticas.<br>
-      <strong>Supercell:</strong> Brawl Stars (Mega Hachas) y Clash Royale.<br>
+      <strong>FC Mobile:</strong> Ultimate Team, mercado de fichajes y liga del clan.<br>
+      <strong>Clash Royale:</strong> Liga de Guerra, mazos meta y batallas 1v1.<br>
       <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
       <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
       Puedes explorar cada división y unirte a su grupo oficial de WhatsApp desde el <strong>Catálogo Multi-Gamer</strong> en el menú o desde <code>pages/juegos/portal.html</code>.`
@@ -139,9 +139,8 @@
       Para mantener un ambiente seguro, animamos a todos los miembros a reportar cualquier infracción que presencien. Para que un reporte sea efectivo, sigue estos pasos:<br>
       1️⃣ <strong>Reúne Evidencia:</strong> Toma capturas de pantalla, graba un video corto o guarda el ID del mensaje en Discord. Sin pruebas, es difícil tomar medidas.<br>
       2️⃣ <strong>Identifica a los Involucrados:</strong> Anota los nombres de usuario exactos de las personas implicadas.<br>
-      3️⃣ <strong>Usa el Canal Adecuado:</strong> Reporta a través del canal <strong>#reportar-problemas</strong> en Discord, el formulario de "Reportar problema" en la sección Contacto de la web, o por privado a un Administrador.<br>
-      4️⃣ <strong>Describe el Hecho:</strong> Explica qué sucedió, cuándo y dónde (juego, canal de voz/texto). Sé objetivo y evita lenguaje emocional.<br>
-      5️⃣ <strong>Confidencialidad:</strong> No discutas el reporte en canales públicos. El staff lo tratará de forma privada y te informará de las acciones tomadas si procede.`
+      3️⃣ <strong>Abre un ticket:</strong> Ve al canal <strong>#soporte-técnico</strong> y selecciona el botón 🛠 Soporte Técnico. Describe el incidente con detalle y adjunta las pruebas.<br>
+      4️⃣ <strong>Confidencialidad:</strong> El staff tratará tu reporte de forma privada. No discutas el reporte en canales públicos.`
     },
     {
       keywords: ['normas eventos', 'convivencia eventos', 'reglas torneos', 'eventos puntualidad', 'premios torneos', 'sabotaje eventos'],
@@ -200,36 +199,32 @@
       🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
       🔹 Preséntate en <strong>#presentaciones</strong> para que te demos la bienvenida.<br><br>
       <strong>Estructura de canales:</strong><br>
-      • <strong>BIENVENIDA:</strong> #bienvenida, #reglas, #verificación, #presentaciones, #despedida.<br>
-      • <strong>ANUNCIOS:</strong> #actualizaciones-servidor, #anuncios, #torneos, #eventos.<br>
-      • <strong>COLABORACIONES:</strong> #anuncios-de-alianzas, #resultados-de-alianzas, #solicitudes-externas, #normas-de-alianzas.<br>
-      • <strong>JUEGOS:</strong> #blox-fruits, #brookhaven, #adopt-me, #otros-juegos.<br>
-      • <strong>EVENTOS/TORNEOS:</strong> #formar-equipos, #inscripciones, #resultados, #ideas-eventos.<br>
-      • <strong>ZONA DJ:</strong> #eventos-dj, #solicitudes-dj, #normas-djs, #sala-pruebas-dj.<br>
-      • <strong>SOPORTE:</strong> #soporte-tecnico, #reportar-problemas, #sugerencias, #preguntas-frecuentes.<br>
-      • <strong>VOZ:</strong> Lobby Principal, Sala de Juegos 1/2, Sala de Torneos, Charla Tranquila, Música.<br><br>
+      • <strong>BIENVENIDA Y REGLAS:</strong> #bienvenida, #reglas, #verificación, #presentaciones, #despedida.<br>
+      • <strong>ANUNCIOS OFICIALES:</strong> #actualizaciones-servidor, #anuncios, #torneos, #eventos.<br>
+      • <strong>ALIANZAS Y COLABORACIONES:</strong> #normas-de-alianzas (lee las normas antes de solicitar una alianza o colaboración).<br>
+      • <strong>COMUNIDAD GENERAL:</strong> #general (charla libre entre todos los miembros).<br>
+      • <strong>DIVISIONES MULTI-GAMER:</strong> #roblox, #minecraft, #call-of-duty, #fortnite, #free-fire, #valorant, #among-us, #counter-strike-2, #fc-mobile, #clash-royale, #guardian-tales, #blood-strike (canales para coordinar partidas y estrategias en cada juego).<br>
+      • <strong>EVENTOS Y TORNEOS:</strong> #resultados (resultados de torneos y eventos).<br>
+      • <strong>SOPORTE Y AYUDA:</strong> #soporte-técnico (aquí se abren tickets mediante botones para soporte técnico, alianzas, creadores de contenido, DJ oficial e inscripción a eventos).<br>
+      • <strong>CANALES DE VOZ:</strong> Lobby Principal, Sala de Juegos 1, Sala de Juegos 2, Sala de Torneos.<br><br>
       Incumplir las normas de Discord puede causar mute o expulsión.`
     },
     {
       keywords: ['zona dj', 'eventos dj', 'ser dj', 'musica discord', 'canal musica'],
-      response: `<strong>Zona DJ de Discord</strong><br><br>
-      La Zona DJ es un espacio especial para eventos musicales y ambientación. Incluye:<br>
-      • <strong>#eventos-dj:</strong> Anuncios de eventos musicales programados.<br>
-      • <strong>#solicitudes-dj:</strong> Para pedir ser DJ del clan o solicitar canciones.<br>
-      • <strong>#normas-djs:</strong> Reglas específicas para DJs y asistentes.<br>
-      • <strong>#sala-pruebas-dj:</strong> Para pruebas de sonido y música.<br>
-      • <strong>#chat-privado-djs:</strong> Espacio exclusivo para DJs del clan.<br><br>
-      Si te gusta la música y quieres ser DJ, estate atento a las convocatorias en #anuncios.`
+      response: `<strong>DJ Oficial en Serakdep MS</strong><br><br>
+      Para ser DJ oficial del clan y participar en eventos musicales, especialmente en el juego de Roblox <strong>"The Core of Consciousness"</strong>, debes abrir un ticket en el canal <strong>#soporte-técnico</strong> y seleccionar el botón <strong>"🎧 DJ Oficial"</strong>. Allí podrás postularte y aportar tus listas de IDs de música.<br><br>
+      Ya no contamos con canales específicos de DJ en Discord; todo se gestiona a través de tickets para mantener el orden y la organización.`
     },
     {
       keywords: ['colaboraciones discord', 'alianzas', 'partnership', 'colaborar con otros clanes'],
       response: `<strong>Colaboraciones y alianzas en Discord</strong><br><br>
-      Gestionamos las alianzas con otros clanes a través de canales específicos:<br>
-      • <strong>#anuncios-de-alianzas:</strong> Anuncios públicos de nuevas alianzas.<br>
-      • <strong>#resultados-de-alianzas:</strong> Resultados de colaboraciones con otros clanes.<br>
-      • <strong>#solicitudes-externas:</strong> Para propuestas de alianzas externas (si representas a otro clan).<br>
-      • <strong>#normas-de-alianzas:</strong> Reglas específicas para colaboraciones.<br><br>
-      Si quieres proponer una alianza, usa #solicitudes-externas y un admin te responderá.`
+      Las solicitudes de alianzas, colaboraciones con creadores de contenido y postulaciones para DJ oficial se gestionan exclusivamente a través del sistema de tickets en el canal <strong>#soporte-técnico</strong>.<br><br>
+      Allí encontrarás botones para:<br>
+      • 🤝 <strong>Alianza de Clan</strong> – Propuestas de alianzas con otros clanes.<br>
+      • 🎬 <strong>Creador de Contenido</strong> – Colaboraciones con streamers, youtubers, diseñadores, etc.<br>
+      • 🎧 <strong>DJ Oficial</strong> – Para ser DJ en el juego <em>The Core of Consciousness</em> (Roblox).<br><br>
+      Una vez abierto el ticket, un administrador se pondrá en contacto contigo para gestionar tu solicitud.<br><br>
+      Lee las normas en <strong>#normas-de-alianzas</strong> antes de abrir un ticket.`
     },
  
  
@@ -271,7 +266,7 @@
       • <strong>Discord:</strong> canal #anuncios y #torneos.<br>
       • <strong>WhatsApp:</strong> canal oficial del clan, se encuentra en la sección de eventos.<br>
       • <strong>Página web:</strong> consulta la sección de Eventos para ver el calendario actualizado.<br><br>
-      Para inscribirte, dirígete a la sección de eventos y sigue las instrucciones publicadas para cada torneo. La inscripción se realiza a través de los canales oficiales que se indican en cada convocatoria.<br><br>
+      Para inscribirte a un torneo o evento, dirígete al canal <strong>#soporte-técnico</strong> y selecciona el botón <strong>"📝 Inscripción a Eventos"</strong>. Allí podrás proporcionar la información necesaria para tu inscripción.<br><br>
       <strong>Normas de convivencia en eventos:</strong><br>
       • Puntualidad: Llega a la hora acordada.<br>
       • Seguir Instrucciones del anfitrión.<br>
@@ -295,8 +290,9 @@
     {
       keywords: ['formar equipos', 'equipo torneo', 'busco equipo', 'armar equipo'],
       response: `<strong>Formación de equipos para eventos</strong><br><br>
+      Para formar un equipo para torneos o partidas, puedes usar el canal de tu división correspondiente (por ejemplo, <strong>#roblox</strong>, <strong>#valorant</strong>, etc.) para buscar compañeros. También puedes abrir un ticket en <strong>#soporte-técnico</strong> con el botón <strong>"📝 Inscripción a Eventos"</strong> si necesitas ayuda del staff para organizar un equipo.<br><br>
       Los equipos se forman de diferentes maneras según el evento:<br>
-      • <strong>Auto-formación:</strong> Usa el canal #formar-equipos en Discord para organizarte con otros miembros.<br>
+      • <strong>Auto-formación:</strong> Organízate con otros miembros en el canal de tu división.<br>
       • <strong>Asignación aleatoria:</strong> Para eventos que buscan mezclar a los participantes.<br>
       • <strong>Por nivel de habilidad:</strong> Equipos balanceados según experiencia.<br>
       • <strong>Grupos pre-existentes:</strong> Si ya juegan juntos regularmente.<br><br>
@@ -340,11 +336,8 @@
     {
       keywords: ['reportar', 'reporte', 'denunciar', 'problema', 'queja', 'reportar miembro', 'incidencia', 'reportar problema', 'como reportar', 'denunciar a alguien'],
       response: `<strong>Sistema de reportes</strong><br><br>
-      Si presencias alguna conducta inapropiada (acoso, trampas, spam, etc.) puedes reportarlo así:<br>
-      🔸 <strong>Discord:</strong> Usa el canal #reportar-problemas (adjunta pruebas).<br>
-      🔸 <strong>WhatsApp:</strong> Contacta directamente a un administrador.<br>
-      🔸 <strong>Sitio web:</strong> Ve a "Contacto" → "Reportar problema" y completa el formulario.<br><br>
-      <strong>Información necesaria para un reporte efectivo:</strong><br>
+      Si presencias alguna conducta inapropiada (acoso, trampas, spam, etc.) puedes reportarlo a través del sistema de tickets en el canal <strong>#soporte-técnico</strong> (botón 🛠 Soporte Técnico) o contactando directamente a un administrador por privado.<br><br>
+      En el ticket, proporciona la siguiente información:<br>
       - Nombre del usuario involucrado.<br>
       - Fecha y hora aproximada del incidente.<br>
       - Lugar (juego, canal de Discord, grupo de WhatsApp).<br>
@@ -583,7 +576,7 @@
       • LUWANCE<br>
       • Kira's Order<br>
       • The Black Bulls<br><br>
-      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el canal #solicitudes-externas en Discord o postúlate como <strong>Colaborador - Representante de Alianzas</strong> en Contacto.`
+      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el sistema de tickets en <strong>#soporte-técnico</strong> (botón 🤝 Alianza de Clan) o postúlate como <strong>Colaborador - Representante de Alianzas</strong> en Contacto.`
     },
  
  
@@ -874,7 +867,7 @@
       if (!hasStarted) {
         addBotMessage(`<strong>¡Hola! Soy el asistente IA de Serakdep MS Multi-Gamer.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre nuestra comunidad eSports y clan. Puedes preguntarme sobre:<br>
-        • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, LoL, CS2, Rocket League, Supercell, Guardian Tales y Blood Strike.<br>
+        • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike.<br>
         • Cómo inscribirte y los requisitos.<br>
         • El <strong>Reglamento General Multi-Gamer</strong>, sanciones y proceso disciplinario.<br>
         • Nuestro servidor de Discord y grupos de WhatsApp por división.<br>

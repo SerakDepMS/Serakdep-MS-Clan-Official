@@ -1,0 +1,14 @@
+# 📝 Ticket de Inscripción a Eventos
+
+¡Hola! Has abierto un ticket para **Inscribirte a un Evento o Torneo**.
+
+**Datos de inscripción:**
+- Nombre de usuario (Discord y del juego).
+- División a la que perteneces (ej. Roblox, Valorant, etc.).
+- Nombre del evento al que te inscribes (indícalo claramente).
+- ¿Participas de forma individual o en equipo? Si es en equipo, indica los nombres de tus compañeros.
+- ¿Has leído y aceptas las bases del evento? (Disponibles en `#eventos`).
+
+El staff confirmará tu inscripción y te proporcionará más detalles sobre horarios y formato del torneo.
+
+**¡Mucha suerte en la competencia!**
