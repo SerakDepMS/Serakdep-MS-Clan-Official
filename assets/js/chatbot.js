@@ -194,7 +194,7 @@
     {
       keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord'],
       response: `<strong>Servidor de Discord de Serakdep MS</strong><br><br>
-      Nuestro servidor de Discord es el corazón de la comunidad. Enlace de invitación: <strong>https://discord.gg/vts4PTHR9K</strong><br><br>
+      Nuestro servidor de Discord es el corazón de la comunidad. Enlace de invitación: <strong>https://discord.gg/nphuM8K9aD</strong><br><br>
       Una vez dentro:<br>
       🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
       🔹 Preséntate en <strong>#presentaciones</strong> para que te demos la bienvenida.<br><br>
@@ -321,7 +321,7 @@
       response: `<strong>Contacto oficial</strong><br><br>
       <strong>Correo electrónico:</strong> serakdepmsofficial7@gmail.com<br>
       <strong>WhatsApp del clan:</strong> +57 311 6546484 (solo mensajes, no llamadas).<br>
-      <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br><br>
+      <strong>Discord:</strong> https://discord.gg/nphuM8K9aD<br><br>
       <strong>Opciones en la sección "Contacto":</strong><br>
       • <strong>Reportar un problema:</strong> Para conductas inapropiadas, bugs o incidencias (adjunta pruebas).<br>
       • <strong>Sugerencias:</strong> Propuestas para mejorar el clan o la web.<br>
@@ -670,7 +670,7 @@
       <strong>Twitter/X:</strong> @serakdep<br>
       <strong>Instagram:</strong> @serakdep_sms<br>
       <strong>TikTok:</strong> @serakdrji9t<br>
-      <strong>Discord:</strong> https://discord.gg/vts4PTHR9K<br>
+      <strong>Discord:</strong> https://discord.gg/nphuM8K9aD<br>
       <strong>YouTube:</strong> (canal en desarrollo)<br><br>
       Los enlaces directos están disponibles en el footer de cada página. ¡Síguenos para estar al día!`
     },

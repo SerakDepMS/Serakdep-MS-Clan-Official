@@ -271,7 +271,7 @@ function setupInscriptionForm() {
         whatsappBtn.style.display = "flex";
       }
       if (formData.joinDiscord) {
-        discordBtn.href = "https://discord.gg/vts4PTHR9K";
+        discordBtn.href = "https://discord.gg/nphuM8K9aD";
         discordBtn.style.display = "flex";
       }
 
