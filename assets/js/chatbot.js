@@ -199,7 +199,7 @@
       🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
       🔹 Preséntate en <strong>#presentaciones</strong> para que te demos la bienvenida.<br><br>
       <strong>Estructura de canales:</strong><br>
-      • <strong>BIENVENIDA Y REGLAS:</strong> #bienvenida, #reglas, #verificación, #presentaciones, #despedida.<br>
+      • <strong>BIENVENIDA Y REGLAS:</strong> #bienvenida, #reglas, #verificación, #presentaciones, #despedida, #ban, #boost.<br>
       • <strong>ANUNCIOS OFICIALES:</strong> #actualizaciones-servidor, #anuncios, #torneos, #eventos.<br>
       • <strong>ALIANZAS Y COLABORACIONES:</strong> #normas-de-alianzas (lee las normas antes de solicitar una alianza o colaboración).<br>
       • <strong>COMUNIDAD GENERAL:</strong> #general (charla libre entre todos los miembros).<br>
