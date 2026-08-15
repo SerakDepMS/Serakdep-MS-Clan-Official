@@ -601,6 +601,8 @@
   border-radius: var(--lab-radius);
   width: 90%;
   max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: var(--lab-shadow);
   color: var(--lab-text);
 }

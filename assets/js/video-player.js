@@ -127,6 +127,7 @@ class VideoPlayerFinal {
 
   init() {
     this.setupElements();
+    if (!this.video || !this.mainPlayBtn) return;
     this.setupEventListeners();
     this.loadSavedVolume();
     this.initVideoInfo(this.currentVideoIndex);

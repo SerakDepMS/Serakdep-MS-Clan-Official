@@ -719,12 +719,11 @@
  
 
     {
-      keywords: ['logo', 'panda', 'serakdep ms significado', 'lema', 'slogan', 'splash screen', 'carga inicial', 'panda logo'],
+      keywords: ['logo', 'panda', 'serakdep ms significado', 'lema', 'slogan', 'panda logo'],
       response: `<strong>Identidad del clan</strong><br><br>
       <strong>Logo:</strong> Un panda estilizado con detalles dorados y verdes, que representa sabiduría, comunidad y la fusión de elementos naturales y tecnológicos.<br>
       <strong>Lema:</strong> "Un clan, una leyenda".<br>
       <strong>Slogan:</strong> "Unidos por la pasión del gaming".<br>
-      <strong>Splash Screen:</strong> Al cargar la página de Inicio aparece una animación con el panda y el mensaje "Invocando a los pandas ancestrales...".<br><br>
       El diseño del logo fue creado por artistas de la comunidad y es un símbolo de nuestra identidad.`
     },
  
@@ -889,6 +888,11 @@
     closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
     });
  
     function sendUserMessage(text) {

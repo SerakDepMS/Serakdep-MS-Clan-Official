@@ -108,11 +108,11 @@ document.addEventListener('DOMContentLoaded', function() {
   galleryItems.forEach(card => {
     const zoomBtn = card.querySelector('.gallery-zoom');
     const rawData = card.getAttribute('data-gallery-item');
+    if (!rawData) return;
     let itemData = {};
     try {
       itemData = JSON.parse(rawData);
     } catch (e) {
-      console.warn('Error parseando data-gallery-item', e);
       return;
     }
 

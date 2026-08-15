@@ -44,6 +44,9 @@
   }
   
 
+  const hasCounter = document.getElementById('counter-years') || document.getElementById('counter-days');
+  if (!hasCounter) return;
+
   actualizarContador();
   setInterval(actualizarContador, 1000);
 })();

@@ -656,3 +656,133 @@ body.dark-theme .badge {
   background: linear-gradient(135deg, rgba(64, 145, 108, 0.4) 0%, rgba(45, 106, 79, 0.4) 100%);
   color: #f0e6c5;
 }
+
+/* ============================================================
+   RESPONSIVE DESIGN PARA CRÉDITOS & DIRECTOR Y PROGRAMADOR
+   ============================================================ */
+@media (max-width: 768px) {
+  .team-member,
+  .team-member.featured {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+    padding: 20px 15px !important;
+  }
+
+  .member-avatar {
+    width: 130px !important;
+    height: 130px !important;
+    margin: 0 auto 5px !important;
+  }
+
+  .member-info {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .member-info h3 {
+    font-size: 1.4rem !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    margin-bottom: 6px !important;
+  }
+
+  .member-role {
+    font-size: 1rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .member-skills {
+    justify-content: center !important;
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem !important;
+    padding: 4px 10px !important;
+  }
+
+  .member-social {
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .member-description {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+  }
+
+  .member-contribution {
+    text-align: left !important;
+    padding: 12px 15px !important;
+    margin-top: 15px !important;
+  }
+
+  .member-contribution h4 {
+    font-size: 1rem !important;
+  }
+
+  .member-contribution ul {
+    font-size: 0.9rem !important;
+  }
+
+  .special-mention {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 15px !important;
+    padding: 20px 15px !important;
+  }
+
+  .tech-info {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .tech-card {
+    padding: 16px 10px 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member.featured {
+    padding: 15px 10px !important;
+  }
+
+  .member-avatar {
+    width: 105px !important;
+    height: 105px !important;
+  }
+
+  .avatar-badge {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .member-info h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .member-role {
+    font-size: 0.9rem !important;
+  }
+
+  .social-btn {
+    padding: 8px 14px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+}

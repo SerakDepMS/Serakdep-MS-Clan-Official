@@ -1,7 +1,8 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
+  const hasAnyForm = document.querySelector("#inscription-form, #report-form, #suggestion-form, #admin-application-form, #collaborator-application-form");
   if (typeof emailjs !== 'undefined') {
     emailjs.init("KZquan0PhqC35uDYw");
-  } else {
+  } else if (hasAnyForm) {
     console.warn('EmailJS no se cargó correctamente. Los formularios de contacto no funcionarán.');
   }
 
