@@ -35,6 +35,12 @@
   pointer-events: none;
 }
 
+@media (max-width: 767px) {
+  #cv {
+    display: none !important;
+  }
+}
+
 
 .ambient {
   position: absolute;

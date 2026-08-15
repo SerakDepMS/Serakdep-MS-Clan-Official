@@ -27,6 +27,9 @@
   <meta name="theme-color" content="#2d6a4f" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Preload del recurso LCP -->
+  <link rel="preload" as="image" href="assets/img/clan-logo.jpeg" fetchpriority="high" />
+
   <!-- Google Fonts diferido y optimizado con display=swap -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
@@ -63,7 +66,7 @@
     <link rel="stylesheet" href="assets/css/contador.css" />
   </noscript>
 
-  <!-- CSS Crítico en línea para renderizado inmediato (Above the Fold) -->
+  <!-- CSS Crítico en línea para renderizado inmediato y cero CLS (Above the Fold) -->
   <style>
     :root {
       --primary-green: #1b4332;
@@ -115,6 +118,26 @@
       overflow: hidden;
       font-family: 'Exo 2', 'Segoe UI', sans-serif;
     }
+    #cv {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      display: block;
+    }
+    @media (max-width: 767px) {
+      #cv { display: none !important; }
+    }
+    .ambient { position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; }
+    .hud { position: absolute; inset: 16px; pointer-events: none; z-index: 2; }
+    .content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }
+    .panda-stage { position: relative; width: 130px; height: 130px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .panda-svg { width: 110px; height: 110px; position: relative; z-index: 4; }
+    .clan-logo-section { display: flex; align-items: center; gap: 25px; margin-bottom: 30px; }
+    .clan-logo-container { width: 180px; height: 164px; position: relative; flex-shrink: 0; }
+    .clan-logo { width: 180px; height: 164px; display: block; border-radius: 12px; }
   </style>
 
 <script>
@@ -370,9 +393,9 @@
         </div>
         <div class="video-controls-panel">
           <div class="video-meta-info">
-            <h3 class="video-current-title" id="video-title">
+            <h2 class="video-current-title" id="video-title">
               Presentación del Clan
-            </h3>
+            </h2>
             <p class="video-current-description" id="video-description">
               ¡Bienvenido a Serakdep MS! Una comunidad y clan oficial Multi-Gamer donde la diversión, la competencia y el respeto son lo primero.
             </p>

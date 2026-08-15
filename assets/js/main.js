@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav a");
 
@@ -199,8 +199,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  window.addEventListener('scroll', toggleBtn);
-  window.addEventListener('resize', toggleBtn);
+  let scrollTicking = false;
+  function handleScroll() {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        toggleBtn();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', handleScroll, { passive: true });
   toggleBtn();
 
   btn.addEventListener('click', () => {
