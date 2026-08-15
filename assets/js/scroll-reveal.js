@@ -7,7 +7,6 @@
   const SELECTORS = [
     '.card',
     '.gallery-card',
-    '.clan-logo-section',
     '.contact-cards .contact-card',
     '.team-member',
     '.alianza-card',

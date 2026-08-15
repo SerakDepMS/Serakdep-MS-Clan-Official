@@ -129,10 +129,30 @@ class VideoPlayerFinal {
     this.setupElements();
     this.setupEventListeners();
     this.loadSavedVolume();
-    this.loadVideo(this.currentVideoIndex);
-    this.updateCounter();
+    this.setupInitialVideoInfo(this.currentVideoIndex);
   }
 
+  setupInitialVideoInfo(index) {
+    if (index < 0 || index >= this.videoList.length) return;
+    this.currentVideoIndex = index;
+    const videoData = this.videoList[index];
+
+    this.videoTitle.textContent = videoData.title;
+    this.videoDescription.textContent = videoData.description || "";
+    this.infoDuration.textContent = videoData.duration + " seg";
+    this.infoSize.textContent = videoData.size;
+
+    const fullscreenTitle = this.fullscreenOverlay ? this.fullscreenOverlay.querySelector(
+      ".video-title-fullscreen"
+    ) : null;
+    if (fullscreenTitle) {
+      fullscreenTitle.textContent = videoData.title;
+    }
+
+    this.updateCounter();
+    this.hideLoading();
+    this.showCenterPlayButton();
+  }
 
   loadSavedVolume() {
     const savedVolume = getCookie('sms_volume');
@@ -721,6 +741,11 @@ class VideoPlayerFinal {
   }
 
   togglePlay() {
+    if (!this.video.getAttribute('src') && !this.video.src.includes('.mp4')) {
+      this.loadVideo(this.currentVideoIndex, true);
+      return;
+    }
+
     if (this.video.paused) {
       this.currentPlayPromise = this.video.play();
       if (this.currentPlayPromise !== undefined) {
