@@ -28,7 +28,7 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Preload del recurso LCP -->
-  <link rel="preload" as="image" href="assets/img/clan-logo-orig.jpeg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/img/clan-logo.jpeg" fetchpriority="high" />
 
   <!-- Google Fonts diferido y optimizado con display=swap -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -174,6 +174,11 @@
     .clan-logo-section { display: flex; align-items: center; gap: 25px; margin-bottom: 30px; }
     .clan-logo-container { width: 180px; height: 164px; position: relative; flex-shrink: 0; }
     .clan-logo { width: 180px; height: 164px; display: block; border-radius: 12px; }
+    /* Video: reserva de espacio con aspect-ratio para CLS = 0 */
+    .video-player { width: 100%; max-width: 900px; margin: 25px auto; border-radius: 20px; overflow: hidden; }
+    .video-display-area { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden; border-radius: 18px 18px 0 0; }
+    .video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .main-video-player { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
   </style>
 
 <script>
@@ -196,10 +201,10 @@
   <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
   <meta property="og:title" content="Serakdep MS - Comunidad & Clan Oficial Multi-Gamer" />
   <meta property="og:description" content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo-orig.jpeg" />
+  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
   <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="353" />
+  <meta property="og:image:height" content="322" />
   <meta property="og:site_name" content="Serakdep MS Clan Official" />
 
 
@@ -207,7 +212,7 @@
   <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
   <meta name="twitter:title" content="Serakdep MS - Comunidad & Clan Oficial Multi-Gamer" />
   <meta name="twitter:description" content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo-orig.jpeg" />
+  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
   <meta name="twitter:site" content="@serakdepms" />
   <meta name="theme-color" content="#2d6a4f" />
 </head>
@@ -389,7 +394,7 @@
 
       <div class="clan-logo-section">
         <div class="clan-logo-container">
-          <img src="assets/img/clan-logo-orig.jpeg" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo" width="180"
+          <img src="assets/img/clan-logo.jpeg" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo" width="180"
             height="164" fetchpriority="high" decoding="async" />
           <div class="logo-glow"></div>
         </div>
@@ -407,7 +412,8 @@
         <div class="video-display-area">
           <div class="video-container">
             <video id="main-video" class="main-video-player" muted loop preload="none"
-              poster="assets/img/clan-logo-orig.jpeg" playsinline="playsinline" webkit-playsinline="webkit-playsinline">
+              width="900" height="506"
+              poster="assets/img/clan-logo.jpeg" playsinline="playsinline" webkit-playsinline="webkit-playsinline">
               <p>Tu navegador no soporta videos HTML5.</p>
             </video>
             <div class="video-loading-overlay" id="video-loading">
