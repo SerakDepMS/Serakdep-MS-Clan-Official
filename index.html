@@ -20,35 +20,117 @@
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png" />
   <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
-  <link rel="stylesheet" href="assets/css/video-player.css" />
-  <link rel="stylesheet" href="assets/css/logo.css" />
-  <link rel="stylesheet" href="assets/css/creditos.css" />
-  <link rel="stylesheet" href="assets/css/loading.css" />
-  <link rel="stylesheet" href="assets/css/chatbot.css" />
-  <link rel="stylesheet" href="assets/css/contador.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="theme-color" content="#2d6a4f" />
+  <meta name="robots" content="index, follow" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  <!-- Google Fonts diferido y optimizado con display=swap -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" />
+  </noscript>
+
+  <!-- Font Awesome cargado de forma asíncrona no bloqueante -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </noscript>
+
+  <!-- Hojas de estilo locales cargadas de forma asíncrona -->
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/video-player.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/logo.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/creditos.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/loading.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/chatbot.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/contador.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/video-player.css" />
+    <link rel="stylesheet" href="assets/css/logo.css" />
+    <link rel="stylesheet" href="assets/css/creditos.css" />
+    <link rel="stylesheet" href="assets/css/loading.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+    <link rel="stylesheet" href="assets/css/contador.css" />
+  </noscript>
+
+  <!-- CSS Crítico en línea para renderizado inmediato (Above the Fold) -->
+  <style>
+    :root {
+      --primary-green: #1b4332;
+      --secondary-green: #2d6a4f;
+      --accent-green: #40916c;
+      --light-green: #95d5b2;
+      --bamboo-gold: #d4af37;
+      --panda-black: #1a1a1a;
+      --panda-white: #f8f9fa;
+      --background-gradient: linear-gradient(135deg, #e3f2e8 0%, #c8e6c9 100%);
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.12);
+      --transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+      --transition-color: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--background-gradient);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header {
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+      color: white;
+      padding: 20px 0;
+      box-shadow: var(--shadow-medium);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 2.2rem; font-weight: 800; letter-spacing: 1px; }
+    .logo a { color: white; text-decoration: none; }
+    .logo span { color: var(--bamboo-gold); }
+    #splash {
+      position: fixed;
+      inset: 0;
+      z-index: 100000;
+      background: radial-gradient(ellipse 130% 130% at 50% 100%, #0a1a0e 0%, #070f0b 65%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Exo 2', 'Segoe UI', sans-serif;
+    }
+  </style>
 
 <script>
   (function() {
     try {
       if (sessionStorage.getItem('serakdep_access_granted')) {
-        document.write('<style>#splash { display: none !important; }</style>');
-        document.body.style.overflow = 'auto';
+        var s = document.createElement('style');
+        s.textContent = '#splash { display: none !important; }';
+        document.head.appendChild(s);
+        if (document.body) {
+          document.body.style.overflow = 'auto';
+        }
       }
     } catch(e) {}
   })();
 </script>
-
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#2d6a4f" />
 
 
   <meta property="og:type" content="website" />
@@ -71,22 +153,21 @@
   <meta name="theme-color" content="#2d6a4f" />
 </head>
 
+<body>
+
 <div id="cookie-banner"
   style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
   <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
     <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros
     para mejorar tu experiencia.
     Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso.
-    <a href="legal/cookies.html" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Más
-      información</a>
+    <a href="legal/cookies.html" aria-label="Ver política de cookies de Serakdep MS" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Ver política de cookies</a>
   </p>
-  <button onclick="aceptarCookies()"
+  <button onclick="aceptarCookies()" aria-label="Aceptar uso de cookies"
     style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
-  <button onclick="rechazarCookies()"
+  <button onclick="rechazarCookies()" aria-label="Rechazar uso de cookies"
     style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
 </div>
-
-<body>
 
   <div id="splash">
     <canvas id="cv"></canvas>
@@ -250,7 +331,7 @@
       <div class="clan-logo-section">
         <div class="clan-logo-container">
           <img src="assets/img/clan-logo.jpeg" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo" width="180"
-            height="180" />
+            height="164" fetchpriority="high" decoding="async" />
           <div class="logo-glow"></div>
         </div>
         <div class="logo-text">
@@ -266,8 +347,8 @@
       <div class="video-player">
         <div class="video-display-area">
           <div class="video-container">
-            <video id="main-video" class="main-video-player" autoplay muted loop preload="metadata"
-              playsinline="playsinline" webkit-playsinline="webkit-playsinline">
+            <video id="main-video" class="main-video-player" muted loop preload="none"
+              poster="assets/img/clan-logo.jpeg" playsinline="playsinline" webkit-playsinline="webkit-playsinline">
               <p>Tu navegador no soporta videos HTML5.</p>
             </video>
             <div class="video-loading-overlay" id="video-loading">
@@ -661,7 +742,8 @@
         <p style="
     margin-top: 20px;
     font-size: 0.9rem;
-    color: #777;
+    color: #374151;
+    font-weight: 500;
     font-style: italic;
   ">
           <i class="fas fa-clock"></i>

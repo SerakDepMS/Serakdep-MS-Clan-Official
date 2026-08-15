@@ -129,8 +129,20 @@ class VideoPlayerFinal {
     this.setupElements();
     this.setupEventListeners();
     this.loadSavedVolume();
-    this.loadVideo(this.currentVideoIndex);
+    this.initVideoInfo(this.currentVideoIndex);
     this.updateCounter();
+  }
+
+  initVideoInfo(index) {
+    if (index < 0 || index >= this.videoList.length) return;
+    this.currentVideoIndex = index;
+    const videoData = this.videoList[index];
+    if (this.videoTitle) this.videoTitle.textContent = videoData.title;
+    if (this.videoDescription) this.videoDescription.textContent = videoData.description || "";
+    if (this.infoDuration) this.infoDuration.textContent = videoData.duration + " seg";
+    if (this.infoSize) this.infoSize.textContent = videoData.size;
+    this.showCenterPlayButton();
+    if (this.videoLoading) this.videoLoading.style.display = "none";
   }
 
 
@@ -721,6 +733,11 @@ class VideoPlayerFinal {
   }
 
   togglePlay() {
+    const videoData = this.videoList[this.currentVideoIndex];
+    if (!this.video.src || this.video.src === "" || !this.video.currentSrc || !this.video.currentSrc.includes(videoData.src)) {
+      this.loadVideo(this.currentVideoIndex, true);
+      return;
+    }
     if (this.video.paused) {
       this.currentPlayPromise = this.video.play();
       if (this.currentPlayPromise !== undefined) {
