@@ -35,14 +35,13 @@
 
   <meta name="theme-color" content="#2d6a4f" />
   <meta name="robots" content="index, follow" />
-  <!-- Precarga de la imagen del póster en WebP (LCP) -->
+  <!-- Precarga de CSS crítico único para máxima velocidad FCP en móviles -->
+  <link rel="preload" as="style" href="assets/css/bundle.min.css?v=9" />
+  <!-- Precarga de la imagen LCP en WebP -->
   <link rel="preload" as="image" href="assets/img/clan-logo.webp" type="image/webp" fetchpriority="high" />
 
-  <!-- Hojas de estilo unificadas y estables -->
-  <link rel="stylesheet" href="assets/css/style.css?v=8" />
-  <link rel="stylesheet" href="assets/css/video-player.css?v=8" />
-  <link rel="stylesheet" href="assets/css/chatbot.css?v=8" />
-  <link rel="stylesheet" href="assets/css/contador.css?v=8" />
+  <!-- Hoja de estilo unificada y minificada (bundle: style + video-player + chatbot + contador) -->
+  <link rel="stylesheet" href="assets/css/bundle.min.css?v=9" />
 
   <!-- Iconos Font Awesome (asíncronos sin bloqueo) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
@@ -785,11 +784,11 @@
       </div>
     </div>
   </footer>
-  <script src="assets/js/main.js?v=8" defer></script>
-  <script src="assets/js/video-player.js?v=8" defer></script>
-  <script src="assets/js/chatbot.js?v=8" defer></script>
-  <script src="assets/js/scroll-reveal.js?v=8" defer></script>
-  <script src="assets/js/contador.js?v=8" defer></script>
+  <script src="assets/js/main.js?v=9" defer></script>
+  <script src="assets/js/video-player.js?v=9" defer></script>
+  <script src="assets/js/chatbot.js?v=9" defer></script>
+  <script src="assets/js/scroll-reveal.js?v=9" defer></script>
+  <script src="assets/js/contador.js?v=9" defer></script>
 </body>
 
 </html>
