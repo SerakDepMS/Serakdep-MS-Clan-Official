@@ -208,8 +208,10 @@ main .container>*:not(:last-child) {
   position: relative;
   width: 180px;
   height: 180px;
+  aspect-ratio: 1 / 1;
   margin-bottom: 20px;
   z-index: 1;
+  contain: layout paint;
 }
 
 .clan-logo {

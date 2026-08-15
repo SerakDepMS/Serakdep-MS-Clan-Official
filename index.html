@@ -35,7 +35,8 @@
 
   <meta name="theme-color" content="#2d6a4f" />
   <meta name="robots" content="index, follow" />
-
+  <!-- Precarga de CSS crítico para reducir FCP en móviles -->
+  <link rel="preload" as="style" href="assets/css/style.css?v=7" />
   <!-- Precarga de la imagen del póster en WebP (LCP) -->
   <link rel="preload" as="image" href="assets/img/clan-logo.webp" type="image/webp" fetchpriority="high" />
 
@@ -84,7 +85,7 @@
 <body>
 
   <div id="cookie-banner"
-    style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
+    style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3); contain: layout paint;">
     <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
       <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de
       terceros
