@@ -326,6 +326,24 @@ main .container>*:not(:last-child) {
   background: linear-gradient(135deg, #9b59b6, #8e44ad);
 }
 
+.video-player {
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto;
+  border-radius: 20px;
+  background: #000;
+  box-sizing: border-box;
+}
+
+.video-display-area {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 100%;
