@@ -31,31 +31,23 @@
   <!-- Precarga de la imagen del póster en WebP (LCP) -->
   <link rel="preload" as="image" href="assets/img/clan-logo.webp" fetchpriority="high" />
 
-  <!-- CSS crítico (layout principal) - carga normal -->
+  <!-- CSS crítico (layout principal y responsive unificado) -->
   <link rel="stylesheet" href="assets/css/style.css?v=6" />
 
-  <!-- CSS no crítico - asíncrono para eliminar bloqueo de renderizado -->
-  <link rel="preload" href="assets/css/responsive.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <link rel="preload" href="assets/css/video-player.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <!-- CSS de componentes diferidos -->
+  <link rel="stylesheet" href="assets/css/video-player.css?v=6" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/chatbot.css?v=6" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/contador.css?v=6" media="print" onload="this.media='all'" />
 
-  <link rel="preload" href="assets/css/chatbot.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <link rel="preload" href="assets/css/contador.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-
-  <!-- Font Awesome cargado de forma asíncrona -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <!-- Iconos y Fuentes (asíncronas con font-display: swap) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" media="print" onload="this.media='all'" />
 
   <noscript>
-    <link rel="stylesheet" href="assets/css/responsive.css?v=6" />
     <link rel="stylesheet" href="assets/css/video-player.css?v=6" />
-
     <link rel="stylesheet" href="assets/css/chatbot.css?v=6" />
     <link rel="stylesheet" href="assets/css/contador.css?v=6" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  </noscript>
-
-  <!-- Google Fonts con display=swap -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" />
   </noscript>
 

@@ -41,8 +41,8 @@
     const style = document.createElement('style');
     style.id = 'scroll-reveal-styles';
     style.textContent = `
-      .sr-hidden { opacity:0; transform:translateY(22px); transition:opacity .55s ease,transform .55s ease; }
-      .sr-visible { opacity:1 !important; transform:translateY(0) !important; }
+      .sr-hidden { opacity:0; transition:opacity .4s ease; }
+      .sr-visible { opacity:1 !important; }
     `;
     document.head.appendChild(style);
   }

@@ -44,8 +44,8 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
 
     const cacheBuster = `_cb=${Date.now()}`;
     const cleanUrl = window.API_DB.trim();
-    const urlConAntiCache = cleanUrl.includes('?') 
-      ? `${cleanUrl}&${cacheBuster}` 
+    const urlConAntiCache = cleanUrl.includes('?')
+      ? `${cleanUrl}&${cacheBuster}`
       : `${cleanUrl}?${cacheBuster}`;
 
     const response = await fetch(urlConAntiCache);
@@ -259,7 +259,7 @@ async function readMoreNews(id) {
         </div>
 
         <div class="modal-image-wrapper">
-          <img src="../../assets/img/clan-logo.jpeg" alt="Serakdep MS" class="modal-featured-image">
+          <img src="../../assets/img/clan-logo.webp" alt="Serakdep MS" class="modal-featured-image">
         </div>
 
         <div class="modal-body">
@@ -508,7 +508,7 @@ function isNewNews(dateString) {
 function saveToLocalStorage() {
   try {
     localStorage.setItem("serakdep_news", JSON.stringify(newsDatabase));
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function loadFromLocalStorage() {
@@ -520,5 +520,5 @@ function loadFromLocalStorage() {
         newsDatabase.news = parsed.news;
       }
     }
-  } catch (e) {}
+  } catch (e) { }
 }

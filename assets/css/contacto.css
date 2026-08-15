@@ -607,8 +607,18 @@
     height: 120px;
   }
 
+  .contact-direct-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .help-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .cta-buttons {
@@ -620,6 +630,31 @@
     width: 100%;
     max-width: 300px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 25px 15px;
+    border-radius: 16px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .direct-card {
+    padding: 25px 15px;
+  }
+
+  .direct-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
   }
 }
 

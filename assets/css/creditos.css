@@ -656,3 +656,85 @@ body.dark-theme .badge {
   background: linear-gradient(135deg, rgba(64, 145, 108, 0.4) 0%, rgba(45, 106, 79, 0.4) 100%);
   color: #f0e6c5;
 }
+
+@media (max-width: 768px) {
+  .team-member,
+  .team-member.featured {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .member-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .member-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .member-skills,
+  .member-social {
+    justify-content: center;
+  }
+
+  .member-contribution {
+    text-align: left;
+    padding: 15px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .editors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member,
+  .team-member.featured {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .member-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .member-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .member-role {
+    font-size: 0.95rem;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .member-social .social-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .tech-card {
+    padding: 15px 10px;
+  }
+
+  .tech-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+}

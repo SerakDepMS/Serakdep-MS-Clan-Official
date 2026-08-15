@@ -54,13 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // 5. Animación de tarjetas
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card, index) => {
-    setTimeout(() => {
-      card.classList.add("fade-in");
-    }, index * 100);
-  });
+  // 5. Tarjetas estáticas y estables para evitar CLS
+
 
   // 6. Observador de derechos
   const derechoCards = document.querySelectorAll(".derecho-card");

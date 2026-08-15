@@ -9,7 +9,7 @@
 
 #  Serakdep MS Clan – Sitio Web Oficial
 
-![Clan Logo](assets/img/clan-logo.jpeg)
+![Clan Logo](assets/img/clan-logo.webp)
 
 Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer** dedicada al gaming organizado, respetuoso y divertido, con presencia en **12 divisiones oficiales** y múltiples plataformas de juego.
 
