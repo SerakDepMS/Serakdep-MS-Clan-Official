@@ -977,8 +977,9 @@
 
 
   .modal-content {
-    width: 95%;
-    margin: 0 10px;
+    width: calc(100% - 24px);
+    max-width: 500px;
+    margin: auto;
   }
 
   .input-group {

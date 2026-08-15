@@ -668,6 +668,13 @@
     gap: 10px;
   }
 
+  .event-modal-content {
+    width: calc(100% - 24px);
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: auto;
+  }
+
   .event-modal-actions {
     flex-direction: column;
   }

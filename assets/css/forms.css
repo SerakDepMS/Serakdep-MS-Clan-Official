@@ -1232,3 +1232,56 @@ body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox:hover {
   border-color: #3498db;
   background-color: #222825;
 }
+
+body.dark-theme .form-label,
+html.dark-theme .form-label {
+  color: #f0e6c5;
+}
+
+body.dark-theme .form-control,
+html.dark-theme .form-control,
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="tel"],
+body.dark-theme input[type="number"],
+body.dark-theme input[type="url"],
+body.dark-theme input[type="date"],
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: #16201a !important;
+  color: #e0e0e0 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-theme .form-control:focus,
+html.dark-theme .form-control:focus,
+body.dark-theme input:focus,
+body.dark-theme select:focus,
+body.dark-theme textarea:focus {
+  background-color: #1c2a22 !important;
+  border-color: var(--accent-green) !important;
+  box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.2) !important;
+}
+
+body.dark-theme .character-count,
+html.dark-theme .character-count {
+  color: #a0a0a0;
+}
+
+body.dark-theme .card,
+html.dark-theme .card {
+  background: rgba(26, 31, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

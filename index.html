@@ -4,10 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <script>try { var t = localStorage.getItem('sms_theme') || (document.cookie.match(/sms_theme=([^;]+)/) || [])[1]; if (t === 'dark') document.documentElement.classList.add('dark-theme'); } catch (e) { }</script>
+  <style>
+    html.dark-theme,
+    html.dark-theme body {
+      background-color: #0d1f14 !important;
+      color: #e0e0e0;
+      color-scheme: dark;
+    }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serakdep MS - Comunidad & Clan Oficial Multi-Gamer</title>
-  <meta name="description" content="Serakdep MS - Comunidad y Clan Oficial Multi-Gamer con divisiones en Roblox, Minecraft, Call of Duty, Valorant, Fortnite, Free Fire, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta name="keywords" content="Multi-Gamer, clan, eSports, gaming, comunidad, Roblox, Minecraft, Valorant, Call of Duty, Fortnite, Free Fire, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales, Blood Strike, Serakdep MS" />
+  <meta name="description"
+    content="Serakdep MS - Comunidad y Clan Oficial Multi-Gamer con divisiones en Roblox, Minecraft, Call of Duty, Valorant, Fortnite, Free Fire, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
+  <meta name="keywords"
+    content="Multi-Gamer, clan, eSports, gaming, comunidad, Roblox, Minecraft, Valorant, Call of Duty, Fortnite, Free Fire, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales, Blood Strike, Serakdep MS" />
   <meta name="google-site-verification" content="9tjYSYGFCUfKDVZdeJDtDbpOyUBxd0uEh86botq02_0" />
   <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
   <meta name="msapplication-navbutton-color" content="#ffffff" />
@@ -32,30 +42,36 @@
   <link rel="preload" as="image" href="assets/img/clan-logo.webp" fetchpriority="high" />
 
   <!-- CSS crítico (layout principal y responsive unificado) -->
-  <link rel="stylesheet" href="assets/css/style.css?v=6" />
+  <link rel="stylesheet" href="assets/css/style.css?v=7" />
 
   <!-- CSS de componentes diferidos -->
-  <link rel="stylesheet" href="assets/css/video-player.css?v=6" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/chatbot.css?v=6" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/contador.css?v=6" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/video-player.css?v=7" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/chatbot.css?v=7" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/contador.css?v=7" media="print" onload="this.media='all'" />
 
   <!-- Iconos y Fuentes (asíncronas con font-display: swap) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+    onload="this.media='all'" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap"
+    media="print" onload="this.media='all'" />
 
   <noscript>
-    <link rel="stylesheet" href="assets/css/video-player.css?v=6" />
-    <link rel="stylesheet" href="assets/css/chatbot.css?v=6" />
-    <link rel="stylesheet" href="assets/css/contador.css?v=6" />
+    <link rel="stylesheet" href="assets/css/video-player.css?v=7" />
+    <link rel="stylesheet" href="assets/css/chatbot.css?v=7" />
+    <link rel="stylesheet" href="assets/css/contador.css?v=7" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" />
   </noscript>
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
   <meta property="og:title" content="Serakdep MS - Comunidad & Clan Oficial Multi-Gamer" />
-  <meta property="og:description" content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
+  <meta property="og:description"
+    content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
+  <meta property="og:image"
+    content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
   <meta property="og:image:type" content="image/webp" />
   <meta property="og:image:width" content="353" />
   <meta property="og:image:height" content="322" />
@@ -64,27 +80,31 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
   <meta name="twitter:title" content="Serakdep MS - Comunidad & Clan Oficial Multi-Gamer" />
-  <meta name="twitter:description" content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
+  <meta name="twitter:description"
+    content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
+  <meta name="twitter:image"
+    content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
   <meta name="twitter:site" content="@serakdepms" />
   <meta name="theme-color" content="#2d6a4f" />
 </head>
 
 <body>
 
-<div id="cookie-banner"
-  style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
-  <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
-    <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros
-    para mejorar tu experiencia.
-    Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso.
-    <a href="legal/cookies.html" aria-label="Ver política de cookies de Serakdep MS" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Ver política de cookies</a>
-  </p>
-  <button onclick="aceptarCookies()" aria-label="Aceptar uso de cookies"
-    style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
-  <button onclick="rechazarCookies()" aria-label="Rechazar uso de cookies"
-    style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
-</div>
+  <div id="cookie-banner"
+    style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
+    <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
+      <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de
+      terceros
+      para mejorar tu experiencia.
+      Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso.
+      <a href="legal/cookies.html" aria-label="Ver política de cookies de Serakdep MS"
+        style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Ver política de cookies</a>
+    </p>
+    <button onclick="aceptarCookies()" aria-label="Aceptar uso de cookies"
+      style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
+    <button onclick="rechazarCookies()" aria-label="Rechazar uso de cookies"
+      style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
+  </div>
 
 
   <header>
@@ -125,8 +145,8 @@
 
       <div class="clan-logo-section">
         <div class="clan-logo-container">
-          <img src="assets/img/clan-logo.webp" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo" width="180"
-            height="164" fetchpriority="high" decoding="async" />
+          <img src="assets/img/clan-logo.webp" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo"
+            width="180" height="164" fetchpriority="high" decoding="async" />
           <div class="logo-glow"></div>
         </div>
         <div class="logo-text">
@@ -142,8 +162,7 @@
       <div class="video-player">
         <div class="video-display-area">
           <div class="video-container">
-            <video id="main-video" class="main-video-player" muted loop preload="none"
-              width="900" height="506"
+            <video id="main-video" class="main-video-player" muted loop preload="none" width="900" height="506"
               poster="assets/img/clan-logo.webp" playsinline="playsinline" webkit-playsinline="webkit-playsinline">
               <track kind="captions" src="assets/video/captions.vtt" srclang="es" label="Español" />
             </video>
@@ -170,7 +189,8 @@
               Presentación del Clan
             </h2>
             <p class="video-current-description" id="video-description">
-              ¡Bienvenido a Serakdep MS! Una comunidad y clan oficial Multi-Gamer donde la diversión, la competencia y el respeto son lo primero.
+              ¡Bienvenido a Serakdep MS! Una comunidad y clan oficial Multi-Gamer donde la diversión, la competencia y
+              el respeto son lo primero.
             </p>
           </div>
           <div class="video-progress-section">
@@ -378,7 +398,9 @@
         <p>
           Serakdep MS es una comunidad y clan oficial Multi-Gamer creada para jugadores de 16 años en adelante
           que buscan un espacio organizado, respetuoso y altamente competitivo en múltiples plataformas.
-          Nuestra comunidad alberga divisiones especializadas en <strong>Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike</strong>, donde nuestros miembros disfrutan de torneos, scrims, eventos comunitarios y una gran convivencia.
+          Nuestra comunidad alberga divisiones especializadas en <strong>Roblox, Minecraft, Call of Duty, Fortnite, Free
+            Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike</strong>,
+          donde nuestros miembros disfrutan de torneos, scrims, eventos comunitarios y una gran convivencia.
         </p>
       </div>
 
@@ -588,10 +610,13 @@
           <i class="fas fa-gamepad" style="color: var(--light-green);"></i> Sección Multi-Gamer
         </h2>
         <p>
-          Serakdep MS es una comunidad y clan oficial Multi-Gamer con divisiones competitivas en Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike. ¡Explora todas nuestras divisiones y encuentra tu escuadra ideal!
+          Serakdep MS es una comunidad y clan oficial Multi-Gamer con divisiones competitivas en Roblox, Minecraft, Call
+          of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y
+          Blood Strike. ¡Explora todas nuestras divisiones y encuentra tu escuadra ideal!
         </p>
         <div style="margin-top: 20px;">
-          <a href="pages/juegos/portal.html" class="btn" style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%);">
+          <a href="pages/juegos/portal.html" class="btn"
+            style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%);">
             <i class="fas fa-globe"></i> Explorar Divisiones Multi-Gamer
           </a>
         </div>
@@ -639,14 +664,16 @@
         <div class="footer-section">
           <h3 class="footer-title">Serakdep MS</h3>
           <p>
-            Comunidad y Clan Oficial Multi-Gamer. Únete a nuestras divisiones competitivas y vive la mejor experiencia gaming.
+            Comunidad y Clan Oficial Multi-Gamer. Únete a nuestras divisiones competitivas y vive la mejor experiencia
+            gaming.
           </p>
           <div class="social-links">
             <a href="https://discord.gg/nphuM8K9aD" title="Discord"><i class="fab fa-discord"></i></a>
             <a href="https://x.com/serakdepms?s=21" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/channel/UCKHUTv_to41m9G3ySa-FkoA" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/serakdep?igsh=bGlvbnZ0OGE1bnZ0&utm_source=qr"
-              title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCKHUTv_to41m9G3ySa-FkoA" title="YouTube"><i
+                class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/serakdep?igsh=bGlvbnZ0OGE1bnZ0&utm_source=qr" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@serakdep_ms?_r=1&_t=ZS-97rpCvctkQ9" title="TikTok"><i
                 class="fab fa-tiktok"></i></a>
           </div>
@@ -766,15 +793,16 @@
           © <span id="current-year">2026</span> Serakdep MS - Comunidad & Clan Oficial Multi-Gamer.
           Todos los derechos reservados.
         </p>
-        <p>Este sitio web es una plataforma eSports y comunidad independiente Multi-Gamer no afiliada a las desarrolladoras oficiales de los juegos.</p>
+        <p>Este sitio web es una plataforma eSports y comunidad independiente Multi-Gamer no afiliada a las
+          desarrolladoras oficiales de los juegos.</p>
       </div>
     </div>
   </footer>
-  <script src="assets/js/main.js?v=6" defer></script>
-  <script src="assets/js/video-player.js?v=6" defer></script>
-  <script src="assets/js/chatbot.js?v=6" defer></script>
-  <script src="assets/js/scroll-reveal.js?v=6" defer></script>
-  <script src="assets/js/contador.js?v=6" defer></script>
+  <script src="assets/js/main.js?v=7" defer></script>
+  <script src="assets/js/video-player.js?v=7" defer></script>
+  <script src="assets/js/chatbot.js?v=7" defer></script>
+  <script src="assets/js/scroll-reveal.js?v=7" defer></script>
+  <script src="assets/js/contador.js?v=7" defer></script>
 </body>
 
 </html>
