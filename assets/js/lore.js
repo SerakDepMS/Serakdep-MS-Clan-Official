@@ -119,7 +119,7 @@
   {
     chapter: "XXIV",
     label: "La Forja Creativa",
-    text: "El equipo creativo, integrado por editores y diseñadores como Diegosanval2012 (diseño gráfico), putifino111 (edición de video y contenido) y Teo_174bj (control de calidad), da vida a los logos, banners, guías visuales y material promocional que realzan la imagen del clan. Su trabajo es visible en la página de Créditos y en cada rincón del portal."
+    text: "El equipo creativo, integrado por editores y diseñadores como te400kennethr (diseño gráfico), putifino111 (edición de video y contenido) y Teo_174bj (control de calidad), da vida a los logos, banners, guías visuales y material promocional que realzan la imagen del clan. Su trabajo es visible en la página de Créditos y en cada rincón del portal."
   },
   {
     chapter: "XXV",
