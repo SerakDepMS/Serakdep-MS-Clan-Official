@@ -20,55 +20,62 @@
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png" />
   <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
 
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <!-- Preconexiones a orígenes críticos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
   <meta name="theme-color" content="#2d6a4f" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Preload del recurso LCP -->
-  <link rel="preload" as="image" href="assets/img/clan-logo.jpeg" fetchpriority="high" />
+  <!-- Precarga de la imagen del póster en WebP (LCP) -->
+  <link rel="preload" as="image" href="assets/img/clan-logo.webp" fetchpriority="high" />
 
-  <!-- Google Fonts diferido y optimizado con display=swap -->
+  <!-- CSS crítico (layout principal) - carga normal -->
+  <link rel="stylesheet" href="assets/css/style.css?v=6" />
+
+  <!-- CSS no crítico - asíncrono para eliminar bloqueo de renderizado -->
+  <link rel="preload" href="assets/css/responsive.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/video-player.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/logo.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/creditos.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/chatbot.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="assets/css/contador.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+  <!-- Font Awesome cargado de forma asíncrona -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+  <noscript>
+    <link rel="stylesheet" href="assets/css/responsive.css?v=6" />
+    <link rel="stylesheet" href="assets/css/video-player.css?v=6" />
+    <link rel="stylesheet" href="assets/css/logo.css?v=6" />
+    <link rel="stylesheet" href="assets/css/creditos.css?v=6" />
+    <link rel="stylesheet" href="assets/css/chatbot.css?v=6" />
+    <link rel="stylesheet" href="assets/css/contador.css?v=6" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </noscript>
+
+  <!-- Google Fonts con display=swap -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Exo+2:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Share+Tech+Mono&display=swap" />
   </noscript>
 
-  <!-- Font Awesome cargado de forma asíncrona no bloqueante -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Hojas de estilo locales -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
-  <link rel="stylesheet" href="assets/css/video-player.css" />
-  <link rel="stylesheet" href="assets/css/logo.css" />
-  <link rel="stylesheet" href="assets/css/creditos.css" />
-  <link rel="stylesheet" href="assets/css/chatbot.css" />
-  <link rel="stylesheet" href="assets/css/contador.css" />
-
-
-
-
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
   <meta property="og:title" content="Serakdep MS - Comunidad & Clan Oficial Multi-Gamer" />
   <meta property="og:description" content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
+  <meta property="og:image:type" content="image/webp" />
   <meta property="og:image:width" content="353" />
   <meta property="og:image:height" content="322" />
   <meta property="og:site_name" content="Serakdep MS Clan Official" />
-
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
   <meta name="twitter:title" content="Serakdep MS - Comunidad & Clan Oficial Multi-Gamer" />
   <meta name="twitter:description" content="Comunidad oficial multi-gamer Serakdep MS con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
-  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.jpeg" />
+  <meta name="twitter:image" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
   <meta name="twitter:site" content="@serakdepms" />
   <meta name="theme-color" content="#2d6a4f" />
 </head>
@@ -126,7 +133,7 @@
 
       <div class="clan-logo-section">
         <div class="clan-logo-container">
-          <img src="assets/img/clan-logo.jpeg" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo" width="180"
+          <img src="assets/img/clan-logo.webp" alt="Logo del Clan Serakdep MS" class="clan-logo" id="clan-logo" width="180"
             height="164" fetchpriority="high" decoding="async" />
           <div class="logo-glow"></div>
         </div>
@@ -145,7 +152,7 @@
           <div class="video-container">
             <video id="main-video" class="main-video-player" muted loop preload="none"
               width="900" height="506"
-              poster="assets/img/clan-logo.jpeg" playsinline="playsinline" webkit-playsinline="webkit-playsinline">
+              poster="assets/img/clan-logo.webp" playsinline="playsinline" webkit-playsinline="webkit-playsinline">
               <p>Tu navegador no soporta videos HTML5.</p>
             </video>
             <div class="video-loading-overlay" id="video-loading">
@@ -771,12 +778,12 @@
       </div>
     </div>
   </footer>
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/video-player.js" defer></script>
-  <script src="assets/js/logo-animations.js" defer></script>
-  <script src="assets/js/chatbot.js" defer></script>
-  <script src="assets/js/scroll-reveal.js" defer></script>
-  <script src="assets/js/contador.js" defer></script>
+  <script src="assets/js/main.js?v=6" defer></script>
+  <script src="assets/js/video-player.js?v=6" defer></script>
+  <script src="assets/js/chatbot.js?v=6" defer></script>
+  <script src="assets/js/logo-animations.js?v=6" defer></script>
+  <script src="assets/js/scroll-reveal.js?v=6" defer></script>
+  <script src="assets/js/contador.js?v=6" defer></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoContainer = document.querySelector(".clan-logo-container");
   const clanLogo = document.getElementById("clan-logo");
 
-  if (!clanLogo || !logoContainer) return;
+  if (!clanLogo) return;
 
 
   logoContainer.addEventListener("mouseenter", () => {

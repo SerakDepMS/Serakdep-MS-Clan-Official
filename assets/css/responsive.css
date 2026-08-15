@@ -2109,6 +2109,12 @@ nav ul li a:hover {
 
 
 @media (max-width: 768px) {
+  .ring-gold, 
+  .ring-green, 
+  .ring-dot, 
+  .ticks-ring, 
+  .p-glow, 
+  .ambient,
   .success-icon {
     animation: none !important;
     will-change: auto !important; 
@@ -2123,74 +2129,5 @@ nav ul li a:hover {
   nav,
   .mobile-menu-btn {
     will-change: auto !important;
-  }
-
-  /* Modales y Overlays Responsivos */
-  .event-modal-content,
-  .modal-content {
-    width: 92% !important;
-    max-height: 88vh !important;
-    overflow-y: auto !important;
-    margin: auto !important;
-  }
-
-  /* Banner de Cookies Responsivo en Móvil */
-  #cookie-banner {
-    padding: 14px 16px !important;
-    box-sizing: border-box !important;
-  }
-
-  #cookie-banner p {
-    font-size: 14px !important;
-    margin-bottom: 10px !important;
-    line-height: 1.4 !important;
-  }
-
-  #cookie-banner button {
-    padding: 8px 18px !important;
-    font-size: 13px !important;
-    margin: 4px 6px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  #cookie-banner {
-    padding: 12px 10px !important;
-  }
-
-  #cookie-banner p {
-    font-size: 13px !important;
-    margin-bottom: 8px !important;
-  }
-
-  #cookie-banner button {
-    padding: 8px 14px !important;
-    font-size: 12px !important;
-    margin: 3px 4px !important;
-  }
-
-  /* Miembros y Créditos en Pantallas Muy Pequeñas */
-  .team-member,
-  .team-member.featured {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 16px 10px !important;
-  }
-
-  .member-avatar {
-    width: 110px !important;
-    height: 110px !important;
-  }
-
-  .member-info h3 {
-    font-size: 1.25rem !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
-  }
-
-  .member-skills,
-  .member-social {
-    justify-content: center !important;
   }
 }

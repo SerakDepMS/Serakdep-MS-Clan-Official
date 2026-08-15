@@ -67,6 +67,13 @@
     );
 
     elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < windowHeight - 50 && rect.bottom > 0) {
+        el.classList.add('sr-visible');
+        el.classList.remove('sr-hidden');
+        return;
+      }
       el.classList.add('sr-hidden');
       observer.observe(el);
     });

@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 1. Enlace activo en navegación
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach((link) => {
-    const href = link.getAttribute("href"); const linkPage = href ? href.split("/").pop().split("#")[0].split("?")[0] : "";
+    const href = link.getAttribute("href");
+    const linkPage = href ? href.split("/").pop().split("#")[0].split("?")[0] : "";
     if (
       linkPage === currentPage ||
       (currentPage === "" && linkPage === "index.html") ||
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // 2. Menú móvil
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const nav = document.querySelector("nav");
 
@@ -22,15 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("click", function (event) {
-      if (
-        !nav.contains(event.target) &&
-        !mobileMenuBtn.contains(event.target)
-      ) {
+      if (!nav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
         nav.classList.remove("active");
       }
     });
   }
 
+  // 3. Smooth scroll para anclas
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -47,24 +48,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // 4. Año dinámico
   const yearSpan = document.getElementById("current-year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
+  // 5. Animación de tarjetas
   const cards = document.querySelectorAll(".card");
   cards.forEach((card, index) => {
     setTimeout(() => {
       card.classList.add("fade-in");
     }, index * 100);
   });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+  // 6. Observador de derechos
   const derechoCards = document.querySelectorAll(".derecho-card");
-
   if (derechoCards.length > 0) {
-    const observer = new IntersectionObserver(
+    const derechoObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -73,10 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
 
     derechoCards.forEach((card, index) => {
@@ -84,84 +82,68 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.transform = "translateY(20px)";
       card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
       card.style.transitionDelay = index * 0.1 + "s";
-      observer.observe(card);
+      derechoObserver.observe(card);
     });
   }
 
-  const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints;
-
-  if (isTouchDevice) {
-    document.querySelectorAll(".derecho-card").forEach((card) => {
-      card.addEventListener("touchstart", function () {
-        this.classList.add("touch-active");
-      });
-
-      card.addEventListener("touchend", function () {
-        setTimeout(() => {
-          this.classList.remove("touch-active");
-        }, 150);
-      });
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+  // 7. Contadores animados de estadísticas
   const statNumbers = document.querySelectorAll(".stat-number");
-  
   if (statNumbers.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const stat = entry.target;
-          const target = parseInt(stat.getAttribute("data-target"));
-          const increment = target / 50;
-          let current = 0;
-          
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            stat.textContent = Math.floor(current) + (target >= 1000 ? "+" : "");
-          }, 30);
-          
-          observer.unobserve(stat);
-        }
-      });
-    }, { threshold: 0.5 });
-    
-    statNumbers.forEach((stat) => observer.observe(stat));
-  }
-});
+    const statObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const stat = entry.target;
+            const target = parseInt(stat.getAttribute("data-target"), 10);
+            if (isNaN(target)) return;
+            const increment = target / 50;
+            let current = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              stat.textContent = Math.floor(current) + (target >= 1000 ? "+" : "");
+            }, 30);
+
+            statObserver.unobserve(stat);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    statNumbers.forEach((stat) => statObserver.observe(stat));
+  }
+
+  // 8. Efectos táctiles optimizados
   const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-  
   if (isTouchDevice) {
     const touchElements = document.querySelectorAll(
-      ".team-member, .gallery-card, .tech-item, .card, .derecho-card, .stat-item, .timeline-item, .roadmap-item, .thank-item"
+      ".team-member, .tech-item, .card, .derecho-card, .stat-item, .timeline-item, .roadmap-item, .thank-item"
     );
-    
+
     touchElements.forEach((element) => {
       element.addEventListener("touchstart", function () {
         this.classList.add("touch-active");
-      });
-      
+      }, { passive: true });
+
       element.addEventListener("touchend", function () {
         setTimeout(() => {
           this.classList.remove("touch-active");
         }, 150);
-      });
-      
+      }, { passive: true });
+
       element.addEventListener("touchcancel", function () {
         this.classList.remove("touch-active");
-      });
+      }, { passive: true });
     });
   }
 });
 
-
+// Botón Volver Arriba
 (function() {
   const btn = document.createElement('button');
   btn.innerHTML = '↑';
@@ -187,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.style.transform = 'scale(0.8)';
   btn.style.pointerEvents = 'none';
 
+  let ticking = false;
   function toggleBtn() {
     if (window.scrollY > 500) {
       btn.style.opacity = '1';
@@ -199,19 +182,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  let scrollTicking = false;
-  function handleScroll() {
-    if (!scrollTicking) {
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
       requestAnimationFrame(() => {
         toggleBtn();
-        scrollTicking = false;
+        ticking = false;
       });
-      scrollTicking = true;
+      ticking = true;
     }
-  }
+  }, { passive: true });
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  window.addEventListener('resize', handleScroll, { passive: true });
+  window.addEventListener('resize', toggleBtn, { passive: true });
   toggleBtn();
 
   btn.addEventListener('click', () => {
@@ -220,7 +201,36 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
+(function() {
+  const header = document.querySelector('header');
+  if (!header) return;
 
+
+  header.style.transform = 'translateY(0)';
+  header.style.transition = 'transform 0.3s ease-out';
+  header.style.willChange = 'transform';
+
+  function updateHeader() {
+    if (window.scrollY <= 10) {
+      header.style.transform = 'translateY(0)';
+    } else {
+      header.style.transform = 'translateY(-100%)';
+    }
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateHeader();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  updateHeader();
+})();
 
 (function() {
   if (localStorage.getItem('cookieConsent') === null) {
@@ -405,7 +415,7 @@ function getCookie(name) {
   }
 
   function initParticleRain() {
-    if (!window.matchMedia || !window.matchMedia('(min-width: 768px)').matches) return;
+    if (window.innerWidth < 768) return;
     canvas = document.createElement('canvas');
     canvas.classList.add('particle-rain-container');
     canvas.style.willChange = 'transform';

@@ -17,11 +17,10 @@
 .video-display-area {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  padding-top: 56.25%;
   background: #000;
   overflow: hidden;
   border-radius: 18px 18px 0 0;
-  /* height is now derived from aspect-ratio — no padding-top needed */
 }
 
 .video-container {

@@ -326,7 +326,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.85em;
-  color: #4b5563;
+  color: #777;
 }
 
 .event-list-type {
@@ -448,8 +448,6 @@
   background-color: white;
   width: 90%;
   max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   animation: modalFadeIn 0.3s ease;

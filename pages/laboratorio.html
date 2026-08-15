@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 
+  <script>
+    (function(){
+      try {
+        if (sessionStorage.getItem('serakdep_access_granted')) {
+          document.addEventListener('DOMContentLoaded', function(){
+            var s = document.getElementById('splash');
+            if(s){ s.style.display='none'; }
+            document.body.style.overflow = 'auto';
+          });
+        }
+      } catch(e){}
+    })();
+  </script>
 
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
@@ -81,17 +94,16 @@
   <meta name="twitter:site" content="@serakdepms" />
   <meta name="theme-color" content="#2d6a4f" />
 </head>
-<body>
-
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, var(--primary-green) 0%, #0d1f14 100%); color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid var(--bamboo-gold); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);">
   <p style="margin: 0 0 15px 0; font-size: 16px; color: rgba(255,255,255,0.9);">
     <strong style="color: var(--light-green);">Este sitio usa cookies</strong>. Utilizamos cookies propias y de terceros para mejorar tu experiencia. 
     Al hacer clic en <strong style="color: var(--bamboo-gold);">"Aceptar"</strong>, consientes su uso. 
-    <a href="../legal/cookies.html" aria-label="Ver política de cookies de Serakdep MS" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Ver política de cookies</a>
+    <a href="../legal/cookies.html" style="color: var(--bamboo-gold); text-decoration: underline; font-weight: 600;">Más información</a>
   </p>
   <button onclick="aceptarCookies()" style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%); border: none; color: white; padding: 12px 30px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
   <button onclick="rechazarCookies()" style="background: transparent; border: 2px solid var(--accent-green); color: var(--light-green); padding: 10px 28px; border-radius: 8px; margin: 0 10px; cursor: pointer; font-weight: 600; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s;">Rechazar</button>
 </div>
+<body>
   <header>
     <div class="container header-container">
       <div class="logo"><a href="../index.html">Serakdep <span>MS</span></a></div>
@@ -447,6 +459,7 @@
   <script src="../assets/js/main.js" defer></script>
   <script src="../assets/js/chatbot.js" defer></script>
   <script src="../assets/js/scroll-reveal.js" defer></script>
+  <script src="../assets/js/loading.js" defer></script>
   <script type="module" src="../assets/js/laboratorio.js"></script>
 </body>
 </html>

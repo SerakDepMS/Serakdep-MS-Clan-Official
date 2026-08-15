@@ -18,6 +18,5 @@ export function showWiki(section, wikiContent, data = wikiData) {
   wikiSection = section;
   wikiContent.innerHTML = data[section] || '<p>Sección no encontrada.</p>';
   document.querySelectorAll('.wiki-tab').forEach(t => t.classList.remove('active'));
-  const activeTab = document.querySelector(`.wiki-tab[data-wiki="${section}"]`);
-  if (activeTab) activeTab.classList.add('active');
+  document.querySelector(`.wiki-tab[data-wiki="${section}"]`).classList.add('active');
 }
