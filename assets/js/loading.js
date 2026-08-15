@@ -12,7 +12,7 @@
 
 
   const canvas = document.getElementById('cv');
-  const isMobile = window.innerWidth < 768;
+  const isMobile = window.matchMedia ? !window.matchMedia('(min-width: 768px)').matches : false;
 
   if (canvas && !isMobile) {
     const ctx = canvas.getContext('2d');

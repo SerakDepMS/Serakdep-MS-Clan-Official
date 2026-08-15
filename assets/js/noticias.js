@@ -259,7 +259,7 @@ async function readMoreNews(id) {
         </div>
 
         <div class="modal-image-wrapper">
-          <img src="../../assets/img/clan-logo.jpeg" alt="Serakdep MS" class="modal-featured-image">
+          <img src="../../assets/img/clan-logo-orig.jpeg" alt="Serakdep MS" class="modal-featured-image">
         </div>
 
         <div class="modal-body">

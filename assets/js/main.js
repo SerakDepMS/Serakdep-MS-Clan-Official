@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       ticking = true;
     }
-  });
+  }, { passive: true });
 
   updateHeader();
 })();
@@ -434,7 +434,7 @@ function getCookie(name) {
   }
 
   function initParticleRain() {
-    if (window.innerWidth < 768) return;
+    if (!window.matchMedia || !window.matchMedia('(min-width: 768px)').matches) return;
     canvas = document.createElement('canvas');
     canvas.classList.add('particle-rain-container');
     canvas.style.willChange = 'transform';
