@@ -17,19 +17,19 @@ class VideoPlayerFinal {
     this.videoList = [
       {
         src: "assets/video/video-number-one/video1.mp4",
-        title: "ROBLOX",
+        title: "Roblox",
         duration: "18",
         size: "6.52 MB",
       },
       {
         src: "assets/video/video-number-one/video2.mp4",
-        title: "MINECRAFT",
+        title: "Minecraft",
         duration: "32",
         size: "3.72 MB",
       },
       {
         src: "assets/video/video-number-one/video3_v2.mp4",
-        title: "CALL OF DUTY: MOBILE",
+        title: "Call Of Duty: Mobile",
         duration: "26",
         size: "10.9 MB",
       },
@@ -46,22 +46,22 @@ class VideoPlayerFinal {
         size: "1.91 MB",
       },
       {
-        src: "assets/video/video-number-one/video6.mp4",
-        title: "Marcas de autos edit",
-        duration: "17",
-        size: "11 MB",
+        src: "assets/video/video-number-one/video6_v2.mp4",
+        title: "Valorant",
+        duration: "15",
+        size: "14.5 MB",
       },
       {
-        src: "assets/video/video-number-one/video7.mp4",
-        title: "NEED FOR SPEED MOST WANTED",
-        duration: "22",
-        size: "24 MB",
-      },
-      {
-        src: "assets/video/video-number-one/video8.mp4",
-        title: "CARS",
+        src: "assets/video/video-number-one/video7_v2.mp4",
+        title: "Among Us",
         duration: "21",
-        size: "23 MB",
+        size: "2.25 MB",
+      },
+      {
+        src: "assets/video/video-number-one/video8_v2.mp4",
+        title: "Counter-Strike 2",
+        duration: "16",
+        size: "2.10 MB",
       },
       {
         src: "assets/video/video-number-one/video9.mp4",
