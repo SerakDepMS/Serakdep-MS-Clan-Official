@@ -17,21 +17,21 @@ class VideoPlayerFinal {
     this.videoList = [
       {
         src: "assets/video/video-number-one/video1.mp4",
-        title: "POR LA VIDA Y LA LIBERTAD, SIEMPRE, SIEMPRE, SIEMPRE POR LA VIDA.",
-        duration: "28",
-        size: "30 MB",
+        title: "ROBLOX",
+        duration: "18",
+        size: "6.52 MB",
       },
       {
         src: "assets/video/video-number-one/video2.mp4",
-        title: "Loney Loney",
-        duration: "16",
-        size: "12 MB",
+        title: "MINECRAFT",
+        duration: "32",
+        size: "3.72 MB",
       },
       {
         src: "assets/video/video-number-one/video3.mp4",
-        title: "Avion de guerra",
-        duration: "13",
-        size: "7 MB",
+        title: "CALL OF DUTY: MOBILE",
+        duration: "23",
+        size: "1.77 MB",
       },
       {
         src: "assets/video/video-number-one/video4.mp4",
