@@ -28,10 +28,10 @@ class VideoPlayerFinal {
         size: "3.72 MB",
       },
       {
-        src: "assets/video/video-number-one/video3.mp4",
+        src: "assets/video/video-number-one/video3_v2.mp4",
         title: "CALL OF DUTY: MOBILE",
-        duration: "23",
-        size: "1.77 MB",
+        duration: "26",
+        size: "4.05 MB",
       },
       {
         src: "assets/video/video-number-one/video4.mp4",
