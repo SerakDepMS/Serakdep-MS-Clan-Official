@@ -40,10 +40,10 @@ class VideoPlayerFinal {
         size: "18.2 MB",
       },
       {
-        src: "assets/video/video-number-one/video5.mp4",
-        title: "War Thunder",
-        duration: "14",
-        size: "5 MB",
+        src: "assets/video/video-number-one/video5_v2.mp4",
+        title: "Free Fire",
+        duration: "32",
+        size: "1.91 MB",
       },
       {
         src: "assets/video/video-number-one/video6.mp4",
@@ -86,25 +86,7 @@ class VideoPlayerFinal {
         title: "Arabia Saudi edit",
         duration: "16",
         size: "13 MB",
-      },
-      {
-        src: "assets/video/video-number-one/video13.mp4",
-        title: "Dexter Morgan edit",
-        duration: "19",
-        size: "15 MB",
-      },
-      {
-        src: "assets/video/video-number-one/video14.mp4",
-        title: "Mita edit",
-        duration: "14",
-        size: "11 MB",
-      },
-      {
-        src: "assets/video/video-number-one/video15.mp4",
-        title: "UNDER YOUR SPELL",
-        duration: "1:00",
-        size: "57 MB",
-      },
+      }
     ];
 
     this.currentVideoIndex = 0;
