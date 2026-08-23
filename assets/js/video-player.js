@@ -64,28 +64,28 @@ class VideoPlayerFinal {
         size: "2.10 MB",
       },
       {
-        src: "assets/video/video-number-one/video9.mp4",
-        title: "Te observo",
-        duration: "10",
-        size: "5 MB",
+        src: "assets/video/video-number-one/video9_v2.mp4",
+        title: "FC Mobile",
+        duration: "29",
+        size: "3.54 MB",
       },
       {
-        src: "assets/video/video-number-one/video10.mp4",
-        title: "I'LL WATCH YOU HATE",
-        duration: "1:02",
-        size: "59 MB",
+        src: "assets/video/video-number-one/video10_v2.mp4",
+        title: "Clash Royale",
+        duration: "19",
+        size: "8.66 MB",
       },
       {
-        src: "assets/video/video-number-one/video11.mp4",
-        title: "Spider Man edit",
-        duration: "16",
-        size: "13 MB",
+        src: "assets/video/video-number-one/video11_v2.mp4",
+        title: "Guardian Tales",
+        duration: "41",
+        size: "12.5 MB",
       },
       {
-        src: "assets/video/video-number-one/video12.mp4",
+        src: "assets/video/video-number-one/video12_v2.mp4",
         title: "Arabia Saudi edit",
-        duration: "16",
-        size: "13 MB",
+        duration: "19",
+        size: "3.69 MB",
       }
     ];
 
