@@ -31,13 +31,13 @@ class VideoPlayerFinal {
         src: "assets/video/video-number-one/video3_v2.mp4",
         title: "CALL OF DUTY: MOBILE",
         duration: "26",
-        size: "4.05 MB",
+        size: "10.9 MB",
       },
       {
-        src: "assets/video/video-number-one/video4.mp4",
-        title: "Formula 1",
-        duration: "39",
-        size: "26 MB",
+        src: "assets/video/video-number-one/video4_v2.mp4",
+        title: "Fornite",
+        duration: "42",
+        size: "18.2 MB",
       },
       {
         src: "assets/video/video-number-one/video5.mp4",
