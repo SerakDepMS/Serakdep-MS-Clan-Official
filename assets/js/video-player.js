@@ -83,9 +83,9 @@ class VideoPlayerFinal {
       },
       {
         src: "assets/video/video-number-one/video12_v2.mp4",
-        title: "Arabia Saudi edit",
-        duration: "19",
-        size: "3.69 MB",
+        title: "Blood Strike",
+        duration: "28",
+        size: "4.26 MB",
       }
     ];
 
