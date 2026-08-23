@@ -40,14 +40,6 @@
     fechaAlianza: "2025-12-13"
   },
   {
-    nombre: "Kira's Order",
-    logo: "../../assets/img/alianzas/KirasOrder.jpg",
-    descripcion: "Somos un clan enfocado en la diversion, donde lo mas importante es crear amistades y compartir buenos momentos. Nos gusta organizar eventos, participar juntos y mantener un ambiente entretenido.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2025-12-19"
-  },
-  {
     nombre: "The Black Bulls",
     logo: "../../assets/img/alianzas/TheBlackBulls.jpg",
     descripcion: "The Black Bulls simboliza el poder absoluto, la fuerza imponente y el misterio indomable.",

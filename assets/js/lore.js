@@ -109,7 +109,7 @@
   {
     chapter: "XXII",
     label: "Alianzas Sagradas",
-    text: "Nuestra red de aliados se expandió con clanes de gran renombre: CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy, WIND BREAKER, LUWANCE, Kira's Order y The Black Bulls, en un pacto de respeto mutuo y colaboración en torneos. La sección de Alianzas en la web muestra sus logos, descripciones y fechas de alianza, con un sistema de auras animadas que reflejan su actividad."
+    text: "Nuestra red de aliados se expandió con clanes de gran renombre: CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy, WIND BREAKER, LUWANCE y The Black Bulls, en un pacto de respeto mutuo y colaboración en torneos. La sección de Alianzas en la web muestra sus logos, descripciones y fechas de alianza, con un sistema de auras animadas que reflejan su actividad."
   },
   {
     chapter: "XXIII",

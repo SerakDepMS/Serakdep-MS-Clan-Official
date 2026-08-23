@@ -302,21 +302,6 @@
  
 
     {
-      keywords: ['juegos', 'roblox juegos', 'blox fruits', 'brookhaven', 'adopt me', 'arsenal', 'king legacy', 'driving empire', 'royale high', 'jailbreak', 'murder mystery', 'salón de fiestas', 'juego de boxeo', 'categorias juegos', 'lista juegos', 'a que juegan'],
-      response: `<strong>Juegos populares en Serakdep MS</strong><br><br>
-      Nuestros miembros disfrutan de una gran variedad de juegos en Roblox. Los más jugados son:<br>
-      • <strong>Acción/Aventura:</strong> Blox Fruits, King Legacy, Juego de Boxeo.<br>
-      • <strong>Roleplay:</strong> Brookhaven RP, Adopt Me!, Royale High.<br>
-      • <strong>Shooter:</strong> Arsenal, Murder Mystery 2.<br>
-      • <strong>Carreras:</strong> Driving Empire.<br>
-      • <strong>Social:</strong> Salón de Fiestas.<br>
-      • <strong>Otros:</strong> Jailbreak.<br><br>
-      En la página de Inicio hay una sección con juegos populares organizados por categorías, donde puedes explorar y descubrir nuevos títulos para jugar con la comunidad. En Discord hay canales dedicados a cada juego para formar equipos.`
-    },
- 
- 
-
-    {
       keywords: ['contacto', 'email', 'correo', 'hablar admin', 'soporte', 'ayuda', 'asistencia', 'serakdepmsofficial7', 'formulario contacto', 'reportar problema', 'sugerencias', 'aspirar admin', 'legal contacto', 'como contacto'],
       response: `<strong>Contacto oficial</strong><br><br>
       <strong>Correo electrónico:</strong> serakdepmsofficial7@gmail.com<br>
@@ -526,19 +511,6 @@
  
 
     {
-      keywords: ['filtro juegos', 'buscar juegos', 'categorias juegos', 'explorar juegos', 'buscar juego'],
-      response: `<strong>Filtro de juegos en la página de Inicio</strong><br><br>
-      Debajo del video hay una sección "Juegos que disfrutamos" con un sistema de filtrado. Puedes:<br>
-      • Buscar por nombre usando la caja de búsqueda.<br>
-      • Filtrar por categorías (Acción, Aventura, RPG, Simulación, etc.).<br>
-      • Ver más juegos con el botón "Mostrar más".<br>
-      • Restablecer filtros.<br><br>
-      Esta herramienta te ayuda a descubrir qué juegos son populares en el clan y unirte a las partidas.`
-    },
- 
- 
-
-    {
       keywords: ['noticias', 'news', 'actualizaciones', 'anuncios', 'novedades', 'canal noticias', 'npoint', 'carga noticias', 'filtros noticias', 'estadisticas noticias', 'ctrl shift r', 'ultimas noticias'],
       response: `<strong>Sistema de Noticias del Clan</strong><br><br>
       La página de Noticias es el centro oficial de información actualizada. Características:<br>
@@ -565,16 +537,15 @@
  
 
     {
-      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'bloody legacy', 'WIND BREAKER', 'luwance', 'kira order', 'the black bulls'],
+      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'bloody legacy', 'WIND BREAKER', 'luwance', 'the black bulls'],
       response: `<strong>Alianzas de Serakdep MS</strong><br><br>
-      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 7 clanes aliados, entre ellos:<br>
+      En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 6 clanes aliados, entre ellos:<br>
       • CHIHUAHUENSE  DINASTY<br>
       • Zion Dynasty<br>
       • Bloody Legacy<br>
       • WIND BREAKER<br>
       • Legión Nova<br>
       • LUWANCE<br>
-      • Kira's Order<br>
       • The Black Bulls<br><br>
       Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el sistema de tickets en <strong>#soporte-técnico</strong> (botón 🤝 Alianza de Clan) o postúlate como <strong>Colaborador - Representante de Alianzas</strong> en Contacto.`
     },
@@ -743,7 +714,7 @@
       • <strong>Legal</strong> (privacidad, términos, cookies, DMCA, derechos ARCO).<br>
       • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
-      • <strong>Alianzas</strong> (7 clanes aliados).<br>
+      • <strong>Alianzas</strong> (6 clanes aliados).<br>
       • <strong>CodeTurbo</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
     }
