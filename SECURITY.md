@@ -25,7 +25,7 @@ Si descubres una vulnerabilidad de seguridad en el sitio web o en los sistemas d
 
 1. **No explotes la vulnerabilidad**.
 2. **Reporta de inmediato** a:
-   - WhatsApp del clan: [+57 311 6546484](https://wa.me/573116546484)
+   - WhatsApp del clan: [+57 311 6546484](https://wa.me/SerakDepMS)
    - Correo oficial: `serakdepmsofficial7@gmail.com`
    - Discord: canal `#soporte-tecnico`
 3. Proporciona detalles claros y, si es posible, pasos para reproducir el problema.
@@ -50,7 +50,7 @@ Si descubres una vulnerabilidad de seguridad en el sitio web o en los sistemas d
 Para consultas relacionadas con seguridad, privacidad o reporte de incidentes:
 
 - **Responsable de seguridad:** Equipo administrativo del clan
-- **WhatsApp:** [+57 311 6546484](https://wa.me/573116546484)
+- **WhatsApp:** [+57 311 6546484](https://wa.me/SerakDepMS)
 - **Correo:** `serakdepmsofficial7@gmail.com`
 - **Discord:** Canal `#soporte-tecnico`
 

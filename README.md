@@ -60,7 +60,7 @@ Bienvenido al sitio web oficial de **Serakdep MS**, una **comunidad Multi-Gamer*
 
 ## Enlaces importantes
 
-- [WhatsApp del clan](https://wa.me/573116546484)
+- [WhatsApp del clan](https://wa.me/SerakDepMS)
 - [Discord oficial](https://discord.gg/nphuM8K9aD)
 - Correo oficial: `serakdepmsofficial7@gmail.com`
 
