@@ -87,8 +87,17 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 
@@ -118,7 +127,7 @@
 
 .video-center-play-btn i {
   color: #00FF66;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
 .video-center-play-btn:hover {
@@ -134,8 +143,15 @@
 }
 
 @keyframes buttonFadeIn {
-  from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 
@@ -181,8 +197,15 @@
 }
 
 @keyframes indicatorSlideIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -323,12 +346,12 @@
   background: linear-gradient(145deg, #111111, #16161a);
   color: white;
   border: 2px solid #00FF66;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .main-play-button:hover {
   background: #16161a;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .main-play-button.playing {
@@ -431,7 +454,7 @@
   background: rgba(0, 255, 102, 0.2);
   border-color: #00FF66;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .touch-control-button.large-touch-button {
@@ -446,7 +469,7 @@
 .touch-control-button.large-touch-button:hover,
 .touch-control-button.large-touch-button:active {
   background: #16161a;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .touch-control-button.play-button {
@@ -632,7 +655,8 @@
   flex-wrap: wrap;
 }
 
-.speed-option, .quality-option {
+.speed-option,
+.quality-option {
   flex: 1;
   min-width: 70px;
   background: rgba(0, 255, 102, 0.06);
@@ -806,6 +830,7 @@
   transform: scale(1.1) !important;
 }
 
+
 @media (max-width: 768px) {
   .video-player {
     border-radius: 14px;
@@ -854,6 +879,7 @@
   }
 }
 
+
 body.dark-theme .video-player {
   background: rgba(22, 22, 26, 0.95);
   border-color: rgba(0, 255, 102, 0.35);
@@ -900,7 +926,7 @@ body.dark-theme .control-button:hover {
   background: rgba(0, 255, 102, 0.25);
   border-color: #00FF66;
   color: #00FF66;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-theme .main-play-button {

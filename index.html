@@ -2,11 +2,16 @@
 <html lang="es" class="dark-theme">
 
 <head>
+  <!-- ============================================================ -->
+  <!-- Google Consent Mode v2 — ANTES de cualquier script de Google -->
+  <!-- analytics_storage='denied' por defecto. GA4 NO se carga     -->
+  <!-- hasta que el usuario pulse "Aceptar" en el banner.          -->
+  <!-- ============================================================ -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
 
-
+    // Paso 1: Todo DENEGADO por defecto (RGPD / ePrivacy)
     gtag('consent', 'default', {
       analytics_storage:     'denied',
       ad_storage:            'denied',
@@ -18,7 +23,7 @@
       wait_for_update: 500
     });
 
-
+    // Paso 2: Si ya aceptó antes, actualizar consentimiento y cargar GA4
     (function () {
       if (localStorage.getItem('cookieConsent') === 'accepted') {
         gtag('consent', 'update', {
@@ -65,20 +70,20 @@
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png" />
   <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
 
-
+  <!-- Preconexiones a orígenes críticos -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
   <meta name="theme-color" content="#0a0a0a" />
   <meta name="robots" content="index, follow" />
-
+  <!-- Precarga de CSS crítico único para máxima velocidad FCP en móviles -->
   <link rel="preload" as="style" href="assets/css/bundle.min.css?v=10" />
-
+  <!-- Precarga de la imagen LCP en WebP -->
   <link rel="preload" as="image" href="assets/img/clan-logo.png" type="image/png" fetchpriority="high" />
 
-
+  <!-- Hoja de estilo unificada y minificada (bundle: style + video-player + chatbot + contador) -->
   <link rel="stylesheet" href="assets/css/bundle.min.css?v=10" />
 
-
+  <!-- Iconos Font Awesome (asíncronos sin bloqueo) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
     onload="this.media='all'" />
 
@@ -625,7 +630,7 @@
           facciones, las grandes eras históricas de la comunidad y los territorios virtuales en los que forjamos nuestra
           leyenda multigamer.
         </p>
-        <div style="margin-top: 20px;">
+        <div class="card-btn-container" style="margin-top: 20px; display: flex; justify-content: center;">
           <a href="pages/media/lore.html" class="btn">
             <i class="fas fa-book-open"></i> Explorar el Lore del Clan
           </a>
@@ -642,7 +647,7 @@
           of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y
           Blood Strike. ¡Explora todas nuestras divisiones y encuentra tu escuadra ideal!
         </p>
-        <div style="margin-top: 20px;">
+        <div class="card-btn-container" style="margin-top: 20px; display: flex; justify-content: center;">
           <a href="pages/juegos/portal.html" class="btn"
             style="background: linear-gradient(135deg, var(--accent-green) 0%, var(--secondary-green) 100%);">
             <i class="fas fa-globe"></i> Explorar Divisiones Multi-Gamer
@@ -741,7 +746,7 @@
               <a href="pages/creditos.html"><i class="fas fa-chevron-right"></i> Créditos</a>
             </li>
             <li>
-              <a href="pages/laboratorio.html"><i class="fas fa-chevron-right"></i> Serak</a>
+              <a href="pages/laboratorio.html"><i class="fas fa-chevron-right"></i> CodeTurbo</a>
             </li>
           </ul>
         </div>

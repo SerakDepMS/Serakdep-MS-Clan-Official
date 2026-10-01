@@ -1,3 +1,4 @@
+
 (function () {
   'use strict';
 
@@ -8,7 +9,7 @@
     canvas.id = 'matrix-rain-canvas';
     canvas.setAttribute('aria-hidden', 'true');
     canvas.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;';
-    
+
     if (document.body.firstChild) {
       document.body.insertBefore(canvas, document.body.firstChild);
     } else {
@@ -54,7 +55,7 @@
 
       lastFrameTime = currentTime - (elapsed % fpsInterval);
 
-
+      // Limpieza total del canvas: transparencia pura, cero oscurecimiento ni manchas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       ctx.font = `${fontSize}px monospace`;

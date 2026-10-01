@@ -1,6 +1,4 @@
-﻿
-
-:root {
+﻿:root {
   --primary-green: #111111;
   --secondary-green: #16161a;
   --accent-green: #00FF66;
@@ -29,14 +27,17 @@
   width: 10px;
   height: 6px;
 }
+
 .standalone-game-body::-webkit-scrollbar-track {
   background: #0a0a0a;
 }
+
 .standalone-game-body::-webkit-scrollbar-thumb {
   background: var(--primary-green);
   border-radius: 5px;
   border: 2px solid #0a0a0a;
 }
+
 .standalone-game-body::-webkit-scrollbar-thumb:hover {
   background: var(--light-green);
 }
@@ -73,7 +74,7 @@
   top: 0;
   z-index: 1000;
   padding: 14px 0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .standalone-nav-content {
@@ -116,9 +117,9 @@
 
 
 .game-hero {
-  height: 100vh;          
-  min-height: 500px;   
-  max-height: none;       
+  height: 100vh;
+  min-height: 500px;
+  max-height: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -513,12 +514,16 @@
   border-top: 3px solid #f59e0b;
 }
 
-.sanction-warn .sanction-icon { color: #f59e0b; }
+.sanction-warn .sanction-icon {
+  color: #f59e0b;
+}
+
 .sanction-warn .sanction-level {
   background: rgba(245, 158, 11, 0.15);
   color: #fbbf24;
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
+
 .sanction-warn .severity-bar-fill {
   width: 35%;
   background: #f59e0b;
@@ -528,12 +533,16 @@
   border-top: 3px solid #f97316;
 }
 
-.sanction-temp .sanction-icon { color: #f97316; }
+.sanction-temp .sanction-icon {
+  color: #f97316;
+}
+
 .sanction-temp .sanction-level {
   background: rgba(249, 115, 22, 0.15);
   color: #ffedd5;
   border: 1px solid rgba(249, 115, 22, 0.3);
 }
+
 .sanction-temp .severity-bar-fill {
   width: 70%;
   background: #f97316;
@@ -543,12 +552,16 @@
   border-top: 3px solid #ef4444;
 }
 
-.sanction-perm .sanction-icon { color: #ef4444; }
+.sanction-perm .sanction-icon {
+  color: #ef4444;
+}
+
 .sanction-perm .sanction-level {
   background: rgba(239, 68, 68, 0.15);
   color: #fca5a5;
   border: 1px solid rgba(239, 68, 68, 0.3);
 }
+
 .sanction-perm .severity-bar-fill {
   width: 100%;
   background: #ef4444;
@@ -981,7 +994,10 @@
 }
 
 
-h1, h2, h3, h4,
+h1,
+h2,
+h3,
+h4,
 .direct-card h3,
 .div-section h2,
 .rule-content h4,

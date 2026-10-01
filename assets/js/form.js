@@ -404,7 +404,7 @@ function validateInscriptionForm() {
 
   const age = parseInt(document.getElementById("age").value, 10);
   if (isNaN(age) || age < 13) {
-
+    // COPPA compliance: block users under 13 without verifiable parental consent
     showMessage(
       "⚠️ Si tienes menos de 13 años, NO puedes registrarte sin el consentimiento verificable de tus padres o tutores legales. " +
       "Esta restricción cumple con la Ley COPPA y el artículo 8 del RGPD para la protección de menores. " +
@@ -415,7 +415,7 @@ function validateInscriptionForm() {
     return false;
   }
   if (age >= 13 && age < 16) {
-
+    // Ages 13-15: allow submission but warn about parental consent requirement
     const parentalConsentAck = document.getElementById("parental-consent-ack");
     if (parentalConsentAck && !parentalConsentAck.checked) {
       showMessage(

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+  // 1. Enlace activo en navegación
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav a");
 
@@ -15,23 +15,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
+  // 2. Menú móvil
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const nav = document.querySelector("nav");
 
   if (mobileMenuBtn && nav) {
     mobileMenuBtn.addEventListener("click", function () {
-      nav.classList.toggle("active");
+      const isOpen = nav.classList.toggle("active");
+      mobileMenuBtn.classList.toggle("active", isOpen);
+      mobileMenuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      const icon = mobileMenuBtn.querySelector("i");
+      if (icon) {
+        if (isOpen) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      }
     });
 
     document.addEventListener("click", function (event) {
       if (!nav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
         nav.classList.remove("active");
+        mobileMenuBtn.classList.remove("active");
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        const icon = mobileMenuBtn.querySelector("i");
+        if (icon) {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       }
     });
   }
 
-
+  // 3. Smooth scroll para anclas
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -48,7 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // 4. Año estático (mantenido fijamente en HTML)
 
+  // 5. Tarjetas estáticas y estables para evitar CLS
+
+
+  // 6. Observador de derechos
   const derechoCards = document.querySelectorAll(".derecho-card");
   if (derechoCards.length > 0) {
     const derechoObserver = new IntersectionObserver(
@@ -72,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
+  // 7. Contadores animados de estadísticas
   const statNumbers = document.querySelectorAll(".stat-number");
   if (statNumbers.length > 0) {
     const statObserver = new IntersectionObserver(
@@ -104,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     statNumbers.forEach((stat) => statObserver.observe(stat));
   }
 
-
+  // 8. Efectos táctiles optimizados
   const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   if (isTouchDevice) {
     const touchElements = document.querySelectorAll(
@@ -129,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
+// Botón Volver Arriba
 (function() {
   const btn = document.createElement('button');
   btn.innerHTML = '↑';
@@ -187,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
-
+// Header scroll behavior removed - header is always visible (sticky)
 
 (function() {
   if (localStorage.getItem('cookieConsent') === null) {
@@ -201,7 +225,7 @@ function aceptarCookies() {
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
 
-
+  // Consent Mode v2: actualizar a 'granted' y cargar GA4 dinámicamente
   if (typeof gtag === 'function') {
     gtag('consent', 'update', {
       analytics_storage: 'granted',
@@ -209,7 +233,7 @@ function aceptarCookies() {
       personalization_storage: 'granted'
     });
   }
-
+  // Cargar GA4 si no estaba cargado aún
   if (!window._ga4Loaded) {
     window._ga4Loaded = true;
     var s = document.createElement('script');
@@ -230,7 +254,7 @@ function rechazarCookies() {
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
 
-
+  // Consent Mode v2: confirmar denegación explícita
   if (typeof gtag === 'function') {
     gtag('consent', 'update', {
       analytics_storage: 'denied',
@@ -244,7 +268,7 @@ function rechazarCookies() {
 }
 
 
-
+// Modo oscuro permanente y exclusivo en todo el proyecto
 document.documentElement.classList.add('dark-theme');
 if (document.body) {
   document.body.classList.add('dark-theme');

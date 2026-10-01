@@ -853,3 +853,151 @@ html.dark-theme .thank-item p {
   background: #16161a !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
+
+
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .team-member.featured {
+    padding: 20px 16px;
+  }
+
+  .member-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 10px auto;
+  }
+
+  .avatar-badge {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    transform: translate(15%, 15%);
+  }
+
+  .member-info {
+    width: 100%;
+  }
+
+  .member-info h3 {
+    font-size: 1.45rem;
+    text-align: center;
+  }
+
+  .member-role {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .member-skills {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+
+  .member-social {
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .member-social .social-btn {
+    flex: 1 1 130px;
+    max-width: 170px;
+    font-size: 0.88rem;
+    padding: 9px 14px;
+    min-width: unset;
+  }
+
+  .member-description {
+    text-align: center;
+    font-size: 0.92rem;
+  }
+
+  .member-contribution {
+    text-align: left;
+    padding: 14px;
+  }
+
+  .member-contribution h4 {
+    font-size: 1rem;
+    justify-content: flex-start;
+  }
+
+  .editors-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .special-mention {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 22px 16px;
+  }
+
+  .mention-icon {
+    font-size: 2.5rem;
+    margin: 0 auto;
+  }
+
+  .mention-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .thanks-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    padding: 16px 12px;
+  }
+
+  .member-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .member-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .member-social {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member-social .social-btn {
+    width: 100%;
+    max-width: 260px;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .member-contribution {
+    padding: 12px 10px;
+  }
+
+  .special-mention {
+    padding: 18px 12px;
+  }
+
+  .editors-grid .team-member {
+    padding: 18px 14px;
+  }
+}
