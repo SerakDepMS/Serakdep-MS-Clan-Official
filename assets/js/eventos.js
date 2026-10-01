@@ -2,10 +2,6 @@ const API_EVENTOS = "https://api.npoint.io/b7d27b89b7da43de6683";
 const INTERVALO_ACTUALIZACION = 12000;
 
 document.addEventListener("DOMContentLoaded", function () {
-  const yearSpan = document.getElementById("current-year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
   cargarEventosDesdeAPI();
   setInterval(actualizarEventosPeriodicamente, INTERVALO_ACTUALIZACION);
 });
@@ -18,14 +14,14 @@ let ultimaActualizacionTimestamp = null;
 async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
   try {
     const cacheBuster = `_cb=${Date.now()}`;
-    const urlConAntiCache = API_EVENTOS.includes('?') 
-      ? `${API_EVENTOS}&${cacheBuster}` 
+    const urlConAntiCache = API_EVENTOS.includes('?')
+      ? `${API_EVENTOS}&${cacheBuster}`
       : `${API_EVENTOS}?${cacheBuster}`;
-    
+
     if (!esActualizacionPeriodica) {
       console.log("Cargando eventos iniciales...");
     }
-    
+
     const response = await fetch(urlConAntiCache);
     if (!response.ok) {
       if (response.status === 404) throw new Error("Base de datos de eventos no encontrada");
@@ -70,7 +66,7 @@ async function cargarEventosDesdeAPI(esActualizacionPeriodica = false) {
     renderCalendar(currentMonth, currentYear);
     renderEventList(currentMonth, currentYear);
     updateEventsDoneCounter();
-    
+
     ultimaActualizacionTimestamp = Date.now();
 
   } catch (error) {
@@ -308,18 +304,18 @@ function initTodayEvent() {
   const event = window.calendarEvents ? window.calendarEvents[todayKey] : null;
   const todayEventElement = document.getElementById("today-event");
   if (!todayEventElement) return;
-  
+
   if (event) {
     let typeText = "", typeColor = "#4CAF50";
     if (event.type === "tournament") { typeText = "🏆 Torneo"; typeColor = "#FF9800"; }
     else if (event.type === "game") { typeText = "🎮 Game Night"; typeColor = "#2196F3"; }
     else if (event.type === "special") { typeText = "🎁 Especial"; typeColor = "#9C27B0"; }
-    
+
     const isOpen = event.status === "open";
-    const joinButton = isOpen 
+    const joinButton = isOpen
       ? `<button class="btn-join-now" onclick="joinEventNow()"><i class="fas fa-play-circle"></i> Unirse ahora</button>`
       : `<p class="event-closed-message"><i class="fas fa-lock"></i> Este evento aún no está abierto para unirse.</p>`;
-    
+
     todayEventElement.innerHTML = `
       <div class="today-event-content">
         <div class="today-event-icon">${event.icon}</div>
@@ -377,7 +373,7 @@ function initEventListeners() {
   document.getElementById("prev-month")?.addEventListener("click", () => changeMonth("prev"));
   document.getElementById("next-month")?.addEventListener("click", () => changeMonth("next"));
   document.getElementById("today-btn")?.addEventListener("click", navigateToCurrentMonth);
-  
+
   document.addEventListener("click", (e) => {
     if (e.target.closest(".calendar-day.event-day")) {
       const dayElement = e.target.closest(".calendar-day");
@@ -431,32 +427,32 @@ function showEventModal(event, dateKey) {
     modal.querySelector(".event-modal-close").addEventListener("click", () => modal.style.display = "none");
     modal.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
   }
-  
+
   const eventDate = getLocalDate(dateKey);
   const formattedDate = formatDate(eventDate);
   let typeText = "", typeColor = "#4CAF50";
   if (event.type === "tournament") { typeText = "🏆 Torneo"; typeColor = "#FF9800"; }
   else if (event.type === "game") { typeText = "🎮 Game Night"; typeColor = "#2196F3"; }
   else if (event.type === "special") { typeText = "🎁 Especial"; typeColor = "#9C27B0"; }
-  
+
   modal.querySelector("#event-modal-title").textContent = event.title;
   modal.querySelector("#event-modal-icon").innerHTML = `<span style="font-size: 3em;">${event.icon}</span>`;
   modal.querySelector("#event-modal-date").innerHTML = `📅 ${formattedDate}`;
   modal.querySelector("#event-modal-type").innerHTML = `<span style="color: ${typeColor}">${typeText}</span>`;
   modal.querySelector("#event-modal-description").textContent = event.description || "";
-  
+
   const joinBtn = modal.querySelector("#btn-join-now-modal");
   const today = getLocalDate();
   const isToday = formatDateForKey(eventDate) === formatDateForKey(today);
   const eventLink = event.link || "";
-  
+
   if (isToday && event.status === "open" && eventLink) {
     joinBtn.style.display = "inline-block";
     joinBtn.onclick = () => { window.open(eventLink, "_blank"); modal.style.display = "none"; };
   } else {
     joinBtn.style.display = "none";
   }
-  
+
   modal.querySelector("#btn-share-event").onclick = () => shareEvent(event, dateKey);
   modal.style.display = "flex";
 }

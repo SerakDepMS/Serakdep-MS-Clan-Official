@@ -27,11 +27,6 @@ let newsDatabase = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const yearSpan = document.getElementById("current-year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
   initializeData();
   initEventListeners();
 
@@ -121,10 +116,10 @@ async function initializeData() {
     newsDatabase.news = [
       {
         id: 1,
-        title: "Bienvenidos al Clan Serakdep MS",
+        title: "Bienvenidos al Clan SerakDepMS Studios",
         category: "announcement",
-        content: "Bienvenida oficial al clan Serakdep MS.",
-        excerpt: "Bienvenida oficial al clan Serakdep MS.",
+        content: "Bienvenida oficial al clan SerakDepMS Studios.",
+        excerpt: "Bienvenida oficial al clan SerakDepMS Studios.",
         date: new Date().toISOString().split("T")[0],
         image: "",
         important: true,
@@ -259,7 +254,7 @@ async function readMoreNews(id) {
         </div>
 
         <div class="modal-image-wrapper">
-          <img src="../../assets/img/clan-logo.webp" alt="Serakdep MS" class="modal-featured-image">
+          <img src="../../assets/img/clan-logo.png" alt="SerakDepMS Studios" class="modal-featured-image">
         </div>
 
         <div class="modal-body">

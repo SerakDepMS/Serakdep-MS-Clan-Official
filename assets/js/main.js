@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Enlace activo en navegación
+
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav a");
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 2. Menú móvil
+
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const nav = document.querySelector("nav");
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 3. Smooth scroll para anclas
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -48,16 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 4. Año dinámico
-  const yearSpan = document.getElementById("current-year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
 
-  // 5. Tarjetas estáticas y estables para evitar CLS
-
-
-  // 6. Observador de derechos
   const derechoCards = document.querySelectorAll(".derecho-card");
   if (derechoCards.length > 0) {
     const derechoObserver = new IntersectionObserver(
@@ -81,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 7. Contadores animados de estadísticas
+
   const statNumbers = document.querySelectorAll(".stat-number");
   if (statNumbers.length > 0) {
     const statObserver = new IntersectionObserver(
@@ -113,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     statNumbers.forEach((stat) => statObserver.observe(stat));
   }
 
-  // 8. Efectos táctiles optimizados
+
   const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   if (isTouchDevice) {
     const touchElements = document.querySelectorAll(
@@ -138,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Botón Volver Arriba
+
 (function() {
   const btn = document.createElement('button');
   btn.innerHTML = '↑';
@@ -151,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.style.width = '50px';
   btn.style.height = '50px';
   btn.style.borderRadius = '50%';
-  btn.style.backgroundColor = '#2d6a4f';
-  btn.style.border = 'none';
-  btn.style.color = 'white';
-  btn.style.fontSize = '24px';
+  btn.style.background = 'linear-gradient(135deg,#00FF66,#00b34a)';
+  btn.style.border = '2px solid #00FF66';
+  btn.style.color = '#0a0a0a';
+  btn.style.fontSize = '1.2rem';
   btn.style.fontWeight = 'bold';
   btn.style.cursor = 'pointer';
-  btn.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+  btn.style.boxShadow = '0 4px 20px rgba(0,255,102,0.45)';
   btn.style.zIndex = '100001';
   btn.style.transition = 'opacity 0.3s, transform 0.2s';
   btn.style.opacity = '0';
@@ -196,36 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
-(function() {
-  const header = document.querySelector('header');
-  if (!header) return;
 
-
-  header.style.transform = 'translateY(0)';
-  header.style.transition = 'transform 0.3s ease-out';
-  header.style.willChange = 'transform';
-
-  function updateHeader() {
-    if (window.scrollY <= 10) {
-      header.style.transform = 'translateY(0)';
-    } else {
-      header.style.transform = 'translateY(-100%)';
-    }
-  }
-
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        updateHeader();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-
-  updateHeader();
-})();
 
 (function() {
   if (localStorage.getItem('cookieConsent') === null) {
@@ -238,212 +200,56 @@ function aceptarCookies() {
   localStorage.setItem('cookieConsent', 'accepted');
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
+
+
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      functionality_storage: 'granted',
+      personalization_storage: 'granted'
+    });
+  }
+
+  if (!window._ga4Loaded) {
+    window._ga4Loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VBV6P0W6EL';
+    document.head.appendChild(s);
+    s.onload = function () {
+      if (typeof gtag === 'function') {
+        gtag('js', new Date());
+        gtag('config', 'G-VBV6P0W6EL', { anonymize_ip: true });
+      }
+    };
+  }
 }
 
 function rechazarCookies() {
   localStorage.setItem('cookieConsent', 'rejected');
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
+
+
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      functionality_storage: 'denied',
+      personalization_storage: 'denied'
+    });
+  }
 }
 
 
-(function() {
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
-  
-  if (!themeToggle || !themeIcon) return;
-  
-  const savedTheme = getCookie('sms_theme') || localStorage.getItem('sms_theme');
-  if (savedTheme === 'dark') {
-    document.documentElement.classList.add('dark-theme');
+
+document.documentElement.classList.add('dark-theme');
+if (document.body) {
+  document.body.classList.add('dark-theme');
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('dark-theme');
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-  }
-  
-  themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark-theme');
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    setCookie('sms_theme', isDark ? 'dark' : 'light', 180);
-    localStorage.setItem('sms_theme', isDark ? 'dark' : 'light');
-    
-    themeIcon.classList.toggle('fa-moon', !isDark);
-    themeIcon.classList.toggle('fa-sun', isDark);
   });
-})();
-
-
-function setCookie(name, value, days) {
-  const expires = new Date();
-  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
 }
-
-function getCookie(name) {
-  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
-  return match ? match[2] : null;
-}
-
-
-(function() {
-  const COLORS = [
-    '#d4af37', '#f1c40f', '#f39c12',
-    '#95d5b2', '#52b788', '#40916c', '#2d6a4f'
-  ];
-  const MAX_PARTICLES = 40;
-  const REPULSION_RADIUS = 110;
-  const REPULSION_FORCE  = 2.8;
-  let particles = [];
-  let canvas, ctx, animationId;
-  let resizeTimer;
-
-
-  let pointer = { x: -9999, y: -9999, active: false };
-
-  function onMouseMove(e) {
-    pointer.x = e.clientX;
-    pointer.y = e.clientY;
-    pointer.active = true;
-  }
-  function onMouseLeave() {
-    pointer.active = false;
-    pointer.x = -9999;
-    pointer.y = -9999;
-  }
-  function onTouchMove(e) {
-    if (e.touches.length > 0) {
-      pointer.x = e.touches[0].clientX;
-      pointer.y = e.touches[0].clientY;
-      pointer.active = true;
-    }
-  }
-  function onTouchEnd() {
-    pointer.active = false;
-    pointer.x = -9999;
-    pointer.y = -9999;
-  }
-
-  function createParticle() {
-    const size = Math.random() * 3.5 + 1.5;
-    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
-    return {
-      x: Math.random() * canvas.width,
-      y: Math.random() * -canvas.height,
-      vx: 0,
-      vy: 0,
-      size, color,
-      speedY: Math.random() * 1.3 + 0.4,
-      speedX: (Math.random() - 0.5) * 0.35,
-      opacity: Math.random() * 0.55 + 0.25,
-      blur: size > 3.5 ? size * 1.3 : 0
-    };
-  }
-
-  function updateParticles() {
-    while (particles.length < MAX_PARTICLES) {
-      particles.push(createParticle());
-    }
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = particles.length - 1; i >= 0; i--) {
-      const p = particles[i];
-
-
-      p.x += p.speedX + p.vx;
-      p.y += p.speedY + p.vy;
-
-
-      if (pointer.active) {
-        const dx = p.x - pointer.x;
-        const dy = p.y - pointer.y;
-        const distSq = dx * dx + dy * dy;
-        if (distSq < 12100 && distSq > 0) {
-          const dist = Math.sqrt(distSq);
-          const strength = (1 - dist / REPULSION_RADIUS) * REPULSION_FORCE;
-          p.vx += (dx / dist) * strength;
-          p.vy += (dy / dist) * strength;
-        }
-      }
-
-
-      p.vx *= 0.88;
-      p.vy *= 0.88;
-
-
-      const maxV = 6;
-      if (Math.abs(p.vx) > maxV) p.vx = maxV * Math.sign(p.vx);
-      if (Math.abs(p.vy) > maxV) p.vy = maxV * Math.sign(p.vy);
-
-      if (p.y > canvas.height + 10 || p.x < -10 || p.x > canvas.width + 10) {
-        particles[i] = createParticle();
-        particles[i].y = -10;
-        continue;
-      }
-
-      ctx.save();
-      ctx.globalAlpha = p.opacity;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
-      ctx.fill();
-      if (p.blur > 0) {
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur  = p.blur;
-        ctx.fill();
-      }
-      ctx.restore();
-    }
-
-    animationId = requestAnimationFrame(updateParticles);
-  }
-
-  function resizeCanvas() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particles.length = 0;
-  }
-
-  function debouncedResize() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(resizeCanvas, 150);
-  }
-
-  function initParticleRain() {
-    if (window.innerWidth < 768) return;
-    canvas = document.createElement('canvas');
-    canvas.classList.add('particle-rain-container');
-    canvas.style.willChange = 'transform';
-    document.body.prepend(canvas);
-    ctx = canvas.getContext('2d');
-    resizeCanvas();
-
-    window.addEventListener('resize',     debouncedResize,  { passive: true });
-    window.addEventListener('mousemove',  onMouseMove,      { passive: true });
-    window.addEventListener('mouseleave', onMouseLeave,     { passive: true });
-    window.addEventListener('touchmove',  onTouchMove,      { passive: true });
-    window.addEventListener('touchend',   onTouchEnd,       { passive: true });
-    window.addEventListener('touchcancel',onTouchEnd,       { passive: true });
-
-    for (let i = 0; i < MAX_PARTICLES; i++) particles.push(createParticle());
-    updateParticles();
-  }
-
-  function handleVisibilityChange() {
-    if (document.hidden) {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-        animationId = null;
-      }
-    } else if (!animationId && canvas) {
-      updateParticles();
-    }
-  }
-  document.addEventListener('visibilitychange', handleVisibilityChange);
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initParticleRain);
-  } else {
-    initParticleRain();
-  }
-})();

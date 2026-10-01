@@ -1,4 +1,4 @@
-.form-container {
+﻿.form-container {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -7,28 +7,11 @@
   margin-bottom: 20px;
 }
 
-.form-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: var(--primary-green);
-}
+.form-label { display: block; margin-bottom: 8px; font-weight: 600; color: #007a33; }
 
-.form-control {
-  width: 100%;
-  padding: 12px 15px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: #f9f9f9;
-}
+.form-control { width: 100%; padding: 12px 15px; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; background-color: #111111; color: #f8f9fa; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
 
-.form-control:focus {
-  border-color: var(--accent-green);
-  outline: none;
-  background-color: white;
-  box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.1);
-}
+.form-control:focus { border-color: #00b34a; outline: none; background-color: #16161a; box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.25); color: #ffffff; }
 
 .form-row {
   display: flex;
@@ -40,10 +23,7 @@
   flex: 1;
 }
 
-textarea.form-control {
-  min-height: 120px;
-  resize: vertical;
-}
+textarea.form-control { width: 100%; padding: 12px 15px; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; background-color: #111111; color: #f8f9fa; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
 
 .checkbox-group {
   display: flex;
@@ -83,9 +63,7 @@ textarea.form-control {
   color: var(--accent-green);
 }
 
-.input-with-icon .form-control {
-  padding-right: 40px;
-}
+.input-with-icon .form-control { width: 100%; padding: 12px 15px; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; background-color: #111111; color: #f8f9fa; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
 
 .character-count {
   text-align: right;
@@ -102,19 +80,12 @@ textarea.form-control {
 }
 
 
-#aspirantes-admin .form-label {
-  color: #2980b9;
-}
+#aspirantes-admin .form-label { display: block; margin-bottom: 8px; font-weight: 600; color: #007a33; }
 
 
-#aspirantes-admin .form-control {
-  border-color: #bdc3c7;
-}
+#aspirantes-admin .form-control { width: 100%; padding: 12px 15px; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; background-color: #111111; color: #f8f9fa; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
 
-#aspirantes-admin .form-control:focus {
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-}
+#aspirantes-admin .form-control:focus { border-color: #00b34a; outline: none; background-color: #16161a; box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.25); color: #ffffff; }
 
 #aspirantes-admin .form-submit-btn {
   background: linear-gradient(135deg, #3498db, #2980b9);
@@ -150,28 +121,12 @@ textarea.form-control {
 }
 
 
-#aspirantes-admin textarea.form-control {
-  min-height: 100px;
-  background-color: #f8fafc;
-  border-color: #d5d8dc;
-}
+#aspirantes-admin textarea.form-control { width: 100%; padding: 12px 15px; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; background-color: #111111; color: #f8f9fa; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
 
-#aspirantes-admin textarea.form-control:focus {
-  background-color: white;
-  border-color: #3498db;
-}
+#aspirantes-admin textarea.form-control:focus { border-color: #00b34a; outline: none; background-color: #16161a; box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.25); color: #ffffff; }
 
 
-#aspirantes-admin select.form-control {
-  background-color: #f8fafc;
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232980b9' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 16px;
-  padding-right: 40px;
-}
+#aspirantes-admin select.form-control { width: 100%; padding: 12px 15px; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; background-color: #111111; color: #f8f9fa; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
 
 
 #aspirantes-admin .form-submit-btn i {
@@ -250,7 +205,7 @@ textarea.form-control {
 }
 
 .requirement-title {
-  color: #2c3e50;
+  color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 20px;
   display: flex;
@@ -283,7 +238,7 @@ textarea.form-control {
 }
 
 .requirement-list li strong {
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 
@@ -295,11 +250,11 @@ textarea.form-control {
 }
 
 .value-card {
-  background: #f8fafc;
+  background: #16161a;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  border: 1px solid #e0e6ed;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .value-icon {
@@ -344,20 +299,20 @@ textarea.form-control {
 }
 
 .value-card h4 {
-  color: #2c3e50;
+  color: #00FF66;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
 .value-card p {
-  color: #7f8c8d;
+  color: #d1d5db;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 
 .scenario-intro {
-  color: #34495e;
+  color: #d1d5db;
   margin-bottom: 25px;
   font-size: 1.1rem;
   font-style: italic;
@@ -370,15 +325,15 @@ textarea.form-control {
 }
 
 .scenario-card {
-  background: white;
+  background: #16161a;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #e0e6ed;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .scenario-header {
   padding: 15px 20px;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .scenario-badge {
@@ -412,7 +367,7 @@ textarea.form-control {
 }
 
 .scenario-header h4 {
-  color: #2c3e50;
+  color: #00FF66;
   margin: 0;
   font-size: 1.1rem;
 }
@@ -448,9 +403,10 @@ textarea.form-control {
   align-items: flex-start;
   gap: 15px;
   padding: 15px;
-  background: #f8fafc;
+  background: #16161a;
   border-radius: 8px;
-  border-left: 4px solid #3498db;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #00FF66;
 }
 
 .commitment-icon {
@@ -461,13 +417,13 @@ textarea.form-control {
 }
 
 .commitment-item h4 {
-  color: #2c3e50;
+  color: #00FF66;
   margin-bottom: 5px;
   font-size: 1.1rem;
 }
 
 .commitment-item p {
-  color: #7f8c8d;
+  color: #d1d5db;
   margin: 0;
   font-size: 0.95rem;
 }
@@ -811,36 +767,25 @@ textarea.form-control {
 
 
 .form-group:has(#join-whatsapp) {
-  background-color: #f8fafc;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-left: 4px solid #2ecc71;
+  background-color: #16161a;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 102, 0.25);
+  margin-top: 10px;
 }
 
 
-.form-group:has(#join-whatsapp) .form-label {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  display: block;
-}
+.form-group:has(#join-whatsapp) .form-label { display: block; margin-bottom: 8px; font-weight: 600; color: #007a33; }
 
 
 .form-group:has(#join-whatsapp) .form-checkbox {
-  margin-bottom: 12px;
-  padding: 10px 15px;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #e0e6ed;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .form-group:has(#join-whatsapp) .form-checkbox:hover {
   border-color: #3498db;
-  background-color: #f1f8ff;
+  background-color: rgba(0, 255, 102, 0.08);
 }
 
 
@@ -988,7 +933,7 @@ textarea.form-control {
 
 
 .form-group:has(#join-whatsapp) .form-checkbox:hover label {
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 #join-whatsapp:focus + label,
@@ -999,245 +944,72 @@ textarea.form-control {
 }
 
 
-body.dark-theme .form-container {
-  color: #e0e0e0;
+body.dark-theme .value-card, html.dark-theme .value-card {
+  background: #16161a;
+  border-color: rgba(255, 255, 255, 0.08);
 }
-
-body.dark-theme .form-label {
-  color: #a8d5be;
+body.dark-theme .value-card p, html.dark-theme .value-card p {
+  color: #d1d5db;
 }
-
-body.dark-theme .form-control {
-  background-color: #1a1f1c;
-  border-color: #444;
-  color: #e0e0e0;
+body.dark-theme .scenario-card, html.dark-theme .scenario-card {
+  background: #16161a;
+  border-color: rgba(255, 255, 255, 0.08);
 }
-
-body.dark-theme .form-control:focus {
-  border-color: #3498db;
-  background-color: #222825;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+body.dark-theme .scenario-header, html.dark-theme .scenario-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
-
-body.dark-theme .character-count {
-  color: #999;
+body.dark-theme .scenario-header h4, html.dark-theme .scenario-header h4 {
+  color: #00FF66;
 }
-
-body.dark-theme #aspirantes-admin .card-title {
-  color: #a8d5be;
-  border-bottom-color: #3498db;
+body.dark-theme .scenario-content li, html.dark-theme .scenario-content li {
+  color: #d1d5db;
 }
-
-body.dark-theme #aspirantes-admin .form-label {
-  color: #3498db;
+body.dark-theme .commitment-item, html.dark-theme .commitment-item {
+  background: #111111;
+  border-left-color: #00FF66;
 }
-
-body.dark-theme #aspirantes-admin .form-control {
-  border-color: #555;
+body.dark-theme .commitment-item h4, html.dark-theme .commitment-item h4 {
+  color: #00FF66;
 }
-
-body.dark-theme #aspirantes-admin .form-control:focus {
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+body.dark-theme .commitment-item p, html.dark-theme .commitment-item p {
+  color: #d1d5db;
 }
-
-body.dark-theme #aspirantes-admin .form-submit-btn {
-  background: linear-gradient(135deg, #2c3e50, #1a252f);
-  color: white;
+body.dark-theme .form-checkbox label, html.dark-theme .form-checkbox label {
+  color: #d1d5db;
 }
-
-body.dark-theme #aspirantes-admin .form-submit-btn:hover {
-  background: linear-gradient(135deg, #1a252f, #0d151c);
+body.dark-theme .form-checkbox a, html.dark-theme .form-checkbox a {
+  color: #00FF66;
 }
-
-body.dark-theme #aspirantes-admin .form-checkbox {
-  background-color: #121815;
-  border-left-color: #3498db;
+body.dark-theme .form-help, html.dark-theme .form-help {
+  color: #9ca3af;
 }
-
-body.dark-theme #aspirantes-admin .form-checkbox input[type="checkbox"]:checked + label {
-  color: #5dade2;
-}
-
-body.dark-theme #aspirantes-admin .form-help {
-  color: #5dade2;
-}
-
-body.dark-theme #aspirantes-admin textarea.form-control {
-  background-color: #121815;
-  border-color: #555;
-}
-
-body.dark-theme #aspirantes-admin textarea.form-control:focus {
-  background-color: #1a1f1c;
-  border-color: #3498db;
-}
-
-body.dark-theme #aspirantes-admin select.form-control {
-  background-color: #121815;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%233498db' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-}
-
-body.dark-theme #aspirantes-admin .form-control:valid {
-  border-color: #27ae60;
-}
-
-body.dark-theme #aspirantes-admin .character-count {
-  color: #5dade2;
-}
-
-body.dark-theme #aspirantes-admin .contact-form {
-  background: #1a1f1c;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme #aspirantes-admin .form-group:not(:last-child) {
-  border-bottom-color: #333;
-}
-
-body.dark-theme .requirement-section {
-  border-bottom-color: #333;
-}
-
-body.dark-theme .requirement-title {
-  color: #f0e6c5;
-}
-
-body.dark-theme .requirement-title i {
-  color: #3498db;
-}
-
-body.dark-theme .requirement-list li {
-  color: #d5d5d5;
-}
-
-body.dark-theme .requirement-list li strong {
-  color: #f0e6c5;
-}
-
-body.dark-theme .values-grid .value-card {
-  background: #1a1f1c;
-  border-color: #333;
-}
-
-body.dark-theme .value-card h4 {
-  color: #f0e6c5;
-}
-
-body.dark-theme .value-card p {
-  color: #b5b5b5;
-}
-
-body.dark-theme .scenario-intro {
-  color: #d5d5d5;
-}
-
-body.dark-theme .scenario-card {
-  background: #1a1f1c;
-  border-color: #333;
-}
-
-body.dark-theme .scenario-header {
-  border-bottom-color: #333;
-}
-
-body.dark-theme .scenario-header h4 {
-  color: #f0e6c5;
-}
-
-body.dark-theme .scenario-content li {
-  color: #d5d5d5;
-}
-
-body.dark-theme .commitment-item {
-  background: #121815;
-  border-left-color: #3498db;
-}
-
-body.dark-theme .commitment-item h4 {
-  color: #f0e6c5;
-}
-
-body.dark-theme .commitment-item p {
-  color: #b5b5b5;
-}
-
-body.dark-theme .requirements-footer {
-  border-top-color: #333;
-}
-
-body.dark-theme .form-checkbox label {
-  color: #d5d5d5;
-}
-
-body.dark-theme .form-checkbox a {
-  color: #5dade2;
-}
-
-body.dark-theme .form-help {
-  color: #999;
-}
-
 body.dark-theme .alert-success {
-  background-color: rgba(46, 204, 113, 0.1);
-  border-color: #2ecc71;
-  color: #a5d6a7;
+  background-color: rgba(0, 255, 102, 0.12);
+  border-color: #00FF66;
+  color: #00FF66;
 }
-
 body.dark-theme .alert-danger {
-  background-color: rgba(231, 76, 60, 0.1);
+  background-color: rgba(231, 76, 60, 0.15);
   border-color: #e74c3c;
   color: #ef9a9a;
 }
-
 body.dark-theme .alert-warning {
-  background-color: rgba(243, 156, 18, 0.1);
+  background-color: rgba(243, 156, 18, 0.15);
   border-color: #f39c12;
   color: #ffcc80;
 }
-
 body.dark-theme .alert-info {
-  background-color: rgba(52, 152, 219, 0.1);
+  background-color: rgba(52, 152, 219, 0.15);
   border-color: #3498db;
   color: #90caf9;
 }
-
-body.dark-theme .requirements-continue-btn {
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
-}
-
-body.dark-theme .back-to-requisitos-btn {
-  background: linear-gradient(135deg, #7f8c8d, #6c7b7d);
-}
-
-body.dark-theme #success-message {
-  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-}
-
-body.dark-theme .form-group:has(#join-whatsapp) {
-  background-color: #121815;
-  border-left-color: #2ecc71;
-}
-
-body.dark-theme .form-group:has(#join-whatsapp) .form-label {
-  color: #f0e6c5;
-}
-
-body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox {
-  background-color: #1a1f1c;
-  border-color: #333;
-}
-
-body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox:hover {
-  border-color: #3498db;
-  background-color: #222825;
-}
-
 body.dark-theme .form-label,
 html.dark-theme .form-label {
-  color: #f0e6c5;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #00FF66 !important;
 }
-
 body.dark-theme .form-control,
 html.dark-theme .form-control,
 body.dark-theme input[type="text"],
@@ -1248,40 +1020,406 @@ body.dark-theme input[type="url"],
 body.dark-theme input[type="date"],
 body.dark-theme select,
 body.dark-theme textarea {
-  background-color: #16201a !important;
-  color: #e0e0e0 !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: #111111 !important;
+  color: #f8f9fa !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
-
 body.dark-theme .form-control:focus,
 html.dark-theme .form-control:focus,
 body.dark-theme input:focus,
 body.dark-theme select:focus,
 body.dark-theme textarea:focus {
-  background-color: #1c2a22 !important;
-  border-color: var(--accent-green) !important;
-  box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.2) !important;
+  background-color: #16161a !important;
+  border-color: #00FF66 !important;
+  box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.25) !important;
+  color: #ffffff !important;
 }
-
 body.dark-theme .character-count,
 html.dark-theme .character-count {
-  color: #a0a0a0;
+  color: #9ca3af;
 }
-
 body.dark-theme .card,
 html.dark-theme .card {
-  background: rgba(26, 31, 28, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #e0e0e0;
+  background: #16161a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f8f9fa !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
-  .form-container {
-    width: 100%;
-    padding: 0 10px;
-  }
-  .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
+
+body.dark-theme .alert-info,
+html.dark-theme .alert-info {
+  background-color: rgba(0, 255, 102, 0.08) !important;
+  border-color: rgba(0, 255, 102, 0.5) !important;
+  color: #86efac !important;
+}
+
+body.dark-theme .alert-info a,
+html.dark-theme .alert-info a,
+body.dark-theme .news-link,
+html.dark-theme .news-link {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .alert-info strong,
+html.dark-theme .alert-info strong {
+  color: #f8f9fa !important;
+}
+
+body.dark-theme .alert-info i,
+html.dark-theme .alert-info i {
+  color: #00FF66 !important;
+}
+
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox,
+html.dark-theme .form-group:has(#join-whatsapp) .form-checkbox {
+  background-color: #16161a !important;
+  border-color: rgba(0, 255, 102, 0.25) !important;
+  color: #e5e7eb !important;
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox:hover,
+html.dark-theme .form-group:has(#join-whatsapp) .form-checkbox:hover {
+  border-color: #00FF66 !important;
+  background-color: rgba(0, 255, 102, 0.08) !important;
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-checkbox label,
+html.dark-theme .form-group:has(#join-whatsapp) .form-checkbox label {
+  color: #e5e7eb !important;
+}
+
+body.dark-theme .form-group:has(#join-whatsapp) .form-label,
+html.dark-theme .form-group:has(#join-whatsapp) .form-label {
+  color: #00FF66 !important;
+}
+
+
+body.dark-theme .requirement-title,
+html.dark-theme .requirement-title {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .requirement-check,
+html.dark-theme .requirement-check {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .requirement-list li,
+html.dark-theme .requirement-list li {
+  color: #e5e7eb !important;
+}
+
+body.dark-theme .requirement-list li strong,
+html.dark-theme .requirement-list li strong {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .requirements-footer,
+html.dark-theme .requirements-footer {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+body.dark-theme .value-card,
+html.dark-theme .value-card {
+  background: #16161a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .value-card:hover,
+html.dark-theme .value-card:hover {
+  border-color: rgba(0, 255, 102, 0.3) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 255, 102, 0.1) !important;
+}
+
+body.dark-theme .value-card h4,
+html.dark-theme .value-card h4 {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .value-card p,
+html.dark-theme .value-card p {
+  color: #d1d5db !important;
+}
+
+
+body.dark-theme .scenario-intro,
+html.dark-theme .scenario-intro {
+  color: #d1d5db !important;
+}
+
+body.dark-theme .scenario-card,
+html.dark-theme .scenario-card {
+  background: #16161a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .scenario-header,
+html.dark-theme .scenario-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+body.dark-theme .scenario-header h4,
+html.dark-theme .scenario-header h4 {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .scenario-content,
+html.dark-theme .scenario-content {
+  color: #e5e7eb !important;
+}
+
+body.dark-theme .scenario-content li,
+html.dark-theme .scenario-content li {
+  color: #e5e7eb !important;
+}
+
+body.dark-theme .scenario-content li::marker,
+html.dark-theme .scenario-content li::marker {
+  color: #00FF66 !important;
+}
+
+
+body.dark-theme .commitment-item,
+html.dark-theme .commitment-item {
+  background: #16161a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-left: 4px solid #00FF66 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .commitment-icon,
+html.dark-theme .commitment-icon {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .commitment-item h4,
+html.dark-theme .commitment-item h4 {
+  color: #00FF66 !important;
+}
+
+body.dark-theme .commitment-item p,
+html.dark-theme .commitment-item p {
+  color: #d1d5db !important;
+}
+
+
+body.dark-theme .back-to-requisitos-btn,
+html.dark-theme .back-to-requisitos-btn {
+  background: #1f1f24 !important;
+  color: #e5e7eb !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+body.dark-theme .back-to-requisitos-btn:hover,
+html.dark-theme .back-to-requisitos-btn:hover {
+  background: #2a2a32 !important;
+  color: #ffffff !important;
+  border-color: rgba(0, 255, 102, 0.3) !important;
+}
+
+
+body.dark-theme #aspirantes-admin .contact-form,
+html.dark-theme #aspirantes-admin .contact-form {
+  background: transparent !important;
+}
+
+body.dark-theme #aspirantes-admin .form-checkbox,
+html.dark-theme #aspirantes-admin .form-checkbox {
+  background-color: #16161a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #e5e7eb !important;
+}
+
+body.dark-theme #aspirantes-admin .form-control,
+html.dark-theme #aspirantes-admin .form-control {
+  background-color: #111111 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-theme #aspirantes-admin .form-control:focus,
+html.dark-theme #aspirantes-admin .form-control:focus {
+  border-color: #00FF66 !important;
+  box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.2) !important;
+}
+
+
+.form-label,
+.requirement-title,
+.value-card h4,
+.scenario-header h4,
+.commitment-item h4,
+#aspirantes-admin .form-label,
+#aspirantes-admin .card-title {
+  color: #00FF66 !important;
+}
+
+.form-help,
+.character-count,
+.scenario-intro,
+.scenario-content li,
+.value-card p,
+.commitment-item p,
+.requirement-list li,
+.form-checkbox label,
+#aspirantes-admin .form-help,
+#aspirantes-admin .form-checkbox label {
+  color: #f8f9fa !important;
+}
+
+.form-checkbox a,
+#aspirantes-admin .form-checkbox a {
+  color: #00FF66 !important;
+  text-decoration: underline;
+}
+
+.form-control,
+textarea.form-control,
+select.form-control,
+#aspirantes-admin .form-control {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.form-control:focus,
+textarea.form-control:focus,
+select.form-control:focus,
+#aspirantes-admin .form-control:focus {
+  background-color: #16161a !important;
+  color: #ffffff !important;
+  border-color: #00FF66 !important;
+  box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.25) !important;
+}
+
+.form-group:has(#join-whatsapp) .form-checkbox,
+#aspirantes-admin .form-checkbox {
+  background-color: #16161a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f8f9fa !important;
+}
+
+.form-group:has(#join-whatsapp) .form-checkbox:hover,
+#aspirantes-admin .form-checkbox:hover {
+  background-color: rgba(0, 255, 102, 0.08) !important;
+  border-color: #00FF66 !important;
+}
+
+.form-submit-btn,
+#aspirantes-admin .form-submit-btn,
+.requirements-continue-btn {
+  background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(0, 255, 102, 0.35) !important;
+  cursor: pointer;
+}
+
+.form-submit-btn:hover,
+#aspirantes-admin .form-submit-btn:hover,
+.requirements-continue-btn:hover {
+  background: #33ff85 !important;
+  color: #0a0a0a !important;
+  box-shadow: 0 8px 25px rgba(0, 255, 102, 0.5) !important;
+}
+
+.form-submit-btn i,
+#aspirantes-admin .form-submit-btn i,
+.requirements-continue-btn i {
+  color: #0a0a0a !important;
+}
+
+.back-to-requisitos-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.back-to-requisitos-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #00FF66 !important;
+  color: #ffffff !important;
+}
+
+.back-to-requisitos-btn i {
+  color: #00FF66 !important;
+}
+
+.btn-whatsapp {
+  background: #25d366 !important;
+  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  border: none !important;
+}
+
+.btn-whatsapp:hover {
+  background: #1eb757 !important;
+  color: #0a0a0a !important;
+}
+
+.btn-whatsapp i {
+  color: #0a0a0a !important;
+}
+
+.btn-discord {
+  background: #5865f2 !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  font-weight: 700 !important;
+}
+
+.btn-discord:hover {
+  background: #4752c4 !important;
+  color: #ffffff !important;
+}
+
+.btn-discord i {
+  color: #ffffff !important;
+}
+
+body.dark-theme .form-help,
+html.dark-theme .form-help,
+body.dark-theme .character-count,
+html.dark-theme .character-count {
+  color: #f8f9fa !important;
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #00FF66 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.6) !important;
+}
+
+.form-control:focus,
+.form-control:focus-visible,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00FF66 !important;
+  outline: 2px solid #00FF66 !important;
+  outline-offset: 1px !important;
+  box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.35) !important;
+  background-color: #16161a !important;
+  color: #ffffff !important;
+}
+
+.form-checkbox input[type="checkbox"]:focus-visible {
+  outline: 2px solid #00FF66 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.8) !important;
 }

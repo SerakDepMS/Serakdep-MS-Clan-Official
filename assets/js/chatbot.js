@@ -7,7 +7,7 @@
 
     {
       keywords: ['inscripcion', 'inscribirme', 'unirme', 'registro', 'formulario', 'admisión', 'entrar', 'ingresar', 'unirse', 'proceso', 'como me uno', 'quiero ser miembro', 'solicitud', 'aplicar', 'join', 'ingreso', 'etapas', 'requisitos', 'formulario de inscripcion', 'quiero unirme al clan', 'como entro al clan', 'hacerme miembro'],
-      response: `<strong>Proceso de inscripción al clan Serakdep MS</strong><br><br>
+      response: `<strong>Proceso de inscripción al clan SerakDepMS Studios</strong><br><br>
       ¡Me alegra que quieras unirte! El proceso es sencillo y consta de 5 etapas:<br>
       <strong>1️⃣ Lectura del Reglamento:</strong> Ve al menú "Reglamento" y léelo completo. Es importante que conozcas nuestras normas.<br>
       <strong>2️⃣ Formulario de Inscripción:</strong> Completa el formulario en "Formulario" con tu nombre exacto de Roblox, edad, país, juegos que frecuentas y tu motivación.<br>
@@ -36,13 +36,13 @@
     {
       keywords: ['edad minima', 'cuantos años', 'puedo entrar si tengo 12', 'menor de edad', 'permiso parental'],
       response: `<strong>Política de edad del clan</strong><br><br>
-      La edad mínima para unirse a Serakdep MS es de <strong>16 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
+      La edad mínima para unirse a SerakDepMS Studios es de <strong>16 años</strong>. Si eres menor de edad, necesitas contar con el permiso de tus padres o tutores para participar.<br><br>
       Esta política existe para garantizar un ambiente seguro y maduro para todos los miembros. Si tienes menos de 16, te invitamos a seguirnos en redes sociales y unirte cuando cumplas la edad requerida.`
     },
     {
       keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'among us', 'cs2', 'counter strike', 'fc mobile', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
-      response: `<strong>Sección & Divisiones Multi-Gamer de Serakdep MS</strong><br><br>
-      Serakdep MS es una comunidad y clan oficial Multi-Gamer con <strong>12 divisiones competitivas</strong> activas:<br><br>
+      response: `<strong>Sección & Divisiones Multi-Gamer de SerakDepMS Studios</strong><br><br>
+      SerakDepMS Studios es una comunidad y clan oficial Multi-Gamer con <strong>12 divisiones competitivas</strong> activas:<br><br>
       <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
       <strong>Minecraft:</strong> Servidor con economía, Bedwars 4v4 y arenas PvP.<br>
       <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
@@ -63,7 +63,7 @@
     {
       keywords: ['reglamento', 'normas', 'reglas', 'sanciones', 'castigos', 'prohibido', 'penalizaciones', 'amonestaciones', 'derechos', 'leer reglamento', 'etapa 1', 'normas generales', 'respeto', 'actividad minima', 'que no se puede hacer', 'que esta prohibido', 'codigo de conducta', 'convivencia', 'multicuentas', 'multiples cuentas', 'baja inactividad'],
       response: `<strong>Reglamento general del clan</strong><br><br>
-      En Serakdep MS valoramos el respeto y la buena convivencia. Estas son las normas fundamentales:<br>
+      En SerakDepMS Studios valoramos el respeto y la buena convivencia. Estas son las normas fundamentales:<br>
       <strong>Respeto obligatorio:</strong> No se tolera discriminación, acoso, bullying ni lenguaje ofensivo.<br>
       <strong>Edad mínima 16 años</strong> (con permiso parental si eres menor).<br>
       <strong>Actividad mínima:</strong> Participar al menos una vez por semana. Tras 3 semanas sin actividad sin justificación, se considerará baja por inactividad.<br>
@@ -158,12 +158,12 @@
 
     {
       keywords: ['colaborador', 'aspirar colaborador', 'ser colaborador', 'postular colaborador', 'colaboracion', 'aspirantes colaborador', 'areas colaboracion', 'quiero colaborar', 'formulario colaborador', 'aplicar colaborador', 'como ser colaborador', 'aspirante colaborador', 'colaboradores clan'],
-      response: `<strong>Aspirantes a Colaborador - Serakdep MS</strong><br><br>
+      response: `<strong>Aspirantes a Colaborador - SerakDepMS Studios</strong><br><br>
       Los colaboradores son miembros que apoyan al clan en áreas específicas <strong>sin tener el rol de administrador</strong>, pero desempeñan un papel fundamental para la comunidad.<br><br>
       <strong>Áreas de colaboración disponibles:</strong><br>
       • <strong>Actividades y Eventos:</strong> Organizar y coordinar torneos y actividades comunitarias. Deben asegurar que las normas de convivencia se cumplan.<br>
       • <strong>Edición y Contenido:</strong> Crear material gráfico, videos, guías y contenido para redes sociales del clan. Deben respetar los derechos de autor y la identidad visual del clan.<br>
-      • <strong>Representante de Alianzas:</strong> Gestionar relaciones con otros clanes, buscar nuevas alianzas y representar a Serakdep MS con profesionalismo y lealtad.<br><br>
+      • <strong>Representante de Alianzas:</strong> Gestionar relaciones con otros clanes, buscar nuevas alianzas y representar a SerakDepMS Studios con profesionalismo y lealtad.<br><br>
       <strong>Requisitos para colaborador:</strong><br>
       ✔️ Edad mínima: <strong>17 años</strong>.<br>
       ✔️ Elegir <strong>una sola área</strong> de colaboración.<br>
@@ -193,7 +193,7 @@
 
     {
       keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord'],
-      response: `<strong>Servidor de Discord de Serakdep MS</strong><br><br>
+      response: `<strong>Servidor de Discord de SerakDepMS Studios</strong><br><br>
       Nuestro servidor de Discord es el corazón de la comunidad. Enlace de invitación: <strong>https://discord.gg/nphuM8K9aD</strong><br><br>
       Una vez dentro:<br>
       🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
@@ -211,7 +211,7 @@
     },
     {
       keywords: ['zona dj', 'eventos dj', 'ser dj', 'musica discord', 'canal musica'],
-      response: `<strong>DJ Oficial en Serakdep MS</strong><br><br>
+      response: `<strong>DJ Oficial en SerakDepMS Studios</strong><br><br>
       Para ser DJ oficial del clan y participar en eventos musicales, especialmente en el juego de Roblox <strong>"The Core of Consciousness"</strong>, debes abrir un ticket en el canal <strong>#soporte-técnico</strong> y seleccionar el botón <strong>"🎧 DJ Oficial"</strong>. Allí podrás postularte y aportar tus listas de IDs de música.<br><br>
       Ya no contamos con canales específicos de DJ en Discord; todo se gestiona a través de tickets para mantener el orden y la organización.`
     },
@@ -341,25 +341,25 @@
       <strong>Términos de Servicio:</strong> Al unirte aceptas cumplir con el reglamento. Nos reservamos el derecho de admisión.<br>
       <strong>Política de Cookies:</strong> Usamos cookies para recordar preferencias y mejorar la navegación. Puedes desactivarlas en tu navegador.<br>
       <strong>Aviso DMCA:</strong> Si crees que algún contenido infringe tus derechos de autor, contáctanos por el formulario legal. Responderemos en 5 días hábiles.<br><br>
-      <strong>Nota importante:</strong> Serakdep MS es un clan independiente y no está afiliado a Roblox Corporation.`
+      <strong>Nota importante:</strong> SerakDepMS Studios es un clan independiente y no está afiliado a Roblox Corporation.`
     },
     {
       keywords: ['datos personales', 'que hacen con mis datos', 'informacion personal', 'proteccion datos', 'responsable tratamiento'],
       response: `<strong>Privacidad de tus datos</strong><br><br>
-      En Serakdep MS tomamos muy en serio tu privacidad:<br>
+      En SerakDepMS Studios tomamos muy en serio tu privacidad:<br>
       • Solo recopilamos los datos necesarios para gestionar tu membresía (nombre de usuario de Roblox/Discord, edad, país, contacto).<br>
       • El número de teléfono se recopila exclusivamente para colaborar con la justicia en casos de extrema gravedad, con tu consentimiento explícito.<br>
       • Para los menores de 16 años, el consentimiento debe ser otorgado por sus padres, madres o tutores legales.<br>
       • No compartimos tu información con terceros sin tu consentimiento explícito.<br>
       • Puedes solicitar la eliminación de tus datos en cualquier momento contactando a un administrador.<br>
       • Toda la información se almacena de forma segura y solo el staff autorizado tiene acceso.<br>
-      • El responsable del tratamiento de los datos personales es la administración del propio clan "Serakdep MS".<br><br>
+      • El responsable del tratamiento de los datos personales es la administración del propio clan "SerakDepMS Studios".<br><br>
       Para más detalles, consulta nuestra Política de Privacidad en el footer.`
     },
     {
       keywords: ['menores edad', 'datos menores', 'tratamiento menores', 'menores 16 años'],
       response: `<strong>Tratamiento de datos de menores de edad</strong><br><br>
-      El Clan "Serakdep MS" es consciente de que muchos de sus miembros son menores de edad. Por ello, aplicamos medidas de protección reforzadas:<br>
+      El Clan "SerakDepMS Studios" es consciente de que muchos de sus miembros son menores de edad. Por ello, aplicamos medidas de protección reforzadas:<br>
       • <strong>Mayores de 16 años:</strong> Pueden prestar su consentimiento para el tratamiento de sus datos personales por sí mismos.<br>
       • <strong>Menores de 16 años:</strong> La ley exige que el consentimiento para el tratamiento de sus datos, especialmente del número de teléfono, sea otorgado por sus padres, madres o tutores legales. Al unirse al clan, solicitaremos que se nos confirme que se cuenta con dicha autorización.`
     },
@@ -390,12 +390,9 @@
     {
       keywords: ['creditos', 'creadores', 'desarrolladores', 'colaboradores', 'agradecimientos', 'autores', 'equipo', 'diseñadores', 'quien hizo la pagina'],
       response: `<strong>Créditos y agradecimientos</strong><br><br>
-      La página web de Serakdep MS es fruto del esfuerzo colectivo. En la sección "Créditos" del menú principal se reconoce a:<br>
-      • <strong>Director y Programador:</strong> Db_artworkFOUNDERSMS.<br>
-      • <strong>Supervisor:</strong> Yanfeix6.<br>
-      • <strong>Equipo de Edición:</strong> te400kennethr, putifino111, Teo_174bj.<br>
-      • <strong>Equipo de Gestión y Operaciones:</strong> year171, Db_artwork, putifino111.<br>
-      • <strong>Equipo de Comunidad y Desarrollo:</strong> 7huhuj08, Db_artwork y más colaboradores.<br>
+      La página web de SerakDepMS Studios es fruto del esfuerzo colectivo. En la sección "Créditos" del menú principal se reconoce a:<br>
+      • <strong>Fundador Unico &amp; Director:</strong> SerakDepMS — Full Stack Architect &amp; Cybersecurity Expert, fundador del ecosistema SerakDepMS.<br>
+      • <strong>Co-Desarrollador Principal:</strong> maikol-dev-code-cyber.<br>
       • <strong>Herramientas utilizadas:</strong> HTML5, CSS3, JavaScript, EmailJS, npoint.io, Font Awesome, GitHub Pages, Adobe Creative Suite, Figma.<br><br>
       ¿Quieres contribuir? Usa el formulario de sugerencias en Contacto.`
     },
@@ -444,7 +441,7 @@
     {
       keywords: ['economia clan', 'pagar', 'cuotas', 'membresia pago', 'cuesta dinero', 'es gratis'],
       response: `<strong>Política económica del clan</strong><br><br>
-      <strong>Serakdep MS es 100% gratuito.</strong> No cobramos por:<br>
+      <strong>SerakDepMS Studios es 100% gratuito.</strong> No cobramos por:<br>
       • Membresía o participación.<br>
       • Ascensos o privilegios.<br>
       • Acceso a eventos o torneos.<br><br>
@@ -453,7 +450,7 @@
     {
       keywords: ['historia clan', 'origen', 'fundacion', 'quien creo el clan', 'cuando se fundo'],
       response: `<strong>Historia y origen del clan</strong><br><br>
-      Serakdep MS fue fundado con estos principios:<br>
+      SerakDepMS Studios fue fundado con estos principios:<br>
       • <strong>Fundación:</strong> Creado por jugadores experimentados de Roblox que buscaban una comunidad organizada.<br>
       • <strong>Misión:</strong> Crear un espacio inclusivo y respetuoso para jugadores de 16 años.<br>
       • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +266 miembros verificados.<br>
@@ -538,7 +535,7 @@
 
     {
       keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'bloody legacy', 'WIND BREAKER', 'luwance', 'the black bulls'],
-      response: `<strong>Alianzas de Serakdep MS</strong><br><br>
+      response: `<strong>Alianzas de SerakDepMS Studios</strong><br><br>
       En la sección "Alianzas" de nuestra página web encontrarás todos los clanes aliados con sus logos, descripciones y fechas de alianza. Actualmente contamos con 6 clanes aliados, entre ellos:<br>
       • CHIHUAHUENSE  DINASTY<br>
       • Zion Dynasty<br>
@@ -553,9 +550,9 @@
  
 
     {
-      keywords: ['CodeTurbo', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
-      response: `<strong>CodeTurbo - Laboratorio de Código</strong><br><br>
-      <strong>CodeTurbo</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio web del clan. Es un entorno de desarrollo interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> directamente desde el navegador, sin instalar nada.<br><br>
+      keywords: ['Serak', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
+      response: `<strong>Serak - Laboratorio de Código</strong><br><br>
+      <strong>Serak</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio web del clan. Es un entorno de desarrollo interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> directamente desde el navegador, sin instalar nada.<br><br>
       Incluye:<br>
       • <strong>Editor profesional</strong> con autocompletado y detección de errores en tiempo real.<br>
       • <strong>Vista previa en vivo</strong> de tu código.<br>
@@ -567,20 +564,20 @@
       • <strong>Exportación de proyectos</strong> en ZIP o HTML único.<br>
       • <strong>Carga de archivos</strong> desde tu dispositivo o arrastrando y soltando.<br>
       • <strong>Gestión de proyectos múltiples</strong> para guardar y cargar tu trabajo.<br><br>
-      Para acceder, visita <strong>CodeTurbo</strong> desde el enlace en el footer.`
+      Para acceder, visita <strong>Serak</strong> desde el enlace en el footer.`
     },
     {
-      keywords: ['como entrar CodeTurbo', 'acceder laboratorio', 'donde esta CodeTurbo', 'abrir code lab', 'ingresar al laboratorio', 'entrar a CodeTurbo', 'donde programar'],
-      response: `<strong>Cómo acceder a CodeTurbo</strong><br><br>
+      keywords: ['como entrar Serak', 'acceder laboratorio', 'donde esta Serak', 'abrir code lab', 'ingresar al laboratorio', 'entrar a Serak', 'donde programar'],
+      response: `<strong>Cómo acceder a Serak</strong><br><br>
       Puedes acceder de dos maneras:<br>
-      • <strong>Desde el footer:</strong> Haz clic en "CodeTurbo" en la parte inferior de cualquier página.<br>
+      • <strong>Desde el footer:</strong> Haz clic en "Serak" en la parte inferior de cualquier página.<br>
       • <strong>Enlace directo:</strong> Visita <strong>laboratorio.html</strong> en el navegador.<br><br>
       Al entrar verás una pantalla de bienvenida con toda la información. Haz clic en <strong>"Ingresar al Laboratorio"</strong> para empezar a programar. ¡No necesitas instalar nada!`
     },
     {
-      keywords: ['guardar proyecto CodeTurbo', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
-      response: `<strong>Guardar y exportar proyectos en CodeTurbo</strong><br><br>
-      CodeTurbo guarda todo automáticamente para que no pierdas tu trabajo:<br>
+      keywords: ['guardar proyecto Serak', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
+      response: `<strong>Guardar y exportar proyectos en Serak</strong><br><br>
+      Serak guarda todo automáticamente para que no pierdas tu trabajo:<br>
       • <strong>Guardado automático:</strong> Tu código se guarda cada 10 segundos en el navegador.<br>
       • <strong>Gestión de proyectos:</strong> Haz clic en el icono de capas para guardar tu proyecto con nombre y cargarlo cuando quieras.<br>
       • <strong>Descarga ZIP:</strong> Descarga tu proyecto completo con todos los archivos.<br>
@@ -589,7 +586,7 @@
     },
     {
       keywords: ['personalizar editor', 'temas editor', 'cambiar tema', 'fuente editor', 'modo oscuro', 'monokai', 'dracula', 'solarized', 'nord', 'material', 'apariencia editor'],
-      response: `<strong>Personalización del editor en CodeTurbo</strong><br><br>
+      response: `<strong>Personalización del editor en Serak</strong><br><br>
       Puedes personalizar la apariencia del editor a tu gusto:<br>
       • <strong>6 temas de editor:</strong> Monokai, Dracula, Solarized, Nord, Material y Default.<br>
       • <strong>Tamaño de fuente:</strong> Ajusta el tamaño del texto desde la barra de estado inferior.<br>
@@ -599,8 +596,8 @@
     },
     {
       keywords: ['retos programacion', 'desafios codigo', 'ejercicios html', 'practicas css', 'ejercicios javascript', 'challenges', 'tareas programacion'],
-      response: `<strong>Retos de programación en CodeTurbo</strong><br><br>
-      CodeTurbo incluye <strong>500 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
+      response: `<strong>Retos de programación en Serak</strong><br><br>
+      Serak incluye <strong>500 retos de programación</strong> guiados paso a paso para que practiques desde cero:<br>
       • <strong>Página de bienvenida</strong> (HTML básico).<br>
       • <strong>Estilizando un botón</strong> (CSS intermedio).<br>
       • <strong>Lista de tareas interactiva</strong> (JavaScript avanzado).<br>
@@ -613,8 +610,8 @@
       Selecciona "Empezar reto" en el panel de retos. Cada reto carga una plantilla inicial y te guía con instrucciones detalladas.`
     },
     {
-      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial CodeTurbo', 'robot programacion'],
-      response: `<strong>Asistente IA en CodeTurbo</strong><br><br>
+      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial Serak', 'robot programacion'],
+      response: `<strong>Asistente IA en Serak</strong><br><br>
       Actualmente el asistente IA del laboratorio está en modo <strong>"Próximamente"</strong>. Estamos trabajando para conectarlo a un modelo de inteligencia artificial real que podrá:<br>
       • Responder preguntas sobre HTML, CSS y JavaScript.<br>
       • Explicar conceptos de programación.<br>
@@ -623,8 +620,8 @@
       Mientras tanto, puedes usar la <strong>enciclopedia interna</strong> y los <strong>retos</strong> para seguir aprendiendo. ¡Te avisaremos cuando el asistente IA esté listo!`
     },
     {
-      keywords: ['enciclopedia CodeTurbo', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
-      response: `<strong>Enciclopedia interna de CodeTurbo</strong><br><br>
+      keywords: ['enciclopedia Serak', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
+      response: `<strong>Enciclopedia interna de Serak</strong><br><br>
       El laboratorio incluye una <strong>enciclopedia completa</strong> con documentación de los tres lenguajes:<br>
       • <strong>HTML:</strong> Estructura básica, etiquetas de texto, enlaces, imágenes, listas, tablas, formularios, multimedia, semántica HTML5, accesibilidad, SEO y más.<br>
       • <strong>CSS:</strong> Selectores, Box Model, posicionamiento, Flexbox, Grid, animaciones, media queries, variables, sombras, filtros y mucho más.<br>
@@ -676,7 +673,7 @@
     {
       keywords: ['contribuir', 'ayudar clan', 'voluntario', 'colaborar', 'aportar', 'quiero ayudar', 'como puedo ayudar'],
       response: `<strong>¿Cómo contribuir al clan?</strong><br><br>
-      Hay muchas formas de ayudar a Serakdep MS:<br>
+      Hay muchas formas de ayudar a SerakDepMS Studios:<br>
       • <strong>Siendo activo:</strong> Participa en eventos, juegos y conversaciones.<br>
       • <strong>Ayudando a nuevos miembros:</strong> Orienta a los novatos en sus primeros días.<br>
       • <strong>Proponiendo ideas:</strong> Usa el canal #sugerencias en Discord o el formulario de sugerencias en la web.<br>
@@ -690,12 +687,12 @@
  
 
     {
-      keywords: ['logo', 'panda', 'serakdep ms significado', 'lema', 'slogan', 'splash screen', 'carga inicial', 'panda logo'],
+      keywords: ['logo', 'serakdepms studios significado', 'lema', 'slogan', 'identidad', 'emblema', 'simbolo'],
       response: `<strong>Identidad del clan</strong><br><br>
-      <strong>Logo:</strong> Un panda estilizado con detalles dorados y verdes, que representa sabiduría, comunidad y la fusión de elementos naturales y tecnológicos.<br>
+      <strong>Logo:</strong> El emblema oficial del águila cibernética SDMS (Serak Digital Mastery & Solutions) con circuitos en verde neón, que representa la excelencia técnica y la hermandad Multi-Gamer.<br>
       <strong>Lema:</strong> "Un clan, una leyenda".<br>
       <strong>Slogan:</strong> "Unidos por la pasión del gaming".<br>
-      <strong>Splash Screen:</strong> Al cargar la página de Inicio aparece una animación con el panda y el mensaje "Invocando a los pandas ancestrales...".<br><br>
+      <strong>Colores oficiales:</strong> Verde esmeralda, verde neón y dorado de victoria.<br><br>
       El diseño del logo fue creado por artistas de la comunidad y es un símbolo de nuestra identidad.`
     },
  
@@ -703,7 +700,7 @@
 
     {
       keywords: ['hola', 'buenas', 'ayuda', 'gracias', 'saludos', 'buenos dias', 'buenas tardes', 'buenas noches', 'info', 'que sabes', 'ayudame', 'que puedes hacer'],
-      response: `¡Hola! Soy el asistente virtual de <strong>Serakdep MS</strong>, entrenado con toda la información del sitio web. Puedo ayudarte con:<br>
+      response: `¡Hola! Soy el asistente virtual de <strong>SerakDepMS Studios</strong>, entrenado con toda la información del sitio web. Puedo ayudarte con:<br>
       • <strong>Inscripción y formulario</strong> (requisitos, pasos, campos).<br>
       • <strong>Reglamento y sanciones</strong> (tabla completa, apelaciones, proceso disciplinario).<br>
       • <strong>Discord y WhatsApp</strong> (canales, grupos, normas, horarios).<br>
@@ -715,7 +712,7 @@
       • <strong>Créditos y estructura del clan</strong> (jerarquía, departamentos, responsabilidades).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
       • <strong>Alianzas</strong> (6 clanes aliados).<br>
-      • <strong>CodeTurbo</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
+      • <strong>Serak</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad y haré todo lo posible por ayudarte. ¡Estoy aquí para ti!`
     }
   ];
@@ -775,7 +772,7 @@
       'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos',
       'juegos', 'contacto', 'reportar', 'sanciones', 'colaboradores',
       'noticias', 'legal', 'créditos', 'ser admin', 'alianzas',
-      'CodeTurbo', 'laboratorio código', 'retos programación', 'enciclopedia'
+      'Serak', 'laboratorio código', 'retos programación', 'enciclopedia'
     ];
     
     return `No tengo una respuesta específica para "${query}". Pero puedo ayudarte con muchos otros temas. Prueba preguntando sobre:<br>
@@ -796,8 +793,8 @@
       <div class="chatbot-modal" id="chatbotModal">
         <div class="chatbot-window">
           <div class="chatbot-header">
-            <i class="fas fa-panda"></i>
-            <h3>Asistente IA - Serakdep MS</h3>
+            <i class="fas fa-shield-alt"></i>
+            <h3>Asistente IA - SerakDepMS Studios</h3>
             <button class="chatbot-close" id="closeChatbotModal" aria-label="Cerrar chat">
               <i class="fas fa-times"></i>
             </button>
@@ -836,7 +833,7 @@
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
       if (!hasStarted) {
-        addBotMessage(`<strong>¡Hola! Soy el asistente IA de Serakdep MS Multi-Gamer.</strong><br><br>
+        addBotMessage(`<strong>¡Hola! Soy el asistente IA de SerakDepMS Studios Multi-Gamer.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre nuestra comunidad eSports y clan. Puedes preguntarme sobre:<br>
         • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike.<br>
         • Cómo inscribirte y los requisitos.<br>
@@ -846,7 +843,7 @@
         • Cómo reportar problemas o contactar al staff.<br>
         • La estructura del clan y cómo ascender.<br>
         • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>
-        • <strong>CodeTurbo</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
+        • <strong>Serak</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
         • Noticias, legal, créditos, alianzas.<br><br>
         <strong>Escribe tu consulta con total libertad.</strong> Entiendo lenguaje natural, así que no necesitas usar palabras exactas. ¡Adelante!`);
         hasStarted = true;

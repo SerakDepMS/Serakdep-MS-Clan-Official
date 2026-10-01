@@ -1,16 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark-theme">
 
 <head>
   <meta charset="UTF-8" />
-  <script>try { var t = localStorage.getItem('sms_theme') || (document.cookie.match(/sms_theme=([^;]+)/) || [])[1]; if (t === 'dark') document.documentElement.classList.add('dark-theme'); } catch (e) { }</script>
-  <style>html.dark-theme, html.dark-theme body { background-color: #0d1f14 !important; color: #e0e0e0; color-scheme: dark; }</style>
+  <script>document.documentElement.classList.add('dark-theme');</script>
+  <style>html.dark-theme, html.dark-theme body { background-color: #0a0a0a !important; color: #f8f9fa; color-scheme: dark; }</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 - Página no encontrada | Serakdep MS</title>
+  <title>404 - Página no encontrada | SerakDepMS Studios</title>
   <meta name="description"
-    content="¡Ups! Página no encontrada. Parece que un panda travieso se ha llevado esta página." />
+    content="¡Ups! Página no encontrada. Regresa al sitio oficial del clan SerakDepMS Studios." />
   <meta name="google-site-verification" content="9tjYSYGFCUfKDVZdeJDtDbpOyUBxd0uEh86botq02_0" />
-  <link rel="stylesheet" href="assets/css/style.css?v=9" />
+  <link rel="stylesheet" href="assets/css/style.css?v=10" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -67,7 +67,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, var(--bamboo-gold) 0%, #ffd700 100%);
+      background: linear-gradient(135deg, var(--bamboo-gold) 0%, #00FF66 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -109,14 +109,15 @@
 
     .error-title {
       font-size: 2rem;
-      color: var(--primary-green);
+      color: #00FF66 !important;
       margin-bottom: 20px;
-      font-weight: 700;
+      font-weight: 800;
+      text-shadow: 0 0 15px rgba(0, 255, 102, 0.35);
     }
 
     .error-message {
       font-size: 1.2rem;
-      color: #555;
+      color: #f8f9fa !important;
       margin-bottom: 40px;
       line-height: 1.8;
     }
@@ -139,78 +140,76 @@
       }
     }
 
-    .panda-lost {
+    .error-logo-wrap {
       display: flex;
       justify-content: center;
-      margin: 30px 0;
+      align-items: center;
+      margin: 25px auto 15px auto;
       position: relative;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      padding: 4px;
+      background: radial-gradient(circle, rgba(0, 255, 102, 0.25) 0%, rgba(22, 22, 26, 0.95) 100%);
+      border: 3px solid #00FF66;
+      box-shadow: 0 0 30px rgba(0, 255, 102, 0.4), 0 10px 25px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(0, 255, 102, 0.3);
+      overflow: hidden;
+      z-index: 2;
     }
 
-    .panda-icon {
-      font-size: 8rem;
-      animation: wander 3s infinite ease-in-out;
-      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
-      position: relative;
+    .error-logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    @keyframes wander {
-      0% {
-        transform: translateX(0) rotate(0deg);
-      }
-
-      25% {
-        transform: translateX(-30px) rotate(-5deg);
-      }
-
-      50% {
-        transform: translateX(20px) rotate(5deg);
-      }
-
-      75% {
-        transform: translateX(-20px) rotate(-3deg);
-      }
-
-      100% {
-        transform: translateX(0) rotate(0deg);
-      }
+    .error-logo:hover {
+      transform: scale(1.04);
+      filter: drop-shadow(0 0 20px rgba(0, 255, 102, 0.6)) brightness(1.08);
     }
 
-    .panda-speech {
-      background: white;
-      border-radius: 20px;
-      padding: 15px 25px;
-      box-shadow: var(--shadow-soft);
+    .error-logo-glow {
       position: absolute;
-      top: -20px;
-      right: -40px;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--primary-green);
-      animation: float 2s infinite alternate;
-      white-space: nowrap;
-    }
-
-    .panda-speech::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid white;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(0, 255, 102, 0.35) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulseGlow 3s ease-in-out infinite alternate;
+      z-index: 1;
+      pointer-events: none;
     }
 
-    @keyframes float {
+    @keyframes pulseGlow {
       0% {
-        transform: translateY(0);
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.5;
       }
-
       100% {
-        transform: translateY(-10px);
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 0.85;
       }
+    }
+
+    .error-speech {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #16161a;
+      border-radius: 25px;
+      padding: 8px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #f8f9fa;
+      margin: 10px auto 20px auto;
+      border: 1px solid rgba(0, 255, 102, 0.4);
+      text-align: center;
     }
 
     .error-actions {
@@ -218,34 +217,37 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .btn-home {
-      background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-      color: white;
+      background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+      color: #0a0a0a !important;
       padding: 15px 35px;
       border-radius: 8px;
-      font-weight: 600;
+      font-weight: 800;
       text-decoration: none;
       transition: var(--transition);
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      box-shadow: 0 4px 15px rgba(0, 255, 102, 0.35);
     }
 
     .btn-home:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(27, 67, 50, 0.2);
+      background: #33ff85 !important;
+      color: #0a0a0a !important;
+      box-shadow: 0 8px 25px rgba(0, 255, 102, 0.5);
     }
 
     .btn-faq {
-      background: transparent;
-      border: 2px solid var(--accent-green);
-      color: var(--primary-green);
+      background: rgba(255, 255, 255, 0.08) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+      color: #ffffff !important;
       padding: 15px 35px;
       border-radius: 8px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       transition: var(--transition);
       display: inline-flex;
@@ -254,35 +256,11 @@
     }
 
     .btn-faq:hover {
-      background: var(--accent-green);
-      color: white;
+      background: rgba(255, 255, 255, 0.2) !important;
+      border-color: #00FF66 !important;
+      color: #ffffff !important;
       transform: translateY(-5px);
     }
-
-
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .particle {
-      position: absolute;
-      background: var(--light-green);
-      border-radius: 50%;
-      opacity: 0.3;
-      animation: floatParticle linear infinite;
-    }
-
-    @keyframes floatParticle {
-      0% {
-        transform: translateY(100vh) scale(0);
-        opacity: 0;
-      }
 
       10% {
         opacity: 0.3;
@@ -312,15 +290,16 @@
         font-size: 1rem;
       }
 
-      .panda-icon {
-        font-size: 5rem;
+      .error-logo {
+        width: 130px;
+        height: 118px;
       }
 
-      .panda-speech {
+      .error-speech {
         font-size: 0.8rem;
-        padding: 10px 18px;
-        top: -30px;
-        right: -20px;
+        padding: 8px 14px;
+        top: -25px;
+        right: 10px;
       }
 
       .error-actions {
@@ -334,52 +313,51 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="theme-color" content="#2d6a4f" />
+  <meta name="theme-color" content="#0a0a0a" />
 
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/404.html" />
-  <meta property="og:title" content="Pagina no encontrada (404) - Serakdep MS" />
+  <meta property="og:title" content="Pagina no encontrada (404) - SerakDepMS Studios" />
   <meta property="og:description"
-    content="La pagina que buscas no existe o ha sido movida. Regresa al sitio oficial del clan Serakdep MS." />
+    content="La pagina que buscas no existe o ha sido movida. Regresa al sitio oficial del clan SerakDepMS Studios." />
   <meta property="og:image"
-    content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
-  <meta property="og:image:type" content="image/webp" />
+    content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="Serakdep MS Clan Official" />
+  <meta property="og:site_name" content="SerakDepMS Studios Clan Official" />
 
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/404.html" />
-  <meta name="twitter:title" content="Pagina no encontrada (404) - Serakdep MS" />
+  <meta name="twitter:title" content="Pagina no encontrada (404) - SerakDepMS Studios" />
   <meta name="twitter:description"
-    content="La pagina que buscas no existe o ha sido movida. Regresa al sitio oficial del clan Serakdep MS." />
+    content="La pagina que buscas no existe o ha sido movida. Regresa al sitio oficial del clan SerakDepMS Studios." />
   <meta name="twitter:image"
-    content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.webp" />
+    content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.png" />
   <meta name="twitter:site" content="@serakdepms" />
-  <meta name="theme-color" content="#2d6a4f" />
+  <meta name="theme-color" content="#0a0a0a" />
 </head>
 
-<body>
-
-  <div class="particles" id="particles"></div>
+<body class="dark-theme">
 
   <main class="error-page">
     <div class="error-container">
       <div class="error-code">404</div>
-      <h1 class="error-title"><i class="fas fa-map-signs"></i> ¡Página no encontrada!</h1>
+      <h1 class="error-title"><i class="fas fa-satellite-dish"></i> ¡Enlace Fuera de Rango!</h1>
 
-      <div class="panda-lost">
-        <span class="panda-icon">🐼</span>
-        <div class="panda-speech">¡Me perdí! ¿Dónde está esa página?</div>
+      <div class="error-logo-wrap">
+        <div class="error-logo-glow"></div>
+        <img src="assets/img/clan-logo.png" alt="Logo de SerakDepMS Studios" class="error-logo" width="170" height="170" />
+      </div>
+      <div>
+        <span class="error-speech"><i class="fas fa-exclamation-triangle" style="color:var(--bamboo-gold);"></i> Página no localizada en los registros del clan</span>
       </div>
 
       <p class="error-message">
-        <span class="emoji">🌿🌿🌿🌿🌿🌿</span><br>
-        Parece que nuestro <strong>panda explorador</strong> se ha desorientado y no encuentra la página que buscas.<br>
-        Puede que la URL sea incorrecta, que la página haya sido movida, o que el panda se la haya comido (sí, los
-        pandas a veces hacen eso).
+        La ruta solicitada no se encuentra disponible en los servidores de <strong>SerakDepMS Studios</strong>.<br>
+        Es posible que el enlace haya cambiado de ubicación, esté desactualizado o haya sido transferido.
       </p>
 
       <div class="error-actions">
@@ -389,32 +367,7 @@
       </div>
     </div>
   </main>
-
-  <script>
-    const particlesContainer = document.getElementById('particles');
-    const colors = ['#95d5b2', '#40916c', '#52b788', '#d4af37'];
-
-    for (let i = 0; i < 25; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-
-      const size = Math.random() * 15 + 5;
-      const left = Math.random() * 100;
-      const delay = Math.random() * 5;
-      const duration = Math.random() * 10 + 10;
-      const color = colors[Math.floor(Math.random() * colors.length)];
-
-      particle.style.cssText = `
-        width: ${size}px;
-        height: ${size}px;
-        left: ${left}%;
-        background: ${color};
-        animation-delay: ${delay}s;
-        animation-duration: ${duration}s;
-        `;
-      particlesContainer.appendChild(particle);
-    }
-  </script>
+  <script src="assets/js/matrix-rain.js?v=3" defer></script>
 </body>
 
 </html>

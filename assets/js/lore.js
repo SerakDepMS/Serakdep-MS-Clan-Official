@@ -1,20 +1,20 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
   const scenesData = [
   {
     chapter: "I",
     label: "La Chispa Inicial",
-    text: "Antes de que existiera el servidor oficial de Discord, a principios de 2023, una idea comenzó a formarse entre experimentados jugadores de Roblox: la visión de una comunidad Multi-Gamer donde la diversión, el juego limpio y el respeto fueran los únicos estandartes. La semilla de Serakdep MS había germinado."
+    text: "Antes de que existiera el servidor oficial de Discord, a principios de 2023, una idea comenzó a formarse entre experimentados jugadores de Roblox: la visión de una comunidad Multi-Gamer donde la diversión, el juego limpio y el respeto fueran los únicos estandartes. La semilla de SerakDepMS Studios había germinado."
   },
   {
     chapter: "II",
-    label: "El Emblema Panda",
-    text: "El Panda estilizado emergió como símbolo oficial de Serakdep MS, portando los colores verde y dorado. Representa la sabiduría en la toma de decisiones, la paz comunitaria y el equilibrio entre diversión y disciplina. Un emblema que unifica a nuestras 12 divisiones bajo una misma bandera."
+    label: "El Emblema Digital",
+    text: "El emblema oficial de SerakDepMS Studios emergió con los colores verde y dorado sobre circuitos tecnológicos de vanguardia. Representa la excelencia técnica, la sabiduría en la toma de decisiones, la paz comunitaria y el equilibrio entre diversión y disciplina. Un emblema que unifica a nuestras 12 divisiones bajo una misma bandera."
   },
   {
     chapter: "III",
     label: "El Pacto Fundador",
-    text: "En una noche de enero de 2023, los primeros miembros fundadores, liderados por Db_artworkFOUNDERSMS, sellaron el juramento de construir un clan inclusivo y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una hermandad Multi-Gamer con presencia en PC, móviles y consolas."
+    text: "En una noche de enero de 2023, los primeros miembros se reunieron bajo la visión de SerakDepMS (Serak Digital Mastery & Solutions), el fundador del ecosistema. Juntos sellaron el juramento de construir un clan inclusivo y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una hermandad Multi-Gamer con presencia en PC, móviles y consolas."
   },
   {
     chapter: "IV",
@@ -24,12 +24,12 @@
   {
     chapter: "V",
     label: "Valores del Clan",
-    text: "El Código de Conducta se erigió como pilar ético de Serakdep MS: respeto mutuo, inclusión, honestidad en los juegos (prohibición total de hacks y trampas), lealtad y comunicación constructiva. Un estandarte que guía a todos los miembros, sin importar su división o rango."
+    text: "El Código de Conducta se erigió como pilar ético de SerakDepMS Studios: respeto mutuo, inclusión, honestidad en los juegos (prohibición total de hacks y trampas), lealtad y comunicación constructiva. Un estandarte que guía a todos los miembros, sin importar su división o rango."
   },
   {
     chapter: "VI",
     label: "Los Forjadores del Código",
-    text: "Para dar presencia al clan ante el mundo, el director y programador principal Db_artworkFOUNDERSMS, junto con maikol-dev-code-cyber, unieron fuerzas para escribir el código base del portal web oficial. Un sitio estático, pero con la visión de convertirse en el centro neurálgico de la comunidad."
+    text: "Para dar presencia al clan ante el mundo, SerakDepMS (fundador del ecosistema, SerakDepMS), junto con maikol-dev-code-cyber, unieron fuerzas para escribir el código base del portal web oficial. Un sitio estático, pero con la visión de convertirse en el centro neurálgico de la comunidad."
   },
   {
     chapter: "VII",
@@ -44,7 +44,7 @@
   {
     chapter: "IX",
     label: "Los Emisarios del Estandarte",
-    text: "Con el fin de entablar lazos externos, se designó el Departamento de Alianzas y Relaciones. Miembros clave como year171 asumieron la tarea de representar con orgullo y honor a Serakdep MS ante otras comunidades. Nuestra red de aliados se expandió con clanes de gran renombre como CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy y WIND BREAKER, entre otros."
+    text: "Con el fin de entablar lazos externos, se designó el Departamento de Alianzas y Relaciones. Miembros clave como year171 asumieron la tarea de representar con orgullo y honor a SerakDepMS Studios ante otras comunidades. Nuestra red de aliados se expandió con clanes de gran renombre como CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy y WIND BREAKER, entre otros."
   },
   {
     chapter: "X",
@@ -59,12 +59,12 @@
   {
     chapter: "XII",
     label: "El Memorial de los Viajeros",
-    text: "Aquellos miembros que deciden partir hacia nuevos rumbos dejan su huella grabada. A través del canal de Discord #despedida, el clan agradece y honra sus contribuciones. En Serakdep MS ningún amigo se olvida, y siempre pueden regresar si así lo desean, pasando nuevamente por el proceso de admisión."
+    text: "Aquellos miembros que deciden partir hacia nuevos rumbos dejan su huella grabada. A través del canal de Discord #despedida, el clan agradece y honra sus contribuciones. En SerakDepMS Studios ningún amigo se olvida, y siempre pueden regresar si así lo desean, pasando nuevamente por el proceso de admisión."
   },
   {
     chapter: "XIII",
     label: "La Alta Dirección",
-    text: "La toma de decisiones estratégicas recae sobre la Alta Dirección, compuesta por los líderes fundadores y los administradores de mayor antigüedad. Encargados de dirigir la política y visión del clan, sus miembros aseguran que el desarrollo del portal, las alianzas y la comunidad sigan una senda ascendente, siempre con transparencia y diálogo abierto."
+    text: "La toma de decisiones estratégicas recae sobre la Alta Dirección, liderada por SerakDepMS (fundador único del ecosistema, SerakDepMS), junto con los administradores de mayor antigüedad. Encargados de dirigir la política y visión del clan, aseguran que el desarrollo del portal, las alianzas y la comunidad sigan una senda ascendente, siempre con transparencia y diálogo abierto."
   },
   {
     chapter: "XIV",
@@ -94,12 +94,12 @@
   {
     chapter: "XIX",
     label: "El Núcleo de Código",
-    text: "Creado como entorno interactivo de programación, CodeTurbo permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de Serakdep MS para desarrollar habilidades técnicas."
+    text: "Creado como entorno interactivo de programación, Serak permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de SerakDepMS Studios para desarrollar habilidades técnicas."
   },
   {
     chapter: "XX",
     label: "El Rumbo Futuro",
-    text: "El futuro de Serakdep MS incluye la integración de rankings de miembros y estadísticas de juegos mediante APIs de Roblox y otras plataformas, el desarrollo de una aplicación móvil RSP para Android, y la traducción completa de toda la plataforma web oficial al inglés y portugués para acoger a una comunidad global. También se planean mejoras en el sistema de eventos y la expansión de CodeTurbo."
+    text: "El futuro de SerakDepMS Studios incluye la integración de rankings de miembros y estadísticas de juegos mediante APIs de Roblox y otras plataformas, el desarrollo de una aplicación móvil RSP para Android, y la traducción completa de toda la plataforma web oficial al inglés y portugués para acoger a una comunidad global. También se planean mejoras en el sistema de eventos y la expansión de Serak."
   },
   {
     chapter: "XXI",
@@ -119,17 +119,17 @@
   {
     chapter: "XXIV",
     label: "La Forja Creativa",
-    text: "El equipo creativo, integrado por editores y diseñadores como te400kennethr (diseño gráfico), putifino111 (edición de video y contenido) y Teo_174bj (control de calidad), da vida a los logos, banners, guías visuales y material promocional que realzan la imagen del clan. Su trabajo es visible en la página de Créditos y en cada rincón del portal."
+    text: "El diseño visual y multimedia da vida a los logos, banners, guías visuales y material promocional que realzan la imagen de SerakDepMS Studios. La creatividad y la constante evolución estética son visibles en cada rincón del portal oficial."
   },
   {
     chapter: "XXV",
     label: "El Amanecer de 2026",
-    text: "Con eventos semanales programados de forma dinámica (torneos de todas las divisiones, noches de DJ en Discord, sesiones de Zone Wars, etc.), chat activo en Discord, grupos de WhatsApp vibrantes, y el noticiero digital oficial (canal de WhatsApp y sección de Noticias en la web), el año 2026 se establece como la época dorada de Serakdep MS. La comunidad nunca ha estado tan unida."
+    text: "Con eventos semanales programados de forma dinámica (torneos de todas las divisiones, noches de DJ en Discord, sesiones de Zone Wars, etc.), chat activo en Discord, grupos de WhatsApp vibrantes, y el noticiero digital oficial (canal de WhatsApp y sección de Noticias en la web), el año 2026 se establece como la época dorada de SerakDepMS Studios. La comunidad nunca ha estado tan unida."
   },
   {
     chapter: "XXVI",
     label: "Un Clan, Una Leyenda",
-    text: "El mañana nos pertenece. La historia de Serakdep MS no tiene final; cada nuevo miembro añade su propia página al archivo. El Panda Ancestral observa con orgullo cómo la leyenda continúa su curso hacia la inmortalidad. Las 12 divisiones, los torneos, las alianzas y los valores forjados en estos años son solo el prólogo de lo que está por venir."
+    text: "El mañana nos pertenece. La historia de SerakDepMS Studios no tiene final; cada nuevo miembro añade su propia página al archivo. El legado de SerakDepMS Studios continúa su curso firme hacia la inmortalidad. Las 12 divisiones, los torneos, las alianzas y los valores forjados en estos años son solo el prólogo de lo que está por venir."
   }
 ];
 
@@ -367,7 +367,7 @@
 
 
     addInstantLine('', '');
-    addInstantLine('   SERAKDEP MS · ARCHIVO HISTÓRICO', 'highlight glitch');
+    addInstantLine('   SERAKDEPMS STUDIOS · ARCHIVO HISTÓRICO', 'highlight glitch');
     addInstantLine('   TERMINAL INTERACTIVA', 'highlight');
     addInstantLine('   Usa ← → o Enter para navegar', 'dim');
     addInstantLine('   Ctrl+Home / Ctrl+End para extremos', 'dim');
@@ -387,7 +387,7 @@
       termContainer.classList.add('visible');
 
       addInstantLine('', '');
-      addInstantLine('   SERAKDEP MS · ARCHIVO HISTÓRICO', 'highlight glitch');
+      addInstantLine('   SERAKDEPMS STUDIOS · ARCHIVO HISTÓRICO', 'highlight glitch');
       addInstantLine('   TERMINAL INTERACTIVA', 'highlight');
       addInstantLine('   Usa ← → o Enter para navegar', 'dim');
       addInstantLine('   Ctrl+Home / Ctrl+End para extremos', 'dim');

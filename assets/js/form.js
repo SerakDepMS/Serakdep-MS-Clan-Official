@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   if (typeof emailjs !== 'undefined') {
     emailjs.init("KZquan0PhqC35uDYw");
   } else {
@@ -403,10 +403,29 @@ function validateInscriptionForm() {
   }
 
   const age = parseInt(document.getElementById("age").value, 10);
-  if (isNaN(age) || age < 10) {
-    showMessage("La edad mínima para unirse es 10 años.", "error");
+  if (isNaN(age) || age < 13) {
+
+    showMessage(
+      "⚠️ Si tienes menos de 13 años, NO puedes registrarte sin el consentimiento verificable de tus padres o tutores legales. " +
+      "Esta restricción cumple con la Ley COPPA y el artículo 8 del RGPD para la protección de menores. " +
+      "Si eres mayor de 13 años, comprueba que has introducido tu edad correctamente.",
+      "error"
+    );
     document.getElementById("age").focus();
     return false;
+  }
+  if (age >= 13 && age < 16) {
+
+    const parentalConsentAck = document.getElementById("parental-consent-ack");
+    if (parentalConsentAck && !parentalConsentAck.checked) {
+      showMessage(
+        "⚠️ Los usuarios de entre 13 y 16 años deben contar con el consentimiento de sus padres o tutores legales. " +
+        "Marca la casilla de confirmación parental para continuar.",
+        "error"
+      );
+      parentalConsentAck.focus();
+      return false;
+    }
   }
 
   const whyJoin = document.getElementById("why-join").value.trim();

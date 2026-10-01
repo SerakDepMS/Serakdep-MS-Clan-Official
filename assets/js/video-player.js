@@ -655,7 +655,7 @@ class VideoPlayerFinal {
     const header = document.querySelector("header");
     const footer = document.querySelector("footer");
     const mainContent = document.querySelectorAll(
-      ".card, .panda-decorative, .clan-logo-section, .gallery-card, h1.page-title"
+      ".card, .clan-logo-section, .gallery-card, h1.page-title"
     );
 
     if (hide) {
@@ -894,7 +894,7 @@ class VideoPlayerFinal {
 
   shareVideo() {
     const currentVideo = this.videoList[this.currentVideoIndex];
-    const shareText = `Mira este video de Serakdep MS: ${currentVideo.title}`;
+    const shareText = `Mira este video de SerakDepMS Studios: ${currentVideo.title}`;
     const shareUrl = window.location.href;
 
     if (navigator.share) {

@@ -1,20 +1,20 @@
-
+﻿
 
 :root {
-  --primary-green: #1b4332;
-  --secondary-green: #2d6a4f;
-  --accent-green: #40916c;
-  --light-green: #52b788;
-  --mint-green: #74c69d;
-  --bamboo-gold: #d4af37;
-  --gold-glow: rgba(212, 175, 55, 0.3);
-  --green-glow: rgba(82, 183, 136, 0.25);
-  --dark-bg: #060c08;
-  --card-bg: rgba(12, 24, 17, 0.92);
-  --card-hover: rgba(18, 36, 25, 0.96);
-  --border-color: rgba(82, 183, 136, 0.22);
-  --text-color: #e8f5e9;
-  --text-muted: #a3b899;
+  --primary-green: #111111;
+  --secondary-green: #16161a;
+  --accent-green: #00FF66;
+  --light-green: #00FF66;
+  --mint-green: #00FF66;
+  --bamboo-gold: #00FF66;
+  --gold-glow: rgba(0, 255, 102, 0.35);
+  --green-glow: rgba(0, 255, 102, 0.35);
+  --dark-bg: #0a0a0a;
+  --card-bg: #16161a;
+  --card-hover: #1f1f24;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-color: #f8f9fa;
+  --text-muted: #e5e7eb;
   --radius-lg: 18px;
   --radius-md: 12px;
   --transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -30,12 +30,12 @@
   height: 6px;
 }
 .standalone-game-body::-webkit-scrollbar-track {
-  background: #060c08;
+  background: #0a0a0a;
 }
 .standalone-game-body::-webkit-scrollbar-thumb {
   background: var(--primary-green);
   border-radius: 5px;
-  border: 2px solid #060c08;
+  border: 2px solid #0a0a0a;
 }
 .standalone-game-body::-webkit-scrollbar-thumb:hover {
   background: var(--light-green);
@@ -92,13 +92,13 @@
   font-size: 13.5px;
   padding: 8px 16px;
   border-radius: 24px;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(0, 255, 102, 0.08);
+  border: 1px solid rgba(0, 255, 102, 0.3);
   transition: var(--transition);
 }
 
 .back-btn:hover {
-  background: rgba(212, 175, 55, 0.2);
+  background: rgba(0, 255, 102, 0.2);
   transform: translateX(-2px);
   color: #ffffff;
 }
@@ -147,7 +147,7 @@
   gap: 8px;
   padding: 6px 18px;
   border-radius: 24px;
-  background: rgba(82, 183, 136, 0.12);
+  background: rgba(0, 255, 102, 0.12);
   border: 1px solid var(--light-green);
   color: var(--mint-green);
   font-size: 12.5px;
@@ -265,7 +265,7 @@
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: rgba(82, 183, 136, 0.12);
+  background: rgba(0, 255, 102, 0.12);
   border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
@@ -316,7 +316,7 @@
 
 .direct-btn:hover {
   background: var(--light-green);
-  color: #060c08;
+  color: #0a0a0a;
   transform: translateY(-2px);
 }
 
@@ -360,9 +360,9 @@
   letter-spacing: 1px;
   padding: 4px 10px;
   border-radius: 10px;
-  background: rgba(82, 183, 136, 0.12);
+  background: rgba(0, 255, 102, 0.12);
   color: var(--mint-green);
-  border: 1px solid rgba(82, 183, 136, 0.25);
+  border: 1px solid rgba(0, 255, 102, 0.25);
   margin-bottom: 12px;
 }
 
@@ -374,7 +374,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid rgba(82, 183, 136, 0.15);
+  border-bottom: 1px solid rgba(0, 255, 102, 0.15);
   padding-bottom: 14px;
 }
 
@@ -400,7 +400,7 @@
 
 .rule-card {
   background: rgba(8, 16, 11, 0.9);
-  border: 1px solid rgba(82, 183, 136, 0.18);
+  border: 1px solid rgba(0, 255, 102, 0.18);
   border-radius: 14px;
   padding: 20px;
   display: flex;
@@ -417,7 +417,7 @@
 
 .rule-number {
   background: var(--light-green);
-  color: #060c08;
+  color: #0a0a0a;
   font-weight: 800;
   font-size: 0.9rem;
   min-width: 36px;
@@ -609,7 +609,7 @@
   justify-content: center;
   gap: 10px;
   background: #25D366;
-  color: #060c08;
+  color: #0a0a0a;
   padding: 15px 38px;
   border-radius: 30px;
   font-weight: 800;
@@ -666,7 +666,7 @@
 .btn-gold {
   background: var(--bamboo-gold) !important;
   border-color: var(--bamboo-gold) !important;
-  color: #060c08 !important;
+  color: #0a0a0a !important;
   font-weight: 800 !important;
 }
 
@@ -978,4 +978,118 @@
   .standalone-footer .disclaimer {
     font-size: 10.5px;
   }
+}
+
+
+h1, h2, h3, h4,
+.direct-card h3,
+.div-section h2,
+.rule-content h4,
+.sanction-card h4,
+.game-info-block h2,
+.div-section-badge,
+.nav-badge,
+.hero-game-badge,
+.hero-content-section h1 span {
+  color: #00FF66 !important;
+}
+
+p,
+.direct-card p,
+.div-section p,
+.rule-content p,
+.sanction-card p,
+.game-info-block p,
+.standalone-footer p,
+.game-stat-chip,
+.hero-content-section p {
+  color: #f8f9fa !important;
+}
+
+.direct-btn {
+  background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 255, 102, 0.35) !important;
+}
+
+.direct-btn:hover {
+  background: #33ff85 !important;
+  color: #0a0a0a !important;
+  box-shadow: 0 8px 25px rgba(0, 255, 102, 0.5) !important;
+}
+
+.direct-btn i {
+  color: #0a0a0a !important;
+}
+
+.direct-card-icon {
+  background: rgba(0, 255, 102, 0.12) !important;
+  color: #00FF66 !important;
+}
+
+.direct-card:hover .direct-card-icon {
+  background: #00FF66 !important;
+  color: #0a0a0a !important;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #00FF66 !important;
+  color: #ffffff !important;
+}
+
+.back-btn i {
+  color: #00FF66 !important;
+}
+
+.whatsapp-join-btn {
+  background: #25D366 !important;
+  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  border: none !important;
+}
+
+.whatsapp-join-btn:hover {
+  background: #1eb757 !important;
+  color: #0a0a0a !important;
+}
+
+.whatsapp-join-btn i {
+  color: #0a0a0a !important;
+}
+
+.btn-discord {
+  background: #5865F2 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.btn-discord:hover {
+  background: #4752C4 !important;
+  color: #ffffff !important;
+}
+
+.btn-discord i {
+  color: #ffffff !important;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  border: none !important;
+}
+
+.btn-gold i {
+  color: #0a0a0a !important;
 }

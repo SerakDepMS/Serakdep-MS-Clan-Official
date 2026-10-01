@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+﻿@media (max-width: 768px) {
   #clan-counter {
     gap: 12px !important;
   }
@@ -34,15 +34,15 @@
 
 
 body.dark-theme #clan-counter .counter-box {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: #16161a !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.dark-theme #clan-counter .counter-box span:first-child {
-  color: #f0e6c5 !important;
+  color: #00FF66 !important;
 }
 
 body.dark-theme #clan-counter .counter-box span:last-child {
-  color: #a8d5be !important;
+  color: #f8f9fa !important;
 }
