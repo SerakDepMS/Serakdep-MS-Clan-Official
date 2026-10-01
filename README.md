@@ -95,9 +95,9 @@ SerakDepMS Studios forma parte de un ecosistema de tres pilares bajo la empresa 
 - **Npoint.io** – Almacenamiento y carga dinámica de noticias, eventos y enciclopedia (API JSON).
 - **EmailJS** – Envío de correos electrónicos desde formularios (inscripción, reportes, sugerencias, aspirantes a admin y colaborador).
 - **ipapi.co** – Geolocalización automática para formularios (país y zona horaria).
-- **CodeMirror 5** – Editor de código para CodeTurbo (HTML, CSS, JS, autocompletado, linting).
-- **JSHint** – Validación de JavaScript en tiempo real en CodeTurbo.
-- **JSZip** – Descarga de proyectos en ZIP desde CodeTurbo.
+- **CodeMirror 5** – Editor de código para Serak (HTML, CSS, JS, autocompletado, linting).
+- **JSHint** – Validación de JavaScript en tiempo real en Serak.
+- **JSZip** – Descarga de proyectos en ZIP desde Serak.
 - **Font Awesome 6.4** – Iconos vectoriales en toda la interfaz.
 - **Google Fonts** – Tipografía "Poppins", "Cinzel", "Share Tech Mono".
 
@@ -111,7 +111,7 @@ SerakDepMS Studios forma parte de un ecosistema de tres pilares bajo la empresa 
 | Cookie | Finalidad | Duración |
 |--------|-----------|:--------:|
 | `cookie_consent_sms` | Almacena preferencia de cookies (banner) | 1 año |
-| `sms_lab_project` | Guarda proyectos de CodeTurbo (localStorage) | Persistente |
+| `sms_lab_project` | Guarda proyectos de Serak (localStorage) | Persistente |
 | `sms_volume` | Recuerda nivel de volumen del reproductor de video | 6 meses |
 
 ---

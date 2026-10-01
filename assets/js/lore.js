@@ -94,12 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XIX",
       label: "El Núcleo de Código",
-      text: "Creado como entorno interactivo de programación, CodeTurbo permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de SerakDepMS Studios y forma parte del pilar Web Development & Technology del ecosistema SerakDepMS."
+      text: "Creado como entorno interactivo de programación, Serak permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de SerakDepMS Studios y forma parte del pilar Web Development & Technology del ecosistema SerakDepMS."
     },
     {
       chapter: "XX",
       label: "El Rumbo Futuro",
-      text: "El futuro de SerakDepMS Studios incluye la integración de rankings de miembros y estadísticas de juegos mediante APIs de Roblox y otras plataformas, el desarrollo de una aplicación móvil RSP para Android, y la traducción completa de toda la plataforma web oficial al inglés y portugués para acoger a una comunidad global. También se planean mejoras en el sistema de eventos y la expansión de CodeTurbo."
+      text: "El futuro de SerakDepMS Studios incluye la integración de rankings de miembros y estadísticas de juegos mediante APIs de Roblox y otras plataformas, el desarrollo de una aplicación móvil RSP para Android, y la traducción completa de toda la plataforma web oficial al inglés y portugués para acoger a una comunidad global. También se planean mejoras en el sistema de eventos y la expansión de Serak."
     },
     {
       chapter: "XXI",

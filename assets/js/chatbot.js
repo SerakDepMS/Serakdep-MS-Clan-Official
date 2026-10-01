@@ -557,9 +557,9 @@
 
 
     {
-      keywords: ['CodeTurbo', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
-      response: `<strong>CodeTurbo - Laboratorio de Código</strong><br><br>
-      <strong>CodeTurbo</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio del clan y forma parte del pilar <strong>Web Development & Technology</strong> del ecosistema SerakDepMS. Es un entorno interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> desde el navegador.<br><br>
+      keywords: ['Serak', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
+      response: `<strong>Serak - Laboratorio de Código</strong><br><br>
+      <strong>Serak</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio del clan y forma parte del pilar <strong>Web Development & Technology</strong> del ecosistema SerakDepMS. Es un entorno interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> desde el navegador.<br><br>
       Incluye:<br>
       • <strong>Editor profesional</strong> con autocompletado.<br>
       • <strong>Vista previa en vivo.</strong><br>
@@ -568,20 +568,20 @@
       • <strong>500 retos de programación.</strong><br>
       • <strong>6 temas de editor</strong> personalizables.<br>
       • <strong>Exportación de proyectos</strong> en ZIP o HTML único.<br><br>
-      Para acceder, visita <strong>CodeTurbo</strong> desde el enlace en el footer.`
+      Para acceder, visita <strong>Serak</strong> desde el enlace en el footer.`
     },
     {
-      keywords: ['como entrar CodeTurbo', 'acceder laboratorio', 'donde esta CodeTurbo', 'abrir code lab', 'ingresar al laboratorio', 'entrar a CodeTurbo', 'donde programar'],
-      response: `<strong>Cómo acceder a CodeTurbo</strong><br><br>
+      keywords: ['como entrar Serak', 'acceder laboratorio', 'donde esta Serak', 'abrir code lab', 'ingresar al laboratorio', 'entrar a Serak', 'donde programar'],
+      response: `<strong>Cómo acceder a Serak</strong><br><br>
       Puedes acceder de dos maneras:<br>
-      • <strong>Desde el footer:</strong> Haz clic en "CodeTurbo" en la parte inferior de cualquier página.<br>
+      • <strong>Desde el footer:</strong> Haz clic en "Serak" en la parte inferior de cualquier página.<br>
       • <strong>Enlace directo:</strong> Visita <strong>laboratorio.html</strong> en el navegador.<br><br>
       Al entrar verás una pantalla de bienvenida. Haz clic en <strong>"Ingresar al Laboratorio"</strong> para empezar a programar. ¡No necesitas instalar nada!`
     },
     {
-      keywords: ['guardar proyecto CodeTurbo', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
-      response: `<strong>Guardar y exportar proyectos en CodeTurbo</strong><br><br>
-      CodeTurbo guarda todo automáticamente para que no pierdas tu trabajo:<br>
+      keywords: ['guardar proyecto Serak', 'descargar codigo', 'exportar html', 'guardar mi codigo', 'bajar proyecto', 'como guardar el progreso', 'recuperar mi trabajo', 'proyecto zip'],
+      response: `<strong>Guardar y exportar proyectos en Serak</strong><br><br>
+      Serak guarda todo automáticamente para que no pierdas tu trabajo:<br>
       • <strong>Guardado automático:</strong> Tu código se guarda cada 10 segundos.<br>
       • <strong>Gestión de proyectos:</strong> Guarda con nombre y carga cuando quieras.<br>
       • <strong>Descarga ZIP:</strong> Descarga tu proyecto completo.<br>
@@ -590,7 +590,7 @@
     },
     {
       keywords: ['personalizar editor', 'temas editor', 'cambiar tema', 'fuente editor', 'modo oscuro', 'monokai', 'dracula', 'solarized', 'nord', 'material', 'apariencia editor'],
-      response: `<strong>Personalización del editor en CodeTurbo</strong><br><br>
+      response: `<strong>Personalización del editor en Serak</strong><br><br>
       Puedes personalizar la apariencia del editor:<br>
       • <strong>6 temas de editor:</strong> Monokai, Dracula, Solarized, Nord, Material y Default.<br>
       • <strong>Tamaño de fuente:</strong> Ajusta el tamaño desde la barra de estado.<br>
@@ -600,8 +600,8 @@
     },
     {
       keywords: ['retos programacion', 'desafios codigo', 'ejercicios html', 'practicas css', 'ejercicios javascript', 'challenges', 'tareas programacion'],
-      response: `<strong>Retos de programación en CodeTurbo</strong><br><br>
-      CodeTurbo incluye <strong>500 retos de programación</strong> guiados paso a paso:<br>
+      response: `<strong>Retos de programación en Serak</strong><br><br>
+      Serak incluye <strong>500 retos de programación</strong> guiados paso a paso:<br>
       • Página de bienvenida (HTML básico).<br>
       • Estilizando un botón (CSS intermedio).<br>
       • Lista de tareas interactiva (JS avanzado).<br>
@@ -614,8 +614,8 @@
       Selecciona "Empezar reto" en el panel de retos para cargar plantillas guiadas.`
     },
     {
-      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial CodeTurbo', 'robot programacion'],
-      response: `<strong>Asistente IA en CodeTurbo</strong><br><br>
+      keywords: ['asistente ia laboratorio', 'ia programacion', 'ayudante codigo', 'inteligencia artificial Serak', 'robot programacion'],
+      response: `<strong>Asistente IA en Serak</strong><br><br>
       Actualmente el asistente IA del laboratorio está en modo <strong>"Próximamente"</strong>. Estamos trabajando para conectarlo a un modelo de IA real que podrá:<br>
       • Responder preguntas sobre HTML, CSS y JavaScript.<br>
       • Explicar conceptos de programación.<br>
@@ -624,8 +624,8 @@
       Mientras tanto, usa la <strong>enciclopedia interna</strong> y los <strong>retos</strong>. ¡Te avisaremos cuando esté listo!`
     },
     {
-      keywords: ['enciclopedia CodeTurbo', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
-      response: `<strong>Enciclopedia interna de CodeTurbo</strong><br><br>
+      keywords: ['enciclopedia Serak', 'wiki programacion', 'documentacion html', 'referencia css', 'guia javascript', 'manual web'],
+      response: `<strong>Enciclopedia interna de Serak</strong><br><br>
       Incluye documentación de los tres lenguajes:<br>
       • <strong>HTML:</strong> Estructura, etiquetas, formularios, semántica, accesibilidad, SEO.<br>
       • <strong>CSS:</strong> Selectores, Box Model, Flexbox, Grid, animaciones, variables.<br>
@@ -714,7 +714,7 @@
       • <strong>Estructura del clan</strong> (jerarquía, departamentos).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
       • <strong>Alianzas</strong> (clanes aliados).<br>
-      • <strong>CodeTurbo</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
+      • <strong>Serak</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
       Escribe tu consulta con naturalidad. ¡Estoy aquí para ti!`
     }
   ];
@@ -774,7 +774,7 @@
       'inscripción', 'reglamento', 'discord', 'whatsapp', 'eventos',
       'juegos', 'contacto', 'reportar', 'sanciones', 'colaboradores',
       'noticias', 'legal', 'créditos', 'ser admin', 'alianzas',
-      'CodeTurbo', 'laboratorio código', 'retos programación', 'enciclopedia', 'comunidad devs'
+      'Serak', 'laboratorio código', 'retos programación', 'enciclopedia', 'comunidad devs'
     ];
 
     return `No tengo una respuesta específica para "${query}". Pero puedo ayudarte con muchos otros temas. Prueba preguntando sobre:<br>
@@ -846,7 +846,7 @@
         • Cómo reportar problemas o contactar al staff.<br>
         • La estructura del clan y cómo ascender.<br>
         • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>
-        • <strong>CodeTurbo</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
+        • <strong>Serak</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
         • Noticias, legal, créditos, alianzas.<br><br>
         <strong>Escribe tu consulta con total libertad.</strong> Entiendo lenguaje natural, así que no necesitas usar palabras exactas. ¡Adelante!`);
         hasStarted = true;

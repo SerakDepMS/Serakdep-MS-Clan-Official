@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, SerakDepMS Studios!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
     { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al CodeTurbo de SerakDepMS Studios!");' }
+    { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Serak de SerakDepMS Studios!");' }
   ];
   let activeFileId = '1';
   let editors = {};
@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function downloadZip() {
     const zip = new JSZip();
     files.forEach(f => zip.file(f.name, f.content));
-    zip.file('README.md', `# Proyecto SerakDepMS Studios CodeTurbo\n\n## Archivos\n${files.map(f => '- ' + f.name).join('\n')}\n\nCreado con el CodeTurbo de SerakDepMS Studios.`);
+    zip.file('README.md', `# Proyecto SerakDepMS Studios Serak\n\n## Archivos\n${files.map(f => '- ' + f.name).join('\n')}\n\nCreado con el Serak de SerakDepMS Studios.`);
     zip.generateAsync({ type: 'blob' }).then(content => {
       const a = document.createElement('a');
       a.href = URL.createObjectURL(content);
@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let html = htmlFiles.length > 0
       ? htmlFiles.map(f => f.content).join('\n')
-      : '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto CodeTurbo</title>\n</head>\n<body>\n  <!-- Contenido aquí -->\n</body>\n</html>';
+      : '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto Serak</title>\n</head>\n<body>\n  <!-- Contenido aquí -->\n</body>\n</html>';
 
     const css = cssFiles.map(f => f.content).join('\n');
     const js = jsFiles.map(f => f.content).join('\n');
@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isFullDocument = /<(!doctype|html)[^>]*>/i.test(html);
     if (!isFullDocument) {
-        html = `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto CodeTurbo</title>\n</head>\n<body>\n${html}\n</body>\n</html>`;
+        html = `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Proyecto Serak</title>\n</head>\n<body>\n${html}\n</body>\n</html>`;
     }
 
 
@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
     files = [
       { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, SerakDepMS Studios!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
       { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
-      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al CodeTurbo de SerakDepMS Studios!");' }
+      { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Serak de SerakDepMS Studios!");' }
     ];
     Object.values(editors).forEach(ed => ed.getWrapperElement().remove());
     editors = {};
