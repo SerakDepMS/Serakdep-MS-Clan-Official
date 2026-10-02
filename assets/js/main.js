@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.style.width = '50px';
   btn.style.height = '50px';
   btn.style.borderRadius = '50%';
-  btn.style.background = 'linear-gradient(135deg,#00FF66,#00b34a)';
+  btn.style.background = '#00FF66';
   btn.style.border = '2px solid #00FF66';
   btn.style.color = '#0a0a0a';
   btn.style.fontSize = '1.2rem';
@@ -224,29 +224,7 @@ function aceptarCookies() {
   localStorage.setItem('cookieConsent', 'accepted');
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
-
-  // Consent Mode v2: actualizar a 'granted' y cargar GA4 dinámicamente
-  if (typeof gtag === 'function') {
-    gtag('consent', 'update', {
-      analytics_storage: 'granted',
-      functionality_storage: 'granted',
-      personalization_storage: 'granted'
-    });
-  }
-  // Cargar GA4 si no estaba cargado aún
-  if (!window._ga4Loaded) {
-    window._ga4Loaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VBV6P0W6EL';
-    document.head.appendChild(s);
-    s.onload = function () {
-      if (typeof gtag === 'function') {
-        gtag('js', new Date());
-        gtag('config', 'G-VBV6P0W6EL', { anonymize_ip: true });
-      }
-    };
-  }
+  document.dispatchEvent(new CustomEvent('serakdep:consent-accepted'));
 }
 
 function rechazarCookies() {
@@ -254,17 +232,7 @@ function rechazarCookies() {
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
 
-  // Consent Mode v2: confirmar denegación explícita
-  if (typeof gtag === 'function') {
-    gtag('consent', 'update', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      functionality_storage: 'denied',
-      personalization_storage: 'denied'
-    });
-  }
+  document.dispatchEvent(new CustomEvent('serakdep:consent-rejected'));
 }
 
 

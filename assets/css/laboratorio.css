@@ -5,8 +5,8 @@
   --lab-text: #f8f9fa;
   --lab-text-secondary: #9ca3af;
   --lab-accent: #00FF66;
-  --lab-gold: #00FF66;
-  --lab-gold-light: #00FF66;
+  --lab-neon: #00FF66;
+  --lab-neon-light: #00FF66;
   --lab-activity-bg: #16161a;
   --lab-activity-hover: #22222a;
   --lab-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
@@ -53,7 +53,7 @@
 
 .lobby-icon {
   font-size: 5.5rem;
-  color: var(--lab-gold);
+  color: var(--lab-neon);
   margin-bottom: 20px;
   animation: lobbyIconPulse 2.5s infinite ease-in-out;
 }
@@ -102,7 +102,7 @@
 
 .lobby-feature:hover {
   background: rgba(0, 255, 102, 0.14);
-  border-color: var(--lab-gold);
+  border-color: var(--lab-neon);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
@@ -197,15 +197,15 @@
 
 .activity-btn:hover {
   background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
   border-color: rgba(0, 255, 102, 0.35);
   transform: scale(1.05);
 }
 
 .activity-btn.active {
   background: rgba(0, 255, 102, 0.18);
-  color: var(--lab-gold);
-  border-color: var(--lab-gold);
+  color: var(--lab-neon);
+  border-color: var(--lab-neon);
   box-shadow: 0 0 12px rgba(0, 255, 102, 0.15);
 }
 
@@ -283,13 +283,13 @@
 
 .file-item:hover {
   background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
 }
 
 .file-item.active {
   background: rgba(0, 255, 102, 0.15);
-  color: var(--lab-gold);
-  border-left: 3px solid var(--lab-gold);
+  color: var(--lab-neon);
+  border-left: 3px solid var(--lab-neon);
 }
 
 .file-item i {
@@ -340,8 +340,8 @@
 
 .editor-tab.active {
   background: var(--lab-surface);
-  color: var(--lab-gold);
-  border-color: var(--lab-gold) var(--lab-border) transparent;
+  color: var(--lab-neon);
+  border-color: var(--lab-neon) var(--lab-border) transparent;
   box-shadow: 0 -2px 6px rgba(0, 255, 102, 0.15);
 }
 
@@ -425,7 +425,7 @@
 .lab-console {
   height: 200px;
   background: #0f0f17;
-  border-top: 2px solid var(--lab-gold);
+  border-top: 2px solid var(--lab-neon);
   display: none;
   flex-direction: column;
 }
@@ -461,7 +461,7 @@
 
 .console-tab.active {
   background: rgba(0, 255, 102, 0.15);
-  color: var(--lab-gold);
+  color: var(--lab-neon);
   font-weight: 600;
 }
 
@@ -501,7 +501,7 @@
 }
 
 .console-prompt {
-  color: var(--lab-gold);
+  color: var(--lab-neon);
   font-family: monospace;
   margin-right: 10px;
 }
@@ -569,7 +569,7 @@
 
 .wiki-header h3 {
   margin: 0 0 12px 0;
-  color: var(--lab-gold);
+  color: var(--lab-neon);
   font-size: 1.1rem;
   display: flex;
   align-items: center;
@@ -594,7 +594,7 @@
 }
 
 #wikiSearch:focus {
-  border-color: var(--lab-gold);
+  border-color: var(--lab-neon);
 }
 
 .wiki-tabs {
@@ -616,8 +616,8 @@
 
 .wiki-tab.active {
   background: rgba(0, 255, 102, 0.15);
-  color: var(--lab-gold);
-  border-bottom: 3px solid var(--lab-gold);
+  color: var(--lab-neon);
+  border-bottom: 3px solid var(--lab-neon);
 }
 
 .wiki-content {
@@ -630,7 +630,7 @@
 }
 
 .wiki-content h3 {
-  color: var(--lab-gold);
+  color: var(--lab-neon);
   margin: 20px 0 12px;
   font-size: 1.2rem;
 }
@@ -644,7 +644,7 @@
   background: rgba(0, 255, 102, 0.08);
   padding: 2px 8px;
   border-radius: 6px;
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
   font-family: monospace;
 }
 
@@ -662,8 +662,8 @@
 .wiki-content .copy-example-btn,
 .wiki-content .challenge-start-btn {
   background: rgba(0, 255, 102, 0.15);
-  border: 1px solid var(--lab-gold);
-  color: var(--lab-gold);
+  border: 1px solid var(--lab-neon);
+  color: var(--lab-neon);
   padding: 5px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -711,7 +711,7 @@
 
 .modal-header h3 {
   margin: 0;
-  color: var(--lab-gold);
+  color: var(--lab-neon);
 }
 
 .modal-body {
@@ -776,7 +776,7 @@
 }
 
 .project-item .project-actions button:hover {
-  color: var(--lab-gold);
+  color: var(--lab-neon);
 }
 
 
@@ -796,7 +796,7 @@
 
 .icon-btn:hover {
   background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
   border-color: rgba(0, 255, 102, 0.3);
 }
 
@@ -838,7 +838,7 @@
 
 .status-btn:hover {
   background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
   border-color: rgba(0, 255, 102, 0.3);
 }
 
@@ -863,7 +863,7 @@
 }
 
 .splitter:hover {
-  background: var(--lab-gold);
+  background: var(--lab-neon);
 }
 
 .preview-sizes {
@@ -884,8 +884,8 @@
 
 .size-btn.active,
 .size-btn:hover {
-  background: var(--lab-gold-light);
-  border-color: var(--lab-gold);
+  background: var(--lab-neon-light);
+  border-color: var(--lab-neon);
   color: #000;
 }
 
@@ -1002,7 +1002,7 @@
 
 .theme-menu button:hover {
   background: var(--lab-activity-hover);
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
 }
 
 
@@ -1190,7 +1190,7 @@
 
 .lab-explorer.drag-over {
   background: rgba(0, 255, 102, 0.1) !important;
-  border: 2px dashed var(--lab-gold) !important;
+  border: 2px dashed var(--lab-neon) !important;
 }
 
 
@@ -1227,21 +1227,21 @@ body.dark-theme .lobby-content .lobby-subtitle {
 body.dark-theme .lobby-feature {
   background: rgba(0, 255, 102, 0.08);
   border-color: rgba(0, 255, 102, 0.2);
-  color: var(--lab-gold-light);
+  color: var(--lab-neon-light);
 }
 
 body.dark-theme .lobby-feature:hover {
   background: rgba(0, 255, 102, 0.15);
-  border-color: var(--lab-gold);
+  border-color: var(--lab-neon);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-theme .lobby-feature i {
-  color: var(--lab-gold);
+  color: var(--lab-neon);
 }
 
 body.dark-theme .lobby-content .page-title {
-  color: var(--lab-gold);
+  color: var(--lab-neon);
 }
 
 

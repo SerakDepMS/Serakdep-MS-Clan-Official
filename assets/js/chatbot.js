@@ -45,7 +45,7 @@
     {
       keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'among us', 'cs2', 'counter strike', 'fc mobile', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
       response: `<strong>Sección & Divisiones Multi-Gamer de SerakDepMS Studios</strong><br><br>
-      SerakDepMS Studios es una comunidad y clan oficial Multi-Gamer con <strong>12 divisiones competitivas</strong> activas:<br><br>
+      SerakDepMS Studios es la comunidad oficial Multi-Gamer, una división de SerakDepMS (Serak Digital Mastery &amp; Solutions), con <strong>12 divisiones competitivas</strong> activas:<br><br>
       <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
       <strong>Minecraft:</strong> Servidor con economía, Bedwars 4v4 y arenas PvP.<br>
       <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
@@ -54,7 +54,7 @@
       <strong>Free Fire:</strong> Duelos de Escuadra 4v4 y salas personalizadas.<br>
       <strong>Among Us:</strong> Partidas de traición, deducción y modos personalizados.<br>
       <strong>Counter-Strike 2:</strong> Modo Premier 5v5 y ejecuciones tácticas.<br>
-      <strong>FC Mobile:</strong> Ultimate Team, mercado de fichajes y liga del clan.<br>
+      <strong>FC Mobile:</strong> Ultimate Team, mercado de fichajes y liga de la comunidad.<br>
       <strong>Clash Royale:</strong> Liga de Guerra, mazos meta y batallas 1v1.<br>
       <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
       <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
@@ -91,14 +91,14 @@
       <strong>Actividad mínima:</strong> Participar al menos una vez por semana. Tras 3 semanas sin actividad sin justificación, se considerará baja por inactividad.<br>
       <strong>Confidencialidad:</strong> No compartir información personal de otros miembros sin autorización.<br>
       <strong>Identificación clara:</strong> Usar nombres reconocibles en todas las plataformas.<br>
-      <strong>Prohibición de multicuentas:</strong> No se permite tener múltiples cuentas en el clan sin autorización previa de la Alta Dirección.<br><br>
+      <strong>Prohibición de multicuentas:</strong> No se permite tener múltiples cuentas en la comunidad sin autorización previa de la Alta Dirección.<br><br>
       <strong>Código de Conducta:</strong><br>
       🔸 <strong>Respeto Mutuo:</strong> Trata a los demás como te gustaría ser tratado.<br>
       🔸 <strong>Inclusión:</strong> Damos la bienvenida a jugadores de todos los orígenes, géneros y habilidades.<br>
       🔸 <strong>Integridad:</strong> Sé honesto. No hagas trampas, no mientas sobre tu edad o identidad.<br>
       🔸 <strong>Comunicación Constructiva:</strong> Expresa desacuerdos de manera educada.<br>
       🔸 <strong>Responsabilidad:</strong> Asume las consecuencias de tus actos.<br>
-      🔸 <strong>Lealtad al Clan:</strong> Representa al clan con orgullo y respeto.<br><br>
+      🔸 <strong>Lealtad a la comunidad:</strong> Representa a la comunidad con orgullo y respeto.<br><br>
       <strong>Sistema de sanciones:</strong><br>
       🔸 <strong>Falta leve (1ª vez):</strong> Advertencia privada.<br>
       🔸 <strong>Leve reincidente:</strong> Mute temporal de 24-48h.<br>
@@ -110,8 +110,8 @@
     {
       keywords: ['tabla sanciones', 'tipos de falta', 'expulsion temporal', 'mute', 'advertencia', 'corrupcion interna', 'faltas leves graves', 'duracion sanciones', 'cuanto dura un mute', 'cuanto dura expulsion'],
       response: `<strong>Tabla completa de sanciones</strong><br><br>
-      <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px;">
-        <tr style="background:#0a0a0a; color:#00FF66;"><th>Tipo de Falta</th><th>Sanción</th><th>Duración</th><th>Ejemplos</th></tr>
+      <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; border:1px solid #00FF66;">
+        <tr style="background:#0a0a0a; color:#00FF66; border-bottom:2px solid #00FF66;"><th>Tipo de Falta</th><th>Sanción</th><th>Duración</th><th>Ejemplos</th></tr>
         <tr><td>Leve (1ª vez)</td><td>Advertencia privada</td><td>-</td><td>Spam ligero, lenguaje inapropiado leve, uso incorrecto de canales</td></tr>
         <tr><td>Leve (reincidente)</td><td>Mute temporal</td><td>24-48h</td><td>Reincidir tras advertencia</td></tr>
         <tr><td>Grave</td><td>Expulsión temporal</td><td>1-2 semanas</td><td>Insultos, comportamiento disruptivo, incumplimiento grave</td></tr>
@@ -133,7 +133,7 @@
     },
     {
       keywords: ['proceso disciplinario', 'como se aplica sancion', 'investigacion falta', 'como actua el staff ante falta', 'pasos sancion', 'moderacion proceso'],
-      response: `<strong>Proceso Disciplinario del Clan</strong><br><br>
+      response: `<strong>Proceso Disciplinario de la comunidad</strong><br><br>
       Cuando se detecta una posible infracción, el equipo de moderación sigue un proceso estandarizado para garantizar justicia y transparencia:<br>
       1️⃣ <strong>Detección y Registro:</strong> Un miembro del staff detecta la falta o recibe un reporte. Se registra la evidencia (capturas, logs, testimonios).<br>
       2️⃣ <strong>Investigación:</strong> Un moderador designado revisa la evidencia y, si es necesario, entrevista a las partes involucradas.<br>
@@ -148,7 +148,7 @@
       • Mantener el orden y hacer cumplir las normas de manera <strong>justa e imparcial</strong>.<br>
       • Responder consultas y ayudar a miembros en un plazo máximo de <strong>24 horas</strong>.<br>
       • Organizar y moderar eventos de manera profesional.<br>
-      • Mantener <strong>confidencialidad</strong> sobre información sensible del clan y datos de miembros.<br>
+      • Mantener <strong>confidencialidad</strong> sobre información sensible de la comunidad y datos de miembros.<br>
       • Actuar como <strong>ejemplo de comportamiento</strong> para otros miembros.<br>
       • <strong>No abusar</strong> de su posición o privilegios administrativos.<br>
       • Comunicar cambios y actualizaciones de manera clara y oportuna.<br>
@@ -180,16 +180,16 @@
     {
       keywords: ['colaborador', 'aspirar colaborador', 'ser colaborador', 'postular colaborador', 'colaboracion', 'aspirantes colaborador', 'areas colaboracion', 'quiero colaborar', 'formulario colaborador', 'aplicar colaborador', 'como ser colaborador', 'aspirante colaborador', 'colaboradores clan'],
       response: `<strong>Aspirantes a Colaborador - SerakDepMS Studios</strong><br><br>
-      Los colaboradores son miembros que apoyan al clan en áreas específicas <strong>sin tener el rol de administrador</strong>, pero desempeñan un papel fundamental para la comunidad.<br><br>
+      Los colaboradores son miembros que apoyan a la comunidad en áreas específicas <strong>sin tener el rol de administrador</strong>, pero desempeñan un papel fundamental para la comunidad.<br><br>
       <strong>Áreas de colaboración disponibles:</strong><br>
       • <strong>Actividades y Eventos:</strong> Organizar y coordinar torneos y actividades comunitarias.<br>
-      • <strong>Edición y Contenido:</strong> Crear material gráfico, videos, guías y contenido para redes sociales del clan.<br>
-      • <strong>Representante de Alianzas:</strong> Gestionar relaciones con otros clanes, buscar nuevas alianzas y representar a SerakDepMS Studios con profesionalismo.<br><br>
+      • <strong>Edición y Contenido:</strong> Crear material gráfico, videos, guías y contenido para redes sociales de la comunidad.<br>
+      • <strong>Representante de Alianzas:</strong> Gestionar relaciones con otras comunidades, buscar nuevas alianzas y representar a SerakDepMS Studios con profesionalismo.<br><br>
       <strong>Requisitos para colaborador:</strong><br>
       ✔️ Edad mínima: <strong>17 años</strong>.<br>
       ✔️ Elegir <strong>una sola área</strong> de colaboración.<br>
       ✔️ Disponibilidad mínima de <strong>5 horas semanales</strong>.<br>
-      ✔️ Compromiso con los valores del clan.<br>
+      ✔️ Compromiso con los valores de la comunidad.<br>
       ✔️ Cumplir las mismas normas que cualquier miembro.<br><br>
       Para postularte, ve a <strong>Contacto → Aspirar a Colaborador</strong> o accede directamente a <strong>aspirantes-colaborador.html</strong>.`
     },
@@ -205,7 +205,7 @@
       • <strong>Experiencia previa</strong> en roles similares (opcional).<br>
       • <strong>¿Por qué quieres ser colaborador?</strong> y qué puedes aportar.<br>
       • <strong>Disponibilidad semanal:</strong> 1-5h / 5-10h / 10-15h / más de 15h.<br>
-      • <strong>Ideas o mejoras</strong> que propondrías para el clan.<br>
+      • <strong>Ideas o mejoras</strong> que propondrías para la comunidad.<br>
       • Checkboxes: aceptar el reglamento y compromiso de confidencialidad.<br><br>
       Accede desde <strong>Contacto → Aspirar a Colaborador</strong>.`
     },
@@ -232,7 +232,7 @@
     {
       keywords: ['zona dj', 'eventos dj', 'ser dj', 'musica discord', 'canal musica'],
       response: `<strong>DJ Oficial en SerakDepMS Studios</strong><br><br>
-      Para ser DJ oficial del clan y participar en eventos musicales, especialmente en el juego de Roblox <strong>"The Core of Consciousness"</strong>, debes abrir un ticket en el canal <strong>#soporte-técnico</strong> y seleccionar el botón <strong>"🎧 DJ Oficial"</strong>.<br><br>
+      Para ser DJ oficial de la comunidad y participar en eventos musicales, especialmente en el juego de Roblox <strong>"The Core of Consciousness"</strong>, debes abrir un ticket en el canal <strong>#soporte-técnico</strong> y seleccionar el botón <strong>"🎧 DJ Oficial"</strong>.<br><br>
       Ya no contamos con canales específicos de DJ en Discord; todo se gestiona a través de tickets para mantener el orden.`
     },
     {
@@ -240,7 +240,7 @@
       response: `<strong>Colaboraciones y alianzas en Discord</strong><br><br>
       Las solicitudes de alianzas, colaboraciones con creadores de contenido y postulaciones para DJ oficial se gestionan exclusivamente a través del sistema de tickets en el canal <strong>#soporte-técnico</strong>.<br><br>
       Allí encontrarás botones para:<br>
-      • 🤝 <strong>Alianza de Clan</strong> – Propuestas de alianzas con otros clanes.<br>
+      • 🤝 <strong>Alianza de comunidad</strong> – Propuestas de alianzas con otras comunidades.<br>
       • 🎬 <strong>Creador de Contenido</strong> – Colaboraciones con streamers, youtubers, diseñadores.<br>
       • 🎧 <strong>DJ Oficial</strong> – Para ser DJ en el juego <em>The Core of Consciousness</em> (Roblox).<br><br>
       Lee las normas en <strong>#normas-de-alianzas</strong> antes de abrir un ticket.`
@@ -250,7 +250,7 @@
     {
       keywords: ['whatsapp', 'grupo whatsapp', 'unirse whatsapp', 'link whatsapp', 'whatsapp reglas', 'grupos whatsapp', 'sms principal', 'sms actividades', 'entrar a whatsapp'],
       response: `<strong>Grupos oficiales de WhatsApp</strong><br><br>
-      El clan tiene varios grupos organizados por función:<br>
+      La comunidad tiene varios grupos organizados por función:<br>
       • <strong>Principal:</strong> Comunicación general de todos los miembros.<br>
       • <strong>Actividades:</strong> Dinámicas como NGL (mensajes anónimos), sopa de letras, pintar imágenes y más.<br>
       • <strong>Nuevos Ingresos:</strong> Orientación para novatos durante su periodo de prueba.<br>
@@ -262,7 +262,7 @@
       • No hacer spam.<br>
       • Respetar a los administradores.<br>
       • No compartir números sin permiso.<br><br>
-      Los enlaces de invitación se proporcionan tras ser aceptado en el clan. También puedes unirte al grupo principal desde: <strong>https://chat.whatsapp.com/FjFvWUam2ZzEZhHd8xxGDH</strong>`
+      Los enlaces de invitación se proporcionan tras ser aceptado en la comunidad. También puedes unirte al grupo principal desde: <strong>https://chat.whatsapp.com/FjFvWUam2ZzEZhHd8xxGDH</strong>`
     },
     {
       keywords: ['horario whatsapp', 'cuando enviar mensajes', 'silencio whatsapp', 'no molestar'],
@@ -271,17 +271,17 @@
       • <strong>Horario general:</strong> 08:00 - 23:59 (hora local del administrador).<br>
       • <strong>Horario silencioso:</strong> 00:00 - 07:59, evita enviar mensajes no urgentes.<br>
       • <strong>Excepciones:</strong> Emergencias, eventos programados, torneos en vivo.<br>
-      • <strong>Staff:</strong> 24/7 para asuntos urgentes del clan.<br><br>
+      • <strong>Staff:</strong> 24/7 para asuntos urgentes de la comunidad.<br><br>
       Respeta estos horarios para no molestar a los demás miembros.`
     },
 
 
     {
       keywords: ['eventos', 'torneos', 'actividades', 'calendario', 'próximos eventos', 'eventos pasados', 'torneo blox fruits', 'evento halloween', 'aniversario clan', 'torneo arsenal', 'epic fail', 'bienvenida nuevos', 'proximos torneos'],
-      response: `<strong>Eventos y torneos del clan</strong><br><br>
+      response: `<strong>Eventos y torneos de la comunidad</strong><br><br>
       Organizamos eventos periódicos que se anuncian en:<br>
       • <strong>Discord:</strong> canal #anuncios y #torneos.<br>
-      • <strong>WhatsApp:</strong> canal oficial del clan, se encuentra en la sección de eventos.<br>
+      • <strong>WhatsApp:</strong> canal oficial de la comunidad, se encuentra en la sección de eventos.<br>
       • <strong>Página web:</strong> consulta la sección de Eventos para ver el calendario actualizado.<br><br>
       Para inscribirte a un torneo o evento, dirígete al canal <strong>#soporte-técnico</strong> y selecciona el botón <strong>"📝 Inscripción a Eventos"</strong>.<br><br>
       <strong>Normas de convivencia en eventos:</strong><br>
@@ -296,12 +296,12 @@
       keywords: ['premios eventos', 'que gano', 'recompensas', 'premios torneos'],
       response: `<strong>Premios y recompensas</strong><br><br>
       Dependiendo del evento, puedes ganar:<br>
-      • <strong>Rangos especiales</strong> en el clan.<br>
+      • <strong>Rangos especiales</strong> en la comunidad.<br>
       • <strong>Insignias exclusivas</strong> en Discord.<br>
       • <strong>Reconocimiento público</strong> en redes sociales.<br>
       • <strong>Roles destacados</strong> en grupos de WhatsApp.<br>
       • <strong>Items especiales</strong> en algunos juegos (cuando es posible).<br>
-      • <strong>Puntos para el ranking interno</strong> del clan.<br><br>
+      • <strong>Puntos para el ranking interno</strong> de la comunidad.<br><br>
       Todos los premios son virtuales y de reconocimiento, no monetarios.`
     },
     {
@@ -321,11 +321,11 @@
       keywords: ['contacto', 'email', 'correo', 'hablar admin', 'soporte', 'ayuda', 'asistencia', 'serakdepmsofficial7', 'formulario contacto', 'reportar problema', 'sugerencias', 'aspirar admin', 'legal contacto', 'como contacto'],
       response: `<strong>Contacto oficial</strong><br><br>
       <strong>Correo electrónico:</strong> serakdepmsofficial7@gmail.com<br>
-      <strong>WhatsApp del clan:</strong> +57 311 6546484 (solo mensajes, no llamadas).<br>
+      <strong>WhatsApp de la comunidad:</strong> +57 311 6546484 (solo mensajes, no llamadas).<br>
       <strong>Discord:</strong> https://discord.gg/nphuM8K9aD<br><br>
       <strong>Opciones en la sección "Contacto":</strong><br>
       • <strong>Reportar un problema:</strong> Para conductas inapropiadas, bugs o incidencias.<br>
-      • <strong>Sugerencias:</strong> Propuestas para mejorar el clan o la web.<br>
+      • <strong>Sugerencias:</strong> Propuestas para mejorar la comunidad o la web.<br>
       • <strong>Aspirar a Admin:</strong> Postulación cuando haya convocatorias abiertas.<br>
       • <strong>Aspirar a Colaborador:</strong> Postulación para áreas de eventos, edición o representante de alianzas.<br>
       • <strong>Asuntos legales:</strong> Derechos de autor, privacidad, etc.<br><br>
@@ -355,7 +355,7 @@
       <strong>Términos de Servicio:</strong> Al unirte aceptas cumplir con el reglamento. Ley aplicable: Colombia.<br>
       <strong>Política de Cookies:</strong> Usamos cookies técnicas y analíticas. Puedes revocar tu consentimiento en cualquier momento.<br>
       <strong>Aviso DMCA:</strong> Si crees que algún contenido infringe tus derechos de autor, contáctanos. Responderemos en 5 días hábiles.<br><br>
-      <strong>Nota importante:</strong> SerakDepMS Studios es una comunidad gaming eSports independiente sin fines de lucro. Todos los nombres de videojuegos, logotipos y marcas comerciales son propiedad de sus respectivas empresas matrices y se usan bajo doctrina de Uso Legítimo / Fair Use.`
+      <strong>Nota importante:</strong> SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs dentro del ecosistema de SerakDepMS. Todos los nombres de videojuegos, logotipos y marcas comerciales son propiedad de sus respectivas empresas matrices y se usan bajo doctrina de Uso Legítimo / Fair Use.`
     },
     {
       keywords: ['datos personales', 'que hacen con mis datos', 'informacion personal', 'proteccion datos', 'responsable tratamiento'],
@@ -363,7 +363,7 @@
       En SerakDepMS Studios tomamos muy en serio tu privacidad:<br>
       • Solo recopilamos los datos necesarios para gestionar tu membresía (nombre de usuario, edad, país, contacto).<br>
       • El número de teléfono se recopila exclusivamente para colaborar con la justicia en casos de extrema gravedad, con tu consentimiento explícito.<br>
-      • Para los menores de 16 años, el consentimiento debe ser otorgado por sus padres, madres o tutores legales.<br>
+      • Para las personas de 13 a 15 años, el consentimiento debe ser otorgado por sus padres, madres o tutores legales.<br>
       • No compartimos tu información con terceros sin tu consentimiento explícito.<br>
       • Puedes solicitar la eliminación de tus datos en cualquier momento.<br>
       • Toda la información se almacena de forma segura.<br>
@@ -398,7 +398,7 @@
       • Recordar tus preferencias de navegación.<br>
       • Mejorar la velocidad de carga del sitio.<br>
       • Analizar de forma anónima el tráfico (solo tras consentimiento).<br><br>
-      <strong>Google Consent Mode v2:</strong> Analytics y publicidad están denegados por defecto. Solo se activan si aceptas el banner de cookies. Puedes revocar tu consentimiento en cualquier momento.<br><br>
+      <strong>Google Consent Mode v2:</strong> analytics_storage permanece denegado por defecto. La analítica solo se activa si aceptas el banner de cookies; las señales de publicidad siguen denegadas. Puedes revocar tu consentimiento en cualquier momento.<br><br>
       No usamos cookies para rastrearte fuera de nuestro sitio ni para publicidad agresiva. Puedes desactivarlas en la configuración de tu navegador.`
     },
 
@@ -407,7 +407,7 @@
       keywords: ['creditos', 'creadores', 'desarrolladores', 'colaboradores', 'agradecimientos', 'autores', 'equipo', 'diseñadores', 'quien hizo la pagina'],
       response: `<strong>Créditos y agradecimientos</strong><br><br>
       La página web de SerakDepMS Studios es fruto del esfuerzo colectivo:<br>
-      • <strong>Fundador Único &amp; Director:</strong> SerakDepMS — Full Stack Architect &amp; Cybersecurity Expert, fundador del ecosistema SerakDepMS.<br>
+      • <strong>Empresa matriz:</strong> SerakDepMS (Serak Digital Mastery &amp; Solutions), responsable del ecosistema y de su división SerakDepMS Studios.<br>
       • <strong>Co-Desarrollador Principal:</strong> maikol-dev-code-cyber.<br>
       • <strong>Herramientas utilizadas:</strong> HTML5, CSS3, JavaScript, EmailJS, npoint.io, Font Awesome, GitHub Pages, Figma.<br><br>
       ¿Quieres contribuir? Usa el formulario de sugerencias en Contacto.`
@@ -431,24 +431,24 @@
     },
     {
       keywords: ['departamentos', 'comites', 'areas del clan', 'equipos internos'],
-      response: `<strong>Departamentos del clan</strong><br><br>
+      response: `<strong>Departamentos de la comunidad</strong><br><br>
       Tenemos varios equipos especializados:<br>
       • <strong>Comité de Eventos:</strong> Organiza torneos y actividades.<br>
       • <strong>Departamento de Admisiones:</strong> Gestiona nuevas incorporaciones.<br>
       • <strong>Equipo de Moderación:</strong> Vela por el cumplimiento de normas.<br>
-      • <strong>Comité de Relaciones:</strong> Maneja alianzas con otros clanes.<br>
+      • <strong>Comité de Relaciones:</strong> Maneja alianzas con otras comunidades.<br>
       • <strong>Equipo Técnico:</strong> Mantiene Discord, web y herramientas.<br>
       • <strong>Departamento de Contenido:</strong> Crea guías, tutoriales y material.<br><br>
       Puedes unirte a un departamento según tus habilidades. Pregunta a un administrador si hay vacantes.`
     },
     {
       keywords: ['ascender', 'subir de rango', 'como ser destacado', 'promocion', 'subir en el clan'],
-      response: `<strong>¿Cómo ascender en el clan?</strong><br><br>
+      response: `<strong>¿Cómo ascender en la comunidad?</strong><br><br>
       El ascenso se basa en méritos y contribución, no en antigüedad ni pagos:<br>
       • <strong>Actividad constante:</strong> Participación regular en eventos y juegos.<br>
       • <strong>Buen comportamiento:</strong> Cumplimiento ejemplar de las normas.<br>
       • <strong>Contribución positiva:</strong> Ayudar a otros miembros, proponer ideas.<br>
-      • <strong>Tiempo en el clan:</strong> Compromiso demostrado.<br>
+      • <strong>Tiempo en la comunidad:</strong> Compromiso demostrado.<br>
       • <strong>Habilidades demostradas:</strong> Liderazgo, organización, conocimientos técnicos.<br>
       • <strong>Recomendaciones:</strong> Aval de otros miembros y staff.<br><br>
       Los ascensos se evalúan mensualmente por la Alta Dirección.`
@@ -460,7 +460,7 @@
       • Membresía o participación.<br>
       • Ascensos o privilegios.<br>
       • Acceso a eventos o torneos.<br><br>
-      Todo el staff trabaja de forma voluntaria. Si alguien te pide dinero a nombre del clan, repórtalo inmediatamente.`
+      Todo el staff trabaja de forma voluntaria. Si alguien te pide dinero a nombre de la comunidad, repórtalo inmediatamente.`
     },
     {
       keywords: ['historia clan', 'origen', 'fundacion', 'quien creo el clan', 'cuando se fundo'],
@@ -479,7 +479,7 @@
       keywords: ['requisitos admin', 'ser admin', 'moderador', 'postular staff', 'aspirante', 'administrador', 'quiero ser staff', 'como ser moderador'],
       response: `<strong>¿Cómo ser administrador o staff?</strong><br><br>
       Para formar parte del equipo de administración debes:<br>
-      ✔️ Ser miembro activo del clan por al menos 4 meses.<br>
+      ✔️ Ser miembro activo de la comunidad por al menos 4 meses.<br>
       ✔️ Tener un historial impecable (sin sanciones graves).<br>
       ✔️ Demostrar compromiso, respeto y capacidad de ayudar a otros.<br>
       ✔️ Estar atento a las convocatorias en Discord (#anuncios) y en el sitio web (Contacto → Aspirar a Admin).<br>
@@ -495,12 +495,12 @@
       El menú superior te permite acceder a todas las secciones:<br>
       • <strong>Inicio:</strong> Presentación, video, juegos.<br>
       • <strong>Reglamento:</strong> Normas completas, sanciones, derechos, colaboradores.<br>
-      • <strong>Formulario:</strong> Inscripción al clan.<br>
+      • <strong>Formulario:</strong> Inscripción a la comunidad.<br>
       • <strong>Eventos:</strong> Información de próximos eventos y torneos.<br>
       • <strong>Noticias:</strong> Novedades y anuncios.<br>
       • <strong>Contacto:</strong> Formularios de reporte, sugerencias, aspirar a admin/colaborador.<br>
       • <strong>Créditos:</strong> Reconocimiento a colaboradores.<br>
-      • <strong>Alianzas:</strong> Clanes aliados (sección en el footer).<br>
+      • <strong>Alianzas:</strong> comunidades aliadas (sección en el footer).<br>
       En el footer encontrarás enlaces rápidos, redes sociales e información legal.`
     },
 
@@ -508,7 +508,7 @@
     {
       keywords: ['video', 'reproductor', 'clan video', 'presentacion', 'multimedia', 'trailer', 'video del clan'],
       response: `<strong>Video de presentación</strong><br><br>
-      En la página de Inicio hay un reproductor de video destacado que muestra contenido sobre el clan. Puedes controlar:<br>
+      En la página de Inicio hay un reproductor de video destacado que muestra contenido sobre la comunidad. Puedes controlar:<br>
       • Reproducción / pausa.<br>
       • Volumen.<br>
       • Velocidad de reproducción.<br>
@@ -520,7 +520,7 @@
 
     {
       keywords: ['noticias', 'news', 'actualizaciones', 'anuncios', 'novedades', 'canal noticias', 'npoint', 'carga noticias', 'filtros noticias', 'estadisticas noticias', 'ctrl shift r', 'ultimas noticias'],
-      response: `<strong>Sistema de Noticias del Clan</strong><br><br>
+      response: `      <strong>Sistema de Noticias de la comunidad</strong><br><br>
       La página de Noticias es el centro oficial de información actualizada:<br>
       🔹 <strong>Modo solo lectura:</strong> Las noticias son publicadas por el staff.<br>
       🔹 <strong>Actualizaciones semanales:</strong> Cada semana se añaden novedades.<br>
@@ -533,7 +533,7 @@
     {
       keywords: ['canal whatsapp noticias', 'whatsapp channel', 'qr whatsapp', 'notificaciones instantaneas', 'unirse canal noticias', 'canal oficial whatsapp', 'noticiero sms'],
       response: `<strong>Canal de WhatsApp para Noticias - Noticiero SMS</strong><br><br>
-      El clan dispone de un <strong>canal oficial de WhatsApp</strong> exclusivo para notificaciones instantáneas:<br>
+      La comunidad dispone de un <strong>canal oficial de WhatsApp</strong> exclusivo para notificaciones instantáneas:<br>
       • Notificaciones al instante de nuevas noticias.<br>
       • Novedades exclusivas antes que en otros medios.<br>
       • Recordatorios de eventos y torneos.<br>
@@ -545,21 +545,21 @@
     {
       keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'bloody legacy', 'WIND BREAKER', 'luwance', 'the black bulls'],
       response: `<strong>Alianzas de SerakDepMS Studios</strong><br><br>
-      En la sección "Alianzas" encontrarás todos los clanes aliados con sus logos, descripciones y fechas. Actualmente contamos con clanes aliados, entre ellos:<br>
+      En la sección "Alianzas" encontrarás todas las comunidades aliadas con sus logos, descripciones y fechas. Actualmente contamos con comunidades aliadas, entre ellas:<br>
       • CHIHUAHUENSE DINASTY<br>
       • Zion Dynasty<br>
       • Bloody Legacy<br>
       • WIND BREAKER<br>
       • LUWANCE<br>
       • The Black Bulls<br><br>
-      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a un clan y quieres proponer una alianza, usa el sistema de tickets en <strong>#soporte-técnico</strong> (botón 🤝 Alianza de Clan).`
+      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a una comunidad y quieres proponer una alianza, usa el sistema de tickets en <strong>#soporte-técnico</strong> (botón 🤝 Alianza de comunidad).`
     },
 
 
     {
       keywords: ['Serak', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
       response: `<strong>Serak - Laboratorio de Código</strong><br><br>
-      <strong>Serak</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio del clan y forma parte del pilar <strong>Web Development & Technology</strong> del ecosistema SerakDepMS. Es un entorno interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> desde el navegador.<br><br>
+      <strong>Serak</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio de la comunidad y forma parte del pilar <strong>Web Development & Technology</strong> del ecosistema SerakDepMS. Es un entorno interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> desde el navegador.<br><br>
       Incluye:<br>
       • <strong>Editor profesional</strong> con autocompletado.<br>
       • <strong>Vista previa en vivo.</strong><br>
@@ -638,10 +638,10 @@
       keywords: ['redes sociales', 'twitter', 'instagram', 'tiktok', 'youtube', 'social media', 'x', 'discord link', 'seguir', 'rrss'],
       response: `<strong>Redes sociales oficiales</strong><br><br>
       Encuéntranos en:<br>
-      <strong>GitHub:</strong> github.com/SerakDepMS<br>
-      <strong>Twitter/X:</strong> x.com/SerakDepMS_STOS<br>
-      <strong>Instagram:</strong> instagram.com/serakdepms_oficial<br>
-      <strong>Facebook:</strong> facebook.com/SerakDepMS<br>
+      <strong>GitHub:</strong> https://github.com/SerakDepMS<br>
+      <strong>X:</strong> https://x.com/SerakDepMS_STOS<br>
+      <strong>Instagram:</strong> https://instagram.com/serakdepms_oficial<br>
+      <strong>Facebook:</strong> https://facebook.com/SerakDepMS<br>
       <strong>Discord:</strong> https://discord.gg/nphuM8K9aD<br>
       <strong>WhatsApp:</strong> wa.me/SerakDepMS<br><br>
       Los enlaces directos están en el footer de cada página.`
@@ -674,12 +674,12 @@
 
     {
       keywords: ['contribuir', 'ayudar clan', 'voluntario', 'colaborar', 'aportar', 'quiero ayudar', 'como puedo ayudar'],
-      response: `<strong>¿Cómo contribuir al clan?</strong><br><br>
+      response: `<strong>¿Cómo contribuir a la comunidad?</strong><br><br>
       Formas de ayudar a SerakDepMS Studios:<br>
       • <strong>Siendo activo:</strong> Participa en eventos y conversaciones.<br>
       • <strong>Ayudando a nuevos miembros:</strong> Orienta a los novatos.<br>
       • <strong>Proponiendo ideas:</strong> Usa #sugerencias en Discord o el formulario web.<br>
-      • <strong>Creando contenido:</strong> Guías, tutoriales, arte para el clan.<br>
+      • <strong>Creando contenido:</strong> Guías, tutoriales, arte para la comunidad.<br>
       • <strong>Reportando problemas:</strong> Ayuda a mantener un ambiente seguro.<br>
       • <strong>Postulándote como Colaborador:</strong> Áreas de eventos, edición o alianzas.<br>
       • <strong>Uniéndote a un departamento:</strong> Pregunta a un admin si hay vacantes.<br><br>
@@ -691,7 +691,7 @@
       keywords: ['logo', 'serakdepms studios significado', 'lema', 'slogan', 'identidad', 'emblema', 'simbolo'],
       response: `<strong>Identidad de SerakDepMS Studios</strong><br><br>
       <strong>Logo:</strong> Águila ciberpunk construida con circuitos en <strong>verde neón (#00FF66)</strong> sobre fondo negro profundo (#0a0a0a). Representa la excelencia técnica, la visión estratégica y la innovación digital.<br>
-      <strong>Lema:</strong> "Un clan, una leyenda".<br>
+      <strong>Lema:</strong> "Una comunidad, una leyenda".<br>
       <strong>Slogan:</strong> "Unidos por la pasión del gaming".<br>
       <strong>Paleta oficial:</strong> Verde neón (#00FF66) + Negro (#0a0a0a).<br>
       <strong>Empresa matriz:</strong> SerakDepMS (Serak Digital Mastery & Solutions).<br><br>
@@ -711,11 +711,29 @@
       • <strong>Contacto y reportes</strong> (email, formularios, cómo reportar).<br>
       • <strong>Colaboradores</strong> (áreas, requisitos, formulario).<br>
       • <strong>Legal</strong> (privacidad, términos, cookies, DMCA, derechos ARCO).<br>
-      • <strong>Estructura del clan</strong> (jerarquía, departamentos).<br>
+      • <strong>Estructura de SerakDepMS Studios</strong> (jerarquía, departamentos).<br>
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
-      • <strong>Alianzas</strong> (clanes aliados).<br>
+      • <strong>Alianzas</strong> (comunidades aliadas).<br>
       • <strong>Serak</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
+      • <strong>Empresa matriz</strong> (SerakDepMS y los tres pilares).<br>
+      • <strong>Marco legal</strong> (RGPD, LOPDGDD, CCPA, LGPD, DMCA, COPPA).<br><br>
       Escribe tu consulta con naturalidad. ¡Estoy aquí para ti!`
+    },
+    {
+      keywords: ['serakdepms empresa matriz', 'empresa matriz', 'que es serakdepms', 'tres pilares'],
+      response: `<strong>SerakDepMS y sus tres pilares</strong><br><br>
+      SerakDepMS (Serak Digital Mastery &amp; Solutions) es la empresa matriz del ecosistema, responsable del desarrollo web, la arquitectura digital, la ciberseguridad y los servicios profesionales.<br>
+      🌐 <strong>Web Development &amp; Technology:</strong> bajo SerakDepMS.<br>
+      🎮 <strong>Game Development &amp; Gamer Communities:</strong> bajo SerakDepMS Studios.<br>
+      💻 <strong>Programming Communities:</strong> bajo SerakDepMS Studios.<br><br>
+      SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs.`
+    },
+    {
+      keywords: ['marco legal', 'rgpd', 'lopdgdd', 'ccpa', 'lgpd', 'dmca', 'coppa', 'leyes privacidad'],
+      response: `<strong>Marco legal y protección de menores</strong><br><br>
+      El marco informado por SerakDepMS Studios incluye RGPD, LOPDGDD, CCPA, LGPD, DMCA y COPPA.<br>
+      La edad mínima es de 13 años; no se admiten menores de 13 y las personas de 13 a 15 años necesitan consentimiento parental.<br>
+      Para ejercer derechos de privacidad, escribe a serakdepmsofficial7@gmail.com.`
     }
   ];
 
@@ -725,7 +743,7 @@
     const lowerQuery = query.toLowerCase().trim();
 
     if (!lowerQuery) {
-      return `No he entendido tu consulta. ¿Podrías ser más específico? Puedes preguntarme sobre inscripción, reglamento, Discord, eventos, juegos, contacto, legal, estructura del clan, noticias... ¡Lo que necesites!`;
+      return `No he entendido tu consulta. ¿Podrías ser más específico? Puedes preguntarme sobre inscripción, reglamento, Discord, eventos, juegos, contacto, legal, SerakDepMS Studios, noticias... ¡Lo que necesites!`;
     }
 
     let bestMatch = null;
@@ -844,7 +862,7 @@
         • Nuestro servidor de Discord y grupos de WhatsApp por división.<br>
         • Eventos, torneos eSports y convocatorias.<br>
         • Cómo reportar problemas o contactar al staff.<br>
-        • La estructura del clan y cómo ascender.<br>
+        • La estructura de SerakDepMS Studios y cómo ascender.<br>
         • <strong>Colaboradores:</strong> áreas disponibles, requisitos y formulario.<br>
         • <strong>Serak</strong>, nuestro laboratorio de código para aprender HTML, CSS y JavaScript.<br>
         • Noticias, legal, créditos, alianzas.<br><br>

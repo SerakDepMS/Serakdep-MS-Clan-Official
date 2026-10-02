@@ -27,7 +27,7 @@
   background: linear-gradient(90deg,
       var(--primary-green),
       var(--accent-green),
-      var(--bamboo-gold));
+      var(--primary-color));
 }
 
 .team-member:last-child {
@@ -64,7 +64,7 @@
   right: 0;
   width: 40px;
   height: 40px;
-  background: var(--bamboo-gold);
+  background: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@
 }
 
 .avatar-badge .fa-clipboard-check {
-  color: #00b34a;
+  color: #00FF66;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -105,7 +105,7 @@
 }
 
 .member-role {
-  color: #00b34a;
+  color: #00FF66;
   font-weight: 600;
   margin-bottom: 12px;
   font-size: 0.95rem;
@@ -319,7 +319,7 @@
       rgba(0, 255, 102, 0.05) 100%);
   padding: 30px;
   border-radius: 12px;
-  border-left: 5px solid var(--bamboo-gold);
+  border-left: 5px solid var(--primary-color);
   position: relative;
   overflow: hidden;
 }
@@ -339,7 +339,7 @@
 
 .mention-icon {
   flex-shrink: 0;
-  color: var(--bamboo-gold);
+  color: var(--primary-color);
   position: relative;
   z-index: 1;
 }
@@ -425,7 +425,7 @@
   border-radius: 30px;
   font-weight: 600;
   background: linear-gradient(135deg,
-      var(--light-green) 0%,
+      var(--primary-color) 0%,
       var(--accent-green) 100%);
   color: var(--primary-green);
   box-shadow: 0 4px 15px rgba(0, 255, 102, 0.2);
@@ -463,7 +463,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-green), var(--bamboo-gold));
+  background: linear-gradient(90deg, var(--accent-green), var(--primary-color));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -810,7 +810,7 @@ html.dark-theme .thank-item {
 body.dark-theme .thank-item:hover,
 html.dark-theme .thank-item:hover {
   background: #1c1c22 !important;
-  border-left-color: #33ff85 !important;
+  border-left-color: #00FF66 !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 255, 102, 0.15) !important;
 }
 

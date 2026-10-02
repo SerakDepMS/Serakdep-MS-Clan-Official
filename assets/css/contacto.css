@@ -1,5 +1,5 @@
-.contact-hero {
-  background: linear-gradient(135deg, #0a0a0a 0%, #111111 30%, #16161a 60%, #00b34a 100%);
+﻿.contact-hero {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111111 30%, #16161a 60%, #00FF66 100%);
   border-radius: 24px;
   padding: 50px 40px;
   margin-bottom: 40px;
@@ -493,7 +493,7 @@
 }
 
 .suggestion-icon {
-  background: linear-gradient(135deg, #f39c12, #e67e22);
+  background: linear-gradient(135deg, #00FF66, #00c853);
 }
 
 .admin-icon {
@@ -509,7 +509,7 @@
 }
 
 .alliance-icon {
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  background: linear-gradient(135deg, #00FF66, #27ae60);
 }
 
 .help-card h3 {
@@ -885,7 +885,7 @@ body.dark-theme .section-subtitle {
 
 .email-card .direct-btn,
 .cta-buttons .btn:not(.btn-whatsapp) {
-  background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+  background: linear-gradient(135deg, #00FF66 0%, #00FF66 100%) !important;
   color: #0a0a0a !important;
   font-weight: 800 !important;
   border: none !important;

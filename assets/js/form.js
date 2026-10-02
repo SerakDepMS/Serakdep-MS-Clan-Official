@@ -66,7 +66,7 @@ function showToast(message, type = "success") {
   const toast = document.createElement("div");
   toast.className = `toast toast-${type}`;
   toast.style.cssText = `
-    background: ${type === "success" ? "#2ecc71" : type === "error" ? "#e74c3c" : "#3498db"};
+    background: ${type === "success" ? "#00FF66" : type === "error" ? "#e74c3c" : "#3498db"};
     color: white;
     padding: 14px 20px;
     border-radius: 8px;
@@ -404,22 +404,20 @@ function validateInscriptionForm() {
 
   const age = parseInt(document.getElementById("age").value, 10);
   if (isNaN(age) || age < 13) {
-    // COPPA compliance: block users under 13 without verifiable parental consent
     showMessage(
-      "⚠️ Si tienes menos de 13 años, NO puedes registrarte sin el consentimiento verificable de tus padres o tutores legales. " +
-      "Esta restricción cumple con la Ley COPPA y el artículo 8 del RGPD para la protección de menores. " +
-      "Si eres mayor de 13 años, comprueba que has introducido tu edad correctamente.",
+      "⚠️ No se admite el registro de menores de 13 años. La edad mínima es 13 años. " +
+      "Esta restricción protege a los menores conforme a la política de SerakDepMS Studios.",
       "error"
     );
     document.getElementById("age").focus();
     return false;
   }
   if (age >= 13 && age < 16) {
-    // Ages 13-15: allow submission but warn about parental consent requirement
+    // Ages 13-15 require parental consent.
     const parentalConsentAck = document.getElementById("parental-consent-ack");
     if (parentalConsentAck && !parentalConsentAck.checked) {
       showMessage(
-        "⚠️ Los usuarios de entre 13 y 16 años deben contar con el consentimiento de sus padres o tutores legales. " +
+        "⚠️ Los usuarios de 13 a 15 años deben contar con el consentimiento de sus padres o tutores legales. " +
         "Marca la casilla de confirmación parental para continuar.",
         "error"
       );
@@ -1004,7 +1002,7 @@ function scrollToElement(elementId) {
   const targetPosition = element.offsetTop - headerHeight - 50;
   window.scrollTo({ top: targetPosition, behavior: "smooth" });
   element.style.transition = "all 0.5s ease";
-  element.style.boxShadow = "0 0 0 5px rgba(46, 204, 113, 0.3)";
-  setTimeout(() => element.style.boxShadow = "0 10px 30px rgba(46, 204, 113, 0.3)", 500);
+  element.style.boxShadow = "0 0 0 5px rgba(0, 255, 102, 0.3)";
+  setTimeout(() => element.style.boxShadow = "0 10px 30px rgba(0, 255, 102, 0.3)", 500);
   setTimeout(() => element.style.boxShadow = "", 1500);
 }

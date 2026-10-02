@@ -4,7 +4,7 @@
   padding: 20px;
   margin-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #f8f9fa;
 }
 
 .calendar-header {
@@ -13,11 +13,11 @@
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #00b34a;
+  border-bottom: 2px solid #00FF66;
 }
 
 .calendar-nav-btn {
-  background: #007a33;
+  background: #00FF66;
   color: white;
   border: none;
   border-radius: 50%;
@@ -70,7 +70,7 @@
 }
 
 .calendar-day.header {
-  background: #00b34a;
+  background: #00FF66;
   color: white;
   font-weight: bold;
   font-size: 0.9em;
@@ -85,7 +85,7 @@
 
 .calendar-day.event-day {
   background: #e8f5e9;
-  border: 2px solid #00b34a;
+  border: 2px solid #00FF66;
   font-weight: bold;
   position: relative;
   cursor: pointer;
@@ -96,7 +96,7 @@
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #00b34a;
+  background: #00FF66;
   color: white;
   border-radius: 50%;
   width: 24px;
@@ -156,7 +156,7 @@
   gap: 15px;
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #f8f9fa;
 }
 
 .calendar-legend p {
@@ -175,7 +175,7 @@
 }
 
 .legend-today {
-  background: #00b34a;
+  background: #00FF66;
   color: white;
   padding: 2px 8px;
   border-radius: 4px;
@@ -296,7 +296,7 @@
 }
 
 .open-badge {
-  background-color: #00b34a;
+  background-color: #00FF66;
   color: white;
   padding: 2px 8px;
   border-radius: 12px;
@@ -355,7 +355,7 @@
   background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   border-radius: 12px;
   padding: 25px;
-  border: 2px solid #00b34a;
+  border: 2px solid #00FF66;
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
 }
 
@@ -415,7 +415,7 @@
 }
 
 .btn-join-now {
-  background: #00b34a;
+  background: #00FF66;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -533,7 +533,7 @@
 }
 
 .btn-join-now-modal {
-  background-color: #00b34a;
+  background-color: #00FF66;
   color: white;
 }
 
@@ -583,7 +583,7 @@
 }
 
 .news-link {
-  color: #00b34a;
+  color: #00FF66;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -733,7 +733,7 @@
   }
 
   .event-calendar::-webkit-scrollbar-thumb {
-    background: #00b34a;
+    background: #00FF66;
     border-radius: 4px;
   }
 
@@ -890,7 +890,7 @@ body.dark-theme .event-list-item {
 
 body.dark-theme .event-list-item:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-  border-left-color: #33ff85 !important;
+  border-left-color: #00FF66 !important;
 }
 
 body.dark-theme .event-list-item.today-event-list {
@@ -993,7 +993,7 @@ body.dark-theme .btn-join-now-modal {
 }
 
 body.dark-theme .btn-join-now-modal:hover {
-  background-color: #33ff85 !important;
+  background-color: #00FF66 !important;
 }
 
 body.dark-theme .btn-share-event {
@@ -1016,7 +1016,7 @@ body.dark-theme .news-link {
 }
 
 body.dark-theme .news-link:hover {
-  color: #33ff85 !important;
+  color: #00FF66 !important;
 }
 
 body.dark-theme .reminder-note {
@@ -1062,7 +1062,7 @@ body.dark-theme .btn-join-now {
 .btn-join-now-modal,
 .today-button,
 .btn-join-now {
-  background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+  background: linear-gradient(135deg, #00FF66 0%, #00FF66 100%) !important;
   color: #0a0a0a !important;
   font-weight: 800 !important;
   border: none !important;

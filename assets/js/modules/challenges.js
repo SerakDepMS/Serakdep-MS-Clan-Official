@@ -22,12 +22,12 @@ export const challenges = [
     instructions: [
       'En <strong>index.html</strong>, coloca un <code>&lt;button&gt;</code> con la clase "btn".',
       'En <strong>styles.css</strong>, define la clase <code>.btn</code> con fondo verde, texto blanco, bordes redondeados y padding.',
-      'Agrega una pseudo-clase <code>.btn:hover</code> que cambie el color de fondo a dorado y escale ligeramente.',
+      'Agrega una pseudo-clase <code>.btn:hover</code> que cambie el color de fondo a verde neón y escale ligeramente.',
       'Observa el resultado en la vista previa.'
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="btn">Haz clic</button>' },
-      { name: 'styles.css', lang: 'css', content: '.btn {\n  background: #2d6a4f;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n}\n.btn:hover {\n  background: #d4af37;\n  transform: scale(1.05);\n}' }
+      { name: 'styles.css', lang: 'css', content: '.btn {\n  background: #00FF66;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  cursor: pointer;\n}\n.btn:hover {\n  background: #00FF66;\n  transform: scale(1.05);\n}' }
     ]
   },
   {
@@ -95,7 +95,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<form id="formContacto">\n  <input type="text" id="nombre" placeholder="Nombre" required>\n  <input type="email" id="email" placeholder="Email" required>\n  <textarea id="mensaje" placeholder="Mensaje" required></textarea>\n  <button type="submit">Enviar</button>\n</form>\n<div id="resultado"></div>' },
-      { name: 'styles.css', lang: 'css', content: 'form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }\ninput, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }\nbutton { background: #2d6a4f; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }' },
+      { name: 'styles.css', lang: 'css', content: 'form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }\ninput, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }\nbutton { background: #00FF66; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("formContacto").addEventListener("submit", function(e) {\n  e.preventDefault();\n  const nombre = document.getElementById("nombre").value;\n  const email = document.getElementById("email").value;\n  const mensaje = document.getElementById("mensaje").value;\n  document.getElementById("resultado").innerHTML = `<p>Gracias, ${nombre}. Te contactaremos al correo ${email}.</p>`;\n  this.reset();\n});' }
     ]
   },
@@ -128,7 +128,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav>\n  <ul class="menu">\n    <li><a href="#">Inicio</a></li>\n    <li><a href="#">Servicios</a></li>\n    <li><a href="#">Portfolio</a></li>\n    <li><a href="#">Contacto</a></li>\n  </ul>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: '.menu {\n  display: flex;\n  list-style: none;\n  background: #2d6a4f;\n  padding: 10px;\n  justify-content: center;\n  gap: 20px;\n}\n.menu a {\n  color: white;\n  text-decoration: none;\n  padding: 5px 10px;\n}\n.menu a:hover {\n  background: #d4af37;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .menu {\n    flex-direction: column;\n    align-items: center;\n  }\n}' }
+      { name: 'styles.css', lang: 'css', content: '.menu {\n  display: flex;\n  list-style: none;\n  background: #00FF66;\n  padding: 10px;\n  justify-content: center;\n  gap: 20px;\n}\n.menu a {\n  color: white;\n  text-decoration: none;\n  padding: 5px 10px;\n}\n.menu a:hover {\n  background: #00FF66;\n  border-radius: 4px;\n}\n@media (max-width: 600px) {\n  .menu {\n    flex-direction: column;\n    align-items: center;\n  }\n}' }
     ]
   },
   {
@@ -193,7 +193,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="faq">\n  <div class="pregunta">¿Qué es HTML?</div>\n  <div class="respuesta">Lenguaje de marcado para estructurar páginas web.</div>\n  <div class="pregunta">¿Qué es CSS?</div>\n  <div class="respuesta">Hojas de estilo para diseñar la apariencia.</div>\n  <div class="pregunta">¿Qué es JavaScript?</div>\n  <div class="respuesta">Lenguaje de programación para interactividad.</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.pregunta { background: #2d6a4f; color: white; padding: 10px; margin-top: 5px; cursor: pointer; }\n.respuesta { display: none; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; }' },
+      { name: 'styles.css', lang: 'css', content: '.pregunta { background: #00FF66; color: white; padding: 10px; margin-top: 5px; cursor: pointer; }\n.respuesta { display: none; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelectorAll(".pregunta").forEach(p => {\n  p.addEventListener("click", () => {\n    const r = p.nextElementSibling;\n    r.style.display = r.style.display === "block" ? "none" : "block";\n  });\n});' }
     ]
   },
@@ -273,7 +273,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="hamburguesa">☰</button>\n<nav id="menu">\n  <a href="#">Inicio</a>\n  <a href="#">Servicios</a>\n  <a href="#">Contacto</a>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: 'nav { display: none; flex-direction: column; background: #2d6a4f; padding: 10px; }\nnav.abierto { display: flex; }\n.hamburguesa { display: none; }\n@media (max-width: 600px) {\n  .hamburguesa { display: block; }\n  nav { display: none; }\n}' },
+      { name: 'styles.css', lang: 'css', content: 'nav { display: none; flex-direction: column; background: #00FF66; padding: 10px; }\nnav.abierto { display: flex; }\n.hamburguesa { display: none; }\n@media (max-width: 600px) {\n  .hamburguesa { display: block; }\n  nav { display: none; }\n}' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".hamburguesa").addEventListener("click", () => {\n  document.getElementById("menu").classList.toggle("abierto");\n});' }
     ]
   },
@@ -288,7 +288,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<p>Pasa el ratón sobre <span class="tooltip" data-tooltip="Esto es un tooltip">esta palabra</span> para ver un tooltip.</p>' },
-      { name: 'styles.css', lang: 'css', content: '.tooltip { position: relative; cursor: pointer; color: #2d6a4f; }\n.tooltip::after {\n  content: attr(data-tooltip);\n  position: absolute;\n  bottom: 100%;\n  left: 0;\n  background: #333;\n  color: #fff;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  display: none;\n}\n.tooltip:hover::after { display: block; }' }
+      { name: 'styles.css', lang: 'css', content: '.tooltip { position: relative; cursor: pointer; color: #00FF66; }\n.tooltip::after {\n  content: attr(data-tooltip);\n  position: absolute;\n  bottom: 100%;\n  left: 0;\n  background: #333;\n  color: #fff;\n  padding: 5px 10px;\n  border-radius: 5px;\n  white-space: nowrap;\n  display: none;\n}\n.tooltip:hover::after { display: block; }' }
     ]
   },
   {
@@ -350,7 +350,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="flip-card">\n  <div class="flip-card-inner">\n    <div class="flip-card-front"><h2>Front</h2></div>\n    <div class="flip-card-back"><h2>Back</h2><p>Información oculta</p></div>\n  </div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.flip-card { width: 200px; height: 250px; perspective: 1000px; }\n.flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }\n.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }\n.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; display: flex; align-items: center; justify-content: center; }\n.flip-card-front { background: #2d6a4f; color: white; }\n.flip-card-back { background: #d4af37; color: black; transform: rotateY(180deg); }' }
+      { name: 'styles.css', lang: 'css', content: '.flip-card { width: 200px; height: 250px; perspective: 1000px; }\n.flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }\n.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }\n.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; display: flex; align-items: center; justify-content: center; }\n.flip-card-front { background: #00FF66; color: white; }\n.flip-card-back { background: #00FF66; color: black; transform: rotateY(180deg); }' }
     ]
   },
   {
@@ -365,7 +365,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="loader"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.loader {\n  border: 8px solid #f3f3f3;\n  border-top: 8px solid #2d6a4f;\n  border-radius: 50%;\n  width: 60px;\n  height: 60px;\n  animation: girar 1s linear infinite;\n  margin: auto;\n}\n@keyframes girar {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}' }
+      { name: 'styles.css', lang: 'css', content: '.loader {\n  border: 8px solid #f3f3f3;\n  border-top: 8px solid #00FF66;\n  border-radius: 50%;\n  width: 60px;\n  height: 60px;\n  animation: girar 1s linear infinite;\n  margin: auto;\n}\n@keyframes girar {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}' }
     ]
   },
   {
@@ -380,7 +380,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="error-404">\n  <h1>404</h1>\n  <p>Página no encontrada</p>\n  <a href="#">Volver al inicio</a>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.error-404 { text-align: center; margin-top: 100px; }\nh1 { font-size: 5rem; color: #2d6a4f; animation: flotar 2s infinite alternate; }\na { padding: 10px 20px; background: #d4af37; color: white; text-decoration: none; border-radius: 5px; }\n@keyframes flotar { from { transform: translateY(0); } to { transform: translateY(-10px); } }' }
+      { name: 'styles.css', lang: 'css', content: '.error-404 { text-align: center; margin-top: 100px; }\nh1 { font-size: 5rem; color: #00FF66; animation: flotar 2s infinite alternate; }\na { padding: 10px 20px; background: #00FF66; color: white; text-decoration: none; border-radius: 5px; }\n@keyframes flotar { from { transform: translateY(0); } to { transform: translateY(-10px); } }' }
     ]
   },
   {
@@ -441,7 +441,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="timeline">\n  <div class="evento"><h3>2020</h3><p>Comenzó la pandemia</p></div>\n  <div class="evento"><h3>2022</h3><p>Aprendí desarrollo web</p></div>\n  <div class="evento"><h3>2025</h3><p>Proyecto actual</p></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.timeline { position: relative; padding-left: 30px; }\n.timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: #2d6a4f; }\n.evento { margin-bottom: 20px; position: relative; }\n.evento::before { content: ""; position: absolute; left: -24px; top: 5px; width: 10px; height: 10px; background: #d4af37; border-radius: 50%; }' }
+      { name: 'styles.css', lang: 'css', content: '.timeline { position: relative; padding-left: 30px; }\n.timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: #00FF66; }\n.evento { margin-bottom: 20px; position: relative; }\n.evento::before { content: ""; position: absolute; left: -24px; top: 5px; width: 10px; height: 10px; background: #00FF66; border-radius: 50%; }' }
     ]
   },
   {
@@ -455,7 +455,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="maquina"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#maquina { font-family: "Courier New", monospace; font-size: 1.5rem; border-right: 2px solid #2d6a4f; white-space: nowrap; overflow: hidden; }' },
+      { name: 'styles.css', lang: 'css', content: '#maquina { font-family: "Courier New", monospace; font-size: 1.5rem; border-right: 2px solid #00FF66; white-space: nowrap; overflow: hidden; }' },
       { name: 'script.js', lang: 'js', content: 'const texto = "¡Hola, bienvenido al laboratorio!";\nlet i = 0;\nconst div = document.getElementById("maquina");\nconst intervalo = setInterval(() => {\n  if (i < texto.length) { div.textContent += texto.charAt(i); i++; }\n  else clearInterval(intervalo);\n}, 80);' }
     ]
   },
@@ -500,7 +500,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="grafico">\n  <div class="barra" style="height: 60%;">60</div>\n  <div class="barra" style="height: 80%;">80</div>\n  <div class="barra" style="height: 40%;">40</div>\n  <div class="barra" style="height: 90%;">90</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.grafico { display: flex; align-items: flex-end; gap: 10px; height: 200px; border-left: 2px solid #000; border-bottom: 2px solid #000; padding: 10px; }\n.barra { width: 40px; background: #2d6a4f; color: white; text-align: center; }' }
+      { name: 'styles.css', lang: 'css', content: '.grafico { display: flex; align-items: flex-end; gap: 10px; height: 200px; border-left: 2px solid #000; border-bottom: 2px solid #000; padding: 10px; }\n.barra { width: 40px; background: #00FF66; color: white; text-align: center; }' }
     ]
   },
   {
@@ -530,7 +530,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="caja" id="origen">\n  <div class="item" draggable="true">Elemento 1</div>\n  <div class="item" draggable="true">Elemento 2</div>\n</div>\n<div class="caja" id="destino"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.caja { width: 200px; min-height: 100px; border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; vertical-align: top; }\n.item { background: #2d6a4f; color: white; padding: 5px; margin: 5px 0; cursor: grab; }' },
+      { name: 'styles.css', lang: 'css', content: '.caja { width: 200px; min-height: 100px; border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; vertical-align: top; }\n.item { background: #00FF66; color: white; padding: 5px; margin: 5px 0; cursor: grab; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelectorAll(".item").forEach(item => {\n  item.addEventListener("dragstart", e => {\n    e.dataTransfer.setData("text/plain", e.target.outerHTML);\n    e.target.classList.add("dragging");\n  });\n  item.addEventListener("dragend", e => e.target.classList.remove("dragging"));\n});\nconst destino = document.getElementById("destino");\ndestino.addEventListener("dragover", e => e.preventDefault());\ndestino.addEventListener("drop", e => {\n  e.preventDefault();\n  const html = e.dataTransfer.getData("text/plain");\n  destino.innerHTML += html;\n});' }
     ]
   },
@@ -546,7 +546,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<header>Cabecera</header>\n<main>Contenido principal</main>\n<footer>Pie de página</footer>' },
-      { name: 'styles.css', lang: 'css', content: 'html, body { height: 100%; margin: 0; }\nbody { display: flex; flex-direction: column; min-height: 100vh; }\nheader, footer { background: #2d6a4f; color: white; padding: 15px; text-align: center; }\nmain { flex: 1; padding: 20px; }' }
+      { name: 'styles.css', lang: 'css', content: 'html, body { height: 100%; margin: 0; }\nbody { display: flex; flex-direction: column; min-height: 100vh; }\nheader, footer { background: #00FF66; color: white; padding: 15px; text-align: center; }\nmain { flex: 1; padding: 20px; }' }
     ]
   },
   {
@@ -561,7 +561,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="parallax"></div>\n<div style="padding: 50px; background: #fff;">\n  <h2>Contenido después del parallax</h2>\n  <p>Texto de relleno...</p>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.parallax {\n  background-image: url("https://via.placeholder.com/1200x400/2d6a4f/ffffff");\n  height: 300px;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}' }
+      { name: 'styles.css', lang: 'css', content: '.parallax {\n  background-image: url("https://via.placeholder.com/1200x400/00FF66/ffffff");\n  height: 300px;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}' }
     ]
   },
   {
@@ -638,7 +638,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="tab activa" data-tab="1">Pestaña 1</button>\n<button class="tab" data-tab="2">Pestaña 2</button>\n<div class="tab-content" id="tab1">Contenido del primer tab</div>\n<div class="tab-content oculto" id="tab2">Contenido del segundo tab</div>' },
-      { name: 'styles.css', lang: 'css', content: '.tab { padding: 10px; cursor: pointer; }\n.tab.activa { background: #2d6a4f; color: white; }\n.tab-content { padding: 10px; border: 1px solid #ccc; }\n.oculto { display: none; }' },
+      { name: 'styles.css', lang: 'css', content: '.tab { padding: 10px; cursor: pointer; }\n.tab.activa { background: #00FF66; color: white; }\n.tab-content { padding: 10px; border: 1px solid #ccc; }\n.oculto { display: none; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelectorAll(".tab").forEach(tab => {\n  tab.addEventListener("click", () => {\n    document.querySelectorAll(".tab").forEach(t => t.classList.remove("activa"));\n    tab.classList.add("activa");\n    document.querySelectorAll(".tab-content").forEach(c => c.classList.add("oculto"));\n    document.getElementById("tab" + tab.dataset.tab).classList.remove("oculto");\n  });\n});' }
     ]
   },
@@ -754,7 +754,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav>\n  <ul class="nav">\n    <li><a href="#">Inicio</a></li>\n    <li class="dropdown"><a href="#">Servicios ▾</a>\n      <ul class="submenu">\n        <li><a href="#">Diseño web</a></li>\n        <li><a href="#">SEO</a></li>\n      </ul>\n    </li>\n    <li><a href="#">Contacto</a></li>\n  </ul>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: '.nav { list-style:none; display:flex; background:#2d6a4f; padding:10px; }\n.nav a { color:white; text-decoration:none; padding:5px 10px; }\n.dropdown { position:relative; }\n.submenu { display:none; position:absolute; top:100%; left:0; background:#333; min-width:150px; }\n.submenu li { display:block; }\n.dropdown:hover .submenu { display:block; }' }
+      { name: 'styles.css', lang: 'css', content: '.nav { list-style:none; display:flex; background:#00FF66; padding:10px; }\n.nav a { color:white; text-decoration:none; padding:5px 10px; }\n.dropdown { position:relative; }\n.submenu { display:none; position:absolute; top:100%; left:0; background:#333; min-width:150px; }\n.submenu li { display:block; }\n.dropdown:hover .submenu { display:block; }' }
     ]
   },
   {
@@ -823,7 +823,7 @@ export const challenges = [
       'En <strong>script.js</strong>, escucha <code>mousemove</code> y actualiza <code>text-shadow</code> o <code>box-shadow</code> según coordenadas.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div id="sombra" style="width:200px;height:200px;background:#2d6a4f;">Mueve el ratón</div>' },
+      { name: 'index.html', lang: 'html', content: '<div id="sombra" style="width:200px;height:200px;background:#00FF66;">Mueve el ratón</div>' },
       { name: 'script.js', lang: 'js', content: 'document.addEventListener("mousemove", e => {\n  const div = document.getElementById("sombra");\n  const x = (e.clientX - window.innerWidth/2) / 15;\n  const y = (e.clientY - window.innerHeight/2) / 15;\n  div.style.boxShadow = `${x}px ${y}px 20px rgba(0,0,0,0.5)`;\n});' }
     ]
   },
@@ -852,7 +852,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="pelota"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.pelota {\n  width: 50px; height: 50px; background: #d4af37; border-radius: 50%;\n  animation: rebotar 1s infinite alternate ease-in;\n}\n@keyframes rebotar {\n  from { transform: translateY(0); }\n  to { transform: translateY(200px); }\n}' }
+      { name: 'styles.css', lang: 'css', content: '.pelota {\n  width: 50px; height: 50px; background: #00FF66; border-radius: 50%;\n  animation: rebotar 1s infinite alternate ease-in;\n}\n@keyframes rebotar {\n  from { transform: translateY(0); }\n  to { transform: translateY(200px); }\n}' }
     ]
   },
   {
@@ -911,7 +911,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div style="height:2000px;"></div>\n<button id="irArriba">↑</button>' },
-      { name: 'styles.css', lang: 'css', content: '#irArriba { position:fixed; bottom:20px; right:20px; display:none; padding:10px; background:#2d6a4f; color:white; border:none; border-radius:50%; cursor:pointer; }' },
+      { name: 'styles.css', lang: 'css', content: '#irArriba { position:fixed; bottom:20px; right:20px; display:none; padding:10px; background:#00FF66; color:white; border:none; border-radius:50%; cursor:pointer; }' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  document.getElementById("irArriba").style.display = window.scrollY > 200 ? "block" : "none";\n});\ndocument.getElementById("irArriba").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));' }
     ]
   },
@@ -1014,7 +1014,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="typewriter">Esto es un efecto de máquina de escribir</div>' },
-      { name: 'styles.css', lang: 'css', content: '.typewriter {\n  overflow: hidden;\n  white-space: nowrap;\n  border-right: 2px solid #2d6a4f;\n  animation: escribir 4s steps(40) infinite;\n}\n@keyframes escribir {\n  from { width: 0; }\n  to { width: 100%; }\n}' }
+      { name: 'styles.css', lang: 'css', content: '.typewriter {\n  overflow: hidden;\n  white-space: nowrap;\n  border-right: 2px solid #00FF66;\n  animation: escribir 4s steps(40) infinite;\n}\n@keyframes escribir {\n  from { width: 0; }\n  to { width: 100%; }\n}' }
     ]
   },
   {
@@ -1028,7 +1028,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, añade <code>transform-style: preserve-3d</code>.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div class="card3d" style="width:200px;height:250px;background:#2d6a4f;color:white;">Pasa el ratón</div>' },
+      { name: 'index.html', lang: 'html', content: '<div class="card3d" style="width:200px;height:250px;background:#00FF66;color:white;">Pasa el ratón</div>' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".card3d").addEventListener("mousemove", e => {\n  const card = e.currentTarget;\n  const rect = card.getBoundingClientRect();\n  const x = (e.clientX - rect.left) / rect.width - 0.5;\n  const y = (e.clientY - rect.top) / rect.height - 0.5;\n  card.style.transform = `rotateY(${x*20}deg) rotateX(${-y*20}deg)`;\n});' }
     ]
   },
@@ -1243,7 +1243,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<svg id="pie" width="200" height="200"></svg>' },
-      { name: 'script.js', lang: 'js', content: 'const svg = document.getElementById("pie");\nconst data = [40, 30, 20, 10];\nconst colores = ["#e74c3c", "#3498db", "#2ecc71", "#f1c40f"];\nlet acum = 0;\ndata.forEach((val, i) => {\n  const angulo = val / 100 * Math.PI * 2;\n  const x1 = 100 + 70 * Math.cos(acum);\n  const y1 = 100 + 70 * Math.sin(acum);\n  acum += angulo;\n  const x2 = 100 + 70 * Math.cos(acum);\n  const y2 = 100 + 70 * Math.sin(acum);\n  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");\n  const grande = angulo > Math.PI ? 1 : 0;\n  path.setAttribute("d", `M 100 100 L ${x1} ${y1} A 70 70 0 ${grande} 1 ${x2} ${y2} Z`);\n  path.setAttribute("fill", colores[i]);\n  svg.appendChild(path);\n});' }
+      { name: 'script.js', lang: 'js', content: 'const svg = document.getElementById("pie");\nconst data = [40, 30, 20, 10];\nconst colores = ["#e74c3c", "#3498db", "#00FF66", "#f1c40f"];\nlet acum = 0;\ndata.forEach((val, i) => {\n  const angulo = val / 100 * Math.PI * 2;\n  const x1 = 100 + 70 * Math.cos(acum);\n  const y1 = 100 + 70 * Math.sin(acum);\n  acum += angulo;\n  const x2 = 100 + 70 * Math.cos(acum);\n  const y2 = 100 + 70 * Math.sin(acum);\n  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");\n  const grande = angulo > Math.PI ? 1 : 0;\n  path.setAttribute("d", `M 100 100 L ${x1} ${y1} A 70 70 0 ${grande} 1 ${x2} ${y2} Z`);\n  path.setAttribute("fill", colores[i]);\n  svg.appendChild(path);\n});' }
     ]
   },
   {
@@ -1257,7 +1257,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<textarea id="datos">10,45,30,80,55</textarea>\n<button id="dibujar">Dibujar gráfico</button>\n<canvas id="canvasBar" width="400" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'document.getElementById("dibujar").addEventListener("click", () => {\n  const datos = document.getElementById("datos").value.split(",").map(Number);\n  const canvas = document.getElementById("canvasBar");\n  const ctx = canvas.getContext("2d");\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n  const max = Math.max(...datos);\n  const ancho = canvas.width / datos.length - 5;\n  datos.forEach((v, i) => {\n    const altura = (v / max) * canvas.height;\n    ctx.fillStyle = "#2d6a4f";\n    ctx.fillRect(i * (ancho+5), canvas.height - altura, ancho, altura);\n  });\n});' }
+      { name: 'script.js', lang: 'js', content: 'document.getElementById("dibujar").addEventListener("click", () => {\n  const datos = document.getElementById("datos").value.split(",").map(Number);\n  const canvas = document.getElementById("canvasBar");\n  const ctx = canvas.getContext("2d");\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n  const max = Math.max(...datos);\n  const ancho = canvas.width / datos.length - 5;\n  datos.forEach((v, i) => {\n    const altura = (v / max) * canvas.height;\n    ctx.fillStyle = "#00FF66";\n    ctx.fillRect(i * (ancho+5), canvas.height - altura, ancho, altura);\n  });\n});' }
     ]
   },
   {
@@ -1300,7 +1300,7 @@ export const challenges = [
       'En <strong>script.js</strong>, ajusta el dashoffset según el porcentaje.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg id="progresoCircular" width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="8"/>\n  <circle id="progreso" cx="60" cy="60" r="50" fill="none" stroke="#2d6a4f" stroke-width="8" stroke-dasharray="314" stroke-dashoffset="314" />\n</svg>\n<input type="number" id="porcentaje" value="75" max="100">' },
+      { name: 'index.html', lang: 'html', content: '<svg id="progresoCircular" width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="8"/>\n  <circle id="progreso" cx="60" cy="60" r="50" fill="none" stroke="#00FF66" stroke-width="8" stroke-dasharray="314" stroke-dashoffset="314" />\n</svg>\n<input type="number" id="porcentaje" value="75" max="100">' },
       { name: 'script.js', lang: 'js', content: 'const circulo = document.getElementById("progreso");\nconst perimetro = 2 * Math.PI * 50; // 314.15\ncirculo.style.strokeDasharray = perimetro;\ncirculo.style.strokeDashoffset = perimetro;\ndocument.getElementById("porcentaje").addEventListener("input", function() {\n  const val = Math.min(100, Math.max(0, this.value));\n  circulo.style.strokeDashoffset = perimetro - (val / 100) * perimetro;\n});' }
     ]
   },
@@ -1399,7 +1399,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, aplica un color de fondo usando variables CSS.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<span class="badge" style="--color:#e74c3c">Urgente</span>\n<span class="badge" style="--color:#2ecc71">Listo</span>\n<span class="badge" style="--color:#f1c40f">Pendiente</span>' },
+      { name: 'index.html', lang: 'html', content: '<span class="badge" style="--color:#e74c3c">Urgente</span>\n<span class="badge" style="--color:#00FF66">Listo</span>\n<span class="badge" style="--color:#f1c40f">Pendiente</span>' },
       { name: 'styles.css', lang: 'css', content: '.badge {\n  background: var(--color);\n  color: white;\n  padding: 3px 10px;\n  border-radius: 20px;\n  font-size: 0.8rem;\n}' }
     ]
   },
@@ -1414,7 +1414,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="flujo">\n  <div class="nodo">Inicio</div>\n  <div class="flecha"></div>\n  <div class="nodo">Proceso</div>\n  <div class="flecha"></div>\n  <div class="nodo">Fin</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.flujo { display: flex; align-items: center; }\n.nodo { padding: 10px 20px; background: #2d6a4f; color: white; border-radius: 5px; }\n.flecha { width: 30px; height: 2px; background: #333; position: relative; }\n.flecha::after { content: ""; position: absolute; right: -5px; top: -4px; border-left: 10px solid #333; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }' }
+      { name: 'styles.css', lang: 'css', content: '.flujo { display: flex; align-items: center; }\n.nodo { padding: 10px 20px; background: #00FF66; color: white; border-radius: 5px; }\n.flecha { width: 30px; height: 2px; background: #333; position: relative; }\n.flecha::after { content: ""; position: absolute; right: -5px; top: -4px; border-left: 10px solid #333; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }' }
     ]
   },
   {
@@ -1494,7 +1494,7 @@ export const challenges = [
     description: 'Crea 5 estrellas que se iluminen al pasar el ratón y permitan seleccionar una valoración.',
     instructions: [
       'En <strong>index.html</strong>, coloca 5 span con la clase "estrella" y un símbolo ☆.',
-      'En <strong>styles.css</strong>, cambia el color a dorado cuando tenga la clase "activa".',
+      'En <strong>styles.css</strong>, cambia el color a verde neón cuando tenga la clase "activa".',
       'En <strong>script.js</strong>, al hacer clic marca todas las anteriores y guarda el valor.'
     ],
     template: [
@@ -1531,7 +1531,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="ripple-btn">Haz clic</button>' },
-      { name: 'styles.css', lang: 'css', content: '.ripple-btn { position: relative; overflow: hidden; padding: 12px 24px; background: #2d6a4f; color: white; border: none; cursor: pointer; }\n.ripple-btn .onda { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.4); transform: scale(0); animation: onda 0.6s linear; }\n@keyframes onda { to { transform: scale(4); opacity: 0; } }' },
+      { name: 'styles.css', lang: 'css', content: '.ripple-btn { position: relative; overflow: hidden; padding: 12px 24px; background: #00FF66; color: white; border: none; cursor: pointer; }\n.ripple-btn .onda { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.4); transform: scale(0); animation: onda 0.6s linear; }\n@keyframes onda { to { transform: scale(4); opacity: 0; } }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".ripple-btn").addEventListener("click", function(e) {\n  const btn = e.currentTarget;\n  const rect = btn.getBoundingClientRect();\n  const x = e.clientX - rect.left;\n  const y = e.clientY - rect.top;\n  const onda = document.createElement("span");\n  onda.className = "onda";\n  onda.style.left = x + "px";\n  onda.style.top = y + "px";\n  btn.appendChild(onda);\n  setTimeout(() => onda.remove(), 600);\n});' }
     ]
   },
@@ -1574,7 +1574,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="tabs-css">\n  <input type="radio" id="tab1" name="tabs" checked>\n  <label for="tab1">Tab 1</label>\n  <input type="radio" id="tab2" name="tabs">\n  <label for="tab2">Tab 2</label>\n  <div class="content" id="content1">Contenido 1</div>\n  <div class="content" id="content2">Contenido 2</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.tabs-css input { display: none; }\n.tabs-css label { display: inline-block; padding: 10px; background: #eee; cursor: pointer; }\n.tabs-css label:hover { background: #ddd; }\n.tabs-css input:checked + label { background: #2d6a4f; color: white; }\n.tabs-css .content { display: none; padding: 15px; border: 1px solid #ccc; }\n#tab1:checked ~ #content1 { display: block; }\n#tab2:checked ~ #content2 { display: block; }' }
+      { name: 'styles.css', lang: 'css', content: '.tabs-css input { display: none; }\n.tabs-css label { display: inline-block; padding: 10px; background: #eee; cursor: pointer; }\n.tabs-css label:hover { background: #ddd; }\n.tabs-css input:checked + label { background: #00FF66; color: white; }\n.tabs-css .content { display: none; padding: 15px; border: 1px solid #ccc; }\n#tab1:checked ~ #content1 { display: block; }\n#tab2:checked ~ #content2 { display: block; }' }
     ]
   },
   {
@@ -1602,7 +1602,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="barra"><div class="progreso"></div></div>' },
-      { name: 'styles.css', lang: 'css', content: '.barra { width: 300px; height: 20px; background: #eee; border-radius: 10px; overflow: hidden; }\n.progreso { height: 100%; background: #2d6a4f; animation: cargar 3s forwards; }\n@keyframes cargar { from { width: 0; } to { width: 100%; } }' }
+      { name: 'styles.css', lang: 'css', content: '.barra { width: 300px; height: 20px; background: #eee; border-radius: 10px; overflow: hidden; }\n.progreso { height: 100%; background: #00FF66; animation: cargar 3s forwards; }\n@keyframes cargar { from { width: 0; } to { width: 100%; } }' }
     ]
   },
   {
@@ -1631,7 +1631,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="tablero">\n  <div class="carta" data-par="1">🍎</div>\n  <div class="carta" data-par="1">🍎</div>\n  <div class="carta" data-par="2">🍋</div>\n  <div class="carta" data-par="2">🍋</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.tablero { display: grid; grid-template-columns: repeat(2, 100px); gap: 10px; }\n.carta { width: 100px; height: 100px; background: #2d6a4f; color: transparent; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; border-radius: 10px; }\n.carta.volteada { background: #fff; color: black; }' },
+      { name: 'styles.css', lang: 'css', content: '.tablero { display: grid; grid-template-columns: repeat(2, 100px); gap: 10px; }\n.carta { width: 100px; height: 100px; background: #00FF66; color: transparent; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; border-radius: 10px; }\n.carta.volteada { background: #fff; color: black; }' },
       { name: 'script.js', lang: 'js', content: 'let volteadas = [];\nlet bloqueado = false;\ndocument.querySelectorAll(".carta").forEach(c => {\n  c.addEventListener("click", () => {\n    if (bloqueado || c.classList.contains("volteada")) return;\n    c.classList.add("volteada");\n    volteadas.push(c);\n    if (volteadas.length === 2) {\n      if (volteadas[0].dataset.par === volteadas[1].dataset.par) {\n        volteadas = [];\n      } else {\n        bloqueado = true;\n        setTimeout(() => {\n          volteadas.forEach(c => c.classList.remove("volteada"));\n          volteadas = [];\n          bloqueado = false;\n        }, 800);\n      }\n    }\n  });\n});' }
     ]
   },
@@ -1661,7 +1661,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="fondo-animado">\n  <div class="forma circulo"></div>\n  <div class="forma triangulo"></div>\n  <div class="forma circulo2"></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.fondo-animado { position: relative; height: 200px; overflow: hidden; background: #1e1e2e; }\n.forma { position: absolute; }\n.circulo { width: 50px; height: 50px; background: rgba(212, 175, 55, 0.3); border-radius: 50%; animation: flotar 5s infinite alternate; left: 20px; top: 50px; }\n.triangulo { width: 0; height: 0; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 50px solid rgba(45, 106, 79, 0.4); animation: flotar 7s infinite alternate; left: 120px; top: 30px; }\n.circulo2 { width: 30px; height: 30px; background: rgba(231, 76, 60, 0.2); border-radius: 50%; animation: flotar 4s infinite alternate; left: 200px; top: 80px; }\n@keyframes flotar { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(30px) rotate(180deg); } }' }
+      { name: 'styles.css', lang: 'css', content: '.fondo-animado { position: relative; height: 200px; overflow: hidden; background: #1e1e2e; }\n.forma { position: absolute; }\n.circulo { width: 50px; height: 50px; background: rgba(0, 255, 102, 0.3); border-radius: 50%; animation: flotar 5s infinite alternate; left: 20px; top: 50px; }\n.triangulo { width: 0; height: 0; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 50px solid rgba(0, 255, 102, 0.4); animation: flotar 7s infinite alternate; left: 120px; top: 30px; }\n.circulo2 { width: 30px; height: 30px; background: rgba(231, 76, 60, 0.2); border-radius: 50%; animation: flotar 4s infinite alternate; left: 200px; top: 80px; }\n@keyframes flotar { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(30px) rotate(180deg); } }' }
     ]
   },
   {
@@ -1774,7 +1774,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<ul class="arbol">\n  <li>Raíz\n    <ul>\n      <li>Rama 1</li>\n      <li>Rama 2</li>\n    </ul>\n  </li>\n</ul>' },
-      { name: 'styles.css', lang: 'css', content: '.arbol, .arbol ul { list-style: none; position: relative; }\n.arbol li { padding: 5px 0; position: relative; }\n.arbol li::before { content: ""; position: absolute; left: -15px; top: 0; border-left: 1px solid #2d6a4f; height: 100%; }\n.arbol ul { margin-left: 20px; }' }
+      { name: 'styles.css', lang: 'css', content: '.arbol, .arbol ul { list-style: none; position: relative; }\n.arbol li { padding: 5px 0; position: relative; }\n.arbol li::before { content: ""; position: absolute; left: -15px; top: 0; border-left: 1px solid #00FF66; height: 100%; }\n.arbol ul { margin-left: 20px; }' }
     ]
   },
   {
@@ -1914,7 +1914,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav>\n  <a href="#">Inicio</a>\n  <a href="#">Servicios</a>\n  <a href="#">Contacto</a>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: 'a { text-decoration: none; position: relative; padding: 5px 10px; }\na::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #2d6a4f; transform: scaleX(0); transition: transform 0.3s; }\na:hover::after { transform: scaleX(1); }' }
+      { name: 'styles.css', lang: 'css', content: 'a { text-decoration: none; position: relative; padding: 5px 10px; }\na::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #00FF66; transform: scaleX(0); transition: transform 0.3s; }\na:hover::after { transform: scaleX(1); }' }
     ]
   },
   {
@@ -1972,7 +1972,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="grafico">\n  <div style="height: 60%;">60%</div>\n  <div style="height: 90%;">90%</div>\n  <div style="height: 40%;">40%</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.grafico { display: flex; align-items: flex-end; gap: 10px; height: 150px; border-bottom: 2px solid #333; }\n.grafico div { width: 40px; background: #2d6a4f; color: white; text-align: center; }' }
+      { name: 'styles.css', lang: 'css', content: '.grafico { display: flex; align-items: flex-end; gap: 10px; height: 150px; border-bottom: 2px solid #333; }\n.grafico div { width: 40px; background: #00FF66; color: white; text-align: center; }' }
     ]
   },
   {
@@ -2046,7 +2046,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="chips">\n  <input type="checkbox" id="op1" hidden><label for="op1">HTML</label>\n  <input type="checkbox" id="op2" hidden><label for="op2">CSS</label>\n  <input type="checkbox" id="op3" hidden><label for="op3">JavaScript</label>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.chips label { display: inline-block; background: #eee; padding: 5px 12px; border-radius: 20px; cursor: pointer; margin: 3px; }\n.chips input:checked + label { background: #2d6a4f; color: white; }' }
+      { name: 'styles.css', lang: 'css', content: '.chips label { display: inline-block; background: #eee; padding: 5px 12px; border-radius: 20px; cursor: pointer; margin: 3px; }\n.chips input:checked + label { background: #00FF66; color: white; }' }
     ]
   },
   {
@@ -2147,7 +2147,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="spinner"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.spinner {\n  border: 5px solid #eee;\n  border-top: 5px solid #2d6a4f;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  animation: spin 1s linear infinite;\n  margin: auto;\n}\n@keyframes spin { to { transform: rotate(360deg); } }' }
+      { name: 'styles.css', lang: 'css', content: '.spinner {\n  border: 5px solid #eee;\n  border-top: 5px solid #00FF66;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  animation: spin 1s linear infinite;\n  margin: auto;\n}\n@keyframes spin { to { transform: rotate(360deg); } }' }
     ]
   },
   {
@@ -2162,7 +2162,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<span class="popover" data-img="https://via.placeholder.com/150">Pasa el ratón</span>' },
-      { name: 'styles.css', lang: 'css', content: '.popover { position: relative; color: #2d6a4f; cursor: pointer; }' },
+      { name: 'styles.css', lang: 'css', content: '.popover { position: relative; color: #00FF66; cursor: pointer; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelectorAll(".popover").forEach(el => {\n  let popover;\n  el.addEventListener("mouseenter", () => {\n    popover = document.createElement("div");\n    popover.style.position = "absolute";\n    popover.style.background = "white";\n    popover.style.border = "1px solid #ccc";\n    popover.style.padding = "5px";\n    const img = document.createElement("img");\n    img.src = el.dataset.img;\n    popover.appendChild(img);\n    document.body.appendChild(popover);\n    popover.style.left = event.clientX + "px";\n    popover.style.top = event.clientY + "px";\n  });\n  el.addEventListener("mousemove", e => { if (popover) { popover.style.left = e.clientX + 10 + "px"; popover.style.top = e.clientY + 10 + "px"; } });\n  el.addEventListener("mouseleave", () => { if (popover) popover.remove(); });\n});' }
     ]
   },
@@ -2222,7 +2222,7 @@ export const challenges = [
     template: [
       { name: 'index.html', lang: 'html', content: '<button id="colorBtn">Cambiar color</button>' },
       { name: 'styles.css', lang: 'css', content: '#colorBtn { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; color: white; font-weight: bold; }' },
-      { name: 'script.js', lang: 'js', content: 'const colores = ["#e74c3c", "#3498db", "#2ecc71", "#f1c40f", "#9b59b6"];\nlet indice = 0;\ndocument.getElementById("colorBtn").addEventListener("click", function() {\n  indice = (indice + 1) % colores.length;\n  this.style.backgroundColor = colores[indice];\n});' }
+      { name: 'script.js', lang: 'js', content: 'const colores = ["#e74c3c", "#3498db", "#00FF66", "#f1c40f", "#9b59b6"];\nlet indice = 0;\ndocument.getElementById("colorBtn").addEventListener("click", function() {\n  indice = (indice + 1) % colores.length;\n  this.style.backgroundColor = colores[indice];\n});' }
     ]
   },
   {
@@ -2267,7 +2267,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="barra"><div class="progreso p1"></div></div>\n<div class="barra"><div class="progreso p2"></div></div>\n<div class="barra"><div class="progreso p3"></div></div>' },
-      { name: 'styles.css', lang: 'css', content: '.barra { width: 300px; height: 20px; background: #eee; margin: 10px; border-radius: 10px; overflow: hidden; }\n.progreso { height: 100%; background: #2d6a4f; animation: llenar 3s forwards; }\n.p1 { animation-duration: 2s; }\n.p2 { animation-duration: 2.5s; }\n.p3 { animation-duration: 3.2s; }\n@keyframes llenar { from { width: 0; } to { width: 100%; } }' }
+      { name: 'styles.css', lang: 'css', content: '.barra { width: 300px; height: 20px; background: #eee; margin: 10px; border-radius: 10px; overflow: hidden; }\n.progreso { height: 100%; background: #00FF66; animation: llenar 3s forwards; }\n.p1 { animation-duration: 2s; }\n.p2 { animation-duration: 2.5s; }\n.p3 { animation-duration: 3.2s; }\n@keyframes llenar { from { width: 0; } to { width: 100%; } }' }
     ]
   },
   {
@@ -2281,7 +2281,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="fondo-movimiento"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.fondo-movimiento {\n  height: 200px;\n  background-image: url("https://via.placeholder.com/50/2d6a4f/ffffff?text=+");\n  animation: desplazar 5s linear infinite;\n}\n@keyframes desplazar { from { background-position: 0 0; } to { background-position: 50px 50px; } }' }
+      { name: 'styles.css', lang: 'css', content: '.fondo-movimiento {\n  height: 200px;\n  background-image: url("https://via.placeholder.com/50/00FF66/ffffff?text=+");\n  animation: desplazar 5s linear infinite;\n}\n@keyframes desplazar { from { background-position: 0 0; } to { background-position: 50px 50px; } }' }
     ]
   },
   {
@@ -2309,7 +2309,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="press">Presióname</button>' },
-      { name: 'styles.css', lang: 'css', content: '.press { padding: 15px 30px; background: #2d6a4f; color: white; border: none; border-radius: 8px; cursor: pointer; transition: all 0.1s; }\n.press:active { transform: scale(0.95); box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); }' }
+      { name: 'styles.css', lang: 'css', content: '.press { padding: 15px 30px; background: #00FF66; color: white; border: none; border-radius: 8px; cursor: pointer; transition: all 0.1s; }\n.press:active { transform: scale(0.95); box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); }' }
     ]
   },
   {
@@ -2338,7 +2338,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="menu-circular">\n  <button class="btn-principal">+</button>\n  <button class="btn-hijo">A</button>\n  <button class="btn-hijo">B</button>\n  <button class="btn-hijo">C</button>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.menu-circular { position: relative; width: 60px; height: 60px; }\n.btn-principal { width: 60px; height: 60px; border-radius: 50%; background: #2d6a4f; color: white; border: none; font-size: 1.5rem; cursor: pointer; position: relative; z-index: 1; }\n.btn-hijo { position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-radius: 50%; background: #d4af37; border: none; color: white; opacity: 0; transform: translate(0,0) scale(0); transition: all 0.3s; }\n.menu-circular.abierto .btn-hijo:nth-child(2) { transform: translate(-60px, -60px) scale(1); opacity: 1; }\n.menu-circular.abierto .btn-hijo:nth-child(3) { transform: translate(0, -80px) scale(1); opacity: 1; }\n.menu-circular.abierto .btn-hijo:nth-child(4) { transform: translate(60px, -60px) scale(1); opacity: 1; }' },
+      { name: 'styles.css', lang: 'css', content: '.menu-circular { position: relative; width: 60px; height: 60px; }\n.btn-principal { width: 60px; height: 60px; border-radius: 50%; background: #00FF66; color: white; border: none; font-size: 1.5rem; cursor: pointer; position: relative; z-index: 1; }\n.btn-hijo { position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-radius: 50%; background: #00FF66; border: none; color: white; opacity: 0; transform: translate(0,0) scale(0); transition: all 0.3s; }\n.menu-circular.abierto .btn-hijo:nth-child(2) { transform: translate(-60px, -60px) scale(1); opacity: 1; }\n.menu-circular.abierto .btn-hijo:nth-child(3) { transform: translate(0, -80px) scale(1); opacity: 1; }\n.menu-circular.abierto .btn-hijo:nth-child(4) { transform: translate(60px, -60px) scale(1); opacity: 1; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".btn-principal").addEventListener("click", function() {\n  this.parentElement.classList.toggle("abierto");\n});' }
     ]
   },
@@ -2384,7 +2384,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="card-flip" id="card">\n  <div class="front">Frente</div>\n  <div class="back">Reverso con información</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.card-flip { width: 200px; height: 150px; perspective: 800px; cursor: pointer; }\n.card-flip > div { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transition: transform 0.6s; display: flex; align-items: center; justify-content: center; }\n.front { background: #2d6a4f; color: white; }\n.back { background: #d4af37; color: black; transform: rotateY(180deg); }\n.card-flip.volteada .front { transform: rotateY(180deg); }\n.card-flip.volteada .back { transform: rotateY(0deg); }' },
+      { name: 'styles.css', lang: 'css', content: '.card-flip { width: 200px; height: 150px; perspective: 800px; cursor: pointer; }\n.card-flip > div { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transition: transform 0.6s; display: flex; align-items: center; justify-content: center; }\n.front { background: #00FF66; color: white; }\n.back { background: #00FF66; color: black; transform: rotateY(180deg); }\n.card-flip.volteada .front { transform: rotateY(180deg); }\n.card-flip.volteada .back { transform: rotateY(0deg); }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("card").addEventListener("click", function() {\n  this.classList.toggle("volteada");\n});' }
     ]
   },
@@ -2441,7 +2441,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="barras-apiladas">\n  <div class="barra"><div class="serie1" style="height:40%"></div><div class="serie2" style="height:30%"></div></div>\n  <div class="barra"><div class="serie1" style="height:50%"></div><div class="serie2" style="height:20%"></div></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.barras-apiladas { display: flex; gap: 20px; height: 200px; align-items: flex-end; }\n.barra { width: 60px; display: flex; flex-direction: column; justify-content: flex-end; }\n.serie1 { background: #2d6a4f; width: 100%; }\n.serie2 { background: #f1c40f; width: 100%; }' }
+      { name: 'styles.css', lang: 'css', content: '.barras-apiladas { display: flex; gap: 20px; height: 200px; align-items: flex-end; }\n.barra { width: 60px; display: flex; flex-direction: column; justify-content: flex-end; }\n.serie1 { background: #00FF66; width: 100%; }\n.serie2 { background: #f1c40f; width: 100%; }' }
     ]
   },
   {
@@ -2543,7 +2543,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<header id="header">Menú</header>\n<div style="height:2000px;"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#header { position: fixed; top: 0; width: 100%; background: #2d6a4f; color: white; padding: 15px; transition: top 0.3s; }\n#header.oculto { top: -60px; }' },
+      { name: 'styles.css', lang: 'css', content: '#header { position: fixed; top: 0; width: 100%; background: #00FF66; color: white; padding: 15px; transition: top 0.3s; }\n#header.oculto { top: -60px; }' },
       { name: 'script.js', lang: 'js', content: 'let prevScrollpos = window.pageYOffset;\nwindow.addEventListener("scroll", () => {\n  const currentScroll = window.pageYOffset;\n  const header = document.getElementById("header");\n  if (prevScrollpos > currentScroll) header.classList.remove("oculto");\n  else header.classList.add("oculto");\n  prevScrollpos = currentScroll;\n});' }
     ]
   },
@@ -2573,7 +2573,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<h1 class="texto-3d">3D Text</h1>' },
-      { name: 'styles.css', lang: 'css', content: '.texto-3d { font-size: 3rem; color: #2d6a4f; text-shadow: 1px 1px 0 #1b4332, 2px 2px 0 #1b4332, 3px 3px 0 #1b4332, 4px 4px 0 #1b4332; }' }
+      { name: 'styles.css', lang: 'css', content: '.texto-3d { font-size: 3rem; color: #00FF66; text-shadow: 1px 1px 0 #00FF66, 2px 2px 0 #00FF66, 3px 3px 0 #00FF66, 4px 4px 0 #00FF66; }' }
     ]
   },
   {
@@ -2630,7 +2630,7 @@ export const challenges = [
       'En <strong>script.js</strong>, actualiza el background del div al cambiar el input.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<input type="color" id="picker" value="#2d6a4f">\n<div id="muestra" style="width:100px;height:100px;background:#2d6a4f;"></div>' },
+      { name: 'index.html', lang: 'html', content: '<input type="color" id="picker" value="#00FF66">\n<div id="muestra" style="width:100px;height:100px;background:#00FF66;"></div>' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("picker").addEventListener("input", function() {\n  document.getElementById("muestra").style.backgroundColor = this.value;\n});' }
     ]
   },
@@ -2645,7 +2645,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="estadisticas">\n  <div class="stat"><span>150+</span><p>Proyectos</p></div>\n  <div class="stat"><span>50+</span><p>Clientes</p></div>\n  <div class="stat"><span>10+</span><p>Años</p></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.estadisticas { display: flex; gap: 20px; }\n.stat { background: #2d6a4f; color: white; padding: 20px; border-radius: 10px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }\n.stat:hover { transform: scale(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }\n.stat span { font-size: 2rem; font-weight: bold; }' }
+      { name: 'styles.css', lang: 'css', content: '.estadisticas { display: flex; gap: 20px; }\n.stat { background: #00FF66; color: white; padding: 20px; border-radius: 10px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }\n.stat:hover { transform: scale(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }\n.stat span { font-size: 2rem; font-weight: bold; }' }
     ]
   },
   {
@@ -2659,7 +2659,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<h1 class="long-shadow">LONG SHADOW</h1>' },
-      { name: 'styles.css', lang: 'css', content: '.long-shadow { font-size: 3rem; color: #2d6a4f; text-shadow: 2px 2px 0 #ddd, 4px 4px 0 #ccc, 6px 6px 0 #bbb, 8px 8px 0 #aaa; }' }
+      { name: 'styles.css', lang: 'css', content: '.long-shadow { font-size: 3rem; color: #00FF66; text-shadow: 2px 2px 0 #ddd, 4px 4px 0 #ccc, 6px 6px 0 #bbb, 8px 8px 0 #aaa; }' }
     ]
   },
   {
@@ -2717,7 +2717,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="bateria">\n  <div class="nivel" style="width: 75%;"></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.bateria { width: 100px; height: 30px; border: 2px solid #333; border-radius: 5px; position: relative; padding: 3px; }\n.bateria::after { content: ""; position: absolute; right: -8px; top: 5px; height: 15px; width: 5px; background: #333; border-radius: 0 3px 3px 0; }\n.nivel { height: 100%; background: #2d6a4f; border-radius: 2px; }' }
+      { name: 'styles.css', lang: 'css', content: '.bateria { width: 100px; height: 30px; border: 2px solid #333; border-radius: 5px; position: relative; padding: 3px; }\n.bateria::after { content: ""; position: absolute; right: -8px; top: 5px; height: 15px; width: 5px; background: #333; border-radius: 0 3px 3px 0; }\n.nivel { height: 100%; background: #00FF66; border-radius: 2px; }' }
     ]
   },
   {
@@ -2730,7 +2730,7 @@ export const challenges = [
       'En <strong>styles.css</strong> o dentro del SVG, usa stroke-dasharray/dashoffset para el progreso.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#2d6a4f" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="78.5" />\n</svg>' }
+      { name: 'index.html', lang: 'html', content: '<svg width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#00FF66" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="78.5" />\n</svg>' }
     ]
   },
   {
@@ -2744,7 +2744,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="parallax-css"></div>\n<div class="contenido">Contenido normal</div>\n<div class="parallax-css2"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.parallax-css { height: 300px; background: url("https://via.placeholder.com/1200x300/2d6a4f/ffffff") center/cover fixed; }\n.parallax-css2 { height: 250px; background: url("https://via.placeholder.com/1200x250/d4af37/ffffff") center/cover fixed; }\n.contenido { height: 200px; background: white; display: flex; align-items: center; justify-content: center; }' }
+      { name: 'styles.css', lang: 'css', content: '.parallax-css { height: 300px; background: url("https://via.placeholder.com/1200x300/00FF66/ffffff") center/cover fixed; }\n.parallax-css2 { height: 250px; background: url("https://via.placeholder.com/1200x250/00FF66/ffffff") center/cover fixed; }\n.contenido { height: 200px; background: white; display: flex; align-items: center; justify-content: center; }' }
     ]
   },
   {
@@ -2787,7 +2787,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="producto">\n  <img src="https://via.placeholder.com/150" alt="producto">\n  <h3>Producto Ejemplo</h3>\n  <p>$19.99</p>\n  <button class="agregar-carrito">Agregar al carrito</button>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.producto { max-width: 200px; border: 1px solid #eee; border-radius: 10px; padding: 15px; text-align: center; }\n.agregar-carrito { background: #2d6a4f; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }' },
+      { name: 'styles.css', lang: 'css', content: '.producto { max-width: 200px; border: 1px solid #eee; border-radius: 10px; padding: 15px; text-align: center; }\n.agregar-carrito { background: #00FF66; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".agregar-carrito").addEventListener("click", () => alert("Producto agregado al carrito"));' }
     ]
   },
@@ -2802,7 +2802,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="gradient-btn">Clic aquí</button>' },
-      { name: 'styles.css', lang: 'css', content: '.gradient-btn { padding: 12px 24px; border: none; background: linear-gradient(90deg, #2d6a4f, #d4af37); background-size: 200% 100%; color: white; border-radius: 5px; animation: mover-gradiente 3s linear infinite; cursor: pointer; }\n@keyframes mover-gradiente { from { background-position: 0% 50%; } to { background-position: 200% 50%; } }' }
+      { name: 'styles.css', lang: 'css', content: '.gradient-btn { padding: 12px 24px; border: none; background: linear-gradient(90deg, #00FF66, #00FF66); background-size: 200% 100%; color: white; border-radius: 5px; animation: mover-gradiente 3s linear infinite; cursor: pointer; }\n@keyframes mover-gradiente { from { background-position: 0% 50%; } to { background-position: 200% 50%; } }' }
     ]
   },
   {
@@ -2901,7 +2901,7 @@ export const challenges = [
       'En <strong>script.js</strong>, actualiza la posición del div interpolando hacia el cursor.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div id="seguidor" style="width:20px;height:20px;background:#d4af37;border-radius:50%;position:absolute;"></div>' },
+      { name: 'index.html', lang: 'html', content: '<div id="seguidor" style="width:20px;height:20px;background:#00FF66;border-radius:50%;position:absolute;"></div>' },
       { name: 'script.js', lang: 'js', content: 'const seguidor = document.getElementById("seguidor");\nlet mouseX = 0, mouseY = 0;\nlet posX = 0, posY = 0;\ndocument.addEventListener("mousemove", e => { mouseX = e.clientX; mouseY = e.clientY; });\nfunction animar() {\n  posX += (mouseX - posX) * 0.1;\n  posY += (mouseY - posY) * 0.1;\n  seguidor.style.left = posX - 10 + "px";\n  seguidor.style.top = posY - 10 + "px";\n  requestAnimationFrame(animar);\n}\nanimar();' }
     ]
   },
@@ -2916,7 +2916,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, define transform-style preserve-3d.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div class="tilt-card" style="width:200px;height:250px;background:#2d6a4f;color:white;">TILT</div>' },
+      { name: 'index.html', lang: 'html', content: '<div class="tilt-card" style="width:200px;height:250px;background:#00FF66;color:white;">TILT</div>' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".tilt-card").addEventListener("mousemove", e => {\n  const card = e.currentTarget;\n  const rect = card.getBoundingClientRect();\n  const x = (e.clientX - rect.left) / rect.width - 0.5;\n  const y = (e.clientY - rect.top) / rect.height - 0.5;\n  card.style.transform = `rotateY(${x*20}deg) rotateX(${-y*20}deg)`;\n});' }
     ]
   },
@@ -2949,7 +2949,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="control-color">\n  <label>R: <input type="range" id="r" min="0" max="255" value="45"></label>\n  <label>G: <input type="range" id="g" min="0" max="255" value="106"></label>\n  <label>B: <input type="range" id="b" min="0" max="255" value="79"></label>\n  <div id="muestra" style="width:100px;height:100px;margin-top:10px;"></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.control-color { text-align: center; }\n#muestra { background: rgb(45,106,79); border: 1px solid #ccc; margin: 0 auto; }' },
+      { name: 'styles.css', lang: 'css', content: '.control-color { text-align: center; }\n#muestra { background: rgb(0, 255, 102); border: 1px solid #ccc; margin: 0 auto; }' },
       { name: 'script.js', lang: 'js', content: 'function actualizar() {\n  const r = document.getElementById("r").value;\n  const g = document.getElementById("g").value;\n  const b = document.getElementById("b").value;\n  document.getElementById("muestra").style.backgroundColor = `rgb(${r},${g},${b})`;\n  document.body.style.backgroundColor = `rgb(${r},${g},${b})`;\n}\ndocument.querySelectorAll("input[type=range]").forEach(input => input.addEventListener("input", actualizar));\nactualizar();' }
     ]
   },
@@ -2981,7 +2981,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="grafico" width="400" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("grafico");\nconst ctx = canvas.getContext("2d");\nconst datos = [10, 40, 30, 70, 50, 90, 20];\nconst max = Math.max(...datos);\nconst ancho = canvas.width / (datos.length - 1);\nctx.beginPath();\nctx.moveTo(0, canvas.height - (datos[0] / max) * canvas.height);\ndatos.forEach((v, i) => {\n  ctx.lineTo(i * ancho, canvas.height - (v / max) * canvas.height);\n});\nctx.strokeStyle = "#2d6a4f";\nctx.lineWidth = 2;\nctx.stroke();' }
+      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("grafico");\nconst ctx = canvas.getContext("2d");\nconst datos = [10, 40, 30, 70, 50, 90, 20];\nconst max = Math.max(...datos);\nconst ancho = canvas.width / (datos.length - 1);\nctx.beginPath();\nctx.moveTo(0, canvas.height - (datos[0] / max) * canvas.height);\ndatos.forEach((v, i) => {\n  ctx.lineTo(i * ancho, canvas.height - (v / max) * canvas.height);\n});\nctx.strokeStyle = "#00FF66";\nctx.lineWidth = 2;\nctx.stroke();' }
     ]
   },
   {
@@ -2995,7 +2995,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav class="breadcrumbs">\n  <a href="#">Inicio</a>\n  <span>›</span>\n  <a href="#">Categoría</a>\n  <span>›</span>\n  <span>Producto actual</span>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: '.breadcrumbs a, .breadcrumbs span { text-decoration: none; color: #2d6a4f; margin: 0 5px; }\n.breadcrumbs span { color: #666; }' }
+      { name: 'styles.css', lang: 'css', content: '.breadcrumbs a, .breadcrumbs span { text-decoration: none; color: #00FF66; margin: 0 5px; }\n.breadcrumbs span { color: #666; }' }
     ]
   },
   {
@@ -3081,7 +3081,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button id="hamburguesa">☰</button>\n<nav id="offcanvas">\n  <a href="#">Inicio</a>\n  <a href="#">Servicios</a>\n  <a href="#">Contacto</a>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: '#offcanvas { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background: #2d6a4f; transition: left 0.3s; padding-top: 60px; }\n#offcanvas.abierto { left: 0; }\n#hamburguesa { font-size: 2rem; position: fixed; top: 10px; left: 10px; z-index: 100; }' },
+      { name: 'styles.css', lang: 'css', content: '#offcanvas { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background: #00FF66; transition: left 0.3s; padding-top: 60px; }\n#offcanvas.abierto { left: 0; }\n#hamburguesa { font-size: 2rem; position: fixed; top: 10px; left: 10px; z-index: 100; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("hamburguesa").addEventListener("click", () => {\n  document.getElementById("offcanvas").classList.toggle("abierto");\n});' }
     ]
   },
@@ -3096,7 +3096,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="canvas"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("canvas");\nconst ctx = canvas.getContext("2d");\ncanvas.width = window.innerWidth;\ncanvas.height = window.innerHeight;\nconst particulas = Array.from({length: 50}, () => ({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, vx: (Math.random()-0.5)*2, vy: (Math.random()-0.5)*2 }));\nfunction animar() {\n  ctx.clearRect(0,0,canvas.width,canvas.height);\n  particulas.forEach(p => {\n    p.x += p.vx; p.y += p.vy;\n    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;\n    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;\n    ctx.fillStyle = "#2d6a4f";\n    ctx.beginPath(); ctx.arc(p.x, p.y, 3, 0, Math.PI*2); ctx.fill();\n    particulas.forEach(p2 => {\n      const dist = Math.hypot(p.x - p2.x, p.y - p2.y);\n      if (dist < 120) { ctx.strokeStyle = `rgba(45,106,79,${0.2 - dist/600})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }\n    });\n  });\n  requestAnimationFrame(animar);\n}\nanimar();' }
+      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("canvas");\nconst ctx = canvas.getContext("2d");\ncanvas.width = window.innerWidth;\ncanvas.height = window.innerHeight;\nconst particulas = Array.from({length: 50}, () => ({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, vx: (Math.random()-0.5)*2, vy: (Math.random()-0.5)*2 }));\nfunction animar() {\n  ctx.clearRect(0,0,canvas.width,canvas.height);\n  particulas.forEach(p => {\n    p.x += p.vx; p.y += p.vy;\n    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;\n    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;\n    ctx.fillStyle = "#00FF66";\n    ctx.beginPath(); ctx.arc(p.x, p.y, 3, 0, Math.PI*2); ctx.fill();\n    particulas.forEach(p2 => {\n      const dist = Math.hypot(p.x - p2.x, p.y - p2.y);\n      if (dist < 120) { ctx.strokeStyle = `rgba(0, 255, 102,${0.2 - dist/600})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }\n    });\n  });\n  requestAnimationFrame(animar);\n}\nanimar();' }
     ]
   },
   {
@@ -3155,7 +3155,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="pelota-realista"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.pelota-realista { width: 50px; height: 50px; background: #d4af37; border-radius: 50%; animation: salto-realista 1s ease-in infinite alternate; }\n@keyframes salto-realista { 0% { transform: translateY(0) scale(1, 1); } 90% { transform: translateY(200px) scale(0.8, 1.2); } 100% { transform: translateY(200px) scale(0.8, 1.2); } }' }
+      { name: 'styles.css', lang: 'css', content: '.pelota-realista { width: 50px; height: 50px; background: #00FF66; border-radius: 50%; animation: salto-realista 1s ease-in infinite alternate; }\n@keyframes salto-realista { 0% { transform: translateY(0) scale(1, 1); } 90% { transform: translateY(200px) scale(0.8, 1.2); } 100% { transform: translateY(200px) scale(0.8, 1.2); } }' }
     ]
   },
   {
@@ -3391,7 +3391,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="pieChart" width="200" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("pieChart");\nconst ctx = canvas.getContext("2d");\nconst valores = [30, 25, 20, 15, 10];\nconst colores = ["#e74c3c", "#3498db", "#2ecc71", "#f1c40f", "#9b59b6"];\nlet progreso = 0;\nfunction animar() {\n  ctx.clearRect(0,0,canvas.width,canvas.height);\n  let anguloInicial = 0;\n  const anguloMax = (Math.PI * 2) * progreso;\n  valores.forEach((v, i) => {\n    const angulo = (v / 100) * anguloMax;\n    ctx.beginPath();\n    ctx.moveTo(100, 100);\n    ctx.arc(100, 100, 80, anguloInicial, anguloInicial + angulo);\n    ctx.closePath();\n    ctx.fillStyle = colores[i];\n    ctx.fill();\n    anguloInicial += angulo;\n  });\n  if (progreso < 1) { progreso += 0.02; requestAnimationFrame(animar); }\n}\nanimar();' }
+      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("pieChart");\nconst ctx = canvas.getContext("2d");\nconst valores = [30, 25, 20, 15, 10];\nconst colores = ["#e74c3c", "#3498db", "#00FF66", "#f1c40f", "#9b59b6"];\nlet progreso = 0;\nfunction animar() {\n  ctx.clearRect(0,0,canvas.width,canvas.height);\n  let anguloInicial = 0;\n  const anguloMax = (Math.PI * 2) * progreso;\n  valores.forEach((v, i) => {\n    const angulo = (v / 100) * anguloMax;\n    ctx.beginPath();\n    ctx.moveTo(100, 100);\n    ctx.arc(100, 100, 80, anguloInicial, anguloInicial + angulo);\n    ctx.closePath();\n    ctx.fillStyle = colores[i];\n    ctx.fill();\n    anguloInicial += angulo;\n  });\n  if (progreso < 1) { progreso += 0.02; requestAnimationFrame(animar); }\n}\nanimar();' }
     ]
   },
   {
@@ -3553,7 +3553,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav>\n  <a href="#sec1" class="nav-link">Sección 1</a>\n  <a href="#sec2" class="nav-link">Sección 2</a>\n</nav>\n<div id="sec1" style="height:500px;"></div>\n<div id="sec2" style="height:500px;"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.nav-link.activo { color: #d4af37; font-weight: bold; }' },
+      { name: 'styles.css', lang: 'css', content: '.nav-link.activo { color: #00FF66; font-weight: bold; }' },
       { name: 'script.js', lang: 'js', content: 'const observer = new IntersectionObserver(entries => {\n  entries.forEach(entry => {\n    const id = entry.target.id;\n    const link = document.querySelector(`a[href="#${id}"]`);\n    if (entry.isIntersecting) link.classList.add("activo");\n    else link.classList.remove("activo");\n  });\n}, { threshold: 0.5 });\ndocument.querySelectorAll("div[id]").forEach(div => observer.observe(div));' }
     ]
   },
@@ -3584,7 +3584,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="toolbar">Acciones rápidas</div>\n<div style="height:2000px;"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#toolbar { background: #2d6a4f; color: white; padding: 10px; position: fixed; bottom: -60px; left: 0; width: 100%; transition: bottom 0.3s; }\n#toolbar.mostrar { bottom: 0; }' },
+      { name: 'styles.css', lang: 'css', content: '#toolbar { background: #00FF66; color: white; padding: 10px; position: fixed; bottom: -60px; left: 0; width: 100%; transition: bottom 0.3s; }\n#toolbar.mostrar { bottom: 0; }' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  const toolbar = document.getElementById("toolbar");\n  if (window.scrollY > 300) toolbar.classList.add("mostrar");\n  else toolbar.classList.remove("mostrar");\n});' }
     ]
   },
@@ -3672,7 +3672,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="snake" width="400" height="400"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("snake");\nconst ctx = canvas.getContext("2d");\nlet snake = [{x: 10, y: 10}];\nlet comida = {x: 15, y: 15};\nlet dir = {x: 0, y: 0};\ndocument.addEventListener("keydown", e => {\n  switch(e.key) {\n    case "ArrowUp": if (dir.y === 0) dir = {x: 0, y: -1}; break;\n    case "ArrowDown": if (dir.y === 0) dir = {x: 0, y: 1}; break;\n    case "ArrowLeft": if (dir.x === 0) dir = {x: -1, y: 0}; break;\n    case "ArrowRight": if (dir.x === 0) dir = {x: 1, y: 0}; break;\n  }\n});\nfunction gameLoop() {\n  const cabeza = {x: snake[0].x + dir.x, y: snake[0].y + dir.y};\n  if (cabeza.x < 0 || cabeza.x >= 20 || cabeza.y < 0 || cabeza.y >= 20 || snake.some(seg => seg.x === cabeza.x && seg.y === cabeza.y)) {\n    alert("Game Over");\n    snake = [{x: 10, y: 10}]; dir = {x: 0, y: 0};\n  }\n  snake.unshift(cabeza);\n  if (cabeza.x === comida.x && cabeza.y === comida.y) {\n    comida = {x: Math.floor(Math.random()*20), y: Math.floor(Math.random()*20)};\n  } else {\n    snake.pop();\n  }\n  ctx.clearRect(0,0,400,400);\n  snake.forEach(seg => { ctx.fillStyle = "#2d6a4f"; ctx.fillRect(seg.x*20, seg.y*20, 18, 18); });\n  ctx.fillStyle = "#d4af37"; ctx.fillRect(comida.x*20, comida.y*20, 18, 18);\n  setTimeout(gameLoop, 200);\n}\ngameLoop();' }
+      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("snake");\nconst ctx = canvas.getContext("2d");\nlet snake = [{x: 10, y: 10}];\nlet comida = {x: 15, y: 15};\nlet dir = {x: 0, y: 0};\ndocument.addEventListener("keydown", e => {\n  switch(e.key) {\n    case "ArrowUp": if (dir.y === 0) dir = {x: 0, y: -1}; break;\n    case "ArrowDown": if (dir.y === 0) dir = {x: 0, y: 1}; break;\n    case "ArrowLeft": if (dir.x === 0) dir = {x: -1, y: 0}; break;\n    case "ArrowRight": if (dir.x === 0) dir = {x: 1, y: 0}; break;\n  }\n});\nfunction gameLoop() {\n  const cabeza = {x: snake[0].x + dir.x, y: snake[0].y + dir.y};\n  if (cabeza.x < 0 || cabeza.x >= 20 || cabeza.y < 0 || cabeza.y >= 20 || snake.some(seg => seg.x === cabeza.x && seg.y === cabeza.y)) {\n    alert("Game Over");\n    snake = [{x: 10, y: 10}]; dir = {x: 0, y: 0};\n  }\n  snake.unshift(cabeza);\n  if (cabeza.x === comida.x && cabeza.y === comida.y) {\n    comida = {x: Math.floor(Math.random()*20), y: Math.floor(Math.random()*20)};\n  } else {\n    snake.pop();\n  }\n  ctx.clearRect(0,0,400,400);\n  snake.forEach(seg => { ctx.fillStyle = "#00FF66"; ctx.fillRect(seg.x*20, seg.y*20, 18, 18); });\n  ctx.fillStyle = "#00FF66"; ctx.fillRect(comida.x*20, comida.y*20, 18, 18);\n  setTimeout(gameLoop, 200);\n}\ngameLoop();' }
     ]
   },
     {
@@ -3687,7 +3687,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="team">\n  <div class="card-miembro">\n    <img src="https://via.placeholder.com/150">\n    <h3>Ana García</h3>\n    <p>CEO</p>\n    <div class="detalles">Lidera la empresa desde 2020.</div>\n  </div>\n  <!-- Repite para otros miembros -->\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.team { display: flex; gap: 20px; }\n.card-miembro { text-align: center; border: 1px solid #eee; border-radius: 10px; padding: 20px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }\n.card-miembro:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }\n.detalles { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(45,106,79,0.9); color: white; padding: 10px; transform: translateY(100%); transition: transform 0.3s; }\n.card-miembro:hover .detalles { transform: translateY(0); }' }
+      { name: 'styles.css', lang: 'css', content: '.team { display: flex; gap: 20px; }\n.card-miembro { text-align: center; border: 1px solid #eee; border-radius: 10px; padding: 20px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }\n.card-miembro:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }\n.detalles { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0, 255, 102,0.9); color: white; padding: 10px; transform: translateY(100%); transition: transform 0.3s; }\n.card-miembro:hover .detalles { transform: translateY(0); }' }
     ]
   },
   {
@@ -3702,7 +3702,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="grafico-scroll" id="graf">\n  <div class="barra-obs" data-altura="80"><span>80%</span></div>\n  <div class="barra-obs" data-altura="45"><span>45%</span></div>\n  <div class="barra-obs" data-altura="90"><span>90%</span></div>\n</div>\n<div style="height:800px;"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.grafico-scroll { display: flex; align-items: flex-end; gap: 10px; height: 200px; }\n.barra-obs { width: 60px; background: #2d6a4f; color: white; text-align: center; height: 0; transition: height 0.8s ease; }\n.barra-obs.animar { height: var(--altura); }' },
+      { name: 'styles.css', lang: 'css', content: '.grafico-scroll { display: flex; align-items: flex-end; gap: 10px; height: 200px; }\n.barra-obs { width: 60px; background: #00FF66; color: white; text-align: center; height: 0; transition: height 0.8s ease; }\n.barra-obs.animar { height: var(--altura); }' },
       { name: 'script.js', lang: 'js', content: 'const observer = new IntersectionObserver(entries => {\n  entries.forEach(entry => {\n    if (entry.isIntersecting) {\n      document.querySelectorAll(".barra-obs").forEach(bar => {\n        bar.style.setProperty("--altura", bar.dataset.altura + "%");\n        bar.classList.add("animar");\n      });\n    }\n  });\n});\nobserver.observe(document.getElementById("graf"));' }
     ]
   },
@@ -3780,7 +3780,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="stepper">\n  <div class="paso activo">1</div>\n  <div class="linea"></div>\n  <div class="paso">2</div>\n  <div class="linea"></div>\n  <div class="paso">3</div>\n</div>\n<button id="siguiente">Siguiente</button>\n<button id="anterior">Anterior</button>' },
-      { name: 'styles.css', lang: 'css', content: '.stepper { display: flex; align-items: center; }\n.paso { width: 30px; height: 30px; border-radius: 50%; background: #eee; text-align: center; line-height: 30px; }\n.paso.activo { background: #2d6a4f; color: white; }\n.linea { flex: 1; height: 2px; background: #eee; margin: 0 5px; }\n.linea.completada { background: #2d6a4f; }' },
+      { name: 'styles.css', lang: 'css', content: '.stepper { display: flex; align-items: center; }\n.paso { width: 30px; height: 30px; border-radius: 50%; background: #eee; text-align: center; line-height: 30px; }\n.paso.activo { background: #00FF66; color: white; }\n.linea { flex: 1; height: 2px; background: #eee; margin: 0 5px; }\n.linea.completada { background: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'let pasoActual = 0;\nconst pasos = document.querySelectorAll(".paso");\nconst lineas = document.querySelectorAll(".linea");\nfunction actualizar() {\n  pasos.forEach((p, i) => p.classList.toggle("activo", i <= pasoActual));\n  lineas.forEach((l, i) => l.classList.toggle("completada", i < pasoActual));\n}\ndocument.getElementById("siguiente").addEventListener("click", () => { if (pasoActual < 2) pasoActual++; actualizar(); });\ndocument.getElementById("anterior").addEventListener("click", () => { if (pasoActual > 0) pasoActual--; actualizar(); });' }
     ]
   },
@@ -3873,7 +3873,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="mapa-ciudades">\n  <img src="https://via.placeholder.com/600x300/ccc" alt="mapa">\n  <div class="ciudad" data-zona="America/New_York" style="top:40%;left:25%;">NY</div>\n  <div class="ciudad" data-zona="Europe/London" style="top:35%;left:45%;">LON</div>\n</div>\n<p id="horaSeleccionada"></p>' },
-      { name: 'styles.css', lang: 'css', content: '.mapa-ciudades { position: relative; display: inline-block; }\n.ciudad { position: absolute; background: #d4af37; color: white; padding: 2px 6px; border-radius: 3px; cursor: pointer; }' },
+      { name: 'styles.css', lang: 'css', content: '.mapa-ciudades { position: relative; display: inline-block; }\n.ciudad { position: absolute; background: #00FF66; color: white; padding: 2px 6px; border-radius: 3px; cursor: pointer; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelectorAll(".ciudad").forEach(c => {\n  c.addEventListener("click", () => {\n    const zona = c.dataset.zona;\n    const hora = new Date().toLocaleString("es-ES", { timeZone: zona, timeStyle: "medium" });\n    document.getElementById("horaSeleccionada").textContent = `${c.textContent}: ${hora}`;\n  });\n});' }
     ]
   },
@@ -3889,7 +3889,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="sala">\n  <!-- Genera asientos con JS -->\n</div>\n<p>Asientos seleccionados: <span id="contador">0</span> | Total: $<span id="total">0</span></p>' },
-      { name: 'styles.css', lang: 'css', content: '.asiento { width: 30px; height: 30px; background: #ccc; margin: 4px; display: inline-block; cursor: pointer; border-radius: 3px; }\n.asiento.seleccionado { background: #2d6a4f; }' },
+      { name: 'styles.css', lang: 'css', content: '.asiento { width: 30px; height: 30px; background: #ccc; margin: 4px; display: inline-block; cursor: pointer; border-radius: 3px; }\n.asiento.seleccionado { background: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'const sala = document.querySelector(".sala");\nconst precio = 8;\nfor (let i = 0; i < 30; i++) {\n  const asiento = document.createElement("div");\n  asiento.className = "asiento";\n  asiento.addEventListener("click", function() {\n    this.classList.toggle("seleccionado");\n    actualizar();\n  });\n  sala.appendChild(asiento);\n}\nfunction actualizar() {\n  const seleccionados = document.querySelectorAll(".asiento.seleccionado").length;\n  document.getElementById("contador").textContent = seleccionados;\n  document.getElementById("total").textContent = seleccionados * precio;\n}' }
     ]
   },
@@ -3934,7 +3934,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, la barra con altura fija y color.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div id="progreso-lectura" style="height:4px; background:#2d6a4f; width:0; position:fixed; top:0;"></div>\n<article style="max-width:600px; margin:20px auto; height:2000px;">Contenido largo...</article>' },
+      { name: 'index.html', lang: 'html', content: '<div id="progreso-lectura" style="height:4px; background:#00FF66; width:0; position:fixed; top:0;"></div>\n<article style="max-width:600px; margin:20px auto; height:2000px;">Contenido largo...</article>' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;\n  const progreso = (window.scrollY / alturaTotal) * 100;\n  document.getElementById("progreso-lectura").style.width = progreso + "%";\n});' }
     ]
   },
@@ -3950,7 +3950,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<ul id="lista-arrastrable">\n  <li draggable="true">Elemento 1</li>\n  <li draggable="true">Elemento 2</li>\n  <li draggable="true">Elemento 3</li>\n  <li draggable="true">Elemento 4</li>\n</ul>' },
-      { name: 'styles.css', lang: 'css', content: 'li { padding: 10px; background: #f0f0f0; margin: 5px; cursor: move; list-style: none; }\nli.drag-over { border-top: 3px solid #2d6a4f; }' },
+      { name: 'styles.css', lang: 'css', content: 'li { padding: 10px; background: #f0f0f0; margin: 5px; cursor: move; list-style: none; }\nli.drag-over { border-top: 3px solid #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'let draggedItem = null;\ndocument.querySelectorAll("[draggable]").forEach(item => {\n  item.addEventListener("dragstart", e => { draggedItem = e.target; e.dataTransfer.effectAllowed = "move"; });\n  item.addEventListener("dragover", e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; e.target.classList.add("drag-over"); });\n  item.addEventListener("dragleave", e => e.target.classList.remove("drag-over"));\n  item.addEventListener("drop", e => {\n    e.preventDefault();\n    e.target.classList.remove("drag-over");\n    if (draggedItem !== e.target) {\n      const list = e.target.parentNode;\n      list.insertBefore(draggedItem, e.target);\n    }\n  });\n});' }
     ]
   },
@@ -3998,7 +3998,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="memoria-numeros">\n  <button class="num-btn" data-num="1">1</button>\n  <button class="num-btn" data-num="2">2</button>\n  <button class="num-btn" data-num="3">3</button>\n  <button class="num-btn" data-num="4">4</button>\n  <button id="iniciar">Iniciar</button>\n  <p id="mensaje"></p>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.num-btn { width: 60px; height: 60px; margin: 5px; font-size: 1.5rem; }\n.num-btn.iluminado { background: #d4af37; }' },
+      { name: 'styles.css', lang: 'css', content: '.num-btn { width: 60px; height: 60px; margin: 5px; font-size: 1.5rem; }\n.num-btn.iluminado { background: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'let secuencia = [];\nlet entrada = [];\nlet puedeJugar = false;\nconst btns = document.querySelectorAll(".num-btn");\nfunction iluminarSecuencia() {\n  puedeJugar = false;\n  let i = 0;\n  const intervalo = setInterval(() => {\n    btns.forEach(b => b.classList.remove("iluminado"));\n    if (i < secuencia.length) {\n      const btn = [...btns].find(b => b.dataset.num == secuencia[i]);\n      btn.classList.add("iluminado");\n      i++;\n    } else {\n      clearInterval(intervalo);\n      puedeJugar = true;\n    }\n  }, 800);\n}\ndocument.getElementById("iniciar").addEventListener("click", () => {\n  secuencia.push(Math.ceil(Math.random() * 4));\n  entrada = [];\n  document.getElementById("mensaje").textContent = "Repite la secuencia";\n  iluminarSecuencia();\n});\nbtns.forEach(btn => {\n  btn.addEventListener("click", () => {\n    if (!puedeJugar) return;\n    entrada.push(parseInt(btn.dataset.num));\n    if (entrada[entrada.length-1] !== secuencia[entrada.length-1]) {\n      document.getElementById("mensaje").textContent = "Error. Vuelve a intentar.";\n      puedeJugar = false;\n      entrada = [];\n    } else if (entrada.length === secuencia.length) {\n      document.getElementById("mensaje").textContent = "Correcto! Preparando siguiente...";\n      setTimeout(() => {\n        secuencia.push(Math.ceil(Math.random() * 4));\n        entrada = [];\n        iluminarSecuencia();\n      }, 1000);\n    }\n  });\n});' }
     ]
   },
@@ -4058,7 +4058,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<input type="text" id="tarea" placeholder="Tarea">\n<select id="categoria">\n  <option value="trabajo">Trabajo</option>\n  <option value="personal">Personal</option>\n  <option value="estudio">Estudio</option>\n</select>\n<button id="agregar">+</button>\n<ul id="lista"></ul>' },
-      { name: 'styles.css', lang: 'css', content: '.trabajo { color: #e74c3c; }\n.personal { color: #3498db; }\n.estudio { color: #2ecc71; }' },
+      { name: 'styles.css', lang: 'css', content: '.trabajo { color: #e74c3c; }\n.personal { color: #3498db; }\n.estudio { color: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("agregar").addEventListener("click", () => {\n  const texto = document.getElementById("tarea").value.trim();\n  const cat = document.getElementById("categoria").value;\n  if (texto) {\n    const li = document.createElement("li");\n    li.className = cat;\n    li.textContent = `[${cat.toUpperCase()}] ${texto}`;\n    document.getElementById("lista").appendChild(li);\n    document.getElementById("tarea").value = "";\n  }\n});' }
     ]
   },
@@ -4147,7 +4147,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="circulo-respira"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.circulo-respira { width: 100px; height: 100px; border-radius: 50%; background: #2d6a4f; margin: auto; animation: respirar 4s ease-in-out infinite; }\n@keyframes respirar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }' }
+      { name: 'styles.css', lang: 'css', content: '.circulo-respira { width: 100px; height: 100px; border-radius: 50%; background: #00FF66; margin: auto; animation: respirar 4s ease-in-out infinite; }\n@keyframes respirar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.3); } }' }
     ]
   },
   {
@@ -4191,7 +4191,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="ruleta-descuento">\n  <div class="opcion">10%</div>\n  <div class="opcion">20%</div>\n  <div class="opcion">50%</div>\n  <div class="opcion">GRATIS</div>\n  <button id="girarRuleta">¡Girar!</button>\n  <p id="premio"></p>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.ruleta-descuento { display: flex; gap: 10px; }\n.opcion { padding: 20px; border: 1px solid #ccc; background: #eee; }\n.opcion.resaltada { background: #d4af37; color: white; }' },
+      { name: 'styles.css', lang: 'css', content: '.ruleta-descuento { display: flex; gap: 10px; }\n.opcion { padding: 20px; border: 1px solid #ccc; background: #eee; }\n.opcion.resaltada { background: #00FF66; color: white; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("girarRuleta").addEventListener("click", function() {\n  const opciones = document.querySelectorAll(".opcion");\n  let cont = 0;\n  const totalVueltas = 20 + Math.floor(Math.random() * 10);\n  const intervalo = setInterval(() => {\n    opciones.forEach(op => op.classList.remove("resaltada"));\n    opciones[cont % opciones.length].classList.add("resaltada");\n    if (cont >= totalVueltas) {\n      clearInterval(intervalo);\n      const ganador = opciones[cont % opciones.length].textContent;\n      document.getElementById("premio").textContent = "¡Ganaste " + ganador + "!";\n    }\n    cont++;\n  }, 100);\n});' }
     ]
   },
@@ -4250,7 +4250,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="grid-auto">\n  <div class="grid-item">1</div>\n  <div class="grid-item">2</div>\n  <div class="grid-item">3</div>\n  <div class="grid-item">4</div>\n  <div class="grid-item">5</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }\n.grid-item { background: #2d6a4f; color: white; padding: 20px; text-align: center; }' }
+      { name: 'styles.css', lang: 'css', content: '.grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }\n.grid-item { background: #00FF66; color: white; padding: 20px; text-align: center; }' }
     ]
   },
   {
@@ -4350,7 +4350,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<label class="switch">\n  <input type="checkbox" id="toggle">\n  <span class="slider"></span>\n</label>' },
-      { name: 'styles.css', lang: 'css', content: '.switch { position: relative; display: inline-block; width: 50px; height: 24px; }\n.switch input { opacity: 0; width: 0; height: 0; }\n.slider { position: absolute; cursor: pointer; top:0; left:0; right:0; bottom:0; background-color: #ccc; transition: .4s; border-radius: 24px; }\n.slider::before { content: ""; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }\ninput:checked + .slider { background-color: #2d6a4f; }\ninput:checked + .slider::before { transform: translateX(26px); }' }
+      { name: 'styles.css', lang: 'css', content: '.switch { position: relative; display: inline-block; width: 50px; height: 24px; }\n.switch input { opacity: 0; width: 0; height: 0; }\n.slider { position: absolute; cursor: pointer; top:0; left:0; right:0; bottom:0; background-color: #ccc; transition: .4s; border-radius: 24px; }\n.slider::before { content: ""; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }\ninput:checked + .slider { background-color: #00FF66; }\ninput:checked + .slider::before { transform: translateX(26px); }' }
     ]
   },
   {
@@ -4365,7 +4365,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="scatter" width="300" height="300"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("scatter");\nconst ctx = canvas.getContext("2d");\n// ejes\nctx.beginPath(); ctx.moveTo(50,20); ctx.lineTo(50,280); ctx.stroke();\nctx.beginPath(); ctx.moveTo(50,250); ctx.lineTo(280,250); ctx.stroke();\nconst datos = [{x:60,y:200},{x:100,y:150},{x:150,y:100},{x:200,y:80},{x:250,y:180}];\ndatos.forEach(d => {\n  ctx.beginPath();\n  ctx.arc(d.x, d.y, 5, 0, Math.PI*2);\n  ctx.fillStyle = "#2d6a4f";\n  ctx.fill();\n});' }
+      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("scatter");\nconst ctx = canvas.getContext("2d");\n// ejes\nctx.beginPath(); ctx.moveTo(50,20); ctx.lineTo(50,280); ctx.stroke();\nctx.beginPath(); ctx.moveTo(50,250); ctx.lineTo(280,250); ctx.stroke();\nconst datos = [{x:60,y:200},{x:100,y:150},{x:150,y:100},{x:200,y:80},{x:250,y:180}];\ndatos.forEach(d => {\n  ctx.beginPath();\n  ctx.arc(d.x, d.y, 5, 0, Math.PI*2);\n  ctx.fillStyle = "#00FF66";\n  ctx.fill();\n});' }
     ]
   },
   {
@@ -4441,7 +4441,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<section class="hero">\n  <div class="hero-content">\n    <h1>Construye el futuro</h1>\n    <p>Desarrollo web moderno a tu alcance.</p>\n    <button class="btn-hero">Empieza ahora</button>\n  </div>\n</section>' },
-      { name: 'styles.css', lang: 'css', content: '.hero {\n  height: 100vh;\n  background: url("https://via.placeholder.com/1200x800/2d6a4f/ffffff") center/cover no-repeat;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: white;\n}\n.hero-content { background: rgba(0,0,0,0.5); padding: 30px; border-radius: 10px; }\n.btn-hero { padding: 15px 30px; background: #d4af37; border: none; color: white; font-weight: bold; border-radius: 30px; cursor: pointer; }\n.btn-hero:hover { background: #b8960f; }' }
+      { name: 'styles.css', lang: 'css', content: '.hero {\n  height: 100vh;\n  background: url("https://via.placeholder.com/1200x800/00FF66/ffffff") center/cover no-repeat;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: white;\n}\n.hero-content { background: rgba(0,0,0,0.5); padding: 30px; border-radius: 10px; }\n.btn-hero { padding: 15px 30px; background: #00FF66; border: none; color: white; font-weight: bold; border-radius: 30px; cursor: pointer; }\n.btn-hero:hover { background: #00FF66; }' }
     ]
   },
   {
@@ -4456,7 +4456,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav id="nav">\n  <a href="#">Inicio</a>\n  <a href="#">Servicios</a>\n  <a href="#">Contacto</a>\n</nav>\n<div style="height:2000px; background: linear-gradient(white, #ccc);"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#nav { position: fixed; top: 0; width: 100%; padding: 15px; transition: background 0.3s; z-index: 100; }\n#nav.solido { background: rgba(45, 106, 79, 0.95); color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }\n#nav a { margin: 0 15px; text-decoration: none; color: inherit; }' },
+      { name: 'styles.css', lang: 'css', content: '#nav { position: fixed; top: 0; width: 100%; padding: 15px; transition: background 0.3s; z-index: 100; }\n#nav.solido { background: rgba(0, 255, 102, 0.95); color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }\n#nav a { margin: 0 15px; text-decoration: none; color: inherit; }' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  const nav = document.getElementById("nav");\n  nav.classList.toggle("solido", window.scrollY > 50);\n});' }
     ]
   },
@@ -4514,7 +4514,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, aplica una animación de rotación al elemento SVG o a un div contenedor.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div class="engranaje">\n  <svg width="100" height="100" viewBox="0 0 100 100">\n    <circle cx="50" cy="50" r="40" fill="none" stroke="#2d6a4f" stroke-width="10" stroke-dasharray="20 10" />\n  </svg>\n</div>' },
+      { name: 'index.html', lang: 'html', content: '<div class="engranaje">\n  <svg width="100" height="100" viewBox="0 0 100 100">\n    <circle cx="50" cy="50" r="40" fill="none" stroke="#00FF66" stroke-width="10" stroke-dasharray="20 10" />\n  </svg>\n</div>' },
       { name: 'styles.css', lang: 'css', content: '.engranaje { animation: girar 3s linear infinite; display: inline-block; }\n@keyframes girar { 100% { transform: rotate(360deg); } }' }
     ]
   },
@@ -4575,7 +4575,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="flip-click" id="flipCard">\n  <div class="face front">Frente</div>\n  <div class="face back">Reverso</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.flip-click { width: 200px; height: 150px; perspective: 600px; cursor: pointer; }\n.face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transition: transform 0.6s; }\n.front { background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; }\n.back { background: #d4af37; color: black; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; }\n.flip-click.girada .front { transform: rotateY(180deg); }\n.flip-click.girada .back { transform: rotateY(0deg); }' },
+      { name: 'styles.css', lang: 'css', content: '.flip-click { width: 200px; height: 150px; perspective: 600px; cursor: pointer; }\n.face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transition: transform 0.6s; }\n.front { background: #00FF66; color: white; display: flex; align-items: center; justify-content: center; }\n.back { background: #00FF66; color: black; transform: rotateY(180deg); display: flex; align-items: center; justify-content: center; }\n.flip-click.girada .front { transform: rotateY(180deg); }\n.flip-click.girada .back { transform: rotateY(0deg); }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("flipCard").addEventListener("click", function() { this.classList.toggle("girada"); });' }
     ]
   },
@@ -4637,7 +4637,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="slider-dots">\n  <div class="slides"><img src="https://via.placeholder.com/300/FF0000" class="activa"><img src="https://via.placeholder.com/300/00FF00"><img src="https://via.placeholder.com/300/0000FF"></div>\n  <div class="dots"><span class="dot activo"></span><span class="dot"></span><span class="dot"></span></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.slides img { display: none; width: 300px; }\n.slides img.activa { display: block; }\n.dots { text-align: center; }\n.dot { display: inline-block; width: 12px; height: 12px; background: #ccc; border-radius: 50%; margin: 5px; cursor: pointer; }\n.dot.activo { background: #2d6a4f; }' },
+      { name: 'styles.css', lang: 'css', content: '.slides img { display: none; width: 300px; }\n.slides img.activa { display: block; }\n.dots { text-align: center; }\n.dot { display: inline-block; width: 12px; height: 12px; background: #ccc; border-radius: 50%; margin: 5px; cursor: pointer; }\n.dot.activo { background: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'const imgs = document.querySelectorAll(".slides img");\nconst dots = document.querySelectorAll(".dot");\nlet idx = 0;\nfunction mostrar(n) {\n  imgs[idx].classList.remove("activa");\n  dots[idx].classList.remove("activo");\n  idx = (n + imgs.length) % imgs.length;\n  imgs[idx].classList.add("activa");\n  dots[idx].classList.add("activo");\n}\ndots.forEach((dot, i) => dot.addEventListener("click", () => mostrar(i)));\nsetInterval(() => mostrar(idx + 1), 3000);' }
     ]
   },
@@ -4653,7 +4653,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<input type="text" id="tagInput" placeholder="Nuevo tag">\n<button id="anadirTag">Añadir</button>\n<div id="tagsContainer"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.tag { display: inline-block; background: #2d6a4f; color: white; padding: 3px 10px; border-radius: 20px; margin: 3px; }\n.tag button { background: transparent; border: none; color: white; margin-left: 5px; cursor: pointer; }' },
+      { name: 'styles.css', lang: 'css', content: '.tag { display: inline-block; background: #00FF66; color: white; padding: 3px 10px; border-radius: 20px; margin: 3px; }\n.tag button { background: transparent; border: none; color: white; margin-left: 5px; cursor: pointer; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("anadirTag").addEventListener("click", () => {\n  const texto = document.getElementById("tagInput").value.trim();\n  if (texto) {\n    const tag = document.createElement("span");\n    tag.className = "tag";\n    tag.innerHTML = `${texto} <button>×</button>`;\n    tag.querySelector("button").addEventListener("click", () => tag.remove());\n    document.getElementById("tagsContainer").appendChild(tag);\n    document.getElementById("tagInput").value = "";\n  }\n});' }
     ]
   },
@@ -4697,7 +4697,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, anima stroke-dashoffset de 314 a 0 (para 100%).'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle class="progress-circle" cx="60" cy="60" r="50" fill="none" stroke="#2d6a4f" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" />\n</svg>' },
+      { name: 'index.html', lang: 'html', content: '<svg width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle class="progress-circle" cx="60" cy="60" r="50" fill="none" stroke="#00FF66" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" />\n</svg>' },
       { name: 'styles.css', lang: 'css', content: '.progress-circle { animation: llenar 2s ease forwards; }\n@keyframes llenar { to { stroke-dashoffset: 0; } }' }
     ]
   },
@@ -4712,7 +4712,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="fondo-movimiento">Contenido</div>' },
-      { name: 'styles.css', lang: 'css', content: '.fondo-movimiento {\n  height: 200px;\n  background: linear-gradient(270deg, #2d6a4f, #d4af37, #e74c3c);\n  background-size: 600% 600%;\n  animation: moverFondo 8s ease infinite;\n  color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n@keyframes moverFondo {\n  0% { background-position: 0% 50%; }\n  50% { background-position: 100% 50%; }\n  100% { background-position: 0% 50%; }\n}' }
+      { name: 'styles.css', lang: 'css', content: '.fondo-movimiento {\n  height: 200px;\n  background: linear-gradient(270deg, #00FF66, #00FF66, #e74c3c);\n  background-size: 600% 600%;\n  animation: moverFondo 8s ease infinite;\n  color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n@keyframes moverFondo {\n  0% { background-position: 0% 50%; }\n  50% { background-position: 100% 50%; }\n  100% { background-position: 0% 50%; }\n}' }
     ]
   },
   {
@@ -4756,7 +4756,7 @@ export const challenges = [
       'En <strong>styles.css</strong>, asigna alturas aleatorias (o predefinidas) y colores.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div class="histograma">\n  <div style="height: 80%; background: #e74c3c;"></div>\n  <div style="height: 50%; background: #3498db;"></div>\n  <div style="height: 90%; background: #2ecc71;"></div>\n  <div style="height: 40%; background: #f1c40f;"></div>\n  <div style="height: 70%; background: #9b59b6;"></div>\n</div>' },
+      { name: 'index.html', lang: 'html', content: '<div class="histograma">\n  <div style="height: 80%; background: #e74c3c;"></div>\n  <div style="height: 50%; background: #3498db;"></div>\n  <div style="height: 90%; background: #00FF66;"></div>\n  <div style="height: 40%; background: #f1c40f;"></div>\n  <div style="height: 70%; background: #9b59b6;"></div>\n</div>' },
       { name: 'styles.css', lang: 'css', content: '.histograma { display: flex; align-items: flex-end; gap: 5px; height: 200px; }\n.histograma div { width: 40px; }' }
     ]
   },
@@ -4788,7 +4788,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="coming-soon">\n  <h1>Próximamente</h1>\n  <p>Estamos trabajando en algo increíble.</p>\n  <input type="email" id="email" placeholder="Tu email">\n  <button id="suscribir">Notifícame</button>\n  <p id="mensaje"></p>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: 'body, html { height: 100%; margin: 0; }\n.coming-soon { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e1e2e, #2d6a4f); color: white; }\ninput { padding: 10px; margin: 10px; width: 250px; border-radius: 5px; border: none; }' },
+      { name: 'styles.css', lang: 'css', content: 'body, html { height: 100%; margin: 0; }\n.coming-soon { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e1e2e, #00FF66); color: white; }\ninput { padding: 10px; margin: 10px; width: 250px; border-radius: 5px; border: none; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("suscribir").addEventListener("click", () => {\n  const email = document.getElementById("email").value;\n  if (email) document.getElementById("mensaje").textContent = "Gracias, te notificaremos.";\n});' }
     ]
   },
@@ -4820,7 +4820,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="barra-scroll"></div>\n<div style="height:3000px;"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#barra-scroll { position: fixed; top: 0; right: 0; width: 4px; height: 0; background: #2d6a4f; }' },
+      { name: 'styles.css', lang: 'css', content: '#barra-scroll { position: fixed; top: 0; right: 0; width: 4px; height: 0; background: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  const altura = document.documentElement.scrollHeight - window.innerHeight;\n  const porcentaje = (window.scrollY / altura) * 100;\n  document.getElementById("barra-scroll").style.height = porcentaje + "%";\n});' }
     ]
   },
@@ -4849,7 +4849,7 @@ export const challenges = [
       'Dibuja también la esfera (círculo) y los números (opcional).'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg id="relojSVG" width="200" height="200" viewBox="0 0 100 100">\n  <circle cx="50" cy="50" r="45" fill="none" stroke="#2d6a4f" stroke-width="2"/>\n  <line id="horas" x1="50" y1="50" x2="50" y2="25" stroke="#333" stroke-width="4"/>\n  <line id="minutos" x1="50" y1="50" x2="50" y2="18" stroke="#555" stroke-width="2"/>\n  <line id="segundos" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="1"/>\n</svg>' },
+      { name: 'index.html', lang: 'html', content: '<svg id="relojSVG" width="200" height="200" viewBox="0 0 100 100">\n  <circle cx="50" cy="50" r="45" fill="none" stroke="#00FF66" stroke-width="2"/>\n  <line id="horas" x1="50" y1="50" x2="50" y2="25" stroke="#333" stroke-width="4"/>\n  <line id="minutos" x1="50" y1="50" x2="50" y2="18" stroke="#555" stroke-width="2"/>\n  <line id="segundos" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="1"/>\n</svg>' },
       { name: 'script.js', lang: 'js', content: 'function actualizarReloj() {\n  const ahora = new Date();\n  const h = ahora.getHours() % 12;\n  const m = ahora.getMinutes();\n  const s = ahora.getSeconds();\n  document.getElementById("horas").setAttribute("transform", `rotate(${h*30 + m*0.5}, 50, 50)`);\n  document.getElementById("minutos").setAttribute("transform", `rotate(${m*6}, 50, 50)`);\n  document.getElementById("segundos").setAttribute("transform", `rotate(${s*6}, 50, 50)`);\n}\nsetInterval(actualizarReloj, 1000);\nactualizarReloj();' }
     ]
   },
@@ -4878,7 +4878,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="scroll-list">\n  <p>Item 1</p><p>Item 2</p><p>Item 3</p><p>Item 4</p><p>Item 5</p>\n  <p class="sticky-bottom">Siempre visible</p>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.scroll-list { height: 200px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; }\n.sticky-bottom { position: sticky; bottom: 0; background: #d4af37; padding: 10px; }' }
+      { name: 'styles.css', lang: 'css', content: '.scroll-list { height: 200px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; }\n.sticky-bottom { position: sticky; bottom: 0; background: #00FF66; padding: 10px; }' }
     ]
   },
   {
@@ -4955,7 +4955,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="candlestick" width="300" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("candlestick").getContext("2d");\nconst datos = [{o:10,h:15,l:8,c:13},{o:13,h:18,l:12,c:12},{o:12,h:14,l:9,c:9}];\nconst ancho = 60;\ndatos.forEach((d, i) => {\n  const color = d.c >= d.o ? "#2ecc71" : "#e74c3c";\n  ctx.strokeStyle = color;\n  ctx.beginPath();\n  ctx.moveTo(i*ancho+30, d.h*10);\n  ctx.lineTo(i*ancho+30, d.l*10);\n  ctx.stroke();\n  ctx.fillStyle = color;\n  const y = Math.min(d.o, d.c) * 10;\n  const altura = Math.abs(d.c - d.o) * 10;\n  ctx.fillRect(i*ancho+10, y, 40, altura || 1);\n});' }
+      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("candlestick").getContext("2d");\nconst datos = [{o:10,h:15,l:8,c:13},{o:13,h:18,l:12,c:12},{o:12,h:14,l:9,c:9}];\nconst ancho = 60;\ndatos.forEach((d, i) => {\n  const color = d.c >= d.o ? "#00FF66" : "#e74c3c";\n  ctx.strokeStyle = color;\n  ctx.beginPath();\n  ctx.moveTo(i*ancho+30, d.h*10);\n  ctx.lineTo(i*ancho+30, d.l*10);\n  ctx.stroke();\n  ctx.fillStyle = color;\n  const y = Math.min(d.o, d.c) * 10;\n  const altura = Math.abs(d.c - d.o) * 10;\n  ctx.fillRect(i*ancho+10, y, 40, altura || 1);\n});' }
     ]
   },
   {
@@ -4970,7 +4970,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="rotar-3d" id="caja">Haz clic</div>' },
-      { name: 'styles.css', lang: 'css', content: '.rotar-3d { width: 150px; height: 150px; background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; transition: transform 0.8s; }\n.rotar-3d.girada { transform: rotateY(360deg); }' },
+      { name: 'styles.css', lang: 'css', content: '.rotar-3d { width: 150px; height: 150px; background: #00FF66; color: white; display: flex; align-items: center; justify-content: center; transition: transform 0.8s; }\n.rotar-3d.girada { transform: rotateY(360deg); }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("caja").addEventListener("click", function() {\n  this.classList.toggle("girada");\n});' }
     ]
   },
@@ -4987,7 +4987,7 @@ export const challenges = [
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="fondoCanvas"></canvas>\n<h1 style="position:relative;">Contenido encima</h1>' },
       { name: 'styles.css', lang: 'css', content: '#fondoCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }' },
-      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("fondoCanvas");\nconst ctx = canvas.getContext("2d");\ncanvas.width = window.innerWidth;\ncanvas.height = window.innerHeight;\nconst particulas = Array.from({length: 30}, () => ({x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2+1, vx: Math.random()-0.5, vy: Math.random()-0.5}));\nfunction animar() {\n  ctx.clearRect(0,0,canvas.width,canvas.height);\n  ctx.fillStyle = "rgba(45,106,79,0.3)";\n  particulas.forEach(p => {\n    p.x += p.vx; p.y += p.vy;\n    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;\n    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;\n    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();\n  });\n  requestAnimationFrame(animar);\n}\nanimar();' }
+      { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("fondoCanvas");\nconst ctx = canvas.getContext("2d");\ncanvas.width = window.innerWidth;\ncanvas.height = window.innerHeight;\nconst particulas = Array.from({length: 30}, () => ({x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2+1, vx: Math.random()-0.5, vy: Math.random()-0.5}));\nfunction animar() {\n  ctx.clearRect(0,0,canvas.width,canvas.height);\n  ctx.fillStyle = "rgba(0, 255, 102,0.3)";\n  particulas.forEach(p => {\n    p.x += p.vx; p.y += p.vy;\n    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;\n    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;\n    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();\n  });\n  requestAnimationFrame(animar);\n}\nanimar();' }
     ]
   },
   {
@@ -5044,7 +5044,7 @@ export const challenges = [
       'En <strong>script.js</strong>, actualiza stroke-dashoffset y el texto según un valor o un input range.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg id="svgProg" width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle id="progreso" cx="60" cy="60" r="50" fill="none" stroke="#2d6a4f" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" />\n  <text id="textoProg" x="60" y="65" text-anchor="middle" font-size="20">0%</text>\n</svg>\n<input type="range" id="slider" min="0" max="100" value="0">' },
+      { name: 'index.html', lang: 'html', content: '<svg id="svgProg" width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle id="progreso" cx="60" cy="60" r="50" fill="none" stroke="#00FF66" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" />\n  <text id="textoProg" x="60" y="65" text-anchor="middle" font-size="20">0%</text>\n</svg>\n<input type="range" id="slider" min="0" max="100" value="0">' },
       { name: 'script.js', lang: 'js', content: 'const circulo = document.getElementById("progreso");\nconst texto = document.getElementById("textoProg");\ndocument.getElementById("slider").addEventListener("input", e => {\n  const val = e.target.value;\n  circulo.setAttribute("stroke-dashoffset", 314 - (val/100)*314);\n  texto.textContent = val + "%";\n});' }
     ]
   },
@@ -5054,11 +5054,11 @@ export const challenges = [
     level: 'Básico',
     description: 'Crea una tarjeta de presentación sencilla con un avatar circular generado por una API (ej. ui-avatars.com).',
     instructions: [
-      'En <strong>index.html</strong>, estructura div tarjeta con nombre, cargo y una imagen cuyo src apunte a <code>https://ui-avatars.com/api/?name=Nombre+Apellido&background=2d6a4f&color=fff</code>.',
+      'En <strong>index.html</strong>, estructura div tarjeta con nombre, cargo y una imagen cuyo src apunte a <code>https://ui-avatars.com/api/?name=Nombre+Apellido&background=00FF66&color=fff</code>.',
       'En <strong>styles.css</strong>, estiliza la tarjeta, redondea la imagen.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div class="card-presentacion">\n  <img src="https://ui-avatars.com/api/?name=Juan+Perez&background=2d6a4f&color=fff">\n  <h3>Juan Pérez</h3>\n  <p>Desarrollador Web</p>\n</div>' },
+      { name: 'index.html', lang: 'html', content: '<div class="card-presentacion">\n  <img src="https://ui-avatars.com/api/?name=Juan+Perez&background=00FF66&color=fff">\n  <h3>Juan Pérez</h3>\n  <p>Desarrollador Web</p>\n</div>' },
       { name: 'styles.css', lang: 'css', content: '.card-presentacion { text-align: center; border: 1px solid #eee; border-radius: 10px; padding: 20px; width: 200px; }\n.card-presentacion img { border-radius: 50%; width: 80px; height: 80px; }' }
     ]
   },
@@ -5103,7 +5103,7 @@ export const challenges = [
       'Incluye un input text para escribir el texto a mostrar.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<input type="color" id="colorPicker" value="#2d6a4f">\n<input type="text" id="textoMostrar" value="Texto de ejemplo">\n<p id="textoColoreado">Texto de ejemplo</p>' },
+      { name: 'index.html', lang: 'html', content: '<input type="color" id="colorPicker" value="#00FF66">\n<input type="text" id="textoMostrar" value="Texto de ejemplo">\n<p id="textoColoreado">Texto de ejemplo</p>' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("colorPicker").addEventListener("input", function() { document.getElementById("textoColoreado").style.color = this.value; });\ndocument.getElementById("textoMostrar").addEventListener("input", function() { document.getElementById("textoColoreado").textContent = this.value; });' }
     ]
   },
@@ -5135,7 +5135,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<nav class="sliding-nav">\n  <a href="#">Inicio</a>\n  <a href="#">Servicios</a>\n  <a href="#">Contacto</a>\n  <div class="slider-hover"></div>\n</nav>' },
-      { name: 'styles.css', lang: 'css', content: '.sliding-nav { position: relative; display: inline-flex; gap: 20px; }\n.slider-hover { position: absolute; bottom: -2px; left: 0; height: 3px; background: #2d6a4f; transition: left 0.3s, width 0.3s; }' },
+      { name: 'styles.css', lang: 'css', content: '.sliding-nav { position: relative; display: inline-flex; gap: 20px; }\n.slider-hover { position: absolute; bottom: -2px; left: 0; height: 3px; background: #00FF66; transition: left 0.3s, width 0.3s; }' },
       { name: 'script.js', lang: 'js', content: 'const slider = document.querySelector(".slider-hover");\ndocument.querySelectorAll(".sliding-nav a").forEach(link => {\n  link.addEventListener("mouseenter", () => {\n    const rect = link.getBoundingClientRect();\n    const navRect = link.parentElement.getBoundingClientRect();\n    slider.style.left = rect.left - navRect.left + "px";\n    slider.style.width = rect.width + "px";\n  });\n});' }
     ]
   },
@@ -5256,11 +5256,11 @@ export const challenges = [
     instructions: [
       'En <strong>index.html</strong>, cinco <code>&lt;span&gt;</code> con estrellas ☆.',
       'En <strong>script.js</strong>, al hacer clic en una estrella se guarda el valor, al pasar el ratón se iluminan temporalmente.',
-      'En <strong>styles.css</strong>, estrellas en dorado para las activas.'
+      'En <strong>styles.css</strong>, estrellas en verde neón para las activas.'
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="rating">\n  <span class="estrella" data-val="1">☆</span>\n  <span class="estrella" data-val="2">☆</span>\n  <span class="estrella" data-val="3">☆</span>\n  <span class="estrella" data-val="4">☆</span>\n  <span class="estrella" data-val="5">☆</span>\n  <p id="valoracion"></p>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.estrella { font-size: 2rem; cursor: pointer; }\n.estrella.dorada { color: gold; }' },
+      { name: 'styles.css', lang: 'css', content: '.estrella { font-size: 2rem; cursor: pointer; }\n.estrella.dorada { color: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'const estrellas = document.querySelectorAll(".estrella");\nlet valorSeleccionado = 0;\nestrellas.forEach((estrella, index) => {\n  estrella.addEventListener("click", () => {\n    valorSeleccionado = index + 1;\n    document.getElementById("valoracion").textContent = `Calificación: ${valorSeleccionado}`;\n    estrellas.forEach((e, i) => e.classList.toggle("dorada", i < valorSeleccionado));\n  });\n  estrella.addEventListener("mouseenter", () => {\n    estrellas.forEach((e, i) => e.classList.toggle("dorada", i <= index));\n  });\n  estrella.addEventListener("mouseleave", () => {\n    estrellas.forEach((e, i) => e.classList.toggle("dorada", i < valorSeleccionado));\n  });\n});' }
     ]
   },
@@ -5276,7 +5276,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="cubo">\n  <div class="cara frente">1</div>\n  <div class="cara atras">2</div>\n  <div class="cara izquierda">3</div>\n  <div class="cara derecha">4</div>\n  <div class="cara arriba">5</div>\n  <div class="cara abajo">6</div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.cubo { position: relative; width: 100px; height: 100px; transform-style: preserve-3d; animation: girar 5s linear infinite; margin: 50px auto; }\n.cara { position: absolute; width: 100px; height: 100px; border: 2px solid #fff; background: rgba(45,106,79,0.8); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; }\n.frente { transform: translateZ(50px); }\n.atras { transform: rotateY(180deg) translateZ(50px); }\n.derecha { transform: rotateY(90deg) translateZ(50px); }\n.izquierda { transform: rotateY(-90deg) translateZ(50px); }\n.arriba { transform: rotateX(90deg) translateZ(50px); }\n.abajo { transform: rotateX(-90deg) translateZ(50px); }\n@keyframes girar { 100% { transform: rotateX(360deg) rotateY(360deg); } }' }
+      { name: 'styles.css', lang: 'css', content: '.cubo { position: relative; width: 100px; height: 100px; transform-style: preserve-3d; animation: girar 5s linear infinite; margin: 50px auto; }\n.cara { position: absolute; width: 100px; height: 100px; border: 2px solid #fff; background: rgba(0, 255, 102,0.8); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; }\n.frente { transform: translateZ(50px); }\n.atras { transform: rotateY(180deg) translateZ(50px); }\n.derecha { transform: rotateY(90deg) translateZ(50px); }\n.izquierda { transform: rotateY(-90deg) translateZ(50px); }\n.arriba { transform: rotateX(90deg) translateZ(50px); }\n.abajo { transform: rotateX(-90deg) translateZ(50px); }\n@keyframes girar { 100% { transform: rotateX(360deg) rotateY(360deg); } }' }
     ]
   },
   {
@@ -5291,7 +5291,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="menu-circ">\n  <button id="btnCentral">+</button>\n  <a href="#" class="item-circ" style="--i:1;">A</a>\n  <a href="#" class="item-circ" style="--i:2;">B</a>\n  <a href="#" class="item-circ" style="--i:3;">C</a>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.menu-circ { position: relative; width: 200px; height: 200px; margin: 50px; }\n#btnCentral { width: 50px; height: 50px; border-radius: 50%; background: #2d6a4f; color: white; border: none; cursor: pointer; position: absolute; top: 75px; left: 75px; z-index: 2; }\n.item-circ { position: absolute; top: 85px; left: 85px; width: 30px; height: 30px; background: #d4af37; color: black; text-align: center; line-height: 30px; border-radius: 50%; text-decoration: none; transition: transform 0.4s ease, opacity 0.4s; opacity: 0; }\n.menu-circ.abierto .item-circ:nth-child(2) { transform: translate(-60px, -60px); opacity: 1; }\n.menu-circ.abierto .item-circ:nth-child(3) { transform: translate(0, -80px); opacity: 1; }\n.menu-circ.abierto .item-circ:nth-child(4) { transform: translate(60px, -60px); opacity: 1; }' },
+      { name: 'styles.css', lang: 'css', content: '.menu-circ { position: relative; width: 200px; height: 200px; margin: 50px; }\n#btnCentral { width: 50px; height: 50px; border-radius: 50%; background: #00FF66; color: white; border: none; cursor: pointer; position: absolute; top: 75px; left: 75px; z-index: 2; }\n.item-circ { position: absolute; top: 85px; left: 85px; width: 30px; height: 30px; background: #00FF66; color: black; text-align: center; line-height: 30px; border-radius: 50%; text-decoration: none; transition: transform 0.4s ease, opacity 0.4s; opacity: 0; }\n.menu-circ.abierto .item-circ:nth-child(2) { transform: translate(-60px, -60px); opacity: 1; }\n.menu-circ.abierto .item-circ:nth-child(3) { transform: translate(0, -80px); opacity: 1; }\n.menu-circ.abierto .item-circ:nth-child(4) { transform: translate(60px, -60px); opacity: 1; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("btnCentral").addEventListener("click", function() {\n  this.parentElement.classList.toggle("abierto");\n});' }
     ]
   },
@@ -5322,7 +5322,7 @@ export const challenges = [
       'En <strong>script.js</strong>, puedes generar las coordenadas dinámicamente.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg width="300" height="200">\n  <polyline points="0,150 50,100 100,120 150,50 200,70 250,20 300,80" fill="none" stroke="#2d6a4f" stroke-width="3"\n    stroke-dasharray="400" stroke-dashoffset="400" class="animar-linea" />\n</svg>' },
+      { name: 'index.html', lang: 'html', content: '<svg width="300" height="200">\n  <polyline points="0,150 50,100 100,120 150,50 200,70 250,20 300,80" fill="none" stroke="#00FF66" stroke-width="3"\n    stroke-dasharray="400" stroke-dashoffset="400" class="animar-linea" />\n</svg>' },
       { name: 'styles.css', lang: 'css', content: '.animar-linea { animation: dibujar 2s ease forwards; }\n@keyframes dibujar { to { stroke-dashoffset: 0; } }' }
     ]
   },
@@ -5368,7 +5368,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="timeline">\n  <div class="evento"><h3 class="ano">2022</h3><div class="detalle">Empecé a programar</div></div>\n  <div class="evento"><h3 class="ano">2024</h3><div class="detalle">Primer proyecto real</div></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.evento .detalle { max-height: 0; overflow: hidden; transition: max-height 0.3s; }\n.evento.abierto .detalle { max-height: 50px; }\n.ano { cursor: pointer; color: #2d6a4f; }' },
+      { name: 'styles.css', lang: 'css', content: '.evento .detalle { max-height: 0; overflow: hidden; transition: max-height 0.3s; }\n.evento.abierto .detalle { max-height: 50px; }\n.ano { cursor: pointer; color: #00FF66; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelectorAll(".ano").forEach(ano => ano.addEventListener("click", function() {\n  this.parentElement.classList.toggle("abierto");\n}));' }
     ]
   },
@@ -5521,7 +5521,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="dropZone">Arrastra aquí un archivo de texto</div>\n<pre id="contenidoArchivo"></pre>' },
-      { name: 'styles.css', lang: 'css', content: '#dropZone { width: 300px; height: 150px; border: 2px dashed #2d6a4f; text-align: center; line-height: 150px; }' },
+      { name: 'styles.css', lang: 'css', content: '#dropZone { width: 300px; height: 150px; border: 2px dashed #00FF66; text-align: center; line-height: 150px; }' },
       { name: 'script.js', lang: 'js', content: 'const zone = document.getElementById("dropZone");\nzone.addEventListener("dragover", e => { e.preventDefault(); zone.style.background = "#e8f5e9"; });\nzone.addEventListener("dragleave", () => zone.style.background = "");\nzone.addEventListener("drop", e => {\n  e.preventDefault();\n  zone.style.background = "";\n  const file = e.dataTransfer.files[0];\n  if (file && file.type.match("text")) {\n    const reader = new FileReader();\n    reader.onload = ev => document.getElementById("contenidoArchivo").textContent = ev.target.result;\n    reader.readAsText(file);\n  }\n});' }
     ]
   },
@@ -5537,7 +5537,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button id="hamburger">☰</button>\n<nav id="drawer">\n  <a href="#">Inicio</a>\n  <a href="#">Perfil</a>\n  <a href="#">Salir</a>\n</nav>\n<div id="overlay" class="oculto"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#drawer { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background: #2d6a4f; transition: left 0.3s; padding-top: 60px; }\n#drawer.abierto { left: 0; }\n#overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }\n#overlay.oculto { display: none; }' },
+      { name: 'styles.css', lang: 'css', content: '#drawer { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background: #00FF66; transition: left 0.3s; padding-top: 60px; }\n#drawer.abierto { left: 0; }\n#overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }\n#overlay.oculto { display: none; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("hamburger").addEventListener("click", () => {\n  document.getElementById("drawer").classList.toggle("abierto");\n  document.getElementById("overlay").classList.toggle("oculto");\n});' }
     ]
   },
@@ -5584,7 +5584,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="barrasCanvas" width="300" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("barrasCanvas").getContext("2d");\nconst datos = [{a:30, b:20}, {a:50, b:40}, {a:25, b:45}];\nconst colores = ["#2d6a4f", "#d4af37"];\nconst ancho = 60;\ndatos.forEach((d, i) => {\n  let acum = 0;\n  [d.a, d.b].forEach((val, j) => {\n    ctx.fillStyle = colores[j];\n    const altura = val;\n    ctx.fillRect(i * (ancho + 20) + 40, canvas.height - acum - altura, ancho, altura);\n    ctx.fillStyle = "white";\n    ctx.fillText(val, i * (ancho + 20) + 50, canvas.height - acum - altura / 2);\n    acum += altura;\n  });\n});' }
+      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("barrasCanvas").getContext("2d");\nconst datos = [{a:30, b:20}, {a:50, b:40}, {a:25, b:45}];\nconst colores = ["#00FF66", "#00FF66"];\nconst ancho = 60;\ndatos.forEach((d, i) => {\n  let acum = 0;\n  [d.a, d.b].forEach((val, j) => {\n    ctx.fillStyle = colores[j];\n    const altura = val;\n    ctx.fillRect(i * (ancho + 20) + 40, canvas.height - acum - altura, ancho, altura);\n    ctx.fillStyle = "white";\n    ctx.fillText(val, i * (ancho + 20) + 50, canvas.height - acum - altura / 2);\n    acum += altura;\n  });\n});' }
     ]
   },
   {
@@ -5645,7 +5645,7 @@ export const challenges = [
       'El porcentaje puede ser fijo o controlado por un atributo.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<svg width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle class="progreso-circulo" cx="60" cy="60" r="50" fill="none" stroke="#2d6a4f" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314"/>\n  <text x="60" y="65" text-anchor="middle">70%</text>\n</svg>' },
+      { name: 'index.html', lang: 'html', content: '<svg width="120" height="120">\n  <circle cx="60" cy="60" r="50" fill="none" stroke="#eee" stroke-width="10"/>\n  <circle class="progreso-circulo" cx="60" cy="60" r="50" fill="none" stroke="#00FF66" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314"/>\n  <text x="60" y="65" text-anchor="middle">70%</text>\n</svg>' },
       { name: 'styles.css', lang: 'css', content: '.progreso-circulo { animation: llenarProg 2s ease forwards; }\n@keyframes llenarProg { to { stroke-dashoffset: 94.2; } }' }
     ]
   },
@@ -5751,7 +5751,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="opciones">\n  <input type="radio" id="op1" name="plan" hidden checked>\n  <label for="op1">Básico</label>\n  <input type="radio" id="op2" name="plan" hidden>\n  <label for="op2">Pro</label>\n  <input type="radio" id="op3" name="plan" hidden>\n  <label for="op3">Enterprise</label>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.opciones label { display: inline-block; padding: 20px; border: 2px solid #ccc; border-radius: 10px; cursor: pointer; margin: 5px; transition: border-color 0.2s; }\n.opciones input:checked + label { border-color: #2d6a4f; background: #e8f5e9; }' }
+      { name: 'styles.css', lang: 'css', content: '.opciones label { display: inline-block; padding: 20px; border: 2px solid #ccc; border-radius: 10px; cursor: pointer; margin: 5px; transition: border-color 0.2s; }\n.opciones input:checked + label { border-color: #00FF66; background: #e8f5e9; }' }
     ]
   },
   {
@@ -5781,7 +5781,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="radar" width="300" height="300"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("radar").getContext("2d");\nconst centroX = 150, centroY = 150, radio = 100;\nconst datos = [0.8, 0.6, 0.9, 0.4, 0.7];\nctx.beginPath();\nfor (let i = 0; i <= 5; i++) {\n  const angulo = (Math.PI * 2 * i / 5) - Math.PI / 2;\n  const x = centroX + radio * Math.cos(angulo);\n  const y = centroY + radio * Math.sin(angulo);\n  if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);\n}\nctx.closePath();\nctx.strokeStyle = "#ccc";\nctx.stroke();\nctx.beginPath();\ndatos.forEach((val, i) => {\n  const angulo = (Math.PI * 2 * i / 5) - Math.PI / 2;\n  const x = centroX + radio * val * Math.cos(angulo);\n  const y = centroY + radio * val * Math.sin(angulo);\n  if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);\n});\nctx.closePath();\nctx.fillStyle = "rgba(45, 106, 79, 0.5)";\nctx.fill();\nctx.strokeStyle = "#2d6a4f";\nctx.stroke();' }
+      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("radar").getContext("2d");\nconst centroX = 150, centroY = 150, radio = 100;\nconst datos = [0.8, 0.6, 0.9, 0.4, 0.7];\nctx.beginPath();\nfor (let i = 0; i <= 5; i++) {\n  const angulo = (Math.PI * 2 * i / 5) - Math.PI / 2;\n  const x = centroX + radio * Math.cos(angulo);\n  const y = centroY + radio * Math.sin(angulo);\n  if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);\n}\nctx.closePath();\nctx.strokeStyle = "#ccc";\nctx.stroke();\nctx.beginPath();\ndatos.forEach((val, i) => {\n  const angulo = (Math.PI * 2 * i / 5) - Math.PI / 2;\n  const x = centroX + radio * val * Math.cos(angulo);\n  const y = centroY + radio * val * Math.sin(angulo);\n  if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);\n});\nctx.closePath();\nctx.fillStyle = "rgba(0, 255, 102, 0.5)";\nctx.fill();\nctx.strokeStyle = "#00FF66";\nctx.stroke();' }
     ]
   },
   {
@@ -5826,7 +5826,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="portada">\n  <h1>EL FUTURO ES HOY</h1>\n  <h2>Tecnología y más</h2>\n  <span class="fecha">Junio 2026</span>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.portada {\n  position: relative;\n  width: 300px;\n  height: 400px;\n  background: url("https://via.placeholder.com/300x400/2d6a4f/ffffff") center/cover;\n  color: white;\n  font-family: "Georgia", serif;\n}\n.portada h1 { position: absolute; top: 20px; left: 20px; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }\n.portada h2 { position: absolute; top: 120px; left: 20px; font-size: 1.2rem; }\n.fecha { position: absolute; bottom: 10px; right: 10px; }' }
+      { name: 'styles.css', lang: 'css', content: '.portada {\n  position: relative;\n  width: 300px;\n  height: 400px;\n  background: url("https://via.placeholder.com/300x400/00FF66/ffffff") center/cover;\n  color: white;\n  font-family: "Georgia", serif;\n}\n.portada h1 { position: absolute; top: 20px; left: 20px; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }\n.portada h2 { position: absolute; top: 120px; left: 20px; font-size: 1.2rem; }\n.fecha { position: absolute; bottom: 10px; right: 10px; }' }
     ]
   },
   {
@@ -5855,7 +5855,7 @@ export const challenges = [
       'Sin JavaScript.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<div class="olas">\n  <svg viewBox="0 0 1440 120">\n    <path class="ola" d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#2d6a4f" opacity="0.5"/>\n    <path class="ola2" d="M0,80 C480,140 960,20 1440,80 L1440,120 L0,120 Z" fill="#2d6a4f"/>\n  </svg>\n</div>' },
+      { name: 'index.html', lang: 'html', content: '<div class="olas">\n  <svg viewBox="0 0 1440 120">\n    <path class="ola" d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="#00FF66" opacity="0.5"/>\n    <path class="ola2" d="M0,80 C480,140 960,20 1440,80 L1440,120 L0,120 Z" fill="#00FF66"/>\n  </svg>\n</div>' },
       { name: 'styles.css', lang: 'css', content: '.ola { animation: moverOla 6s linear infinite; }\n.ola2 { animation: moverOla 8s linear infinite reverse; }\n@keyframes moverOla { from { transform: translateX(0); } to { transform: translateX(-100%); } }' }
     ]
   },
@@ -5916,7 +5916,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="reloj-arena">\n  <div class="superior">\n    <div class="arena-sup"></div>\n  </div>\n  <div class="inferior">\n    <div class="arena-inf"></div>\n  </div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.reloj-arena { width: 100px; height: 200px; display: flex; flex-direction: column; justify-content: space-between; }\n.superior, .inferior { width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; position: relative; overflow: hidden; }\n.superior { border-top: 80px solid #d4af37; }\n.inferior { border-bottom: 80px solid #d4af37; }\n.arena-sup { position: absolute; top: -80px; left: -50px; width: 100px; height: 80px; background: #f4a460; animation: vaciar 4s linear infinite; }\n.arena-inf { position: absolute; bottom: -80px; left: -50px; width: 100px; height: 0; background: #f4a460; animation: llenarInf 4s linear infinite; }\n@keyframes vaciar { 0%, 100% { height: 80px; } 50% { height: 0; } }\n@keyframes llenarInf { 0%, 100% { height: 0; } 50% { height: 80px; } }' }
+      { name: 'styles.css', lang: 'css', content: '.reloj-arena { width: 100px; height: 200px; display: flex; flex-direction: column; justify-content: space-between; }\n.superior, .inferior { width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; position: relative; overflow: hidden; }\n.superior { border-top: 80px solid #00FF66; }\n.inferior { border-bottom: 80px solid #00FF66; }\n.arena-sup { position: absolute; top: -80px; left: -50px; width: 100px; height: 80px; background: #f4a460; animation: vaciar 4s linear infinite; }\n.arena-inf { position: absolute; bottom: -80px; left: -50px; width: 100px; height: 0; background: #f4a460; animation: llenarInf 4s linear infinite; }\n@keyframes vaciar { 0%, 100% { height: 80px; } 50% { height: 0; } }\n@keyframes llenarInf { 0%, 100% { height: 0; } 50% { height: 80px; } }' }
     ]
   },
   {
@@ -5947,7 +5947,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="memorama" id="memorama"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.memorama { display: grid; grid-template-columns: repeat(5, 60px); gap: 5px; }\n.carta { width: 60px; height: 60px; background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; border-radius: 5px; }\n.carta.volteada, .carta.acertada { background: #fff; color: black; }' },
+      { name: 'styles.css', lang: 'css', content: '.memorama { display: grid; grid-template-columns: repeat(5, 60px); gap: 5px; }\n.carta { width: 60px; height: 60px; background: #00FF66; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; border-radius: 5px; }\n.carta.volteada, .carta.acertada { background: #fff; color: black; }' },
       { name: 'script.js', lang: 'js', content: 'const emojis = ["🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐨","🐯"];\nlet cartas = [...emojis, ...emojis].sort(() => Math.random() - 0.5);\nlet seleccionadas = [];\nlet bloqueado = false;\nfunction render() {\n  document.getElementById("memorama").innerHTML = cartas.map((emoji, i) => `<div class="carta" data-idx="${i}">?</div>`).join("");\n}\ndocument.getElementById("memorama").addEventListener("click", e => {\n  if (bloqueado || !e.target.classList.contains("carta") || e.target.classList.contains("volteada") || e.target.classList.contains("acertada")) return;\n  const idx = e.target.dataset.idx;\n  e.target.textContent = cartas[idx];\n  e.target.classList.add("volteada");\n  seleccionadas.push(e.target);\n  if (seleccionadas.length === 2) {\n    bloqueado = true;\n    if (seleccionadas[0].textContent === seleccionadas[1].textContent) {\n      seleccionadas.forEach(c => c.classList.add("acertada"));\n      seleccionadas = [];\n      bloqueado = false;\n    } else {\n      setTimeout(() => {\n        seleccionadas.forEach(c => { c.textContent = "?"; c.classList.remove("volteada"); });\n        seleccionadas = [];\n        bloqueado = false;\n      }, 800);\n    }\n  }\n});\nrender();' }
     ]
   },
@@ -5963,7 +5963,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button class="pulso">Púlsame</button>' },
-      { name: 'styles.css', lang: 'css', content: '.pulso { position: relative; padding: 15px 30px; background: #2d6a4f; color: white; border: none; border-radius: 30px; overflow: hidden; }\n.pulso::before { content: ""; position: absolute; top: 50%; left: 50%; width: 0; height: 0; border: 2px solid rgba(212,175,55,0.5); border-radius: 50%; transform: translate(-50%, -50%); animation: anillo 2s infinite; }\n@keyframes anillo { 0% { width: 0; height: 0; opacity: 1; } 100% { width: 200px; height: 200px; opacity: 0; } }' }
+      { name: 'styles.css', lang: 'css', content: '.pulso { position: relative; padding: 15px 30px; background: #00FF66; color: white; border: none; border-radius: 30px; overflow: hidden; }\n.pulso::before { content: ""; position: absolute; top: 50%; left: 50%; width: 0; height: 0; border: 2px solid rgba(0, 255, 102,0.5); border-radius: 50%; transform: translate(-50%, -50%); animation: anillo 2s infinite; }\n@keyframes anillo { 0% { width: 0; height: 0; opacity: 1; } 100% { width: 200px; height: 200px; opacity: 0; } }' }
     ]
   },
   {
@@ -6039,7 +6039,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="cursor"></div>\n<a href="#">Enlace</a> <button>Botón</button>' },
-      { name: 'styles.css', lang: 'css', content: 'body { cursor: none; }\n#cursor { width: 20px; height: 20px; border: 2px solid #2d6a4f; border-radius: 50%; position: fixed; pointer-events: none; transition: width 0.2s, height 0.2s; z-index: 9999; }\n#cursor.grande { width: 40px; height: 40px; background: rgba(45,106,79,0.2); }' },
+      { name: 'styles.css', lang: 'css', content: 'body { cursor: none; }\n#cursor { width: 20px; height: 20px; border: 2px solid #00FF66; border-radius: 50%; position: fixed; pointer-events: none; transition: width 0.2s, height 0.2s; z-index: 9999; }\n#cursor.grande { width: 40px; height: 40px; background: rgba(0, 255, 102,0.2); }' },
       { name: 'script.js', lang: 'js', content: 'const cursor = document.getElementById("cursor");\ndocument.addEventListener("mousemove", e => { cursor.style.left = e.clientX - 10 + "px"; cursor.style.top = e.clientY - 10 + "px"; });\ndocument.querySelectorAll("a, button").forEach(el => {\n  el.addEventListener("mouseenter", () => cursor.classList.add("grande"));\n  el.addEventListener("mouseleave", () => cursor.classList.remove("grande"));\n});' }
     ]
   },
@@ -6070,7 +6070,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button id="subir">Subir archivo</button>\n<div class="barra"><div class="progreso" id="progreso"></div></div>' },
-      { name: 'styles.css', lang: 'css', content: '.barra { width: 300px; height: 20px; background: #eee; }\n.progreso { height: 100%; background: #2d6a4f; width: 0; transition: width 0.1s; }' },
+      { name: 'styles.css', lang: 'css', content: '.barra { width: 300px; height: 20px; background: #eee; }\n.progreso { height: 100%; background: #00FF66; width: 0; transition: width 0.1s; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("subir").addEventListener("click", function() {\n  this.disabled = true;\n  const prog = document.getElementById("progreso");\n  let ancho = 0;\n  const intervalo = setInterval(() => {\n    ancho += 5;\n    prog.style.width = ancho + "%";\n    if (ancho >= 100) {\n      clearInterval(intervalo);\n      setTimeout(() => { prog.style.width = "0"; this.disabled = false; }, 500);\n    }\n  }, 100);\n});' }
     ]
   },
@@ -6086,7 +6086,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="teclado" id="teclado"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.tecla { display: inline-block; width: 30px; height: 30px; border: 1px solid #ccc; text-align: center; line-height: 30px; margin: 2px; border-radius: 5px; }\n.tecla.presionada { background: #2d6a4f; color: white; }' },
+      { name: 'styles.css', lang: 'css', content: '.tecla { display: inline-block; width: 30px; height: 30px; border: 1px solid #ccc; text-align: center; line-height: 30px; margin: 2px; border-radius: 5px; }\n.tecla.presionada { background: #00FF66; color: white; }' },
       { name: 'script.js', lang: 'js', content: 'const rows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];\nconst cont = document.getElementById("teclado");\nrows.forEach(row => {\n  const divRow = document.createElement("div");\n  row.split("").forEach(letra => {\n    const tecla = document.createElement("span");\n    tecla.className = "tecla";\n    tecla.textContent = letra;\n    tecla.dataset.key = letra;\n    divRow.appendChild(tecla);\n  });\n  cont.appendChild(divRow);\n});\ndocument.addEventListener("keydown", e => {\n  const tecla = document.querySelector(`.tecla[data-key="${e.key.toUpperCase()}"]`);\n  if (tecla) tecla.classList.add("presionada");\n});\ndocument.addEventListener("keyup", e => {\n  const tecla = document.querySelector(`.tecla[data-key="${e.key.toUpperCase()}"]`);\n  if (tecla) tecla.classList.remove("presionada");\n});' }
     ]
   },
@@ -6145,7 +6145,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="graficoBarras" width="400" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("graficoBarras").getContext("2d");\nconst datos = [45, 80, 30, 65, 90];\nconst max = Math.max(...datos);\nconst ancho = 60;\nconst gap = 20;\nctx.fillStyle = "#2d6a4f";\ndatos.forEach((val, i) => {\n  const altura = (val / max) * (canvas.height - 30);\n  ctx.fillRect(i*(ancho+gap)+30, canvas.height - altura, ancho, altura);\n  ctx.fillStyle = "black";\n  ctx.fillText(val, i*(ancho+gap)+ancho/2, canvas.height - altura - 5);\n  ctx.fillStyle = "#2d6a4f";\n});' }
+      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("graficoBarras").getContext("2d");\nconst datos = [45, 80, 30, 65, 90];\nconst max = Math.max(...datos);\nconst ancho = 60;\nconst gap = 20;\nctx.fillStyle = "#00FF66";\ndatos.forEach((val, i) => {\n  const altura = (val / max) * (canvas.height - 30);\n  ctx.fillRect(i*(ancho+gap)+30, canvas.height - altura, ancho, altura);\n  ctx.fillStyle = "black";\n  ctx.fillText(val, i*(ancho+gap)+ancho/2, canvas.height - altura - 5);\n  ctx.fillStyle = "#00FF66";\n});' }
     ]
   },
   {
@@ -6236,7 +6236,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="duotono"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.duotono {\n  width: 300px; height: 200px;\n  background: url("https://via.placeholder.com/300x200"), linear-gradient(45deg, #2d6a4f, #d4af37);\n  background-blend-mode: luminosity;\n  background-size: cover;\n}' }
+      { name: 'styles.css', lang: 'css', content: '.duotono {\n  width: 300px; height: 200px;\n  background: url("https://via.placeholder.com/300x200"), linear-gradient(45deg, #00FF66, #00FF66);\n  background-blend-mode: luminosity;\n  background-size: cover;\n}' }
     ]
   },
   {
@@ -6329,7 +6329,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="fondoGeo" style="height:100vh;"></div>' },
-      { name: 'script.js', lang: 'js', content: 'const colores = ["#2d6a4f", "#d4af37", "#e74c3c", "#3498db"];\nlet bg = "";\nfor (let i = 0; i < 10; i++) {\n  const color = colores[Math.floor(Math.random()*colores.length)];\n  const x = Math.random()*100, y = Math.random()*100;\n  bg += `radial-gradient(circle at ${x}% ${y}%, ${color} 0%, transparent 50%), `;\n}\nbg = bg.slice(0, -2);\ndocument.getElementById("fondoGeo").style.backgroundImage = bg;' }
+      { name: 'script.js', lang: 'js', content: 'const colores = ["#00FF66", "#00FF66", "#e74c3c", "#3498db"];\nlet bg = "";\nfor (let i = 0; i < 10; i++) {\n  const color = colores[Math.floor(Math.random()*colores.length)];\n  const x = Math.random()*100, y = Math.random()*100;\n  bg += `radial-gradient(circle at ${x}% ${y}%, ${color} 0%, transparent 50%), `;\n}\nbg = bg.slice(0, -2);\ndocument.getElementById("fondoGeo").style.backgroundImage = bg;' }
     ]
   },
   {
@@ -6374,7 +6374,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="plano">\n  <img src="https://via.placeholder.com/500x300" alt="plano">\n  <div class="punto" data-nombre="Juan" style="top:50px;left:100px;"></div>\n  <div class="punto" data-nombre="Ana" style="top:150px;left:250px;"></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.plano { position: relative; display: inline-block; }\n.punto { position: absolute; width: 20px; height: 20px; background: rgba(45,106,79,0.7); border-radius: 50%; cursor: pointer; }\n.punto::after { content: attr(data-nombre); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 2px 8px; border-radius: 4px; white-space: nowrap; opacity: 0; transition: opacity 0.3s; pointer-events: none; }\n.punto:hover::after { opacity: 1; }' }
+      { name: 'styles.css', lang: 'css', content: '.plano { position: relative; display: inline-block; }\n.punto { position: absolute; width: 20px; height: 20px; background: rgba(0, 255, 102,0.7); border-radius: 50%; cursor: pointer; }\n.punto::after { content: attr(data-nombre); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 2px 8px; border-radius: 4px; white-space: nowrap; opacity: 0; transition: opacity 0.3s; pointer-events: none; }\n.punto:hover::after { opacity: 1; }' }
     ]
   },
   {
@@ -6389,7 +6389,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<button id="toggleGrid">Mostrar cuadrícula</button>\n<div id="gridOverlay" class="oculto"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#gridOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(45,106,79,0.2) 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(45,106,79,0.2) 20px); }\n.oculto { display: none; }' },
+      { name: 'styles.css', lang: 'css', content: '#gridOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(0, 255, 102,0.2) 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(0, 255, 102,0.2) 20px); }\n.oculto { display: none; }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("toggleGrid").addEventListener("click", () => {\n  document.getElementById("gridOverlay").classList.toggle("oculto");\n});' }
     ]
   },
@@ -6511,7 +6511,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<canvas id="pieExploded" width="200" height="200"></canvas>' },
-      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("pieExploded").getContext("2d");\nconst datos = [40, 20, 25, 15];\nconst colores = ["#e74c3c", "#3498db", "#2ecc71", "#f1c40f"];\nlet anguloInicial = 0;\ndatos.forEach((d, i) => {\n  const angulo = (d / 100) * Math.PI * 2;\n  const medio = anguloInicial + angulo / 2;\n  const cx = 100, cy = 100, radio = 70;\n  let offsetX = 0, offsetY = 0;\n  if (i === 2) { offsetX = Math.cos(medio) * 10; offsetY = Math.sin(medio) * 10; }\n  ctx.beginPath();\n  ctx.moveTo(cx + offsetX, cy + offsetY);\n  ctx.arc(cx + offsetX, cy + offsetY, radio, anguloInicial, anguloInicial + angulo);\n  ctx.closePath();\n  ctx.fillStyle = colores[i];\n  ctx.fill();\n  anguloInicial += angulo;\n});' }
+      { name: 'script.js', lang: 'js', content: 'const ctx = document.getElementById("pieExploded").getContext("2d");\nconst datos = [40, 20, 25, 15];\nconst colores = ["#e74c3c", "#3498db", "#00FF66", "#f1c40f"];\nlet anguloInicial = 0;\ndatos.forEach((d, i) => {\n  const angulo = (d / 100) * Math.PI * 2;\n  const medio = anguloInicial + angulo / 2;\n  const cx = 100, cy = 100, radio = 70;\n  let offsetX = 0, offsetY = 0;\n  if (i === 2) { offsetX = Math.cos(medio) * 10; offsetY = Math.sin(medio) * 10; }\n  ctx.beginPath();\n  ctx.moveTo(cx + offsetX, cy + offsetY);\n  ctx.arc(cx + offsetX, cy + offsetY, radio, anguloInicial, anguloInicial + angulo);\n  ctx.closePath();\n  ctx.fillStyle = colores[i];\n  ctx.fill();\n  anguloInicial += angulo;\n});' }
     ]
   },
   {
@@ -6571,7 +6571,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="pulse-loader">\n  <span class="pulse-dot"></span>\n  <span class="pulse-dot"></span>\n  <span class="pulse-dot"></span>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.pulse-dot { display: inline-block; width: 15px; height: 15px; border-radius: 50%; background: #2d6a4f; margin: 5px; animation: pulse-dot 1.2s ease-in-out infinite; }\n.pulse-dot:nth-child(2) { animation-delay: 0.2s; }\n.pulse-dot:nth-child(3) { animation-delay: 0.4s; }\n@keyframes pulse-dot { 0%, 100% { transform: scale(0.8); opacity: 0.5; } 50% { transform: scale(1.2); opacity: 1; } }' }
+      { name: 'styles.css', lang: 'css', content: '.pulse-dot { display: inline-block; width: 15px; height: 15px; border-radius: 50%; background: #00FF66; margin: 5px; animation: pulse-dot 1.2s ease-in-out infinite; }\n.pulse-dot:nth-child(2) { animation-delay: 0.2s; }\n.pulse-dot:nth-child(3) { animation-delay: 0.4s; }\n@keyframes pulse-dot { 0%, 100% { transform: scale(0.8); opacity: 0.5; } 50% { transform: scale(1.2); opacity: 1; } }' }
     ]
   },
   {
@@ -6801,7 +6801,7 @@ export const challenges = [
       'Muestra el valor numérico al lado de cada slider.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<label>R: <input type="range" id="r" min="0" max="255" value="45"><span id="rVal">45</span></label><br>\n<label>G: <input type="range" id="g" min="0" max="255" value="106"><span id="gVal">106</span></label><br>\n<label>B: <input type="range" id="b" min="0" max="255" value="79"><span id="bVal">79</span></label><br>\n<div id="muestra" style="width:100px;height:100px;background:rgb(45,106,79);"></div>' },
+      { name: 'index.html', lang: 'html', content: '<label>R: <input type="range" id="r" min="0" max="255" value="0"><span id="rVal">0</span></label><br>\n<label>G: <input type="range" id="g" min="0" max="255" value="255"><span id="gVal">255</span></label><br>\n<label>B: <input type="range" id="b" min="0" max="255" value="102"><span id="bVal">102</span></label><br>\n<div id="muestra" style="width:100px;height:100px;background:rgb(0, 255, 102);"></div>' },
       { name: 'script.js', lang: 'js', content: 'function actualizar() {\n  const r = document.getElementById("r").value;\n  const g = document.getElementById("g").value;\n  const b = document.getElementById("b").value;\n  document.getElementById("rVal").textContent = r;\n  document.getElementById("gVal").textContent = g;\n  document.getElementById("bVal").textContent = b;\n  document.getElementById("muestra").style.background = `rgb(${r},${g},${b})`;\n}\ndocument.querySelectorAll("input[type=range]").forEach(inp => inp.addEventListener("input", actualizar));' }
     ]
   },
@@ -6863,7 +6863,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="rotate-perspective" id="rotador"></div>' },
-      { name: 'styles.css', lang: 'css', content: '.rotate-perspective { width: 200px; height: 150px; background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; transition: transform 0.8s; transform-style: preserve-3d; }\n.rotate-perspective.girado { transform: rotateY(180deg); }' },
+      { name: 'styles.css', lang: 'css', content: '.rotate-perspective { width: 200px; height: 150px; background: #00FF66; color: white; display: flex; align-items: center; justify-content: center; transition: transform 0.8s; transform-style: preserve-3d; }\n.rotate-perspective.girado { transform: rotateY(180deg); }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("rotador").addEventListener("click", function() {\n  this.classList.toggle("girado");\n});' }
     ]
   },
@@ -6878,7 +6878,7 @@ export const challenges = [
       'Copiar usa navigator.clipboard.writeText.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<button id="nuevoColor">Nuevo color</button>\n<div id="colorBox" style="width:150px;height:100px;margin:10px;background:#2d6a4f;"></div>\n<p>Código: <span id="hex">#2d6a4f</span> <button id="copiar">Copiar</button></p>' },
+      { name: 'index.html', lang: 'html', content: '<button id="nuevoColor">Nuevo color</button>\n<div id="colorBox" style="width:150px;height:100px;margin:10px;background:#00FF66;"></div>\n<p>Código: <span id="hex">#00FF66</span> <button id="copiar">Copiar</button></p>' },
       { name: 'script.js', lang: 'js', content: 'function generarHex() {\n  const hex = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, "0");\n  document.getElementById("colorBox").style.background = hex;\n  document.getElementById("hex").textContent = hex;\n}\ndocument.getElementById("nuevoColor").addEventListener("click", generarHex);\ndocument.getElementById("copiar").addEventListener("click", () => {\n  navigator.clipboard.writeText(document.getElementById("hex").textContent);\n  alert("Color copiado");\n});\ngenerarHex();' }
     ]
   },
@@ -6910,7 +6910,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<header id="header">\n  <h1 id="logo">Serak</h1>\n  <nav><a href="#">Inicio</a> <a href="#">Servicios</a></nav>\n</header>\n<div style="height:2000px;"></div>' },
-      { name: 'styles.css', lang: 'css', content: '#header { position: fixed; top:0; width:100%; background: #2d6a4f; color: white; padding: 20px; transition: padding 0.3s; }\n#logo { transition: font-size 0.3s; }\n#header.shrink { padding: 10px; }\n#header.shrink #logo { font-size: 1.2rem; }' },
+      { name: 'styles.css', lang: 'css', content: '#header { position: fixed; top:0; width:100%; background: #00FF66; color: white; padding: 20px; transition: padding 0.3s; }\n#logo { transition: font-size 0.3s; }\n#header.shrink { padding: 10px; }\n#header.shrink #logo { font-size: 1.2rem; }' },
       { name: 'script.js', lang: 'js', content: 'window.addEventListener("scroll", () => {\n  document.getElementById("header").classList.toggle("shrink", window.scrollY > 100);\n});' }
     ]
   },
@@ -6926,7 +6926,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="stacked-100">\n  <div class="barra"><div class="segA" style="height:60%"></div><div class="segB" style="height:40%"></div></div>\n  <div class="barra"><div class="segA" style="height:30%"></div><div class="segB" style="height:70%"></div></div>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.stacked-100 { display: flex; align-items: flex-end; gap: 20px; height: 200px; }\n.barra { width: 60px; height: 100%; display: flex; flex-direction: column-reverse; }\n.segA { background: #2d6a4f; }\n.segB { background: #d4af37; }' }
+      { name: 'styles.css', lang: 'css', content: '.stacked-100 { display: flex; align-items: flex-end; gap: 20px; height: 200px; }\n.barra { width: 60px; height: 100%; display: flex; flex-direction: column-reverse; }\n.segA { background: #00FF66; }\n.segB { background: #00FF66; }' }
     ]
   },
   {
@@ -6986,7 +6986,7 @@ export const challenges = [
       'Muestra barra de progreso.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<button id="escanear">Escanear puertos</button>\n<div id="progresoScan" style="height:10px;background:#eee;"><div id="barraScan" style="height:100%;width:0;background:#2d6a4f;"></div></div>\n<ul id="resultadosScan"></ul>' },
+      { name: 'index.html', lang: 'html', content: '<button id="escanear">Escanear puertos</button>\n<div id="progresoScan" style="height:10px;background:#eee;"><div id="barraScan" style="height:100%;width:0;background:#00FF66;"></div></div>\n<ul id="resultadosScan"></ul>' },
       { name: 'script.js', lang: 'js', content: 'const puertos = [80, 443, 22, 21, 3306];\ndocument.getElementById("escanear").addEventListener("click", function() {\n  this.disabled = true;\n  const lista = document.getElementById("resultadosScan");\n  lista.innerHTML = "";\n  let completados = 0;\n  puertos.forEach((p, i) => {\n    setTimeout(() => {\n      const estado = Math.random() > 0.5 ? "Abierto" : "Cerrado";\n      lista.innerHTML += `<li>Puerto ${p}: ${estado}</li>`;\n      completados++;\n      document.getElementById("barraScan").style.width = (completados / puertos.length) * 100 + "%";\n      if (completados === puertos.length) this.disabled = false;\n    }, i * 800);\n  });\n});' }
     ]
   },
@@ -7063,7 +7063,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<form id="formOverlay">\n  <input type="text" placeholder="Nombre" required>\n  <button type="submit">Enviar</button>\n</form>\n<div id="loadingOverlay" class="oculto"><div class="spinner"></div></div>' },
-      { name: 'styles.css', lang: 'css', content: '#loadingOverlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; }\n#loadingOverlay.oculto { display: none; }\n.spinner { border: 5px solid #eee; border-top: 5px solid #2d6a4f; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }\n@keyframes spin { to { transform: rotate(360deg); } }' },
+      { name: 'styles.css', lang: 'css', content: '#loadingOverlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; }\n#loadingOverlay.oculto { display: none; }\n.spinner { border: 5px solid #eee; border-top: 5px solid #00FF66; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }\n@keyframes spin { to { transform: rotate(360deg); } }' },
       { name: 'script.js', lang: 'js', content: 'document.getElementById("formOverlay").addEventListener("submit", function(e) {\n  e.preventDefault();\n  document.getElementById("loadingOverlay").classList.remove("oculto");\n  setTimeout(() => {\n    document.getElementById("loadingOverlay").classList.add("oculto");\n    alert("Formulario enviado simulado");\n    this.reset();\n  }, 2000);\n});' }
     ]
   },
@@ -7110,7 +7110,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="loader-bars">\n  <span class="bar"></span>\n  <span class="bar"></span>\n  <span class="bar"></span>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.bar { display: inline-block; width: 6px; height: 30px; background: #2d6a4f; margin: 2px; animation: bounceBar 1.2s ease-in-out infinite; }\n.bar:nth-child(1) { animation-delay: 0s; }\n.bar:nth-child(2) { animation-delay: 0.15s; }\n.bar:nth-child(3) { animation-delay: 0.3s; }\n@keyframes bounceBar { 0%, 100% { transform: scaleY(0.5); } 50% { transform: scaleY(1); } }' }
+      { name: 'styles.css', lang: 'css', content: '.bar { display: inline-block; width: 6px; height: 30px; background: #00FF66; margin: 2px; animation: bounceBar 1.2s ease-in-out infinite; }\n.bar:nth-child(1) { animation-delay: 0s; }\n.bar:nth-child(2) { animation-delay: 0.15s; }\n.bar:nth-child(3) { animation-delay: 0.3s; }\n@keyframes bounceBar { 0%, 100% { transform: scaleY(0.5); } 50% { transform: scaleY(1); } }' }
     ]
   },
   {
@@ -7140,7 +7140,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="bounce-card">Tarjeta</div>' },
-      { name: 'styles.css', lang: 'css', content: '.bounce-card { padding: 30px; background: #2d6a4f; color: white; width: 200px; text-align: center; transition: transform 0.3s; }\n.bounce-card:hover { animation: bounce 0.5s; }\n@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }' }
+      { name: 'styles.css', lang: 'css', content: '.bounce-card { padding: 30px; background: #00FF66; color: white; width: 200px; text-align: center; transition: transform 0.3s; }\n.bounce-card:hover { animation: bounce 0.5s; }\n@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }' }
     ]
   },
   {
@@ -7199,7 +7199,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<img src="https://via.placeholder.com/150" class="glow">' },
-      { name: 'styles.css', lang: 'css', content: '.glow { transition: box-shadow 0.3s; }\n.glow:hover { box-shadow: 0 0 15px 5px rgba(45,106,79,0.7); }' }
+      { name: 'styles.css', lang: 'css', content: '.glow { transition: box-shadow 0.3s; }\n.glow:hover { box-shadow: 0 0 15px 5px rgba(0, 255, 102,0.7); }' }
     ]
   },
   {
@@ -7214,7 +7214,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div class="fab-menu">\n  <button class="fab-btn">+</button>\n  <button class="fab-item" style="--angle:0deg;">A</button>\n  <button class="fab-item" style="--angle:45deg;">B</button>\n  <button class="fab-item" style="--angle:90deg;">C</button>\n</div>' },
-      { name: 'styles.css', lang: 'css', content: '.fab-menu { position: relative; width: 60px; height: 60px; }\n.fab-btn { width: 50px; height: 50px; border-radius: 50%; background: #2d6a4f; color: white; border: none; cursor: pointer; position: absolute; bottom:0; right:0; z-index: 2; }\n.fab-item { position: absolute; bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: #d4af37; border: none; color: white; transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-80px) rotate(calc(-1 * var(--angle))); opacity: 0; transition: all 0.3s; }\n.fab-menu.abierto .fab-item { opacity: 1; }' },
+      { name: 'styles.css', lang: 'css', content: '.fab-menu { position: relative; width: 60px; height: 60px; }\n.fab-btn { width: 50px; height: 50px; border-radius: 50%; background: #00FF66; color: white; border: none; cursor: pointer; position: absolute; bottom:0; right:0; z-index: 2; }\n.fab-item { position: absolute; bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: #00FF66; border: none; color: white; transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-80px) rotate(calc(-1 * var(--angle))); opacity: 0; transition: all 0.3s; }\n.fab-menu.abierto .fab-item { opacity: 1; }' },
       { name: 'script.js', lang: 'js', content: 'document.querySelector(".fab-btn").addEventListener("click", function() {\n  this.parentElement.classList.toggle("abierto");\n});' }
     ]
   },
@@ -7277,7 +7277,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="chat"><div id="chatMessages"></div></div>\n<input type="text" id="chatInput" placeholder="Escribe..."><button id="chatSend">Enviar</button>' },
-      { name: 'styles.css', lang: 'css', content: '#chatMessages { height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }\n.msg { margin: 5px 0; }\n.msg.user { text-align: right; color: #2d6a4f; }\n.msg.bot { text-align: left; color: #333; }' },
+      { name: 'styles.css', lang: 'css', content: '#chatMessages { height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }\n.msg { margin: 5px 0; }\n.msg.user { text-align: right; color: #00FF66; }\n.msg.bot { text-align: left; color: #333; }' },
       { name: 'script.js', lang: 'js', content: 'const respuestas = [\n  ["hola", "¡Hola! ¿Cómo estás?"],\n  ["cómo estás", "Estoy bien, gracias por preguntar."],\n  ["adiós", "¡Hasta luego!"]\n];\nfunction responder(texto) {\n  const msg = texto.toLowerCase();\n  for (const [clave, resp] of respuestas) {\n    if (msg.includes(clave)) return resp;\n  }\n  return "Lo siento, no entiendo.";\n}\ndocument.getElementById("chatSend").addEventListener("click", () => {\n  const input = document.getElementById("chatInput");\n  const mensaje = input.value.trim();\n  if (!mensaje) return;\n  const chat = document.getElementById("chatMessages");\n  chat.innerHTML += `<div class="msg user">Tú: ${mensaje}</div>`;\n  input.value = "";\n  setTimeout(() => {\n    chat.innerHTML += `<div class="msg bot">Bot: ${responder(mensaje)}</div>`;\n    chat.scrollTop = chat.scrollHeight;\n  }, 500);\n});' }
     ]
   },
@@ -7308,7 +7308,7 @@ export const challenges = [
     ],
     template: [
       { name: 'index.html', lang: 'html', content: '<div id="splash">Bienvenido</div>' },
-      { name: 'styles.css', lang: 'css', content: '#splash { position: fixed; top:0; left:0; width:100%; height:100%; background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; font-size: 3rem; transition: opacity 1s; }\n#splash.oculto { opacity: 0; pointer-events: none; }' },
+      { name: 'styles.css', lang: 'css', content: '#splash { position: fixed; top:0; left:0; width:100%; height:100%; background: #00FF66; color: white; display: flex; align-items: center; justify-content: center; font-size: 3rem; transition: opacity 1s; }\n#splash.oculto { opacity: 0; pointer-events: none; }' },
       { name: 'script.js', lang: 'js', content: 'setTimeout(() => {\n  document.getElementById("splash").classList.add("oculto");\n}, 2000);' }
     ]
   },
@@ -7443,7 +7443,7 @@ export const challenges = [
       'Mantén la funcionalidad de dibujo con el ratón.'
     ],
     template: [
-      { name: 'index.html', lang: 'html', content: '<canvas id="canvasDibujo" width="400" height="300" style="border:1px solid black;"></canvas>\n<div>\n  <button class="color-btn" data-color="#e74c3c" style="background:#e74c3c;"></button>\n  <button class="color-btn" data-color="#2d6a4f" style="background:#2d6a4f;"></button>\n  <button class="color-btn" data-color="#3498db" style="background:#3498db;"></button>\n</div>' },
+      { name: 'index.html', lang: 'html', content: '<canvas id="canvasDibujo" width="400" height="300" style="border:1px solid black;"></canvas>\n<div>\n  <button class="color-btn" data-color="#e74c3c" style="background:#e74c3c;"></button>\n  <button class="color-btn" data-color="#00FF66" style="background:#00FF66;"></button>\n  <button class="color-btn" data-color="#3498db" style="background:#3498db;"></button>\n</div>' },
       { name: 'script.js', lang: 'js', content: 'const canvas = document.getElementById("canvasDibujo");\nconst ctx = canvas.getContext("2d");\nlet dibujando = false;\nlet color = "#000000";\ncanvas.addEventListener("mousedown", e => { dibujando = true; ctx.beginPath(); ctx.moveTo(e.offsetX, e.offsetY); ctx.strokeStyle = color; });\ncanvas.addEventListener("mousemove", e => { if (dibujando) { ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke(); } });\ncanvas.addEventListener("mouseup", () => dibujando = false);\ndocument.querySelectorAll(".color-btn").forEach(btn => {\n  btn.addEventListener("click", function() { color = this.dataset.color; });\n});' }
     ]
   },
@@ -7483,10 +7483,10 @@ export const challenges = [
 export function renderChallenges(challengesContent, challenges, files, editors, createEditor, switchToFile, updateTabs, updateFileTree, updatePreview, saveToLocal, clearConsole) {
   challengesContent.innerHTML = challenges.map(ch => `
     <div class="challenge-card" style="border:1px solid var(--lab-border); border-radius:10px; padding:16px; margin-bottom:16px;">
-      <h4 style="color:var(--lab-gold); margin:0 0 6px;">${ch.title} <span style="font-size:0.7rem; background:rgba(212,175,55,0.2); padding:2px 8px; border-radius:12px;">${ch.level}</span></h4>
+      <h4 style="color:var(--lab-neon); margin:0 0 6px;">${ch.title} <span style="font-size:0.7rem; background:rgba(0, 255, 102,0.2); padding:2px 8px; border-radius:12px;">${ch.level}</span></h4>
       <p>${ch.description}</p>
       <details>
-        <summary style="cursor:pointer; color:var(--lab-gold-light); font-weight:600;">Instrucciones paso a paso</summary>
+        <summary style="cursor:pointer; color:var(--lab-neon-light); font-weight:600;">Instrucciones paso a paso</summary>
         <ol style="font-size:0.9rem; margin-top:8px; padding-left:20px;">
           ${ch.instructions.map(step => `<li>${step}</li>`).join('')}
         </ol>

@@ -1,18 +1,21 @@
 ﻿:root {
-  --primary-green: #111111;
-  --secondary-green: #16161a;
-  --accent-green: #00FF66;
-  --light-green: #00FF66;
-  --mint-green: #00FF66;
-  --bamboo-gold: #00FF66;
-  --gold-glow: rgba(0, 255, 102, 0.35);
-  --green-glow: rgba(0, 255, 102, 0.35);
-  --dark-bg: #0a0a0a;
-  --card-bg: #16161a;
-  --card-hover: #1f1f24;
+  --bg-main: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #16161a;
+  --primary-color: #00FF66;
+  --primary-glow: rgba(0, 255, 102, 0.35);
+  --text-light: #f8f9fa;
+  --text-muted: #9ca3af;
   --border-color: rgba(255, 255, 255, 0.08);
+  --primary-green: var(--primary-color);
+  --secondary-green: var(--primary-color);
+  --accent-green: #00FF66;
+  --mint-green: #00FF66;
+  --green-glow: rgba(0, 255, 102, 0.35);
+  --dark-bg: var(--bg-main);
+  --card-bg: var(--bg-card);
+  --card-hover: #1f1f24;
   --text-color: #f8f9fa;
-  --text-muted: #e5e7eb;
   --radius-lg: 18px;
   --radius-md: 12px;
   --transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -39,7 +42,7 @@
 }
 
 .standalone-game-body::-webkit-scrollbar-thumb:hover {
-  background: var(--light-green);
+  background: var(--primary-color);
 }
 
 
@@ -87,7 +90,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--bamboo-gold);
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 13.5px;
@@ -110,7 +113,7 @@
   gap: 8px;
   font-size: 12.5px;
   font-weight: 700;
-  color: var(--light-green);
+  color: var(--primary-color);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -149,7 +152,7 @@
   padding: 6px 18px;
   border-radius: 24px;
   background: rgba(0, 255, 102, 0.12);
-  border: 1px solid var(--light-green);
+  border: 1px solid var(--primary-color);
   color: var(--mint-green);
   font-size: 12.5px;
   font-weight: 700;
@@ -175,7 +178,7 @@
 }
 
 .hero-content-section h1 span {
-  color: var(--light-green);
+  color: var(--primary-color);
 }
 
 .hero-content-section p {
@@ -210,12 +213,12 @@
 }
 
 .game-stat-chip:hover {
-  border-color: var(--light-green);
+  border-color: var(--primary-color);
   transform: translateY(-2px);
 }
 
 .game-stat-chip i {
-  color: var(--bamboo-gold);
+  color: var(--primary-color);
 }
 
 
@@ -246,7 +249,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, var(--light-green), var(--bamboo-gold));
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color));
   opacity: 0;
   transition: var(--transition);
 }
@@ -254,7 +257,7 @@
 .direct-card:hover {
   background: var(--card-hover);
   transform: translateY(-4px);
-  border-color: var(--light-green);
+  border-color: var(--primary-color);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -272,7 +275,7 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: var(--light-green);
+  color: var(--primary-color);
   margin-bottom: 18px;
   transition: var(--transition);
 }
@@ -312,11 +315,11 @@
   transition: var(--transition);
   background: linear-gradient(135deg, var(--secondary-green) 0%, var(--primary-green) 100%);
   color: #ffffff;
-  border: 1px solid var(--light-green);
+  border: 1px solid var(--primary-color);
 }
 
 .direct-btn:hover {
-  background: var(--light-green);
+  background: var(--primary-color);
   color: #0a0a0a;
   transform: translateY(-2px);
 }
@@ -347,7 +350,7 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--light-green);
+  background: var(--primary-color);
   border-radius: 18px 0 0 18px;
 }
 
@@ -380,7 +383,7 @@
 }
 
 .div-section h2 i {
-  color: var(--light-green);
+  color: var(--primary-color);
   font-size: 1.5rem;
 }
 
@@ -412,12 +415,12 @@
 
 .rule-card:hover {
   transform: translateY(-3px);
-  border-color: var(--light-green);
+  border-color: var(--primary-color);
   background: rgba(14, 28, 19, 0.95);
 }
 
 .rule-number {
-  background: var(--light-green);
+  background: var(--primary-color);
   color: #0a0a0a;
   font-weight: 800;
   font-size: 0.9rem;
@@ -441,7 +444,7 @@
 }
 
 .rule-content h4 i {
-  color: var(--bamboo-gold);
+  color: var(--primary-color);
   font-size: 0.95rem;
 }
 
@@ -657,7 +660,7 @@
 }
 
 .game-info-block h2 i {
-  color: var(--light-green);
+  color: var(--primary-color);
 }
 
 .game-info-block p {
@@ -677,14 +680,14 @@
 }
 
 .btn-gold {
-  background: var(--bamboo-gold) !important;
-  border-color: var(--bamboo-gold) !important;
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
   color: #0a0a0a !important;
   font-weight: 800 !important;
 }
 
 .btn-gold:hover {
-  background: #c29f2e !important;
+  background: #00FF66 !important;
 }
 
 
@@ -1023,7 +1026,7 @@ p,
 }
 
 .direct-btn {
-  background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+  background: linear-gradient(135deg, #00FF66 0%, #00FF66 100%) !important;
   color: #0a0a0a !important;
   font-weight: 800 !important;
   border: none !important;
@@ -1031,7 +1034,7 @@ p,
 }
 
 .direct-btn:hover {
-  background: #33ff85 !important;
+  background: #00FF66 !important;
   color: #0a0a0a !important;
   box-shadow: 0 8px 25px rgba(0, 255, 102, 0.5) !important;
 }

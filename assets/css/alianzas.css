@@ -1,4 +1,4 @@
-.alianzas-grid {
+﻿.alianzas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #9ca3af;
   animation: fadeInCard 0.6s ease forwards;
   opacity: 0;
 }
@@ -94,13 +94,13 @@
 }
 
 .alianza-card.activo::before {
-  background: radial-gradient(circle at 50% 50%, rgba(46, 204, 113, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 102, 0.12) 0%, transparent 70%);
   animation: auraPulse 4s infinite ease-in-out;
 }
 
 .alianza-card.nueva::before {
-  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
-  animation: auraPulseGold 3s infinite ease-in-out;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 102, 0.15) 0%, transparent 70%);
+  animation: auraPulseNeon 3s infinite ease-in-out;
 }
 
 @keyframes auraPulse {
@@ -117,7 +117,7 @@
   }
 }
 
-@keyframes auraPulseGold {
+@keyframes auraPulseNeon {
 
   0%,
   100% {
@@ -164,8 +164,8 @@
 }
 
 .estado-indicador.activo {
-  background: #2ecc71;
-  box-shadow: 0 0 15px #2ecc71;
+  background: #00FF66;
+  box-shadow: 0 0 15px #00FF66;
   animation: glowGreen 2s infinite alternate;
 }
 
@@ -176,11 +176,11 @@
 
 @keyframes glowGreen {
   from {
-    box-shadow: 0 0 8px #2ecc71;
+    box-shadow: 0 0 8px #00FF66;
   }
 
   to {
-    box-shadow: 0 0 20px #2ecc71, 0 0 30px rgba(46, 204, 113, 0.5);
+    box-shadow: 0 0 20px #00FF66, 0 0 30px rgba(0, 255, 102, 0.5);
   }
 }
 
@@ -189,7 +189,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  background: linear-gradient(135deg, #00FF66, #00c853);
   color: white;
   padding: 6px 14px;
   border-radius: 30px;
@@ -198,23 +198,23 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 3;
-  box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 255, 102, 0.4);
   animation: badgeGlow 2s infinite alternate;
 }
 
 @keyframes badgeGlow {
   from {
-    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 255, 102, 0.4);
   }
 
   to {
-    box-shadow: 0 6px 25px rgba(241, 196, 15, 0.7), 0 0 40px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 6px 25px rgba(0, 255, 102, 0.7), 0 0 40px rgba(0, 255, 102, 0.3);
   }
 }
 
 
 .alianza-card h3 {
-  color: #007a33;
+  color: #00FF66;
   margin: 15px 0 8px;
   font-weight: 700;
 }
@@ -339,6 +339,6 @@ body.dark-theme .estado-indicador.inactivo {
 
 body.dark-theme .badge-nueva {
   color: #0a0a0a;
-  background: linear-gradient(135deg, #00FF66, #00b34a);
+  background: linear-gradient(135deg, #00FF66, #00FF66);
   font-weight: 800;
 }

@@ -1,4 +1,4 @@
-﻿const clanesAliados = [
+const clanesAliados = [
   {
     nombre: "CHIHUAHUENSE  DINASTY",
     logo: "../../assets/img/alianzas/CHIHUAHUENSEDINASTY.jpg",
@@ -82,7 +82,7 @@ function renderizarAlianzas() {
         src="${clan.logo}"
         alt="Logo de ${clan.nombre}"
         class="alianza-logo"
-        onerror="this.src='https://via.placeholder.com/100/1b4332/d4af37?text=${clan.nombre.charAt(0)}'"
+        onerror="this.src='https://via.placeholder.com/100/0a0a0a/00FF66?text=${clan.nombre.charAt(0)}'"
         loading="lazy"
       />
 

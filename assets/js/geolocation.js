@@ -184,7 +184,7 @@
     select.style.cssText = 'position:absolute;opacity:0;pointer-events:none;height:0;width:0;';
     const div = document.createElement('div');
     div.className = 'geo-display-field';
-    div.innerHTML = `${flag ? flag + ' ' : ''}${displayText} <i class="fas fa-lock" style="margin-left:8px;color:var(--bamboo-gold);font-size:0.8rem;" title="Detectado automáticamente"></i>`;
+    div.innerHTML = `${flag ? flag + ' ' : ''}${displayText} <i class="fas fa-lock" style="margin-left:8px;color:var(--primary-color);font-size:0.8rem;" title="Detectado automáticamente"></i>`;
     select.parentNode.insertBefore(div, select.nextSibling);
     select.dataset.displayCreated = 'true';
   }

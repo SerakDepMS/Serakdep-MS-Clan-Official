@@ -1,164 +1,57 @@
-﻿#  PROPIEDAD INTELECTUAL PROTEGIDA - NO OPEN SOURCE 
+﻿# SerakDepMS Studios — Comunidad Gamer Oficial
 
-**Copyright © 2026 D3B1A2C4F5E67890. Todos los derechos reservados.**
+SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs de **SerakDepMS**, empresa matriz dedicada al desarrollo web, la arquitectura digital, la ciberseguridad y los servicios profesionales.
 
-**Este proyecto NO es de código abierto. Está protegido por licencia restrictiva.**
-**Cualquier uso no autorizado será reportado mediante DMCA y acciones legales.**
+Este repositorio contiene el sitio web de la comunidad Gamer oficial. La comunidad forma parte del pilar **Game Development & Gamer Communities** del ecosistema SerakDepMS y reúne 12 divisiones.
 
----
+## Divisiones Gamer
 
-#  SerakDepMS Studios Clan – Sitio Web Oficial
+1. [Roblox](pages/juegos/roblox.html)
+2. [Minecraft](pages/juegos/minecraft.html)
+3. [Call of Duty](pages/juegos/call-of-duty.html)
+4. [Fortnite](pages/juegos/fortnite.html)
+5. [Free Fire](pages/juegos/free-fire.html)
+6. [Valorant](pages/juegos/valorant.html)
+7. [Among Us](pages/juegos/among-us.html)
+8. [Counter-Strike 2](pages/juegos/counter-strike-2.html)
+9. [FC Mobile](pages/juegos/fc-mobile.html)
+10. [Clash Royale](pages/juegos/clash-royale.html)
+11. [Guardian Tales](pages/juegos/guardian-tales.html)
+12. [Blood Strike](pages/juegos/blood-strike.html)
 
-![Clan Logo](assets/img/clan-logo.png)
+También puedes consultar el [catálogo de divisiones](pages/juegos/portal.html).
 
-Bienvenido al sitio web oficial de **SerakDepMS Studios**, la denominación exclusiva de **SerakDepMS** (Serak Digital Mastery & Solutions) para sus comunidades Gamer y de Programación. Este proyecto representa la **Comunidad Gamer oficial Multi-Gamer** con presencia en **12 divisiones oficiales** y múltiples plataformas de juego.
+## Ecosistema SerakDepMS
 
-### Ecosistema SerakDepMS
-SerakDepMS Studios forma parte de un ecosistema de tres pilares bajo la empresa **SerakDepMS**:
+| Pilar | Organización |
+| --- | --- |
+| 🌐 Web Development & Technology | SerakDepMS |
+| 🎮 Game Development & Gamer Communities | SerakDepMS Studios |
+| 💻 Programming Communities | SerakDepMS Studios |
 
-| Pilar | Denominación | Descripción |
-|-------|-------------|-------------|
-| 🌐 Web & Technology | SerakDepMS | Full Stack Architect & Cybersecurity Expert. 130+ OS mastery |
-| 🎮 Game & Gamer Communities | SerakDepMS Studios | 12 divisiones gaming competitivas |
-| 💻 Programming Communities | SerakDepMS Studios | 8 divisiones técnicas para devs |
+La comunidad hermana **SerakDepMS Devs** cuenta con ocho divisiones:
+Python & Data Science, Web Development, Backend & APIs, Mobile Development,
+Game Development, Cybersecurity & DevSecOps, AI & Machine Learning y
+Algoritmos & Competitive.
 
-**Cross-links del ecosistema:**
-- 🌐 [Portafolio Principal](https://serakdepms.github.io/SerakDepMS-Studios/)
-- 💻 [Comunidad Devs](https://serakdepms.github.io/Serakdep-MS-Devs-Official/)
-- 🎮 [Comunidad Gamer](https://serakdepms.github.io/Serakdep-MS-Clan-Official/) ← (este proyecto)
+## Enlaces oficiales
 
----
-
-## ESTATUS LEGAL
-
-**PROYECTO PRIVADO CON LICENCIA RESTRICTIVA**
--  **Propiedad intelectual:** D3B1A2C4F5E67890
--  **Autor / Fundador:** SerakDepMS — Full Stack Architect & Cybersecurity Expert
--  **URL oficial:** https://serakdepms.github.io/Serakdep-MS-Clan-Official/
--  **Licencia:** Propietaria - Todos los derechos reservados
--  **Última actualización:** 4 de agosto de 2026
--  **Verificado en Google Search Console**
-
----
-
-## TÉRMINOS DE USO
-
-###  **PERMITIDO:**
-- Ver el sitio web en modo de solo lectura
-- Reportar errores mediante Issues de GitHub
-- Sugerir mejoras mediante Discussions
-- Usar el formulario de inscripción como usuario final
-- Navegar por todas las páginas públicas
-
-### **ESTRICTAMENTE PROHIBIDO:**
-- Copiar, clonar o replicar el código fuente
-- Crear forks no autorizados
-- Modificar o crear trabajos derivados
-- Distribuir total o parcialmente el contenido
-- Uso comercial o monetización
-- Hosting en otros servidores
-- Extracción de funcionalidades o diseño
-- Eliminar o modificar los avisos de copyright
-
----
-
-## Cómo unirse al clan
-
-1. **Lee el reglamento** – Aceptación obligatoria (incluye normas por división).
-2. **Completa el formulario** – Selecciona tu división principal (12 disponibles).
-3. **Espera contacto vía WhatsApp** – Para entrevista y validación.
-4. **Únete a los grupos oficiales** – WhatsApp y Discord de tu división.
-5. **Participa en eventos** – ¡Gana premios y sube de rango!
-
----
-
-## Enlaces importantes
-
-- [WhatsApp del clan](https://wa.me/SerakDepMS)
-- [Discord oficial](https://discord.gg/nphuM8K9aD)
-- Correo oficial: `serakdepmsofficial7@gmail.com`
-- [Portafolio SerakDepMS](https://serakdepms.github.io/SerakDepMS-Studios/)
+- [Sitio de la comunidad Gamer](https://serakdepms.github.io/Serakdep-MS-Clan-Official/)
 - [Comunidad Devs](https://serakdepms.github.io/Serakdep-MS-Devs-Official/)
+- [Portafolio SerakDepMS Studios](https://serakdepms.github.io/SerakDepMS-Studios/)
 - [GitHub SerakDepMS](https://github.com/SerakDepMS)
 
----
+## Identidad visual y comunidad
 
-## Tecnologías utilizadas
+- Paleta oficial: verde neón `#00FF66` sobre negro `#0a0a0a`.
+- Emblema: águila ciberpunk formada por circuitos en verde neón.
+- El sitio utiliza exclusivamente modo oscuro.
+- Edad mínima: 13 años. Se requiere consentimiento parental para participantes de 13 a 15 años; no se admite el registro de menores de 13.
 
-### Frontend
-- **HTML5** – Estructura semántica de las 20+ páginas.
-- **CSS3** – Variables CSS, glassmorphism, animaciones, diseño responsivo y tema oscuro/claro.
-- **JavaScript (Vanilla ES6+)** – Módulos ES6, interactividad, lógica de formularios, reproductor de video, chatbot, calendario, sistema de noticias y editor de código.
+Consulta [IDENTIDAD.md](IDENTIDAD.md) para conocer la estructura corporativa y comunitaria completa.
 
-### Servicios y Bibliotecas
-- **GitHub Pages** – Hosting gratuito del sitio estático.
-- **Npoint.io** – Almacenamiento y carga dinámica de noticias, eventos y enciclopedia (API JSON).
-- **EmailJS** – Envío de correos electrónicos desde formularios (inscripción, reportes, sugerencias, aspirantes a admin y colaborador).
-- **ipapi.co** – Geolocalización automática para formularios (país y zona horaria).
-- **CodeMirror 5** – Editor de código para Serak (HTML, CSS, JS, autocompletado, linting).
-- **JSHint** – Validación de JavaScript en tiempo real en Serak.
-- **JSZip** – Descarga de proyectos en ZIP desde Serak.
-- **Font Awesome 6.4** – Iconos vectoriales en toda la interfaz.
-- **Google Fonts** – Tipografía "Poppins", "Cinzel", "Share Tech Mono".
+## Tecnología
 
-### SEO
-- **Google Search Console** – Sitio verificado y monitoreado.
-- **robots.txt** – Configuración de rastreo para buscadores.
-- **sitemap.xml** – URLs indexables con prioridades y frecuencias de actualización.
-- **Meta tags de verificación** – Google Site Verification implementado.
+El sitio estático utiliza HTML, CSS y JavaScript, y se publica mediante GitHub Pages. Incluye formularios, noticias, eventos, lore, un reproductor multimedia, CodeTurbo y un chatbot.
 
-### Cookies implementadas
-| Cookie | Finalidad | Duración |
-|--------|-----------|:--------:|
-| `cookie_consent_sms` | Almacena preferencia de cookies (banner) | 1 año |
-| `sms_lab_project` | Guarda proyectos de Serak (localStorage) | Persistente |
-| `sms_volume` | Recuerda nivel de volumen del reproductor de video | 6 meses |
-
----
-
-## INFORMACIÓN LEGAL COMPLETA
-
-### **LICENCIA:**
-Este proyecto está protegido por derechos de autor bajo licencia restrictiva. No es software libre ni open source.
-
-### **AVISO DE PROTECCIÓN:**
-Este repositorio está monitoreado por sistemas automáticos de detección de violaciones de copyright.
-
-### **DETECCIÓN DE VIOLACIONES:**
-- Monitoreo automático de copias no autorizadas
-- Rastreo de forks y clones
-- Detección de uso comercial ilícito
-- Alertas DMCA automáticas
-
-### **REPORTAR VIOLACIONES:**
-Si observas uso no autorizado de este proyecto:
-1. Contacta al propietario: serakdepmsofficial7@gmail.com
-2. Reporta en GitHub mediante "Report Abuse"
-3. Envía evidencia a: serakdepmsofficial7@gmail.com
-
-### **ADVERTENCIA LEGAL FINAL:**
-**"LA VISUALIZACIÓN DE ESTE CÓDIGO NO CONSTITUYE UNA LICENCIA PARA SU USO.  
-CUALQUIER REPRODUCCIÓN, MODIFICACIÓN O DISTRIBUCIÓN SIN AUTORIZACIÓN ESCRITA  
-CONSTITUYE UNA VIOLACIÓN DE DERECHOS DE AUTOR Y SERÁ PERSEGUIDA LEGALMENTE."**
-
----
-
-## **POLÍTICA DE ACCESO:**
-Este repositorio es de **SOLA VISUALIZACIÓN**.  
-El código se proporciona únicamente para demostración y transparencia,  
-no para ser reutilizado, modificado o distribuido.
-
----
-
-**"UNIDOS POR LA PASIÓN DEL GAMING, PROTEGIDOS POR LA LEY"**  
-© 2026 D3B1A2C4F5E67890 - SerakDepMS Studios Clan
-
-**Última verificación legal:** 04/08/2026  
-**Estado:** Activo y Protegido  
-**Google Search Console:** Verificado  
-**Sitemap:** Enviado  
-**Chatbot IA:** Actualizado  
-**Violaciones recientes:** 0  
-**Acciones DMCA pendientes:** 0  
-
-*Nota: Este README es parte integral de los términos de licencia.*
+© 2026 SerakDepMS Studios. All rights reserved.

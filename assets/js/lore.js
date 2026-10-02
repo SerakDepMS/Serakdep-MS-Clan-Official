@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "II",
       label: "El Emblema Digital",
-      text: "El emblema oficial de SerakDepMS Studios emergió con verde neón sobre circuitos tecnológicos de vanguardia, sobre un fondo negro profundo. Representa la excelencia técnica, la visión estratégica, la innovación digital y el equilibrio entre disciplina y creatividad. Un emblema que unifica nuestras 12 divisiones gamer bajo una misma bandera, alineado con la identidad corporativa de SerakDepMS."
+      text: "El emblema oficial de SerakDepMS Studios emergió con verde neón #00FF66 sobre negro profundo, sobre circuitos tecnológicos de vanguardia. Representa la excelencia técnica, la visión estratégica, la innovación digital y el equilibrio entre disciplina y creatividad. Un emblema que unifica nuestras 12 divisiones gamer bajo una misma bandera, alineado con la identidad corporativa de SerakDepMS."
     },
     {
       chapter: "III",
       label: "El Pacto Fundador",
-      text: "En una noche de enero de 2023, los primeros miembros se reunieron bajo la visión de SerakDepMS, la empresa matriz del ecosistema digital (Serak Digital Mastery & Solutions). Juntos sellaron el juramento de construir un clan inclusivo y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una hermandad Multi-Gamer con presencia en PC, móviles y consolas, bajo la denominación oficial de SerakDepMS Studios."
+      text: "En una noche de enero de 2023, los primeros miembros se reunieron bajo la visión de SerakDepMS, empresa matriz del ecosistema digital, a través de su división SerakDepMS Studios. Juntos sellaron el juramento de construir una comunidad inclusiva y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una comunidad Multi-Gamer con presencia en PC, móviles y consolas, bajo la denominación oficial de SerakDepMS Studios."
     },
     {
       chapter: "IV",
@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       chapter: "V",
-      label: "Valores del Clan",
+      label: "Valores de la Comunidad",
       text: "El Código de Conducta se erigió como pilar ético de SerakDepMS Studios: respeto mutuo, inclusión, honestidad en los juegos (prohibición total de hacks y trampas), lealtad y comunicación constructiva. Un estandarte que guía a todos los miembros, sin importar su división o rango."
     },
     {
       chapter: "VI",
       label: "Los Forjadores del Código",
-      text: "Para dar presencia al clan ante el mundo, SerakDepMS Studios, junto con maikol-dev-code-cyber, unieron fuerzas para escribir el código base del portal web oficial. Un sitio estático, pero con la visión de convertirse en el centro neurálgico de la comunidad. Este fue el primer proyecto de la división Web Development del ecosistema SerakDepMS."
+      text: "Para dar presencia a SerakDepMS Studios (denominación oficial de las comunidades) ante el mundo, SerakDepMS y maikol-dev-code-cyber unieron fuerzas para escribir el código base del portal web oficial. Un sitio estático, pero con la visión de convertirse en el centro neurálgico de la comunidad. Este fue el primer proyecto del pilar Web Development & Technology de SerakDepMS."
     },
     {
       chapter: "VII",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "X",
       label: "Campos de Batalla Multi-Gamer",
-      text: "Las 12 divisiones oficiales del clan abarcan los títulos más competitivos del momento: Roblox (con juegos como Blox Fruits, Arsenal y King Legacy), Minecraft (servidor 24/7 con Bedwars y PvP), Call of Duty (Warzone y CODM Mobile), Fortnite (Battle Royale y Zero Build), Free Fire (Guild y DE clasificatorio), Valorant (5v5 táctico y Premier), Among Us (partidas de deducción y estrategia), Counter-Strike 2 (Premier y utilería), FC Mobile (Ultimate Team y ligas), Clash Royale (guerras de clan y 1v1), Guardian Tales (Arena y gremios) y Blood Strike (Battle Royale táctico móvil). Cada división cuenta con su propio reglamento, sistema de sanciones y grupo de comunicación. Estas 12 divisiones son hermanas de las 8 divisiones técnicas de la comunidad Devs (Serakdep-MS-Devs-Official), ambas gestionadas bajo SerakDepMS Studios."
+      text: "Las 12 divisiones oficiales de SerakDepMS Studios abarcan los títulos más competitivos del momento: Roblox (con juegos como Blox Fruits, Arsenal y King Legacy), Minecraft (servidor 24/7 con Bedwars y PvP), Call of Duty (Warzone y CODM Mobile), Fortnite (Battle Royale y Zero Build), Free Fire (Guild y DE clasificatorio), Valorant (5v5 táctico y Premier), Among Us (partidas de deducción y estrategia), Counter-Strike 2 (Premier y utilería), FC Mobile (Ultimate Team y ligas), Clash Royale (guerras de clan y 1v1), Guardian Tales (Arena y gremios) y Blood Strike (Battle Royale táctico móvil). Cada división cuenta con su propio reglamento, sistema de sanciones y grupo de comunicación. Estas 12 divisiones son hermanas de las 8 divisiones técnicas de la comunidad Devs (Serakdep-MS-Devs-Official), ambas gestionadas bajo SerakDepMS Studios."
     },
     {
       chapter: "XI",
@@ -59,17 +59,17 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XII",
       label: "El Memorial de los Viajeros",
-      text: "Aquellos miembros que deciden partir hacia nuevos rumbos dejan su huella grabada. A través del canal de Discord #despedida, el clan agradece y honra sus contribuciones. En SerakDepMS Studios ningún amigo se olvida, y siempre pueden regresar si así lo desean, pasando nuevamente por el proceso de admisión."
+      text: "Aquellos miembros que deciden partir hacia nuevos rumbos dejan su huella grabada. A través del canal de Discord #despedida, la comunidad agradece y honra sus contribuciones. En SerakDepMS Studios ningún amigo se olvida, y siempre pueden regresar si así lo desean, pasando nuevamente por el proceso de admisión."
     },
     {
       chapter: "XIII",
       label: "La Alta Dirección",
-      text: "La toma de decisiones estratégicas recae sobre la Alta Dirección, liderada por SerakDepMS (empresa matriz del ecosistema digital), junto con los administradores de mayor antigüedad. Encargados de dirigir la política y visión del clan, aseguran que el desarrollo del portal, las alianzas y la comunidad sigan una senda ascendente, siempre con transparencia y diálogo abierto. La comunidad Gamer y la comunidad Devs comparten la misma dirección estratégica bajo el ecosistema SerakDepMS."
+      text: "La toma de decisiones estratégicas recae sobre la Alta Dirección, liderada por SerakDepMS (empresa matriz del ecosistema digital), junto con los administradores de mayor antigüedad. Encargados de dirigir la política y visión de la comunidad, aseguran que el desarrollo del portal, las alianzas y la comunidad sigan una senda ascendente, siempre con transparencia y diálogo abierto. La comunidad Gamer y la comunidad Devs comparten la misma dirección estratégica bajo el ecosistema SerakDepMS."
     },
     {
       chapter: "XIV",
       label: "Custodios del Estandarte",
-      text: "Los Administradores gestionan las áreas críticas: eventos (organización de torneos y actividades), admisiones (revisión de solicitudes y entrevistas), relaciones (alianzas y representación), contenido (guías, gráficos y material multimedia) y soporte técnico (mantenimiento de Discord, web y herramientas). Su labor incansable mantiene la maquinaria del clan funcionando de manera fluida y organizada."
+      text: "Los Administradores gestionan las áreas críticas: eventos (organización de torneos y actividades), admisiones (revisión de solicitudes y entrevistas), relaciones (alianzas y representación), contenido (guías, gráficos y material multimedia) y soporte técnico (mantenimiento de Discord, web y herramientas). Su labor incansable mantiene a la comunidad funcionando de manera fluida y organizada."
     },
     {
       chapter: "XV",
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XVII",
       label: "El Marco Legal",
-      text: "En febrero de 2026, la página web se adaptó a la legalidad vigente (RGPD, LOPDGDD, CCPA, LGPD, Política de Cookies, Aviso Legal y DMCA). SerakDepMS Studios protege rigurosamente la privacidad de menores: edad mínima de 13 años (COPPA), y consentimiento parental obligatorio para edades entre 13 y 15 años (RGPD). Todos los formularios cuentan con checkboxes de consentimiento explícito y bloqueo real de envío para menores no autorizados. Solo se recopila el nombre de usuario y, con autorización explícita, el número de teléfono para casos de extrema gravedad. Los datos se eliminan al abandonar el clan."
+      text: "En febrero de 2026, la página web se adaptó a la legalidad vigente (RGPD, LOPDGDD, CCPA, LGPD, Política de Cookies, Aviso Legal y DMCA). SerakDepMS Studios protege rigurosamente la privacidad de menores: edad mínima de 13 años (COPPA), y consentimiento parental obligatorio para edades entre 13 y 15 años (RGPD). Todos los formularios cuentan con checkboxes de consentimiento explícito y bloqueo real de envío para menores no autorizados. Solo se recopila el nombre de usuario y, con autorización explícita, el número de teléfono para casos de extrema gravedad. Los datos se eliminan al abandonar la comunidad."
     },
     {
       chapter: "XVIII",
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XIX",
       label: "El Núcleo de Código",
-      text: "Creado como entorno interactivo de programación, Serak permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes, y herramientas de exportación (ZIP o HTML único). Es el laboratorio oficial de SerakDepMS Studios y forma parte del pilar Web Development & Technology del ecosistema SerakDepMS."
+      text: "Creado como entorno interactivo de programación, CodeTurbo (el laboratorio Serak) permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables del editor, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes y herramientas de exportación (ZIP o HTML único). CodeTurbo forma parte del pilar Web Development & Technology de SerakDepMS."
     },
     {
       chapter: "XX",
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XXI",
       label: "La Gran Hermandad",
-      text: "Con más de 266 miembros verificados de múltiples países (España, México, Colombia, Argentina, Chile, Perú, entre otros) y edades desde los 13 años en adelante (con consentimiento parental obligatorio para menores de 16), el clan se consolida como una verdadera familia unida por la pasión al gaming y la camaradería inquebrantable en todas las plataformas. La diversidad cultural enriquece cada partida y cada conversación."
+      text: "Con más de 266 miembros verificados de múltiples países (España, México, Colombia, Argentina, Chile, Perú, entre otros) y edades desde los 13 años en adelante (con consentimiento parental obligatorio para menores de 16), la comunidad se consolida como una verdadera familia unida por la pasión al gaming y la camaradería inquebrantable en todas las plataformas. La diversidad cultural enriquece cada partida y cada conversación."
     },
     {
       chapter: "XXII",
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       chapter: "XXVI",
-      label: "Un Clan, Una Leyenda",
+      label: "Una Comunidad, Una Leyenda",
       text: "El mañana nos pertenece. La historia de SerakDepMS Studios no tiene final; cada nuevo miembro añade su propia página al archivo. El legado de SerakDepMS Studios continúa su curso firme hacia la inmortalidad. Las 12 divisiones gamer, los torneos, las alianzas y los valores forjados en estos años son solo el prólogo de lo que está por venir. El legado se expande también con la comunidad Devs (Serakdep-MS-Devs-Official) y el portafolio corporativo de SerakDepMS, formando un ecosistema tecnológico completo con presencia en web, gaming y programación."
     },
     {

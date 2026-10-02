@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let files = [
     { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, SerakDepMS Studios!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
-    { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
+    { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #00FF66;\n  text-align: center;\n  padding: 50px;\n}' },
     { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Serak de SerakDepMS Studios!");' }
   ];
   let activeFileId = '1';
@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!confirm('¿Restaurar los archivos de ejemplo originales? Se perderán los cambios no guardados.')) return;
     files = [
       { id: '1', name: 'index.html', language: 'html', content: '<h1>¡Hola, SerakDepMS Studios!</h1>\n<p>Modifica este archivo y mira la magia.</p>' },
-      { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #1b4332;\n  text-align: center;\n  padding: 50px;\n}' },
+      { id: '2', name: 'styles.css', language: 'css', content: 'body {\n  font-family: sans-serif;\n  background: #f0f4f0;\n  color: #00FF66;\n  text-align: center;\n  padding: 50px;\n}' },
       { id: '3', name: 'script.js', language: 'js', content: 'console.log("¡Bienvenido al Serak de SerakDepMS Studios!");' }
     ];
     Object.values(editors).forEach(ed => ed.getWrapperElement().remove());

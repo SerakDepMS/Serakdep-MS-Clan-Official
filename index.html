@@ -23,24 +23,39 @@
       wait_for_update: 500
     });
 
-    // Paso 2: Si ya aceptó antes, actualizar consentimiento y cargar GA4
-    (function () {
-      if (localStorage.getItem('cookieConsent') === 'accepted') {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted',
-          functionality_storage: 'granted',
-          personalization_storage: 'granted'
-        });
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VBV6P0W6EL';
-        document.head.appendChild(s);
-        s.onload = function () {
-          gtag('js', new Date());
-          gtag('config', 'G-VBV6P0W6EL', { anonymize_ip: true });
-        };
-      }
-    })();
+    function loadAnalyticsAfterConsent() {
+      gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        functionality_storage: 'granted',
+        personalization_storage: 'granted'
+      });
+      if (window._ga4Loaded) return;
+      window._ga4Loaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-VBV6P0W6EL';
+      document.head.appendChild(script);
+      script.onload = function () {
+        gtag('js', new Date());
+        gtag('config', 'G-VBV6P0W6EL', { anonymize_ip: true });
+      };
+    }
+
+    window.addEventListener('serakdep:consent-accepted', loadAnalyticsAfterConsent);
+    window.addEventListener('serakdep:consent-rejected', function () {
+      gtag('consent', 'update', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied'
+      });
+    });
+
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadAnalyticsAfterConsent();
+    }
   </script>
   <meta charset="UTF-8" />
   <script>document.documentElement.classList.add('dark-theme');</script>
@@ -48,14 +63,13 @@
     html.dark-theme,
     html.dark-theme body {
       background-color: #0a0a0a !important;
-      color: #e0e0e0;
+      color: #f8f9fa;
       color-scheme: dark;
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SerakDepMS Studios - Comunidad & Clan Oficial Multi-Gamer</title>
-  <meta name="description"
-    content="SerakDepMS Studios - Comunidad y Clan Oficial Multi-Gamer con divisiones en Roblox, Minecraft, Call of Duty, Valorant, Fortnite, Free Fire, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
+  <title>SerakDepMS Studios — Comunidad Gamer Oficial</title>
+  <meta name="description" content="Comunidad Gamer oficial de SerakDepMS Studios, división de SerakDepMS, con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
   <meta name="keywords"
     content="Multi-Gamer, clan, eSports, gaming, comunidad, Roblox, Minecraft, Valorant, Call of Duty, Fortnite, Free Fire, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales, Blood Strike, SerakDepMS Studios" />
   <meta name="google-site-verification" content="9tjYSYGFCUfKDVZdeJDtDbpOyUBxd0uEh86botq02_0" />
@@ -76,12 +90,12 @@
   <meta name="theme-color" content="#0a0a0a" />
   <meta name="robots" content="index, follow" />
   <!-- Precarga de CSS crítico único para máxima velocidad FCP en móviles -->
-  <link rel="preload" as="style" href="assets/css/bundle.min.css?v=10" />
+  <link rel="preload" as="style" href="assets/css/bundle.min.css?v=14" />
   <!-- Precarga de la imagen LCP en WebP -->
   <link rel="preload" as="image" href="assets/img/clan-logo.png" type="image/png" fetchpriority="high" />
 
   <!-- Hoja de estilo unificada y minificada (bundle: style + video-player + chatbot + contador) -->
-  <link rel="stylesheet" href="assets/css/bundle.min.css?v=10" />
+  <link rel="stylesheet" href="assets/css/bundle.min.css?v=14" />
 
   <!-- Iconos Font Awesome (asíncronos sin bloqueo) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
@@ -93,25 +107,23 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
-  <meta property="og:title" content="SerakDepMS Studios - Comunidad & Clan Oficial Multi-Gamer" />
-  <meta property="og:description"
-    content="Comunidad oficial multi-gamer SerakDepMS Studios con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
+  <meta property="og:title" content="SerakDepMS Studios — Comunidad Gamer Oficial" />
+  <meta property="og:description" content="Comunidad Gamer oficial de SerakDepMS Studios, división de SerakDepMS, con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
   <meta property="og:image"
     content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="353" />
   <meta property="og:image:height" content="322" />
-  <meta property="og:site_name" content="SerakDepMS Studios Clan Official" />
+  <meta property="og:site_name" content="SerakDepMS Studios" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/index.html" />
-  <meta name="twitter:title" content="SerakDepMS Studios - Comunidad & Clan Oficial Multi-Gamer" />
-  <meta name="twitter:description"
-    content="Comunidad oficial multi-gamer SerakDepMS Studios con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
+  <meta name="twitter:title" content="SerakDepMS Studios — Comunidad Gamer Oficial" />
+  <meta name="twitter:description" content="Comunidad Gamer oficial de SerakDepMS Studios, división de SerakDepMS, con 12 divisiones: Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike." />
   <meta name="twitter:image"
     content="https://serakdepms.github.io/Serakdep-MS-Clan-Official/assets/img/clan-logo.png" />
   <meta name="twitter:site" content="@serakdepms" />
-  <meta name="theme-color" content="#0a0a0a" />
+
 </head>
 <body class="dark-theme">
   <header>
@@ -153,7 +165,7 @@
         <div class="logo-text">
           <p class="clan-slogan">Unidos-por-la-pasión-del-gaming</p>
           <div class="logo-badges">
-            <span class="badge"><i class="fas fa-shield-alt"></i> Clan Verificado</span>
+            <span class="badge"><i class="fas fa-shield-alt"></i> comunidad Verificado</span>
             <span class="badge"><i class="fas fa-users"></i> +266 Miembros</span>
             <span class="badge"><i class="fas fa-globe-americas"></i> Comunidad Global</span>
           </div>
@@ -187,10 +199,10 @@
         <div class="video-controls-panel">
           <div class="video-meta-info">
             <h2 class="video-current-title" id="video-title">
-              Presentación del Clan
+              Presentación de la comunidad
             </h2>
             <p class="video-current-description" id="video-description">
-              ¡Bienvenido a SerakDepMS Studios! Una comunidad y clan oficial Multi-Gamer donde la diversión, la competencia y
+              ¡Bienvenido a SerakDepMS Studios! Una comunidad oficial Multi-Gamer bajo SerakDepMS, donde la diversión, la competencia y
               el respeto son lo primero.
             </p>
           </div>
@@ -399,7 +411,7 @@
         <p>
           <strong>SerakDepMS Studios</strong> es una división de <strong>SerakDepMS</strong> (Serak Digital Mastery &amp; Solutions),
           la empresa tecnológica matriz dedicada al desarrollo web, videojuegos y comunidades digitales.
-          Como comunidad y clan oficial Multi-Gamer, reunimos jugadores de 16 años en adelante que buscan un espacio organizado,
+          SerakDepMS Studios es la comunidad Gamer oficial de SerakDepMS para participantes desde los 13 años; se requiere consentimiento parental para quienes tienen entre 13 y 15 años que buscan un espacio organizado,
           respetuoso y altamente competitivo en múltiples plataformas.
           Nuestras 12 divisiones especializadas cubren <strong>Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant,
           Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike</strong>,
@@ -439,7 +451,7 @@
 
       <div class="card fade-in" style="text-align: center;">
         <h2 class="card-title">
-          <i class="fas fa-hourglass-half"></i> Tiempo de Nuestro Clan
+          <i class="fas fa-hourglass-half"></i> Tiempo de Nuestro comunidad
         </h2>
         <p style="font-size: 1.1rem; color: #f8f9fa; margin-bottom: 25px;">
           Desde nuestra fundación en <strong>enero de 2023</strong>, hemos crecido sin parar.
@@ -607,7 +619,7 @@
           <i class="fas fa-users"></i> Nuestra Comunidad
         </h2>
         <p>
-          Somos un clan diverso con miembros de diferentes edades y países.
+          Somos un comunidad diverso con miembros de diferentes edades y países.
           Valoramos la amistad, el respeto mutuo y el trabajo en equipo.
           Contamos con:
         </p>
@@ -621,9 +633,9 @@
       </div>
 
       <div class="card fade-in"
-        style="background: linear-gradient(135deg, rgba(0, 255, 102, 0.02) 0%, rgba(0, 255, 102, 0.05) 100%); border-left: 5px solid var(--bamboo-gold);">
+        style="background: linear-gradient(135deg, rgba(0, 255, 102, 0.02) 0%, rgba(0, 255, 102, 0.05) 100%); border-left: 5px solid var(--primary-color);">
         <h2 class="card-title">
-          <i class="fas fa-scroll" style="color: var(--bamboo-gold);"></i> Conoce Nuestra Historia
+          <i class="fas fa-scroll" style="color: var(--primary-color);"></i> Conoce Nuestra Historia
         </h2>
         <p>
           ¿Quieres saber cómo se fundó SerakDepMS Studios y quiénes lideraron el camino? Descubre el origen de nuestras
@@ -632,18 +644,18 @@
         </p>
         <div class="card-btn-container" style="margin-top: 20px; display: flex; justify-content: center;">
           <a href="pages/media/lore.html" class="btn">
-            <i class="fas fa-book-open"></i> Explorar el Lore del Clan
+            <i class="fas fa-book-open"></i> Explorar el Lore de la comunidad
           </a>
         </div>
       </div>
 
       <div class="card fade-in"
-        style="background: linear-gradient(135deg, rgba(0, 255, 102, 0.04) 0%, rgba(0, 255, 102, 0.08) 100%); border-left: 5px solid var(--light-green);">
+        style="background: linear-gradient(135deg, rgba(0, 255, 102, 0.04) 0%, rgba(0, 255, 102, 0.08) 100%); border-left: 5px solid var(--primary-color);">
         <h2 class="card-title">
-          <i class="fas fa-gamepad" style="color: var(--light-green);"></i> Sección Multi-Gamer
+          <i class="fas fa-gamepad" style="color: var(--primary-color);"></i> Sección Multi-Gamer
         </h2>
         <p>
-          SerakDepMS Studios es una comunidad y clan oficial Multi-Gamer con divisiones competitivas en Roblox, Minecraft, Call
+          SerakDepMS Studios es la comunidad Gamer oficial de SerakDepMS, con divisiones competitivas en Roblox, Minecraft, Call
           of Duty, Fortnite, Free Fire, Valorant, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y
           Blood Strike. ¡Explora todas nuestras divisiones y encuentra tu escuadra ideal!
         </p>
@@ -697,7 +709,7 @@
         <div class="footer-section">
           <h3 class="footer-title">SerakDepMS Studios</h3>
           <p>
-            Comunidad y Clan Oficial Multi-Gamer. Únete a nuestras divisiones competitivas y vive la mejor experiencia
+            Comunidad Gamer oficial de SerakDepMS Studios. Únete a nuestras divisiones competitivas y vive la mejor experiencia
             gaming.
           </p>
           <p class="footer-division" style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 8px;">
@@ -737,7 +749,7 @@
               <a href="pages/contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a>
             </li>
             <li>
-              <a href="pages/media/lore.html"><i class="fas fa-chevron-right"></i> Lore del Clan</a>
+              <a href="pages/media/lore.html"><i class="fas fa-chevron-right"></i> Lore de la comunidad</a>
             </li>
             <li>
               <a href="pages/clan/alianzas.html"><i class="fas fa-chevron-right"></i> Alianzas</a>
@@ -761,7 +773,7 @@
             </li>
             <li>
               <a href="https://wa.me/SerakDepMS" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> WhatsApp del Clan
+                <i class="fab fa-whatsapp"></i> WhatsApp de la comunidad
               </a>
             </li>
             <li>
@@ -851,17 +863,20 @@
       </div>
 
             <div class="copyright">
-        <p>&copy; 2026 SerakDepMS Studios. Todos los derechos reservados.</p>
-        <p style="font-size:0.85rem; color:#9ca3af; margin-top:6px;">
-          Aviso Legal &amp; Exenci&oacute;n de Responsabilidad: SerakDepMS Studios es una comunidad gaming eSports independiente sin fines de lucro. Todos los nombres de videojuegos, log&oacute;tipos y marcas comerciales (Roblox, Minecraft, Call of Duty, Valorant, Fortnite, Free Fire, Among Us, Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales, Blood Strike) son propiedad de sus respectivas empresas matrices y se usan bajo doctrina de Uso Leg&iacute;timo / Fair Use.
-        </p>
-      </div>
+<p>SerakDepMS Studios</p>
+<p>Una división de SerakDepMS · Serak Digital Mastery &amp; Solutions</p>
+<p>© 2026 SerakDepMS Studios. All rights reserved.</p>
+<div class="ecosystem-links" role="navigation" aria-label="Enlaces del ecosistema">
+  <a href="https://serakdepms.github.io/SerakDepMS-Studios/" target="_blank" rel="noopener noreferrer">Portafolio</a> ·
+  <a href="https://serakdepms.github.io/Serakdep-MS-Devs-Official/" target="_blank" rel="noopener noreferrer">Comunidad Devs</a> ·
+  <a href="https://github.com/SerakDepMS" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div></div>
     </div>
   </footer>  <script src="assets/js/matrix-rain.js?v=3" defer></script>
 
-  <script src="assets/js/main.js?v=9" defer></script>
+  <script src="assets/js/main.js?v=10" defer></script>
   <script src="assets/js/video-player.js?v=15" defer></script>
-  <script src="assets/js/chatbot.js?v=10" defer></script>
+  <script src="assets/js/chatbot.js?v=11" defer></script>
   <script src="assets/js/scroll-reveal.js?v=9" defer></script>
   <script src="assets/js/contador.js?v=9" defer></script>
     <div id="cookie-banner"
@@ -873,7 +888,7 @@
     </p>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
       <button onclick="aceptarCookies()" aria-label="Aceptar uso de cookies"
-        style="background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%); border: none; color: #0a0a0a; padding: 12px 32px; border-radius: 8px; cursor: pointer; font-weight: 800; font-size: 15px; box-shadow: 0 0 16px rgba(0, 255, 102, 0.4); transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
+        style="background: linear-gradient(135deg, #00FF66 0%, #00FF66 100%); border: none; color: #0a0a0a; padding: 12px 32px; border-radius: 8px; cursor: pointer; font-weight: 800; font-size: 15px; box-shadow: 0 0 16px rgba(0, 255, 102, 0.4); transition: transform 0.2s, box-shadow 0.2s;">Aceptar</button>
       <button onclick="rechazarCookies()" aria-label="Rechazar uso de cookies"
         style="background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255, 255, 255, 0.35); color: #ffffff; padding: 11px 30px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 15px; transition: transform 0.2s, border-color 0.2s, background 0.2s;">Rechazar</button>
     </div>

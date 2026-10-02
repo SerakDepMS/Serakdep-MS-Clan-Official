@@ -1,19 +1,19 @@
-# Política de Seguridad y Protección de Datos
+﻿# Política de Seguridad y Protección de Datos
 
 ## Compromiso de seguridad
 
-El clan SerakDepMS Studios se compromete a proteger la información personal de sus miembros y visitantes. Esta política describe cómo manejamos los datos, reportamos vulnerabilidades y mantenemos un entorno seguro.
+SerakDepMS Studios, comunidad oficial bajo la empresa matriz SerakDepMS, se compromete a proteger la información personal de sus miembros y visitantes. Esta política describe cómo manejamos los datos, reportamos vulnerabilidades y mantenemos un entorno seguro.
 
 ## Datos que recopilamos
 
-- **Nombre de usuario (Discord o del juego)** – Para identificación y comunicación en el clan.
-- **Edad y país** – Para verificar requisitos de edad (mínimo 16 años) y coordinar eventos por zona horaria.
+- **Nombre de usuario (Discord o del juego)** – Para identificación y comunicación en la comunidad.
+- **Edad y país** – Para verificar requisitos de edad (mínimo 13 años; consentimiento parental para participantes de 13 a 15 años) y coordinar eventos por zona horaria.
 - **Número de teléfono (WhatsApp)** – Para comunicación oficial y coordinación de actividades (solo con consentimiento explícito).
 - **Preferencias de juego y división** – Para organizar actividades y eventos en las 12 divisiones Multi-Gamer.
 
 ## Cómo usamos tus datos
 
-- Validar tu identidad y edad para el ingreso al clan.
+- Validar tu identidad y edad para el ingreso a la comunidad.
 - Coordinar eventos y torneos según tu zona horaria.
 - Enviar anuncios importantes vía WhatsApp, Discord o correo.
 - Gestionar ascensos de rango, premios y participación en eventos.
@@ -21,11 +21,11 @@ El clan SerakDepMS Studios se compromete a proteger la información personal de 
 
 ## Reporte de vulnerabilidades
 
-Si descubres una vulnerabilidad de seguridad en el sitio web o en los sistemas del clan, por favor:
+Si descubres una vulnerabilidad de seguridad en el sitio web o en los sistemas de la comunidad, por favor:
 
 1. **No explotes la vulnerabilidad**.
 2. **Reporta de inmediato** a:
-   - WhatsApp del clan: [+57 311 6546484](https://wa.me/SerakDepMS)
+   - WhatsApp de la comunidad: [+57 311 6546484](https://wa.me/SerakDepMS)
    - Correo oficial: `serakdepmsofficial7@gmail.com`
    - Discord: canal `#soporte-tecnico`
 3. Proporciona detalles claros y, si es posible, pasos para reproducir el problema.
@@ -37,7 +37,7 @@ Si descubres una vulnerabilidad de seguridad en el sitio web o en los sistemas d
 - **Hosting en GitHub Pages** – Servicios con buenas prácticas de seguridad.
 - **Comunicación cifrada** – Uso de WhatsApp y correo electrónico con autenticación.
 - **Registro de actividad** – Seguimiento de accesos y envíos de formularios.
-- **Cookies limitadas** – Solo cookies técnicas y funcionales (sin seguimiento de terceros).
+- **Cookies y analítica** – Las cookies analíticas solo se utilizan en la página de inicio después de aceptar el consentimiento; `analytics_storage` permanece denegado por defecto.
 
 ## Vigilancia y moderación
 
@@ -49,7 +49,7 @@ Si descubres una vulnerabilidad de seguridad en el sitio web o en los sistemas d
 
 Para consultas relacionadas con seguridad, privacidad o reporte de incidentes:
 
-- **Responsable de seguridad:** Equipo administrativo del clan
+- **Responsable de seguridad:** Equipo administrativo de SerakDepMS Studios
 - **WhatsApp:** [+57 311 6546484](https://wa.me/SerakDepMS)
 - **Correo:** `serakdepmsofficial7@gmail.com`
 - **Discord:** Canal `#soporte-tecnico`

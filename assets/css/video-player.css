@@ -262,7 +262,7 @@
 .progress-slider {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #00b34a, #00FF66);
+  background: linear-gradient(90deg, #00FF66, #00FF66);
   border-radius: 3px;
   position: relative;
   transition: width 0.1s linear;
@@ -356,7 +356,7 @@
 
 .main-play-button.playing {
   background: linear-gradient(145deg, #c0392b, #e74c3c);
-  border-color: #f1c40f;
+  border-color: #00FF66;
 }
 
 
@@ -523,7 +523,7 @@
   height: 6px;
   -webkit-appearance: none;
   appearance: none;
-  background: linear-gradient(to right, #00b34a, #00FF66);
+  background: linear-gradient(to right, #00FF66, #00FF66);
   border-radius: 3px;
   outline: none;
   cursor: pointer;
@@ -680,7 +680,7 @@
 
 .speed-option.active,
 .quality-option.active {
-  background: #00b34a;
+  background: #00FF66;
   color: white;
   border-color: #00FF66;
 }
@@ -710,7 +710,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #00b34a;
+  accent-color: #00FF66;
 }
 
 
@@ -904,12 +904,12 @@ body.dark-theme .progress-track {
 }
 
 body.dark-theme .progress-slider {
-  background: linear-gradient(90deg, #00b34a, #00FF66);
+  background: linear-gradient(90deg, #00FF66, #00FF66);
 }
 
 body.dark-theme .slider-thumb {
   background: #00FF66;
-  border-color: #00b34a;
+  border-color: #00FF66;
 }
 
 body.dark-theme .time-indicators {
@@ -937,7 +937,7 @@ body.dark-theme .main-play-button {
 
 body.dark-theme .main-play-button.playing {
   background: linear-gradient(145deg, #c0392b, #e74c3c);
-  border-color: #f1c40f;
+  border-color: #00FF66;
 }
 
 body.dark-theme .nav-button {
@@ -990,7 +990,7 @@ body.dark-theme .volume-slider-container {
 }
 
 body.dark-theme .volume-slider {
-  background: linear-gradient(to right, #00b34a, #00FF66);
+  background: linear-gradient(to right, #00FF66, #00FF66);
 }
 
 body.dark-theme .volume-percentage {
@@ -1025,7 +1025,7 @@ body.dark-theme .quality-option:hover {
 
 body.dark-theme .speed-option.active,
 body.dark-theme .quality-option.active {
-  background: #00b34a;
+  background: #00FF66;
   border-color: #00FF66;
   color: white;
 }
@@ -1125,7 +1125,7 @@ body.dark-theme .fullscreen-close-btn {
 .video-player .main-play-button,
 .video-player .touch-control-button.large-touch-button,
 .video-player .touch-control-button.play-button {
-  background: linear-gradient(135deg, #00FF66 0%, #00b34a 100%) !important;
+  background: linear-gradient(135deg, #00FF66 0%, #00FF66 100%) !important;
   color: #0a0a0a !important;
   border: none !important;
   box-shadow: 0 0 15px rgba(0, 255, 102, 0.4) !important;
@@ -1142,7 +1142,7 @@ body.dark-theme .fullscreen-close-btn {
 .video-player .main-play-button:hover,
 .video-player .touch-control-button.large-touch-button:hover,
 .video-player .touch-control-button.play-button:hover {
-  background: #33ff85 !important;
+  background: #00FF66 !important;
   box-shadow: 0 0 25px rgba(0, 255, 102, 0.6) !important;
 }
 

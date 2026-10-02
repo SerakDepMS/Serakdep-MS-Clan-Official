@@ -116,10 +116,10 @@ async function initializeData() {
     newsDatabase.news = [
       {
         id: 1,
-        title: "Bienvenidos al Clan SerakDepMS Studios",
+        title: "Bienvenidos a la Comunidad SerakDepMS Studios",
         category: "announcement",
-        content: "Bienvenida oficial al clan SerakDepMS Studios.",
-        excerpt: "Bienvenida oficial al clan SerakDepMS Studios.",
+        content: "Bienvenida oficial a la comunidad SerakDepMS Studios.",
+        excerpt: "Bienvenida oficial a la comunidad SerakDepMS Studios.",
         date: new Date().toISOString().split("T")[0],
         image: "",
         important: true,
@@ -350,7 +350,7 @@ async function readMoreNews(id) {
       }
       .category-badge {
         background: #e8f5e9;
-        color: #2d6a4f;
+        color: #00FF66;
         padding: 6px 16px;
         border-radius: 30px;
         font-size: 0.85rem;
@@ -460,7 +460,7 @@ async function readMoreNews(id) {
       }
       html.dark-theme .category-badge,
       body.dark-theme .category-badge {
-        background: rgba(45, 106, 79, 0.3);
+        background: rgba(0, 255, 102, 0.3);
         color: #a8d5be;
       }
       html.dark-theme .date-badge,
