@@ -65,7 +65,7 @@ class VideoPlayerFinal {
       },
       {
         src: "assets/video/video-number-one/video9_v2.mp4",
-        title: "FC Mobile",
+        title: "FIFA",
         duration: "29",
         size: "3.54 MB",
       },

@@ -43,18 +43,18 @@
       <strong>Si tienes menos de 13 años:</strong> No podemos admitirte por normativa de protección de menores. Te invitamos a unirte cuando cumplas los 13.`
     },
     {
-      keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'among us', 'cs2', 'counter strike', 'fc mobile', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
+      keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'among us', 'cs2', 'counter strike', 'FIFA', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
       response: `<strong>Sección & Divisiones Multi-Gamer de SerakDepMS Studios</strong><br><br>
       SerakDepMS Studios es la comunidad oficial Multi-Gamer, una división de SerakDepMS (Serak Digital Mastery &amp; Solutions), con <strong>12 divisiones competitivas</strong> activas:<br><br>
       <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
-      <strong>Minecraft:</strong> Servidor con economía, Bedwars 4v4 y arenas PvP.<br>
+      <strong>Minecraft:</strong> Servidor Bedrock exclusivamente Survival, disponible 24/7 para exploración, construcción y convivencia cooperativa.<br>
       <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
       <strong>Valorant:</strong> Escuadras 5v5, tácticas de agentes y clasificatorias.<br>
       <strong>Fortnite:</strong> Battle Royale, cero construcción y torneos de mapa.<br>
       <strong>Free Fire:</strong> Duelos de Escuadra 4v4 y salas personalizadas.<br>
       <strong>Among Us:</strong> Partidas de traición, deducción y modos personalizados.<br>
       <strong>Counter-Strike 2:</strong> Modo Premier 5v5 y ejecuciones tácticas.<br>
-      <strong>FC Mobile:</strong> Ultimate Team, mercado de fichajes y liga de la comunidad.<br>
+      <strong>FIFA:</strong> Juegos de fútbol competitivos en cualquier plataforma y liga de la comunidad.<br>
       <strong>Clash Royale:</strong> Liga de Guerra, mazos meta y batallas 1v1.<br>
       <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
       <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
@@ -99,26 +99,13 @@
       🔸 <strong>Comunicación Constructiva:</strong> Expresa desacuerdos de manera educada.<br>
       🔸 <strong>Responsabilidad:</strong> Asume las consecuencias de tus actos.<br>
       🔸 <strong>Lealtad a la comunidad:</strong> Representa a la comunidad con orgullo y respeto.<br><br>
-      <strong>Sistema de sanciones:</strong><br>
-      🔸 <strong>Falta leve (1ª vez):</strong> Advertencia privada.<br>
-      🔸 <strong>Leve reincidente:</strong> Mute temporal de 24-48h.<br>
-      🔸 <strong>Falta grave:</strong> Expulsión temporal de 1-2 semanas.<br>
-      🔸 <strong>Falta muy grave:</strong> Expulsión permanente.<br>
-      🔸 <strong>Corrupción interna (abuso de poder):</strong> Bloqueo total + reporte.<br><br>
+      <strong>Sistema único de sanciones:</strong> Se aplica a todas las divisiones según la gravedad y reincidencia. Consulta la <a href="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/clan/reglamento.html#sanciones">tabla general completa en el Reglamento General</a>.<br><br>
       <strong>Derechos de los miembros:</strong> Ser tratado con respeto, participar en votaciones, recibir soporte, apelar sanciones y proponer mejoras.`
     },
     {
       keywords: ['tabla sanciones', 'tipos de falta', 'expulsion temporal', 'mute', 'advertencia', 'corrupcion interna', 'faltas leves graves', 'duracion sanciones', 'cuanto dura un mute', 'cuanto dura expulsion'],
-      response: `<strong>Tabla completa de sanciones</strong><br><br>
-      <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; border:1px solid #00FF66;">
-        <tr style="background:#0a0a0a; color:#00FF66; border-bottom:2px solid #00FF66;"><th>Tipo de Falta</th><th>Sanción</th><th>Duración</th><th>Ejemplos</th></tr>
-        <tr><td>Leve (1ª vez)</td><td>Advertencia privada</td><td>-</td><td>Spam ligero, lenguaje inapropiado leve, uso incorrecto de canales</td></tr>
-        <tr><td>Leve (reincidente)</td><td>Mute temporal</td><td>24-48h</td><td>Reincidir tras advertencia</td></tr>
-        <tr><td>Grave</td><td>Expulsión temporal</td><td>1-2 semanas</td><td>Insultos, comportamiento disruptivo, incumplimiento grave</td></tr>
-        <tr><td>Muy grave</td><td>Expulsión permanente</td><td>Definitiva</td><td>Acoso, amenazas, discriminación, contenido ilegal, hacking</td></tr>
-        <tr><td>Corrupción interna</td><td>Bloqueo total + reporte</td><td>Definitiva</td><td>Abuso de poder (staff), sabotaje, robo de información</td></tr>
-      </table>
-      <br>Las sanciones pueden escalar según gravedad y reincidencia. Todo miembro puede apelar contactando a alta dirección.`
+      response: `<strong>Sistema General de Sanciones</strong><br><br>
+      El sistema único se aplica a todas las divisiones y evalúa las faltas según su gravedad y reincidencia. Consulta la <a href="https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/clan/reglamento.html#sanciones">tabla completa en el Reglamento General</a>. Todo miembro puede apelar conforme al proceso indicado allí.`
     },
     {
       keywords: ['apelar sancion', 'apelacion', 'sancion injusta', 'como apelar', 'reclamar castigo'],
@@ -223,7 +210,7 @@
       • <strong>ANUNCIOS OFICIALES:</strong> #actualizaciones-servidor, #anuncios, #torneos, #eventos.<br>
       • <strong>ALIANZAS Y COLABORACIONES:</strong> #normas-de-alianzas.<br>
       • <strong>COMUNIDAD GENERAL:</strong> #general.<br>
-      • <strong>DIVISIONES MULTI-GAMER:</strong> #roblox, #minecraft, #call-of-duty, #fortnite, #free-fire, #valorant, #among-us, #counter-strike-2, #fc-mobile, #clash-royale, #guardian-tales, #blood-strike.<br>
+      • <strong>DIVISIONES MULTI-GAMER:</strong> #roblox, #minecraft, #call-of-duty, #fortnite, #free-fire, #valorant, #among-us, #counter-strike-2, #fifa, #clash-royale, #guardian-tales, #blood-strike.<br>
       • <strong>EVENTOS Y TORNEOS:</strong> #resultados.<br>
       • <strong>SOPORTE Y AYUDA:</strong> #soporte-técnico.<br>
       • <strong>CANALES DE VOZ:</strong> Lobby Principal, Sala de Juegos 1, Sala de Juegos 2, Sala de Torneos.<br><br>
@@ -855,7 +842,7 @@
       if (!hasStarted) {
         addBotMessage(`<strong>¡Hola! Soy el asistente IA de SerakDepMS Studios.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre nuestro ecosistema. Puedes preguntarme sobre:<br>
-        • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, Among Us, CS2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike.<br>
+        • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, Among Us, CS2, FIFA, Clash Royale, Guardian Tales y Blood Strike.<br>
         • <strong>Comunidad Devs</strong> (Serakdep-MS-Devs-Official): 8 divisiones técnicas de programación.<br>
         • Cómo inscribirte y los requisitos (edad mínima 13 años).<br>
         • El <strong>Reglamento General</strong>, sanciones y proceso disciplinario.<br>

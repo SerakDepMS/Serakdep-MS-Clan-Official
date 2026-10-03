@@ -14,7 +14,7 @@ Este repositorio contiene el sitio web de la comunidad Gamer oficial. La comunid
 6. [Valorant](pages/juegos/valorant.html)
 7. [Among Us](pages/juegos/among-us.html)
 8. [Counter-Strike 2](pages/juegos/counter-strike-2.html)
-9. [FC Mobile](pages/juegos/fc-mobile.html)
+9. [FIFA](pages/juegos/fifa.html)
 10. [Clash Royale](pages/juegos/clash-royale.html)
 11. [Guardian Tales](pages/juegos/guardian-tales.html)
 12. [Blood Strike](pages/juegos/blood-strike.html)

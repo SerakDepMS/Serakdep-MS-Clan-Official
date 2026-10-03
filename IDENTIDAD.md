@@ -1,4 +1,4 @@
-﻿# Identidad corporativa y comunitaria
+# Identidad corporativa y comunitaria
 
 ## SerakDepMS y SerakDepMS Studios
 
@@ -15,7 +15,7 @@
 ## Las 12 divisiones Gamer
 
 Roblox, Minecraft, Call of Duty, Fortnite, Free Fire, Valorant, Among Us,
-Counter-Strike 2, FC Mobile, Clash Royale, Guardian Tales y Blood Strike.
+Counter-Strike 2, FIFA, Clash Royale, Guardian Tales y Blood Strike.
 
 ## Las 8 divisiones Devs
 
