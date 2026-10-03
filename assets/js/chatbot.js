@@ -626,7 +626,7 @@
       response: `<strong>Redes sociales oficiales</strong><br><br>
       Encuéntranos en:<br>
       <strong>GitHub:</strong> https://github.com/SerakDepMS<br>
-      <strong>X:</strong> https://x.com/SerakDepMS_STOS<br>
+      <strong>X:</strong> https://x.com/SerakDepMS<br>
       <strong>Instagram:</strong> https://instagram.com/serakdepms_oficial<br>
       <strong>Facebook:</strong> https://facebook.com/SerakDepMS<br>
       <strong>Discord:</strong> https://discord.gg/nphuM8K9aD<br>
