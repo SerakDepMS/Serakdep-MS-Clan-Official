@@ -55,7 +55,7 @@
 
       lastFrameTime = currentTime - (elapsed % fpsInterval);
 
-      // Limpieza total del canvas: transparencia pura, cero oscurecimiento ni manchas
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       ctx.font = `${fontSize}px monospace`;

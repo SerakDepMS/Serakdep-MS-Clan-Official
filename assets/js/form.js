@@ -413,7 +413,7 @@ function validateInscriptionForm() {
     return false;
   }
   if (age >= 13 && age < 16) {
-    // Ages 13-15 require parental consent.
+
     const parentalConsentAck = document.getElementById("parental-consent-ack");
     if (parentalConsentAck && !parentalConsentAck.checked) {
       showMessage(

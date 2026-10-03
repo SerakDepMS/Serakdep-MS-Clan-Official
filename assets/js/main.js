@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Enlace activo en navegación
+
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav a");
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 2. Menú móvil
+
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const nav = document.querySelector("nav");
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 3. Smooth scroll para anclas
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -67,12 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 4. Año estático (mantenido fijamente en HTML)
 
-  // 5. Tarjetas estáticas y estables para evitar CLS
-
-
-  // 6. Observador de derechos
   const derechoCards = document.querySelectorAll(".derecho-card");
   if (derechoCards.length > 0) {
     const derechoObserver = new IntersectionObserver(
@@ -96,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 7. Contadores animados de estadísticas
+
   const statNumbers = document.querySelectorAll(".stat-number");
   if (statNumbers.length > 0) {
     const statObserver = new IntersectionObserver(
@@ -128,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     statNumbers.forEach((stat) => statObserver.observe(stat));
   }
 
-  // 8. Efectos táctiles optimizados
+
   const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   if (isTouchDevice) {
     const touchElements = document.querySelectorAll(
@@ -153,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Botón Volver Arriba
+
 (function() {
   const btn = document.createElement('button');
   btn.innerHTML = '↑';
@@ -211,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
-// Header scroll behavior removed - header is always visible (sticky)
+
 
 (function() {
   if (localStorage.getItem('cookieConsent') === null) {
@@ -236,7 +231,7 @@ function rechazarCookies() {
 }
 
 
-// Modo oscuro permanente y exclusivo en todo el proyecto
+
 document.documentElement.classList.add('dark-theme');
 if (document.body) {
   document.body.classList.add('dark-theme');
