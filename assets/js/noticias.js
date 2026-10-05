@@ -9,11 +9,7 @@ const CONFIG = {
   },
 };
 
-if (typeof API_DB === "undefined") {
-  window.API_DB = "https://api.npoint.io/c7935f8e8b0b09b0b07b";
-} else {
-  window.API_DB = API_DB;
-}
+const API_DB = window.SERAKDEP_CONFIG.NPOINT_NOTICIAS;
 
 const INTERVALO_ACTUALIZACION = 12000;
 
@@ -35,15 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function loadFromNpoint(esActualizacionPeriodica = false) {
   try {
-    if (!window.API_DB || window.API_DB.trim() === "") return false;
+    if (!API_DB || API_DB.trim() === "") return false;
 
     const cacheBuster = `_cb=${Date.now()}`;
-    const cleanUrl = window.API_DB.trim();
+    const cleanUrl = API_DB.trim();
     const urlConAntiCache = cleanUrl.includes('?')
       ? `${cleanUrl}&${cacheBuster}`
       : `${cleanUrl}?${cacheBuster}`;
 
-    const response = await fetch(urlConAntiCache);
+    const response = await fetch(urlConAntiCache, { cache: "no-store" });
     if (!response.ok) {
       if (response.status === 404) throw new Error("Base de datos de noticias no encontrada");
       if (response.status >= 500) throw new Error("Error del servidor - Intenta más tarde");
@@ -57,7 +53,12 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
       throw new Error("Error al procesar datos de noticias: respuesta inválida");
     }
 
-    const nuevasNoticias = (data.news || []).map((newsItem) => ({
+    const newsData = data?.data ?? data;
+    if (!newsData || !Array.isArray(newsData.news)) {
+      throw new Error("Formato de noticias inválido: se esperaba un arreglo 'news'");
+    }
+
+    const nuevasNoticias = newsData.news.map((newsItem) => ({
       id: newsItem.id,
       title: newsItem.title,
       category: newsItem.category,
@@ -89,6 +90,7 @@ async function loadFromNpoint(esActualizacionPeriodica = false) {
     return true;
 
   } catch (error) {
+    console.error("Error cargando noticias desde npoint:", error);
     return false;
   }
 }
@@ -100,7 +102,7 @@ async function actualizarNoticiasPeriodicamente() {
 async function initializeData() {
   console.log("Cargando noticias iniciales...");
 
-  if (window.API_DB && window.API_DB.trim() !== "") {
+  if (API_DB && API_DB.trim() !== "") {
     const success = await loadFromNpoint();
     if (success) {
       datosAnterioresStr = JSON.stringify({
@@ -254,7 +256,7 @@ async function readMoreNews(id) {
         </div>
 
         <div class="modal-image-wrapper">
-          <img src="../../assets/img/clan-logo.png" alt="SerakDepMS Studios" class="modal-featured-image">
+          <img alt="" class="modal-featured-image">
         </div>
 
         <div class="modal-body">
@@ -269,6 +271,16 @@ async function readMoreNews(id) {
   `;
 
   document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+  const featuredImage = document.querySelector("#news-modal-blog .modal-featured-image");
+  const fallbackImage = "../../assets/img/clan-logo.png";
+  featuredImage.alt = news.title;
+  featuredImage.src = news.image || fallbackImage;
+  featuredImage.addEventListener("error", () => {
+    if (featuredImage.getAttribute("src") !== fallbackImage) {
+      featuredImage.src = fallbackImage;
+    }
+  });
 
   if (!document.querySelector("#modal-blog-styles")) {
     const styles = document.createElement("style");

@@ -2,7 +2,7 @@ export let wikiData = { html: '', css: '', js: '' };
 export let wikiSection = 'html';
 
 export async function loadWikiData(wikiContent, showWikiFn) {
-  const WIKI_URL = 'https://api.npoint.io/47b284f068e1c936d147';
+  const WIKI_URL = window.SERAKDEP_CONFIG.NPOINT_WIKI;
   try {
     const response = await fetch(WIKI_URL);
     if (!response.ok) throw new Error('Error al cargar la enciclopedia');

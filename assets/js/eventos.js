@@ -1,4 +1,4 @@
-const API_EVENTOS = "https://api.npoint.io/b7d27b89b7da43de6683";
+const API_EVENTOS = window.SERAKDEP_CONFIG.NPOINT_EVENTOS;
 const INTERVALO_ACTUALIZACION = 12000;
 
 document.addEventListener("DOMContentLoaded", function () {
