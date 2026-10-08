@@ -531,7 +531,7 @@
     {
       keywords: ['canal whatsapp noticias', 'whatsapp channel', 'qr whatsapp', 'notificaciones instantaneas', 'unirse canal noticias', 'canal oficial whatsapp', 'noticiero sms'],
       response: `<strong>Canal de WhatsApp para Noticias - Noticiero SMS</strong><br><br>
-      La comunidad dispone de un <strong>canal oficial de WhatsApp</strong> exclusivo para notificaciones instantáneas:<br>
+      La comunidad dispone de un <strong>Canal oficial de SerakDepMS | Noticiero</strong> exclusivo para notificaciones instantáneas:<br>
       • Notificaciones al instante de nuevas noticias.<br>
       • Novedades exclusivas antes que en otros medios.<br>
       • Recordatorios de eventos y torneos.<br>
