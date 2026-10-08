@@ -39,7 +39,7 @@
       response: `<strong>Política de edad de SerakDepMS Studios</strong><br><br>
       La edad mínima para unirse es de <strong>13 años</strong> (conforme a COPPA — Children's Online Privacy Protection Act).<br><br>
       <strong>Si tienes entre 13 y 15 años:</strong> Necesitas consentimiento parental obligatorio. En el formulario deberás marcar el checkbox correspondiente y confirmar que tus padres o tutores autorizan tu participación.<br>
-      <strong>Si tienes 16 años o más:</strong> Puedes unirte sin consentimiento parental adicional.<br>
+      La edad mínima es de <strong>13 años (COPPA)</strong>. Si tienes entre 13 y 15 años, necesitas consentimiento parental obligatorio.<br>
       <strong>Si tienes menos de 13 años:</strong> No podemos admitirte por normativa de protección de menores. Te invitamos a unirte cuando cumplas los 13.`
     },
     {
@@ -199,14 +199,24 @@
 
 
     {
-      keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord'],
+      keywords: ['discord', 'servidor discord', 'canales discord', 'unirse discord', 'link discord', 'discord reglas', 'discord canales', 'discord estructura', 'discord verificación', 'como entro al discord', 'invitacion discord', 'flujo discord', 'roles discord', 'selecciona tus juegos', 'tickets discord', 'verificacion discord', 'carl-bot'],
       response: `<strong>Servidor de Discord de SerakDepMS Studios</strong><br><br>
       Nuestro servidor de Discord es el corazón de la comunidad. Enlace de invitación: <strong>https://discord.gg/nphuM8K9aD</strong><br><br>
-      Una vez dentro:<br>
-      🔹 Lee <strong>#reglas</strong> y completa la verificación en <strong>#verificación</strong>.<br>
-      🔹 Preséntate en <strong>#presentaciones</strong> para que te demos la bienvenida.<br><br>
+      <strong>Flujo de incorporación y verificación:</strong><br>
+      1. Al entrar recibes <strong>@Sin verificar</strong>.<br>
+      2. Solo puedes ver <strong>#bienvenida</strong> y <strong>#verificación</strong>.<br>
+      3. En <strong>#verificación</strong>, acepta las normas con la reacción ✅.<br>
+      4. <strong>Carl-bot</strong> te asigna <strong>@Verificados</strong>.<br>
+      5. Se desbloquean los canales del servidor.<br>
+      6. En <strong>#selecciona-tus-juegos</strong>, elige las divisiones a las que quieres unirte.<br>
+      7. El bot asigna los roles correspondientes a tus juegos.<br>
+      8. Preséntate en <strong>#presentaciones</strong>.<br><br>
+      En <strong>#selecciona-tus-juegos</strong> puedes elegir entre las 12 divisiones disponibles; cada selección te da acceso a su canal y rol de juego.<br><br>
+      <strong>Jerarquía de roles:</strong><br>
+      @Fundador, @Administradores, @Moderadores, @carl-bot, @ProBot, @Welcomer, @Bot, @Jefe DJ, @DJ, @Alianza Oficial, @Verificados, @Sin verificar, @Nekotina, @Koya, @Server Booster; después los 12 roles de juego (@Roblox, @Minecraft, @Call of Duty, @Fortnite, @Free Fire, @Valorant, @Among Us, @Counter-Strike 2, @FIFA, @Clash Royale, @Guardian Tales y @Blood Strike), y finalmente @everyone.<br><br>
       <strong>Estructura de canales:</strong><br>
-      • <strong>BIENVENIDA Y REGLAS:</strong> #bienvenida, #reglas, #verificación, #presentaciones, #despedida, #ban, #boost.<br>
+      • <strong>ADMINISTRACIÓN:</strong> #administración, #comandos-privados.<br>
+      • <strong>BIENVENIDA Y REGLAS:</strong> #bienvenida, #reglas, #verificación, #presentaciones, #despedida, #selecciona-tus-juegos, #ban, #boost.<br>
       • <strong>ANUNCIOS OFICIALES:</strong> #actualizaciones-servidor, #anuncios, #torneos, #eventos.<br>
       • <strong>ALIANZAS Y COLABORACIONES:</strong> #normas-de-alianzas.<br>
       • <strong>COMUNIDAD GENERAL:</strong> #general.<br>
@@ -214,6 +224,7 @@
       • <strong>EVENTOS Y TORNEOS:</strong> #resultados.<br>
       • <strong>SOPORTE Y AYUDA:</strong> #soporte-técnico.<br>
       • <strong>CANALES DE VOZ:</strong> Lobby Principal, Sala de Juegos 1, Sala de Juegos 2, Sala de Torneos.<br><br>
+      <strong>Tickets en #soporte-técnico:</strong> 🛠 Soporte Técnico, 🤝 Alianza de Comunidad, 🎬 Creador de Contenido, 🎧 DJ Oficial y 📝 Inscripción a Eventos. Cada botón abre un modal con dos campos: nombre y descripción.<br><br>
       Incumplir las normas de Discord puede causar mute o expulsión.`
     },
     {
@@ -227,7 +238,7 @@
       response: `<strong>Colaboraciones y alianzas en Discord</strong><br><br>
       Las solicitudes de alianzas, colaboraciones con creadores de contenido y postulaciones para DJ oficial se gestionan exclusivamente a través del sistema de tickets en el canal <strong>#soporte-técnico</strong>.<br><br>
       Allí encontrarás botones para:<br>
-      • 🤝 <strong>Alianza de comunidad</strong> – Propuestas de alianzas con otras comunidades.<br>
+      • 🤝 <strong>Alianza de Comunidad</strong> – Propuestas de alianzas con otras comunidades.<br>
       • 🎬 <strong>Creador de Contenido</strong> – Colaboraciones con streamers, youtubers, diseñadores.<br>
       • 🎧 <strong>DJ Oficial</strong> – Para ser DJ en el juego <em>The Core of Consciousness</em> (Roblox).<br><br>
       Lee las normas en <strong>#normas-de-alianzas</strong> antes de abrir un ticket.`
@@ -358,12 +369,12 @@
       Para más detalles, consulta nuestra Política de Privacidad en el footer.`
     },
     {
-      keywords: ['menores edad', 'datos menores', 'tratamiento menores', 'menores 16 años', 'coppa'],
+      keywords: ['menores edad', 'datos menores', 'tratamiento menores', 'edad mínima', 'coppa'],
       response: `<strong>Tratamiento de datos de menores de edad</strong><br><br>
       SerakDepMS Studios aplica medidas de protección reforzadas para menores:<br>
       • <strong>Menores de 13 años (COPPA):</strong> No se permite el registro. Bloqueo real en formulario.<br>
       • <strong>13 a 15 años (COPPA + RGPD):</strong> Consentimiento parental obligatorio mediante checkbox verificable en el formulario.<br>
-      • <strong>16 años o más:</strong> Pueden prestar consentimiento por sí mismos.<br><br>
+      • <strong>Edad mínima: 13 años (COPPA).</strong> El consentimiento parental es obligatorio para participantes de 13 a 15 años.<br><br>
       Si el sistema detecta edad menor de 13, el envío del formulario se bloquea automáticamente con mensaje explicativo.`
     },
     {
@@ -539,7 +550,7 @@
       • WIND BREAKER<br>
       • LUWANCE<br>
       • The Black Bulls<br><br>
-      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a una comunidad y quieres proponer una alianza, usa el sistema de tickets en <strong>#soporte-técnico</strong> (botón 🤝 Alianza de comunidad).`
+      Para ver la lista completa, dirígete a la sección de Alianzas. Si representas a una comunidad y quieres proponer una alianza, usa el sistema de tickets en <strong>#soporte-técnico</strong> (botón 🤝 Alianza de Comunidad).`
     },
 
 
