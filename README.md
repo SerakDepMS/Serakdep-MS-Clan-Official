@@ -6,20 +6,20 @@ Este repositorio contiene el sitio web de la comunidad Gamer oficial. La comunid
 
 ## Divisiones Gamer
 
-1. [Roblox](pages/juegos/roblox.html)
-2. [Minecraft](pages/juegos/minecraft.html)
-3. [Call of Duty](pages/juegos/call-of-duty.html)
-4. [Fortnite](pages/juegos/fortnite.html)
-5. [Free Fire](pages/juegos/free-fire.html)
-6. [Valorant](pages/juegos/valorant.html)
-7. [Among Us](pages/juegos/among-us.html)
-8. [Counter-Strike 2](pages/juegos/counter-strike-2.html)
-9. [FIFA](pages/juegos/fifa.html)
-10. [Clash Royale](pages/juegos/clash-royale.html)
-11. [Guardian Tales](pages/juegos/guardian-tales.html)
-12. [Blood Strike](pages/juegos/blood-strike.html)
+1. [Roblox](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/roblox.html)
+2. [Minecraft](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/minecraft.html)
+3. [Call of Duty](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/call-of-duty.html)
+4. [Fortnite](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/fortnite.html)
+5. [Free Fire](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/free-fire.html)
+6. [Valorant](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/valorant.html)
+7. [Among Us](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/among-us.html)
+8. [Counter-Strike 2](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/counter-strike-2.html)
+9. [FIFA](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/fifa.html)
+10. [Clash Royale](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/clash-royale.html)
+11. [Guardian Tales](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/guardian-tales.html)
+12. [Blood Strike](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/blood-strike.html)
 
-También puedes consultar el [catálogo de divisiones](pages/juegos/portal.html).
+También puedes consultar el [catálogo de divisiones](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/portal.html).
 
 ## Ecosistema SerakDepMS
 
