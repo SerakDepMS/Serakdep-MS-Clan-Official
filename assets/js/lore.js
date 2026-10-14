@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "II",
       label: "El Emblema Digital",
-      text: "El emblema oficial de SerakDepMS Studios emergió con verde neón #00FF66 sobre negro profundo, sobre circuitos tecnológicos de vanguardia. Representa la excelencia técnica, la visión estratégica, la innovación digital y el equilibrio entre disciplina y creatividad. Un emblema que unifica nuestras 12 divisiones gamer bajo una misma bandera, alineado con la identidad corporativa de SerakDepMS."
+      text: "El emblema oficial de SerakDepMS Studios emergió con verde neón #00FF66 sobre negro profundo, sobre circuitos tecnológicos de vanguardia. Representa la excelencia técnica, la visión estratégica, la innovación digital y el equilibrio entre disciplina y creatividad. Un emblema que unifica nuestras 12 divisiones gamer bajo una misma bandera, alineado con la identidad corporativa de SerakDepMS Studios."
     },
     {
       chapter: "III",
       label: "El Pacto Fundador",
-      text: "En una noche de enero de 2023, los primeros miembros se reunieron bajo la visión de SerakDepMS, empresa matriz del ecosistema digital, a través de su división SerakDepMS Studios. Juntos sellaron el juramento de construir una comunidad inclusiva y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una comunidad Multi-Gamer con presencia en PC, móviles y consolas, bajo la denominación oficial de SerakDepMS Studios."
+      text: "En una noche de enero de 2023, los primeros miembros se reunieron con la visión de SerakDepMS Studios, empresa propietaria del ecosistema y nombre de la comunidad Gamer. Juntos sellaron el juramento de construir una comunidad inclusiva y libre de toxicidad. El pacto fundador sentó las bases de lo que hoy es una comunidad Multi-Gamer con presencia en PC, móviles y consolas."
     },
     {
       chapter: "IV",
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "VI",
       label: "Los Forjadores del Código",
-      text: "Para dar presencia a SerakDepMS Studios (denominación oficial de las comunidades) ante el mundo, SerakDepMS y maikol-dev-code-cyber unieron fuerzas para escribir el código base del portal web oficial. Un sitio estático, pero con la visión de convertirse en el centro neurálgico de la comunidad. Este fue el primer proyecto del pilar Web Development & Technology de SerakDepMS."
+      text: "Para dar presencia a SerakDepMS Studios (denominación oficial de las comunidades) ante el mundo, SerakDepMS Studios y maikol-dev-code-cyber unieron fuerzas para escribir el código base del portal web oficial. Un sitio estático, pero con la visión de convertirse en el centro neurálgico de la comunidad. Este fue el primer proyecto del pilar Web Development & Technology de SerakDepMS Studios."
     },
     {
       chapter: "VII",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "X",
       label: "Campos de Batalla Multi-Gamer",
-      text: "Las 12 divisiones oficiales de SerakDepMS Studios son Roblox (Blox Fruits, Arsenal y King Legacy), Minecraft (servidor Bedrock exclusivamente Survival, disponible 24/7), Call of Duty (Warzone y CODM Mobile), Fortnite (Battle Royale y Zero Build), Free Fire (Guild y DE clasificatorio), Valorant (5v5 táctico y Premier), Among Us (partidas de deducción y estrategia), Counter-Strike 2 (Premier y utilería), FIFA (juegos de fútbol competitivos y liga de la comunidad), Clash Royale (guerras de clan y 1v1), Guardian Tales (Arena y gremios) y Blood Strike (Battle Royale táctico móvil). Todas las divisiones se rigen por el sistema general único de sanciones y cuentan con un grupo de comunicación. Estas 12 divisiones son hermanas de las 8 divisiones técnicas de la comunidad Devs (Serakdep-MS-Devs-Official), ambas gestionadas bajo SerakDepMS Studios."
+      text: "Las 12 divisiones oficiales de SerakDepMS Studios son Roblox (Blox Fruits, Arsenal y King Legacy), Minecraft (servidor Bedrock exclusivamente Survival, disponible 24/7), Call of Duty (Warzone y CODM Mobile), Fortnite (Battle Royale y Zero Build), Free Fire (Guild y DE clasificatorio), Valorant (5v5 táctico y Premier), Among Us (partidas de deducción y estrategia), Counter-Strike 2 (Premier y utilería), FIFA (juegos de fútbol competitivos y liga de la comunidad), Clash Royale (guerras de clan y 1v1), Guardian Tales (Arena y gremios) y Blood Strike (Battle Royale táctico móvil). Todas las divisiones se rigen por el sistema general único de sanciones y cuentan con un grupo de comunicación. Estas 12 divisiones son hermanas de las 8 divisiones técnicas de la comunidad Devs; ambas comunidades pertenecen a SerakDepMS Studios."
     },
     {
       chapter: "XI",
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XIII",
       label: "La Alta Dirección",
-      text: "La toma de decisiones estratégicas recae sobre la Alta Dirección, liderada por SerakDepMS (empresa matriz del ecosistema digital), junto con los administradores de mayor antigüedad. Encargados de dirigir la política y visión de la comunidad, aseguran que el desarrollo del portal, las alianzas y la comunidad sigan una senda ascendente, siempre con transparencia y diálogo abierto. La comunidad Gamer y la comunidad Devs comparten la misma dirección estratégica bajo el ecosistema SerakDepMS."
+      text: "La toma de decisiones estratégicas recae sobre la Alta Dirección de SerakDepMS Studios, propietaria del ecosistema, junto con los administradores de mayor antigüedad. Encargados de dirigir la política y visión de la comunidad, aseguran que el desarrollo del portal, las alianzas y la comunidad sigan una senda ascendente, siempre con transparencia y diálogo abierto. La comunidad Gamer y la comunidad Devs comparten la misma dirección estratégica bajo SerakDepMS Studios."
     },
     {
       chapter: "XIV",
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XIX",
       label: "El Núcleo de Código",
-      text: "Creado como entorno interactivo de programación, CodeTurbo (el laboratorio Serak) permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables del editor, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes y herramientas de exportación (ZIP o HTML único). CodeTurbo forma parte del pilar Web Development & Technology de SerakDepMS."
+      text: "Creado como entorno interactivo de programación, CodeTurbo (el laboratorio Serak) permite aprender HTML, CSS y JavaScript desde la web. Cuenta con 6 temas personalizables del editor, 500 retos de programación con instrucciones paso a paso, una enciclopedia integrada de los tres lenguajes y herramientas de exportación (ZIP o HTML único). CodeTurbo forma parte del pilar Web Development & Technology de SerakDepMS Studios."
     },
     {
       chapter: "XX",
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XXIII",
       label: "Evolución Digital",
-      text: "Desde la beta 0.5 estática, el portal evolucionó a la v1.0 con el reglamento y formulario, la v2.0 con bases de datos npoint.io para noticias, y la v5.0 ultra-optimizada con actualización automática de noticias cada 12 segundos, reproductor de video mejorado y filtros de juegos (más de 350 títulos). La web actual es el resultado de un desarrollo continuo y colaborativo, alineada con la identidad visual de SerakDepMS: verde neón sobre negro."
+      text: "Desde la beta 0.5 estática, el portal evolucionó a la v1.0 con el reglamento y formulario, la v2.0 con bases de datos npoint.io para noticias, y la v5.0 ultra-optimizada con actualización automática de noticias cada 12 segundos, reproductor de video mejorado y filtros de juegos (más de 350 títulos). La web actual es el resultado de un desarrollo continuo y colaborativo, alineada con la identidad visual de SerakDepMS Studios: verde neón sobre negro."
     },
     {
       chapter: "XXIV",
@@ -129,12 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XXVI",
       label: "Una Comunidad, Una Leyenda",
-      text: "El mañana nos pertenece. La historia de SerakDepMS Studios no tiene final; cada nuevo miembro añade su propia página al archivo. El legado de SerakDepMS Studios continúa su curso firme hacia la inmortalidad. Las 12 divisiones gamer, los torneos, las alianzas y los valores forjados en estos años son solo el prólogo de lo que está por venir. El legado se expande también con la comunidad Devs (Serakdep-MS-Devs-Official) y el portafolio corporativo de SerakDepMS, formando un ecosistema tecnológico completo con presencia en web, gaming y programación."
+      text: "El mañana nos pertenece. La historia de SerakDepMS Studios no tiene final; cada nuevo miembro añade su propia página al archivo. El legado de SerakDepMS Studios continúa su curso firme hacia la inmortalidad. Las 12 divisiones gamer, los torneos, las alianzas y los valores forjados en estos años son solo el prólogo de lo que está por venir. La comunidad Devs y el portafolio corporativo completan el ecosistema de SerakDepMS Studios, con presencia en web, gaming y programación."
     },
     {
       chapter: "XXVII",
       label: "La Comunidad Devs",
-      text: "En 2026, SerakDepMS Studios expandió su ecosistema con el lanzamiento de la comunidad Serakdep-MS-Devs-Official, dedicada a programadores de todos los niveles. Con 8 divisiones técnicas (Python & Data Science, Web Development, Backend & APIs, Mobile Development, Game Development, Cybersecurity & DevSecOps, AI & Machine Learning, y Algoritmos & Competitive), la comunidad Devs se convirtió en el pilar Programming Communities del ecosistema, hermanando desarrolladores y gamers bajo una misma visión: aprender, colaborar y construir juntos. Ambas comunidades, Gamer y Devs, forman parte de SerakDepMS Studios y comparten la misma identidad, valores y visión de futuro bajo la empresa matriz SerakDepMS."
+      text: "En 2026, SerakDepMS Studios expandió su ecosistema con el lanzamiento de la comunidad Devs, dedicada a programadores de todos los niveles. Con 8 divisiones técnicas (Python & Data Science, Web Development, Backend & APIs, Mobile Development, Game Development, Cybersecurity & DevSecOps, AI & Machine Learning, y Algoritmos & Competitive), la comunidad Devs se convirtió en el pilar Programming Communities del ecosistema, hermanando desarrolladores y gamers bajo una misma visión: aprender, colaborar y construir juntos. Las comunidades Gamer y Devs forman parte de SerakDepMS Studios, la empresa propietaria de este ecosistema completo, y comparten su identidad, valores y visión de futuro."
     }
   ];
 

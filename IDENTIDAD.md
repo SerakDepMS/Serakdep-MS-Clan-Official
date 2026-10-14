@@ -1,16 +1,23 @@
 # Identidad corporativa y comunitaria
 
-## SerakDepMS y SerakDepMS Studios
+## Nomenclatura oficial
 
-**SerakDepMS** es la empresa matriz: desarrolla soluciones web, arquitectura digital, ciberseguridad y servicios profesionales. Su nombre completo es **Serak Digital Mastery & Solutions**.
+- **Nombre comercial:** SerakDepMS Studios.
+- **Significado:** Serak Digital Mastery Studios Solutions.
+- **Siglas:** SDMSS.
+- **Abreviatura visual:** SDMS.
 
-**SerakDepMS Studios** es la denominación oficial de las comunidades Gamer y Devs. Las comunidades no son entidades corporativas independientes; forman parte del ecosistema de SerakDepMS.
+## Propiedad del proyecto
+
+**SerakDepMS Studios es la empresa propietaria del proyecto Gamer** y de este
+sitio web. La comunidad Gamer y la comunidad Devs forman parte de la estructura
+de SerakDepMS Studios; no son empresas matrices independientes.
 
 ## Los tres pilares
 
-1. 🌐 **Web Development & Technology** — bajo SerakDepMS.
-2. 🎮 **Game Development & Gamer Communities** — bajo SerakDepMS Studios.
-3. 💻 **Programming Communities** — bajo SerakDepMS Studios.
+1. 🌐 **Web Development & Technology** — SerakDepMS Studios.
+2. 🎮 **Game Development & Gamer Communities** — SerakDepMS Studios.
+3. 💻 **Programming Communities** — SerakDepMS Studios.
 
 ## Las 12 divisiones Gamer
 
@@ -28,7 +35,7 @@ Algoritmos & Competitive.
 - [Comunidad Gamer](https://serakdepms.github.io/Serakdep-MS-Clan-Official/)
 - [Comunidad Devs](https://serakdepms.github.io/Serakdep-MS-Devs-Official/)
 - [Portafolio SerakDepMS Studios](https://serakdepms.github.io/SerakDepMS-Studios/)
-- [GitHub SerakDepMS](https://github.com/SerakDepMS)
+- [Organización oficial en GitHub](https://github.com/SerakDepMS)
 
 ## Identidad visual
 
@@ -44,4 +51,4 @@ debe estar bloqueado.
 
 ## Copyright
 
-© 2026 SerakDepMS Studios. All rights reserved.
+© 2026 SerakDepMS Studios · Serak Digital Mastery Studios Solutions

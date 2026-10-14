@@ -6,5 +6,5 @@ window.SERAKDEP_CONFIG = Object.freeze({
   OFFICIAL_SITE: "https://serakdepms.github.io/Serakdep-MS-Clan-Official/",
   OFFICIAL_DEVS: "https://serakdepms.github.io/Serakdep-MS-Devs-Official/",
   OFFICIAL_PORTFOLIO: "https://serakdepms.github.io/SerakDepMS-Studios/",
-  COPYRIGHT: "© 2026 SerakDepMS Studios",
+  COPYRIGHT: "© 2026 SerakDepMS Studios · Serak Digital Mastery Studios Solutions",
 });

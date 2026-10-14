@@ -1,8 +1,13 @@
-﻿# SerakDepMS Studios — Comunidad Gamer Oficial
+# SerakDepMS Studios — Comunidad Gamer Oficial
 
-SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs de **SerakDepMS**, empresa matriz dedicada al desarrollo web, la arquitectura digital, la ciberseguridad y los servicios profesionales.
+**SerakDepMS Studios** es la empresa propietaria de este proyecto y la
+denominación comercial de la comunidad Gamer oficial. Su nombre completo es
+**Serak Digital Mastery Studios Solutions**; sus siglas son **SDMSS** y su
+abreviatura visual es **SDMS**.
 
-Este repositorio contiene el sitio web de la comunidad Gamer oficial. La comunidad forma parte del pilar **Game Development & Gamer Communities** del ecosistema SerakDepMS y reúne 12 divisiones.
+Este repositorio contiene el sitio web de la comunidad Gamer, con 12 divisiones,
+formularios, noticias, eventos, lore, un reproductor multimedia, CodeTurbo y un
+chatbot.
 
 ## Divisiones Gamer
 
@@ -19,27 +24,14 @@ Este repositorio contiene el sitio web de la comunidad Gamer oficial. La comunid
 11. [Guardian Tales](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/guardian-tales.html)
 12. [Blood Strike](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/blood-strike.html)
 
-También puedes consultar el [catálogo de divisiones](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/portal.html).
-
-## Ecosistema SerakDepMS
-
-| Pilar | Organización |
-| --- | --- |
-| 🌐 Web Development & Technology | SerakDepMS |
-| 🎮 Game Development & Gamer Communities | SerakDepMS Studios |
-| 💻 Programming Communities | SerakDepMS Studios |
-
-La comunidad hermana **SerakDepMS Devs** cuenta con ocho divisiones:
-Python & Data Science, Web Development, Backend & APIs, Mobile Development,
-Game Development, Cybersecurity & DevSecOps, AI & Machine Learning y
-Algoritmos & Competitive.
+Consulta el [catálogo de divisiones](https://serakdepms.github.io/Serakdep-MS-Clan-Official/pages/juegos/portal.html).
 
 ## Enlaces oficiales
 
 - [Sitio de la comunidad Gamer](https://serakdepms.github.io/Serakdep-MS-Clan-Official/)
 - [Comunidad Devs](https://serakdepms.github.io/Serakdep-MS-Devs-Official/)
 - [Portafolio SerakDepMS Studios](https://serakdepms.github.io/SerakDepMS-Studios/)
-- [GitHub SerakDepMS](https://github.com/SerakDepMS)
+- [Organización oficial en GitHub](https://github.com/SerakDepMS)
 
 ## Identidad visual y comunidad
 
@@ -48,10 +40,10 @@ Algoritmos & Competitive.
 - El sitio utiliza exclusivamente modo oscuro.
 - Edad mínima: 13 años. Se requiere consentimiento parental para participantes de 13 a 15 años; no se admite el registro de menores de 13.
 
-Consulta [IDENTIDAD.md](IDENTIDAD.md) para conocer la estructura corporativa y comunitaria completa.
+Consulta [IDENTIDAD.md](IDENTIDAD.md) para conocer la estructura corporativa y comunitaria.
 
 ## Tecnología
 
-El sitio estático utiliza HTML, CSS y JavaScript, y se publica mediante GitHub Pages. Incluye formularios, noticias, eventos, lore, un reproductor multimedia, CodeTurbo y un chatbot.
+El sitio estático utiliza HTML, CSS y JavaScript, y se publica mediante GitHub Pages.
 
-© 2026 SerakDepMS Studios. All rights reserved.
+© 2026 SerakDepMS Studios · Serak Digital Mastery Studios Solutions

@@ -2,7 +2,7 @@
 
 ## Compromiso de seguridad
 
-SerakDepMS Studios, comunidad oficial bajo la empresa matriz SerakDepMS, se compromete a proteger la información personal de sus miembros y visitantes. Esta política describe cómo manejamos los datos, reportamos vulnerabilidades y mantenemos un entorno seguro.
+SerakDepMS Studios, empresa propietaria del proyecto y de su comunidad oficial, se compromete a proteger la información personal de sus miembros y visitantes. Esta política describe cómo manejamos los datos, reportamos vulnerabilidades y mantenemos un entorno seguro.
 
 ## Datos que recopilamos
 

@@ -45,7 +45,7 @@
     {
       keywords: ['multigamer', 'multi gamer', 'divisiones', 'seccion juegos', 'catalogo juegos', 'portal juegos', 'divisiones multigamer', 'cuantas divisiones', 'juegos del clan', 'minecraft', 'valorant', 'fortnite', 'call of duty', 'free fire', 'among us', 'cs2', 'counter strike', 'FIFA', 'clash royale', 'guardian tales', 'blood strike', 'roblox division', 'multi-gamer'],
       response: `<strong>Sección & Divisiones Multi-Gamer de SerakDepMS Studios</strong><br><br>
-      SerakDepMS Studios es la comunidad oficial Multi-Gamer, una división de SerakDepMS (Serak Digital Mastery &amp; Solutions), con <strong>12 divisiones competitivas</strong> activas:<br><br>
+      SerakDepMS Studios es la comunidad oficial Multi-Gamer, una división de SerakDepMS Studios (Serak Digital Mastery Studios Solutions), con <strong>12 divisiones competitivas</strong> activas:<br><br>
       <strong>Roblox:</strong> Guerras de grupos oficiales, minijuegos competitivos y rangos.<br>
       <strong>Minecraft:</strong> Servidor Bedrock exclusivamente Survival, disponible 24/7 para exploración, construcción y convivencia cooperativa.<br>
       <strong>Call of Duty:</strong> Warzone, CODM Mobile y 6v6 táctico.<br>
@@ -58,14 +58,14 @@
       <strong>Clash Royale:</strong> Liga de Guerra, mazos meta y batallas 1v1.<br>
       <strong>Guardian Tales:</strong> RPG con Arena PvP y eventos de Gremio.<br>
       <strong>Blood Strike:</strong> Battle Royale móvil 4v4 y ligas LATAM.<br><br>
-      <strong>Comunidad hermana:</strong> Estas 12 divisiones son hermanas de las <strong>8 divisiones técnicas</strong> de la comunidad Devs (Serakdep-MS-Devs-Official): Python, Web, Backend, Mobile, Game Dev, Cybersecurity, AI y Algoritmos. Ambas comunidades forman parte de SerakDepMS Studios.<br><br>
+      <strong>Comunidad hermana:</strong> Estas 12 divisiones son hermanas de las <strong>8 divisiones técnicas</strong> de la comunidad Devs de SerakDepMS Studios: Python, Web, Backend, Mobile, Game Dev, Cybersecurity, AI y Algoritmos. Ambas comunidades forman parte de SerakDepMS Studios.<br><br>
       Puedes explorar cada división y unirte a su grupo oficial de WhatsApp desde el <strong>Catálogo Multi-Gamer</strong> en el menú o desde <code>pages/juegos/portal.html</code>.`
     },
 
 
     {
       keywords: ['comunidad devs', 'devs', 'programadores', 'serakdep-ms-devs', 'programming communities', 'python', 'web development', 'backend', 'machine learning', 'ai', 'inteligencia artificial'],
-      response: `<strong>Comunidad Devs — Serakdep-MS-Devs-Official</strong><br><br>
+      response: `<strong>Comunidad Devs de SerakDepMS Studios</strong><br><br>
       SerakDepMS Studios no solo es una comunidad gamer. También contamos con una <strong>comunidad hermana de programadores</strong> bajo el pilar <strong>Programming Communities</strong>.<br><br>
       <strong>8 Divisiones técnicas disponibles:</strong><br>
       🐍 <strong>Python & Data Science</strong> — Análisis de datos, automatización, IA.<br>
@@ -353,7 +353,7 @@
       <strong>Términos de Servicio:</strong> Al unirte aceptas cumplir con el reglamento. Ley aplicable: Colombia.<br>
       <strong>Política de Cookies:</strong> Usamos cookies técnicas y analíticas. Puedes revocar tu consentimiento en cualquier momento.<br>
       <strong>Aviso DMCA:</strong> Si crees que algún contenido infringe tus derechos de autor, contáctanos. Responderemos en 5 días hábiles.<br><br>
-      <strong>Nota importante:</strong> SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs dentro del ecosistema de SerakDepMS. Todos los nombres de videojuegos, logotipos y marcas comerciales son propiedad de sus respectivas empresas matrices y se usan bajo doctrina de Uso Legítimo / Fair Use.`
+      <strong>Nota importante:</strong> SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs dentro del ecosistema de SerakDepMS Studios. Todos los nombres de videojuegos, logotipos y marcas comerciales son propiedad de sus respectivas empresas matrices y se usan bajo doctrina de Uso Legítimo / Fair Use.`
     },
     {
       keywords: ['datos personales', 'que hacen con mis datos', 'informacion personal', 'proteccion datos', 'responsable tratamiento'],
@@ -365,7 +365,7 @@
       • No compartimos tu información con terceros sin tu consentimiento explícito.<br>
       • Puedes solicitar la eliminación de tus datos en cualquier momento.<br>
       • Toda la información se almacena de forma segura.<br>
-      • El responsable del tratamiento es SerakDepMS Studios, bajo la empresa matriz SerakDepMS.<br><br>
+      • El responsable del tratamiento y propietario del proyecto es SerakDepMS Studios.<br><br>
       Para más detalles, consulta nuestra Política de Privacidad en el footer.`
     },
     {
@@ -405,7 +405,7 @@
       keywords: ['creditos', 'creadores', 'desarrolladores', 'colaboradores', 'agradecimientos', 'autores', 'equipo', 'diseñadores', 'quien hizo la pagina'],
       response: `<strong>Créditos y agradecimientos</strong><br><br>
       La página web de SerakDepMS Studios es fruto del esfuerzo colectivo:<br>
-      • <strong>Empresa matriz:</strong> SerakDepMS (Serak Digital Mastery &amp; Solutions), responsable del ecosistema y de su división SerakDepMS Studios.<br>
+      • <strong>Empresa matriz:</strong> SerakDepMS Studios (Serak Digital Mastery Studios Solutions), responsable del ecosistema y de su división SerakDepMS Studios.<br>
       • <strong>Co-Desarrollador Principal:</strong> maikol-dev-code-cyber.<br>
       • <strong>Herramientas utilizadas:</strong> HTML5, CSS3, JavaScript, EmailJS, npoint.io, Font Awesome, GitHub Pages, Figma.<br><br>
       ¿Quieres contribuir? Usa el formulario de sugerencias en Contacto.`
@@ -465,7 +465,7 @@
       response: `<strong>Historia y origen</strong><br><br>
       SerakDepMS Studios fue fundado el <strong>1 de enero de 2023</strong>:<br>
       • <strong>Fundación:</strong> Creado por jugadores experimentados que buscaban una comunidad organizada.<br>
-      • <strong>Empresa matriz:</strong> SerakDepMS (Serak Digital Mastery & Solutions), un ecosistema tecnológico con tres pilares.<br>
+      • <strong>Empresa matriz:</strong> SerakDepMS Studios (Serak Digital Mastery Studios Solutions), un ecosistema tecnológico con tres pilares.<br>
       • <strong>Crecimiento:</strong> De un pequeño grupo a una comunidad con +266 miembros verificados.<br>
       • <strong>Evolución:</strong> Hemos desarrollado estructura, normas, página web, comunidades hermana (Devs) y herramientas propias.<br>
       • <strong>Futuro:</strong> Seguir creciendo como comunidad de referencia con presencia en web, gaming y programación.<br><br>
@@ -531,7 +531,7 @@
     {
       keywords: ['canal whatsapp noticias', 'whatsapp channel', 'qr whatsapp', 'notificaciones instantaneas', 'unirse canal noticias', 'canal oficial whatsapp', 'noticiero sms'],
       response: `<strong>Canal de WhatsApp para Noticias - Noticiero SMS</strong><br><br>
-      La comunidad dispone de un <strong>Canal oficial de SerakDepMS | Noticiero</strong> exclusivo para notificaciones instantáneas:<br>
+      La comunidad dispone de un <strong>Canal oficial de SerakDepMS Studios | Noticiero</strong> exclusivo para notificaciones instantáneas:<br>
       • Notificaciones al instante de nuevas noticias.<br>
       • Novedades exclusivas antes que en otros medios.<br>
       • Recordatorios de eventos y torneos.<br>
@@ -557,7 +557,7 @@
     {
       keywords: ['Serak', 'laboratorio', 'code lab', 'entorno desarrollo', 'aprender html', 'aprender css', 'aprender javascript', 'editor codigo', 'ide online', 'programar web', 'practicar programacion', 'sms studio'],
       response: `<strong>Serak - Laboratorio de Código</strong><br><br>
-      <strong>Serak</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio de la comunidad y forma parte del pilar <strong>Web Development & Technology</strong> del ecosistema SerakDepMS. Es un entorno interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> desde el navegador.<br><br>
+      <strong>Serak</strong> es nuestro laboratorio de programación web oficial, integrado en el sitio de la comunidad y forma parte del pilar <strong>Web Development & Technology</strong> del ecosistema SerakDepMS Studios. Es un entorno interactivo donde puedes aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> desde el navegador.<br><br>
       Incluye:<br>
       • <strong>Editor profesional</strong> con autocompletado.<br>
       • <strong>Vista previa en vivo.</strong><br>
@@ -692,7 +692,7 @@
       <strong>Lema:</strong> "Una comunidad, una leyenda".<br>
       <strong>Slogan:</strong> "Unidos por la pasión del gaming".<br>
       <strong>Paleta oficial:</strong> Verde neón (#00FF66) + Negro (#0a0a0a).<br>
-      <strong>Empresa matriz:</strong> SerakDepMS (Serak Digital Mastery & Solutions).<br><br>
+      <strong>Empresa matriz:</strong> SerakDepMS Studios (Serak Digital Mastery Studios Solutions).<br><br>
       El águila simboliza visión y liderazgo; los circuitos, tecnología y vanguardia.`
     },
 
@@ -713,18 +713,18 @@
       • <strong>Noticias</strong> (sistema, canal WhatsApp, estadísticas).<br>
       • <strong>Alianzas</strong> (comunidades aliadas).<br>
       • <strong>Serak</strong> (laboratorio de código HTML, CSS y JavaScript).<br><br>
-      • <strong>Empresa matriz</strong> (SerakDepMS y los tres pilares).<br>
+      • <strong>Empresa matriz</strong> (SerakDepMS Studios y los tres pilares).<br>
       • <strong>Marco legal</strong> (RGPD, LOPDGDD, CCPA, LGPD, DMCA, COPPA).<br><br>
       Escribe tu consulta con naturalidad. ¡Estoy aquí para ti!`
     },
     {
       keywords: ['serakdepms empresa matriz', 'empresa matriz', 'que es serakdepms', 'tres pilares'],
-      response: `<strong>SerakDepMS y sus tres pilares</strong><br><br>
-      SerakDepMS (Serak Digital Mastery &amp; Solutions) es la empresa matriz del ecosistema, responsable del desarrollo web, la arquitectura digital, la ciberseguridad y los servicios profesionales.<br>
-      🌐 <strong>Web Development &amp; Technology:</strong> bajo SerakDepMS.<br>
+      response: `<strong>SerakDepMS Studios: empresa propietaria y comunidad</strong><br><br>
+      SerakDepMS Studios (Serak Digital Mastery Studios Solutions) es la empresa propietaria del ecosistema y también la denominación de las comunidades Gamer y Devs.<br>
+      🌐 <strong>Web Development &amp; Technology:</strong> bajo SerakDepMS Studios.<br>
       🎮 <strong>Game Development &amp; Gamer Communities:</strong> bajo SerakDepMS Studios.<br>
       💻 <strong>Programming Communities:</strong> bajo SerakDepMS Studios.<br><br>
-      SerakDepMS Studios es la denominación oficial de las comunidades Gamer y Devs.`
+      El proyecto Gamer y sus recursos son propiedad de SerakDepMS Studios.`
     },
     {
       keywords: ['marco legal', 'rgpd', 'lopdgdd', 'ccpa', 'lgpd', 'dmca', 'coppa', 'leyes privacidad'],
@@ -854,7 +854,7 @@
         addBotMessage(`<strong>¡Hola! Soy el asistente IA de SerakDepMS Studios.</strong><br><br>
         Estoy aquí para resolver todas tus dudas sobre nuestro ecosistema. Puedes preguntarme sobre:<br>
         • <strong>12 Divisiones Multi-Gamer:</strong> Roblox, Minecraft, CoD, Valorant, Fortnite, Free Fire, Among Us, CS2, FIFA, Clash Royale, Guardian Tales y Blood Strike.<br>
-        • <strong>Comunidad Devs</strong> (Serakdep-MS-Devs-Official): 8 divisiones técnicas de programación.<br>
+        • <strong>Comunidad Devs</strong> de SerakDepMS Studios: 8 divisiones técnicas de programación.<br>
         • Cómo inscribirte y los requisitos (edad mínima 13 años).<br>
         • El <strong>Reglamento General</strong>, sanciones y proceso disciplinario.<br>
         • Nuestro servidor de Discord y grupos de WhatsApp por división.<br>
