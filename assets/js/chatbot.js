@@ -541,12 +541,11 @@
 
 
     {
-      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'bloody legacy', 'WIND BREAKER', 'luwance', 'the black bulls'],
+      keywords: ['alianzas', 'clanes aliados', 'seccion alianzas', 'nuestros aliados', 'CHIHUAHUENSE  DINASTY', 'Zion Dynasty', 'WIND BREAKER', 'luwance', 'the black bulls'],
       response: `<strong>Alianzas de SerakDepMS Studios</strong><br><br>
       En la sección "Alianzas" encontrarás todas las comunidades aliadas con sus logos, descripciones y fechas. Actualmente contamos con comunidades aliadas, entre ellas:<br>
       • CHIHUAHUENSE DINASTY<br>
       • Zion Dynasty<br>
-      • Bloody Legacy<br>
       • WIND BREAKER<br>
       • LUWANCE<br>
       • The Black Bulls<br><br>

@@ -16,14 +16,6 @@ const clanesAliados = [
     fechaAlianza: "2025-11-24"
   },
   {
-    nombre: "Bloody Legacy",
-    logo: "../../assets/img/alianzas/BloodyLegacy.jpg",
-    descripcion: "Clan enfocado en evade, llevando una buena comunicación, siendo un clan de palabra, en el cual nuestros aliados e integrantes pueden confiar plenamente.",
-    activo: true,
-    nuevaAlianza: false,
-    fechaAlianza: "2025-12-27"
-  },
-  {
     nombre: "WIND BREAKER",
     logo: "../../assets/img/alianzas/WINDBREAKER.jpg",
     descripcion: "En WIND BREAKER, buscamos ser un refugio lleno de magia, sueños y risas, donde cada habitante pueda sentirse cómodo, libre y parte de algo especial mientras forma parte de este mundo encantado.",

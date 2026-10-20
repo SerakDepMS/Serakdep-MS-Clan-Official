@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "IX",
       label: "Los Emisarios del Estandarte",
-      text: "Con el fin de entablar lazos externos, se designó el Departamento de Alianzas y Relaciones. Miembros clave como year171 asumieron la tarea de representar con orgullo y honor a SerakDepMS Studios ante otras comunidades. Nuestra red de aliados se expandió con clanes de gran renombre como CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy y WIND BREAKER, entre otros."
+      text: "Con el fin de entablar lazos externos, se designó el Departamento de Alianzas y Relaciones. Miembros clave como year171 asumieron la tarea de representar con orgullo y honor a SerakDepMS Studios ante otras comunidades. Nuestra red de aliados se expandió con clanes de gran renombre como CHIHUAHUENSE DINASTY, Zion Dynasty y WIND BREAKER, entre otros."
     },
     {
       chapter: "X",
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       chapter: "XXII",
       label: "Alianzas Sagradas",
-      text: "Nuestra red de aliados se expandió con clanes de gran renombre: CHIHUAHUENSE DINASTY, Zion Dynasty, Bloody Legacy, WIND BREAKER, LUWANCE y The Black Bulls, en un pacto de respeto mutuo y colaboración en torneos. La sección de Alianzas en la web muestra sus logos, descripciones y fechas de alianza, con un sistema de auras animadas que reflejan su actividad."
+      text: "Nuestra red de aliados se expandió con clanes de gran renombre: CHIHUAHUENSE DINASTY, Zion Dynasty, WIND BREAKER, LUWANCE y The Black Bulls, en un pacto de respeto mutuo y colaboración en torneos. La sección de Alianzas en la web muestra sus logos, descripciones y fechas de alianza, con un sistema de auras animadas que reflejan su actividad."
     },
     {
       chapter: "XXIII",
